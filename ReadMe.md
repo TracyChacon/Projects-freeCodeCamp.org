@@ -1,18 +1,21 @@
 # FreeCodeCamp Curriculum
+## Documenting my Work
 Hello, my name is Tracy Chacon and I will be working through the the FreeCodeCamp Curriculum in order to document the lessons and projects that I complete. I have created a checklist (below) to track what has been completed. Each lesson compeleted will be checked off using markdown and tracked using Git. 
 
 FreeCodeCamp.org is divided into 11 Sections. Each  section contains several courses. For example the JavaScript Algorithms and Data Structures contains Basic JavaScript, ES6, Regular Expressions, Debugging, Basic Data Structures, and more. In addition to working each lesson I will work through each section and type out the lesson. What you see is not copy and paste. Why would I do this? It helps reinforce the material learned and lets potential employers know what I can do. 
 
-Note: The Responsive Web Design and some lessons in JavaScript were not typed out.
-
+## My FreeCodeCamp Profle Link
 [Here is my FreeCodeCamp.org profile page] (https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#javascript-algorithms-and-data-structures-projects)
 
+
+## The Curiculum Checklist
+Note: The Responsive Web Design and some lessons in JavaScript were not typed out.
 
 1.  - [ ] Responsive Web Design
         - [X]    Learn HTML by Building a Cat Photo App
         - [X]    Learn Basic CSS by Building a Cafe Menu
         - [X]    Learn CSS Colors by Building a Set of Colored Markers
-        - []    Learn HTML Forms by Building a Registration Form, 
+        - [ ]    Learn HTML Forms by Building a Registration Form, 
         - [X]    Certification Project:
                      Survey Form
         - [X]             Learn the CSS Box Model by Building a Rothko Painting
