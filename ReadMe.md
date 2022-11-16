@@ -11,7 +11,7 @@ FreeCodeCamp.org is divided into 11 Sections. Each  section contains several cou
 ## The Curiculum Checklist
 Note: The Responsive Web Design and some lessons in JavaScript were not typed out.
 
-1.  - [ ] Responsive Web Design
+1. ### - [ ]Responsive Web Design
         - [X]    Learn HTML by Building a Cat Photo App
         - [X]    Learn Basic CSS by Building a Cafe Menu
         - [X]    Learn CSS Colors by Building a Set of Colored Markers
@@ -33,7 +33,7 @@ Note: The Responsive Web Design and some lessons in JavaScript were not typed ou
         - [x] Learn CSS Animation by Building a Ferris Wheel
         - [x] Learn CSS Transfroms by Building a Penguin
         - [ ] Personal Portfolio Webpage
-2.  - [ ] JavaScript Algorithms and Data Structures
+2. ### - [ ] JavaScript Algorithms and Data Structures
         - [x] Basic JavaScript
         - [ ] ES6
         - [ ] Regular Expressions
@@ -44,12 +44,12 @@ Note: The Responsive Web Design and some lessons in JavaScript were not typed ou
         - [ ] Functional Programming
         - [ ] Intermediate Algorithm Scripting
         - [ ] JavaScript Algorithms and Data Structures Projects
-3.  - [ ] Front End Development Libraries
-4.  - [ ] Data Visulization
-5.  - [ ] Relational Database
-6.  - [ ] Back End Development and APIs Certification
-7.  - [ ] Quality Assurance
-8.  - [ ] Scientific Computing with Python
-9.  - [ ] Data Anlysis with Python
-10. - [ ] Information Security
-11. - [ ] Machine Learning with Python
+3.  ### - [ ] Front End Development Libraries
+4.  ### - [ ] Data Visulization
+5.  ### - [ ] Relational Database
+6.  ### - [ ] Back End Development and APIs Certification
+7.  ### - [ ] Quality Assurance
+8.  ### - [ ] Scientific Computing with Python
+9.  ### - [ ] Data Anlysis with Python
+10. ### - [ ] Information Security
+11. ### - [ ] Machine Learning with Python
