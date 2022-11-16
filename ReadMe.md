@@ -24,17 +24,17 @@ Note: The Responsive Web Design and some lessons in JavaScript were not typed ou
         - [X]            Learn Accessibility by Building a Quiz
         - [X]            Certification Project:
                              Tribute Page
-        - [x] Tribute Page
-        - [x] Learn More About CSS Pseudo Selectors By Building A Balance Sheet
-        - [x] Learn Responsive Web Design By Building a Piano 
+        - [X] Tribute Page
+        - [X] Learn More About CSS Pseudo Selectors By Building A Balance Sheet
+        - [X] Learn Responsive Web Design By Building a Piano 
         - [ ] Texhnical Documentation Page
-        - [x] Learn CSS Variables by Building a City Skyline 
-        - [x] Product Landing Page
-        - [x] Learn CSS Animation by Building a Ferris Wheel
-        - [x] Learn CSS Transfroms by Building a Penguin
+        - [X] Learn CSS Variables by Building a City Skyline 
+        - [X] Product Landing Page
+        - [X] Learn CSS Animation by Building a Ferris Wheel
+        - [X] Learn CSS Transfroms by Building a Penguin
         - [ ] Personal Portfolio Webpage
 2. ### - [ ] JavaScript Algorithms and Data Structures
-        - [x] Basic JavaScript
+        - [X] Basic JavaScript
         - [ ] ES6
         - [ ] Regular Expressions
         - [ ] Debugging
