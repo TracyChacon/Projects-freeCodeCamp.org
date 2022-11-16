@@ -33,6 +33,8 @@ Note: The Responsive Web Design and some lessons in JavaScript were not typed ou
 - [X] Learn CSS Animation by Building a Ferris Wheel
 - [X] Learn CSS Transfroms by Building a Penguin
 - [ ] Personal Portfolio Webpage
+
+
 - [ ] COMPLETE
 2. ###  JavaScript Algorithms and Data Structures
 - [X] Basic JavaScript
@@ -45,22 +47,40 @@ Note: The Responsive Web Design and some lessons in JavaScript were not typed ou
 - [ ] Functional Programming
 - [ ] Intermediate Algorithm Scripting
 - [ ] JavaScript Algorithms and Data Structures Projects
+
+
 - [ ] COMPLETE
 3.  ###  Front End Development Libraries
+
+
 - [ ] COMPLETE
 4.  ###  Data Visulization
+
+
 - [ ] COMPLETE
 5.  ###  Relational Database
+
+
 - [ ] COMPLETE
 6.  ###  Back End Development and APIs Certification
+
+
 - [ ] COMPLETE
 7.  ###  Quality Assurance
+
+
 - [ ] COMPLETE
 8.  ###  Scientific Computing with Python
+
+
 - [ ] COMPLETE
 9.  ###  Data Anlysis with Python
+
+
 - [ ] COMPLETE
 10. ###  Information Security
+
+
 - [ ] COMPLETE
 11. ###  Machine Learning with Python
-- [ ] COMPLETE
+
