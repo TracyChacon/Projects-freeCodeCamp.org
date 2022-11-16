@@ -19,23 +19,20 @@ Note: The Responsive Web Design and some lessons in JavaScript were not typed ou
 - [X] Learn Basic CSS by Building a Cafe Menu
 - [X] Learn CSS Colors by Building a Set of Colored Markers
 - [ ] Learn HTML Forms by Building a Registration Form, 
-- [X] Certification Project:
-            Survey Form
+- [X] Certification Project: Survey Form
 - [X] Learn the CSS Box Model by Building a Rothko Painting
 - [X] Learn CSS Flexbox by Building a Photo Gallery
 - [X] Learn Typography by Building a Nutrition Label
 - [X] Learn Accessibility by Building a Quiz
-- [X] Certification Project:
-    Tribute Page
-- [X] Tribute Page
+- [X] Certification Project: Tribute Page
 - [X] Learn More About CSS Pseudo Selectors By Building A Balance Sheet
 - [X] Learn Responsive Web Design By Building a Piano 
-- [ ] Technical Documentation Page
+- [ ] Certification Project: Technical Documentation Page
 - [X] Learn CSS Variables by Building a City Skyline 
-- [X] Product Landing Page
+- [X] Certification Project: Product Landing Page
 - [X] Learn CSS Animation by Building a Ferris Wheel
 - [X] Learn CSS Transfroms by Building a Penguin
-- [ ] Personal Portfolio Webpage
+- [ ] Certification Project: Personal Portfolio Webpage
 
 ---
 - [ ] **COMPLETE**:
@@ -50,6 +47,12 @@ Note: The Responsive Web Design and some lessons in JavaScript were not typed ou
 - [ ] Functional Programming
 - [ ] Intermediate Algorithm Scripting
 - [ ] JavaScript Algorithms and Data Structures Projects
+> - [ ]
+> - [ ]
+> - [ ]
+> - [ ]
+> - [ ]
+> - [ ]
 
 ---
 - [ ] **COMPLETE**:
