@@ -11,7 +11,7 @@ FreeCodeCamp.org is divided into 11 Sections. Each  section contains several cou
 ## The Curiculum Checklist
 Note: The Responsive Web Design and some lessons in JavaScript were not typed out.
 
-1. ### - [ ]Responsive Web Design
+### 1. - [ ] Responsive Web Design
         - [X]    Learn HTML by Building a Cat Photo App
         - [X]    Learn Basic CSS by Building a Cafe Menu
         - [X]    Learn CSS Colors by Building a Set of Colored Markers
