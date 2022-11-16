@@ -1,6 +1,6 @@
 # FreeCodeCamp Curriculum
 ## Documenting my Work
-Hello, my name is Tracy Chacon and I will be working through the the FreeCodeCamp Curriculum in order to document the lessons and projects that I complete. I have created a checklist (below) to track what has been completed. Each lesson compeleted will be checked off using markdown and tracked using Git. 
+Hello, my name is Tracy Chacon and I will be working through the the FreeCodeCamp Curriculum in order to document the lessons and projects that I complete. I have created a checklist (below) to track what has been completed. Each lesson compeleted will be checked off using ***markdown*** and tracked using ***Git***. 
 
 FreeCodeCamp.org is divided into 11 Sections. Each  section contains several courses. For example the JavaScript Algorithms and Data Structures contains Basic JavaScript, ES6, Regular Expressions, Debugging, Basic Data Structures, and more. In addition to working each lesson I will work through each section and type out the lesson. What you see is not copy and paste. Why would I do this? It helps reinforce the material learned and lets potential employers know what I can do. 
 
@@ -10,7 +10,7 @@ FreeCodeCamp.org is divided into 11 Sections. Each  section contains several cou
 
 ## The Curiculum Checklist
 Note: The Responsive Web Design and some lessons in JavaScript were not typed out.
-- [ ] COMPLETE
+- [ ] COMPLETE:
 1. ### Responsive Web Design
 - [X] Learn HTML by Building a Cat Photo App
 - [X] Learn Basic CSS by Building a Cafe Menu
@@ -35,7 +35,7 @@ Note: The Responsive Web Design and some lessons in JavaScript were not typed ou
 - [ ] Personal Portfolio Webpage
 
 
-- [ ] COMPLETE
+- [ ] COMPLETE:
 2. ###  JavaScript Algorithms and Data Structures
 - [X] Basic JavaScript
 - [ ] ES6
@@ -49,38 +49,38 @@ Note: The Responsive Web Design and some lessons in JavaScript were not typed ou
 - [ ] JavaScript Algorithms and Data Structures Projects
 
 
-- [ ] COMPLETE
+- [ ] COMPLETE:
 3.  ###  Front End Development Libraries
 
 
-- [ ] COMPLETE
+- [ ] COMPLETE:
 4.  ###  Data Visulization
 
 
-- [ ] COMPLETE
+- [ ] COMPLETE:
 5.  ###  Relational Database
 
 
-- [ ] COMPLETE
+- [ ] COMPLETE:
 6.  ###  Back End Development and APIs Certification
 
 
-- [ ] COMPLETE
+- [ ] COMPLETE:
 7.  ###  Quality Assurance
 
 
-- [ ] COMPLETE
+- [ ] COMPLETE:
 8.  ###  Scientific Computing with Python
 
 
-- [ ] COMPLETE
+- [ ] COMPLETE:
 9.  ###  Data Anlysis with Python
 
 
-- [ ] COMPLETE
+- [ ] COMPLETE:
 10. ###  Information Security
 
 
-- [ ] COMPLETE
+- [ ] COMPLETE:
 11. ###  Machine Learning with Python
 
