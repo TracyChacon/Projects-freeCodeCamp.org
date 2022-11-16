@@ -70,3 +70,47 @@
 // Here the console will display the value '2', and the error that i is not defined'.
 
 // 'i' is not defined because it was not declared in teh global scopoe. It is only declared within the 'for' loop SVGPatternElement. 'printNumTwo()' returned the correct value because three different 'i' variables with unique values (0, 1, and 2) were created by the 'let keyword within the loop statement.
+
+
+
+
+// ## Mutate an Array Declared with const
+
+// If your are unfamiliar with 'const', check this challenge about the con 'const' keyword.
+
+// The 'const' declaration has many use cases in dodern JavaqScript.
+
+// Some developers prefer to assign all their variables using 'const' by default, unless they know they will need to reassign the value. Only in that case, they use 'let'.
+
+// However, it is important to understand tha objects (including arrays and functions) assigned to a variable using 'const' are still mutable. Using the 'const' declaration only prevents reassignment of the variable identifier.
+
+// const s = [ 5, 6, 7];
+// // s = [1, 2, 3];
+// s[2] = 45;
+// console.log(s);
+
+// 's = [1, 2, 3]' will result in an error. After commenting out that line, the 'console.log' will display the value '[5, 6, 45]'.
+
+// As you can see, you can mutate the object '[5, 6, 7]' itself and the variable 's' will still point the altereed array '[5, 6, 45]'. Like all arrays, the array elements in 's' are mutable, but because 'const' was used, you cannot use the variable identifier 's' to point to a different array using the assignment operator.
+
+
+
+
+
+// ## Prevent Object Mutation
+
+// As seen in teh previous challenge, 'const' declaration alone doesn't really protect your data from mutation. To ensure your data doesn't change, JavaScript provides a function 'Object.freeze' to prevetn data mutation.
+
+// Any attempt at changing the object will rejected, with an error thrown if the script is running in strict mode.
+
+let obj = {
+    name: "FreeCodeCamp",
+    review: "Awesome"
+};
+
+Object.freeze(obj);
+obj.review = "bad";
+obj.newProp = "Test";
+console.log(obj);
+
+// The obj.review' and 'obj.newProp' assignments will result in error, because our editor runs in strict mode by default, and the console will  display the value '{name: "FreecodeCamp", review: "Awesome"}'.
