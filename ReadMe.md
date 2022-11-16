@@ -11,19 +11,20 @@ FreeCodeCamp.org is divided into 11 Sections. Each  section contains several cou
 ## The Curiculum Checklist
 Note: The Responsive Web Design and some lessons in JavaScript were not typed out.
 
-### 1. - [ ] Responsive Web Design
-        - [X]    Learn HTML by Building a Cat Photo App
-        - [X]    Learn Basic CSS by Building a Cafe Menu
-        - [X]    Learn CSS Colors by Building a Set of Colored Markers
-        - [ ]    Learn HTML Forms by Building a Registration Form, 
-        - [X]    Certification Project:
+ 1. 
+ ### - [ ]  Responsive Web Design
+        - [X] Learn HTML by Building a Cat Photo App
+        - [X] Learn Basic CSS by Building a Cafe Menu
+        - [X] Learn CSS Colors by Building a Set of Colored Markers
+        - [ ] Learn HTML Forms by Building a Registration Form, 
+        - [X] Certification Project:
                      Survey Form
-        - [X]             Learn the CSS Box Model by Building a Rothko Painting
-        - [X]            Learn CSS Flexbox by Building a Photo Gallery
-        - [X]            Learn Typography by Building a Nutrition Label
-        - [X]            Learn Accessibility by Building a Quiz
-        - [X]            Certification Project:
-                             Tribute Page
+        - [X] Learn the CSS Box Model by Building a Rothko Painting
+        - [X] Learn CSS Flexbox by Building a Photo Gallery
+        - [X] Learn Typography by Building a Nutrition Label
+        - [X] Learn Accessibility by Building a Quiz
+        - [X] Certification Project:
+                Tribute Page
         - [X] Tribute Page
         - [X] Learn More About CSS Pseudo Selectors By Building A Balance Sheet
         - [X] Learn Responsive Web Design By Building a Piano 
@@ -34,16 +35,16 @@ Note: The Responsive Web Design and some lessons in JavaScript were not typed ou
         - [X] Learn CSS Transfroms by Building a Penguin
         - [ ] Personal Portfolio Webpage
 2. ### - [ ] JavaScript Algorithms and Data Structures
-        - [X] Basic JavaScript
-        - [ ] ES6
-        - [ ] Regular Expressions
-        - [ ] Debugging
-        - [ ] Basic Data Structures
-        - [ ] Basic Algorithm Scripting
-        - [ ] Object Oriented Programming
-        - [ ] Functional Programming
-        - [ ] Intermediate Algorithm Scripting
-        - [ ] JavaScript Algorithms and Data Structures Projects
+            - [X] Basic JavaScript
+            - [ ] ES6
+            - [ ] Regular Expressions
+            - [ ] Debugging
+            - [ ] Basic Data Structures
+            - [ ] Basic Algorithm Scripting
+            - [ ] Object Oriented Programming
+            - [ ] Functional Programming
+            - [ ] Intermediate Algorithm Scripting
+            - [ ] JavaScript Algorithms and Data Structures Projects
 3.  ### - [ ] Front End Development Libraries
 4.  ### - [ ] Data Visulization
 5.  ### - [ ] Relational Database
