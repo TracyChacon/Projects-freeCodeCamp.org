@@ -5,7 +5,7 @@ Hello, my name is Tracy Chacon and I will be working through the the FreeCodeCam
 FreeCodeCamp.org is divided into 11 Sections. Each  section contains several courses. For example the JavaScript Algorithms and Data Structures contains Basic JavaScript, ES6, Regular Expressions, Debugging, Basic Data Structures, and more. In addition to working each lesson I will work through each section and type out the lesson. What you see is not copy and paste. Why would I do this? It helps reinforce the material learned and lets potential employers know what I can do. 
 
 ## My FreeCodeCamp Profle Link
-[Here is my FreeCodeCamp.org profile page] (https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#javascript-algorithms-and-data-structures-projects)
+[Here is my FreeCodeCamp.org profile page] (https://www.freecodecamp.org/tracychacon)
 
 
 ## The Curiculum Checklist
