@@ -9,17 +9,17 @@ Note: The Responsive Web Design and some lessons in JavaScript were not typed ou
 
 
 1.  - [ ] Responsive Web Design
-        - [x]    Learn HTML by Building a Cat Photo App
-        - [x]    Learn Basic CSS by Building a Cafe Menu
-        - [x]    Learn CSS Colors by Building a Set of Colored Markers
-        - [ ]    Learn HTML Forms by Building a Registration Form, 
-        - [x]    Certification Project:
+        - [X]    Learn HTML by Building a Cat Photo App
+        - [X]    Learn Basic CSS by Building a Cafe Menu
+        - [X]    Learn CSS Colors by Building a Set of Colored Markers
+        - []    Learn HTML Forms by Building a Registration Form, 
+        - [X]    Certification Project:
                      Survey Form
-        - [x]             Learn the CSS Box Model by Building a Rothko Painting
-        - [x]            Learn CSS Flexbox by Building a Photo Gallery
-        - [x]            Learn Typography by Building a Nutrition Label
-        - [x]            Learn Accessibility by Building a Quiz
-        - [x]            Certification Project:
+        - [X]             Learn the CSS Box Model by Building a Rothko Painting
+        - [X]            Learn CSS Flexbox by Building a Photo Gallery
+        - [X]            Learn Typography by Building a Nutrition Label
+        - [X]            Learn Accessibility by Building a Quiz
+        - [X]            Certification Project:
                              Tribute Page
         - [x] Tribute Page
         - [x] Learn More About CSS Pseudo Selectors By Building A Balance Sheet
