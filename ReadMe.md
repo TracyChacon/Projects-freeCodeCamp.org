@@ -1,4 +1,4 @@
-# FreeCodeCamp Curriculum
+# FreeCodeCamp.org Curriculum
 ## Documenting my Work
 Hello, my name is Tracy Chacon and I will be working through the the FreeCodeCamp Curriculum in order to document the lessons and projects that I complete. I have created a checklist (below) to track what has been completed. Each lesson compeleted will be checked off using ***markdown*** and tracked using ***Git***. 
 
@@ -48,11 +48,11 @@ Note: The Responsive Web Design and some lessons in JavaScript were not typed ou
 - [ ] Intermediate Algorithm Scripting
 - [ ] JavaScript Algorithms and Data Structures Projects
 > - [ ]
-> - [ ]
-> - [ ]
-> - [ ]
-> - [ ]
-> - [ ]
+>- [ ]
+>- [ ]
+>- [ ]
+>- [ ]
+>- [ ]
 
 ---
 - [ ] **COMPLETE**:

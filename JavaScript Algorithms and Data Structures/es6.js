@@ -8,7 +8,7 @@
 
 
 
-// ## Compare Scopes othe var and let Keywords
+// ## Compare Scopes of the var and let Keywords
 // If you are unfamiliar with 'let', check out this challenge about the difference between 'let' and 'var'.
 
 // When you declare a variable with the 'var' keyword, it is declared globally, or locally if declared inside a function.
@@ -103,14 +103,16 @@
 
 // Any attempt at changing the object will rejected, with an error thrown if the script is running in strict mode.
 
-let obj = {
-    name: "FreeCodeCamp",
-    review: "Awesome"
-};
+// let obj = {
+//     name: "FreeCodeCamp",
+//     review: "Awesome"
+// };
 
-Object.freeze(obj);
-obj.review = "bad";
-obj.newProp = "Test";
-console.log(obj);
+// Object.freeze(obj);
+// obj.review = "bad";
+// obj.newProp = "Test";
+// console.log(obj);
 
 // The obj.review' and 'obj.newProp' assignments will result in error, because our editor runs in strict mode by default, and the console will  display the value '{name: "FreecodeCamp", review: "Awesome"}'.
+
+
