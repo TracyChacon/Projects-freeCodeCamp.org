@@ -29,6 +29,7 @@ Note: The Responsive Web Design and some lessons in JavaScript were not typed ou
 - [X] Learn Responsive Web Design By Building a Piano 
 - [ ] Certification Project: Technical Documentation Page
 - [X] Learn CSS Variables by Building a City Skyline 
+- [X] Learn CSS Grid by Building a Magazine
 - [X] Certification Project: Product Landing Page
 - [X] Learn CSS Animation by Building a Ferris Wheel
 - [X] Learn CSS Transfroms by Building a Penguin
@@ -38,12 +39,12 @@ Note: The Responsive Web Design and some lessons in JavaScript were not typed ou
 - [ ] **COMPLETE**:
 2. ### JavaScript Algorithms and Data Structures
 - [X] Basic JavaScript
-- [ ] ES6
+- [X] ES6 
 - [ ] Regular Expressions
 - [ ] Debugging
 - [ ] Basic Data Structures
 - [ ] Basic Algorithm Scripting
-- [ ] Object Oriented Programming
+- [X] Object Oriented Programming
 - [ ] Functional Programming
 - [ ] Intermediate Algorithm Scripting
 - [ ] JavaScript Algorithms and Data Structures Projects
