@@ -404,17 +404,263 @@
 
 // Use destructuring assignment within the argument to the function 'half' to send only 'max' and 'min' inside the funciton.
 
-const stats = {
-    max: 56.78,
-    standard_deviation: 4.34,
-    median: 34.54,
-    mode: 23.87,
-    min: -0.75,
-    average: 35.85
-};
+// const stats = {
+//     max: 56.78,
+//     standard_deviation: 4.34,
+//     median: 34.54,
+//     mode: 23.87,
+//     min: -0.75,
+//     average: 35.85
+// };
+
+// // Only change code below this line
+// const half = ({ max, min }) => (max + min) / 2.0;
+// console.log(half(stats));
+// // Only change code above this line 
+
+
+
+
+
+
+// ## Create Strings using Template Literals
+
+// A new feature of ES6 is the template literal. This is a special type of string that makes creating complex strings easier.
+
+// Template literal allow you to create multi-line strings and to use string interpolation features to create strings.
+
+// Consider the code below:
+
+// const person = {
+//     name: "Zodiac Hasbro",
+//     age: 56
+// };
+
+// const greeting = `Hello, my name is ${person.name}! I am ${person.age} years old.`;
+
+// console.log(greeting);
+
+// The console will display the strings 'Hello, my name is Zodiac Hasbro!' and 'I am 56 years old.'.
+
+// A lot of things happened there. firstly, the example uses backticks('`'), not quotes ("'" or '"'), to wrap the string. Secondly, notice that the string is multi-line, both inthe code and the output. This saves inserting '\n' within strings. the '${variable}' syntax used above is a place holder. Basically, you won't have to use concatenation with the '+' operator anymore. To add variables to strings, you just drop the variable in a template string and wrap it with '${' and '}'. similarly, you can include other expressions in your string literal, for example '${a + b}'. This new way of creating strings gives you more flexibility to create robust strings.
+
+// Use Template literal syntax with backticks to create an array of list element ('li') strings. Each list element's text should be one of the array elements from the 'failure' property on the 'result object and have a 'class' attribute with the value 'text-warning'. The 'makeList' funciton should return the array of list item strings.
+
+// Use an iterator method (any kind of loop) to get the desired output (shown below).
+
+// [
+//     '<li class="text-warning">no-var</li>',
+//     '<li class="text-warning">var-on-top</li>',
+//     '<li class="text-warning">linebreak</li>'
+// ]
+
+// const result = {
+//     success: ["max-length", "no-amd", "prefer-arrow-functions"],
+//     failure: ["no-var", "var-on-top", "linebreak"],
+//     skipped: ["no-extra-semi", "no-dup-keys"]
+// };
+// function makeList(arr) {
+//     // Only change code below this line
+//     const failureItems = [];
+//     arr.forEach(element => failureItems.push(`<li class="text-warning">${element}</li>`));       
+//     // Only change code above this line
+
+//     return failureItems;
+// }
+
+// const failureList = makeList(result.failure);
+// console.log(failureList);
+
+
+
+
+// ## Write Concise Object Literal Declarations Using Object Property Shorthand
+
+// ES6 adds soem nice suppport for easily defining object literals.
+
+// Consider the following code:
+
+// const getMousePosition = (x, y) => ({
+//     x: x,
+//     y: y
+// });
+
+// 'getMousePosition' is a simple functin that returns an object containing two properties. ES6 provides the syntactic sugar to eliminate the redundancy of having to write 'x: x'. You can simply write 'x' once, and it will be converted to 'x: x' (or something equivalent) under the hood. Here is the same function from above rewritten to use this new syntax:
+
+// const getMousePosition = (x, y) => ({ x, y });
+
+// Use object property shorthand with object literals to creat and return an object with 'name', 'age' and 'gender' properties.
+
+// const createPerson = (name, age, gender) => {
+//     // Only change code below this line
+//     return { name, age, gender }
+//     // Only change code above this line
+// };
+
+
+
+
+// ## Write Concise Declarative Functions with ES6
+
+// When defining functions within objects in ES4, we have to use the keyword 'function' asd follows:
+
+// const person = {
+//     name: "Taylor",
+//     sayHello: function() {
+//         return `Hello! My name is ${this.name}.`;
+//     }
+// };
+
+// With ES6, you can remove the 'function' keyword and colon altogether when defining functions in objects. Here's an example of this syntax:
+
+// const person = {
+//     name: "Taylor",
+//     sayHello() {
+//         return `Hello! My name is ${this.name}.`;
+//     }
+// };
+
+// Refactor the function 'setGear' inside the object 'bicycle' to use the shorthand syntax described above.
 
 // Only change code below this line
-const half = ({ max, min }) => (max + min) / 2.0;
-console.log(half(stats));
-// Only change code above this line 
+// const bicycle = {
+//     gear: 2,
+//     setGear(newGear) {
+//         this.gear = newGear;
+//     }
+// };
+// // Only change code above this line
+// bicycle.setGear(3);
+// console.log(bicycle.gear);
 
+
+
+
+
+// ## Use class Syntax to Define a Constructor Function
+
+// ES6 provides a new syntax to create objects, using the class keyword.
+
+// It should be noted that the 'class' syntax is just syntax, and not a full-fledged class-based implementation of an object-oriented paradigm, unlike in languages such as Java, Python, Ruby, etc.
+
+// In ES5, an object can be created by defining a 'constructor' function and using the 'new' keyword to instantiate the object.
+
+// In ES6, a 'class' declaration has a 'constructor' method that is invoked with the 'new' keyword. If the 'constructor' method is not explicitly defined, then it is implicitly defined with no arguments. 
+
+// Explicit constructor
+// class SpaceShuttle {
+//     constructor(targetPlanet) {
+//         this.targetPlanet = targetPlanet;
+//     }
+//     takeOff() {
+//         console.log("To " + this.targetPlanet + "!");
+//     }
+// }
+
+// // Implicit constructor
+// class Rocket {
+//     launch() {
+//         console.log("To the moon!");
+//     }
+// }
+
+// const zeus = new SpaceShuttle('Jupiter');
+// // prints To Jupiter! in console
+// zeus.takeOff();
+
+// const atlas = new Rocket();
+// // prints To the moon! in console
+// atlas.launch();
+
+// It should be noted that the 'class' keyword declares a new function, to which a constructro is added. This constructor is invoked when 'new' is called to create a new object.
+
+// Note: UpperCamelCase should be used by convention for ES6 class names, as in 'spaceShuttle' used above.
+
+// The 'constructor' method is a special method for creating and initializing an object created with a class. You will learn more about it in the Object Oriented Programming section of the JavaScript Alogorithms and Data Strures Certification.
+
+// Use the 'class' keyword and write a 'constructor' to create the 'Vegetable' class.
+
+// The 'Vegetable' class allows yo to create a vegetable object with a property 'name' that gets passed to the 'constructor'.
+
+// Only change code below this line
+// class Vegetable{
+//     constructor(name) {
+//         this.name = name;
+//     } 
+// }
+// // Only change code above this line
+
+// const carrot = new Vegetable('carrot');
+// console.log(carrot.name); // Should display 'carrot'
+
+
+
+
+
+// ## Use getters and ssetters to Control Access to an Object
+
+// You can obtain values from an object and set the value of a property within an object.
+
+// These are classically called getters and setters.
+
+// Getter function are meant to simply return (get) the value o fan object's private variable to teh user without the user directly accessing the private variable.
+
+// Setter functions are meant to modify (set) the value of an object's private variable based on the value passed into the setter function. This change could involve calculations, or even overwriting the previous value completely.
+
+// class Book {
+//     constructor(author) {
+//         this._author = author;
+//     }
+//     // getter
+//     get writer() {
+//         return this._author;
+//     }
+//     // setter
+//     set writer(updatedAuthor) {
+//         this._author = updatedAuthor;
+//     }
+// }
+// const novel = new Book('anonynous');
+// console.log(novel.writer);
+// novel.writer = 'newAuthor';
+// console.log(novel.writer);
+
+// The console would display the strings 'anonymous' and 'newAuthor'.
+
+// Notice the syntax used ot invoke the getter and setter. They do not even look like functions. Getters and setters are important because they hide internal implementation details. 
+
+// Note: It is convention to precede the name of a private variable with an underscore ('_'). However, the practice itself does not make a variable private.
+
+// Use the 'class' keyword to create a 'Thermostat' class. The 'constructor' accepts a Fahrenheit temperature.
+
+// In the class, create a 'getter' to obtain the temperature in Celsius and a 'setter' to set the temperature in Celsius.
+
+// Remember that 'C = 5/9 * (F - 32)' and 'F = C * 9.0 / 5 + 32', where 'F' is the value of temperature in Fahrenheit, and 'C' is the value of the same temperature in Celsius.
+
+
+// Note: When you implement this, you will track the temperatuer inside the class in one scale, either Fahrenheit or Celsius.
+
+// This is the power of a getter and a setter. you are creating an API for another user, who can get the correct result regardless of which one you track.
+
+// In others words, you are abstracting implementation details from the user. 
+
+// Only change code below this line
+// class Thermostat {
+//     constructor(fahrenheit) {
+//         this._fahrenheit = fahrenheit;
+//     }
+//     // getter
+//     get temperature() {
+//         return 5/9  * (this._fahrenheit - 32);
+//     }
+
+//     set temperature(celsius) {
+//         this._fahrenheit = celsius * 9.0 / 5 + 32;
+//     }
+// }
+// // Only change code above this line
+
+// const thermos = new Thermostat(76); //Setting in Fahrenheit scale
+// let temp = thermos.temperature; // 24.44 in Celsius
+// thermos.temperature = 26;
+// temp = thermos.temperature; // 26 in Celsius
