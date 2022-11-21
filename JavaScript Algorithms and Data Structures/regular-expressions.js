@@ -458,3 +458,49 @@ const { join } = require("lodash");
 // console.log(resultC1);
 // console.log(resultC2);
 // console.log(resultC3);
+
+
+
+
+
+// ## Match Beginning String Patterns
+
+// Prior challenges showed that regular expressions can be used to look for a number of matches. They are also used to search for patterns in specific positions in strings.
+
+//In an earlier challenge, you used the caret character ('^') inside a character set to create a negated character set in the form '[^thingsThatWillNotBeMatched]'. Outside of a character set, the caret is used to search for patterns at the beginning of strings.
+
+// let firstString = "Ricky is first and can be found.";
+// let firstRegex = /^Ricky/;
+// let secondRegex = /Ricky/;
+
+// let resultFirstTest = firstRegex.test(firstString);
+
+// const resultFirstMatch = firstString.match(firstRegex);
+// const resultSecondMatch = firstString.match(secondRegex);
+
+// let notFirst = "You can't find Ricky now.";
+// const resultNotFirstTest = firstRegex.test(notFirst); 
+
+// // console.log(resultFirstMatch);
+// // console.log(resultSecondMatch);
+// console.log(resultNotFirstTest);
+
+// The first 'test' call would return 'true', while the second would return 'false'.
+
+// Use the caret character in a regex to find 'Cal' only in the beginning of the string 'rickyAndCal'.
+
+
+// let rickyAndCal = "Cal and Ricky both like racing.";
+// let calRegex = /^Cal/; // Change this line
+// let result = calRegex.test(rickyAndCal);
+
+
+
+
+
+
+// ## Match Ending String Patterns
+
+// In the last challeng, yo learned to use the caret character to search for patterns at the beginning of strings. There is also a way to search for patterns at the end of strings.
+
+// You can search the end of strings using the dollar sign character '$' at teh end of the regex.
