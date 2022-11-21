@@ -1,6 +1,6 @@
 // # Regular expressions, ofter shortened to "regex" or "regexp", are patterns that help programminers match, search, and replace text. Regular expressions are very powerful, but can be hard to read because they use special characters to make more compleex, flexible matches.
 
-const { once } = require("lodash");
+const { join } = require("lodash");
 
 // In this course, you'll learn how to use special characters, capture groups, positive and negative lookaheads, and other techniques to match any text you want.
 
@@ -152,12 +152,13 @@ const { once } = require("lodash");
 
 
 // ## Find More Than the First Match
+// multiple results
 
 // So far, you have only been able to extract or search a pattern once.
 
-let testStr = "Repeat, Repeat, Repeat";
+// let testStr = "Repeat, Repeat, Repeat";
 // let ourRegex = /Repeat/;
-// testStr.match(ourRegex);
+// let result = testStr.match(ourRegex);
 
 // Here 'match' would return '["Repeat"]'.
 
@@ -170,7 +171,7 @@ let testStr = "Repeat, Repeat, Repeat";
 
 // And here 'match' returns the value '["Repeat", "Repeat", "Repeat"]
 
-// Using the regex 'starRegex', find and extract both 'Twinkle' words from teh string 'twinkleStar'.
+// Using the regex 'starRegex', find and extract both 'Twinkle' words from the string 'twinkleStar'.
 
 // Note
 // You can have multiple flags on your regex like '/search/gi'
@@ -191,4 +192,269 @@ let testStr = "Repeat, Repeat, Repeat";
 
 // Teh wildcard character '.' will match any one character. The wildcard is also called 'dot' and 'period'. You can use the wildcard character just like any other character in the regex. For example, if you wanted to match 'hug', 'huh', 'hut', and 'hum', you can use the regex '/hu./' to match all four words.
 
-// let humStr =
+// let humStr = "I'll hum a sont";
+// let hugStr = "Bear hug";
+// let huRegex = /hu./;
+// const humResult = huRegex.test(humStr);
+// const hugResult =  huRegex.test(hugStr);
+
+// console.log(humResult, hugResult);
+
+// Both of these 'test' calls would return 'true'.
+
+// Complete the regex 'unRegex' so that it matches the strings 'run', 'sun', 'fun', 'pun', 'nun', and 'bun'. Your regex should use the wildcard character.
+
+// let exampleStr = "Let's have fun with regular expressions!";
+// let unRegex = /.un/g; // Change this line
+// let tResult = unRegex.test(exampleStr);
+// let mResult = exampleStr.match(unRegex);
+
+// console.log(tResult, mResult);
+
+
+
+
+
+
+// ## Match Single Character with Multiple Possibilites
+
+// You learned how to match literal patterns (/literal/) and wildcard character ('/./'). Those are the extremes of regular expressions, where one finds exact matches and the other matches everything. There are options that are a balance between the two extremes.
+
+// You can search for a literal patter with some flexibility with character classes. Character classses allow you to define a group of characters you wish to match by placing them inside square ('[' and ']') brackets.
+
+// For wxample, you want to match 'bag', 'big', and 'bug' but not 'bog'. You can create the regex '/b[aiu]g/' to do this. The '[aiu]' is the character class that will only match the characters 'a', 'i', or 'u'.
+
+
+
+
+
+// let bigStr = 'big';
+// let bagStr = "bag";
+// let bugStr = "bug";
+// let bogStr = "bog";
+// let bgRegex = /b[aiu]g/;
+
+// let bigResult = bigStr.match(bgRegex);
+// let bagResult = bagStr.match(bgRegex);
+// let bugResult = bugStr.match(bgRegex);
+// let bogResult = bogStr.match(bgRegex);
+
+// console.log(bigResult);
+// console.log(bagResult);
+// console.log(bugResult);
+// console.log(bogResult);
+
+// In order, the four 'match' calls would return the values '["big"]', '["bag"]', '[bug]', and 'null'.
+
+// Use a character class with vowels ('a', 'e', 'i', 'o', 'u') in your regex 'vowelRegex' to find all the vowels in the string 'quoteSample'.
+
+// Note: Besure to match both upper-and lowercase vowels.
+
+// let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+// let vowelRegex = /[aeiou]/ig;
+// let result = quoteSample.match(vowelRegex);
+
+// console.log(result);
+
+
+
+
+
+
+// ## Match Letters of the Alphabet
+
+// You saw how you can use character sets to specigy a group of characters to match, but that's a lot of typing when you need to match a large range of characters (for example, every letter in the alphabet). Fortunately, htere is a built-in feature that mamkes this short and simple.
+
+// Inside a character set, you can define a range of characters to match using a hyphen character: '-'.
+
+// For example, to match lowercase letters 'a' through 'e' yo uwould us '[a-e]'.
+
+// let catStr = "cat";
+// let batStr = "bat";
+// let matStr = "mat";
+// let bgRegex = /[a-e]at/;
+
+// const catResult = catStr.match(bgRegex);
+// const batResult = batStr.match(bgRegex);
+// const matResult = matStr.match(bgRegex);
+
+// console.log(catResult);
+// console.log(batResult);
+// console.log(matResult);
+
+// In order, the three 'match' calls would return the values '["cat"]', '["bat"]', and 'null'.
+
+// Match all the letters in the string 'quoteSample'.
+
+// Note: Be sure to match both uppercase and lowercase letters.
+
+// let quoteSample ="The quick brown fox jumps over the lazy dog.";
+// let alphabetRegex = /[a-z]/gi; // Change this line
+// let result = quoteSample.match(alphabetRegex); // Change this line
+
+// console.log(result);
+
+
+
+
+
+// ## Match Numbers and Letters of the Alphabet
+
+// Using the hyphen ('-') to match a range of characters is not limited to letters. It also works to match a range of numbers.
+
+// for example, '/[0-5]/' matches any number between '0' and '5', including the '0' and '5'.
+
+// Also, it is possible to combine a range of letters and numbers in a single character set.
+
+// let jennyStr = "Jenny8675309";
+// let myRegex = /[a-z0-9]/ig;
+// const result = jennyStr.match(myRegex);
+// console.log(result);
+
+// Create a single regex that matches a range of letters between 'h' and 's', and a range of numbers between '2' and '6'. Remember to include the appropriate flags in the regex.
+
+// let quoteSample = "blueberry 3.141592653s are delicious.";
+// let myRegex = /[h-s2-6]/ig;
+// let result = quoteSample.match(myRegex);
+// console.log(result);
+
+
+
+
+
+// ## Match singel Characters Not specified
+
+// So far, you have created a set of characters that you want to match, but you could also create a set of characters that you do not want to match. These types of dcharacters sets are called negated characters sets.
+
+// To create a negated character set, you place a caret character ('^') agter the opening bracket and before the characters yo do not want to match.
+
+// For example, '/[^aeiou]/gi' matches all characters that are not a vowel. Note that characters like '.', '!', '[', '@', '/' and white space are matched-the negated vowel characters set only excludes the vowel characters.
+
+// Create a single regex that matches all characters that are not a number or a vowel. remember to include the appropriate flags in the regex.
+
+// let quoteSample = "3 blind mice.";
+// let myRegex = /[^1-9aeiou]/gi;  // Change this line
+// let result = quoteSample.match(myRegex); // Change this line
+
+// console.log(result);
+
+
+
+
+
+// ## Match Characters that Occur One or More Times
+
+//Sometimes, you need to match a character (or group of characters) that appears one or more times in a row. This means it occures at least once, and may be repeated.
+
+// You can use the '+' character to check if that is the case. Remember, teh character or patter has to be present consecutively. That  is, the character has to repeat one ager the other.
+
+// For example, '/a+/g' would find one match in 'abc' and return '["a"]'. Because of the '+', it would also find a single match in 'aabc' and return '["aa"]'.
+
+// If it were instead checking the string 'abab', it would find two matches and return '["a", "a"]' because the 'a' characters are not in a row-there is a 'b' between them. Finally, since there is no 'a' in the string 'bcd', it wouldn't find a match.
+
+// You want to find matches when the letter 's' occurs one or more times in 'Mississippi'. Write a regex that uses the '+' sign.
+
+// let difficultSpelling = "Mississippi";
+// let myRegex = /s+/g;
+// let result = difficultSpelling.match(myRegex);
+
+// console.log(result);
+
+
+
+
+
+// ## Match Characters that Occur Zero or More Times
+
+// The last challenge used the plus '+' sign to look for characters that occur one or more times. Theres's also an option that matches characters that occur zero or more times.
+
+// The character to do this is the asterisk or start: '*'.
+
+// let soccerWord = "gooooooooal!";
+// let gPhrase = "gut felling";
+// let oPhrase = "over the moon";
+// let goRegex = /go*/;
+// let soccerWordResult =  soccerWord.match(goRegex);
+// let gPhraseResult = gPhrase.match(goRegex);
+// let oPhraseResult = oPhrase.match(goRegex);
+
+// console.log(soccerWordResult);
+// console.log(gPhraseResult);
+// console.log(oPhraseResult);
+
+// In order, the three 'match' calls would return the values '["goooooooo"]', '["g"]', and 'null'.
+
+// For this challenge, 'chewieQuote' has been initialized as the string 'Aaaaaaaaaaaaaaaarrrgh!' behind the scenes. Create a regex 'chewieRegex' that uses the '*' character to match an uppercase 'A' character immediately followed by zero or more lowercase 'a' characters in 'chewieQuote'. Your regex does not need flags or character classes, and it should not match any of the other quotes.
+
+// let chewieQuote = "Aaaaaaaaaaaaaaaarrrgh!";
+// // Only change code below this line
+// let chewieRegex = /Aa*/g;
+// // Only change code above this line
+
+// let result = chewieQuote.match(chewieRegex);
+
+// console.log(result);
+
+
+
+
+
+
+// ## Find Characters with Lazy Matching
+
+// In regular expressions, a greedy match finds the longest possible part of a string that fits the regex pattern and returns it as a match. The alternative is called a lazy match, which finds the smallest possible part the the string that satisfies the regex pattern.
+
+// You can apply the regex '/t[a-z]*i/' to the string '"titanic"'. This regex is basically a pattern that starts with 't', ends with 'i', and has some letters in between.
+
+// Regular expressions are by default greedy, so the match would return '["titani"]'. It finds the largest sub-string possible to fit the pattern.
+
+// However, you can use the '?' character to change it to lazy matching. '"titanic"' matched against the adjusted regex of '/t[a-z]*?i/' returns '["ti"]'.
+
+// Note: Parsing HTML with regular expressions should be avoided, but pattern matching an HTML string with regular expressions is completely fine.
+
+// Fix the regex '/<.*>/' to return the HTML tag '<h1>' and not the the text '"<h1>Winter is comming</h1>"' Remember the wildcard '.' in a regular expression matches any character.
+
+// let text = "<h1>Winter is coming</h1>";
+// let myRegex = /<.*?>/; // Change this line
+// let result = text.match(myRegex);
+
+// console.log(result);
+
+
+
+
+
+// ## Find One or More Criminals in a Hunt
+
+// Time to pause and test your new regex writing skills. A group of criminals escaped from jail and ran away, but you don't know how many. However, you do know that they stay close together when they are around other people. You are responsible for finding all of the criminals at once.
+
+// Here's an example to review how to do this:
+
+// The regex '/z+/' matches the letter 'z' when it appears one or more times in a row. It would find matches in all of the following strings: 
+
+// "z"
+// "zzzzzz"
+// "ABCzzzz"
+// "zzzzABC"
+// "abczzzzzzzzzzzzzzzzzzzzzabc"
+
+// But it does not find matches in the following strings since there are no letter 'z' characters:
+
+// ""
+// "ABC"
+// "abcabc"
+
+// Write a greedy regex that finds one or more criminals within a group of other people. A crimainal is represented by the capital letter 'C'.
+
+// let strC1 = "P1P5P4CCCcP2P6P3";
+// let strC2 = "P6P2P7P4P5CCCCCP3P1"
+// let strC3 = "P2P1P5P4CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCP3";
+// let reCriminals = /C+/; // Change this line
+
+// let resultC1 = strC1.match(reCriminals);
+// let resultC2 = strC2.match(reCriminals);
+// let resultC3 = strC3.match(reCriminals);
+
+// console.log(resultC1);
+// console.log(resultC2);
+// console.log(resultC3);
