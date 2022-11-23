@@ -40,7 +40,7 @@ Note: The Responsive Web Design and some lessons in JavaScript were not typed ou
 2. ### JavaScript Algorithms and Data Structures
 - [X] Basic JavaScript
 - [X] ES6 
-- [ ] Regular Expressions
+- [X] Regular Expressions
 - [ ] Debugging
 - [ ] Basic Data Structures
 - [ ] Basic Algorithm Scripting
