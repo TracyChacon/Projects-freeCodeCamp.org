@@ -1,5 +1,7 @@
 // # Regular expressions, ofter shortened to "regex" or "regexp", are patterns that help programminers match, search, and replace text. Regular expressions are very powerful, but can be hard to read because they use special characters to make more compleex, flexible matches.
 
+const { repeat } = require("lodash");
+
 // In this course, you'll learn how to use special characters, capture groups, positive and negative lookaheads, and other techniques to match any text you want.
 
 
@@ -565,7 +567,7 @@
 
 
 
-// ## Match Everything But lLetters and Numbers
+// ## Match Everything But Letters and Numbers
 
 // You've learned that you can use a shortcut to match alpanumerics '[A-Za-z0-9_]' using '\w'. A natural pattern you might want to search for is the opposite of alphanumerics.
 
@@ -772,7 +774,7 @@
 
 
 
-// ## specify Exact Number of Matches
+// ## Specify Exact Number of Matches
 
 // You can specify the lower and upper number of patterns with quantity specifiers using curly brackets. Sometimes you only wnat a specific number of matches.
 
@@ -811,7 +813,7 @@
 
 // Sometimes the patterns you want to search for may have parts of it that may or may not exist. Hoever, it may be important to check for them nonetheless.
 
-// You can specify teh possible existence of an element with a questions mark, '?'. This checks for zero or one of the preceding element. You can think of this symbol as saynig the previous element is optional.
+// You can specify the possible existence of an element with a questions mark, '?'. This checks for zero or one of the preceding element. You can think of this symbol as saynig the previous element is optional.
 
 // For example, there are slight differences in American and British English and you can use the question mark to match both spellings.
 
@@ -879,3 +881,125 @@
 
 // console.log(result);
 
+
+
+
+
+
+
+
+// ## Check For Mixed Grouping of Characters
+
+// Sometimes we want to check for groups of characters using a regular Expression and to achieve that we use parentheses '()'.
+
+// If you want to find either 'Penguin' or 'Pumkin' in a string, you can use the following Regular Expression: '/P(engu|umpk)in/g'
+
+// Then check whether the desired string groups are in teh test string by using the 'test()' method.
+
+// let testStr = "Pumkin";
+// let testRegex = /P(engu|umk)in/;
+// const resultTest = testRegex.test(testStr);
+
+// console.log(resultTest);
+
+// The 'test' method here would return 'true'.
+
+// Fix the regex so that it checks for the names of 'Franklin Roosevelt' or 'Eleanor Roosevelt' in a cse sensitive manner and it should make concessions for middle names.
+
+// Then fix the code so that the regex that you have created is checked against 'myString' and whether 'true' or 'false' is returned depending on whether the regex matches.
+
+// let myString = "Eleanor Roosevelt";
+// let myRegex = /(Franklin|Eleanor) (([A-Z]\.?|[A-Z][a-z]+) )?Ro{2}sevelt/; // Change this line
+// let result = myRegex.test(myString); // Change this line
+// // After passing the challenge experiment with myString and see how the grouping works
+
+// console.log(result);
+
+// /(Franklin|Eleanor) (([A-Z]\.?|[A-Z][a-z]+) )?Roosevelt/;
+
+
+
+
+
+// ## Reuse Patterns Using Capture Groups
+
+// Say you want to match a word that occurs multiple times like below.
+
+// let repeatStr = "row row row your boat";
+
+// You could use '/row row row/', but what if you don't know the specific word repeated? Capture groups can be used to find repeated substrings.
+
+// Capture groups are constructed by enclosing the regex pattern to be captured in parentheses. In this case, the goal is to capture a word consisiting of alphanumeric characters so that the capture group will be '\w+' enclosded by parentheses: '/(\w+)/'.
+
+// The substring matched by the group is saved to a temporary "variable", which can be accessed within the same regex using a backslash and the number of the capture group(e.g. '\1'). Capture groups are automatically numbered by the position of their opening parentheses (left to right), starting at 1.
+
+// The example below matches a word that occurs thrice separated by spaces:
+
+// let repeatRegex = /(\w+) \1 \1/;
+// const resultRepeatRegex = repeatRegex.test(repeatStr); // Returns true
+// const resultRepeatStr = repeatStr.match(repeatRegex); // Returns ["row row row", "row"]
+
+// console.log(resultRepeatRegex);
+// console.log(resultRepeatStr);
+
+// Use capture groups in 'reRegex' to match a string that consists of only the same number repeated exactly three times separated by single spaces.
+
+// let repeatNum = "42 42 42";
+// let reRegex = /^(\d+) \1 \1?/; //Change this line
+// let result = reRegex.test(repeatNum);
+// let resultMatch = repeatNum.match(reRegex);
+
+// console.log(result);
+// console.log(resultMatch);
+
+
+
+
+
+
+// Use Capture Groups to Search and Replace
+
+// Searching is useful. However, you can make searching even more powerful when it also changes (or replaces) the text you match.
+
+// You can search and replace text in a string using '.replace()' on string. The inputs for '.replace()' is first the regex pattern you want to search for. The second parameter is the string to replace the match or a function to do something.
+
+// let wrongText = "The sky is silver.";
+// let silverRegex = /silver/;
+// const wrongTextReplace = wrongText.replace(silverRegex, "blue");
+
+// console.log(wrongTextReplace);
+
+// The 'replace' call would return the string 'The sky is blue.'.
+
+// You can also access capture groups in the replacement string with dollar signs ('$').
+
+//  console.log("Code Camp".replace(/(\w+)\s(\w+)/, '$2 $1'));
+
+// The 'replace' call would return the string 'Camp Code'.
+
+// Write a regex 'fixRegex' using three capture groups that will search for each word in teh string 'one two three'. Then update the 'replaceText' variable to replace 'one two three' with the string 'three two one' and assign the result to the 'result' variable. Make sure you are utilizing capture groups in the replacement string using the dollar sign ('$') syntax.
+
+// let str = "one two three";
+// let fixRegex = /(\w+)\s(\w+)\s(\w+)/; // Change this line
+// let replaceText = "$3 $2 $1"; //Change this line
+// let result = str.replace(fixRegex, replaceText);
+
+// console.log(result);
+
+
+
+
+
+// ## Remove Whitespace from Start and End
+
+// Sometimes whitespace characters around strings are not wanted but are there. Typical processing of strings is to remove the whitespace at the start and end of it.
+
+// Write a regex and use the appropriate string methods to remove whitespace at the beginning and end of strings.
+
+// Note: the 'String.prototype.trim()' method would work here, but you'll need to complete this challenge using regular expressions.
+
+// let hello = "   Hello, World!  ";
+// let wsRegex = /^\s+|\s+$/g; // Change this line
+// let result = hello.replace(wsRegex, ""); // Change this line
+
+// console.log(result);
