@@ -341,10 +341,10 @@ const { sum, first } = require("lodash");
 
 // The 'myFunc()' function contains an infinite loop because the terminal condition 'i != 4' will never evaluate to 'false' (and  bread the looping)-'i' is odd to start. Fix the comparison operator in the terminal condition so teh loop only runs for 'i' less than or equal to 4.
 
-function myFunc() {
-    for (let i = 1; i <= 4; i += 2) {
-        console.log("Still going!");
-    }
-}
+// function myFunc() {
+//     for (let i = 1; i <= 4; i += 2) {
+//         console.log("Still going!");
+//     }
+// }
 
-myFunc();
+// myFunc();
