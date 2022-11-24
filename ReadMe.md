@@ -41,7 +41,7 @@ Note: The Responsive Web Design and some lessons in JavaScript were not typed ou
 - [X] Basic JavaScript
 - [X] ES6 
 - [X] Regular Expressions
-- [ ] Debugging
+- [X] Debugging
 - [ ] Basic Data Structures
 - [ ] Basic Algorithm Scripting
 - [X] Object Oriented Programming
