@@ -1,7 +1,5 @@
 // # Regular expressions, ofter shortened to "regex" or "regexp", are patterns that help programminers match, search, and replace text. Regular expressions are very powerful, but can be hard to read because they use special characters to make more compleex, flexible matches.
 
-const { repeat } = require("lodash");
-
 // In this course, you'll learn how to use special characters, capture groups, positive and negative lookaheads, and other techniques to match any text you want.
 
 
@@ -740,7 +738,6 @@ const { repeat } = require("lodash");
 
 // ## Specify Only the Lower Number of Matches
 
-
 // You can specify the lower and upper number of patterns with quantity specifiers using curly brackets. Sometimes you only want to specify the lower number of patterns with no upper limit.
 
 // To only specify the lower mumber of patterns, keep the first number followed by a comma.
@@ -977,7 +974,7 @@ const { repeat } = require("lodash");
 
 // The 'replace' call would return the string 'Camp Code'.
 
-// Write a regex 'fixRegex' using three capture groups that will search for each word in teh string 'one two three'. Then update the 'replaceText' variable to replace 'one two three' with the string 'three two one' and assign the result to the 'result' variable. Make sure you are utilizing capture groups in the replacement string using the dollar sign ('$') syntax.
+// Write a regex 'fixRegex' using three capture groups that will search for each word in the string 'one two three'. Then update the 'replaceText' variable to replace 'one two three' with the string 'three two one' and assign the result to the 'result' variable. Make sure you are utilizing capture groups in the replacement string using the dollar sign ('$') syntax.
 
 // let str = "one two three";
 // let fixRegex = /(\w+)\s(\w+)\s(\w+)/; // Change this line
