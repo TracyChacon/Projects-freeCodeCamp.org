@@ -9,11 +9,11 @@
 
 // ## Learn About Functional Programming
 
-// Functional programming is a style fo programming where solutions are simple, isolated functions, without any side effects outside of the function scope: 'INPUT -> PROCESS -> OUTPUT'
+// Functional programming is a style of programming where solutions are simple, isolated functions, without any side effects outside of the function scope: 'INPUT -> PROCESS -> OUTPUT'
 
 // Functional programming is about:
 
-    // 1. Isolated functions-there is no dependence on the state of hte program, which includes global variables that are subject to change.
+    // 1. Isolated functions-there is no dependence on the state of the program, which includes global variables that are subject to change.
     // 2. Pure functions-the same input always gives the same output
     // 3. Functions with limited side effects-any changes, or mutations, to the state of the program outside the function are carefully controlled
 
@@ -68,7 +68,6 @@
 // Prepare 27 cups of green tea and 13 cups of black tea and store them in 'tea4GreenteamFCC' and 'tea4BlackTeamFCC' variables, respectively. Note that the 'getTea' function has been modified so it now takes a function as the first argument.
 
 // Note: The data (the number of cups of tea) is supplied as the last argument. We'll discuss this more in later lessons.
-
 
 // // Function that returns a string representing a cup of green tea
 // const prepareGreenTea = () => 'greenTea';
@@ -138,7 +137,7 @@
 
 // // When you open a new tab at the end
 // Window.prototype.tabOpen = function(tab) {
-//     this.tabs.push('new tab');; // let's open a new tab for now
+//     this.tabs.push('new tab'); // let's open a new tab for now
 //     return this;
 // }
 
@@ -150,7 +149,7 @@
 //     const tabsBeforeIndex = this.tabs.splice(0, index); // Get the tabs before the tab
 //     const tabsAfterIndex = this.tabs.splice(index + 1); // Get the tabs after the tab
 
-//     this.tabs = tabsBeforeIndex.concat(tabsBeforeIndex, tabsAfterIndex); // Join them together
+//     this.tabs = tabsBeforeIndex.concat( tabsAfterIndex); // Join them together
 
 //     // Only change code above this line
 
@@ -176,4 +175,272 @@
 
 // ## Avoid Mutations and Side Effects Using Functional Programming
 
-// If yo haven't already figured it out, the issue in the previous challenge was with the 'splice' call in the 'tabClose()' function, Unfortunately, 'splice' changes the original array it is called on, so the second call to it used a modified array, and gave unexpected results.
+// If you haven't already figured it out, the issue in the previous challenge was with the 'splice' call in the 'tabClose()' function, Unfortunately, 'splice' changes the original array it is called on, so the second call to it used a modified array, and gave unexpected results.
+
+// This is a small example of a much larger pattern- you call a function on a variable, array, or an object, and the function changes the variable or something in the object.
+
+// One of the core principles of functional programming is to not change things. Changes lead to bugs. It's eaier to prevent bugs knowing that your functions don't change anything, including the function arguments or any global variable.
+
+// The previous example didin't have any complicated orperations but the 'splice' method changed the original array, and resulted in a bug.
+
+// Recall that in functional programming, changin or altering things is called mutation, and the outcome is called a side effect. A function, ideally, should be a pure function, meaning that it does not cause any side effects.
+
+// Let's try to master this dicipline and not alter any variable or object in our code.
+
+// Fill in the code for the function 'incrementer' so it returns the value of the global variable 'fixedValue' increased by one.
+
+// // The global variable
+// let fixedValue = 4;
+
+// function incrementer() {
+//     // Only change code below this line
+//     return fixedValue + 1;
+//     // Only change code below this line
+// };
+
+// console.log(incrementer());
+
+
+
+
+
+
+// Pass Arguments to Avoid External Dependence in a Function
+
+// The last challenge was a step closer to functional programming principles, but there is still something missing.
+
+// We didn't alter the global variable value, but the function 'incrementer' would not work without the global variable 'fixedValue' being there.
+
+// Another principle of functional programming is to always declare your dependencies explicitly. This means if a functions depends on a variable or object being present, then pass that variable or object directly into the function as an argument.
+
+// There are several good consequences from this principle. The Function is easier to test, you know exactley what input it takes, and it won't depend on anything else in your program.
+
+// This can give you more confidence when you alter, remove, or add new code. You would know what you can or cannot change and you can see where the potential traps are.
+
+// Finally, the function would always produce the same output for the same set of inputs, no matter what part of the code executes it.
+
+// Let's update the 'incrementer' function to clearly declare its dependencies.
+
+// Write the ''incrementer' function so it takes an argument, and then returns a result after increasing the value by one.
+
+// //  The global variable
+// let fixedValue = 4;
+
+// // Only change code below this line
+// function incrementer(value)
+// {
+//     return value += 1
+//     // Only change code above this line
+// };
+
+
+
+
+
+// ## Refactor Global Variables Out of Functions
+
+// So far, we have seen two distinct principles for functional programming:
+    // 1. Don't alter a variable or object- create new variables and objects and return them if need be from a function. Hint: using something like 'const newArr = arrVar', where 'arrVar' is an array will simply create a reference to the existing variable and not a copy. So changing a value in 'newArr' would change the value in 'arrVar'.
+    // 2. Declare function parameters-any computation inside a function depends only on the arguments passed to the function, and not on any global object or variable.
+
+// Adding one to a number is not very exciting, but we can apply these principles when working with arrays or more complex objects.
+
+// Rewrite the code so the global array 'bookList' is not changed inside either function. The 'add' function should add the given 'bookName' to the end of the array passed to it and return a new array (list). The 'remove' function should remove the given 'bookName' from the array passed to it.
+
+// // The global variable
+// const bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
+
+// // Change code below this line
+// function add(bookListArr, bookName) {
+//     return [...bookListArr, bookName];
+//     // Change code above this line
+// };
+
+// // Change code below this line
+// function remove(bookListArr, bookName) {
+//     const defenestrateArray = [...bookListArr];
+//     const book_index = defenestrateArray.indexOf(bookName);
+//     if (book_index >= 0) {
+//       defenestrateArray.splice(book_index, 1);
+//       return defenestrateArray;
+  
+//       // Change code above this line
+//       }
+//   }
+
+// console.log(add(bookList, "Sears and Zemansky's University Physics with Modern Physics"));
+// console.log(add(bookList, "Complete Book of C Programming"));
+// console.log()
+
+// console.log(remove(bookList, bookList[0]))
+// console.log(remove(bookList, bookList[1]))
+
+
+
+
+
+
+// Use the map Method to Extract Data from an Array
+
+// So far we have learned to use pure functions to avoid side effects in a program. Also, we have seen the value in having a function only depend on its input arguments.
+
+// This in only the beginning. As its name suggests, functional programming is centered around a theory of functions.
+
+// It would make sense to be able to pass them as arguments to other functions, and return a  function from another function. Functions are considered first class objects in JavaScript, which means they can be used like any other object. They can be saved in variables, stored in an object, or passed as function arguments.
+
+// Let's start with some simple array funcitons, which are methods on the array object prototype. In this exercise wer are looking at 'Array.prototype.map()', or more simply 'map'.
+
+// The 'map' method iterates over each item in an array and returns a new array containing the results of calling the callback function on each element. It does this without mutating the original array.
+
+// When the callback is used, it is passed three arguments. The first argument is the current element being processed. the second is the index of that element and the third is the array upon which the 'map' method was called.
+
+// See below for an example using the 'map' method on the 'users' array to return a new array containing only the names of the users as elements. For simplicity, the example only uses the first argument of the callback.
+
+// const users = [
+//     { name: 'John', age: 34 },
+//     { name: 'Amy', age: 20 },
+//     { name: 'camperCat', age: 10 }
+// ];
+
+// const names = users.map(user => user.name);
+// console.log(names);
+
+// The 'watchList' array holds objects with informaiton on several movies. Use 'map' on 'watchList' to assign a new array of objects to the 'ratings' variable. Each movie in the new array should have only a 'title' key with the name of the film, and a 'rating' key with the IMDB rating. The code in the editor currently uses a 'for' loop to do this, so you should replace the loop functionality with your 'map' expression.
+
+// The global variable
+
+// const watchList = [
+//     {
+//         "Title": "Inception",
+//         "Year": "2010",
+//         "Rated": "PG-13",
+//         "Released": "16 Jul 2010",
+//         "Runtime": "148 min",
+//         "Genre": "Action, Adventure, Crime",
+//         "Director": "Christopher Nolan",
+//         "Writer": "Christopher Nolan",
+//         "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page, Tom Hardy",
+//         "Plot": "A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.",
+//         "Language": "English, Japanese, French",
+//         "Country": "USA, UK",
+//         "Awards": "Won 4 Oscars. Another 143 wins & 198 nominations.",
+//         "Poster": "http://ia.media-imdb.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+//         "Metascore": "74",
+//         "imdbRating": "8.8",
+//         "imdbVotes": "1,446,708",
+//         "imdbID": "tt1375666",
+//         "Type": "movie",
+//         "Response": "True"
+//       },
+//       {
+//         "Title": "Interstellar",
+//         "Year": "2014",
+//         "Rated": "PG-13",
+//         "Released": "07 Nov 2014",
+//         "Runtime": "169 min",
+//         "Genre": "Adventure, Drama, Sci-Fi",
+//         "Director": "Christopher Nolan",
+//         "Writer": "Jonathan Nolan, Christopher Nolan",
+//         "Actors": "Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow",
+//         "Plot": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+//         "Language": "English",
+//         "Country": "USA, UK",
+//         "Awards": "Won 1 Oscar. Another 39 wins & 132 nominations.",
+//         "Poster": "http://ia.media-imdb.com/images/M/MV5BMjIxNTU4MzY4MF5BMl5BanBnXkFtZTgwMzM4ODI3MjE@._V1_SX300.jpg",
+//         "Metascore": "74",
+//         "imdbRating": "8.6",
+//         "imdbVotes": "910,366",
+//         "imdbID": "tt0816692",
+//         "Type": "movie",
+//         "Response": "True"
+//       },
+//       {
+//         "Title": "The Dark Knight",
+//         "Year": "2008",
+//         "Rated": "PG-13",
+//         "Released": "18 Jul 2008",
+//         "Runtime": "152 min",
+//         "Genre": "Action, Adventure, Crime",
+//         "Director": "Christopher Nolan",
+//         "Writer": "Jonathan Nolan (screenplay), Christopher Nolan (screenplay), Christopher Nolan (story), David S. Goyer (story), Bob Kane (characters)",
+//         "Actors": "Christian Bale, Heath Ledger, Aaron Eckhart, Michael Caine",
+//         "Plot": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.",
+//         "Language": "English, Mandarin",
+//         "Country": "USA, UK",
+//         "Awards": "Won 2 Oscars. Another 146 wins & 142 nominations.",
+//         "Poster": "http://ia.media-imdb.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg",
+//         "Metascore": "82",
+//         "imdbRating": "9.0",
+//         "imdbVotes": "1,652,832",
+//         "imdbID": "tt0468569",
+//         "Type": "movie",
+//         "Response": "True"
+//       },
+//       {
+//         "Title": "Batman Begins",
+//         "Year": "2005",
+//         "Rated": "PG-13",
+//         "Released": "15 Jun 2005",
+//         "Runtime": "140 min",
+//         "Genre": "Action, Adventure",
+//         "Director": "Christopher Nolan",
+//         "Writer": "Bob Kane (characters), David S. Goyer (story), Christopher Nolan (screenplay), David S. Goyer (screenplay)",
+//         "Actors": "Christian Bale, Michael Caine, Liam Neeson, Katie Holmes",
+//         "Plot": "After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from the corruption that Scarecrow and the League of Shadows have cast upon it.",
+//         "Language": "English, Urdu, Mandarin",
+//         "Country": "USA, UK",
+//         "Awards": "Nominated for 1 Oscar. Another 15 wins & 66 nominations.",
+//         "Poster": "http://ia.media-imdb.com/images/M/MV5BNTM3OTc0MzM2OV5BMl5BanBnXkFtZTYwNzUwMTI3._V1_SX300.jpg",
+//         "Metascore": "70",
+//         "imdbRating": "8.3",
+//         "imdbVotes": "972,584",
+//         "imdbID": "tt0372784",
+//         "Type": "movie",
+//         "Response": "True"
+//       },
+//       {
+//         "Title": "Avatar",
+//         "Year": "2009",
+//         "Rated": "PG-13",
+//         "Released": "18 Dec 2009",
+//         "Runtime": "162 min",
+//         "Genre": "Action, Adventure, Fantasy",
+//         "Director": "James Cameron",
+//         "Writer": "James Cameron",
+//         "Actors": "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang",
+//         "Plot": "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+//         "Language": "English, Spanish",
+//         "Country": "USA, UK",
+//         "Awards": "Won 3 Oscars. Another 80 wins & 121 nominations.",
+//         "Poster": "http://ia.media-imdb.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_SX300.jpg",
+//         "Metascore": "83",
+//         "imdbRating": "7.9",
+//         "imdbVotes": "876,575",
+//         "imdbID": "tt0499549",
+//         "Type": "movie",
+//         "Response": "True"
+//       }
+// ];
+
+// // Only change code below this line
+
+// const ratings = [];
+// // for (let i = 0; i < watchList.length; i++) {
+// //     ratings.push({title: watchList[i]["Title"], rating: watchList[i]["imdbRating"]});
+// // }
+
+// watchList.map((e, i) => {
+//     ratings.push({title: watchList[i]["Title"], rating: watchList[i]["imdbRating"]});
+// });
+
+// // Only change code above this line
+
+// console.log(JSON.stringify(ratings));
+
+
+
+
+
+// ## Implement map on a Prototype
+
+// As you have seen from applying 'Array.protoype.map()', or simply 'map()' earlier, the 'map' method returns an array of the same length as the one it was called on. It also doesn't alter the original array, as long as its callback function
