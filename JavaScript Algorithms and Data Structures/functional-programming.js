@@ -443,4 +443,27 @@
 
 // ## Implement map on a Prototype
 
-// As you have seen from applying 'Array.protoype.map()', or simply 'map()' earlier, the 'map' method returns an array of the same length as the one it was called on. It also doesn't alter the original array, as long as its callback function
+// As you have seen from applying 'Array.protoype.map()', or simply 'map()' earlier, the 'map' method returns an array of the same length as the one it was called on. It also doesn't alter the original array, as long as its callback function doesn't.
+
+// In other words, 'map' is a pure function, and its output depends solely on its inputs. Plus, it takes another function aas its argument.
+
+// You might learn a lot about the 'map' method if you implement your own version of it. It is recommended you use a 'for' loop or 'Array.prototype.forEach()'.
+
+// Write your own 'Array.prototype.myMap()', which should behave exactly like 'Array.prototype.map()'. You should not use the built-in 'map' method. The 'Array' instance can be accessed in the 'myMap' method using 'this'.
+
+// Array.prototype.myMap = function(callback) {
+//     const newArray = [];
+//     // Only change code below this line
+//     console.log(this);
+//     this.forEach(element => newArray.push(callback(element)));
+//     // Only change code above this line
+//     return newArray;
+// };
+
+// console.log([23, 65, 98, 5, 13].myMap(item => item * 2));
+
+
+
+
+
+
