@@ -673,7 +673,7 @@ console.log(newArry);
 
 
 
-// ## Remove Elements from an Array Using slice Instead of splice
+// ## Remove Elements from an Array Using slice Instead of splice 3-#12
 
 // A common pattern while working with arrays is when you want to remove items and keep the rest of the array. JavaScript offers the 'splice' method for this, which takes arguments for the index of where to start removing items, then the number of items to remove. If the second argument is not provided, the default is to remove items through the end. However, the 'splice' method mutates the original array is called on. Here's an example:
 
@@ -697,3 +697,29 @@ console.log(newArry);
 // const inputCities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
 // console.log(nonMutatingSplice(inputCities));
 // console.log(inputCities);
+
+
+
+
+
+
+
+// ## Combine Two Arrays Using the concat Method 4-#13
+
+// Concatenation means to join items end to end. JvaScript offers the 'concat' method for both string and arrays that work in the same way. For arrays, the method is called on one, then another array is provided as the argument to 'concat', which is added to the end of hte first array. It returns a new array and does not mutate either of the original arrays. Here's an example:
+
+// console.log([1, 2, 3].concat([4, 5, 6]));
+
+// The returned array would be '[1, 2, 3, 4, 5, 6]'.
+
+// Use the 'concat' method in the 'nonMutatingConcat' function to concatenate 'attach' to the end of 'original'. The function should return the concatenated array.
+
+function nonMutatingConcat(original, attach) {
+    // Only change code below this line
+
+    // Only change code above this line
+}
+
+const first = [1, 2, 3];
+const second = [4, 5];
+console.log(nonMutatingConcat(first, second));
