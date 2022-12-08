@@ -207,24 +207,25 @@ function PriorityQueue() {
     // Only change code below this line
     this.enqueue = function(stringAndPriority) {
         this.collection.unshift(stringAndPriority);
-        console.log(this.collection)
-        if(this.length > 1){
-            console.log(this.collection)
-            this.collection.sort((a, b) => {
-                a = a[1]
-                b = b[1]
-                (a === b) ? 0 
-                    : (a < b) 
-                        ? 1 : -1 })
-        }
-        console.log(this.collection)
 
+        if(this.collection.length > 1){
+        console.log(this.collection)
+        this.collection.sort((a, b) => {
+            a = a[1];
+            b = b[1];
+            return (a === b) ? 0 : (a < b) ? -1 : 1
+        })
+        }
     };
     this.dequeue = function() {
-        this.collection.pop();
+        const nextInLine = this.collection.pop();
+        return nextInLine[0];
     };
+    this.size = function() {
+        return this.collection.length;
+    }
     this.front = function() {
-        return this.collection[this.collection.length - 1][0]
+        return this.collection[0][0]
     };
     this.isEmpty = function() {
         return !this.collection.length;
