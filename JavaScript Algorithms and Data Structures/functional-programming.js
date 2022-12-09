@@ -1016,23 +1016,53 @@
 
 
 
-// Return a Sorted Array Without Changeing the Original Array #18
+// Return a Sorted Array Without Change the Original Array #18
 
-// A side effect of the 'sort' methode is that it changes the order to the elements in the original array. In other words, it mutates the array in place. One way to avoid this is to first concatenate an empty array to the one being sorted (remember that 'slice' and 'concat' return a new array), then run the 'sort' method.
+// A side effect of the 'sort' method is that it changes the order to the elements in the original array. In other words, it mutates the array in place. One way to avoid this is to first concatenate an empty array to the one being sorted (remember that 'slice' and 'concat' return a new array), then run the 'sort' method.
 
 // Use the 'sort' method in the 'nonMutatingSort' function to sort the elements of an array in ascending order. The funciton should return a new array, and not mutate the 'globalArray' variable.
 
-const globalArray = [5, 6, 3, 2, 9];
+// const globalArray = [5, 6, 3, 2, 9];
 
-function nonMutatingSort(arr) {
+// function nonMutatingSort(arr) {
+//     // Only change code below this line
+//     let tempArr = [...arr]
+//     return tempArr.sort((a, b) => (a === b) ? 0 : a < b ? -1: 1);
+//     // Only change code above this line
+// };
+
+// console.log(nonMutatingSort(globalArray));
+
+
+
+
+
+// Split a String into an Array Using the split Method #19
+
+// The 'split' method splits a string into an array of strings. It takes an argument for the delimiter, which can be a character ot use to break up the string or a regular expression. For example, if the delimiter is a space, you get an array of words, and if the delimiter is an empty sting, you get an array of each character in the string.
+
+// Here are two examples that split one sting by spaces, then antoher by digits using a regular expression:
+
+// const str = "Hello World";
+// const bySpace  = str.split(" ");
+// console.log(bySpace);
+
+// const otherString = "How9are7you2today";
+// const byDigits = otherString.split(/\d/);
+// console.log(byDigits);
+
+// 'bySpace' would have the value '["Hello", "World"]' and 'byDigits' would have the value '["How", "are", "you", "today"]'.
+
+// Since strings are immutable, the 'split' method makes it easier to work with them.
+
+
+//Use the 'split' method inside the 'splitify' function to split 'str' into an array of words. The function should return the array. Note that the words are not always separated by space, and the array should not contain punctuation.
+
+function splitify(str) {
     // Only change code below this line
-    let tempArr = [...arr]
-    return tempArr.sort((a, b) => (a === b) ? 0 : a < b ? -1: 1);
+    return str.split( /[^\w\d]+/ )
+    
     // Only change code above this line
-};
+}
 
-console.log(nonMutatingSort(globalArray));
-
-
-
-
+console.log(splitify("Hello World, I-am code"));
