@@ -1150,10 +1150,37 @@ const { split } = require("lodash");
 
 // The 'every' method inside the 'checkPositive' function to check fi every element in 'arr' is positive. The function shoule return a Boolean value.
 
+// function checkPositive(arr) {
+//     // Only change code below this line
+//     return arr.every(element => element > 0);
+//     // Only change code above this line
+// };
+
+// console.log(checkPositive([1, 2, 3, -4, 5]));
+
+
+
+
+// ## Use the some Method to Check that any Elements in an Array Meet a Criteria
+
+// The 'some' method works with arrays to check if any element passes a particular test. It returns a Boolean value-'true' if any fo the values meet the criteria, 'false' if not.
+
+// For example, the following code would check if any element in the 'numbers' array is less than 10:
+
+// const numbers = [10, 50, 8, 220, 110, 11];
+
+// console.log(numbers.some(function(currentValue) {
+//     return currentValue < 10;
+// }))
+
+// The 'some' method would return 'true'.
+
+// Use the 'some' method inside the 'checkPositive' function to check if any element in 'arr' is positive. The function should return a Boolean value.
+
 function checkPositive(arr) {
     // Only change code below this line
-    return arr.every(element => element > 0);
+    return arr.some(element => element > 0);
     // Only change code above this line
-};
+}
 
-console.log(checkPositive([1, 2, 3, -4, 5]));
+console.log(checkPositive([1, 2, 4, -4, 5]));
