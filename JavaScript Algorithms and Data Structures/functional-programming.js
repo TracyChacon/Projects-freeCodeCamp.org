@@ -1058,11 +1058,38 @@
 
 //Use the 'split' method inside the 'splitify' function to split 'str' into an array of words. The function should return the array. Note that the words are not always separated by space, and the array should not contain punctuation.
 
-function splitify(str) {
+// function splitify(str) {
+//     // Only change code below this line
+//     return str.split( /[^\w\d]+/ )
+//     // Only change code above this line
+// }
+
+// console.log(splitify("Hello World, I-am code"));
+
+
+
+
+
+
+// ## combine an Array into a String Using the join Method #20
+
+// The 'join' method is used to join the elements of an array together to create a string. It takes an argument for the delimiter that is used to separate the array elements in the string.
+
+// Here's an example:
+
+// const arr = ["Hello", "World"];
+// const str = arr.join(" ");
+// console.log(str);
+
+// 'str' would have a value ot the string 'Hello World'.
+
+// Use the 'join' method (amound others) inside the 'sentensify' function to make a sentence from the words in the string 'str'. The function should return a string. For example, 'I-like-Star-Wars' would be converted to 'I like Star Wars'. for this challenge, do not use the 'replace' method.
+
+function sentensify(str) {
     // Only change code below this line
-    return str.split( /[^\w\d]+/ )
     
+    return str;
     // Only change code above this line
 }
 
-console.log(splitify("Hello World, I-am code"));
+sentensify("May-the-force-be-with-you");
