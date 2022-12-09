@@ -1,5 +1,7 @@
 // # Functional Programming is another popular approach to software development. In Functional Programming, code is organized into smaller, basic functions that can be combined to build complex programs.
 
+const { split } = require("lodash");
+
 
 
 // In this course, you'll learn the core concepts of Functional Programming including pure functions, how to avoid mutations, and how to  write cleaner code with methods like '.map()' and '.filter()'.
@@ -1071,7 +1073,7 @@
 
 
 
-// ## combine an Array into a String Using the join Method #20
+// ## Combine an Array into a String Using the join Method #20
 
 // The 'join' method is used to join the elements of an array together to create a string. It takes an argument for the delimiter that is used to separate the array elements in the string.
 
@@ -1085,11 +1087,46 @@
 
 // Use the 'join' method (amound others) inside the 'sentensify' function to make a sentence from the words in the string 'str'. The function should return a string. For example, 'I-like-Star-Wars' would be converted to 'I like Star Wars'. for this challenge, do not use the 'replace' method.
 
-function sentensify(str) {
-    // Only change code below this line
-    
-    return str;
-    // Only change code above this line
+// function sentensify(str) {
+//     // Only change code below this line
+
+//     return str.split(/[^\w\d]+/).join(" ");
+//     // Only change code above this line
+// }
+
+// console.log(sentensify("May-the-force-be-with-you"));
+
+
+
+
+
+// Apply Functional Programming to Convert Strings to URL Slugs #21
+
+// The last several challenges covered a number of useful array and string methods that follow functional programming principles. We've also learned about 'reduce', which is a powerful method used to reduce problems to simpler forms. From computing averages to sorting, any array operation can be achieved by applying it. Recall that 'map' and 'filter' are special cases of 'reduce'.
+
+// Let's combine what we've learned to solve a practical problem
+
+// Many content management sites (CMS) have the titles of a post added to part of the URL for simple bookmarking purposes. For example, if you write a Medium post titled 'Stop Using Reduce', it's likely the URL would have some form fo the title string in it('.../stop-using-reduce'). You may have already noticed this on the freeCodeCamp site.
+
+// Fill in the 'urlSlug' function so it converts a string 'title' and returns the hyphenated version, and don't use use 'replace'. Here are the requirements:
+
+// The input is a string with spaces and title-cased words
+
+// The output is a string with the spaces between words replaced by a hyphen ('-')
+
+// The output should be all lower-cased letters 
+
+// The output should not have any spaces
+
+// Only change code below this line
+function urlSlug(title) {
+    return title
+        .trim()
+        .toLowerCase()
+        .split(/[^\w\d]+/)
+        .join("-");
 }
 
-sentensify("May-the-force-be-with-you");
+// Only change code above this line
+console.log(urlSlug("A Mind Needs Books Like a Sword Needs A Whetstone"));
+console.log(urlSlug(" Winter Is  coming"));
