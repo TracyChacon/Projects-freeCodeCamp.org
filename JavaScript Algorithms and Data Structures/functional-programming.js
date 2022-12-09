@@ -1119,14 +1119,41 @@ const { split } = require("lodash");
 // The output should not have any spaces
 
 // Only change code below this line
-function urlSlug(title) {
-    return title
-        .trim()
-        .toLowerCase()
-        .split(/[^\w\d]+/)
-        .join("-");
-}
+// function urlSlug(title) {
+//     return title
+//         .trim()
+//         .toLowerCase()
+//         .split(/[^\w\d]+/)
+//         .join("-");
+// }
 
-// Only change code above this line
-console.log(urlSlug("A Mind Needs Books Like a Sword Needs A Whetstone"));
-console.log(urlSlug(" Winter Is  coming"));
+// // Only change code above this line
+// console.log(urlSlug("A Mind Needs Books Like a Sword Needs A Whetstone"));
+// console.log(urlSlug(" Winter Is  coming"));
+
+
+
+
+
+
+// ## Use the every Method to Check that Every Element in an Array Meets a Criteria #22
+
+// The 'every' method works with arrays to check if every element passes a particular test. It returns a Boolean value-'true' if all values meet the criteria, 'false' if not.
+
+// For example, the following code would check if every element in the 'numbers' array is less than 10:
+
+// const number = [1, 5, 8, 0, 10, 11];
+
+// console.log(number.every(function(currentValue) {
+//     return currentValue < 10;
+// }));
+
+// The 'every' method inside the 'checkPositive' function to check fi every element in 'arr' is positive. The function shoule return a Boolean value.
+
+function checkPositive(arr) {
+    // Only change code below this line
+    return arr.every(element => element > 0);
+    // Only change code above this line
+};
+
+console.log(checkPositive([1, 2, 3, -4, 5]));
