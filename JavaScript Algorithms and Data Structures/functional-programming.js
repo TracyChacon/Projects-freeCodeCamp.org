@@ -1192,7 +1192,7 @@ const { split } = require("lodash");
 
 
 
-// ## Introduction to Currying and Partial Application
+// ## Introduction to Currying and Partial Application #24
 
 // The arity of a function is the number of arguments it requires. Currying a function means to convert a function of N arity into N functions of arity 1.
 
