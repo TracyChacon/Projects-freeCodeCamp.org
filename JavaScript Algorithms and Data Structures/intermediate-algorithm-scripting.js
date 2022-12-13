@@ -25,3 +25,42 @@
 
 // console.log(sumAll([5, 10]));
 // console.log(sumAll([10, 5]));
+
+
+
+
+
+
+
+// ## Diff Two Arrays
+
+// Compare two arrays and return a new array with any items only found in one of the two given arrays, but not both. In other words, return the 'symmetric difference' of the two arrays.
+
+// Note: You can return the array with its elements in any order.
+
+function diffArray(arr1, arr2) {
+
+    const newArr = arr1
+        .filter(element => !arr2.includes(element))
+        .concat(arr2.filter(element => !arr1.includes(element)))
+
+    const someArr = arr1
+        .filter(element => {
+            console.log(!arr2.includes(element))
+            return !arr2.includes(element)})
+        .concat(arr2.filter(element => {
+            return !arr1.includes(element)}));
+
+    const union = [...new Set([...arr1, ...arr2])]
+    console.log(union)
+
+    const intersection = arr1.filter(i => arr2.includes(i))
+    console.log(intersection)
+
+    const difference = union.filter(i => !intersection.includes(i))
+    console.log(difference)
+
+    return  newArr;
+}
+
+console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]));
