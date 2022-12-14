@@ -199,44 +199,45 @@
 
 // The 'enqueue' should accept items with the format shown above ('['human', 1]') where '1' represents the priority. 'dequeue' and 'front' should return only the item's name. not its priority.
 
-function PriorityQueue() {
-    this.collection = [];
-    this.printCollection = function() {
-        console.log(this.collection);
-    };
-    // Only change code below this line
-    this.enqueue = function(stringAndPriority) {
-        this.collection.unshift(stringAndPriority);
+// function PriorityQueue() {
+//     this.collection = [];
+//     this.printCollection = function() {
+//         console.log(this.collection);
+//     };
+//     // Only change code below this line
+//     this.enqueue = function(stringAndPriority) {
+//         this.collection.unshift(stringAndPriority);
 
-        if(this.collection.length > 1){
-        console.log(this.collection)
-        this.collection.sort((a, b) => {
-            a = a[1];
-            b = b[1];
-            return (a === b) ? 0 : (a < b) ? -1 : 1
-        })
-        }
-    };
-    this.dequeue = function() {
-        const nextInLine = this.collection.pop();
-        return nextInLine[0];
-    };
-    this.size = function() {
-        return this.collection.length;
-    }
-    this.front = function() {
-        return this.collection[0][0]
-    };
-    this.isEmpty = function() {
-        return !this.collection.length;
-    }
-    // Only change code above this line
-};
+//         if(this.collection.length > 1){
+//         console.log(this.collection)
+//         this.collection.sort((a, b) => {
+//             a = a[1];
+//             b = b[1];
+//             return (a === b) ? 0 : (a < b) ? -1 : 1
+//         })
+//         }
+//     };
+//     this.dequeue = function() {
+//         const nextInLine = this.collection.pop();
+//         return nextInLine[0];
+//     };
+//     this.size = function() {
+//         return this.collection.length;
+//     }
+//     this.front = function() {
+//         return this.collection[0][0]
+//     };
+//     this.isEmpty = function() {
+//         return !this.collection.length;
+//     }
+//     // Only change code above this line
+// };
 
-const cutInLine = new PriorityQueue;
-console.log(cutInLine.isEmpty());
-cutInLine.enqueue(["firstInline", 2]);
-(console.log(cutInLine.front()))
-cutInLine.enqueue(["secondInline", 1]);
-console.log(cutInLine.isEmpty());
-cutInLine.enqueue(["thireInline", 3]);
+// const cutInLine = new PriorityQueue;
+// console.log(cutInLine.isEmpty());
+// cutInLine.enqueue(["firstInline", 2]);
+// (console.log(cutInLine.front()))
+// cutInLine.enqueue(["secondInline", 1]);
+// (console.log(cutInLine.front()))
+// console.log(cutInLine.isEmpty());
+// cutInLine.enqueue(["thireInline", 3]);
