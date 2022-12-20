@@ -1,5 +1,7 @@
 // # Intermediate Algorithm Scripting
 
+const { split } = require("lodash");
+
 // Now that you know the basics of algorithmic thinking along with OOP and Functional Programming, test your skills with the Intermediate Algorithm Scripting challenges.
 
 
@@ -92,7 +94,9 @@
 
 
 
-// ## Wherefore art thou
+
+
+// ## Wherefore art thou #4
 
 // Make a function that to look through an array of objects (first argument) and returns an array of all objects that have matching name and value pairs (second argument). Each name and value pair of the source object has to be present in the object from the collection in the object from the collection if it is to be included in the returned array.
 
@@ -121,6 +125,55 @@
 // should return [{ "apple": 1, "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }].
 
 
+
+
+
+
+
+
+// ##  Spinal Tap Case #5
+
+// Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.
+
+// function spinalCase(str) {
+//   var regex = /\s+|_+/g;
+ 
+//   str = str.replace(/([a-z])([A-Z])/g, "$1 $2");
+  
+//   return str.replace(regex, "-").toLowerCase();
+// }
+
+// console.log(spinalCase('This Is Spinal Tap'));
+// console.log(spinalCase('thisIsSpinalTap'));
+// console.log(spinalCase('The_Andy_Griffith_Show'));
+// console.log(spinalCase('Teletubbies say Eh-oh'));
+// console.log(spinalCase('AllThe-small Things'));
+
+
+
+
+
+
+
+// ## Pig Latin #6
+
+// Pig Latin is a way of altering English Words. The rules are as follows:
+// -If a word begins with a consonant, take the first consolnant or consonant cluster, move it to the end of th eword, and add 'ay' to it.
+
+// -If a word begins with a vowel, just add 'way' at the end.
+
+// Translate the provided string to Pig Latin. Input strings are guaranteed to be English words in all lowercase.
+
+// function translatePigLatin(str) {
+//     return str
+//       .replace(/^[aeiou]\w*/g, "$&way")
+//       .replace(/(^[^aeiou]+)(\w*)/g, "$2$1ay");
+// }
+
+// console.log(translatePigLatin("consonant crazy speech"));
+// console.log(translatePigLatin("paragraphs"));
+// console.log(translatePigLatin("glove"));
+// console.log(translatePigLatin("schwartz"));
 
 
 

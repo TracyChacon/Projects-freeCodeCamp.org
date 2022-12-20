@@ -188,7 +188,7 @@
 
 // Sometimes you won't (or don't need to) know the exact caracters in your patterns. Thinking of all words that match, say, a misspelling would take a long time. Luckily, you can save time using the wildcard character: '.'
 
-// Teh wildcard character '.' will match any one character. The wildcard is also called 'dot' and 'period'. You can use the wildcard character just like any other character in the regex. For example, if you wanted to match 'hug', 'huh', 'hut', and 'hum', you can use the regex '/hu./' to match all four words.
+// The wildcard character '.' will match any one character. The wildcard is also called 'dot' and 'period'. You can use the wildcard character just like any other character in the regex. For example, if you wanted to match 'hug', 'huh', 'hut', and 'hum', you can use the regex '/hu./' to match all four words.
 
 // let humStr = "I'll hum a sont";
 // let hugStr = "Bear hug";
@@ -664,7 +664,7 @@
 
 // The challenges so far have covered matching letters of the alphabet and numbers. You can also match the whitespace or spaces between letters.
 
-// You can search for whitespace using '\s', which is a lowercase 's'. This patter not only matches whitespace, but also carriage return, tab, from feed, and new line characters. you can think of it as similar to the character class '[\r\t\f\n\v]'.
+// You can search for whitespace using '\s', which is a lowercase 's'. This pattern not only matches whitespace, but also carriage return, tab, from feed, and new line characters. you can think of it as similar to the character class '[\r\t\f\n\v]'.
 
 // let whiteSpace = "Whitespace. Whitespace everywhere!";
 // let spaceRegex = /\s/g;
@@ -688,7 +688,7 @@
 
 // You learned about searching  for whitespace using '\s', with a lowercase 's'. You can also search for everything except whitespace.
 
-// Search for non-whitespace using '\s', which is an uppercase 's'. This patter will not match whitespace, carriage return, tab, form feed, and new line characters. You can think of it being similar to the character class '[^\r\t\f\n\v]'.
+// Search for non-whitespace using '\s', which is an uppercase 's'. This pattern will not match whitespace, carriage return, tab, form feed, and new line characters. You can think of it being similar to the character class '[^\r\t\f\n\v]'.
 
 // let whiteSpace = "Whitespace. Whitespace everywhere!";
 // let nonSpaceRegex = /\S/g;
@@ -850,33 +850,33 @@
 
 // Lookaheads are a bit confusing but some examples will help.
 
-// let quit = "qu";
-// let noquit = "qt";
-// let quRegex = /q(?=u)/;
-// let qRegex = /q(?!u)/;
-// const resultQuit = quit.match(quRegex);
-// const resultNoQuit = noquit.match(qRegex);
+let quit = "qu";
+let noquit = "qt";
+let quRegex = /q(?=u)/;
+let qRegex = /q(?!u)/;
+const resultQuit = quit.match(quRegex);
+const resultNoQuit = noquit.match(qRegex);
 
-// console.log(resultQuit);
-// console.log(resultNoQuit);
+console.log(resultQuit);
+console.log(resultNoQuit);
 
 // Both of these 'match' calls would return '["q"]'.
 
 // A more practical use of lookaheads is to check two or more patterns in one string. Here is a (naively) simple password checker that looks for between 3 and 6 characters and at least one number:
 
-// let password = "abc123";
-// let checkPass = /(?=\w{3,6})(?=\D*\d)/;
-// const resultCheckPass = checkPass.test(password);
+let password = "abc123";
+let checkPass = /(?=\w{3,6})(?=\D*\d)/;
+const resultCheckPass = checkPass.test(password);
 
-// console.log(resultCheckPass);
+console.log(resultCheckPass);
 
 // Use lookaheads in the 'pwRegex' to match passwords that are greater than 5 characters long, and have two consecutive digits.
 
-// let sampleWord = "astronaut";
-// let pwRegex = /(?=\w{6,})(?=\w*\d{2})/; //Change this line
-// let result = pwRegex.test(sampleWord);
+let sampleWord = "astronaut";
+let pwRegex = /(?=\w{6,})(?=\w*\d{2})/; //Change this line
+let result = pwRegex.test(sampleWord);
 
-// console.log(result);
+console.log(result);
 
 
 
