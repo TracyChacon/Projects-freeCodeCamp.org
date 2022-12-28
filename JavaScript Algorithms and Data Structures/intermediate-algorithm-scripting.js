@@ -1,6 +1,6 @@
 // # Intermediate Algorithm Scripting
 
-const { split, lowerCase } = require("lodash");
+const { split, lowerCase, max } = require("lodash");
 
 // Now that you know the basics of algorithmic thinking along with OOP and Functional Programming, test your skills with the Intermediate Algorithm Scripting challenges.
 
@@ -222,16 +222,42 @@ const { split, lowerCase } = require("lodash");
 
 // The character and its pair are paired up in an array, and all the arrays are grouped into one encapsulating array.
 
-function pairElement(str) {
-    const pairs = {
-        A: "T",
-        T: "A",
-        C: "G",
-        G: "C"
-      }
-      return str
-        .split("")
-        .map(necleobase => [necleobase, pairs[necleobase]]);
+// function pairElement(str) {
+//     const pairs = {
+//         A: "T",
+//         T: "A",
+//         C: "G",
+//         G: "C"
+//       }
+//       return str
+//         .split("")
+//         .map(necleobase => [necleobase, pairs[necleobase]]);
+// }
+
+// console.log(pairElement("GCG"));
+
+
+
+
+
+
+// ## Missing letters #9
+
+// Find the missing letter in the passed letter range and return it.
+
+// If all letters are present in the range, return 'undefined'.
+
+function fearNotLetter(str) {
+    let maxCharCode = str.charCodeAt(0);
+    let minCharCode = str.charCodeAt(0);
+    for(let i = 0; i < str.length; i++) {
+        if(str.charCodeAt(i) > maxCharCode) maxCharCode = str.charCodeAt(i);
+        if(str.charCodeAt(i) < minCharCode) minCharCode = str.charCodeAt(i);
+    }
+    for(let i = minCharCode; i <= maxCharCode; i++) {
+        if(str.indexOf(String.fromCharCode(i)) === -1) return String.fromCharCode(i)
+    }
+    return undefined;
 }
 
-console.log(pairElement("GCG"));
+console.log(fearNotLetter('abce')); 
