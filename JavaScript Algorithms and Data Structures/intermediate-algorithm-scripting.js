@@ -206,3 +206,32 @@ const { split, lowerCase } = require("lodash");
 // console.log(myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped"));
 // console.log(myReplace("Let us go to the store", "store", "mall"));
 // console.log(myReplace("I think we should look up there", "up", "Down"));
+
+
+
+
+
+
+// ## DNA Pairing #8
+
+// Pairs of DNA strands consist of necleobase pairs. Base pairs are represented by the characters AT and CG, which from building blocks of the DNA double helix.
+
+// The DNA strand is missing the pairing element. Write a function to match the missing base pairs for the provided DNA strand. For each character in the provided string, find the base pair character. Return the results as a 2d array.
+
+// for example, for the input 'GCG', return '[["G", "C"], ["C", "G"], ["G", "C"]]'
+
+// The character and its pair are paired up in an array, and all the arrays are grouped into one encapsulating array.
+
+function pairElement(str) {
+    const pairs = {
+        A: "T",
+        T: "A",
+        C: "G",
+        G: "C"
+      }
+      return str
+        .split("")
+        .map(necleobase => [necleobase, pairs[necleobase]]);
+}
+
+console.log(pairElement("GCG"));
