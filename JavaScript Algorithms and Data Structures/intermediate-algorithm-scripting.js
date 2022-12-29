@@ -247,17 +247,89 @@ const { split, lowerCase, max } = require("lodash");
 
 // If all letters are present in the range, return 'undefined'.
 
-function fearNotLetter(str) {
-    let maxCharCode = str.charCodeAt(0);
-    let minCharCode = str.charCodeAt(0);
-    for(let i = 0; i < str.length; i++) {
-        if(str.charCodeAt(i) > maxCharCode) maxCharCode = str.charCodeAt(i);
-        if(str.charCodeAt(i) < minCharCode) minCharCode = str.charCodeAt(i);
-    }
-    for(let i = minCharCode; i <= maxCharCode; i++) {
-        if(str.indexOf(String.fromCharCode(i)) === -1) return String.fromCharCode(i)
-    }
-    return undefined;
-}
+// function fearNotLetter(str) {
+//     let maxCharCode = str.charCodeAt(0);
+//     let minCharCode = str.charCodeAt(0);
+//     for(let i = 0; i < str.length; i++) {
+//         if(str.charCodeAt(i) > maxCharCode) maxCharCode = str.charCodeAt(i);
+//         if(str.charCodeAt(i) < minCharCode) minCharCode = str.charCodeAt(i);
+//     }
+//     for(let i = minCharCode; i <= maxCharCode; i++) {
+//         if(str.indexOf(String.fromCharCode(i)) === -1) return String.fromCharCode(i)
+//     }
+//     return undefined;
+// }
 
-console.log(fearNotLetter('abce')); 
+// console.log(fearNotLetter('abce')); 
+
+
+
+
+
+
+// ## Sorted Union #10
+
+// Write a function that takes two or more arrays and returns a new array of unique values in the order of the original provided arrays.
+
+// In other words, all values present from all arrays should be included in their original order, but with no duplicates in the final array.
+
+// The unique numbers should be sorted by their original order, but the final array shold not be sorted in numerical order.
+
+// Check the assertion tests for examples.
+
+// function uniteUnique(arr) {
+//     const outputArr = [arr[0]];
+//     [...arguments].forEach(array => {
+//         array.forEach(theNumber => {
+//             if(!outputArr.includes(theNumber)) {
+//                 outputArr.push(theNumber)
+//             }
+//         })
+//     });
+//     return outputArr;
+// }
+
+// console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]))
+// console.log(uniteUnique([1, 2, 3], [5, 2, 1]))
+
+
+
+
+
+
+
+
+// ## Convert HTML Entities
+
+// Convert the characters '&', '<', '>','"' (double quote), and '''(apostrophe), in a string to their corresponding HTML entities.
+
+// function convertHTML(str) {
+//     const entities = {
+//         '&': "&amp;",
+//         '<': "&lt;",
+//         '>': "&gt;",
+//         '"': "&quot;",
+//         "'": "&apos;"
+//     }
+//     // return str
+//     //     .split("")
+//     //     .map(thisEntity => entities.hasOwnProperty(thisEntity) 
+//     //         ? entities[thisEntity] 
+//     //         : thisEntity)
+//     //     .join('')
+
+//     // return str
+//     // .split("")
+//     // .map(entity => htmlEntities[entity] || entity)
+//     // .join("");
+//     return str.replace(/([&<>\"'])/g, match => entities[match]);
+// }
+
+// console.log(convertHTML("Dolce & Gabbana"));
+// console.log(convertHTML("Hamburgers < Pizza < Tacos"));
+// console.log(convertHTML("Sixty > twelve"));
+// console.log(convertHTML('Stuff in "quotation marks"'));
+// console.log(convertHTML("Schindler's List"));
+// console.log(convertHTML("<>"));
+// console.log(convertHTML("abc"));
+
