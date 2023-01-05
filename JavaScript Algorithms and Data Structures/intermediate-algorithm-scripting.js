@@ -299,7 +299,7 @@ const { split, lowerCase, max } = require("lodash");
 
 
 
-// ## Convert HTML Entities
+// ## Convert HTML Entities #11
 
 // Convert the characters '&', '<', '>','"' (double quote), and '''(apostrophe), in a string to their corresponding HTML entities.
 
@@ -332,4 +332,35 @@ const { split, lowerCase, max } = require("lodash");
 // console.log(convertHTML("Schindler's List"));
 // console.log(convertHTML("<>"));
 // console.log(convertHTML("abc"));
+
+
+
+
+
+// ## Sum All Odd Fibonacci Numbers #12
+
+// Given a positive integer 'num', return the sum of all odd Fibonacci numbers that are less than or equal to 'num'.
+
+// The first two numbers in the Fionacci sequence are 1 and 1. Every additional number in the sequence is the sum of the two previous numbers. The first six numbers of the Fibonacci sequence are 1, 1, 2, 3, 5, and 8.
+
+// for example, 'sumFibs(10)' should return '10' because all odd Fibonacci numbers less than or equal to '10' are 1, 1, 3, and 5.
+
+function sumFibs(num) {
+    let prevNum = 0;
+    let nextNum = 1;
+    let fibOddNumSum = 0
+    // use for loop to iterate over fibonacci numbers
+    for(let fibTerm = 0; fibTerm <= num; fibTerm = prevNum + nextNum) {
+        // sum odd numbers of the sequence and store in 'fibOddNumSum' variable
+        if(fibTerm % 2 === 1) fibOddNumSum += fibTerm;
+        // move to next terms in the sequence
+        prevNum = nextNum;
+        nextNum = fibTerm;
+    }
+    return fibOddNumSum;
+};
+
+console.log(sumFibs(10));
+
+
 

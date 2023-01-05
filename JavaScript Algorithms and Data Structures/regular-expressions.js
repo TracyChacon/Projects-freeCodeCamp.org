@@ -850,33 +850,33 @@
 
 // Lookaheads are a bit confusing but some examples will help.
 
-let quit = "qu";
-let noquit = "qt";
-let quRegex = /q(?=u)/;
-let qRegex = /q(?!u)/;
-const resultQuit = quit.match(quRegex);
-const resultNoQuit = noquit.match(qRegex);
+// let quit = "qu";
+// let noquit = "qt";
+// let quRegex = /q(?=u)/;
+// let qRegex = /q(?!u)/;
+// const resultQuit = quit.match(quRegex);
+// const resultNoQuit = noquit.match(qRegex);
 
-console.log(resultQuit);
-console.log(resultNoQuit);
+// console.log(resultQuit);
+// console.log(resultNoQuit);
 
-// Both of these 'match' calls would return '["q"]'.
+// // Both of these 'match' calls would return '["q"]'.
 
-// A more practical use of lookaheads is to check two or more patterns in one string. Here is a (naively) simple password checker that looks for between 3 and 6 characters and at least one number:
+// // A more practical use of lookaheads is to check two or more patterns in one string. Here is a (naively) simple password checker that looks for between 3 and 6 characters and at least one number:
 
-let password = "abc123";
-let checkPass = /(?=\w{3,6})(?=\D*\d)/;
-const resultCheckPass = checkPass.test(password);
+// let password = "abc123";
+// let checkPass = /(?=\w{3,6})(?=\D*\d)/;
+// const resultCheckPass = checkPass.test(password);
 
-console.log(resultCheckPass);
+// console.log(resultCheckPass);
 
-// Use lookaheads in the 'pwRegex' to match passwords that are greater than 5 characters long, and have two consecutive digits.
+// // Use lookaheads in the 'pwRegex' to match passwords that are greater than 5 characters long, and have two consecutive digits.
 
-let sampleWord = "astronaut";
-let pwRegex = /(?=\w{6,})(?=\w*\d{2})/; //Change this line
-let result = pwRegex.test(sampleWord);
+// let sampleWord = "astronaut";
+// let pwRegex = /(?=\w{6,})(?=\w*\d{2})/; //Change this line
+// let result = pwRegex.test(sampleWord);
 
-console.log(result);
+// console.log(result);
 
 
 
@@ -999,4 +999,4 @@ console.log(result);
 // let wsRegex = /^\s+|\s+$/g; // Change this line
 // let result = hello.replace(wsRegex, ""); // Change this line
 
-// console.log(result);
+// console.log(result); 
