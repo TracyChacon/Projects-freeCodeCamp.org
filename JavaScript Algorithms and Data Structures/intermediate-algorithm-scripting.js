@@ -1,7 +1,5 @@
 // # Intermediate Algorithm Scripting
 
-const { split, lowerCase, max } = require("lodash");
-
 // Now that you know the basics of algorithmic thinking along with OOP and Functional Programming, test your skills with the Intermediate Algorithm Scripting challenges.
 
 
@@ -345,22 +343,71 @@ const { split, lowerCase, max } = require("lodash");
 
 // for example, 'sumFibs(10)' should return '10' because all odd Fibonacci numbers less than or equal to '10' are 1, 1, 3, and 5.
 
-function sumFibs(num) {
-    let prevNum = 0;
-    let nextNum = 1;
-    let fibOddNumSum = 0
-    // use for loop to iterate over fibonacci numbers
-    for(let fibTerm = 0; fibTerm <= num; fibTerm = prevNum + nextNum) {
-        // sum odd numbers of the sequence and store in 'fibOddNumSum' variable
-        if(fibTerm % 2 === 1) fibOddNumSum += fibTerm;
-        // move to next terms in the sequence
-        prevNum = nextNum;
-        nextNum = fibTerm;
+// function sumFibs(num) {
+//     let prevNum = 0;
+//     let nextNum = 1;
+//     let fibOddNumSum = 0
+//     // use for loop to iterate over fibonacci numbers
+//     for(let fibTerm = 0; fibTerm <= num; fibTerm = prevNum + nextNum) {
+//         // sum odd numbers of the sequence and store in 'fibOddNumSum' variable
+//         if(fibTerm % 2 === 1) fibOddNumSum += fibTerm;
+//         // move to next terms in the sequence
+//         prevNum = nextNum;
+//         nextNum = fibTerm;
+//     }
+//     return fibOddNumSum;
+// };
+
+// console.log(sumFibs(10));
+
+
+
+
+
+
+
+// ## Sum All Primes #13
+
+// A prime number is a whole number greater than 1 with exactly tow divisors: 1 and itself. For example, 2 is a prime number because it is only divisible by 1 and 2. In contrast, 4 is not prime since it is divisible by 1, 2, and 4.
+
+// Rewrite 'sumPrimes' so it returns the sum of all prime numbers that are less than or equal to num.
+
+function sumPrimes(num) {
+    // Check all numbers for primality
+//   let primes = [];
+//   for (let i = 2; i <= num; i++) {
+//     if (primes.every((prime) => i % prime !== 0)) {
+//         primes.push(i);
+//     }
+//   }
+//   return primes.reduce((sum, prime) => sum + prime, 0);
+    
+
+
+
+    console.log(6 * 163 - 1)
+
+    let sum = 0;
+    let equation1 = 0;
+    let equation2 = 0;
+    for(let i = 1; i <= num; i++) {
+        if(6 * i - 1 <= num) {
+            console.log((6 * i - 1))
+            equation2 = (6 * i - 1) 
+        } else {
+            equation2 = 0;
+        }
+        if( (6 * i + 1) <= num) {
+            console.log((6 * i + 1))
+            equation1 = (6 * i + 1) 
+        } else {
+            equation1 = 0;
+        }
+        sum += equation1 + equation2;
     }
-    return fibOddNumSum;
+    return sum + 2 + 3;
 };
 
-console.log(sumFibs(10));
-
-
+// console.log(sumPrimes(11));
+console.log(sumPrimes(977));
 
