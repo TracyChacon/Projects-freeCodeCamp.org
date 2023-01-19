@@ -1,5 +1,7 @@
 // # Intermediate Algorithm Scripting
 
+const { drop } = require("lodash");
+
 // Now that you know the basics of algorithmic thinking along with OOP and Functional Programming, test your skills with the Intermediate Algorithm Scripting challenges.
 
 
@@ -422,35 +424,64 @@
 
 // For example, if given 1 and 3, find the smallest common  multiple of both 1 and 3 that is evenly divisble by all numbers between 1 and 3.  The answer here would be 6.
 
-function smallestCommons(arr) {
-    const tempArr = [...arr].sort((a, b) => a - b);
-    for(let i = tempArr[0]; i <= tempArr[1]; i++) {
-        if(!tempArr.includes(i)) {
-            tempArr.push(i);
-        }
+// function smallestCommons(arr) {
+//     const tempArr = [...arr].sort((a, b) => a - b);
+//     for(let i = tempArr[0]; i <= tempArr[1]; i++) {
+//         if(!tempArr.includes(i)) {
+//             tempArr.push(i);
+//         }
+//     }
+//     tempArr.sort((a, b) => a - b);
+
+//     let smallestMultiple = tempArr[tempArr.length - 1];
+//     let foundSmallestMultiple = false;
+//     let multiplier = 1;
+//     let output;
+//     do {
+//         foundSmallestMultiple = tempArr.every(number => {       
+//             return smallestMultiple * multiplier % number === 0;
+//         });
+
+//         if(!foundSmallestMultiple){
+//             multiplier++;
+//         } else {
+//             output = smallestMultiple * multiplier
+//         }
+//     }
+//     while(!foundSmallestMultiple);
+
+//     return output;
+// }
+
+// // console.log(smallestCommons([1, 5]));
+// // console.log(smallestCommons([5, 1]));
+// console.log(smallestCommons([2, 10]));
+
+
+
+
+
+
+// ## Drop it #15
+
+// Given the array 'arr', iterate through and remove each element starting from the first element (the 0 index) until the function 'func' returns 'true' when the iterated element is passed through it.
+
+// Then return the rest of the array once the condition is satisfied, otherwise, 'arr' should be returned as an empty array.
+
+function dropElements(arr, func) {
+    const indexOfFuncFirstTrue = arr.indexOf(arr.filter(element => func(element))[0])
+    let outputArr = []
+
+    for(let i = indexOfFuncFirstTrue; i <= arr.length - 1; i++) {
+        outputArr.push(arr[i])
     }
-    tempArr.sort((a, b) => a - b);
 
-    let smallestMultiple = tempArr[tempArr.length - 1];
-    let foundSmallestMultiple = false;
-    let multiplier = 1;
-    let output;
-    do {
-        foundSmallestMultiple = tempArr.every(number => {       
-            return smallestMultiple * multiplier % number === 0;
-        });
-
-        if(!foundSmallestMultiple){
-            multiplier++;
-        } else {
-            output = smallestMultiple * multiplier
-        }
+    if(outputArr[0] === undefined) {
+        return [];
     }
-    while(!foundSmallestMultiple);
-
-    return output;
+    return outputArr;
 }
 
-// console.log(smallestCommons([1, 5]));
-// console.log(smallestCommons([5, 1]));
-console.log(smallestCommons([2, 10]));
+// console.log(dropElements([1, 2, 3], function(n) { return n < 3; }));
+console.log(dropElements([0, 1, 0, 1], function(n) {return n === 1;}));
+console.log(dropElements([1, 2, 3, 4], function(n) {return n > 5;}));
