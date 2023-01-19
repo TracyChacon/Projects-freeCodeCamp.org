@@ -372,8 +372,8 @@
 
 // Rewrite 'sumPrimes' so it returns the sum of all prime numbers that are less than or equal to num.
 
-function sumPrimes(num) {
-    // Check all numbers for primality
+// function sumPrimes(num) {
+// // Check all numbers for primality
 //   let primes = [];
 //   for (let i = 2; i <= num; i++) {
 //     if (primes.every((prime) => i % prime !== 0)) {
@@ -381,33 +381,76 @@ function sumPrimes(num) {
 //     }
 //   }
 //   return primes.reduce((sum, prime) => sum + prime, 0);
-    
+//     // console.log(6 * 163 - 1)
 
-
-
-    console.log(6 * 163 - 1)
-
-    let sum = 0;
-    let equation1 = 0;
-    let equation2 = 0;
-    for(let i = 1; i <= num; i++) {
-        if(6 * i - 1 <= num) {
-            console.log((6 * i - 1))
-            equation2 = (6 * i - 1) 
-        } else {
-            equation2 = 0;
-        }
-        if( (6 * i + 1) <= num) {
-            console.log((6 * i + 1))
-            equation1 = (6 * i + 1) 
-        } else {
-            equation1 = 0;
-        }
-        sum += equation1 + equation2;
-    }
-    return sum + 2 + 3;
-};
+    // let sum = 0;
+    // let equation1 = 0;
+    // let equation2 = 0;
+    // console.log( 6 * 139 - 1)
+    // for(let i = 1; i <= num; i++) {
+    //     if(6 * i - 1 <= num) {
+    //         console.log((6 * i - 1))
+    //         equation2 = (6 * i - 1) 
+    //     } else {
+    //         equation2 = 0;
+    //     }
+    //     if( (6 * i + 1) <= num) {
+    //         console.log((6 * i + 1))
+    //         equation1 = (6 * i + 1) 
+    //     } else {
+    //         equation1 = 0;
+    //     }
+    //     sum += equation1 + equation2;
+    // }
+    // return sum + 2 + 3;
+// };
 
 // console.log(sumPrimes(11));
-console.log(sumPrimes(977));
+// console.log(sumPrimes(977));
 
+
+
+
+
+
+
+//## Smallest Common Multiple #14
+
+// Find the smallest common multiple of the provided parameters that can be evenly divided by both, as well as by all sequential numbers in the range between these parameters.
+
+// The range will be an array of two numbers that will not necessarily be in numerical order.
+
+// For example, if given 1 and 3, find the smallest common  multiple of both 1 and 3 that is evenly divisble by all numbers between 1 and 3.  The answer here would be 6.
+
+function smallestCommons(arr) {
+    const tempArr = [...arr].sort((a, b) => a - b);
+    for(let i = tempArr[0]; i <= tempArr[1]; i++) {
+        if(!tempArr.includes(i)) {
+            tempArr.push(i);
+        }
+    }
+    tempArr.sort((a, b) => a - b);
+
+    let smallestMultiple = tempArr[tempArr.length - 1];
+    let foundSmallestMultiple = false;
+    let multiplier = 1;
+    let output;
+    do {
+        foundSmallestMultiple = tempArr.every(number => {       
+            return smallestMultiple * multiplier % number === 0;
+        });
+
+        if(!foundSmallestMultiple){
+            multiplier++;
+        } else {
+            output = smallestMultiple * multiplier
+        }
+    }
+    while(!foundSmallestMultiple);
+
+    return output;
+}
+
+// console.log(smallestCommons([1, 5]));
+// console.log(smallestCommons([5, 1]));
+console.log(smallestCommons([2, 10]));
