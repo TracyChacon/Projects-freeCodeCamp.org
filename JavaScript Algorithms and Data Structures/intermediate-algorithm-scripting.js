@@ -1,7 +1,5 @@
 // # Intermediate Algorithm Scripting
 
-const { drop } = require("lodash");
-
 // Now that you know the basics of algorithmic thinking along with OOP and Functional Programming, test your skills with the Intermediate Algorithm Scripting challenges.
 
 
@@ -468,22 +466,27 @@ const { drop } = require("lodash");
 
 // Then return the rest of the array once the condition is satisfied, otherwise, 'arr' should be returned as an empty array.
 
-function dropElements(arr, func) {
-    const indexOfFuncFirstTrue = arr.indexOf(arr.filter(element => func(element))[0])
-    let outputArr = []
+// function dropElements(arr, func) {
+//     const indexOfFuncFirstTrue = arr.indexOf(arr.filter(element => func(element))[0])
+//     let outputArr = []
 
-    for(let i = indexOfFuncFirstTrue; i <= arr.length - 1; i++) {
-        outputArr.push(arr[i])
-    }
+//     for(let i = indexOfFuncFirstTrue; i <= arr.length - 1; i++) {
+//         outputArr.push(arr[i])
+//     }
 
-    if(outputArr[0] === undefined) {
-        return [];
-    }
-    return outputArr;
-}
+//     if(outputArr[0] === undefined) {
+//         return [];
+//     }
+//     return outputArr;
+// }
 
-console.log(dropElements([1, 2, 3], function(n) { return n < 3; }));
-console.log(dropElements([0, 1, 0, 1], function(n) {return n === 1;}));
-console.log(dropElements([1, 2, 3, 4], function(n) {return n > 5;}));
+// console.log(dropElements([1, 2, 3], function(n) { return n < 3; }));
+// console.log(dropElements([0, 1, 0, 1], function(n) {return n === 1;}));
+// console.log(dropElements([1, 2, 3, 4], function(n) {return n > 5;}));
 
 
+
+
+
+
+// ## #16
