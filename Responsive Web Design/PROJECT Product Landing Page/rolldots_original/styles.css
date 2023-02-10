@@ -1,0 +1,292 @@
+/* || RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--BGCOLOR-BODY);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+#header, .main, .footer {
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 94%;
+}
+
+/* || VARIABLES */
+:root {
+    /* COLORS */
+    --BGCOLOR-BODY: whitesmoke;
+    --BGCOLOR-HERO: salmon;
+    --BGCOLOR-HOVER-HERO-SHOP: hsl(6, 93%, 67%);
+    /* BORDER RADIUS */
+    --BR-HERO-SHOP: 10px;
+}
+
+
+/* || BLOCK */
+
+/* project required IDs and Classes */
+#header {
+    align-items: center;
+    background-color: whitesmoke;
+    color: black;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+}
+
+
+#header-img {
+    
+}
+
+#nav-bar{
+    overflow-x: scroll;
+}
+
+.nav-link {
+
+}
+
+#video {
+
+}
+
+#form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+    box-shadow:  0 0 5px 5px  rgb(82, 5, 5);
+}
+
+#form:hover {
+    box-shadow:  0 0 5px 5px  purple; 
+}
+
+
+
+#email, #submit {
+    font-size: 1.2rem;
+}
+
+
+#email {
+    cursor:cell;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
+#submit {
+    cursor: pointer;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#submit:active {
+    outline: 1px solid black;
+}
+/*************************************/
+
+.header__logo-title{
+    border: 6px solid white;
+    
+    color: rgb(82, 5, 5);
+    background-color: white;
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    margin-top: 10em;
+    margin-bottom: -8rem;
+    width: 100%;
+    height: 50vh;
+    border-radius: 8px;
+
+    background-color: var(--BGCOLOR-HERO);
+}
+
+.footer {
+    background-color: darkgray;
+}
+
+
+
+
+
+/* ELEMENTS */
+.header__logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.hero__copy, .hero__img {
+    height: 100%;
+    width: 50%;
+}
+
+.hero__copy {
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+}
+
+.hero__img {
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+}
+
+.hero__shop:hover {
+    outline: 1px solid rebeccapurple;
+    background-color: var(--BGCOLOR-HOVER-HERO-SHOP);
+}
+
+
+/* Modifiers */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* nav menus */
+#nav-access ul, #nav-bar {
+    display: flex;
+    flex-direction: row;
+    list-style: none;    
+}
+
+
+#nav-access ul li a, #nav-bar a {
+    padding: 5px;
+    margin: 1.2em;
+    
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+    font-size: larger;
+}
+
+#nav-access ul li a:hover {
+    color: whitesmoke;
+    box-shadow:  0 0 5px 5px rgb(82, 5, 5);
+    background-color: rgb(82, 5, 5);
+    border-radius: 25px;
+}
+
+#nav-bar a:hover {
+    box-shadow: 0 5px 0 rgb(82, 5, 5);
+}
+
+
+
+
+
+
+
+
+
+
+
+#wo-men-option {
+    height: 50vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.card {
+    display: flex;
+    flex-flow: column nowrap;
+    
+    text-align: center;
+    font-family: arial;
+}
+
+.card:hover {
+    box-shadow: 0 5px 0 grey;
+    
+    margin-bottom: 1.5rem;
+}
+
+
+.hover-border:hover {
+    outline: 1px solid maroon;
+}
+
+
+.card img, .card h3 {
+    width: 12rem;
+}
+
+.card img {
+    aspect-ratio: 4 / 5;
+    border-radius: 0.3rem;
+}
+
+.right {
+    margin-left: 0.5rem;
+}
+
+.left {
+    margin-right: 0.5rem;
+}
+
+.center {
+    height: 3rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer > ul {
+    display: flex;
+    justify-content: flex-end;    
+}
+
+footer > ul > li {
+    padding: 0 10px;
+}
+
+footer > span {
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9em;
+    color: #444;
+}
+
+
+
+
+

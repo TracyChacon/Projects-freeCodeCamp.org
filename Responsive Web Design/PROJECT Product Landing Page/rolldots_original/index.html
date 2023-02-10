@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Clone</title>
+    <title>Original</title>
     <link rel="stylesheet" href="./styles.css" />
    
   </head>
   <body>
     <header id="header">
-        <div id="logo-title">
+        <div class="header__logo-title">
           <img 
               id="header-img" 
               src="./assets/images/Screenshot 2023-01-26 203636.png" 
@@ -18,7 +18,7 @@
               width="50" 
               alt="logo of dice" 
           />
-          <h1 id="title">ROLLDOTS</h1>
+          <h1 class="title">ROLLDOTS</h1>
         </div>
         <div>
           <form id="form" class="form-header" action="https://wwww.freecodecamp.com/email-submit">
@@ -44,23 +44,41 @@
           <a class="nav-link" href="#">Movie</a>
           <a class="nav-link" href="#">POP</a>
           <a class="nav-link" href="#">Inspirational</a>
-          
         </nav>
+        <hr>
     </header>
 
-    <main>
+
+    <main class="main">
       
-      <section id="hero-section">
-        <div id="hero-copy">
+      <section class="hero">
+        <div class="hero__copy">
           <h1>Your new year, your you</h1>
           <h3>Get an amazing head start </h3>
-          <button>Shop</button>
+          <p class="hero__shop" href="#wo-men-option">Shop for Shirts</p>
         </div>
       
-        <div id="hero-img">
+        <div class="hero__img">
           
         </div>
         
+      </section>
+
+      <section id="wo-men-option">
+        <div class="card left">
+          <img src="./assets/images/pexels-elena-rubtsova-14722010.jpg" alt="">
+          <div class="center hover-border">
+            <h3>Women's shirts</h3>
+          </div>
+        </div>
+
+        <div class="card right">
+          <img src="./assets/images/pexels-elena-rubtsova-14722010.jpg" alt="">
+          <div class="center hover-border">
+            <h3>Men's shirts</h3>
+
+          </div>
+        </div>
       </section>
       
       <section id="gallery">
@@ -105,7 +123,7 @@
       
     </main>
     
-    <footer>
+    <footer class="footer">
       <ul>
         <li>
           <a href="#">Privacy</a>
