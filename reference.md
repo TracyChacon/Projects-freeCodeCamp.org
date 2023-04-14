@@ -240,13 +240,15 @@ We will make a simple heading for our Cat Photo App by putting the title and rel
 
 Remember, Bootstrap uses a responsive grid system, which makes it easy to put elements into rows and specify each element's relative width. Most of Bootstrap's classes can be applied to a div element.
 
-Nest your first image and your h2 element within a single
+Nest your first image and your `h2` element within a single
 
 ```javascript
 <div class="row">
 ```
 
-element. Nest your h2 element within a
+element.
+
+Nest your `h2` element within a
 
 ```javascript
 <div class="col-xs-8">
@@ -285,7 +287,7 @@ You can include Font Awesome in any app by adding the following code to the top 
 
 In this case, we've already added it for you to this page behind the scenes.
 
-The i element was originally used to make other elements italic, but is now commonly used for icons. You can add the Font Awesome classes to the i element to turn it into an icon, for example:
+The `i` element was originally used to make other elements italic, but is now commonly used for icons. You can add the Font Awesome classes to the i element to turn it into an icon, for example:
 
 ```html
 <i class="fas fa-info-circle"></i>
@@ -293,10 +295,23 @@ The i element was originally used to make other elements italic, but is now comm
 
 Note that the span element is also acceptable for use with icons.
 
-Use Font Awesome to add a thumbs-up icon to your like button by giving it an i element with the classes fas and fa-thumbs-up. Make sure to keep the text Like next to the icon.
+Use Font Awesome to add a thumbs-up icon to your like button by giving it an `i` element with the classes `fas` and `fa-thumbs-up`. Make sure to keep the text `Like` next to the icon.
 
 Tests
 Waiting:You should add an i element with the classes fas and fa-thumbs-up.
 Waiting:Your fa-thumbs-up icon should be located within the Like button.
 Waiting:Your i element should be nested within your button element.
 Waiting:Your icon element should have a closing tag.
+
+#### Add Font Awesome Icons to all of our Buttons
+
+Font Awesome is a convenient library of icons. These icons can be web fonts or vector graphics. These icons are treated just like fonts. You can specify their size using pixels, and they will assume the font size of their parent HTML elements.
+
+Use Font Awesome to add an `info-circle` icon to your info button and a trash icon to your delete button.
+
+Note: The span element is an acceptable alternative to the i element for the directions below.
+
+Tests
+Waiting:You should add a <i class="fas fa-info-circle"></i> within your info button element.
+Waiting:You should add a <i class="fas fa-trash"></i> within your delete button element.
+Waiting:Each of your i elements should have a closing tag and <i class="fas fa-thumbs-up"></i> is in your like button element.
