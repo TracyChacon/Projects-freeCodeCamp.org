@@ -315,3 +315,28 @@ Tests
 Waiting:You should add a <i class="fas fa-info-circle"></i> within your info button element.
 Waiting:You should add a <i class="fas fa-trash"></i> within your delete button element.
 Waiting:Each of your i elements should have a closing tag and <i class="fas fa-thumbs-up"></i> is in your like button element.
+
+#### Responsively Style Radio Buttons
+
+You can use Bootstrap's col-xs-\* classes on form elements, too! This way, our radio buttons will be evenly spread out across the page, regardless of how wide the screen resolution is.
+
+Nest both your radio buttons within a
+
+```html
+<div class="row"></div>
+```
+
+element. Then nest each of them within a
+
+```html
+<div class="col-xs-6"></div>
+```
+
+element.
+
+Note: As a reminder, radio buttons are input elements of type radio.
+
+Tests
+Waiting:All of your radio buttons should be nested inside one div with the class row.
+Waiting:Each of your radio buttons should be nested inside its own div with the class col-xs-6.
+Waiting:All of your div elements should have closing tags.
