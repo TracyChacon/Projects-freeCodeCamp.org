@@ -459,3 +459,15 @@ Tests
 Waiting:Your div element should have the class container-fluid.
 Waiting:Each of your div elements should have closing tags.
 Waiting:Your h3 element should be nested inside a div element.
+
+#### Create a Bootstrap Row
+
+Now we'll create a Bootstrap `row` for our inline elements.
+
+Create a `div` element below the `h3` tag, with a class of `row`.
+
+Tests
+Waiting:You should add a div element below your h3 element.
+Waiting:Your div element should have the class row
+Waiting:Your row div should be nested inside the container-fluid div
+Waiting:Your div element should have a closing tag.
