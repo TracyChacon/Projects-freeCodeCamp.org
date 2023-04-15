@@ -503,3 +503,22 @@ Tests
 Waiting:Three button elements should be nested within each of your div elements with class well.
 Waiting:You should have a total of 6 button elements.
 Waiting:All of your button elements should have closing tags.
+
+#### Apply the Default Bootstrap Button Style
+
+Bootstrap has another button class called `btn-default`.
+
+Apply both the `btn` and `btn-default` classes to each of your button elements.
+
+Tests
+Waiting:You should apply the `btn` class to each of your button elements.
+Waiting:You should apply the `btn-default` class to each of your button elements.
+
+#### Create a Class to Target with jQuery Selectors
+
+Not every class needs to have corresponding CSS. Sometimes we create classes just for the purpose of selecting these elements more easily using jQuery.
+
+Give each of your `button` elements the class `target`.
+
+Tests
+Waiting:You should apply the `target` class to each of your `button` elements.
