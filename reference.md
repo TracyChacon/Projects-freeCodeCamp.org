@@ -417,3 +417,34 @@ Waiting:The submit button in your form should have the classes btn btn-primary.
 Waiting:You should add a <i class="fa fa-paper-plane"></i> within your submit button element.
 Waiting:The text input in your form should have the class form-control.
 Waiting:Each of your i elements should have a closing tag.
+
+#### Line up Form Elements Responsively with Bootstrap
+
+Now let's get your form input and your submission button on the same line. We'll do this the same way we have previously: by using a `div` element with the class `row`, and other `div` elements within it using the `col-xs-\*` class.
+
+Nest both your form's text input and submit button within a `div` with the class `row`. Nest your form's text input within a `div` with the class of `col-xs-7`. Nest your form's submit button in a `div` with the class `col-xs-5`.
+
+This is the last challenge we'll do for our Cat Photo App for now. We hope you've enjoyed learning Font Awesome, Bootstrap, and responsive design!
+
+Tests
+Waiting:Your form submission button and text input should be nested in a div with class row.
+Waiting:Your form text input should be nested in a div with the class col-xs-7.
+Waiting:Your form submission button should be nested in a div with the class col-xs-5.
+Waiting:All of your div elements should have closing tags.
+
+#### Create a Bootstrap Headline
+
+Now let's build something from scratch to practice our HTML, CSS and Bootstrap skills.
+
+We'll build a jQuery playground, which we'll soon put to use in our jQuery challenges.
+
+To start with, create an h3 element, with the text jQuery Playground.
+
+Color your h3 element with the text-primary Bootstrap class, and center it with the text-center Bootstrap class.
+
+Tests
+Waiting:You should add an h3 element to your page.
+Waiting:Your h3 element should have a closing tag.
+Waiting:Your h3 element should be colored by applying the class text-primary
+Waiting:Your h3 element should be centered by applying the class text-center
+Waiting:Your h3 element should have the text jQuery Playground.
