@@ -440,7 +440,7 @@ We'll build a jQuery playground, which we'll soon put to use in our jQuery chall
 
 To start with, create an h3 element, with the text jQuery Playground.
 
-Color your h3 element with the text-primary Bootstrap class, and center it with the text-center Bootstrap class.
+Color your `h3` element with the `text-primary` Bootstrap class, and center it with the `text-center` Bootstrap class.
 
 Tests
 Waiting:You should add an h3 element to your page.
