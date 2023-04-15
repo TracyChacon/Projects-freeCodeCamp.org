@@ -481,3 +481,14 @@ Create two div elements within your row, both with the class `col-xs-6`.
 Tests
 Waiting:Two div class="col-xs-6" elements should be nested within your div class="row" element.
 Waiting:All your div elements should have closing tags.
+
+#### Create Bootstrap Wells
+
+Bootstrap has a class called `well` that can create a visual sense of depth for your columns.
+
+Nest one `div` element with the class well within each of your `col-xs-6 div` elements.
+
+Tests
+Waiting:You should add a div element with the class well inside each of your div elements with the class col-xs-6
+Waiting:Both of your div elements with the class col-xs-6 should be nested within your div element with the class row.
+Waiting:All your div elements should have closing tags.
