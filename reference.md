@@ -471,3 +471,13 @@ Waiting:You should add a div element below your h3 element.
 Waiting:Your div element should have the class row
 Waiting:Your row div should be nested inside the container-fluid div
 Waiting:Your div element should have a closing tag.
+
+#### Split Your Bootstrap Row
+
+Now that we have a Bootstrap Row, let's split it into two columns to house our elements.
+
+Create two div elements within your row, both with the class `col-xs-6`.
+
+Tests
+Waiting:Two div class="col-xs-6" elements should be nested within your div class="row" element.
+Waiting:All your div elements should have closing tags.
