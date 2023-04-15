@@ -492,3 +492,14 @@ Tests
 Waiting:You should add a div element with the class well inside each of your div elements with the class col-xs-6
 Waiting:Both of your div elements with the class col-xs-6 should be nested within your div element with the class row.
 Waiting:All your div elements should have closing tags.
+
+#### Add Elements within Your Bootstrap Wells
+
+Now we're several `div` elements deep on each column of our `row`. This is as deep as we'll need to go. Now we can add our `button` elements.
+
+Nest three `button` elements within each of your `div` elements having the class name `well`.
+
+Tests
+Waiting:Three button elements should be nested within each of your div elements with class well.
+Waiting:You should have a total of 6 button elements.
+Waiting:All of your button elements should have closing tags.
