@@ -251,7 +251,7 @@ Don't worry - there will be plenty of time to customize our CSS later.
 
 Delete the `.red-text`, `p`, and `.smaller-image` CSS declarations from your style element so that the only declarations left in your style element are `h2` and `thick-green-border`.
 
-Then delete the `p` element that contains a dead link. Then remove the red-text class from your `h2` element and replace it with the `text-primary` Bootstrap class.
+Then delete the `p` element that contains a dead link. Then remove the `red-text` class from your `h2` element and replace it with the `text-primary` Bootstrap class.
 
 Finally, remove the `smaller-image` class from your first img element and replace it with the `img-responsive` class.
 
@@ -689,3 +689,47 @@ Use the nesting technique shown above to re-organize the CSS rules for both chil
 
 Tests
 Waiting:Your code should re-organize the CSS rules so the h1 and p are nested in the .blog-post parent element.
+
+#### Create Reusable CSS with Mixins
+
+In Sass, a mixin is a group of CSS declarations that can be reused throughout the style sheet.
+
+Newer CSS features take time before they are fully adopted and ready to use in all browsers. As features are added to browsers, CSS rules using them may need vendor prefixes. Consider box-shadow:
+
+```css
+div {
+  -webkit-box-shadow: 0px 0px 4px #fff;
+  -moz-box-shadow: 0px 0px 4px #fff;
+  -ms-box-shadow: 0px 0px 4px #fff;
+  box-shadow: 0px 0px 4px #fff;
+}
+```
+
+It's a lot of typing to re-write this rule for all the elements that have a `box-shadow`, or to change each value to test different effects. Mixins are like functions for CSS. Here is how to write one:
+
+```css
+@mixin box-shadow($x, $y, $blur, $c) {
+  -webkit-box-shadow: $x $y $blur $c;
+  -moz-box-shadow: $x $y $blur $c;
+  -ms-box-shadow: $x $y $blur $c;
+  box-shadow: $x $y $blur $c;
+}
+```
+
+The definition starts with `@mixin `followed by a custom name. The parameters (the `$x`, `$y`, `$blur`, and `$c` in the example above)are optional. Now any time a box-shadow rule is needed, only a single line calling the mixin replaces having to type all the vendor prefixes. A mixin is called with the `@include` directive:
+
+```css
+div {
+  @include box-shadow(0px, 0px, 4px, #fff);
+}
+```
+
+Write a mixin for `border-radius` and give it a` $radius` parameter. It should use all the vendor prefixes from the example. Then use the `border-radius` mixin to give the `#awesome` element a border radius of `15px`.
+
+Tests
+Waiting:Your code should declare a mixin named border-radius which has a parameter named $radius.
+Waiting:Your code should include the -webkit-border-radius vendor prefix that uses the $radius parameter.
+Waiting:Your code should include the -moz-border-radius vendor prefix that uses the $radius parameter.
+Waiting:Your code should include the -ms-border-radius vendor prefix that uses the $radius parameter.
+Waiting:Your code should include the general border-radius rule that uses the $radius parameter.
+Waiting:Your code should call the border-radius mixin using the @include keyword, setting it to 15px.
