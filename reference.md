@@ -572,3 +572,17 @@ Waiting:One button element should have the id target3.
 Waiting:One button element should have the id target4.
 Waiting:One button element should have the id target5.
 Waiting:One button element should have the id target6.
+
+#### Label Bootstrap Buttons
+
+Just like we labeled our wells, we want to label our buttons.
+
+Give each of your button elements text that corresponds to its `id` selector.
+
+Tests
+Waiting:Your button element with the id target1 should have the text #target1.
+Waiting:Your button element with the id target2 should have the text #target2.
+Waiting:Your button element with the id target3 should have the text #target3.
+Waiting:Your button element with the id target4 should have the text #target4.
+Waiting:Your button element with the id target5 should have the text #target5.
+Waiting:Your button element with the id target6 should have the text #target6.
