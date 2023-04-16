@@ -733,3 +733,45 @@ Waiting:Your code should include the -moz-border-radius vendor prefix that uses 
 Waiting:Your code should include the -ms-border-radius vendor prefix that uses the $radius parameter.
 Waiting:Your code should include the general border-radius rule that uses the $radius parameter.
 Waiting:Your code should call the border-radius mixin using the @include keyword, setting it to 15px.
+
+#### Use @if and @else to Add Logic To Your Styles
+
+The `@if` directive in Sass is useful to test for a specific case - it works just like the `if` statement in JavaScript.
+
+```css
+@mixin make-bold($bool) {
+  @if $bool == true {
+    font-weight: bold;
+  }
+}
+```
+
+And just like in JavaScript, `@else if` and `@else` test for more conditions:
+
+```css
+@mixin text-effect($val) {
+  @if $val == danger {
+    color: red;
+  } @else if $val == alert {
+    color: yellow;
+  } @else if $val == success {
+    color: green;
+  } @else {
+    color: black;
+  }
+}
+```
+
+Create a mixin called `border-stroke` that takes a parameter $val. The mixin should check for the following conditions using `@if`, `@else if`, and `@else`:
+
+light - 1px solid black
+medium - 3px solid black
+heavy - 6px solid black
+If `$val` is not `light`, `medium`, or `heavy`, the border should be set to `none`.
+
+Tests
+Waiting:Your code should declare a mixin named border-stroke which has a parameter named $val.
+Waiting:Your mixin should have an @if statement to check if $val is light, and to set the border to 1px solid black.
+Waiting:Your mixin should have an @else if statement to check if $val is medium, and to set the border to 3px solid black.
+Waiting:Your mixin should have an @else if statement to check if $val is heavy, and to set the border to 6px solid black.
+Waiting:Your mixin should have an @else statement to set the border to none.
