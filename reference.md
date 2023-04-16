@@ -556,3 +556,19 @@ Waiting:You should add an h4 element to each of your <div class="col-xs-6"> elem
 Waiting:One h4 element should have the text #left-well.
 Waiting:One h4 element should have the text #right-well.
 Waiting:All of your h4 elements should have closing tags.
+
+#### Give Each Element a Unique id
+
+We will also want to be able to use jQuery to target each button by its unique id.
+
+Give each of your buttons a unique id, starting with target1 and ending with target6.
+
+Make sure that target1 to target3 are in #left-well, and target4 to target6 are in #right-well.
+
+Tests
+Waiting:One button element should have the id target1.
+Waiting:One button element should have the id target2.
+Waiting:One button element should have the id target3.
+Waiting:One button element should have the id target4.
+Waiting:One button element should have the id target5.
+Waiting:One button element should have the id target6.
