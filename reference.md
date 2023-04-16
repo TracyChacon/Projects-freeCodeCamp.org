@@ -577,7 +577,7 @@ Waiting:One button element should have the id target6.
 
 Just like we labeled our wells, we want to label our buttons.
 
-Give each of your button elements text that corresponds to its `id` selector.
+Give each of your `button` elements text that corresponds to its `id` selector.
 
 Tests
 Waiting:Your button element with the id target1 should have the text #target1.
@@ -586,3 +586,19 @@ Waiting:Your button element with the id target3 should have the text #target3.
 Waiting:Your button element with the id target4 should have the text #target4.
 Waiting:Your button element with the id target5 should have the text #target5.
 Waiting:Your button element with the id target6 should have the text #target6.
+
+#### Use Comments to Clarify Code
+
+When we start using jQuery, we will modify HTML elements without needing to actually change them in HTML.
+
+Let's make sure that everyone knows they shouldn't actually modify any of this code directly.
+
+Remember that you can start a comment with <!-- and end a comment with -->
+
+Add a comment at the top of your HTML that says Code below this line should not be changed
+
+Tests
+Waiting:You should start a comment with <!-- at the top of your HTML.
+Waiting:Your comment should have the text Code below this line should not be changed.
+Waiting:You should close your comment with -->.
+Waiting:You should have the same number of comment openers and closers.
