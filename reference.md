@@ -602,3 +602,17 @@ Waiting:You should start a comment with <!-- at the top of your HTML.
 Waiting:Your comment should have the text Code below this line should not be changed.
 Waiting:You should close your comment with -->.
 Waiting:You should have the same number of comment openers and closers.
+
+### jQuery
+
+jQuery is one of the most widely used JavaScript libraries in the world.
+
+In 2006 when it was released, all major browsers handled JavaScript slightly differently. jQuery simplified the process of writing client-side JavaScript, and also ensured that your code worked the same way in all browsers.
+
+In this course, you'll learn how to use jQuery to select, remove, clone, and modify different elements on the page.
+
+### SASS
+
+Sass, or "Syntactically Awesome StyleSheets", is a language extension of CSS. It adds features that aren't available in basic CSS, which make it easier for you to simplify and maintain the style sheets for your projects.
+
+In this Sass course, you'll learn how to store data in variables, nest CSS, create reusable styles with mixins, add logic and loops to your styles, and more.
