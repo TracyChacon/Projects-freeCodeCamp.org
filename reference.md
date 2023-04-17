@@ -684,6 +684,28 @@ Or add it directly to your webpage using a CDN:
 </head>
 ```
 
+#### Target Elements by Class Using jQuery
+
+You see how we made all of your button elements bounce? We selected them with `$("button")`, then we added some CSS classes to them with `.addClass("animated bounce");`.
+
+You just used jQuery's `.addClass()` function, which allows you to add classes to elements.
+
+First, let's target your `div` elements with the class well by using the `$(".well")` selector.
+
+Note that, just like with CSS declarations, you type a `.` before the class's name.
+
+Then use jQuery's `.addClass()` function to add the classes animated and shake.
+
+For example, you could make all the elements with the class text-primary shake by adding the following to your document ready function:
+
+```js
+$('.text-primary').addClass('animated shake')
+```
+
+Tests
+Waiting:You should use the jQuery addClass() function to give the classes animated and shake to all your elements with the class well.
+Waiting:You should only use jQuery to add these classes to the element.
+
 ### SASS
 
 Sass, or "Syntactically Awesome StyleSheets", is a language extension of CSS. It adds features that aren't available in basic CSS, which make it easier for you to simplify and maintain the style sheets for your projects.
