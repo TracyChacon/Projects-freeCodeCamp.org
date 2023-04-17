@@ -632,6 +632,58 @@ Waiting:You should create a script element making sure it is valid and has a clo
 Waiting:You should add $(document).ready(function() { to the beginning of your script element.
 Waiting:You should close your $(document).ready(function() { function with });
 
+#### Target HTML Elements with Selectors Using jQuery
+
+Now we have a `document ready` function.
+
+Now let's write our first jQuery statement. All jQuery functions start with a `$`, usually referred to as a dollar sign operator, or as bling.
+
+jQuery often selects an HTML element with a _selector_, then does something to that element.
+
+For example, let's make all of your `button` elements bounce. Just add this code inside your document ready function:
+
+```javascript
+$('button').addClass('animated bounce')
+```
+
+Note that we've already included both the `jQuery library` and the `Animate.css` library in the background so that you can use them in the editor. So you are using jQuery to apply the `Animate.css` `bounce` class to your `button` elements.
+
+Tests
+Waiting:You should use the jQuery addClass() function to give the classes animated and bounce to your button elements.
+Waiting:You should only use jQuery to add these classes to the element.
+Waiting:Your jQuery code should be within the $(document).ready(); function.
+
+###### Installing animate.css
+
+Install with npm:
+
+```sh
+$ npm install animate.css --save
+```
+
+Or install with Yarn (this will only work with appropriate tooling like Webpack, Parcel, etc. If you are not using any tool for packing or bundling your code, you can simply use the CDN method below):
+
+```sh
+$ yarn add animate.css
+```
+
+Import it into your file:
+
+```js
+import 'animate.css'
+```
+
+Or add it directly to your webpage using a CDN:
+
+```html
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+```
+
 ### SASS
 
 Sass, or "Syntactically Awesome StyleSheets", is a language extension of CSS. It adds features that aren't available in basic CSS, which make it easier for you to simplify and maintain the style sheets for your projects.
