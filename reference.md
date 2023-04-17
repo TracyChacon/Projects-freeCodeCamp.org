@@ -764,6 +764,23 @@ Waiting:You should only add one class with each of your three selectors.
 Waiting:Your #target1 element should have the classes animated‚ shake and btn-primary.
 Waiting:You should only use jQuery to add these classes to the element.
 
+#### Remove Classes from an Element with jQuery
+
+In the same way you can add classes to an element with jQuery's addClass() function, you can remove them with jQuery's` removeClass()` function.
+
+Here's how you would do this for a specific button:
+
+```js
+$('#target2').removeClass('btn-default')
+```
+
+Let's remove the `btn-default` class from all of our `button` elements.
+
+Tests
+Waiting:The btn-default class should be removed from all of your button elements.
+Waiting:You should only use jQuery to remove this class from the element.
+Waiting:You should only remove the btn-default class.
+
 ### SASS
 
 Sass, or "Syntactically Awesome StyleSheets", is a language extension of CSS. It adds features that aren't available in basic CSS, which make it easier for you to simplify and maintain the style sheets for your projects.
