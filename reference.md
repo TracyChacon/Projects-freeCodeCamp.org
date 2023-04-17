@@ -873,3 +873,35 @@ Waiting:Your code should use the @each directive.
 Waiting:Your .blue-bg class should have a background-color of blue.
 Waiting:Your .black-bg class should have a background-color of black.
 Waiting:Your .red-bg class should have a background-color of red.
+
+#### Apply a Style Until a Condition is Met with @while
+
+The `@while` directive is an option with similar functionality to the JavaScript while loop. It creates CSS rules until a condition is met.
+
+The `@for` challenge gave an example to create a simple grid system. This can also work with `@while`.
+
+```scss
+$x: 1;
+@while $x < 13 {
+  .col-#{$x} {
+    width: 100%/12 * $x;
+  }
+  $x: $x + 1;
+}
+```
+
+First, define a variable `$x` and set it to `1`. Next, use the `@while` directive to create the grid system while `$x` is less than `13`. After setting the CSS rule for width, `$x` is incremented by `1` to avoid an infinite loop.
+
+Use `@while` to create a series of classes with different font-sizes.
+
+There should be `5` different classes from `text-1` to` text-5`. Then set font-size to `15px` multiplied by the current index number. Make sure to avoid an infinite loop!
+
+Tests
+Waiting:Your code should use the @while directive.
+Waiting:Your code should use an index variable which starts at an index of 1.
+Waiting:Your code should increment the counter variable.
+Waiting:Your .text-1 class should have a font-size of 15px.
+Waiting:Your .text-2 class should have a font-size of 30px.
+Waiting:Your .text-3 class should have a font-size of 45px.
+Waiting:Your .text-4 class should have a font-size of 60px.
+Waiting:Your .text-5 class should have a font-size of 75px.
