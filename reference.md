@@ -781,6 +781,28 @@ Waiting:The btn-default class should be removed from all of your button elements
 Waiting:You should only use jQuery to remove this class from the element.
 Waiting:You should only remove the btn-default class.
 
+#### Change the CSS of an Element Using jQuery
+
+We can also change the CSS of an HTML element directly with jQuery.
+
+jQuery has a function called `.css()` that allows you to change the CSS of an element.
+
+Here's how we would change its color to blue:
+
+```js
+$('#target1').css('color', 'blue')
+```
+
+This is slightly different from a normal CSS declaration, because the CSS property and its value are in quotes, and separated with a comma instead of a colon.
+
+Delete your jQuery selectors, leaving an empty document ready function.
+
+Select `target1` and change its `color` to `red`.
+
+Tests
+Waiting:Your target1 element should have red text.
+Waiting:You should only use jQuery to add these classes to the element.
+
 ### SASS
 
 Sass, or "Syntactically Awesome StyleSheets", is a language extension of CSS. It adds features that aren't available in basic CSS, which make it easier for you to simplify and maintain the style sheets for your projects.
