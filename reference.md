@@ -625,14 +625,14 @@ In JavaScript, variables are defined using the let and const keywords. In Sass, 
 
 Here are a couple examples:
 
-```CSS
+```scss
 $main-fonts: Arial, sans-serif;
 $headings-color: green;
 ```
 
 And to use the variables:
 
-```CSS
+```scss
 h1 {
   font-family: $main-fonts;
   color: $headings-color;
@@ -655,7 +655,7 @@ Sass allows nesting of CSS rules, which is a useful way of organizing a style sh
 
 Normally, each element is targeted on a different line to style it, like so:
 
-```css
+```scss
 nav {
   background-color: red;
 }
@@ -671,7 +671,7 @@ nav ul li {
 
 For a large project, the CSS file will have many lines and rules. This is where nesting can help organize your code by placing child style rules within the respective parent elements:
 
-```css
+```scss
 nav {
   background-color: red;
 
@@ -696,7 +696,7 @@ In Sass, a mixin is a group of CSS declarations that can be reused throughout th
 
 Newer CSS features take time before they are fully adopted and ready to use in all browsers. As features are added to browsers, CSS rules using them may need vendor prefixes. Consider box-shadow:
 
-```css
+```scss
 div {
   -webkit-box-shadow: 0px 0px 4px #fff;
   -moz-box-shadow: 0px 0px 4px #fff;
@@ -707,7 +707,7 @@ div {
 
 It's a lot of typing to re-write this rule for all the elements that have a `box-shadow`, or to change each value to test different effects. Mixins are like functions for CSS. Here is how to write one:
 
-```css
+```scss
 @mixin box-shadow($x, $y, $blur, $c) {
   -webkit-box-shadow: $x $y $blur $c;
   -moz-box-shadow: $x $y $blur $c;
@@ -718,7 +718,7 @@ It's a lot of typing to re-write this rule for all the elements that have a `box
 
 The definition starts with `@mixin `followed by a custom name. The parameters (the `$x`, `$y`, `$blur`, and `$c` in the example above)are optional. Now any time a box-shadow rule is needed, only a single line calling the mixin replaces having to type all the vendor prefixes. A mixin is called with the `@include` directive:
 
-```css
+```scss
 div {
   @include box-shadow(0px, 0px, 4px, #fff);
 }
@@ -738,7 +738,7 @@ Waiting:Your code should call the border-radius mixin using the @include keyword
 
 The `@if` directive in Sass is useful to test for a specific case - it works just like the `if` statement in JavaScript.
 
-```css
+```scss
 @mixin make-bold($bool) {
   @if $bool == true {
     font-weight: bold;
@@ -748,7 +748,7 @@ The `@if` directive in Sass is useful to test for a specific case - it works jus
 
 And just like in JavaScript, `@else if` and `@else` test for more conditions:
 
-```css
+```scss
 @mixin text-effect($val) {
   @if $val == danger {
     color: red;
@@ -775,3 +775,101 @@ Waiting:Your mixin should have an @if statement to check if $val is light, and t
 Waiting:Your mixin should have an @else if statement to check if $val is medium, and to set the border to 3px solid black.
 Waiting:Your mixin should have an @else if statement to check if $val is heavy, and to set the border to 6px solid black.
 Waiting:Your mixin should have an @else statement to set the border to none.
+
+#### Use @for to Create a Sass Loop
+
+The` @for` directive adds styles in a loop, very similar to a for loop in JavaScript.
+
+`@for` is used in two ways: "start through end" or "start to end". The main difference is that the "start to end" excludes the end number as part of the count, and "start through end" includes the end number as part of the count.
+
+Here's a start through end example:
+
+```scss
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: 100%/12 * $i;
+  }
+}
+```
+
+The `#{$i}` part is the syntax to combine a variable (i) with text to make a string. When the Sass file is converted to CSS, it looks like this:
+
+```css
+.col-1 {
+  width: 8.33333%;
+}
+
+.col-2 {
+  width: 16.66667%;
+}
+
+... .col-12 {
+  width: 100%;
+}
+```
+
+This is a powerful way to create a grid layout. Now you have twelve options for column widths available as CSS classes.
+
+Write a `@for` directive that takes a variable `$j` that goes from 1 to 6.
+
+It should create 5 classes called `.text-1` to `.text-5` where each has a `font-size` set to `15px` multiplied by the `index`.
+
+Tests
+Waiting:Your code should use the @for directive.
+Waiting:Your .text-1 class should have a font-size of 15px.
+Waiting:Your .text-2 class should have a font-size of 30px.
+Waiting:Your .text-3 class should have a font-size of 45px.
+Waiting:Your .text-4 class should have a font-size of 60px.
+Waiting:Your .text-5 class should have a font-size of 75px.
+
+#### Use @each to Map Over Items in a List
+
+The last challenge showed how the `@for` directive uses a starting and ending value to loop a certain number of times. Sass also offers the `@each` directive which loops over each item in a `list` or `map`. On each iteration, the variable gets assigned to the current value from the `list` or `map`.
+
+```scss
+@each $color in blue, red, green {
+  .#{$color}-text {
+    color: $color;
+  }
+}
+```
+
+A map has slightly different syntax. Here's an example:
+
+```scss
+$colors: (
+  color1: blue,
+  color2: red,
+  color3: green,
+);
+
+@each $key, $color in $colors {
+  .#{$color}-text {
+    color: $color;
+  }
+}
+```
+
+Note that the `$key` variable is needed to reference the keys in the map. Otherwise, the compiled CSS would have color1, color2... in it. Both of the above code examples are converted into the following CSS:
+
+```css
+.blue-text {
+  color: blue;
+}
+
+.red-text {
+  color: red;
+}
+
+.green-text {
+  color: green;
+}
+```
+
+Write an `@each` directive that goes through a list: blue, black, red and assigns each variable to a `.color-bg` class, where the color part changes for each item. Each class should set the `background-color` the respective color.
+
+Tests
+Waiting:Your code should use the @each directive.
+Waiting:Your .blue-bg class should have a background-color of blue.
+Waiting:Your .black-bg class should have a background-color of black.
+Waiting:Your .red-bg class should have a background-color of red.
