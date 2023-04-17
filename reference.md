@@ -727,6 +727,19 @@ Waiting:You should select the button element with the id of target3 and use the 
 Waiting:You should target the element with the id target3 and use the jQuery addClass() function to give it the class fadeOut.
 Waiting:You should only use jQuery to add these classes to the element.
 
+#### Delete Your jQuery Functions
+
+These animations were cool at first, but now they're getting kind of distracting.
+
+Delete all three of these jQuery functions from your document ready function, but leave your document ready function itself intact.
+
+Tests
+Waiting:All three of your jQuery functions should be deleted from your document ready function.
+Waiting:You should leave your script element intact.
+Waiting:You should leave your $(document).ready(function() { at the beginning of your script element.
+Waiting:You should leave the document.ready function's closing }) intact.
+Waiting:You should leave your script element closing tag intact.
+
 ### SASS
 
 Sass, or "Syntactically Awesome StyleSheets", is a language extension of CSS. It adds features that aren't available in basic CSS, which make it easier for you to simplify and maintain the style sheets for your projects.
