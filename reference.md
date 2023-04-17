@@ -740,6 +740,30 @@ Waiting:You should leave your $(document).ready(function() { at the beginning of
 Waiting:You should leave the document.ready function's closing }) intact.
 Waiting:You should leave your script element closing tag intact.
 
+#### Target the Same Element with Multiple jQuery Selectors
+
+Now you know three ways of targeting elements: by type: `$("button")`, by class:` $(".btn")`, and by id `$("#target1")`.
+
+Although it is possible to add multiple classes in a single `.addClass()` call, let's add them to the same element in three separate ways.
+
+Using `.addClass()`, add only one class at a time to the same element, three different ways:
+
+Add the `animated` class to all elements with type `button`.
+
+Add the `shake` class to all the buttons with class `.btn`.
+
+Add the `btn-primary `class to the button with id `#target1`.
+
+Note: You should only be targeting one element and adding only one class at a time. Altogether, your three individual selectors will end up adding the three classes `shake`, `animated`, and `btn-primary` to `#target1`.
+
+Tests
+Waiting:Your code should use the $("button") selector.
+Waiting:Your code should use the $(".btn") selector.
+Waiting:Your code should use the $("#target1") selector.
+Waiting:You should only add one class with each of your three selectors.
+Waiting:Your #target1 element should have the classes animated‚ shake and btn-primary.
+Waiting:You should only use jQuery to add these classes to the element.
+
 ### SASS
 
 Sass, or "Syntactically Awesome StyleSheets", is a language extension of CSS. It adds features that aren't available in basic CSS, which make it easier for you to simplify and maintain the style sheets for your projects.
