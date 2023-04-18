@@ -803,6 +803,27 @@ Tests
 Waiting:Your target1 element should have red text.
 Waiting:You should only use jQuery to add these classes to the element.
 
+#### Disable an Element Using jQuery
+
+You can also change the non-CSS properties of HTML elements with jQuery. For example, you can disable buttons.
+
+When you disable a button, it will become grayed-out and can no longer be clicked.
+
+jQuery has a function called `.prop()` that allows you to adjust the properties of elements.
+
+Here's how you would disable all buttons:
+
+```js
+$('button').prop('disabled', true)
+```
+
+Disable only the target1 button.
+
+Tests
+Waiting:Your target1 button should be disabled.
+Waiting:No other buttons should be disabled.
+Waiting:You should only use jQuery to add these classes to the element.
+
 ### SASS
 
 Sass, or "Syntactically Awesome StyleSheets", is a language extension of CSS. It adds features that aren't available in basic CSS, which make it easier for you to simplify and maintain the style sheets for your projects.
