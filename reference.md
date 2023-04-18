@@ -925,6 +925,25 @@ Waiting:You should use the .parent() function to modify this element.
 Waiting:The .parent() method should be called on the #target1 element.
 Waiting:You should only use jQuery to add these classes to the element.
 
+#### Target the Children of an Element Using jQuery
+
+When HTML elements are placed one level below another they are called children of that _element_. For example, the button elements in this challenge with the text `#target1`, `#target2`, and `#target3` are all children of the <div class="well" id="left-well"> element.
+
+jQuery has a function called `children()` that allows you to access the children of whichever element you've selected.
+
+Here's an example of how you would use the `children()` function to give the children of your `left-well` element the `color` `blue`:
+
+```js
+$('#left-well').children().css('color', 'blue')
+```
+
+Give all the `children` of your `right-well` element the `color` `orange`.
+
+Tests
+Waiting:All children of #right-well should have orange text.
+Waiting:You should use the children() function to modify these elements.
+Waiting:You should only use jQuery to add these classes to the element.
+
 ### SASS
 
 Sass, or "Syntactically Awesome StyleSheets", is a language extension of CSS. It adds features that aren't available in basic CSS, which make it easier for you to simplify and maintain the style sheets for your projects.
