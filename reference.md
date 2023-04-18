@@ -851,6 +851,18 @@ Waiting:You should not alter any other text.
 Waiting:You should be using .html() and not .text().
 Waiting:You should select button id="target4" with jQuery.
 
+#### Remove an Element Using jQuery
+
+Now let's remove an HTML element from your page using jQuery.
+
+jQuery has a function called `.remove()` that will remove an HTML element entirely
+
+Remove the `#target4` element from the page by using the `.remove()` function.
+
+Tests
+Waiting:You should use jQuery to remove your target4 element from your page.
+Waiting:You should only use jQuery to remove this element.
+
 ### SASS
 
 Sass, or "Syntactically Awesome StyleSheets", is a language extension of CSS. It adds features that aren't available in basic CSS, which make it easier for you to simplify and maintain the style sheets for your projects.
