@@ -863,6 +863,25 @@ Tests
 Waiting:You should use jQuery to remove your target4 element from your page.
 Waiting:You should only use jQuery to remove this element.
 
+#### Use appendTo to Move Elements with jQuery
+
+Now let's try moving elements from one div to another.
+
+jQuery has a function called `appendTo()` that allows you to select HTML elements and append them to another element.
+
+For example, if we wanted to move `target4` from our right well to our left well, we would use:
+
+```js
+$('#target4').appendTo('#left-well')
+```
+
+Move your `target2` element from your `left-well` to your `right-well`.
+
+Tests
+Waiting:Your target2 element should not be inside your left-well.
+Waiting:Your target2 element should be inside your right-well.
+Waiting:You should only use jQuery to move these elements.
+
 ### SASS
 
 Sass, or "Syntactically Awesome StyleSheets", is a language extension of CSS. It adds features that aren't available in basic CSS, which make it easier for you to simplify and maintain the style sheets for your projects.
