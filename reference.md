@@ -985,6 +985,23 @@ Waiting:All of the target elements that jQuery considers to be even should shake
 Waiting:You should use the :even selector to modify these elements.
 Waiting:You should only use jQuery to add these classes to the element.
 
+#### Use jQuery to Modify the Entire Page
+
+We're done playing with our jQuery playground. Let's tear it down!
+
+jQuery can target the `body` element as well.
+
+Here's how we would make the entire body fade out:
+
+```js
+$('body').addClass('animated fadeOut')
+```
+
+But let's do something more dramatic. Add the classes `animated` and `hinge` to your body element.
+
+Tests
+Waiting:You should add the classes animated and hinge to your body element.
+
 ### SASS
 
 Sass, or "Syntactically Awesome StyleSheets", is a language extension of CSS. It adds features that aren't available in basic CSS, which make it easier for you to simplify and maintain the style sheets for your projects.
