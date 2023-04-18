@@ -1379,3 +1379,20 @@ The current code uses JSX to assign a `div` element to the constant `JSX`. Repla
 Tests
 Waiting:The constant JSX should return an h1 element.
 Waiting:The h1 tag should include the text Hello JSX!
+
+### Front End Development Libraries Projects
+
+It's time to put your front end development libraries skills to the test. Use Bootstrap, jQuery, Sass, React, and Redux to build 5 projects that will test everything you've learned up to this point.
+
+Complete all 5 projects, and you'll earn the Front End Development Libraries certification.
+
+Build a Random Quote Machine
+[_] Passed
+Build a Markdown Previewer
+[_] Passed
+Build a Drum Machine
+[_] Passed
+Build a JavaScript Calculator
+[_] Passed
+Build a 25 + 5 Clock
+[_] Passed
