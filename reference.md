@@ -944,6 +944,28 @@ Waiting:All children of #right-well should have orange text.
 Waiting:You should use the children() function to modify these elements.
 Waiting:You should only use jQuery to add these classes to the element.
 
+#### Target a Specific Child of an Element Using jQuery
+
+You've seen why `id` attributes are so convenient for targeting with jQuery selectors. But you won't always have such neat ids to work with.
+
+Fortunately, jQuery has some other tricks for targeting the right elements.
+
+jQuery uses CSS Selectors to target elements. The `target:nth-child(n)` CSS selector allows you to select all the nth elements with the target class or element type.
+
+Here's how you would give the third element in each well the bounce class:
+
+```js
+$('.target:nth-child(3)').addClass('animated bounce')
+```
+
+Make the `second child` in each of your `well` elements `bounce`. You must select the elements' children with the target class.
+
+Tests
+Waiting:The second element in your target elements should bounce.
+Waiting:Only two elements should bounce.
+Waiting:You should use the :nth-child() selector to modify these elements.
+Waiting:You should only use jQuery to add these classes to the element.
+
 ### SASS
 
 Sass, or "Syntactically Awesome StyleSheets", is a language extension of CSS. It adds features that aren't available in basic CSS, which make it easier for you to simplify and maintain the style sheets for your projects.
