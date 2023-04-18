@@ -882,6 +882,27 @@ Waiting:Your target2 element should not be inside your left-well.
 Waiting:Your target2 element should be inside your right-well.
 Waiting:You should only use jQuery to move these elements.
 
+#### Clone an Element Using jQuery
+
+In addition to moving elements, you can also copy them from one place to another.
+
+jQuery has a function called clone() that makes a copy of an element.
+
+For example, if we wanted to copy `target2` from our `left-well` to our `right-well`, we would use:
+
+```js
+$('#target2').clone().appendTo('#right-well')
+```
+
+Did you notice this involves sticking two jQuery functions together? This is called function _chaining_ and it's a convenient way to get things done with jQuery.
+
+Clone your `target5` element and `append` it to your `left-well`.
+
+Tests
+Waiting:Your target5 element should be inside your right-well.
+Waiting:A copy of your target5 element should also be inside your left-well.
+Waiting:You should only use jQuery to move these elements.
+
 ### SASS
 
 Sass, or "Syntactically Awesome StyleSheets", is a language extension of CSS. It adds features that aren't available in basic CSS, which make it easier for you to simplify and maintain the style sheets for your projects.
