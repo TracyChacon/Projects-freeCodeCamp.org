@@ -1460,15 +1460,34 @@ Now that you're getting comfortable writing JSX, you may be wondering how it dif
 
 So far, it may seem that HTML and JSX are exactly the same.
 
-One key difference in JSX is that you can no longer use the word class to define HTML classes. This is because class is a reserved word in JavaScript. Instead, JSX uses className.
+One key difference in JSX is that you can no longer use the word `class` to define HTML classes. This is because `class` is a reserved word in JavaScript. Instead, JSX uses `className`.
 
-In fact, the naming convention for all HTML attributes and event references in JSX become camelCase. For example, a click event in JSX is onClick, instead of onclick. Likewise, onchange becomes onChange. While this is a subtle difference, it is an important one to keep in mind moving forward.
+In fact, the naming convention for all HTML attributes and event references in JSX become camelCase. For example, a click event in JSX is `onClick`, instead of `onclick`. Likewise, `onchange` becomes `onChange`. While this is a subtle difference, it is an important one to keep in mind moving forward.
 
-Apply a class of myDiv to the div provided in the JSX code.
+Apply a `class` of `myDiv` to the `div` provided in the JSX code.
 
 Tests
 Waiting:The constant JSX should return a div element.
 Waiting:The div should have a class of myDiv.
+
+#### 6. Learn About Self-Closing JSX Tags
+
+So far, you’ve seen how JSX differs from HTML in a key way with the use of className vs. class for defining HTML classes.
+
+Another important way in which JSX differs from HTML is in the idea of the self-closing tag.
+
+In HTML, almost all tags have both an opening and closing tag: <div></div>; the closing tag always has a forward slash before the tag name that you are closing. However, there are special instances in HTML called “self-closing tags”, or tags that don’t require both an opening and closing tag before another tag can start.
+
+For example the line-break tag can be written as <br> or as <br />, but should never be written as <br></br>, since it doesn't contain any content.
+
+In JSX, the rules are a little different. Any JSX element can be written with a self-closing tag, and every element must be closed. The line-break tag, for example, must always be written as <br /> in order to be valid JSX that can be transpiled. A <div>, on the other hand, can be written as <div /> or <div></div>. The difference is that in the first syntax version there is no way to include anything in the <div />. You will see in later challenges that this syntax is useful when rendering **_React components_**.
+
+Fix the errors in the code editor so that it is valid JSX and successfully transpiles. Make sure you don't change any of the content - you only need to close tags where they are needed.
+
+Tests
+Waiting:The constant JSX should return a div element.
+Waiting:The div should contain a br tag.
+Waiting:The div should contain an hr tag.
 
 ### Front End Development Libraries Projects
 
