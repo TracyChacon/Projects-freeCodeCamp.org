@@ -27,7 +27,7 @@ Note: The Responsive Web Design and some lessons in JavaScript were not typed ou
 - [X] Certification Project: Tribute Page
 - [X] Learn More About CSS Pseudo Selectors By Building A Balance Sheet
 - [X] Learn Responsive Web Design By Building a Piano 
-- [ ] Certification Project: Technical Documentation Page
+- [X] Certification Project: Technical Documentation Page
 - [X] Learn CSS Variables by Building a City Skyline 
 - [X] Learn CSS Grid by Building a Magazine
 - [X] Certification Project: Product Landing Page
@@ -58,9 +58,9 @@ Note: The Responsive Web Design and some lessons in JavaScript were not typed ou
 ---
 - [ ] **COMPLETE**:
 3.  ###  Front End Development Libraries
-- [ ] Bootstrap
-- [ ] JQuery
-- [ ] SASS
+- [X] Bootstrap
+- [X] JQuery
+- [X] SASS
 - [X] React
 - [X] Redux
 - [X] React and Redux
