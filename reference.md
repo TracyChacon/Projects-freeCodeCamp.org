@@ -1423,6 +1423,21 @@ Waiting:The div should contain a p tag as the second element.
 Waiting:The div should contain a ul tag as the third element.
 Waiting:The ul should contain three li elements.
 
+#### 3. Add Comments in JSX
+
+JSX is a syntax that gets compiled into valid JavaScript. Sometimes, for readability, you might need to add comments to your code. Like most programming languages, JSX has its own way to do this.
+
+To put comments inside JSX, you use the syntax {/\* \*/} to wrap around the comment text.
+
+The code editor has a JSX element similar to what you created in the last challenge. Add a comment somewhere within the provided div element, without modifying the existing h1 or p elements.
+
+Tests
+Waiting:The constant JSX should return a div element.
+Waiting:The div should contain an h1 tag as the first element.
+Waiting:The div should contain a p tag as the second element.
+Waiting:The existing h1 and p elements should not be modified.
+Waiting:The JSX should use valid comment syntax.
+
 ### Front End Development Libraries Projects
 
 It's time to put your front end development libraries skills to the test. Use Bootstrap, jQuery, Sass, React, and Redux to build 5 projects that will test everything you've learned up to this point.
