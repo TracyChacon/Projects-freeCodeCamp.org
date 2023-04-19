@@ -1380,6 +1380,49 @@ Tests
 Waiting:The constant JSX should return an h1 element.
 Waiting:The h1 tag should include the text Hello JSX!
 
+#### 2. Create a Complex JSX Element
+
+The last challenge was a simple example of JSX, but JSX can represent more complex HTML as well.
+
+One important thing to know about nested JSX is that it must return a single element.
+
+This one parent element would wrap all of the other levels of nested elements.
+
+For instance, several JSX elements written as siblings with no parent wrapper element will not transpile.
+
+Here's an example:
+
+Valid JSX:
+
+```jsx
+<div>
+  <p>Paragraph One</p>
+  <p>Paragraph Two</p>
+  <p>Paragraph Three</p>
+</div>
+```
+
+Invalid JSX:
+
+```jsx
+<p>Paragraph One</p>
+<p>Paragraph Two</p>
+<p>Paragraph Three</p>
+```
+
+Define a new constant JSX that renders a `div` which contains the following elements in order:
+
+An `h1`, `a` `p`, and an unordered list that contains three `li` items. You can include any text you want within each element.
+
+Note: When rendering multiple elements like this, you can wrap them all in parentheses, but it's not strictly required. Also notice this challenge uses a div tag to wrap all the child elements within a single parent element. If you remove the div, the JSX will no longer transpile. Keep this in mind, since it will also apply when you return JSX elements in React components.
+
+Tests
+Waiting:The constant JSX should return a div element.
+Waiting:The div should contain an h1 tag as the first element.
+Waiting:The div should contain a p tag as the second element.
+Waiting:The div should contain a ul tag as the third element.
+Waiting:The ul should contain three li elements.
+
 ### Front End Development Libraries Projects
 
 It's time to put your front end development libraries skills to the test. Use Bootstrap, jQuery, Sass, React, and Redux to build 5 projects that will test everything you've learned up to this point.
@@ -1396,3 +1439,41 @@ Build a JavaScript Calculator
 [_] Passed
 Build a 25 + 5 Clock
 [_] Passed
+
+### Build a Random Quote Machine
+
+Objective: Build an app that is functionally similar to this: https://random-quote-machine.freecodecamp.rocks/.
+
+Fulfill the below user stories and get all of the tests to pass. Use whichever libraries or APIs you need. Give it your own personal style.
+
+You can use any mix of HTML, JavaScript, CSS, Bootstrap, SASS, React, Redux, and jQuery to complete this project. You should use a frontend framework (like React for example) because this section is about learning frontend frameworks. Additional technologies not listed above are not recommended and using them is at your own risk. We are looking at supporting other frontend frameworks like Angular and Vue, but they are not currently supported. We will accept and try to fix all issue reports that use the suggested technology stack for this project. Happy coding!
+
+User Story #1: I can see a wrapper element with a corresponding id="quote-box".
+
+User Story #2: Within #quote-box, I can see an element with a corresponding id="text".
+
+User Story #3: Within #quote-box, I can see an element with a corresponding id="author".
+
+User Story #4: Within #quote-box, I can see a clickable element with a corresponding id="new-quote".
+
+User Story #5: Within #quote-box, I can see a clickable a element with a corresponding id="tweet-quote".
+
+User Story #6: On first load, my quote machine displays a random quote in the element with id="text".
+
+User Story #7: On first load, my quote machine displays the random quote's author in the element with id="author".
+
+User Story #8: When the #new-quote button is clicked, my quote machine should fetch a new quote and display it in the #text element.
+
+User Story #9: My quote machine should fetch the new quote's author when the #new-quote button is clicked and display it in the #author element.
+
+User Story #10: I can tweet the current quote by clicking on the #tweet-quote a element. This a element should include the "twitter.com/intent/tweet" path in its href attribute to tweet the current quote.
+
+User Story #11: The #quote-box wrapper element should be horizontally centered. Please run tests with browser's zoom level at 100% and page maximized.
+
+You can build your project by using this CodePen template and clicking Save to create your own pen. Or you can use this CDN link to run the tests in any environment you like: [](https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js)
+
+Once you're done, submit the URL to your working project with all its tests passing.
+
+Note: Twitter does not allow links to be loaded in an iframe. Try using the target="\_blank" or target="\_top" attribute on the #tweet-quote element if your tweet won't load. target="\_top" will replace the current tab so make sure your work is saved.
+
+Solution Link
