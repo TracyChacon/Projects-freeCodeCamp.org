@@ -1582,6 +1582,20 @@ Waiting:The TypesOfFood component should return the Fruits component.
 Waiting:The Fruits component should return the TypesOfFruit component.
 Waiting:The TypesOfFruit component should return the h2 and ul elements.
 
+#### 11. Compose React Components
+
+As the challenges continue to use more complex compositions with React components and JSX, there is one important point to note. Rendering ES6 style class components within other components is no different than rendering the simple components you used in the last few challenges. You can render JSX elements, stateless functional components, and ES6 class components within other components.
+
+In the code editor, the `TypesOfFood` component is already rendering a component called `Vegetables`. Also, there is the `Fruits` component from the last challenge.
+
+Nest two components inside of `Fruits` — first `NonCitrus`, and then `Citrus`. Both of these components are provided for you behind the scenes. Next, nest the `Fruits` class component into the `TypesOfFood` component, below the `h1` heading element and above `Vegetables`. The result should be a series of nested components, which uses two different component types.
+
+Tests
+Waiting:The `TypesOfFood` component should return a single div element.
+Waiting:The `TypesOfFood` component should return the `Fruits` component.
+Waiting:The `Fruits` component should return the `NonCitrus` component and the `Citrus` component.
+Waiting:The `TypesOfFood` component should return the Vegetables component below the `Fruits` component.
+
 ### Front End Development Libraries Projects
 
 It's time to put your front end development libraries skills to the test. Use Bootstrap, jQuery, Sass, React, and Redux to build 5 projects that will test everything you've learned up to this point.
