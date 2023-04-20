@@ -1731,6 +1731,20 @@ Waiting:The ShoppingCart component should render.
 Waiting:The Items component should render.
 Waiting:The Items component should include a propTypes check to require a value for quantity and ensure that its value is a number.
 
+#### 19. Access Props Using this.props
+
+The last several challenges covered the basic ways to pass props to child components. But what if the child component that you're passing a prop to is an **_ES6 class component_**, rather than a stateless functional component? The ES6 class component uses a slightly different convention to access props.
+
+Anytime you refer to a class component within itself, you use the `this` keyword. To access props within a class component, you preface the code that you use to access it with `this`. For example, if an ES6 class component has a prop called `data`, you write `{this.props.data}` in JSX.
+
+Render an instance of the `Welcome` component in the parent component `App`. Here, give `Welcome` a prop of `name` and assign it a value of a `string`. Within the child, `Welcome`, access the `name` prop within the `strong` tags.
+
+Tests
+Waiting:The App component should return a single div element.
+Waiting:The child of App should be the Welcome component.
+Waiting:The Welcome component should have a prop called name.
+Waiting:The Welcome component should display the string you pass as the name prop within strong tags.
+
 ### Front End Development Libraries Projects
 
 It's time to put your front end development libraries skills to the test. Use Bootstrap, jQuery, Sass, React, and Redux to build 5 projects that will test everything you've learned up to this point.
