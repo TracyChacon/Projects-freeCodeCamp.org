@@ -1745,6 +1745,23 @@ Waiting:The child of App should be the Welcome component.
 Waiting:The Welcome component should have a prop called name.
 Waiting:The Welcome component should display the string you pass as the name prop within strong tags.
 
+#### 20. Review Using Props with Stateless Functional Components
+
+Except for the last challenge, you've been **_passing props to stateless functional components_**. These components act like **_pure functions_**. They accept props as input and return the same view every time they are passed the same props. You may be wondering what **_state_** is, and the next challenge will cover it in more detail. Before that, here's a review of the terminology for components.
+
+A **_stateless functional component_** is any function you write which accepts props and returns JSX. A **_stateless component_**, on the other hand, is a class that extends `React.Component`, but does not use internal state (covered in the next challenge). Finally, a **_stateful component_** is a class component that does maintain its own internal state. You may see stateful components referred to simply as components or React components.
+
+**_A common pattern is to try to minimize statefulness and to create stateless functional components wherever possible. This helps contain your state management to a specific area of your application. In turn, this improves development and maintenance of your app by making it easier to follow how changes to state affect its behavior._**
+
+The code editor has a `CampSite` component that renders a `Camper` component as a child. Define the `Camper` component and assign it default props of `{ name: 'CamperBot' }`. Inside the `Camper` component, render any code that you want, but make sure to have one `p` element that includes only the `name` value that is passed in as a prop. Finally, define `propTypes` on the Camper component to require `name` to be provided as a prop and verify that it is of type `string`.
+
+Tests
+Waiting:The `CampSite` component should render.
+Waiting:The `Camper` component should render.
+Waiting:The `Camper` component should include default props which assign the string `CamperBot` to the key `name`.
+Waiting:The `Camper` component should include prop types which require the `name` prop to be of type string.
+Waiting:The `Camper` component should contain a `p` element with only the text from the `name` prop.
+
 ### Front End Development Libraries Projects
 
 It's time to put your front end development libraries skills to the test. Use Bootstrap, jQuery, Sass, React, and Redux to build 5 projects that will test everything you've learned up to this point.
