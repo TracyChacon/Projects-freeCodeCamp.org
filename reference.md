@@ -1815,6 +1815,28 @@ Waiting:MyComponent should render an h1 heading element enclosed in a single div
 Waiting:The rendered h1 tag should include a reference to {name}.
 Waiting:The rendered h1 heading element should contain text rendered from the component's state.
 
+#### 24. Set State with this.setState
+
+The previous challenges covered component `state` and how to initialize state in the `constructor`. There is also a way to change the component's state. React provides a method for updating component state called `setState`. You call the `setState` method within your component class like so: `this.setState()`, passing in an object with key-value pairs. The keys are your state properties and the values are the updated state data. For instance, if we were storing a us`ername in state and wanted to update it, it would look like this:
+
+```jsx
+this.setState({
+  username: 'Lewis',
+})
+```
+
+React expects you to never modify `state` directly, instead always use `this.setState()` when state changes occur. Also, you should note that React may batch multiple state updates in order to improve performance. What this means is that state updates through the setState method can be asynchronous. There is an alternative syntax for the `setState` method which provides a way around this problem. This is rarely needed but it's good to keep it in mind! Please consult our [React article](https://www.freecodecamp.org/news/what-is-state-in-react-explained-with-examples/) for further details.
+
+There is a button element in the code editor which has an `onClick()` handler. This handler is triggered when the button receives a click event in the browser, and runs the `handleClick` method defined on `MyComponent`. Within the handleClick method, update the component state using `this.setState()`. Set the name property in state to equal the string `React Rocks!`.
+
+Click the button and watch the rendered state update. Don't worry if you don't fully understand how the click handler code works at this point. It's covered in upcoming challenges.
+
+Tests
+Waiting:The state of MyComponent should initialize with the key value pair { name: Initial State }.
+Waiting:MyComponent should render an h1 heading element.
+Waiting:The rendered h1 heading element should contain text rendered from the component's state.
+Waiting:Calling the handleClick method on MyComponent should set the name property in state to equal React Rocks!.
+
 ### Front End Development Libraries Projects
 
 It's time to put your front end development libraries skills to the test. Use Bootstrap, jQuery, Sass, React, and Redux to build 5 projects that will test everything you've learned up to this point.
