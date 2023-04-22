@@ -1856,6 +1856,49 @@ Waiting:MyComponent should return a div element which wraps two elements, a butt
 Waiting:The state of MyComponent should initialize with the key value pair { text: "Hello" }.
 Waiting:Clicking the button element should run the handleClick method and set the state text to You clicked!.
 
+#### 26. Use State to Toggle an Element
+
+Sometimes you might need to know the previous state when updating the state. **_However, state updates may be asynchronous - this means React may batch multiple `setState()` calls into a single update. This means you can't rely on the previous value of `this.state` or `this.props` when calculating the next value._** So, you should not use code like this:
+
+```jsx
+this.setState({
+  counter: this.state.counter + this.props.increment,
+})
+```
+
+Instead, you should pass `setState` a function that allows you to access state and props. Using a function with `setState` guarantees you are working with the most current values of state and props. This means that the above should be rewritten as:
+
+```jsx
+this.setState((state, props) => ({
+  counter: state.counter + props.increment,
+}))
+```
+
+You can also use a form without `props` if you need only the `state`:
+
+```jsx
+this.setState((state) => ({
+  counter: state.counter + 1,
+}))
+```
+
+**_Note that you have to wrap the object literal in parentheses, otherwise JavaScript thinks it's a block of code._**
+
+`MyComponent` has a `visibility` property which is initialized to `false`. The render method returns one view if the value of `visibility` is true, and a different view if it is false.
+
+Currently, there is no way of updating the `visibility` property in the component's `state`. The value should toggle back and forth between true and false. There is a click handler on the button which triggers a class method called `toggleVisibility()`. Pass a function to `setState` to define this method so that the `state` of `visibility` toggles to the opposite value when the method is called. If `visibility` is `false`, the method sets it to `true`, and vice versa.
+
+Finally, click the button to see the conditional rendering of the component based on its `state`.
+
+Hint: Don't forget to bind the `this` keyword to the method in the `constructor`!
+
+Tests
+Waiting:MyComponent should return a div element which contains a button.
+Waiting:The state of MyComponent should initialize with a visibility property set to false.
+Waiting:Clicking the button element should toggle the visibility property in state between true and false.
+Waiting:An anonymous function should be passed to setState.
+Waiting:this should not be used inside setState
+
 ### Front End Development Libraries Projects
 
 It's time to put your front end development libraries skills to the test. Use Bootstrap, jQuery, Sass, React, and Redux to build 5 projects that will test everything you've learned up to this point.
