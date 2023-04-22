@@ -1899,6 +1899,21 @@ Waiting:Clicking the button element should toggle the visibility property in sta
 Waiting:An anonymous function should be passed to setState.
 Waiting:this should not be used inside setState
 
+#### 27. Write a Simple Counter
+
+You can design a more complex stateful component by combining the concepts covered so far. **_These include initializing `state`, writing methods that set `state`, and assigning click handlers to trigger these methods._**
+
+The `Counter` component keeps track of a `count` value in `state`. There are two buttons which call methods `increment()` and `decrement()`. Write these methods so the counter value is incremented or decremented by 1 when the appropriate button is clicked. Also, create a `reset()` method so when the reset button is clicked, the count is set to 0.
+
+Note: Make sure you don't modify the `className`s of the buttons. Also, remember to add the necessary bindings for the newly-created methods in the constructor.
+
+Tests
+Waiting:Counter should return a div element which contains three buttons with text content in this order Increment!, Decrement!, Reset.
+Waiting:The state of Counter should initialize with a count property set to 0.
+Waiting:Clicking the increment button should increment the count by 1.
+Waiting:Clicking the decrement button should decrement the count by 1.
+Waiting:Clicking the reset button should reset the count to 0.
+
 ### Front End Development Libraries Projects
 
 It's time to put your front end development libraries skills to the test. Use Bootstrap, jQuery, Sass, React, and Redux to build 5 projects that will test everything you've learned up to this point.
