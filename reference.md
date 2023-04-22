@@ -1983,6 +1983,24 @@ Waiting:The RenderInput component should render.
 Waiting:The GetInput component should receive the MyApp state property inputValue as props and contain an input element which modifies MyApp state.
 Waiting:The RenderInput component should receive the MyApp state property inputValue as props.
 
+#### 32. Use the Lifecycle Method componentWillMount
+
+**_React components have several special methods that provide opportunities to perform actions at specific points in the lifecycle of a component. These are called lifecycle methods, or lifecycle hooks, and allow you to catch components at certain points in time._** This can be before they are rendered, before they update, before they receive props, before they unmount, and so on. Here is a list of some of the main lifecycle methods:
+`componentWillMount()`
+`componentDidMount()`
+`shouldComponentUpdate()`
+`componentDidUpdate()`
+`componentWillUnmount()`
+The next several lessons will cover some of the basic use cases for these lifecycle methods.
+
+Note: The `componentWillMount` Lifecycle method will be deprecated in a future version of 16.X and removed in version 17. Learn more in this [article](https://www.freecodecamp.org/news/how-to-safely-use-reacts-life-cycles-with-fiber-s-async-rendering-fd4469ebbd8f/)
+
+The `componentWillMount()` method is called before the `render()` method when a component is being mounted to the DOM. Log something to the console within `componentWillMount()` - you may want to have your browser console open to see the output.
+
+Tests
+Waiting:MyComponent should render a div element.
+Waiting:console.log should be called in componentWillMount.
+
 ### Front End Development Libraries Projects
 
 It's time to put your front end development libraries skills to the test. Use Bootstrap, jQuery, Sass, React, and Redux to build 5 projects that will test everything you've learned up to this point.
