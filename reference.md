@@ -2026,6 +2026,22 @@ Waiting:MyComponent should render a div element which wraps an h1 tag.
 Waiting:Component state should be updated with a timeout function in componentDidMount.
 Waiting:The h1 tag should render the activeUsers value from MyComponent's state.
 
+#### 34. Add Event Listeners
+
+The `componentDidMount()` method is also the best place to attach any event listeners you need to add for specific functionality. **_React provides a synthetic event system which wraps the native event system present in browsers. This means that the synthetic event system behaves exactly the same regardless of the user's browser - even if the native events may behave differently between different browsers._**
+
+You've already been using some of these synthetic event handlers such as `onClick()`. React's synthetic event system is great to use for most interactions you'll manage on DOM elements. However, if you want to attach an event handler to the document or window objects, you have to do this directly.
+
+Attach an event listener in the `componentDidMount()` method for `keydown` events and have these events trigger the callback `handleKeyPress()`. You can use `document.addEventListener()` which takes the event (in quotes) as the first argument and the callback as the second argument.
+
+Then, in `componentWillUnmount()`, remove this same event listener. You can pass the same arguments to `document.removeEventListener()`. It's good practice to use this lifecycle method to do any clean up on React components before they are unmounted and destroyed. Removing event listeners is an example of one such clean up action.
+
+Tests
+Waiting:MyComponent should render a div element which wraps an h1 tag.
+Waiting:A keydown listener should be attached to the document in componentDidMount.
+Waiting:The keydown listener should be removed from the document in componentWillUnmount.
+Waiting:Once the component has mounted, pressing enter should update its state and the rendered h1 tag.
+
 ### Front End Development Libraries Projects
 
 It's time to put your front end development libraries skills to the test. Use Bootstrap, jQuery, Sass, React, and Redux to build 5 projects that will test everything you've learned up to this point.
