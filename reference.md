@@ -2117,6 +2117,20 @@ Waiting:MagicEightBall's state should be initialized with a property of userInpu
 Waiting:When MagicEightBall is first mounted to the DOM, it should return an empty p element.
 Waiting:When text is entered into the input element and the button is clicked, the MagicEightBall component should return a p element that contains a random element from the possibleAnswers array.
 
+#### 39. Render with an If-Else Condition
+
+Another application of using JavaScript to control your rendered view is to tie the elements that are rendered to a condition. When the condition is true, one view renders. When it's false, it's a different view. You can do this with a standard `if/else` statement in the `render()` method of a React component.
+
+`MyComponent` contains a `boolean` in its state which tracks whether you want to display some element in the UI or not. The `button` toggles the state of this value. Currently, it renders the same UI every time. Rewrite the `render()` method with an `if/else` statement so that if `display` is true, you return the current markup. Otherwise, return the markup without the `h1` element.
+
+Note: You must write an `if/else` to pass the tests. Use of the ternary operator will not pass here.
+
+Tests
+Waiting:MyComponent should exist and render.
+Waiting:When display is set to true, a div, button, and h1 should render.
+Waiting:When display is set to false, only a div and button should render.
+Waiting:The render method should use an if/else statement to check the condition of this.state.display.
+
 ### Front End Development Libraries Projects
 
 It's time to put your front end development libraries skills to the test. Use Bootstrap, jQuery, Sass, React, and Redux to build 5 projects that will test everything you've learned up to this point.
