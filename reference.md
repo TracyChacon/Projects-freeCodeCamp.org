@@ -2229,6 +2229,24 @@ Waiting:The state of MyToDoList should be initialized with toDoList as an empty 
 Waiting:The state of MyToDoList should be initialized with userInput as an empty string.
 Waiting:When the Create List button is clicked, the MyToDoList component should dynamically return an unordered list that contains a list item element for every item of a comma-separated list entered into the textarea element.
 
+#### 45. Give Sibling Elements a Unique Key Attribute
+
+The last challenge showed how the `map` method is used to dynamically render a number of elements based on user input. However, there was an important piece missing from that example. When you create an array of elements, each one needs a `key` attribute set to a unique value. React uses these keys to keep track of which items are added, changed, or removed. This helps make the re-rendering process more efficient when the list is modified in any way.
+
+Note: Keys only need to be unique between sibling elements, they don't need to be globally unique in your application.
+
+The code editor has an array with some front end frameworks and a stateless functional component named `Frameworks()`. `Frameworks()` needs to map the array to an unordered list, much like in the last challenge. Finish writing the `map` callback to return an `li` element for each framework in the `frontEndFrameworks` array. This time, make sure to give each `li` a key attribute, set to a unique value. The `li` elements should also contain text from `frontEndFrameworks`.
+
+Normally, you want to make the key something that uniquely identifies the element being rendered. As a last resort the array index may be used, but typically you should try to use a unique identification.
+
+Tests
+Waiting:The Frameworks component should exist and render to the page.
+Waiting:Frameworks should render an h1 element.
+Waiting:Frameworks should render a ul element.
+Waiting:The ul tag should render 6 child li elements.
+Waiting:Each list item element should have a unique key attribute.
+Waiting:Each list item element should contain text from frontEndFrameworks.
+
 ### Front End Development Libraries Projects
 
 It's time to put your front end development libraries skills to the test. Use Bootstrap, jQuery, Sass, React, and Redux to build 5 projects that will test everything you've learned up to this point.
