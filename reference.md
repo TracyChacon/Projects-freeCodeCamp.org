@@ -2247,11 +2247,7 @@ Waiting:The ul tag should render 6 child li elements.
 Waiting:Each list item element should have a unique key attribute.
 Waiting:Each list item element should contain text from frontEndFrameworks.
 
-<<<<<<< HEAD
-#### 45. Use Array.filter() to Dynamically Filter an Array
-=======
 #### 46. Use Array.filter() to Dynamically Filter an Array
->>>>>>> rename-commits
 
 The `map` array method is a powerful tool that you will use often when working with React. Another method related to `map` is `filter`, which filters the contents of an array based on a condition, then returns a new array. For example, if you have an array of users that all have a property `online` which can be set to `true` or `false`, you can `filter` only those users that are online by writing:
 
@@ -2268,11 +2264,7 @@ Waiting:MyComponent should return a div, an h1, and then an unordered list conta
 Waiting:MyComponent should render li elements that contain the username of each online user.
 Waiting:Each list item element should have a unique key attribute.
 
-<<<<<<< HEAD
-#### 46. Render React on the Server with renderToString
-=======
 #### 47. Render React on the Server with renderToString
->>>>>>> rename-commits
 
 So far, you have been rendering React components on the client. Normally, this is what you will always do. However, there are some use cases where it makes sense to render a React component on the server. Since React is a JavaScript view library and you can run JavaScript on the server with Node, this is possible. In fact, React provides a `renderToString()` method you can use for this purpose.
 
