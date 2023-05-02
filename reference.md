@@ -2695,3 +2695,19 @@ Waiting:The sixth h2 should have the text 18 USD.
 Waiting:The seventh h2 should have the text 29 USD.
 Waiting:The eighth h2 should have the text 14 USD.
 Waiting:The ninth h2 should have the text 9 USD.
+
+### 5. Add Inline Styling to Elements
+
+D3 lets you add inline CSS styles on dynamic elements with the `style()` method.
+
+The `style()` method takes a comma-separated key-value pair as an argument. Here's an example to set the selection's text `color` to `blue`:
+
+```js
+selection.style('color', 'blue')
+```
+
+Add the `style()` method to the code in the editor to make all the displayed text have a `font-family` of `verdana`.
+
+Tests
+Waiting:Your h2 elements should have a font-family of verdana.
+Waiting:Your code should use the style() method.
