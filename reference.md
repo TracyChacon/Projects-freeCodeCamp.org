@@ -2567,7 +2567,7 @@ In the Data Visualization Certification, you'll build charts, graphs, and maps t
 
 You'll also learn about JSON (JavaScript Object Notation), and how to work with data online using an API (Application Programming Interface).
 
-### 1. Data Visualization with D3
+### 0. Data Visualization with D3
 
 D3, or D3.js, stands for Data Driven Documents. It's a JavaScript library for creating dynamic and interactive data visualizations in the browser.
 
@@ -2577,7 +2577,7 @@ D3 supports many different kinds of input data formats. Then, using its powerful
 
 In the Data Visualization with D3 courses, you'll learn how to work with data to create different charts, graphs, hover elements, and other ingredients to create dynamic and attractive data visualizations.
 
-### Add Document Elements with D3
+### 1. Add Document Elements with D3
 
 D3 has several methods that let you add and change elements in your document.
 
@@ -2613,7 +2613,7 @@ Waiting:Your code should use the select method.
 Waiting:Your code should use the append method.
 Waiting:Your code should use the text method.
 
-### Select a Group of Elements with D3
+### 2. Select a Group of Elements with D3
 
 D3 also has the `selectAll()` method to select a group of elements. It returns an array of HTML nodes for all the items in the document that match the input string. Here's an example to select all the anchor tags in a document:
 
@@ -2629,3 +2629,5 @@ Tests
 Waiting:There should be 3 li elements on the page, and the text in each one should say list item. Capitalization and spacing should match exactly.
 Waiting:Your code should access the d3 object.
 Waiting:Your code should use the selectAll method.
+
+### a
