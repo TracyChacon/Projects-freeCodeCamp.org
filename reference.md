@@ -2720,9 +2720,9 @@ D3 is about visualization and presentation of data. It's likely you'll want to c
 selection.style('color', (d) => {})
 ```
 
-The style() method is not limited to setting the color - it can be used with other CSS properties as well.
+The `style()` method is not limited to setting the color - it can be used with other CSS properties as well.
 
-Add the style() method to the code in the editor to set the color of the h2 elements conditionally. Write the callback function so if the data value is less than 20, it returns red, otherwise it returns green.
+Add the `style()` method to the code in the editor to set the color of the `h2` elements conditionally. Write the callback function so if the data value is less than `20`, it returns `red`, otherwise it returns `green`.
 
 Note: You can use if-else logic, or the ternary operator.
 
@@ -2736,3 +2736,23 @@ Waiting:The sixth h2 should have a color of red.
 Waiting:The seventh h2 should have a color of green.
 Waiting:The eighth h2 should have a color of red.
 Waiting:The ninth h2 should have a color of red.
+
+### 7. Add Classes with D3
+
+Using a lot of inline styles on HTML elements gets hard to manage, even for smaller apps. It's easier to add a class to elements and style that class one time using CSS rules. D3 has the `attr()` method to add any HTML attribute to an element, including a class name.
+
+The `attr()` method works the same way that` style()` does. It takes comma-separated values, and can use a callback function. Here's an example to add a class of container to a selection:
+
+```js
+selection.attr('class', 'container')
+```
+
+Note that the class parameter will remain the same whenever you need to add a class and only the container parameter will change.
+
+Add the `attr()` method to the code in the editor and put a class of `bar` on the `div` elements.
+
+Tests
+Waiting:Your div elements should have a class of bar.
+Waiting:Your code should use the attr() method.
+
+### 8.
