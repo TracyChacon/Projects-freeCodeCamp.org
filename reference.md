@@ -3144,6 +3144,40 @@ D3 methods can add styles to the bar labels. The `fill` attribute sets the `colo
 
 Set the `font-size` of the text elements to `25px`, and the `color` of the text to `red`.
 
+```js
+const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9]
+
+const w = 500
+const h = 100
+
+const svg = d3.select('body').append('svg').attr('width', w).attr('height', h)
+
+svg
+  .selectAll('rect')
+  .data(dataset)
+  .enter()
+  .append('rect')
+  .attr('x', (d, i) => i * 30)
+  .attr('y', (d, i) => h - 3 * d)
+  .attr('width', 25)
+  .attr('height', (d, i) => d * 3)
+  .attr('fill', 'navy')
+
+svg
+  .selectAll('text')
+  .data(dataset)
+  .enter()
+  .append('text')
+  .text((d) => d)
+  .attr('x', (d, i) => i * 30)
+  .attr('y', (d, i) => h - 3 * d - 3)
+  // Add your code below this line
+  .style('font-size', '25px')
+  .attr('fill', 'red')
+```
+
+       // Add your code above this line
+
 Tests
 Waiting:The labels should all have a fill color of red.
 Waiting:The labels should all have a font-size of 25 pixels.
@@ -3156,6 +3190,39 @@ You set the CSS class on the SVG elements with the `attr()` method. Then the `:h
 
 Use the `attr()` method to add a class of `bar` to all the `rect` elements. This changes the `fill` color of the bar to `brown` when you mouse over it.
 
+```js
+const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9]
+
+const w = 500
+const h = 100
+
+const svg = d3.select('body').append('svg').attr('width', w).attr('height', h)
+
+svg
+  .selectAll('rect')
+  .data(dataset)
+  .enter()
+  .append('rect')
+  .attr('x', (d, i) => i * 30)
+  .attr('y', (d, i) => h - 3 * d)
+  .attr('width', 25)
+  .attr('height', (d, i) => 3 * d)
+  .attr('fill', 'navy')
+  // Add your code below this line
+  .attr('class', 'bar')
+
+// Add your code above this line
+
+svg
+  .selectAll('text')
+  .data(dataset)
+  .enter()
+  .append('text')
+  .text((d) => d)
+  .attr('x', (d, i) => i * 30)
+  .attr('y', (d, i) => h - 3 * d - 3)
+```
+
 Tests
 Waiting:Your rect elements should have a class of bar.
 
@@ -3166,6 +3233,42 @@ A tooltip shows more information about an item on a page when the user hovers ov
 `title` pairs with the `text()` method to dynamically add data to the bars.
 
 Append a `title` element under each rect node. Then call the `text()` method with a callback function so the text displays the data value.
+
+```js
+const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9]
+
+const w = 500
+const h = 100
+
+const svg = d3.select('body').append('svg').attr('width', w).attr('height', h)
+
+svg
+  .selectAll('rect')
+  .data(dataset)
+  .enter()
+  .append('rect')
+  .attr('x', (d, i) => i * 30)
+  .attr('y', (d, i) => h - 3 * d)
+  .attr('width', 25)
+  .attr('height', (d, i) => d * 3)
+  .attr('fill', 'navy')
+  .attr('class', 'bar')
+  // Add your code below this line
+
+  .append('title')
+  .text((d) => d)
+
+// Add your code above this line
+
+svg
+  .selectAll('text')
+  .data(dataset)
+  .enter()
+  .append('text')
+  .text((d) => d)
+  .attr('x', (d, i) => i * 30)
+  .attr('y', (d, i) => h - (d * 3 + 3))
+```
 
 Tests
 Waiting:Your code should have 9 title elements.
@@ -3178,3 +3281,16 @@ Waiting:The sixth title element should have tooltip text of 18.
 Waiting:The seventh title element should have tooltip text of 29.
 Waiting:The eighth title element should have tooltip text of 14.
 Waiting:The ninth title element should have tooltip text of 9.
+
+### 21. Create a Scatterplot with SVG Circles
+
+A scatter plot is another type of visualization. It usually uses circles to map data points, which have two values each. These values tie to the `x` and `y` axes, and are used to position the circle in the visualization.
+
+SVG has a `circle` tag to create the circle shape. It works a lot like the `rect` elements you used for the bar chart.
+
+Use the `data()`, `enter()`, and `append()` methods to bind dataset to new circle elements that are appended to the SVG.
+
+Note: The circles won't be visible because we haven't set their attributes yet. We'll do that in the next challenge.
+
+Tests
+Waiting:Your code should have `10` circle elements.
