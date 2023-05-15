@@ -1,0 +1,60 @@
+:root {
+    --color_footer_background: #858591;
+    --color_navbar_background: #2a2a40;
+    --color_page_background: #fff;
+    --color_page_forground: #000;
+    --color_skills_background: yellow;
+    --color_welcome_background: #000;
+    --color_welcome_foreground: ;
+
+    
+    --grid_col_w_main_1: 23vw;
+    --grid_col_w_main_2: 65vw;
+   
+
+    --grid_row_h_above: 1vh;   
+    --grid_row_h_navbar: 8vh;
+    --grid_row_h_projects_1: 45vh;
+    --grid_row_h_skills_1: 45vh;
+    --grid_row_h_footer: 10vh;
+    
+    --grid_gap_h_main: 1vh;
+    --grid_gap_h_body: 5vh;
+    --grid_gap_w_main: 1vw;
+
+    --outline_thickness: 4px;
+}
+
+
+
+h1, h2, h3, h4, h5, h6, p, a {
+    margin-left: 1.8rem;
+}
+
+img {
+    outline: 1px solid red;
+   
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-main-and-footer {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 10vh 60vh 40vh;
+    grid-template-areas: "" "" "";
+    outline: 1px solid red;  
+}
+
+.navbar {
+    position: fixed;
+    background-color: var(--color_navbar_background);   
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--color_page_background);
+
+
+}
