@@ -3788,3 +3788,205 @@ Tests
 Waiting:Your code should use the axisLeft() method with yScale passed as the argument.
 Waiting:The y-axis g element should have a transform attribute to translate the axis by (60, 0).
 Waiting:Your code should call the yAxis.
+
+## Relational Database
+
+For these courses, you will use real developer tools and software including VS Code, PostgreSQL, and the Linux / Unix command line to complete interactive tutorials and build projects.
+
+These courses start off with basic Bash commands. Using the terminal, you will learn everything from navigating and manipulating a file system, scripting in Bash, all the way to advanced usage.
+
+Next, you will learn how to create and use a relational database with PostgreSQL, a database management system, and SQL, the language of these databases.
+
+Finally, you will learn Git, the version control system, an essential tool of every developer.
+
+### Learn Bash by Building a Boilerplate
+
+The terminal allows you to send text commands to your computer that can manipulate the file system, run programs, automate tasks, and much more.
+
+In this 170-lesson course, you will learn terminal commands by creating a website boilerplate using only the command line.
+
+#### Build a Boilerplate
+
+In this 170-lesson course, you will learn terminal commands by creating a website boilerplate using only the command line.
+
+Create a GitHub account if you don't have one. You'll need it when you create the virtual Linux server machine. This process may take a few minutes.
+
+### Learn Relational Databases by Building a Mario Database
+
+A relational database organizes data into tables that are linked together through relationships.
+
+In this 165-lesson course, you will learn the basics of a relational database by creating a PostgreSQL database filled with video game characters.
+
+#### start terminal
+
+The first thing you need to do is start the terminal.
+
+Do that by clicking the "hamburger" menu at the top left of the screen, going to the "terminal" section, and clicking "new terminal". Once you open a new one, type echo hello terminal into the terminal and press enter.
+
+#### pwd
+
+What you see in the terminal below is a folder (or directory) on this machine.
+
+Type pwd into the terminal and press enter to see the path of the folder. pwd stands for "print working directory".
+
+#### ls
+
+The output tells you where the folder you are in is located.
+
+You are in the project folder, which is in the CodeAlly folder, which is in the home folder. Type ls into the terminal to see what's in this folder. ls stands for "list".
+
+#### cd <folder_name>
+
+The output is showing everything in this folder.
+
+There's two folders here. You can use `cd <folder_name>` to go into a folder. cd stands for "change directory". Change to the freeCodeCamp directory.
+
+####
+
+You are in the freecodecamp folder now.
+You may have noticed that the prompt changed to include it. Print the working directory of the freeCodeCamp folder to see the full path of where you are.
+
+####
+
+You can see the path of the freeCodeCamp folder.
+It's in the project folder you were just in. List the contents of the freeCodeCamp folder to see what's here.
+
+####
+
+There's two folders and three files here.
+The folders are blue and the files include their extension. Next, change to that test directory.
+
+####
+
+You can see you are in the test folder now.
+It shows test in the prompt. Print the full path of this directory. Remember that "folder" and "directory" are the same thing.
+
+####
+
+That's the path to the test folder, it's in the freeCodeCamp folder.
+List the contents of this folder.
+
+#### cd ..
+
+These are all files. There's no more folders to go into here.
+You can use `cd ..` to go back a folder level. The two dots will take you back one level. Go back to the freeCodeCamp folder
+
+####
+
+test got removed from the prompt since you left that folder and you're back in the freeCodeCamp folder. List the contents of what's here to remind yourself.
+
+#### more <filename>
+
+There's the test folder you were just in.
+You can see what's in a file with `more <filename>`. Use it to view what's in the package.json file.
+
+####
+
+It looks like a JSON object.
+You can empty the terminal with clear. The terminal looks a little cluttered, why don't you clear it.
+
+####
+
+Now you have a fresh screen 😄 List what's in here again.
+
+####
+
+You checked out the test folder and the package.json file. What next? Why don't you go into that node_modules directory.
+
+####
+
+Now the prompt includes node_modules since that's where you are. List what's in the folder.
+
+#### -l flag to the "list" command
+
+That's a lot of folders.
+
+You can add a flag to a command to use it different ways like this: ls `<flag>`. List the contents of the node_modules folder in "long list format". Do that by adding the -l flag to the "list" command.
+
+####
+
+It is showing more details about each item in here and it's a little easier to read. One of the folders is named `has`, why don't you change into it.
+
+####
+
+You are now in the has folder. List its contents.
+
+####
+
+There's a few files and folders here. Can you tell the difference? Take a look at more of that README.md file.
+
+####
+
+Nothing noteworthy in there. You can't see what's in the here anymore, list the contents again.
+
+####
+
+That one file doesn't appear to have an extension. Strange. Take a look at more of the that "license" file that doesn't show an ex
+
+####
+
+Pretend you read all that. It looks a little messy in here again so why don't you clear the terminal.
+
+####
+
+Better. Remind yourself what's in here with the list command.
+
+####
+
+Go into that src directory to see what you can find in there.
+
+####
+
+View the full path of this folder.
+
+#### /
+
+Getting deeper still. You can see that each new folder has a / in front of it. Take a look at what's in this folder.
+
+####
+
+Only one file here. Show me what's in it with more.
+
+####
+
+It's some JavaScript 😄 I think you've fooled around enough. Why don't you navigate out of here. Change back to the has directory.
+
+####
+
+You're getting pretty good. Change back to the node_modules directory.
+
+#### cd ../..
+
+You can go back two folders with `cd ../..`. Each set of dots represents another folder level. Go back to the project directory from the node_modules directory.
+
+####
+
+You are back in the project folder where you started. List what's in here again.
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
