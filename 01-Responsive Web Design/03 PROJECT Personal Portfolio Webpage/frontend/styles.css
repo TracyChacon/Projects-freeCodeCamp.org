@@ -8,8 +8,8 @@
     --fg_color_skills: yellow;
 
     --grid_gap_h_body: 4vh;
-    --grid_gap_h_main: 0;
-    --grid_gap_w_main: 1vw;
+    --grid_gap_h_main: 1vw;
+    --grid_gap_w_main: 5vw;
     
     --h_navbar: 10vh;
     --h_main: 82vh;
@@ -18,6 +18,8 @@
     --outline_thickness: 6px;
     
     --w_main: 97vw;
+    --w_welcome: calc(6/16 * var(--w_main));
+    --w_projects_skills: calc(8/16 * var(--w_main));
 }
 
 body {
@@ -82,10 +84,13 @@ img {
     grid-area: main;
 
     display: grid;
-    grid-template-columns: calc(1/4 * var(--w_main)) calc(3/4 * var(--w_main));
+    grid-template-columns: var(--w_welcome) var(--w_projects_skills);
     grid-template-rows: calc(9/12 * var(--h_main)) calc(3/12 * var(--h_main));
     grid-template-areas: "welcome projects" "welcome skills";
+    gap: var(--grid_gap_h_main) var(--grid_gap_w_main) ;
 }
+
+
 
 .footer {
     grid-area: footer;
@@ -114,10 +119,16 @@ img {
     display: flex;
 }
 
-.container-about {
-    background-color: bisque;
+.about-contact-container {
 }
 
+.about-container {
+    background-color: bisque;
+    width:fit-content;
+}
+.contact-container {
+    /* display: inline; */
+}
 
 
 .navbar a {
@@ -130,14 +141,18 @@ img {
     background-color: var(--bg_color_page);
     overflow: hidden;
 
-}
-.welcome:hover, .projects:hover, .skills:hover {
     margin-bottom: 2vh;
     margin-left: 2vh;
     box-shadow: -12px 12px 5px var(--bg_color_footer), 12px 12px 5px var(--bg_color_footer);
     z-index: 5;
 
 }
+/* .welcome:hover, .projects:hover, .skills:hover {
+    margin-bottom: 2vh;
+    margin-left: 2vh;
+    box-shadow: -12px 12px 5px var(--bg_color_footer), 12px 12px 5px var(--bg_color_footer);
+    z-index: 5;
+} */
 
 .heart {
     color: red;
