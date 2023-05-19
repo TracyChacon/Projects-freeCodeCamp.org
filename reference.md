@@ -3965,17 +3965,223 @@ You are back in the project folder where you started. List what's in here again.
 
 ####
 
-####
+That's right. Why don't you get a fresh start by clearing the terminal.
+
+#### mkdir
+
+You will be making a website boilerplate. You can make a new folder with mkdir `<folder_name>`. mkdir stands for "make directory". Make a `website` directory in this project folder. Remember that "directory" and "folder" mean the same thing.
 
 ####
 
-####
+List what's here to make sure it got created.
 
 ####
 
-####
+It worked. The website files will be in the new directory. Change to the website directory so you can start creating them.
 
 ####
+
+List the contents of the website folder.
+
+#### echo
+
+It's brand new, there's nothing in it yet. The `echo` command lets you print anything to the terminal. You used it in the first lesson. Just type what you want to print after it. Use it to print `hello website` to the terminal.
+
+#### touch
+
+Websites usually have an index.html file. You can use `touch <filename>` to create a new file. Create `index.html` in the website folder.
+
+####
+
+They usually have a CSS file as well. Create `styles.css` in the website folder using the same method.
+
+####
+
+List the contents of the website folder to make sure they got created.
+
+####
+
+There they are. Next is a JavaScript file. Create `index.js` in the website folder with the method you have been using.
+
+#### git respository
+
+You might turn this into a git repository. Create `.gitignore` in the website folder with the same method.
+
+####
+
+List the contents of the website folder to see your new files.
+
+#### help flag
+
+There's three files, but where's the `.gitignore file`? I think it's hidden. Most commands have a `--help` flag to show what the command can do. Display the "help" menu for the `ls` command. Here's an example: `command <flag>`
+
+#### --all, -a flag
+
+Scroll through the menu to see the flags that go with ls. The flag you are looking for is `--all`, or `-a` for short. List all the contents of the website folder using the correct flag.
+
+#### hiden files
+
+There's the hidden file. Do you see it? It didn't display before. It also includes . and ... You used cd .. to go back a folder earlier. Change to the . directory.
+
+####
+
+You didn't go anywhere. The `. `takes you to the folder you are in, and `..` takes you back, or up, a folder. Websites need some images. Create `background.jpg` in the website folder.
+
+####
+
+Next, add a header image. Create `header.png` in the website folder.
+
+####
+
+Finally, create footer.jpeg in the website folder.
+
+####
+
+Use the list command to check out the images you just added.
+
+#### Looks like images show up in pink
+
+Looks like images show up in pink. There's also three fonts to use for the website. The first one is "roboto". Create `roboto.font` in the website folder.
+
+####
+
+The next one is "lato". Create `lato.font` in the website folder.
+
+####
+
+Lastly, create `menlo.font` in the website folder.
+
+####
+
+List the contents of this folder to see your new font files.
+
+####
+
+Your three font files are there. There's three icons for the website as well. Create `CodeAlly.svg` in the website folder.
+
+####
+
+Next, create `CodeRoad.svg` in the `website` folder.
+
+####
+
+Finally, create `freeCodeCamp.svg` in the `website` folder.
+
+####
+
+Check out the new icons you just added by listing the contents of the folder they are in.
+
+####
+
+The icons are pink as well. I think the images should go in a separate folder to clean it up a little. Make an images directory in the website folder to put them in.
+
+####
+
+List the contents of the `website` folder to make sure your new folder is there.
+
+#### cp, copy a file
+
+There's your new images folder. It's blue. You can copy a file with `cp <file> <destination>`. cp stands for "copy". Copy `background.jpg` to your images folder.
+
+####
+
+Better make sure it worked. Change to the `images` directory.
+
+####
+
+List the contents to see if `background.jpg` is here.
+
+####
+
+There it is. Looks like the copy worked. Change back to the website directory so you can copy the other ones.
+
+####
+
+Remind yourself of the files here by listing the contents.
+
+#### remove files with rm
+
+You copied the background image to the images folder so you don't need the one here anymore. You can remove a file with `rm <filename>`. Remove `background.jpg` from the website folder.
+
+####
+
+List the contents to make sure it's gone.
+
+####
+
+Okay, it's gone. Next, copy `header.png` to the `images` folder.
+
+####
+
+Last, copy the "footer" image to the `images` folder.
+
+####
+
+All the images should be copied over. Change to the images directory so you can make sure.
+
+####
+
+Check if the images are here by listing the contents.
+
+####
+
+They all made it here. Go back to the `website` folder so you can delete the original files.
+
+####
+
+List the contents to remind yourself of the filenames to delete.
+
+####
+
+There's two that you don't need anymore. Remove the "header" image file from the `website` folder since you copied to the images folder.
+
+####
+
+It should be gone. Remove the "footer" image from the `website` folder as well.
+
+####
+
+List the contents of the website folder to check if they are gone.
+
+#### Use mv to rename file
+
+Looks like they're all deleted. There was a mistake with the extensions for the font files. You can rename them with `mv` like this: `mv <filename> <new_filename>`. mv stands for "move", it can rename or move something. Rename `roboto.font` to `roboto.woff`.
+
+####
+
+Use "list" to check if it worked.
+
+####
+
+Do you see the "roboto" font? The rename worked. Next, rename the "lato" font file to `lato.ttf`.
+
+####
+
+Lastly, rename the "menlo" font to menlo.otf.
+
+####
+
+Use the "list" command to make sure those last two got renamed.
+
+####
+
+Take a look at the files to make sure they got renamed. Those font files could be organized into a folder as well. Make a `fonts` directory in the `website` folder to put them in.
+
+####
+
+List the contents of the website folder to make sure your new folder is there.
+
+#### Use `mv` to move files
+
+See it? You renamed the font files with `mv`, you can also move files with it. Move the "roboto" font to the new `fonts` folder. Here's an example: `mv <file> <destination>`.
+
+#### Use `find`
+
+You can use find to find things or view a file tree. Enter find to view the file tree of the website folder to see all the files and folders within it.
+
+####
+
+You can see everything in this website folder and its descendant folders. Notice that they all start with ./ to represent this folder. You can see that your font moved to the fonts folder. Next, move the "lato" font to the fonts folder.
 
 ####
 
