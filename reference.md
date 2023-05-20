@@ -3811,12 +3811,6 @@ In this 170-lesson course, you will learn terminal commands by creating a websit
 
 Create a GitHub account if you don't have one. You'll need it when you create the virtual Linux server machine. This process may take a few minutes.
 
-### Learn Relational Databases by Building a Mario Database
-
-A relational database organizes data into tables that are linked together through relationships.
-
-In this 165-lesson course, you will learn the basics of a relational database by creating a PostgreSQL database filled with video game characters.
-
 #### start terminal
 
 The first thing you need to do is start the terminal.
@@ -4181,7 +4175,123 @@ You can use find to find things or view a file tree. Enter find to view the file
 
 ####
 
-You can see everything in this website folder and its descendant folders. Notice that they all start with ./ to represent this folder. You can see that your font moved to the fonts folder. Next, move the "lato" font to the fonts folder.
+You can see everything in this website folder and its descendant folders. Notice that they all start with `./` to represent this folder. You can see that your font moved to the `fonts` folder. Next, move the "lato" font to the `fonts` folder.
+
+####
+
+There's one more font to move. Move the "menlo" font to the fonts folder.
+
+####
+
+Use `find` again to list the whole file tree and make sure those two got moved.
+
+####
+
+Yes, you can see them all in the fonts folder. Let's organize some more. Make a `client` directory in the website folder for the client side files.
+
+#### Using Paths
+
+You can make a folder in that `client` folder from here by adding it to the path like this: `mkdir client/<new_folder_name>`. Make a `src` directory in the `client` folder from here.
+
+####
+
+You can move files all the way across the system from here with the right path. Move `index.html` to the `client/src` folder from here.
+
+####
+
+Use find to view the file tree and make sure it moved.
+
+####
+
+Can you see the `index.html` file in your new `src` folder? Looks like it moved 😄 There's some more files that can go in the `src` folder. Move `index.js` to it from here.
+
+####
+
+Last is the CSS file. Move `styles.css` to the `src` folder.
+
+####
+
+Seems like you can do anything right from here. Take another look at the tree with `find`.
+
+#### `find <folder_name>`
+
+Things are looking more organized 😄 You can use `find <folder_name>` to display the tree of a different folder. View the file tree of the client folder from the website folder.
+
+####
+
+Now you just see what's in the client folder. What else can find do? View the "help" menu of the `find` command to look around.
+
+#### `find -name <filename>`
+
+The menu isn't very pretty, but there's a `-name` flag in there. You can use it to search for something with `find -name <filename>`. Use find with the `-name` flag to search for `index.html`.
+
+####
+
+It shows you where that file is. Using the same command, find where the `styles.css` file is.
+
+####
+
+You can search for folders with it, as well. Using the same command and flag, find the `src` folder.
+
+####
+
+😄 View the file tree of the website folder to see what else you need to do.
+
+####
+
+What's next? More organizing! You should put all the assets in one spot. Change into the client folder.
+
+####
+
+Make a new directory named `assets` in the client folder.
+
+####
+
+Change into the new assets folder.
+
+####
+
+All the images and other assets can go here. Make an `images` directory in the `assets` folder for all the images.
+
+####
+
+Go to your new images folder.
+
+####
+
+You want the images here. Create `background.jpg` in this folder.
+
+####
+
+Wait. You don't need to recreate them. You can just move the other images here. Go back to the `website` folder from here. It's three folder back.
+
+####
+
+Now go to where the original images are. Change into the `images` folder.
+
+####
+
+List the contents of the `images` folder to see the files here.
+
+####
+
+Umm, first I think you should move them back to the website folder. Move `header.png` back to the website folder. The destination for the file is ..
+
+####
+
+List the contents of the `images` folder to see if it's gone.
+
+####
+
+It's gone. Go back to the website folder.
+
+####
+
+List what's here.
+
+####
+
+There's the file you just moved. Next, you will move it to the client/assets/images folder. First, use find with the correct flag to search for images.
 
 ####
 
@@ -4196,3 +4306,13 @@ You can see everything in this website folder and its descendant folders. Notice
 ####
 
 ####
+
+####
+
+####
+
+### Learn Relational Databases by Building a Mario Database
+
+A relational database organizes data into tables that are linked together through relationships.
+
+In this 165-lesson course, you will learn the basics of a relational database by creating a PostgreSQL database filled with video game characters.
