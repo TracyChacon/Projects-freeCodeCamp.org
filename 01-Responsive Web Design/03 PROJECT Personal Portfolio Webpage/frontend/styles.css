@@ -30,6 +30,8 @@ p {
     font-size: 1.1rem;
 }
 
+
+
 h1, h2, h3, h4, h5, h6, p, a, details {
     margin: 0.7rem 1rem 0.7rem 1rem;
     padding: 0;
@@ -88,6 +90,8 @@ img {
     grid-template-rows: calc(9/12 * var(--h_main)) calc(3/12 * var(--h_main));
     grid-template-areas: "welcome projects" "welcome skills";
     gap: var(--grid_gap_h_main) var(--grid_gap_w_main) ;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
