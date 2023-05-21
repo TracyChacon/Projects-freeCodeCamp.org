@@ -4291,15 +4291,23 @@ List what's here.
 
 ####
 
-There's the file you just moved. Next, you will move it to the client/assets/images folder. First, use find with the correct flag to search for images.
+There's the file you just moved. Next, you will move it to the `client/assets/images` folder. First, use `find` with the correct flag to search for images.
 
 ####
 
-####
+There's your two `image` folders. Move `header.png` to the one with the longer path. Just use it as the destination to do so.
 
 ####
 
+Use `find` to search for your `header.png` file and make sure it moved.
+
 ####
+
+There it is. Right where you put it. Next, search for your `footer.jpeg` file so you can move that over there.
+
+####
+
+It's in the original `images` folder. You can use that path with the move command to move it. Move `footer.jpeg` to the `client/assets/images` folder while in the website folder.
 
 ####
 
