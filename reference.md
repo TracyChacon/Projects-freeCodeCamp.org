@@ -4307,20 +4307,492 @@ There it is. Right where you put it. Next, search for your `footer.jpeg` file so
 
 ####
 
-It's in the original `images` folder. You can use that path with the move command to move it. Move `footer.jpeg` to the `client/assets/images` folder while in the website folder.
+It's in the original `images` folder. You can use that path with the move command to move it. Move `footer.jpeg` to the `client/assets/images` folder while in the `website` folder.
 
 ####
 
-####
+View the file tree of this folder to make sure all your images are over in their new folder. Don't use any flags.
+
+#### `rmdir <directory_name>`
+
+You don't need the old images folder anymore. You can use `rmdir <directory_name>` to remove a folder. rmdir stands for "remove directory". Try to remove the images folder with rmdir. Make sure it's the one in the website folder.
 
 ####
 
-####
+Directory not empty? Oh yeah, there's still the background image in there. Remove the background image file in the images folder from here. Make sure it's the one in the website/images folder.
 
 ####
+
+Try to remove the images folder again with rmdir. Make sure it's the one in the website folder.
+
+####
+
+I think it worked this time. List the contents to find out.
+
+####
+
+It worked, the images folder is gone. Make a new icons folder in your assets folder while in the website folder.
+
+####
+
+Move the CodeAlly.svg file to your new icons folder.
+
+####
+
+View the file tree of the website folder and make sure it moved.
+
+####
+
+Verify that the file moved to the icons folder. Next, move the "CodeRoad" file to your icons folder.
+
+####
+
+Lastly, move the "freeCodeCamp" file to your icons folder.
+
+####
+
+View the file tree and make sure the files moved.
+
+####
+
+This looks much better. The three icons are now in the icons folder. Make a fonts folder in your assets folder from here for all the font files.
+
+#### touch <./path/file>
+
+Turns out you want some different fonts for the website. From here, create roboto-bold.woff in your new fonts folder. You can put the path in front of the filename of where you want it to go.
+
+####
+
+Next, create roboto-light.woff in your new fonts folder from here.
+
+####
+
+View the file tree of the client/assets/fonts folder from here to see if your new files are there.
+
+####
+
+Two more fonts to go. Create `lato-bold.ttf` in the new fonts folder from here.
+
+####
+
+Lastly, create lato-light.ttf in your new fonts folder from here.
+
+####
+
+View your file tree and make sure the files are there.
+
+####
+
+Things are looking more organized 😄 The new fonts are there. Now you can remove the old fonts folder and everything in it. You can't do that with rmdir since it's not empty. View the "help" menu of the rm command to see if you can find anything.
+
+#### rm -r tag
+
+There's a -r flag that says, remove directories and their contents recursively. That will remove the folder and everything in it. Use the "remove" command with that flag to remove the fonts folder. Make sure it's the one in the website folder. Be careful not to remove the wrong folder.
+
+####
+
+List what's here to see if it's gone.
+
+#### rm WARNING
+
+Looks like it’s gone. Surely, it went to the trash can right? No, it’s just gone. You should be very careful when recursively removing files like that. It will delete everything, and can destroy your operating system. There's a few more files for the boilerplate. Create package.json in the website folder.
+
+####
+
+Next, create server.js in the website folder.
+
+####
+
+Lastly, create README.md in the website folder.
+
+####
+
+List the content of this folder to make sure your new files are there.
+
+####
+
+The boilerplate is complete. Use echo to print `Yay!` to the terminal.
+
+####
+
+Print `I finished the boilerplate!` to the terminal.
+
+####
+
+Print one more thing... to the terminal
+
+#### use echo to print to a file
+
+You can print to a file instead of the terminal with `echo text >> filename`. Use it to print I made this boilerplate to your README.md file.
+
+####
+
+Use more to view your README.md file.
+
+####
+
+Now that line is in the file. Add `from the command line` to your README.md file with the echo command and the same method.
+
+####
+
+Use more to view the "readme" file again.
+
+####
+
+Now the file has two lines. Add `for the freeCodeCamp bash lessons` to your "readme" file with the echo command like you did before.
+
+####
+
+View your "readme" file again like you did before.
+
+####
+
+😄 Change to the project folder.
+
+####
+
+You are back where you started. List what's here.
+
+####
+
+Still the same two folders. Rename the website folder to website-boilerplate.
+
+####
+
+List the contents of this folder to see the new name.
+
+####
+
+Thanks for making this. You need to make a copy of it. Take a look at the "help" menu of the "copy" command.
+
+####
+
+Scroll up to find that "recursive" flag. You need to use it again to copy the whole folder. Copy the whole boilerplate into a folder named `toms-website`.
+
+####
+
+List the contents of the project folder to see the new copy.
+
+####
+
+Thanks. Use find to view the tree of toms-website.
+
+####
+
+Use find to view the tree of the boilerplate folder to make sure it matches.
+
+####
+
+Awesome! You are finished for now. Clear the terminal one last time.
+
+####
+
+Print "goodbye terminal" to the terminal.
+
+#### exit command
+
+Use the "exit" command to exit the terminal.
 
 ### Learn Relational Databases by Building a Mario Database
 
 A relational database organizes data into tables that are linked together through relationships.
 
 In this 165-lesson course, you will learn the basics of a relational database by creating a PostgreSQL database filled with video game characters.
+
+#### Start the terminal
+
+The first thing you need to do is start the terminal. Do that by clicking the "hamburger" menu at the top left of the screen, going to the "terminal" section, and clicking "new terminal". Once you open a new one, type echo hello PostgreSQL into the terminal and press enter.
+
+#### log in `psql --username=freecodecamp --dbname=postgres`
+
+Your virtual machine comes with PostgreSQL installed. You will use the Psql terminal application to interact with it. Log in by typing psql --username=freecodecamp --dbname=postgres into the terminal and pressing enter.
+
+#### `\l` list databases
+
+Notice that the prompt changed to let you know that you are now interacting with PostgreSQL. First thing to do is see what databases are here. Type \l into the prompt to list them.
+
+#### CREATE DATABASE
+
+The databases you see are there by default. You can make your own like this:
+
+```sql
+CREATE DATABASE database_name;
+```
+
+The capitalized words are keywords telling PostgreSQL what to do. The name of the database is the lowercase word. Note that all commands need a semi-colon at the end. Create a new database named `first_database`.
+
+####
+
+Use the list shortcut command again to make sure your new database is there.
+
+####
+
+It worked. Your new database is there. If you don't get a message after entering a command, it means it's incomplete and you likely forgot the semi-colon. You can just add it on the next line and press enter to finish the command. Create another database named second_database.
+
+####
+
+You should have another new database now. List the databases to make sure.
+
+#### `\c database_name` connect to database
+
+You can connect to a database by entering `\c database_name`. You need to connect to add information. Connect to your `second_database`.
+
+#### `\d` Display Tables/ View Tables
+
+You should see a message that you are connected. Notice that the prompt changed to `second_database=>`. So the `postgres=>` prompt before must have meant you were connected to that database. A database is made of tables that hold your data. Enter `\d` to display the tables.
+
+#### CREATE TABLE
+
+Looks like there's no tables or relations yet. Similar to how you created a database, you can create a table like this:
+
+```sql
+CREATE TABLE table_name();
+```
+
+Note that the parenthesis are needed for this one. It will create the table in the database you are connected to. Create a table named `first_table` in `second_database`.
+
+####
+
+View the tables in `second_database` again with the display command. You should see your new table there with a little meta data about it.
+
+####
+
+Create another new table in this database. Give it a name of `second_table`.
+
+####
+
+There should be two tables in this database now. Display them again to make sure.
+
+#### `\d table_name` View Details About Table
+
+You can view more details about a table by adding the table name after the display command like this: `\d table_name`. View more details about your `second_table`.
+
+#### `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`
+
+Tables need columns to describe the data in them, yours doesn't have any yet. Here's an example of how to add one:
+
+```sql
+ALTER TABLE table_name ADD COLUMN column_name DATATYPE;
+```
+
+Add a column to `second_table` named `first_column`. Give it a data type of `INT`. `INT` stands for integer. Don't forget the semi-colon. 😄
+
+####
+
+Looks like it worked. Display the details of `second_table` again to see if your new column is there.
+
+####
+
+Your column is there 😄 Use `ALTER TABLE` and `ADD COLUMN` to add another column to `second_table` named `id` that's a type of `INT`.
+
+####
+
+Your table should have an `id` column added. View the details of `second_table` to make sure.
+
+####
+
+Add another column to `second_table` named `age`. Give it a data type of `INT`.
+
+####
+
+Take a look at the details of second_table again.
+
+#### `ALTER TABLE table_name DROP COLUMN column_name;` Remove/drop column
+
+Those are some good looking columns. You will probably need to know how to remove them. Here's an example:
+
+```sql
+ALTER TABLE table_name DROP COLUMN column_name;
+```
+
+Drop your age column.
+
+####
+
+View the details of `second_table` to see if it's gone.
+
+####
+
+It's gone. Use the `ALTER TABLE` and `DROP COLUMN` keywords again to `drop first_column`.
+
+#### `VARCHAR(<NUMBER>)` Datatype
+
+A common data type is `VARCHAR`. It's a short string of characters. You need to give it a maximum length when using it like this: `VARCHAR(30)`.
+
+Add a new column to `second_table`, give it a name of `name` and a data type of `VARCHAR(30)`.
+
+####
+
+Take a look at the details of second_table to see your columns.
+
+#### `ALTER TABLE table_name RENAME COLUMN column_name TO new_name;`
+
+You can see the `VARCHAR` type there. The 30 means the data in it can be a max of 30 characters. You named that column `name`, it should have been `username`. Here's how you can rename a column:
+
+```sql
+ALTER TABLE table_name RENAME COLUMN column_name TO new_name;
+```
+
+Rename the `name` column to `username`.
+
+#### `INSERT INTO table_name(column_1, column_2) VALUES(value1, value2);`
+
+Take a look at the details of `second_table` again to see if it got renamed.
+
+####
+
+It worked. Rows are the actual data in the table. You can add one like this:
+
+```sql
+INSERT INTO table_name(column_1, column_2) VALUES(value1, value2);
+```
+
+Insert a row into `second_table`. Give it an `id` of `1`, and a `username` of `Samus`. The username column expects a `VARCHAR`, so you need to put `Samus` in single quotes like this: 'Samus'.
+
+#### `SELECT columns FROM table_name;` `SELECT * FROM table_name;`
+
+You should have one row in your table. You can view the data in a table by querying it with the `SELECT` statement. Here's how it looks:
+
+```sql
+SELECT columns FROM table_name;
+```
+
+Use a `SELECT` statement to view all the columns in `second_table`. Use an asterisk (`*`) to denote that you want to see all the columns.
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
