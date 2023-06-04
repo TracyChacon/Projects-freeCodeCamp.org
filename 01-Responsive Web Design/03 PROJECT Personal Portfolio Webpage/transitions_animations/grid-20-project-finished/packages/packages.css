@@ -48,11 +48,12 @@ main {
     position: absolute;
     top: 0;
     right: 0;
-    margin: 1.2rem;
+    margin: 0;
     font-size: 0.8rem;
     color: white;
     background: #ff5454;
     padding: 0.5rem;
+    transform: rotateZ(45deg);
 }
 
 .package__subtitle {
