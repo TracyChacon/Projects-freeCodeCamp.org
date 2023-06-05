@@ -5407,51 +5407,90 @@ At the bottom of your script, use `echo` to print `Hello <name>`. to the termina
 ####
 
 Run the file again. Type your name and press enter after it asks for it.
+
 ####
 
 Right below your first variable, create another one named QUESTION2. Set the value to, Where are you from?. Make sure to put it in double quotes.
+
 ####
 
 After your `read` command, use your new variable to print the next question.
+
 ####
 
 Below where the second question is printed, use read to get input from the user into a variable named LOCATION.
-####
-
-Change the existing response to `Hello <name> from <location>..`
-####
 
 ####
 
-####
+Change the existing response to `Hello <name> from <location>.`.
 
 ####
 
-####
+Run the script and enter values when it is waiting for input.
 
 ####
 
-####
+It's looking good. I want a title to appear when the program first starts. Use echo to print `~~ Questionnaire ~~` before anything else is printed.
 
 ####
 
-####
+Run the script and enter values until it is done again so you can see what the title looks like.
 
 ####
 
-####
+It would be nice if there was some empty lines around the title. You've probably used the --help flag before, see if you can use it with echo to try and find a way to add empty lines.
+
+#### `man <command>` manual pages
+
+That didn't work as I hoped. Another way to find information about a command is with man. It stands for manual and you can use it like this: man <command>. See if there's a manual for echo.
+
+#### echo -e option enable backslash escape sequenses
+
+At the top of the menu, the -e option looks promising. And the \n below it says new line. You should take a look at those. In your script, change the title to `echo -e \n~~ Questionnaire ~~\n` to see if that prints the empty lines.
+
+#### 'ctrl+c' to close program
+
+Run it to see if it worked. You can press ctrl+c to close the program after it starts if you don't want to enter values.
+
+#### escape sequences and quotes
+
+It didn't print the empty lines. echo will only print empty lines if the value is enclosed in quotes. Place double quotes around the title that gets printed to see if it works.
 
 ####
 
-####
+Run your script again to see if that fixed it.
 
 ####
 
-####
+Now it's working 😄 Create a QUESTION3 variable next to the other two, set it's value to "What's your favorite coding website?"
 
 ####
 
+Use echo to print the third question after you read the LOCATION.
+
 ####
+
+After the question you just printed, add code to read input into a variable named WEBSITE.
+
+####
+
+Change the echo command of the response to print this sentence instead: `Hello <name> from <location>. I learned that your favorite coding website is <website>!`.
+
+####
+
+Run the script and enter values when the program is waiting. Let's see the final output.
+
+####
+
+One last thing. Change that final response to print an empty line at the beginning of the sentence.
+
+####
+
+It looks good. I think you are done with that script for now. The next program will be countdown timer. Use the touch command to create a new file named countdown.sh in your project folder.
+
+####
+
+Give your file executable permissions so you can run it like the other one. It's the chmod command with the +x flag.
 
 ####
 
