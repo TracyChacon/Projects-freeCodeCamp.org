@@ -5396,7 +5396,7 @@ To use a variable, place `$` in front of it like this: `$VARIABLE_NAME`. Shell s
 
 Run the file like you did before to see if it worked.
 
-#### Read User Input
+#### `read VARIABLE_NAME` Read User Input
 
 The question was printed. Next, you want to be able to accept input from a user. You can do that with read like this: `read VARIABLE_NAME`. This will get user input and store it into a new variable. After you print the question, use read to get input and store it in a variable named `NAME`.
 
@@ -5491,6 +5491,300 @@ It looks good. I think you are done with that script for now. The next program w
 ####
 
 Give your file executable permissions so you can run it like the other one. It's the chmod command with the +x flag.
+
+####
+
+You want to use the bash interpreter again. Add a shebang at the top of your new file to denote that.
+
+#### comments in bash `# <comment>`
+
+Comments in bash look like this: `# <comment>`. Add a comment below the shebang that says `Program that counts down to zero from a given argument` so people know what it does. Note that the shebang is a special case and is not treated like a comment.
+
+#### `echo $* ` print all args passed to it
+
+Programs can take arguments. You can access them a few different ways with `$`. Add `echo $*` in your script to print all arguments passed to it.
+
+####
+
+Execute your script with `./countdown.sh.`
+
+####
+
+Nothing was printed. Run your script again, but this time add three arguments to the command; arg1, arg2, and arg3. Place them after the command with a space before each one.
+
+#### `$<number>` access arg by number
+
+`$*`printed all the arguments passed to your script. To access any one of them, use `$<number>`. `arg2` could have been accessed with `$2`. Change your script to echo the first argument instead of all the arguments.
+
+####
+
+Run your file with `./countdown.sh arg1 arg2 arg3` again.
+
+####
+
+Now it just prints the first argument. Your program will accept an argument to count down from. You will test it with an `if` statement to make sure it's a positive integer. I wonder what that syntax would look like. Type help in the terminal to see if you can find anything.
+
+####
+
+This is a list of built-in commands. You should look over it, some of them may look familiar. I see echo in there. Another one is `if`. See if you can find out more about it by checking its man page.
+
+####
+
+I guess there isn't a man page for it. At the top of the help screen, I noticed you can use `help <command>` to find out more. Yet another way to find out about a command 😥 See if you can find out more about if with that method.
+
+#### bash if `[[CONDITION]]`
+
+The syntax is at the top, not all of it is required. Here's another example:
+
+```bash
+if [[ CONDITION ]]
+then
+  STATEMENTS
+fi
+```
+
+Remove the `echo $1` in your script and add an if condition that checks `if [[ $1 == arg1 ]]`. In its then area, use `echo` to print true to the screen. There must be spaces on the inside of the brackets (`[[ ... ]]`) and around the operator (`==`).
+
+#### fi
+
+Notice that the end of the syntax is fi (if backwards). It should print true if you pass `arg1` to your script now. Run the script with `arg1` as the only argument.
+
+####
+
+The if condition worked, it printed true. Run it again with anything except `arg1` as the first argument.
+
+#### bash else statement
+
+Nothing was printed. One of the optional parts of if was an else area. You can use it like this:
+
+```bash
+if [[ CONDITION ]]
+then
+  STATEMENTS
+else
+  STATEMENTS
+fi
+```
+
+Add an else to your existing if condition. Use echo to print false if the condition fails.
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
 
 ####
 
