@@ -21,6 +21,7 @@
     color: white;
     font-family: sans-serif;
     text-align: center;
+    backface-visibility: hidden;
 }
 
 .box2 {
