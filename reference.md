@@ -5574,7 +5574,7 @@ Run the script again and use anything except arg1 as the only argument.
 
 #### -eq (equal), -ne (not equal), -lt (less than), -le (less than or equal), -gt (greater than), -ge (greater than or equal)
 
-Now it printed false. Your program is expecting an integer to count down from as its argument. You can compare integers inside the brackets ([[...]]) of your if with -eq (equal), -ne (not equal), -lt (less than), -le (less than or equal), -gt (greater than), -ge (greater than or equal). Change your if condition to check if your first argument is less than 5.
+Now it printed false. Your program is expecting an integer to count down from as its argument. You can compare integers inside the brackets (`[[...]]`) of your if with -eq (equal), -ne (not equal), -lt (less than), -le (less than or equal), -gt (greater than), -ge (greater than or equal). Change your if condition to check if your first argument is less than 5.
 
 ####
 
