@@ -5574,19 +5574,31 @@ Run the script again and use anything except arg1 as the only argument.
 
 #### -eq (equal), -ne (not equal), -lt (less than), -le (less than or equal), -gt (greater than), -ge (greater than or equal)
 
-Now it printed false. Your program is expecting an integer to count down from as its argument. You can compare integers inside the brackets (`[[...]]`) of your if with -eq (equal), -ne (not equal), -lt (less than), -le (less than or equal), -gt (greater than), -ge (greater than or equal). Change your if condition to check if your first argument is less than 5.
+Now it printed false. Your program is expecting an integer to count down from as its argument. You can compare integers inside the brackets (`[[...]]`) of your if with -eq (equal), -ne (not equal), -lt (less than), -le (less than or equal), -gt (greater than), -ge (greater than or equal). Change your `if` condition to check if your first argument is less than `5`.
 
 ####
 
-####
+Run the script again and use 4 as a first argument to make sure it's working.
 
 ####
 
-####
+It printed true since your argument was less than 5. Run it again with 5 as the argument.
 
 ####
 
+As expected, that printed `false`. Take a look at that help menu again. I want to see if we can find out more about how these expressions work.
+
+#### 'help [[expression]]
+
+Near the top left, it says [[expression]]. Those look like the double brackets you are using. See if you can get more info about that with the help command like you did with help if.
+
+#### 'help builtin'
+
+It might not be a bad idea to read that. Looks like you can use some, probably familiar, things like `!,` `&&,` and `||` to compare multiple expressions. There's also `==` and `!=` operators for an individual expression. It says something about the test built-in command. See if you can bring up the help menu for that.
+
 ####
+
+That's what I was looking for. At the top are some file operators. There's some string and other operators as well. You should take a look at them. Near the bottom, are the arithmetic operators you used with your if condition. Change the condition in your script to check if the first argument is less than or equal to `5`.
 
 ####
 
