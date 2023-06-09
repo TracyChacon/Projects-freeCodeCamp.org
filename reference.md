@@ -5588,11 +5588,11 @@ It printed true since your argument was less than 5. Run it again with 5 as the 
 
 As expected, that printed `false`. Take a look at that help menu again. I want to see if we can find out more about how these expressions work.
 
-#### 'help [[expression]]
+#### `help [[expression]]`
 
 Near the top left, it says [[expression]]. Those look like the double brackets you are using. See if you can get more info about that with the help command like you did with help if.
 
-#### 'help builtin'
+#### `help builtin`
 
 It might not be a bad idea to read that. Looks like you can use some, probably familiar, things like `!,` `&&,` and `||` to compare multiple expressions. There's also `==` and `!=` operators for an individual expression. It says something about the test built-in command. See if you can bring up the help menu for that.
 
@@ -5602,33 +5602,63 @@ That's what I was looking for. At the top are some file operators. There's some 
 
 ####
 
-####
+Run the script and use 5 as a first argument again
 
 ####
 
-####
+Now it prints true. Remember I said any command can run in the terminal or a script. Try running an expression right in the terminal by entering `[[ 4 -le 5 ]]` in it.
+
+#### `$?` access the exit status of command
+
+Nothing happened? Each command has an exit status that can be accessed with `$?`. View the exit status of the last command with `echo $?`.
 
 ####
 
-####
+The exit status of 0 means it was true, `4` is indeed less or equal to `5`. Try it again with `[[ 4 -ge 5 ]]`.
 
 ####
 
-####
+Use `echo` to view the exit status of the command you just entered.
+
+#### `;` separate commands with `;`
+
+It printed `1` this time for `false`. You can separate commands on a single line with `;`. Enter your last two commands on one line like this: `[[ 4 -ge 5 ]]; echo $?`. It will run the expression, then print the exit status of it since it was the last command.
 
 ####
 
-####
+It's still false. Using the same syntax of `[[ ... ]]; echo$?`, check if `10` is not equal to `5` and print the exit status of the expression on one line.
 
 ####
 
-####
+1. Check the help test menu to find the not equal operator
 
 ####
 
-####
+You can think of an exit status of 0 as true. But it means that the command had zero errors. All commands have an exit status. Using the same syntax, enter `bad_command;` and check its exit status on a single line.
+
+#### `0` exit status means no errors
+
+command not found, with an exit status of 127. Anything but 0 means there was an error with the command. bad_command didn't exist. Try it again with ls.
 
 ####
+
+The command executed as expected and there were zero errors. So it gave you an exit status of 0. Try it again with ls -y.
+
+####
+
+The `-y` flag doesn't work with `ls` so it gave you an exit status other than `0`, meaning that the command was unsuccessful. View the help menu of the test command again, I want to see what else is in that list.
+
+####
+
+You tried a few of the arithmetic operators, those work for integers. Try one of the file operators. The first one on the list checks if a file exists. Type `[[ -a countdown.sh ]]; echo $?` in the terminal to see if your file exists.
+
+####
+
+The file must exist. It's checking the folder the command is entered from. Try it again with `bad_file.txt`.
+
+####
+
+`bad_file.txt` doesn't exist. I think you're getting the hang of this. Using the same syntax, check if you have permissions to execute your `countdown.sh` file. You may want to look at that menu again.
 
 ####
 
