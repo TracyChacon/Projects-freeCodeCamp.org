@@ -1,3 +1,7 @@
+body {
+    font-family: 'Monotserrat', sans-serif;
+}
+
 #product-overview {
     background-color: #ff1b68;
 }

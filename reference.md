@@ -4433,29 +4433,3 @@ Waiting:Your code should use the axisLeft() method with yScale passed as the arg
 Waiting:The y-axis g element should have a transform attribute to translate the axis by (60, 0).
 Waiting:Your code should call the yAxis.
 
-# Other
-
-## CSS
-
-### Section 2 Diving into the Basics of CSS
-
-#### 17. Theory Time - Selectors
-
-- Elements
-- Classes
-- Universal
-- IDs
-- Attributes
-
-#### 18. Understanding the "Cascading" Style & Specificity
-
-CSS specification
-
-- Cascading
-  - Multiple Rules can apply to the same Element
-- Specificity
-  - Resolve conflicts arising from multiple Rules
-  - Inline Styles
-  - #ID selectors
-  - .class, :pseudo-class and [attribute] selectors
-  - <Tag> and pseudo-element selectors
