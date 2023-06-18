@@ -5638,7 +5638,7 @@ You can think of an exit status of 0 as true. But it means that the command had 
 
 #### `0` exit status means no errors
 
-command not found, with an exit status of 127. Anything but 0 means there was an error with the command. bad_command didn't exist. Try it again with ls.
+command not found, with an exit status of `127`. Anything but `0` means there was an error with the command. bad_command didn't exist. Try it again with ls.
 
 ####
 
@@ -5656,59 +5656,136 @@ You tried a few of the arithmetic operators, those work for integers. Try one of
 
 The file must exist. It's checking the folder the command is entered from. Try it again with `bad_file.txt`.
 
-####
+#### `[[ -x <FILE> ]]; echo $?` true if executable
 
 `bad_file.txt` doesn't exist. I think you're getting the hang of this. Using the same syntax, check if you have permissions to execute your `countdown.sh` file. You may want to look at that menu again.
 
-####
+#### ?def builtin, primaries
+
+You played around with a number of the expressions. View the `help [[ expression ]] `menu again that you looked at before to see a few more options. You can view the menu with just help `[[`.
 
 ####
 
-####
+As I mentioned before, you can test multiple expressions with && and ||. Enter `[[ -x countdown.sh && 5 -le 4 ]]; echo $?` in the terminal to test the file is executable by you and five is less than or equal to four.
+
+#### exit status `1` for false
+
+Both conditions weren't true, so the exit status was 1 for false. Try testing the same two conditions with the or operator.
 
 ####
 
-####
+One of the conditions was true so it printed `0`. I think that's enough of a detour. Back in your script, change the `if` condition to check if the first argument is greater than zero so you can be sure it's something you can count down from.
 
 ####
 
-####
+The condition you added checks if a positive integer was passed as an argument to the script and executes the then area. Change the existing `echo` command to print `Include a positive integer as the first argument.` if a positive integer is not used.
 
 ####
 
-####
+Run your script and use 1 as a first argument to make sure the condition is working.
 
 ####
 
-####
+Run it again and use anything but a positive integer as the only argument.
 
 ####
 
-####
+Looks like your if condition is working. Next, you want to loop over the argument and count down to zero from it. Check the help menu to see if there's any commands for this.
+
+#### for loop #2
+
+There's two for loops in there, you want the second one. Here's an example:
+
+```bash
+for (( i = 10; i > 0; i-- ))
+do
+  echo $i
+done
+```
+
+The above creates a variable `(i = 10)`, then prints it, subtracts one, and repeats until `i` is not greater than `0`. So it prints `10` through `1`. In the then area of your condition, replace the `echo` with a `for loop` that prints from the argument (`$1`) to `1`.
 
 ####
 
-####
+Run your script and use 10 as the first argument.
 
 ####
 
-####
+It works 😄 But I want it to pause for one second between each number. Check the help menu again to see if there's any commands that might help.
+
+#### `ls /`
+
+I'm not seeing the command I was hoping to. These are the built-in commands, where are the rest? Type `ls /` to look around.
 
 ####
 
-####
+The `/` listed what's in the root of the file system. I see a bin folder, bin stands for binary. View what's in it with `ls /bin`.
 
 ####
 
-####
+These are some non built-in commands. There's quite a few that should look familiar. One is bash, that's the one you used for the shebang in your scripts. I see one called sleep. View the manual of it.
+
+#### `sleep <NUMBER><SUFFIX>`
+
+At the top, it says you can pause execution for a number of seconds. Try it out by entering sleep 3 in the terminal.
 
 ####
 
-####
+That should work. In your for loop, use sleep to make the script pause for 1 second after each number is printed.
 
 ####
 
+Run your script and use 3 as the first argument.
+
 ####
+
+Awesome. Except it should print 0 instead of stopping at 1. Change the condition in your for loop so that it checks for i >= 0.
+
+####
+
+Run your script with 3 as the argument again.
+
+####
+
+Excellent. I want it to display a title like the other script. Make it so that it prints `~~ Countdown Timer ~~` before anything else. Include a new line before and after it like you did for the other title.
+
+####
+
+Run your script and use 1 as the first argument again to see the title.
+
+#### multiline comment
+
+This is fun. You can create a multiline comment like this:
+
+```bash
+: '
+  comment here
+  more comment here
+'
+```
+
+Comment out your for loop with a multiline comment. I want to try and do this with a `while` loop.
+
+####
+
+View the help menu for the while command to see if you can find anything.
+
+####
+
+It shows the syntax. First, below your comment, create a variable named `I` that is set to the value of your first argument. It will start there, then on each iteration of the while loop you can subtract 1 from it until it reaches 0.
+
+####
+
+The menu showed that you can make a while loop like this:
+
+```bash
+while [[ CONDITION ]]
+do
+  STATEMENTS
+done
+```
+
+Add a while loop below the I variable you made. The condition should be `$I -ge 0` and you should echo the `I` variable in the do statements.
 
 ####
 
