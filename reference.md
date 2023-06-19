@@ -5785,7 +5785,7 @@ do
 done
 ```
 
-Add a while loop below the I variable you made. The condition should be `$I -ge 0` and you should echo the `I` variable in the do statements.
+Add a while loop below the `I` variable you made. The condition should be `$I -ge 0` and you should echo the `I` variable in the do statements.
 
 ####
 
