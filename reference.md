@@ -5787,41 +5787,75 @@ done
 
 Add a while loop below the `I` variable you made. The condition should be `$I -ge 0` and you should echo the `I` variable in the do statements.
 
+#### decrement operator (( <variable>-- ))
+
+I never changes here, so you would have an infinite loop. You can subtract one from `I` with double parenthesis (`((...))`) and the `--` operator. In your while loop, add `(( I-- ))` after you echo `$I` to subtract one from I on each pass.
+
 ####
+
+The last thing to do is to add the sleep again. In your while loop, add the code to make it sleep for 1 second. Add the code after the (( I-- )).
+
+####
+
+Run the script and use 5 as the first argument.
+
+####
+
+I think the countdown timer is finished. Feel free to try it with some other arguments. The next one is a bingo number generator. Use `touch` to create `bingo.sh` in the same folder as the others.
+
+####
+
+Give your file executable permissions like you did for the other two.
+
+####
+
+Add a shebang at the top of your new script. It should use bash again like other two.
+
+####
+
+Add a comment below the shebang that says, `Bingo Number Generator`.
+
+####
+
+Before I forget, use a single `echo` command to print a title for this program. It should say `~~ Bingo Number Generator ~~` with an empty line before and after it.
+
+####
+
+In your script, create a NUMBER variable that equals 5.
+
+####
+
+Below your new variable, use echo to print it to the screen.
+
+####
+
+Run the script by executing it.
+
+#### `printenv`
+
+The numbers in bingo go up to 75, each number has a letter from the word bingo associated with it. You will need to randomly generate a number between 1 and 75. Bash may have something that can help you here. A shell comes with environment variables. View them by entering `printenv` in the terminal.
+
+####
+
+These are all environment variables, they are predefined and loaded with each shell. Most of them aren’t very relevant, but it’s nice to know they’re there. One of them is LANG. Use echo to print it in the terminal.
+
+#### `declare -p`
+
+View all variables in the shell with `declare -p`. `-p` stands for `print`
+
+#### `echo $RANDOM`
+
+This list includes all the environment variables, and any others that may have been created in the current shell. There's one named `RANDOM`. Use echo to print it in the terminal.
 
 ####
 
 ####
 
-####
+### Build a Student Database: Part 1
 
-####
+In this 140-lesson course, you will create a Bash script that uses SQL to enter information about your computer science students into PostgreSQL.
 
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
+Create a GitHub account if you don't have one. You'll need it when you create the virtual Linux server machine. This process may take a few minutes.
 
 ####
 
