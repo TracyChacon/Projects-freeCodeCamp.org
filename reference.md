@@ -5396,7 +5396,7 @@ To use a variable, place `$` in front of it like this: `$VARIABLE_NAME`. Shell s
 
 Run the file like you did before to see if it worked.
 
-#### `read VARIABLE_NAME` Read User Input
+#### `read <VARIABLE_NAME>` Read User Input
 
 The question was printed. Next, you want to be able to accept input from a user. You can do that with read like this: `read VARIABLE_NAME`. This will get user input and store it into a new variable. After you print the question, use read to get input and store it in a variable named `NAME`.
 
@@ -5793,7 +5793,7 @@ I never changes here, so you would have an infinite loop. You can subtract one f
 
 ####
 
-The last thing to do is to add the sleep again. In your while loop, add the code to make it sleep for 1 second. Add the code after the (( I-- )).
+The last thing to do is to add the sleep again. In your while loop, add the code to make it sleep for 1 second. Add the code after the `(( I-- ))`.
 
 ####
 
@@ -5849,124 +5849,435 @@ This list includes all the environment variables, and any others that may have b
 
 ####
 
+Back in your script, use the RANDOM variable to set NUMBER to a random number instead of 5.
+
 ####
+
+Run the script a few times in a row to make sure it's working.
+
+#### The RANDOM variable modulus operator
+
+The `RANDOM` variable will generate a random number between `0` and `32767`. You can use the modulus operator to make it in the range you want. In your script, change the `NUMBER` variable to `$RANDOM%75`.
+
+####
+
+Run the script again.
+
+####
+
+Bash sees everything as a string so it just printed the %75 part literally. In the terminal, create an `I` variable equal to `0` (zero), so you can play with it and figure out how to do some calculations.
+
+#### Create variable in the termainal
+
+In the terminal, use echo to print your new variable.
+
+####
+
+I noticed that you used double parenthesis in the while loop of your countdown timer to subtract one from `I`. Type `(( I++ ))` in the terminal to see if anything happens.
+
+####
+
+There was no output. Use echo to print `I` in the terminal again.
+
+#### The double parenthesis `help let`
+
+The double parenthesis performed the calculation, changing the value of `I` from `0` to `1`. Enter `help let` in the terminal to see the operators you can use with the double parenthesis.
+
+####
+
+You used several of these now, including in the for loop from the countdown timer. Enter (( I += 10 )) in the terminal to increment `I` by `10`. Note that you don't need to prepend variables with `$` inside these parenthesis.
+
+####
+
+Use `echo` to print your `I` variable again.
+
+#### `$(( ... ))`
+
+It should have printed `11` for the value of `I`. Using the double parenthesis like you have been is good for changing variable values or making comparisons. It makes the calculation in place and provides no output. If you want to make a calculation and do something with the result, add a`$` in front like this: `$(( ... ))`. Type `$(( I + 4 ))` in the terminal to see what happens.
+
+####
+
+It should say, `bash: 15: command not found`. It replaced the command with the result of the calculation. Effectively, trying to run `15` as a command. Enter the same command, but put `echo` in front of it. The command was `$(( I + 4 ))`
+
+####
+
+Again, it replaced the calculation with the result. So it was basically the same as if you entered `echo 15`. Use `echo` to print `I` to the screen again.
+
+####
+
+It should still have printed `11` for `I`. See the hints if it didn't. These double parenthesis with a `$` are how you can assign a variable to some calculation. In the terminal, create a `J` variable, and use the `$(( ... ))` syntax to set its value to `I - 6`
+
+#### Assign variable a calculation
+
+It should still have printed `11` for `I`. See the hints if it didn't. These double parenthesis with a `$` are how you can assign a variable to some calculation. In the terminal, create a `J` variable, and use the `$(( ... ))` syntax to set its value to `I - 6`.
+
+####
+
+Use `echo` to print `J`.
+
+####
+
+`J` should equal `5`. For some more practice, use `echo` to print the value `J * 5 + 25`.
+
+####
+
+It should have printed `50`. Print `J` with `echo` again.
+
+#### `declare -p`
+
+So, as a reminder, `(( ... )) `will perform a calculation or operation and output nothing. `$(( ... ))` will replace the calculation with the result of it. You made a few variables in this shell, view them with `declare -p`.
+
+####
+
+declare can be used to create variables, but you are just going to use it to view them for now. If you scroll up a little, you should find your `I` and `J` variables in there. View `J` with `declare -p J`.
+
+#### `declare -p <variable>`
+
+I saw RANDOM in that list, too. View it with `declare -p <variable>` like you did for `J`. Do not include `$` oporator.
+
+#### `echo (( RANDOM % <NUMBER> ))`
+
+Okay, I think I finally know how to get the random number for the Bingo Number Generator. Use `echo` and `RANDOM % 75` to print a random number in the terminal.
+
+####
+
+One tiny problem, that calculation will give a number between `0` and `74`. Enter the same command in the terminal, but add `1` to the calculation to get a random number between `1` and `75`.
+
+####
+
+Back in your `bingo.sh` script, change the `NUMBER` variable so that it starts as a random number between `1` and `75` using the syntax you have been practicing.
+
+####
+
+Run your script a few times in a row to make sure it's working.
+
+####
+
+Next, create a `TEXT` variable and set the value to `"The next number is, "`. When the script is finished, the output will be something like` The next number is B:15`.
+
+####
+
+The letter that goes with the random number depends on what the number is. If it's `15` or less, it will be a `B`. I saw some comparisons in the help let menu, take a look at it again.
+
+####
+
+You used the double square brackets with your if statement in the last program, `but you can use the double parenthesis with these operators as well.` In your script, create an if statement that uses double parenthesis for the condition. Check if the number variable is less than or equal to `15`. If it is, use your two variables to print `The next number is, B:<number>`.
+
+####
+
+if statements can have an "else if" area like this:
+
+```sh
+if (( CONDITION ))
+then
+  STATEMENTS
+elif [[ CONDITION ]]
+then
+  STATEMENTS
+fi
+```
+
+Using the double square brackets this time, add an `elif` condition that checks if the number variable is less than or equal to `30`. If it is, use your two variables again to print `The next number is, I:<number>`
+
+####
+
+You can add as many `elif` sections to an if statement as you want. Add another `elif`, below the last, one that uses the double parenthesis to check if the number variable is less than `46`. If it is, use your two variables to print `The next number is, N:<number>`
+
+####
+
+Run your script if you want to see the output. It should print one of the sentences if the random number is less than `46`. It may take a couple tries. Add another `elif`, below the last one, that uses double square brackets to check if the number variable is less than `61`. If it is, use your two variables to print `The next number is, G:<number>`
+
+####
+
+One more case to handle. Add an `else` at the bottom of the `if` that uses your two variables to print `The next number is, O:<number>`.
+
+####
+
+Run your script a few times and make sure it's working.
+
+####
+
+I think the generator is done 😄 The next project is a fortune teller. Use the touch command to create `fortune.sh` in the same folder as the other scripts.
+
+####
+
+Give your file executable permissions.
+
+####
+
+Add a shebang at the top of your new file that uses bash again.
+
+####
+
+Add comment `Program to tell a persons fortune`
+
+####
+
+Add a title for this one like the others. This one should say `~~ Fortune Teller ~~`. Don't forget the empty line before and after it.
+
+####
+
+Run the file once to make sure it's working.
+
+#### array `ARR=("a" "b" "c")`
+
+This program will have an array of responses. One will be printed randomly after a user inputs a question. Practice first 😄 In the terminal, create an array like this: `ARR=("a" "b" "c")`
+
+#### `echo ${ARR[1]}`
+
+Each variable in the array is like any other variable, just combined into a single variable. In the terminal, print the second item in the array with `echo ${ARR[1]}`. Note that the first item would be index zero.
+
+#### `echo ${ARR[@]}`
+
+If you recall, you were able to print all the arguments to your `countdown.sh` script with `echo $*`. `echo $@` would have worked as well. Similarly, you can use the `*` or `@`to print your whole array. In the terminal, use echo to print all the items in your array.
+
+#### `declare -p ARR`
+
+The variable must be in that declare list. View your array variable using the declare command and the `-p` flag.
+
+####
+
+The `-a` next to it stands for array. In your script, create an array named `RESPONSES`. Give it these six values: `Yes`, `No`, `Maybe`, `Outlook good`, `Don't count on it`, and `Ask again later`.
+
+#### `echo ${ARR[-1]}`
+
+In your script, use `echo` to print the last item in the array.
+
+####
+
+Run it to see the output.
+
+#### `<VARIABEL_NAME>=$(( RANDOM % <NUMBER> ))`
+
+You will randomly print one of the values. In your script, create a variable named `N`. Set it equal to a random number between `0` and `5`, the first and last index of the array.
+
+####
+
+Change your `echo` command to print the item in the array whose index is the random number you generated.
+
+####
+
+You will create a function to generate an answer. Check the help menu to see if you can find anything.
+
+####
+
+See any that might help? There's one that says function. See if you can find out more about it.
+
+#### function syntax
+
+It looks like you can create a function like this:
+
+```sh
+FUNCTION_NAME() {
+  STATEMENTS
+}
+```
+
+Add an empty function named `GET_FORTUNE` to your script. Make sure the response you are printing is the last thing in the script.
+
+####
+
+In your function, use echo to print `Ask a yes or no question:`
+
+####
+
+Call your function by putting the name of it below where you create it. No `$` needed. Make sure the response you are printing is at the bottom of the file.
+
+####
+
+Run your script to make sure it's working.
+
+####
+
+In your function after you print the sentence, use `read` to get user input into a variable named `QUESTION`.
+
+####
+
+Run the script again to test it out. Enter a question when it asks.
+
+####
+
+I want to make sure the input is a question. You are going to add a loop that asks for input until the input ends with a question mark. View the help menu to see if you can find an appropriate loop.
+
+####
+
+View more about that `until` command. That might be the one to use here.
+
+#### until loop
+
+The until loop is very similar to the while loop you used. It will execute the loop until a condition is met. Here's an example:
+
+```sh
+until [[ CONDITION ]]
+do
+  STATEMENTS
+done
+```
+
+Add an `until` loop below your function. Use the double brackets to check if `QUESTION` is equal to `test?`. Move the `GET_FORTUNE` function call to the statements area of the loop. It should run the function until you input `test?` as the question.
+
+####
+
+Run the script and enter something other than `test?`. Then enter test? after it asks for a question the second time.
+
+####
+
+View that `help [[ expression ]]` menu again. You need to find out how to test if the input ends with a question mark (`?`).
+
+####
+
+Let's play with these again. You can test if two strings are the same with `==`. In the terminal, use the `[[ ... ]]; echo $?`syntax you used before to test if `hello` is equal to `hello`.
+
+####
+
+Exit status of 0, it was true. Using the same syntax, test if hello is equal to world.
+
+#### `=~` pattern matching
+
+False. An important operator in that menu is `=~`. It allows for pattern matching. Using the same syntax but with this operator, check if hello contains the pattern `el`.
+
+####
+
+True. The condition was checking for `el` within the word hello. Using the same syntax, check if hello world contains the pattern lo wor. You will need to put them both in quotes so it recognizes the spaces.
+
+#### `[[ "hello world" =~ ^h ]]; echo $?`
+
+Your patterns have been checking for literal matches, `el` and `lo wor`. You can use regular expression characters as well, but you can't put the pattern in quotes when you do. Using the same syntax, check if `hello world` starts with an `h` by using `^h` as the pattern.
+
+#### `[[ "hello world" =~ ^h.+d ]]; echo $?`
+
+Do it again, but use `^h.+d$ `as the pattern to see if the string starts with an `h`, has at least one character after it, and ends with a `d`.
+
+####
+
+In the terminal, create a variable named `VAR` that equals `hello world`.
+
+####
+
+Use echo to print the variable you just created.
+
+####
+
+Using the `[[ ... ]]; echo $?` syntax, check if your variable is equal to `hello world`.
+
+#### [[$<VARIABLE> =~ "<STRING>"]]; echo $?
+
+Using the same syntax, check if your variable ends with `?` by using the pattern `\?$`.
+
+####
+
+It doesn't end with `?`. Just to make sure I don't have the pattern wrong, check if `test?` ends with `?`.
+
+####
+
+I think that will work. Back in your script, change the until condition to see if your variable ends with `?`.
+
+####
+
+Run the script and input something that doesn't end with ? the first time, then something that does the second.
+
+#### `if [[ ! $1 ]]`
+
+I know that it asks the same thing if the input isn't what you want. You should let users know that it needs to end with `?`. Add an `if` condition in your function that checks `if [[ ! $1 ]]`. Put the existing `echo` statement in the then area and make sure the existing `read` is below the whole `if` condition.
+
+####
+
+You can pass arguments to functions like you did with your script. This condition will check if one isn't passed and print the sentence. Add an `else` to your `if`. Use `echo` to print `Try again. Make sure it ends with a question mark:` if the condition fails.
+
+#### `*** ***`
+
+Now, your function will print one thing if you pass it any argument, and something else if not. In the `until` loop, add `again` as an argument to where you call the function.
+
+####
+
+Now, each time the function is called in the `until` loop, it will pass `again` as an argument and print the `Try again...` sentence. Before your `until` loop, call the function without an argument so the first time it runs, it prints the initial sentence.
+
+####
+
+Run the script and enter something without a question mark when it asks the first time. Use a question mark the second time.
+
+####
+
+Awesome. One last thing. Add an empty line in front of where you print the response.
+
+####
+
+Run the script one more time to see if you like the output.
+
+####
+
+Excellent. One last program to make. Use touch to create a new file named `five.sh` in the same folder as the others.
+
+####
+
+Give your file executable permissions.
+
+####
+
+Add a shebang to the new script that uses bash like the others.
+
+####
+
+Add a comment below the shebang that says, `Program to run my other four programs`
+
+####
+
+This program will run all the programs you made so far consecutively. Add the command to run the `questionnaire.sh `file.
+
+####
+
+Add commands to run the rest of your scripts in the file. They should be in this order: `questionnaire`, `countdown`, `bingo`, and `fortune`. Don't forget that your `countdown.sh` file needs an argument, so put a `3` next to it.
+
+####
+
+Okay, use clear to empty out what's in the terminal before the big moment.
+
+####
+
+Run the script and enter input when it asks.
+
+####
+
+Cool. I think all the scripts are done. View the help menu again I want to explore one more thing.
+
+#### `type` command
+
+View more about that `type` command.
+
+#### `type <command>`
+
+It says you can view the type of a command with `type <command>`. Just for fun, lets take a look at the type of a few different commands. View the type of `echo`.
+
+####
+
+View the type of the `read` command.
+
+####
+
+View the type of `if`
+
+####
+
+View the type of `then`
+
+####
+
+Those were all from the help menu and described as a `shell builtin` or `shell keyword`. View the type of `bash`
+
+####
+
+That's the location of the bash command. View the type of `psql`.
+
+####
+
+It's showing the location of the commands. View the type of your `./five.sh` file.
+
+#### `exit`
+
+Last step, close the terminal with the exit command. Thanks and happy coding!
 
 ### Build a Student Database: Part 1
 
 In this 140-lesson course, you will create a Bash script that uses SQL to enter information about your computer science students into PostgreSQL.
 
 Create a GitHub account if you don't have one. You'll need it when you create the virtual Linux server machine. This process may take a few minutes.
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
