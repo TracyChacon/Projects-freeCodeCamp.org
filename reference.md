@@ -5137,7 +5137,10 @@ There's your sounds table. Add a column to it named filename. Make it a VARCHAR 
 
 You want to use character_id as a foreign key again. This will be a "one-to-many" relationship because one character will have many sounds, but no sound will have more than one character. Here's the example again:
 
+```sql
 ALTER TABLE table_name ADD COLUMN column_name DATATYPE CONSTRAINT REFERENCES referenced_table_name(referenced_column_name);
+```
+
 Add a column to sounds named character_id. Give it the properties INT, NOT NULL, and set it as a foreign key that references character_id from characters.
 
 ####
@@ -6278,6 +6281,644 @@ Last step, close the terminal with the exit command. Thanks and happy coding!
 
 ### Build a Student Database: Part 1
 
-In this 140-lesson course, you will create a Bash script that uses SQL to enter information about your computer science students into PostgreSQL.
+In this 140-lesson course, you will create a `Bash script` that uses `SQL` to enter information about your computer science students into `PostgreSQL`.
 
 Create a GitHub account if you don't have one. You'll need it when you create the virtual Linux server machine. This process may take a few minutes.
+
+####
+
+The first thing you need to do is start the terminal. Do that by clicking the "hamburger" menu at the top left of the screen, going to the "terminal" section, and clicking "new terminal". Once you open a new one, type `echo hello SQL` into the terminal and press enter.
+
+####
+
+You are started with two `.csv` files with info about your computer science students. You should take a look at them. The top row in each file has titles, and the rest are values for those titles. You will be adding all that info to a PostgreSQL database. Log into the psql interactive terminal with `psql --username=freecodecamp --dbname=postgres` to get started.
+
+####
+
+View the existing databases with the \l shortcut command to see what's here.
+
+####
+
+All the info from the CSV files will go into a single database. Create a new database named `students`.
+
+####
+
+View the databases again to make sure it got created.
+
+####
+
+There it is. Connect to your new database so you can start adding tables.
+
+####
+
+The CSV files have a bunch of students with info about them, and some courses and majors. You will have four tables. One for the students and their info, one for each major, another for each course, and a final one for showing what courses are included in each major. First, create the `students` table.
+
+####
+
+The second table will be for each unique major that appears in the data. Create a table named majors.
+
+####
+
+The third table is for each unique course in the data. Create another table named courses.
+
+####
+
+The final table will be a junction table for the majors and courses. Create it with the name majors_courses.
+
+####
+
+Use the display shortcut command to view your tables to make sure your satisfied with them.
+
+####
+
+Onto the columns. The students.csv file has four fields, you will make a column for each of those as well as an `ID` column. Add a column to your students table named `student_id`. Give it a type of `SERIAL` so it automatically increments and make it a `PRIMARY KEY`
+
+####
+
+The first column in students.csv is `first_name`. Add a column to the students table with that name. Make it a type of `VARCHAR(50)` and give it the `NOT NULL` constraint.
+
+####
+
+The next column in the data is `last_name`. Add it to the students table. Give it the same data type and max-length as `first_name` and make sure it has the `NOT NULL` constraint.
+
+####
+
+The next column is for the `major`. Since you will have each major in another table this column will be a `foreign key` that references it. Create a column in the `students` table named `major_id`, give it a data type of `INT` for now. You will come back and set the foreign key later.
+
+#### `NUMERIC(2,1)`
+
+Create the last column, `gpa`. The data in the CSV shows that they are decimals with a length of `2` and `1` number is to the right of the decimal. So give it a data type of `NUMERIC(2,1)`.
+
+####
+
+Use the shortcut command to display the details of the students table to make sure you like it.
+
+#### `ALTER TABLE <table_name> ADD <column_name> <DATA_TYPE> PRIMARY KEY;`
+
+The foreign key is still missing. Let's fill in the `majors` table next. Add a `major_id` column to it. Make it a type of `SERIAL` and the `PRIMARY KEY` for this table.
+
+#### `ALTER TABLE <table_name> ADD <column_name> <DATA_TYPE> NOT NULL;`
+
+This table will only have one other column for the name of the `major`. Add a column to it named `major`. Make it a `VARCHAR` with a max-length of `50` and give it the `NOT NULL` constraint.
+
+####
+
+View the details of the `majors` table to make sure you like it.
+
+#### `ALTER TABLE <table_name> ADD FOREIGN KEY(<column_name>) REFERENCES <referenced_table_name>(<referenced_column_name>);`
+
+This table looks good. Now, set the `major_id` column from the `students` table as a foreign key that references the `major_id` column from the `majors` table. Here's an example of how to do that:
+
+```sql
+ALTER TABLE <table_name> ADD FOREIGN KEY(<column_name>) REFERENCES <referenced_table_name>(<referenced_column_name>);
+```
+
+####
+
+View the details of the `students` table again to make sure the key is there.
+
+####
+
+Next, is the `courses` table. Add a `course_id` column to it. Give it a type of `SERIAL` and make it the `primary key`.
+
+####
+
+Add a `course` column to the `courses` table that's a type of `VARCHAR`. The course names are a little longer, so give them a max-length of `100`. Also, make sure it can't accept `null values`.
+
+####
+
+View the details of the `courses` table to make sure it looks good.
+
+####
+
+One more table to go. The `majors_courses` junction table will have two columns, each referencing the `primary key` from two related table. First, add a `major_id` column to it. Just give it a type of `INT` for now.
+
+####
+
+Set the `major_id` column you just created as a foreign key that references the `major_id` column from the `majors` table.
+
+####
+
+Next, add a `course_id` column to the same table. Just give it a type of `INT` again for now.
+
+####
+
+Set your new `course_id` column as a foreign key that references the other `course_id` column.
+
+####
+
+View the details of the table you just worked on to make sure the structure is finished.
+
+#### ` ALTER TABLE <table_name> ADD PRIMARY KEY(<column_name>, <column_name>);`
+
+There's one thing missing. This table doesn't have a `primary key`. The data from `courses.csv` will go in this table. A single major will be in it multiple times, and same with a course. So neither of them can be a primary key. But there will never be a row with the same two values as another row. So the two columns together, are unique. You can create a `composite primary key` that uses more than one column as a unique pair like this:
+
+```sql
+ALTER TABLE <table_name> ADD PRIMARY KEY(<column_name>, <column_name>);
+```
+
+Add a composite primary key to the table using the two columns.
+
+####
+
+View the details of the table again.
+
+####
+
+Okay, now it's finished. View all the tables you ended up with.
+
+####
+
+Next, you can start adding some info. Since the `students` table needs a `major_id`, you can add a major first. View the details of the majors table to see what info it expects.
+
+####
+
+It only needs the name of a `major`. The ID will be added automatically. Add the first major from the `courses.csv` file into the majors table. It's a `VARCHAR`, so make sure to put the value in single quotes.
+
+####
+
+Use `SELECT` to view all the data in the majors table to make sure it got inserted correctly.
+
+####
+
+Next, insert the first `course` from `course.csv` into the `courses` table.
+
+####
+
+View all the data in the courses table to make sure it got added.
+
+####
+
+Next, you can add a row into the junction table. View the details of it to see what it expects.
+
+####
+
+It wants a `major_id` and `course_id`. Add a row to `majors_courses` for the first entry in `courses.csv`.
+
+####
+
+View all the data in the table you just added to.
+
+####
+
+Looks like the row got added. View the details of the students table to remind yourself what it expects so you can add the first student to the database.
+
+####
+
+The output shows what the table needs. Insert the first person from `students.csv`into the students table.
+
+####
+
+Looks like it worked. View all the data in the students table to make sure.
+
+####
+
+Okay, you added a row into each table. It might be wise to review the data and the database structure. Adding the rest of the info one at a time would be tedious. You are going to make a script to do it for you. I recommend "splitting" the terminal for this part. You can do that by clicking the "hamburger" menu at the top left of the window, going to the "Terminal" menu, and clicking "Split Terminal". Once you've done that, use the `touch` command to create a file named `insert_data.sh` in your project folder.
+
+####
+
+You should have two terminals open. One connected to PostgreSQL, and one for entering terminal commands. In the one for terminal commands, use the chmod command with the `+x` flag to give you new script executable permissions.
+
+####
+
+Open your new file and add a "shebang" that uses bash at the top. It looks like this: `#!/bin/bash`.
+
+####
+
+Below that, add a single line comment with the text,` Script to insert data from courses.csv and students.csv into students database`.
+
+#### `cat <filename>`
+
+First, you should add all the info from the `courses.csv` file since you need the `major_id` for inserting the student info. `cat` is a terminal command for printing the contents of a file. Here's an example: `cat <filename>`. Below the comment you added, use it to print `courses.csv`
+
+####
+
+Run your script to see if the file contents get printed.
+
+#### piping cat two while loop
+
+It worked. Instead of printing the content, you can pipe that output into a while loop so you can go through the rows one at a time. It looks like this:
+
+```sh
+cat courses.csv | while read MAJOR COURSE
+do
+  <STATEMENTS>
+done
+```
+
+Each new line will be read into the variables, `MAJOR` and `COURSE`. Add the above to your `cat` command. In the `STATEMENTS` area, use `echo` to print the `MAJOR` variable.
+
+####
+
+Run the script to see if it worked.
+
+#### `declare -p IFS`
+
+It's looping, but the `MAJOR` variable is only being set to the first word. There's a default `IFS` variable in bash. `IFS` stands for "Internal Field Separator". View it with `declare -p IFS`.
+
+#### `cat courses.csv | while IFS="," read MAJOR COURSE do echo $MAJOR done`
+
+This variable is used to determine word boundaries. It defaults to spaces, tabs, and new lines. This is why the MAJOR variable was set to only the first word on each line from the data. Between the while and read commands, set the IFS to a comma like this: `IFS=","`
+
+####
+
+Now, it should use the comma in the data to separate words instead of spaces. Run the script again to see if it's working.
+
+####
+
+Looks like that worked. It prints the whole major, including the space. Print the `COURSE` variable on the same line as where you print `MAJOR` to make sure it's all working.
+
+####
+
+Run the script again to check.
+
+##### `insert_data.sh`
+
+#!/bin/bash
+
+# Script to insert data from courses.csv and students.csv into students database
+
+cat course.csv | while IFS="," read MAJOR COURSE
+do
+echo $MAJOR $COURSE
+done
+
+##### `courses.csv`
+
+major,course
+Database Administration,Data Structures and Algorithms
+Web Development,Web Programming
+Database Administration,Database Systems
+Data Science,Data Structures and Algorithms
+Network Engineering,Computer Networks
+Database Administration,SQL
+Data Science,Machine Learning
+Network Engineering,Computer Systems
+Computer Programming,Computer Networks
+Database Administration,Web Applications
+Game Design,Artificial Intelligence
+Data Science,Python
+Computer Programming,Object-Oriented Programming
+System Administration,Computer Systems
+Game Design,Calculus
+Web Development,Data Structures and Algorithms
+Data Science,Calculus
+Web Development,Object-Oriented Programming
+Game Design,Game Architecture
+System Administration,Computer Networks
+Game Design,Algorithms
+System Administration,UNIX
+System Administration,Server Administration
+Computer Programming,Computer Systems
+Computer Programming,Python
+Network Engineering,Network Security
+Web Development,Web Applications
+Network Engineering,Algorithms
+
+##### `students.csv`
+
+first_name,last_name,major,gpa
+Rhea,Kellems,Database Administration,2.5
+Emma,Gilbert,null,null
+Kimberly,Whitley,Web Development,3.8
+Jimmy,Felipe,Database Administration,3.7
+Kyle,Stimson,null,2.8
+Casares,Hijo,Game Design,4.0
+Noe,Savage,null,3.6
+Sterling,Boss,Game Design,3.9
+Brian,Davis,null,2.3
+Kaija,Uronen,Game Design,3.7
+Faye,Conn,Game Design,2.1
+Efren,Reilly,Web Development,3.9
+Danh,Nhung,null,2.4
+Maxine,Hagenes,Database Administration,2.9
+Larry,Saunders,Data Science,2.2
+Karl,Kuhar,Web Development,null
+Lieke,Hazenveld,Game Design,3.5
+Obie,Hilpert,Web Development,null
+Peter,Booysen,null,2.9
+Nathan,Turner,Database Administration,3.3
+Gerald,Osiki,Data Science,2.2
+Vanya,Hassanah,Game Design,4.0
+Roxelana,Florescu,Database Administration,3.2
+Helene,Parker,Data Science,3.4
+Mariana,Russel,Web Development,1.8
+Ajit,Dhungel,null,3.0
+Mehdi,Vandenberghe,Database Administration,1.9
+Dejon,Howell,Web Development,4.0
+Aliya,Gulgowski,System Administration,2.6
+Ana,Tupajic,Data Science,3.1
+Hugo,Duran,null,3.8
+
+##### recreate_script.sh
+
+#!/bin/bash
+
+# Script recreates the missing files in this project
+
+touch courses.csv
+touch students.csv
+touch insert_data.sh
+
+chmod +x courses.csv
+chmod +x students.csv
+chmod +x insert_data.sh
+
+echo 'major,course
+Database Administration,Data Structures and Algorithms
+Web Development,Web Programming
+Database Administration,Database Systems
+Data Science,Data Structures and Algorithms
+Network Engineering,Computer Networks
+Database Administration,SQL
+Data Science,Machine Learning
+Network Engineering,Computer Systems
+Computer Programming,Computer Networks
+Database Administration,Web Applications
+Game Design,Artificial Intelligence
+Data Science,Python
+Computer Programming,Object-Oriented Programming
+System Administration,Computer Systems
+Game Design,Calculus
+Web Development,Data Structures and Algorithms
+Data Science,Calculus
+Web Development,Object-Oriented Programming
+Game Design,Game Architecture
+System Administration,Computer Networks
+Game Design,Algorithms
+System Administration,UNIX
+System Administration,Server Administration
+Computer Programming,Computer Systems
+Computer Programming,Python
+Network Engineering,Network Security
+Web Development,Web Applications
+Network Engineering,Algorithms' >> courses.csv
+
+echo 'first_name,last_name,major,gpa
+Rhea,Kellems,Database Administration,2.5
+Emma,Gilbert,null,null
+Kimberly,Whitley,Web Development,3.8
+Jimmy,Felipe,Database Administration,3.7
+Kyle,Stimson,null,2.8
+Casares,Hijo,Game Design,4.0
+Noe,Savage,null,3.6
+Sterling,Boss,Game Design,3.9
+Brian,Davis,null,2.3
+Kaija,Uronen,Game Design,3.7
+Faye,Conn,Game Design,2.1
+Efren,Reilly,Web Development,3.9
+Danh,Nhung,null,2.4
+Maxine,Hagenes,Database Administration,2.9
+Larry,Saunders,Data Science,2.2
+Karl,Kuhar,Web Development,null
+Lieke,Hazenveld,Game Design,3.5
+Obie,Hilpert,Web Development,null
+Peter,Booysen,null,2.9
+Nathan,Turner,Database Administration,3.3
+Gerald,Osiki,Data Science,2.2
+Vanya,Hassanah,Game Design,4.0
+Roxelana,Florescu,Database Administration,3.2
+Helene,Parker,Data Science,3.4
+Mariana,Russel,Web Development,1.8
+Ajit,Dhungel,null,3.0
+Mehdi,Vandenberghe,Database Administration,1.9
+Dejon,Howell,Web Development,4.0
+Aliya,Gulgowski,System Administration,2.6
+Ana,Tupajic,Data Science,3.1
+Hugo,Duran,null,3.8' >> students.csv
+
+echo 'echo '#!/bin/bash
+
+# Script to insert data from courses.csv and students.csv into students database
+
+PSQL="psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c"
+cat course.csv | while IFS="," read MAJOR COURSE
+do
+
+# get major_id
+
+MAJOR_ID=$($PSQL "SELECT major_id FROM majors WHERE major='$MAJOR'")
+
+# if not found
+
+# insert major
+
+# get new major_id
+
+# get course_id
+
+# if not found
+
+# insert course
+
+# get new course_id
+
+# insert into mjors_courses
+
+done' >> insert_data.sh' >> insert_data.sh
+
+####
+
+Okay, your loop is working. You can use the `MAJOR` and `COURSE` variables to access the major or course when you need to insert data or query the database. Delete the echo line so you can figure out what to do next.
+
+####
+
+It helps to plan out what you want to happen. For each loop, you will want to add the major to the database if it isn't in there yet. Same for the course. Then add a row to the `majors_courses` table. Add these single line comments in your loop in this order: `get major_id`, `if not found`, `insert major`, `get new major_id`, `get course_id`,` if not found, insert course`, `get new course_id`, `insert into majors_courses`.
+
+#### `PSQL="psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c"`
+
+You used the `psql` command to log in and interact with the database. You can use it to just run a single command and exit. Above your loop, add a `PSQL` variable that looks like this: `PSQL="psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c"`. This will allow you to query your database from your script. The important parts are the `username`, `dbname`, and the `-c` flag that is for running a single command and exiting. The rest of the flags are for formatting.
+
+#### `$($PSQL "<query_here>")`
+
+Now, you can query your database using the PSQL variable like this:` $($PSQL "<query_here>")`. The code in the parenthesis will run in a subshell, which is a separate bash process. Below the get `major_id` comment in your loop, create a `MAJOR_ID` variable. Set it equal to the result of a query that gets the `major_id` of the current `MAJOR` in the loop. Make sure to put your `MAJOR` variable in single quotes.
+
+####
+
+Below the variable you just created, use `echo` to print it so you can see it's value when you run the script.
+
+####
+
+Run the script to see what happens.
+
+#### `[[ -z $MAJOR_ID ]]`
+
+So it went through each major from the CSV file and tried to find `major_id` for each one from the database. Looks like it only found the one you manually inserted earlier. The rest were empty. Below your first if not found comment, add an `if` condition that checks if the `MAJOR_ID` variable is empty. You can do that with this test: `[[ -z $MAJOR_ID ]]`. Place the next two comments in the statements area of the `if`.
+
+####
+
+The loop will go into this if whenever a major isn't found. Here, you will want to insert the major and then get the new id. You will need the `ID` for inserting data into the `majors_courses` table later. Below your insert major comment, create an `INSERT_MAJOR_RESULT` variable. Set it's value to a query that inserts the current major into the database. Don't forget to use single quotes around the value.
+
+####
+
+Below the variable you just created, use `echo` to print it.
+
+####
+
+Instead of running through all the data in the CSV file, you should make some test data. In the terminal, use the copy (cp) command to copy the `courses.csv` into a new file named `courses_test.csv`.
+
+####
+
+In your new file, remove all the data except for the first five lines. Make sure there's a single empty line at the bottom.
+
+####
+
+Back in the `insert_data.sh` script, change your `cat` command to loop through the test file instead of the full one.
+
+####
+
+Run the script. It will go through the test data and insert a major into the database each time it doesn't find one already there and print the `MAJOR_ID` and `INSERT_MAJOR_RESULT` variables.
+
+####
+
+Looks like it found an `ID` that was already in the database twice and inserted three new items into the database. You don't need to print the `ID` anymore so delete the `echo $MAJOR_ID `line.
+
+####
+
+In the psql prompt, use `SELECT` to view all the data from the majors table to see what the script added.
+
+#### `TRUNCATE <table_name>;`
+
+I forgot you inserted Database Administration earlier. The script ran and inserted `major` from the top line of the file. Then it added the other two that weren't already in there. You can use `TRUNCATE` to delete all data from a table. In the `psql` prompt, try to delete all the data in the majors table by entering `TRUNCATE majors;`
+
+#### `TRUNCATE <table_1>, <table_2>, <table_3>;`
+
+It says you "cannot truncate a table referenced in a foreign key constraint." The `students` and `majors_courses` tables use the `major_id` from `majors` as a `foreign key`. So if you want to delete the data from `majors`, you need to delete the data from those two tables at the same time. Use `TRUNCATE` to delete the data from those three tables. Separate the tables with commas.
+
+####
+
+View all the data in the majors table to make sure it's empty.
+
+####
+
+Looks like it worked. View all the data in the `majors_courses` table to see if that one is empty.
+
+####
+
+It is, check the `students` table.
+
+####
+
+Last, check the `courses` table.
+
+####
+
+There should still be one entry in there. Use `TRUNCATE` to delete all the data from the courses table. You will need to truncate any tables that use a column from it as a foreign key at the same time.
+
+####
+
+View all the data in the courses table again.
+
+####
+
+Now the database is completely empty. Run the script again to see what gets inserted when the database is empty.
+
+####
+
+It inserted four that time. In the psql prompt, view all the data in the `majors` table.
+
+####
+
+You won't want to add the first line from the CSV file to the database since those are just titles. In your script, add an `if` condition at the top of your loop that checks if `$MAJOR != major`. Put all the existing code and comments in your loop in it's statements area so it only does any of it if it's not the first line.
+
+####
+
+In the psql prompt, use `TRUNCATE` to delete all the data in the `majors` table.
+
+####
+
+View all the data in `majors` table to make sure it's empty.
+
+####
+
+Run the script to make sure it's not adding the first line anymore.
+
+####
+
+It only showed three inserts, that's a good sign. View all the data in `majors` table to make sure it's three you want.
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
+
+####
