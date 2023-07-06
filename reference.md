@@ -6747,7 +6747,7 @@ So it went through each major from the CSV file and tried to find `major_id` for
 
 ####
 
-The loop will go into this if whenever a major isn't found. Here, you will want to insert the major and then get the new id. You will need the `ID` for inserting data into the `majors_courses` table later. Below your insert major comment, create an `INSERT_MAJOR_RESULT` variable. Set it's value to a query that inserts the current major into the database. Don't forget to use single quotes around the value.
+The loop will go into this if whenever a major isn't found. Here, you will want to insert the major and then get the new id. You will need the `ID` for inserting data into the `majors_courses` table later. Below your insert major comment, create an `INSERT_MAJOR_RESULT` variable. `Set it's value to a query that inserts the current major into the database.` Don't forget to use single quotes around the value.
 
 ####
 
@@ -6839,9 +6839,11 @@ It only showed three inserts, that's a good sign. View all the data in `majors` 
 
 ####
 
-####
+There's three unique majors in your test data. Those were the three added to the database, so it looks like it's working. Delete the line where you print `INSERT_MAJOR_RESULT`.
 
 ####
+
+You want a nicer message when something get's inserted so it's more informative. Below your `INSERT_MAJOR_RESULT` variable, add an `if` statement that checks if the variable is equal to `INSERT 0 1`, which was what it was printing. Use echo to print `Inserted into majors, $MAJOR` in the statements area of the if.
 
 ####
 
