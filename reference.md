@@ -6847,11 +6847,19 @@ You want a nicer message when something get's inserted so it's more informative.
 
 ####
 
-####
+In the `psql` prompt, `truncate` the `majors` table again so you can run the script and see the output.
 
 ####
 
+Check to make sure the table is empty. Then, run the script.
+
 ####
+
+It's starting to come together. Below your `get new major_id` comment, set the `MAJOR_ID` variable to a query that gets the new `major_id` from the database.
+
+####
+
+So the script will insert the majors correctly. Next are the courses. It will be the same steps as for the majors. Below your get `course_id` comment, add a `COURSE_ID` variable that gets the `course_id` from the database. Remember that your `COURSE` variable will have the current course in the loop.
 
 ####
 
