@@ -4985,7 +4985,10 @@ Add the UNIQUE constraint to the column you just added.
 
 The column should also be NOT NULL since you don't want to have a row that is for nobody. Here's an example:
 
+```sql
 ALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL;
+```
+
 Add the NOT NULL constraint to your foreign key column.
 
 ####
@@ -5081,6 +5084,7 @@ The info for Daisy looks like this:
 
 birthday height weight
 1989-07-31 NULL NULL
+
 Add the above info for Daisy to more_info. Be sure to add her character_id as well. You can use NULL or simply not include the null columns when inserting.
 
 ####
@@ -5089,7 +5093,7 @@ View all the data in more_info to see the rows you added.
 
 ####
 
-Null values show up as blank. Yoshi is last. Find his id by viewing the character_id and name columns for only his row.
+Null values show up as blank. Yoshi is last. Find his id by viewing the `character_id` and name columns for only his row.
 
 ####
 
@@ -5119,7 +5123,10 @@ Take a quick look at all the data in more_info to see the new column names.
 
 Next, you will make a sounds table that holds filenames of sounds the characters make. You created your other tables similar to this:
 
+```sql
 CREATE TABLE table_name();
+```
+
 Inside those parenthesis you can put columns for a table so you don't need to add them with a separate command, like this:
 
 CREATE TABLE table_name(column_name DATATYPE CONSTRAINTS);
@@ -6691,7 +6698,9 @@ echo 'echo '#!/bin/bash
 
 # Script to insert data from courses.csv and students.csv into students database
 
+```sh
 PSQL="psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c"
+
 cat course.csv | while IFS="," read MAJOR COURSE
 do
 
@@ -6716,6 +6725,7 @@ MAJOR_ID=$($PSQL "SELECT major_id FROM majors WHERE major='$MAJOR'")
 # insert into mjors_courses
 
 done' >> insert_data.sh' >> insert_data.sh
+```
 
 ####
 
@@ -6859,45 +6869,217 @@ It's starting to come together. Below your `get new major_id` comment, set the `
 
 ####
 
-So the script will insert the majors correctly. Next are the courses. It will be the same steps as for the majors. Below your get `course_id` comment, add a `COURSE_ID` variable that gets the `course_id` from the database. Remember that your `COURSE` variable will have the current course in the loop.
+So the script will insert the majors correctly. Next are the courses. It will be the same steps as for the `majors`. Below your get `course_id` comment, add a `COURSE_ID` variable that gets the `course_id` from the database. Remember that your `COURSE` variable will have the current course in the loop.
 
 ####
 
-####
+It's the same as the `majors`, so below the second `if not found` comment, add an `if` statement that checks if the query was empty so you can insert the course if needed. Place the existing insert course and get new `course_id` comments in the statements area of the `if`.
 
 ####
 
-####
+Below the insert course comment, create an `INSERT_COURSE_RESULT` variable that inserts the course into the database.
 
 ####
 
-####
+The variable should be `INSERT 0 1` again if something gets inserted. Below the variable you just created, add an `if` condition that checks if it is and print `Inserted into courses, $COURSE` using `echo` in it's statements area.
 
 ####
 
-####
+In the `psql` prompt, `truncate` the data from the `majors` table so you can run the script again.
+
+```sql
+TRUNCATE majors, students, majors_students;
+```
 
 ####
 
-####
+Run the script to see if the courses get inserted into the database.
 
 ####
 
-####
+It looks like it worked. The test data has three unique courses, and three got added to the database. View the data in the `courses` table to make sure they are correct.
 
 ####
 
-####
+Excellent. Instead of manually deleting the data each time you want to run the script, add the command to do it for you. Near the top of the file below your `PSQL` variable, use `echo` to query the database. In the query, `truncate` your four tables in this order: `students`, `majors`, `courses`, `majors_courses`.
 
 ####
 
-####
+Run the script to see if it works.
 
 ####
 
-####
+Awesome. That makes it easier. Below your get new `course_id` comment, set the `COURSE_ID` to the newly inserted `course_id`.
 
 ####
+
+One more thing to add for this file. Below the insert into `majors_courses` courses comment, create a `INSERT MAJORS_COURSES_RESULT` variable. Use it and the `MAJOR_ID` and `COURSE_ID` variables you created to insert a row into the `majors_courses` table. Make sure the query has the `major_id` column first. Also, you won't need any quotes around the values for the ID's.
+
+####
+
+Below the variable you just created, add an `if` condition that checks if it's equal to `INSERT 0 1` like the others. In it's statements area, use `echo` to print `Inserted into majors_courses, $MAJOR : $COURSE`.
+
+####
+
+Run the script. Your tables should get truncated and then it should go through the loop and add all the data from the `courses_test.csv` into the three tables of the database.
+
+####
+
+Looks like it works. You better look around to make sure. View the data in the `majors` table.
+
+####
+
+Cool, check the courses table.
+
+####
+
+Lastly, view the data in the `majors_courses` table. There should be four rows.
+
+####
+
+Alright, that part of the script is done. Next, you need to add everything from the `students.csv` file. Make some test data again. In the terminal, use the copy command to copy `students.csv` into a file named `students_test.csv`.
+
+####
+
+In the `students_test.csv` file, remove everything but the first five lines like you did for the other test file. Make sure there's an empty line at the bottom again.
+
+####
+
+You want to loop through all this info like you did for the other CSV file. The process is the same. Below your existing loop, use `cat` to print your new test file. Pipe the results into a while loop, setting the `IFS` to a comma again, and then use read to create `FIRST`, `LAST`, `MAJOR` and `GPA` variables from the data. In the loop, use `echo` to print the `FIRST` variable.
+
+####
+
+Run the script to see if it prints the `FIRST` (first_name) variable correctly. It will take a second since it has to go through the first loop.
+
+####
+
+It works 😅 It printed the first item in each row of the CSV file. It's printing the first line again, you will have to take care of that. First, delete the `echo` line.
+
+####
+
+Add an `if` condition to the loop that checks if the `FIRST` variable is not equal to `first_name` so it doesn't do anything for the first line of the file. Don't put anything in the statements area for now.
+
+####
+
+All the columns in the CSV file can be inserted directly into the database except for the `major`. You will need to get the `major_id` again for that. There's some null values in there as well, so you will need to use `null` if the `major_id` isn't found. Add four single line comments in your loop; get `major_id`, `if not found`, `set to null`, and `insert student` in that order.
+
+####
+
+Below the new get `major_id` comment, set the `MAJOR_ID` variable to a query that gets the `major_id` for the current students major.
+
+####
+
+Below that, use `echo` to print the variable so you can see if it's working.
+
+####
+
+Run the script to see what happens.
+
+####
+
+Looking at the test data, it found the ID for all of it except the `null` value. Below the newest `if not found` comment, add an `if` that checks if the variable is empty. Put the `set to null` comment in its statements area.
+
+#### `MAJOR_ID=null`
+
+When you go to insert the student data, you want to use the `MAJOR_ID` if it's found, or `null` if not. Below the `set to null` comment, set the `MAJOR_ID` variable to `null` so you can use it to insert the data.
+
+####
+
+Move the `echo $MAJOR_ID` line to below the `if` statement so you can run the script and see the value of the variable if the `major_id` is or isn't found.
+
+####
+
+Run the script.
+
+####
+
+Okay, that should work for inserting the student. Delete the echo $MAJOR_ID line.
+
+####
+
+One last thing to add. In the `psql` prompt, view the details of the `students` table so you can see what columns to add.
+
+####
+
+You will need to set the four columns when adding the student info. All of them except `student_id`. Below the insert student comment, create an `INSERT_STUDENT_RESULT` variable that adds the student to the database. Add the columns in the order they appear in the data, and make sure to only put the two `VARCHAR` columns in single quotes.
+
+####
+
+Below the variable you just created, add an `if` statement that checks if it's equal to `INSERT 0 1` like the others. If it is, use `echo` to print `Inserted into students, <first_name> <last_name>`.
+
+####
+
+Run the script to see if the students are getting added.
+
+####
+
+I think it's working. View all the data in the `students` table to make sure it matches the CSV file.
+
+####
+
+Excellent. It added all the students from the test data. Time to try it with the original files. Change the `cat courses_test.csv` line to use the original file again.
+
+####
+
+Next, change the `cat students_test.csv` line to use the original file as well.
+
+####
+
+Time for the moment of truth. Run the script and see if it works.
+
+####
+
+That was cool. View all the data in the students table to see what you ended up with.
+
+####
+
+31 rows. That's how many are in the CSV file. Perfect. Next, check the `majors` table.
+
+####
+
+7 rows. There must be 7 unique majors in the CSV file. View what's in the `courses` table.
+
+####
+
+Looks like there's 17 unique courses in the CSV file. Last, view the data in majors_courses. This should have the same number of rows at the CSV file.
+
+####
+
+28 rows, same as the CSV file. I think all the data got added correctly. You don't need your test files anymore. In the terminal, use the list command to check what files are in your project folder.
+
+####
+
+Use the remove command (rm) to delete the `students_test.csv` file.
+
+####
+
+Use the same command to delete the `courses_test.csv` file.
+
+####
+
+List the contents of the folder again to make sure they're gone.
+
+####
+
+The database is finished for now. The last thing you are going to do is make a "dump" of it. The `pg_dump` command can do that for you. Use the `--help` flag with the command to see what it can do.
+
+#### `pg_dump --clean --create --inserts --username=freecodecamp students > students.sql`
+
+This is the last step. There's quite a few options there. Enter `pg_dump --clean --create --inserts --username=freecodecamp students > students.sql` in the terminal to dump the database into a `students.sql` file. It will save all the commands needed to rebuild it. Take a quick look at the file when you are done.
+
+### Learn SQL by Building a Student Database: Part 2
+
+SQL join commands are used to combine information from multiple tables in a relational database
+
+In this 140-lesson course, you will complete your student database while diving deeper into SQL commands.
+
+#### `psql -U postgres < students.sql`
+
+Your database isn't here. You can use the .sql file you created at the end of Part 1 to rebuild it. I recommend "splitting" the terminal. You can do that by clicking the "hamburger" menu at the top left of the window, going to the "Terminal" menu, and clicking "Split Terminal". Once you've done that, enter `psql -U postgres < students.sql `in it to rebuild the database.
+
+####
+
+A lot of stuff happened in the terminal. That looks promising. In the `psql` prompt, view the databases again.
 
 ####
 
