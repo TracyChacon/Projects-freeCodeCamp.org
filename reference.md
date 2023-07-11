@@ -6543,7 +6543,7 @@ Run the script again to check.
 
 #!/bin/bash
 
-# Script to insert data from courses.csv and students.csv into students database
+### Script to insert data from courses.csv and students.csv into students database
 
 cat course.csv | while IFS="," read MAJOR COURSE
 do
@@ -6621,7 +6621,7 @@ Hugo,Duran,null,3.8
 
 #!/bin/bash
 
-# Script recreates the missing files in this project
+### Script recreates the missing files in this project
 
 touch courses.csv
 touch students.csv
@@ -6696,7 +6696,7 @@ Hugo,Duran,null,3.8' >> students.csv
 
 echo 'echo '#!/bin/bash
 
-# Script to insert data from courses.csv and students.csv into students database
+### Script to insert data from courses.csv and students.csv into students database
 
 ```sh
 PSQL="psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c"
@@ -7067,11 +7067,11 @@ The database is finished for now. The last thing you are going to do is make a "
 
 This is the last step. There's quite a few options there. Enter `pg_dump --clean --create --inserts --username=freecodecamp students > students.sql` in the terminal to dump the database into a `students.sql` file. It will save all the commands needed to rebuild it. Take a quick look at the file when you are done.
 
-# Learn SQL by Building a Student Database: Part 2
+### Learn SQL by Building a Student Database: Part 2
 
 > Welcome to Part 2 of the Build a Student Database Lessons!
 
-## 10. Start the Terminal
+### 10. Start the Terminal
 
 ### 10.1
 
@@ -7082,7 +7082,7 @@ This is the last step. There's quite a few options there. Enter `pg_dump --clean
 - Capitalization matters
 - If the tests don't run automatically, try typing `exit` into the terminal and redoing the instructions
 
-## 20. psql login
+### 20. psql login
 
 ### 20.1
 
@@ -7092,7 +7092,7 @@ In Part 1 of this tutorial, you created a `students` database and then a script 
 
 - Type `psql --username=freecodecamp --dbname=postgres` into the terminal and press enter
 
-## 30. \l
+### 30. \l
 
 ### 30.1
 
@@ -7105,7 +7105,7 @@ List the databases.
 - Type `\l` into the psql prompt and press enter
 - Enter `psql --username=freecodecamp --dbname=postgres` in the terminal to log into the psql prompt if you aren't already
 
-## 40. rebuild database
+### 40. rebuild database
 
 ### 40.1
 
@@ -7116,7 +7116,7 @@ Your database isn't here. You can use the `.sql` file you created at the end of 
 - Enter the suggested command in the terminal
 - Make sure you are in the `project` folder first
 
-## 50. \l
+### 50. \l
 
 ### 50.1
 
@@ -7129,7 +7129,7 @@ A lot of stuff happened in the terminal. That looks promising. In the psql promp
 - Type `\l` into the psql prompt and press enter
 - Enter `psql --username=freecodecamp --dbname=postgres` in the terminal to log into the psql prompt if you aren't already
 
-## 60. \c students
+### 60. \c students
 
 ### 60.1
 
@@ -7143,7 +7143,7 @@ There's your `students` database. Connect to it.
 - Type `\c students` into the psql prompt and press enter
 - Enter `psql --username=freecodecamp --dbname=postgres` in the terminal to log into the psql prompt if you aren't already
 
-## 70. \d
+### 70. \d
 
 ### 70.1
 
@@ -7156,7 +7156,7 @@ Now that you're connected. Display the tables and relations that are here to see
 - Type `\d` into the psql prompt and press enter
 - Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
-## 80. \d students
+### 80. \d students
 
 ### 80.1
 
@@ -7170,7 +7170,7 @@ That all looks right. View the details of the `students` table to make sure the 
 - Type `\d students` into the psql prompt and press enter
 - Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
-## 90. select \* from students
+### 90. select \* from students
 
 ### 90.1
 
@@ -7184,7 +7184,7 @@ Looks good. Make sure all the data is in the table, as well.
 - Type `SELECT * FROM students;` into the psql prompt
 - Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
-## 1220. touch student_info.sh
+### 1220. touch student_info.sh
 
 ### 1220.1
 
@@ -7197,7 +7197,7 @@ The data is all there. You should take a look at the details of the other tables
 - The bash terminal, not the psql one
 - Make sure you are in the `project` folder first
 
-## 1230. chmod +x student_info.sh
+### 1230. chmod +x student_info.sh
 
 ### 1230.1
 
@@ -7209,7 +7209,7 @@ Give your new file executable permissions.
 - Here's an example: `chmod +x <filename>`
 - Type `chmod +x student_info.sh` in the terminal and press enter
 
-## 1240. Add shebang
+### 1240. Add shebang
 
 ### 1240.1
 
@@ -7220,7 +7220,7 @@ Add a shebang that uses bash at the top of your new script.
 - The shebang you want is `#!/bin/bash`
 - Add `#!/bin/bash` to your `student_info.sh` file
 
-## 1250. Add comment
+### 1250. Add comment
 
 ### 1250.1
 
@@ -7232,7 +7232,7 @@ Below the shebang, add a comment that says `Info about my computer science stude
 - A comment look like this: `# <comment>`
 - Add `# Info about my computer science students from students database` below the "shebang" in your `student_info.sh` file
 
-## 1260. Add echo title
+### 1260. Add echo title
 
 ### 1260.1
 
@@ -7244,7 +7244,7 @@ In the new script, use `echo` to print `~~ My Computer Science Students ~~`. Use
 - Here's an example: `echo -e "\n<text>\n"`
 - Add `echo -e "\n~~ My Computer Science Students ~~\n"` below the comment in your `student_info.sh` file
 
-## 1265. ./student_info.sh
+### 1265. ./student_info.sh
 
 ### 1265.1
 
@@ -7256,7 +7256,7 @@ Run the script to make sure it's working.
 - Type `./student_info.sh` in the terminal and press enter
 - Make sure you are in the `project` folder first
 
-## 1270. Add PSQL Variable
+### 1270. Add PSQL Variable
 
 ### 1270.1
 
@@ -7266,7 +7266,7 @@ You will want to query the database again to get info about the students to disp
 
 - Add the suggested variable at the bottom of the `student_info.sh` file
 
-## 1280. Add echo students with 4.0
+### 1280. Add echo students with 4.0
 
 ### 1280.1
 
@@ -7282,7 +7282,7 @@ Below the PSQL variable you just added, use `echo` to print `First name, last na
 echo -e "\nFirst name, last name, and GPA of students with a 4.0 GPA:"
 ```
 
-## 1290. psql SELECT \* FROM students
+### 1290. psql SELECT \* FROM students
 
 ### 1290.1
 
@@ -7294,7 +7294,7 @@ You will want to print what that sentence is asking for. You should know how to 
 - Enter `SELECT * FROM students;` in the psql prompt
 - Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
-## 1300. psql SELECT first_name
+### 1300. psql SELECT first_name
 
 ### 1300.1
 
@@ -7307,7 +7307,7 @@ You should look at the column titles that were returned. The `*` gets all column
 - Enter `SELECT first_name FROM students;` in the psql prompt
 - Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
-## 1310. psql SELECT first_name, last_name, gpa
+### 1310. psql SELECT first_name, last_name, gpa
 
 ### 1310.1
 
@@ -7321,7 +7321,7 @@ Just the `first_name` column was returned that time. You can specify as many col
 - Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 - Don't filter any rows
 
-## 1320. psql SELECT WHERE gpa < 2.5
+### 1320. psql SELECT WHERE gpa < 2.5
 
 ### 1320.1
 
@@ -8907,6 +8907,8 @@ Lets go over a few more things before you figure out how to see the courses a st
 ## 2350. psql SELECT students.major_id students FULL JOIN majors
 
 ### 2350.1
+
+#### `***`
 
 If you look at the column names, it shows two `major_id` columns. One from the `students` table and one from the `majors` table. If you were to try and query it using `major_id`, you would get an error. You would need to specify what table you want the column from like this: `<table>.<column>`. Enter the same join but only get the `major_id` column from the `students` table.
 
