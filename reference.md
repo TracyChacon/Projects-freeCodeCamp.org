@@ -7818,7 +7818,7 @@ Five courses without a space. Try finding the ones that contain an `A`.
 
 ### 1670.1
 
-It found 11 rows that time. You can put `NOT` in front of `ILIKE` as well. Use it to see the courses that don't contain an `A` or `a`.
+It found 11 rows that time. You can put `NOT` in front of `LIKE` as well. Use it to see the courses that don't contain an `A` or `a`.
 
 #### HINTS
 
@@ -8075,6 +8075,8 @@ Now, the highest GPA's are at the top. You can add more columns to the order by 
 
 ### 1830.1
 
+#### `LIMIT <number>`
+
 Many times, you only want to return a certain number of rows. You can add `LIMIT <number>` at the end of the query to only get the amount you want. View the students in the same order as the last command, but only return the first 10 rows.
 
 #### HINTS
@@ -8087,6 +8089,8 @@ Many times, you only want to return a certain number of rows. You can add `LIMIT
 ## 1835. psql SELECT students WHERE gpa IS NOT NULL ORDER BY gpa DESC, first_name LIMIT 10
 
 ### 1835.1
+
+#### `order of the keywords in your query matters`
 
 The order of the keywords in your query matters. You cannot put `LIMIT` before `ORDER BY`, or either of them before `WHERE`. View the same number of students, in the same order, but don't get the ones who don't have a GPA.
 
@@ -8155,6 +8159,8 @@ echo -e "\nAverage GPA of all students rounded to two decimal places:"
 
 ### 1870.1
 
+#### `SELECT MIN(<column>) FROM <table>`
+
 There's a number of mathematic functions to use with numerical columns. One of them is `MIN`, you can use it when selecting a column like this: `SELECT MIN(<column>) FROM <table>`. It will find the lowest value in the column. In the psql prompt, view the lowest value in the `gpa` column of the `students` table.
 
 #### HINTS
@@ -8165,6 +8171,8 @@ There's a number of mathematic functions to use with numerical columns. One of t
 ## 1880. psql SELECT MAX(gpa)
 
 ### 1880.1
+
+#### `SELECT MAX(<column>) FROM <table>`
 
 Another one is `MAX`, use it to see the largest `gpa` of the same table.
 
@@ -8177,6 +8185,8 @@ Another one is `MAX`, use it to see the largest `gpa` of the same table.
 ## 1890. psql SELECT SUM major_id
 
 ### 1890.1
+
+#### `SELECT SUM(<COLUMN_NAME>) FROM students;`
 
 In the same fashion, use a `SUM` function find out what all the values of the `major_id` column in the `students` table add up to.
 
@@ -8191,6 +8201,7 @@ In the same fashion, use a `SUM` function find out what all the values of the `m
 
 ### 1900.1
 
+`SELECT AVG(<COLUMN_NAME>) FROM students;`
 `AVG` will give you the average of all the values in a column. Use it to see the average of the same column.
 
 #### HINTS
@@ -8205,6 +8216,8 @@ In the same fashion, use a `SUM` function find out what all the values of the `m
 
 ### 1910.1
 
+#### `SELECT CEIL(AVG(major_id)) FROM students;`
+
 You can round decimals up or down to the nearest whole number with `CEIL` and `FLOOR`, respectively. Use `CEIL` to round the average `major_id` up to the nearest whole number. Here's an example: `CEIL(<number_to_round>)`.
 
 #### HINTS
@@ -8218,6 +8231,8 @@ You can round decimals up or down to the nearest whole number with `CEIL` and `F
 ## 1920. psql SELECT ROUND(AVG(major_id))
 
 ### 1920.1
+
+#### `SELECT ROUND(AVG(major_id)) FROM students;`
 
 Or, you can round a number to the nearest whole number with `ROUND`. Use it to round the average of the `major_id` column to the nearest whole number.
 
@@ -8378,7 +8393,7 @@ The output was the same as `DISTINCT`, but with `GROUP BY` you can add any of th
 
 ## 2030. psql SELECT major_id, MIN(gpa) FROM students GROUP BY major_id
 
-### 2030.1
+### 2030.1 `***`
 
 When using `GROUP BY`, any columns in the `SELECT` area must be included in the `GROUP BY` area. Other columns must be used with any of the aggregate functions (`MAX`, `AVG`, `COUNT`, etc). View the unique `major_id` values with `GROUP BY` again, but see what the lowest GPA is in each of them.
 
@@ -8530,6 +8545,8 @@ echo -e "\nList of majors, in alphabetical order, that either no student is taki
 
 ### 2120.1
 
+#### `JOIN`
+
 The `majors` and `students` table are linked with the `major_id` foreign key. If you want to see the name of a major that a student is taking, you need to `JOIN` the two tables into one. Here's an example of how to do that:
 `SELECT * FROM <table_1> FULL JOIN <table_2> ON <table_1>.<foreign_key_column> = <table_2>.<foreign_key_column>;`
 
@@ -8544,6 +8561,8 @@ In the psql prompt, join the two tables together with the above method.
 ## 2130. psql students LEFT JOIN majors
 
 ### 2130.1
+
+#### `***`
 
 It's showing all the columns from both tables, the two `major_id` columns are the same in each row for the ones that have it. You can see that there are some students without a major, and some majors without any students. The `FULL JOIN` you used will include **all** rows from both tables, whether or not they have a row using that foreign key in the other. From there, you could use any of the previous methods to narrow down, group, order, etc. Use a `LEFT JOIN` to join the same two tables in the same way.
 
