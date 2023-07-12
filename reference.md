@@ -4625,7 +4625,7 @@ Add a new column to `second_table`, give it a name of `name` and a data type of 
 
 Take a look at the details of second_table to see your columns.
 
-#### `ALTER TABLE table_name RENAME COLUMN column_name TO new_name;`
+#### `ALTER TABLE <table_name> RENAME COLUMN <column_name> TO <new_name>;`
 
 You can see the `VARCHAR` type there. The 30 means the data in it can be a max of 30 characters. You named that column `name`, it should have been `username`. Here's how you can rename a column:
 
@@ -4894,7 +4894,11 @@ View all the data again, but put it in order by character_id.
 
 It looks good. Next, you are going to add a primary key. It's a column that uniquely identifies each row in the table. Here's an example of how to set a PRIMARY KEY:
 
+```sql
 ALTER TABLE table_name ADD PRIMARY KEY(column_name);
+
+```
+
 The name column is pretty unique, why don't you set that as the primary key for this table.
 
 ####
@@ -4960,7 +4964,7 @@ Add a weight column. Give it a type of NUMERIC(4, 1). That data type is for deci
 
 Take a look at the details of more_info to see all your columns.
 
-#### `ALTER TABLE table_name ADD COLUMN column_name DATATYPE REFERENCES referenced_table_name(referenced_column_name);` Foreign
+#### `ALTER TABLE <table_name> ADD COLUMN <column_name> <DATATYPE> REFERENCES <referenced_table_name>(<referenced_column_name>);` Foreign
 
 There’s your four columns and the primary key you created at the bottom. To know what row is for a character, you need to set a foreign key so you can relate rows from this table to rows from your characters table. Here's an example that creates a column as a foreign key:
 
@@ -4974,7 +4978,7 @@ That's quite the command. In the more_info table, create a character_id column. 
 
 To set a row in more_info for Mario, you just need to set the character_id (foreign key) value to whatever it is in the characters table. Take a look at the details of more_info to see your foreign key.
 
-#### `ALTER TABLE table_name ADD UNIQUE(column_name);`
+#### `ALTER TABLE <table_name> ADD UNIQUE(<column_name>);`
 
 There's your foreign key at the bottom. These tables have a "one-to-one" relationship. One row in the characters table will be related to exactly one row in more_info and vice versa. Enforce that by adding the UNIQUE constraint to your foreign key. Here's an example:
 
@@ -5129,7 +5133,12 @@ CREATE TABLE table_name();
 
 Inside those parenthesis you can put columns for a table so you don't need to add them with a separate command, like this:
 
+```sq;
+
 CREATE TABLE table_name(column_name DATATYPE CONSTRAINTS);
+
+```
+
 Create a new table named sounds. Give it a column named sound_id of type SERIAL and a constraint of PRIMARY KEY.
 
 ####
@@ -5140,7 +5149,7 @@ View the tables in mario_database to make sure it worked.
 
 There's your sounds table. Add a column to it named filename. Make it a VARCHAR that has a max length of 40 and with constraints of NOT NULL and UNIQUE. You can put those constraints at the end of the query to add them all.
 
-#### `ALTER TABLE table_name ADD COLUMN column_name DATATYPE CONSTRAINT REFERENCES referenced_table_name(referenced_column_name);` one-to-many relationship
+#### `ALTER TABLE <table_name> ADD COLUMN <column_name> DATATYPE CONSTRAINT REFERENCES referenced_table_name(referenced_column_name);` one-to-many relationship
 
 You want to use character_id as a foreign key again. This will be a "one-to-many" relationship because one character will have many sounds, but no sound will have more than one character. Here's the example again:
 
@@ -5241,7 +5250,7 @@ This will be a foreign key as well. Set the action_id column you just added as a
 
 View the details of the character_actions table to see your keys.
 
-#### composite primary key `ALTER TABLE table_name ADD PRIMARY KEY(column1, column2);`
+#### composite primary key `ALTER TABLE <table_name> ADD PRIMARY KEY(<column1>, <column2> );`
 
 Every table should have a primary key. Your previous tables had a single column as a primary key. This one will be different. You can create a primary key from two columns, known as a composite primary key. Here's an example:
 
