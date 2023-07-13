@@ -4567,12 +4567,12 @@ There should be two tables in this database now. Display them again to make sure
 
 You can view more details about a table by adding the table name after the display command like this: `\d table_name`. View more details about your `second_table`.
 
-#### `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`
+#### `ALTER TABLE <table_name> ADD COLUMN <column_name> <DATATYPE>;`
 
 Tables need columns to describe the data in them, yours doesn't have any yet. Here's an example of how to add one:
 
 ```sql
-ALTER TABLE table_name ADD COLUMN column_name DATATYPE;
+ALTER TABLE <table_name> ADD COLUMN <column_name> <DATATYPE>;
 ```
 
 Add a column to `second_table` named `first_column`. Give it a data type of `INT`. `INT` stands for integer. Don't forget the semi-colon. 😄
@@ -4830,7 +4830,7 @@ Add two more rows. Give the first one the values: Toadstool, Mushroom Kingdom, a
 
 If you don't get a message after a command, it is likely incomplete. This is because you can put a command on multiple lines. Add two more rows. Give the first one the values: Daisy, Sarasaland, and Yellow. The second: Yoshi, Dinosaur Land, and Green. Try to do it with one command.
 
-#### `UPDATE table_name SET column_name=new_value WHERE condition;`
+#### `UPDATE <table_name> SET <column_name>=<new_value> WHERE <condition>;`
 
 Take a look at all the data in your table with SELECT to see where you stand.
 
@@ -4839,7 +4839,7 @@ Take a look at all the data in your table with SELECT to see where you stand.
 It looks good, but there's a few mistakes. You can change a value like this:
 
 ```sql
-UPDATE table_name SET column_name=new_value WHERE condition;
+UPDATE <table_name> SET <column_name>=<new_value> WHERE <condition>;
 ```
 
 You used username='Samus' as a condition earlier. SET Daisy's favorite_color to Orange. You can use the condition name='Daisy' to change her row.
