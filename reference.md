@@ -4969,7 +4969,7 @@ Take a look at the details of more_info to see all your columns.
 There’s your four columns and the primary key you created at the bottom. To know what row is for a character, you need to set a foreign key so you can relate rows from this table to rows from your characters table. Here's an example that creates a column as a foreign key:
 
 ```sql
-ALTER TABLE table_name ADD COLUMN column_name DATATYPE REFERENCES referenced_table_name(referenced_column_name);
+ALTER TABLE table_name ADD COLUMN <column_name> <DATATYPE> REFERENCES referenced_table_name(referenced_column_name);
 ```
 
 That's quite the command. In the more_info table, create a character_id column. Make it an INT and a foreign key that references the character_id column from the characters table. Good luck.
