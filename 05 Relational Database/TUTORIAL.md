@@ -26,7 +26,7 @@ Complete the tasks below
 - [x] Each table should have a primary key
 - [x] Each primary key should automatically increment
 - [x] Each table should have a `name` column
-- [ ] You should use the `INT` data type for at least two columns that are not a primary or foreign key
+- [x] You should use the `INT` data type for at least two columns that are not a primary or foreign key
 - [ ] You should use the `NUMERIC` data type at least once
 - [ ] You should use the `TEXT` data type at least once
 - [ ] You should use the `BOOLEAN` data type on at least two columns

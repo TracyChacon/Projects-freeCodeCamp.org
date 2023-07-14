@@ -21,7 +21,7 @@ DROP DATABASE universe;
 -- Name: universe; Type: DATABASE; Schema: -; Owner: postgres
 --
 
-CREATE DATABASE universe WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE = 'C.UTF-8';
+CREATE DATABASE universe WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'C.UTF-8' LC_CTYPE = 'C.UTF-8';
 
 
 ALTER DATABASE universe OWNER TO postgres;
@@ -44,14 +44,28 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
+-- Name: definitions; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.definitions (
+    term character varying(30) NOT NULL,
+    definition text,
+    part_of_speech character varying(25)
+);
+
+
+ALTER TABLE public.definitions OWNER TO postgres;
+
+--
 -- Name: galaxy; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.galaxy (
     galaxy_id integer NOT NULL,
-    name character varying(30),
+    name character varying(30) NOT NULL,
     supermassive_black_holes integer,
-    dist_nearest_galaxy integer
+    age_in_millions_of_years integer,
+    shape character varying(15)
 );
 
 
@@ -85,7 +99,11 @@ ALTER SEQUENCE public.galaxy_galaxy_id_seq OWNED BY public.galaxy.galaxy_id;
 
 CREATE TABLE public.moon (
     moon_id integer NOT NULL,
-    name character varying(30)
+    name character varying(30) NOT NULL,
+    dist_from_host_planet_in_km integer,
+    gravity integer,
+    mass_in_km numeric(22,0),
+    planet_id integer
 );
 
 
@@ -119,7 +137,12 @@ ALTER SEQUENCE public.moon_moon_id_seq OWNED BY public.moon.moon_id;
 
 CREATE TABLE public.planet (
     planet_id integer NOT NULL,
-    name character varying(30)
+    name character varying(30) NOT NULL,
+    dist_from_host_star_in_au integer,
+    num_of_moons integer,
+    goldilocks_zone boolean,
+    has_life boolean,
+    star_id integer
 );
 
 
@@ -153,9 +176,10 @@ ALTER SEQUENCE public.planet_planet_id_seq OWNED BY public.planet.planet_id;
 
 CREATE TABLE public.star (
     star_id integer NOT NULL,
-    name character varying(30),
+    name character varying(30) NOT NULL,
     temp integer,
-    mass integer
+    mass integer,
+    galaxy_id integer
 );
 
 
@@ -212,10 +236,16 @@ ALTER TABLE ONLY public.star ALTER COLUMN star_id SET DEFAULT nextval('public.st
 
 
 --
+-- Data for Name: definitions; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
 -- Data for Name: galaxy; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.galaxy VALUES (1, 'Milky Way', NULL, NULL);
+INSERT INTO public.galaxy VALUES (1, 'Milky Way', NULL, NULL, NULL);
 
 
 --
@@ -294,6 +324,30 @@ ALTER TABLE ONLY public.planet
 
 ALTER TABLE ONLY public.star
     ADD CONSTRAINT star_pkey PRIMARY KEY (star_id);
+
+
+--
+-- Name: moon moon_planet_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.moon
+    ADD CONSTRAINT moon_planet_id_fkey FOREIGN KEY (planet_id) REFERENCES public.planet(planet_id);
+
+
+--
+-- Name: planet planet_star_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.planet
+    ADD CONSTRAINT planet_star_id_fkey FOREIGN KEY (star_id) REFERENCES public.star(star_id);
+
+
+--
+-- Name: star star_galaxy_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.star
+    ADD CONSTRAINT star_galaxy_id_fkey FOREIGN KEY (galaxy_id) REFERENCES public.galaxy(galaxy_id);
 
 
 --
