@@ -23,7 +23,7 @@ Complete the tasks below
 
 - [x] You should create a database named `universe`
 - [x] Be sure to connect to your database with `\c universe`. Then, you should add tables named `galaxy`, `star`, `planet`, and `moon`
-- [ ] Each table should have a primary key
+- [x] Each table should have a primary key
 - [x] Each primary key should automatically increment
 - [x] Each table should have a `name` column
 - [x] You should use the `INT` data type for at least two columns that are not a primary or foreign key
@@ -35,13 +35,13 @@ Complete the tasks below
 - [x] Each "moon" should have a foreign key that references one of the rows in `planet`
 - [x] Your database should have at least five tables
 - [ ] Each table should have at least three rows+
-- [ ] The `galaxy` and `star` tables should each have at least six rows
-- [ ] The `planet` table should have at least 12 rows
-- [ ] The `moon` table should have at least 20 rows
+- [x] The `galaxy` and `star` tables should each have at least six rows
+- [x] The `planet` table should have at least 12 rows
+- [x] The `moon` table should have at least 20 rows
 - [x] Each table should have at least three columns
 - [x] The `galaxy`, `star`, `planet`, and `moon` tables should each have at least five columns
-- [ ] At least two columns per table should not accept `NULL` values
-- [ ] At least one column from each table should be required to be `UNIQUE`
+- [x] At least two columns per table should not accept `NULL` values
+- [x] At least one column from each table should be required to be `UNIQUE`
 - [x] All columns named `name` should be of type `VARCHAR`
 - [x] Each primary key column should follow the naming convention `table_name_id`. For example, the `moon` table should have a primary key column named `moon_id`
 - [x] Each foreign key column should have the same name as the column it is referencing
