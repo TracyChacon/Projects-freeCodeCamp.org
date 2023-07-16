@@ -6,9 +6,10 @@ This project is a database of celestial bodies, created using PostgreSQL. The da
 
 To rebuild the database, you can use the following commands:
 
-1. psql --username=<your_username_for_database> --dbname=universe
-2. \c universe
-3. \i universe.sql
+1. sudo su postgres (if super user needs to change roles)
+2. psql -U postgres < universe.sql
+3. psql --username=<your_username_for_database> --dbname=universe
+4. \c universe
 
 ## SUMMARY
 
