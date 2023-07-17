@@ -5133,7 +5133,7 @@ CREATE TABLE table_name();
 
 Inside those parenthesis you can put columns for a table so you don't need to add them with a separate command, like this:
 
-```sq;
+```sqL
 
 CREATE TABLE table_name(column_name DATATYPE CONSTRAINTS);
 
@@ -5149,12 +5149,12 @@ View the tables in mario_database to make sure it worked.
 
 There's your sounds table. Add a column to it named filename. Make it a VARCHAR that has a max length of 40 and with constraints of NOT NULL and UNIQUE. You can put those constraints at the end of the query to add them all.
 
-#### `ALTER TABLE <table_name> ADD COLUMN <column_name> DATATYPE CONSTRAINT REFERENCES referenced_table_name(referenced_column_name);` one-to-many relationship
+#### `ALTER TABLE <table_name> ADD COLUMN <column_name> <DATATYPE> REFERENCES referenced_table_name(referenced_column_name);` one-to-many relationship
 
 You want to use character_id as a foreign key again. This will be a "one-to-many" relationship because one character will have many sounds, but no sound will have more than one character. Here's the example again:
 
 ```sql
-ALTER TABLE table_name ADD COLUMN column_name DATATYPE CONSTRAINT REFERENCES referenced_table_name(referenced_column_name);
+ALTER TABLE table_name ADD COLUMN column_name <DATATYPE> REFERENCES referenced_table_name(referenced_column_name);
 ```
 
 Add a column to sounds named character_id. Give it the properties INT, NOT NULL, and set it as a foreign key that references character_id from characters.
