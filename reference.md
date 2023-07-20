@@ -3805,693 +3805,2434 @@ The terminal allows you to send text commands to your computer that can manipula
 
 In this 170-lesson course, you will learn terminal commands by creating a website boilerplate using only the command line.
 
-#### Build a Boilerplate
-
-In this 170-lesson course, you will learn terminal commands by creating a website boilerplate using only the command line.
-
 Create a GitHub account if you don't have one. You'll need it when you create the virtual Linux server machine. This process may take a few minutes.
 
-#### start terminal
+# Learn Bash by Building a Boilerplate
 
-The first thing you need to do is start the terminal.
+> Welcome to the Introduction to Bash lessons. I know it's scary, but you can do this!
 
-Do that by clicking the "hamburger" menu at the top left of the screen, going to the "terminal" section, and clicking "new terminal". Once you open a new one, type `echo hello terminal` into the terminal and press enter.
+## 5. Restart Terminal
 
-#### pwd
+### 5.1
 
-What you see in the terminal below is a folder (or directory) on this machine.
+**The first thing you need to do is start the terminal.** Do that by clicking the "hamburger" menu at the top left of the screen, going to the "terminal" section, and clicking "new terminal". Once you open a new one, type `echo hello terminal` into the terminal and press enter.
 
-Type pwd into the terminal and press enter to see the path of the folder. pwd stands for "print working directory".
+#### HINTS
 
-#### ls
+- Capitalization matters
+- If the tests don't run automatically, try typing `exit` into the terminal and redoing the instructions
 
-The output tells you where the folder you are in is located.
+## 10. Print Working Directory
 
-You are in the project folder, which is in the CodeAlly folder, which is in the home folder. Type ls into the terminal to see what's in this folder. ls stands for "list".
+### 10.1
 
-#### cd <folder_name>
+What you see in the terminal below is a folder (or directory) on this machine. Type `pwd` into the terminal and press enter to see the path of the folder. `pwd` stands for "print working directory".
 
-The output is showing everything in this folder.
+#### HINTS
 
-There's two folders here. You can use `cd <folder_name>` to go into a folder. cd stands for "change directory". Change to the freeCodeCamp directory.
+- Type `pwd` into the terminal and press enter
+- Make sure you are in the `project` folder when you enter the command
+- Enter `cd ~/project` to get to the `project` folder if you aren't there
 
-####
+## 20. List
 
-You are in the freecodecamp folder now.
-You may have noticed that the prompt changed to include it. Print the working directory of the freeCodeCamp folder to see the full path of where you are.
+### 20.1
 
-####
+The output tells you where the folder you are in is located. You are in the `project` folder, which is in the `CodeAlly` folder, which is in the `home` folder. Type `ls` into the terminal to see what's in this folder. `ls` stands for "list".
 
-You can see the path of the freeCodeCamp folder.
-It's in the project folder you were just in. List the contents of the freeCodeCamp folder to see what's here.
+#### HINTS
 
-####
+- Type `ls` into the terminal and press enter
+- Make sure you are in the `project` folder when you enter the command
+- Enter `cd ~/project` to get to the `project` folder if you aren't there
 
-There's two folders and three files here.
-The folders are blue and the files include their extension. Next, change to that test directory.
+## 30. Change Directory
 
-####
+### 30.1
 
-You can see you are in the test folder now.
-It shows test in the prompt. Print the full path of this directory. Remember that "folder" and "directory" are the same thing.
+The output is showing everything in this folder. There's two folders here. You can use `cd <folder_name>` to go into a folder. `cd` stands for "change directory". Change to the `freeCodeCamp` directory.
 
-####
+#### HINTS
 
-That's the path to the test folder, it's in the freeCodeCamp folder.
-List the contents of this folder.
+- Capitalization matters
+- Type `cd freeCodeCamp` into the terminal and press enter
+- Make sure you start in the `project` folder first
+- Enter `cd ~/project` to get to the `project` folder if you aren't there
 
-#### cd ..
+## 40. Print Working Directory
 
-These are all files. There's no more folders to go into here.
-You can use `cd ..` to go back a folder level. The two dots will take you back one level. Go back to the freeCodeCamp folder
+### 40.1
 
-####
+You are in the `freecodecamp` folder now. You may have noticed that the prompt changed to include it. Print the working directory of the `freeCodeCamp` folder to see the full path of where you are.
 
-test got removed from the prompt since you left that folder and you're back in the freeCodeCamp folder. List the contents of what's here to remind yourself.
+#### HINTS
 
-#### more <filename>
+- Use the "print working directory" command
+- Type `pwd` into the terminal and press enter
+- Make sure you are in the `freeCodeCamp` folder first
+- Enter `cd ~/project/freeCodeCamp` to get to the `freeCodeCamp` folder if you aren't there
 
-There's the test folder you were just in.
-You can see what's in a file with `more <filename>`. Use it to view what's in the package.json file.
+## 50. List
 
-####
+### 50.1
 
-It looks like a JSON object.
-You can empty the terminal with clear. The terminal looks a little cluttered, why don't you clear it.
+You can see the path of the `freeCodeCamp` folder. It's in the `project` folder you were just in. List the contents of the `freeCodeCamp` folder to see what's here.
 
-####
+#### HINTS
 
-Now you have a fresh screen 😄 List what's in here again.
+- Use the "list" command
+- Try typing `ls` into the terminal
+- Make sure you are in the `freeCodeCamp` folder first
+- Enter `cd ~/project/freeCodeCamp` to get to the `freeCodeCamp` folder if you aren't there
 
-####
+## 60. Change Directory
 
-You checked out the test folder and the package.json file. What next? Why don't you go into that node_modules directory.
+### 60.1
 
-####
+There's two folders and three files here. The folders are blue and the files include their extension. Next, change to that `test` directory.
 
-Now the prompt includes node_modules since that's where you are. List what's in the folder.
+#### HINTS
 
-#### -l flag to the "list" command
+- Use the "change directory" command
+- Here's an example: `cd folder-name`
+- Try entering `cd test`
+- Make sure you enter the command from the `freeCodeCamp` folder
+- Enter `cd ~/project/freeCodeCamp` to get to the `freeCodeCamp` folder if you aren't there
 
-That's a lot of folders.
+## 70. Print Working Directory
 
-You can add a flag to a command to use it different ways like this: ls `<flag>`. List the contents of the node_modules folder in "long list format". Do that by adding the -l flag to the "list" command.
+### 70.1
 
-####
+You can see you are in the `test` folder now. It shows `test` in the prompt. Print the full path of this directory. Remember that "folder" and "directory" are the same thing.
+
+#### HINTS
+
+- Use the "print working directory" command
+- Type `pwd` into the terminal
+- Make sure you are in the `test` folder first
+- Enter `cd ~/project/freeCodeCamp/test` to get to the `test` folder if you aren't there
+
+## 80. List
+
+### 80.1
+
+That's the path to the `test` folder, it's in the `freeCodeCamp` folder. **List** the contents of this folder.
+
+#### HINTS
+
+- Use the "list" command
+- Type `ls` into the terminal
+- Make sure you are in the `test` folder first
+- Enter `cd ~/project/freeCodeCamp/test` to get to the `test` folder if you aren't there
+
+## 90. Change Directory
+
+### 90.1
+
+These are all files. There's no more folders to go into here. You can use `cd ..` to go back a folder level. The two dots will take you back one level. Go back to the `freeCodeCamp` folder.
+
+#### HINTS
+
+- Use the "change directory" command
+- Type `cd ..` into the terminal end press enter
+- Type the command from the `test` folder
+- Enter `cd ~/project/freeCodeCamp/test` to get to the `test` folder if you aren't there
+
+## 100. List
+
+### 100.1
+
+`test` got removed from the prompt since you left that folder and you're back in the `freeCodeCamp` folder. List the contents of what's here to remind yourself.
+
+#### HINTS
+
+- Use the "list" command
+- Type `ls` into the terminal
+- Make sure you are in the `freeCodeCamp` folder first
+- Enter `cd ~/project/freeCodeCamp` to get to the `freeCodeCamp` folder if you aren't there
+
+## 110. More
+
+### 110.1
+
+There's the `test` folder you were just in. You can see what's in a file with `more <filename>`. Use it to view what's in the `package.json` file.
+
+#### HINTS
+
+- Type `more package.json` into the terminal
+- Press enter until you have seen the whole file
+- Make sure you are in the `freeCodeCamp` folder first
+- Enter `cd ~/project/freeCodeCamp` to get to the `freeCodeCamp` folder if you aren't there
+
+## 120. Clear
+
+### 120.1
+
+It looks like a JSON object. You can empty the terminal with `clear`. The terminal looks a little cluttered, why don't you clear it.
+
+#### HINTS
+
+- Commands are case sensitive
+- Enter `clear` into the terminal
+
+## 130. List
+
+### 130.1
+
+Now you have a fresh screen :smile: List what's in here again.
+
+#### HINTS
+
+- Use the "list" command
+- Enter `ls` into the terminal
+- Make sure you are in the `freeCodeCamp` folder first
+- Enter `cd ~/project/freeCodeCamp` to get to the `freeCodeCamp` folder if you aren't there
+
+## 140. Change Directory
+
+### 140.1
+
+You checked out the `test` folder and the `package.json` file. What next? Why don't you go into that `node_modules` directory.
+
+#### HINTS
+
+- Use the "change directory" command
+- Here's an example: `cd <folder_name>`
+- Enter `cd node_modules` into the terminal
+- Enter `cd ~/project/freeCodeCamp` to get back to the `freeCodeCamp` folder and try again
+
+## 150. List
+
+### 150.1
+
+Now the prompt includes `node_modules` since that's where you are. List what's in the folder.
+
+#### HINTS
+
+- Use the "list" command
+- Enter `ls` into the terminal
+- Make sure you are in the `node_modules` folder first
+- Enter `cd ~/project/freeCodeCamp/node_modules` to get to the `node_modules` folder if you aren't there
+
+## 160. Long List Format
+
+### 160.1
+
+That's a lot of folders. You can add a **flag** to a command to use it different ways like this: `ls <flag>`. List the contents of the `node_modules` folder in "long list format". Do that by adding the `-l` flag to the "list" command.
+
+#### HINTS
+
+- Use the "list" command
+- Add the `-l` flag to the command
+- That's a lowercase letter `l`, not the number `1`
+- Enter `ls -l` into the terminal
+- Make sure you are in the `node_modules` folder first
+- Enter `cd ~/project/freeCodeCamp/node_modules` to get to the `node_modules` folder if you aren't there
+
+## 170. Change Directory
+
+### 170.1
 
 It is showing more details about each item in here and it's a little easier to read. One of the folders is named `has`, why don't you change into it.
 
-####
+#### HINTS
 
-You are now in the has folder. List its contents.
+- Use the "change directory" command
+- Enter `cd has` into the terminal
+- Enter the command from the `node_modules` folder
+- Enter `cd ~/project/freeCodeCamp/node_modules` to get to the `node_modules` folder if you aren't there
 
-####
+## 180. List
 
-There's a few files and folders here. Can you tell the difference? Take a look at more of that README.md file.
+### 180.1
 
-####
+You are now in the `has` folder. List its contents.
+
+#### HINTS
+
+- Use the "list" command
+- Enter `ls` into the terminal
+- Enter the command from the `has` folder first
+- Enter `cd ~/project/freeCodeCamp/node_modules/has` to get to the `has` folder if you aren't there
+
+## 181. More
+
+### 181.1
+
+There's a few files and folders here. Can you tell the difference? Take a look at **more** of that `README.md` file.
+
+#### HINTS
+
+- Commands and filenames are case sensitive
+- Use the "more" command
+- Enter `more README.md` into the terminal
+- Press "enter" until you have seen the whole file
+- Make sure you are in the `has` folder first
+- Enter `cd ~/project/freeCodeCamp/node_modules/has` to get to the `has` folder if you aren't there
+
+## 182. List
+
+### 182.1
 
 Nothing noteworthy in there. You can't see what's in the here anymore, list the contents again.
 
-####
+#### HINTS
 
-That one file doesn't appear to have an extension. Strange. Take a look at more of the that "license" file that doesn't show an ex
+- Use the "list" command
+- Enter `ls` into the terminal
+- Make sure you are in the `has` folder first
+- Enter `cd ~/project/freeCodeCamp/node_modules/has` to get to the `has` folder if you aren't there
 
-####
+## 183. More
+
+### 183.1
+
+That one file doesn't appear to have an extension. Strange. Take a look at **more** of the that "license" file that doesn't show an extension.
+
+#### HINTS
+
+- Use the "more" command
+- Enter `more LICENSE-MIT` into the terminal
+- Press "enter" until you have seen the whole file
+- Make sure you are in the `has` folder first
+- Enter `cd ~/project/freeCodeCamp/node_modules/has` to get to the `has` folder if you aren't there
+
+## 184. Clear
+
+### 184.1
 
 Pretend you read all that. It looks a little messy in here again so why don't you clear the terminal.
 
-####
+#### HINTS
+
+- Use the "clear" command
+- Enter `clear` into the terminal
+
+## 185. List
+
+### 185.1
 
 Better. Remind yourself what's in here with the list command.
 
-####
+#### HINTS
 
-Go into that src directory to see what you can find in there.
+- Use the "list" command
+- Enter `ls` into the terminal
+- Make sure you are in the `has` folder first
+- Enter `cd ~/project/freeCodeCamp/node_modules/has` to get to the `has` folder if you aren't there
 
-####
+## 190. Change Directory
+
+### 190.1
+
+Go into that `src` directory to see what you can find in there.
+
+#### HINTS
+
+- Use the "change directory" command
+- Enter `cd src` into the terminal
+- Make sure you are in the `has` folder first
+- Enter `cd ~/project/freeCodeCamp/node_modules/has` to get to the `has` folder if you aren't there
+
+## 200. Print Working Directory
+
+### 200.1
 
 View the full path of this folder.
 
-#### /
+#### HINTS
 
-Getting deeper still. You can see that each new folder has a / in front of it. Take a look at what's in this folder.
+- Use the "print working directory" command
+- Enter `pwd` into the terminal
+- Make sure you are in the `src` folder
+- Enter `cd ~/project/freeCodeCamp/node_modules/has/src` to get to the `src` folder if you aren't there
 
-####
+## 210. List
 
-Only one file here. Show me what's in it with more.
+### 210.1
 
-####
+Getting deeper still. You can see that each new folder has a `/` in front of it. Take a look at what's in this folder.
 
-It's some JavaScript 😄 I think you've fooled around enough. Why don't you navigate out of here. Change back to the has directory.
+#### HINTS
 
-####
+- Use the "list" command
+- Enter `ls` into the terminal
+- Make sure you are in the `src` folder first
+- Enter `cd ~/project/freeCodeCamp/node_modules/has/src` to get to the `src` folder if you aren't there
 
-You're getting pretty good. Change back to the node_modules directory.
+## 220. More
 
-#### cd ../..
+### 220.1
 
-You can go back two folders with `cd ../..`. Each set of dots represents another folder level. Go back to the project directory from the node_modules directory.
+Only one file here. Show me what's in it with `more`.
 
-####
+#### HINTS
 
-You are back in the project folder where you started. List what's in here again.
+- Use the `more` command
+- Here's and example: `more filename`
+- Enter `more index.js` into the terminal
+- Press enter until you've seen all the content
+- Make sure you are in the `src` folder first
+- Enter `cd ~/project/freeCodeCamp/node_modules/has/src` to get to the `src` folder if you aren't there
 
-####
+## 230. Change Directory
+
+### 230.1
+
+It's some JavaScript :smile: I think you've fooled around enough. Why don't you navigate out of here. Change back to the `has` directory.
+
+#### HINTS
+
+- Use the "change directory" command
+- Add `..` after `cd` to go back a folder
+- Type `cd ..` into the terminal
+- Make sure you are in the `src` folder first
+- Enter `cd ~/project/freeCodeCamp/node_modules/has/src` to get to the `src` folder if you aren't there
+
+## 240. Change Directory
+
+### 240.1
+
+You're getting pretty good. Change back to the `node_modules` directory.
+
+#### HINTS
+
+- Use the same `cd` command as the last lesson
+- You can press the up arrow to cycle through previous commands
+- Type `cd ..` into the terminal
+- Make sure you are in the `has` folder first
+- Enter `cd ~/project/freeCodeCamp/node_modules/has` to get to the `has` folder if you aren't there
+
+## 250. Change Directory
+
+### 250.1
+
+You can go back two folders with `cd ../..`. Each set of dots represents another folder level. Go back to the `project` directory from the `node_modules` directory.
+
+#### HINTS
+
+- Be sure to go back two folders with one command
+- Type `cd ../..` into the terminal from the `node_modules` folder
+- Make sure you go from `node_modules` to `project`
+- Enter `cd ~/project/freeCodeCamp/node_modules` to get to the `node_modules` folder if you aren't there
+
+## 260. List
+
+### 260.1
+
+You are back in the `project` folder where you started. List what's in here again.
+
+#### HINTS
+
+- Use the "list" command
+- Enter `ls` into the terminal
+- Make sure you are in the `project` folder first
+- Enter `cd ~/project` to get to the `project` folder if you aren't there
+
+## 270. Clear
+
+### 270.1
 
 That's right. Why don't you get a fresh start by clearing the terminal.
 
-#### mkdir
+#### HINTS
 
-You will be making a website boilerplate. You can make a new folder with mkdir `<folder_name>`. mkdir stands for "make directory". Make a `website` directory in this project folder. Remember that "directory" and "folder" mean the same thing.
+- Use the "clear" command
+- Enter `clear` into the terminal
 
-####
+## 280. Make Directory
+
+### 280.1
+
+You will be making a website boilerplate. You can make a new folder with `mkdir <folder_name>`. `mkdir` stands for "make directory". Make a `website` directory in this `project` folder. Remember that "directory" and "folder" mean the same thing.
+
+#### HINTS
+
+- Enter `mkdir website` into the terminal
+- Make sure to make it in the `project` folder
+- Don't try to create it with a different method
+- Make sure you are in the `project` folder first
+- Enter `cd ~/project` to get to the `project` folder if you aren't there
+
+## 285. List
+
+### 285.1
 
 List what's here to make sure it got created.
 
-####
+#### HINTS
 
-It worked. The website files will be in the new directory. Change to the website directory so you can start creating them.
+- Use the "list" command
+- Enter `ls` into the terminal
+- Make sure you are in the `project` folder first
+- Enter `cd ~/project` to get to the `project` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 290. Change Directory
 
-List the contents of the website folder.
+### 290.1
 
-#### echo
+It worked. The website files will be in the new directory. Change to the `website` directory so you can start creating them.
+
+#### HINTS
+
+- Use the "change directory" command
+- Enter `cd website` into the terminal
+- Enter the command from the `project` folder
+- Enter `cd ~/project` to get to the `project` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 300. List
+
+### 300.1
+
+List the contents of the `website` folder.
+
+#### HINTS
+
+- Use the "list" command
+- Enter `ls` into the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 310. Echo
+
+### 310.1
 
 It's brand new, there's nothing in it yet. The `echo` command lets you print anything to the terminal. You used it in the first lesson. Just type what you want to print after it. Use it to print `hello website` to the terminal.
 
-#### touch
+#### HINTS
 
-Websites usually have an index.html file. You can use `touch <filename>` to create a new file. Create `index.html` in the website folder.
+- Here's an example: `echo <text_here>`
+- Capitalization matters
+- Enter `echo hello website` into the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 320. Touch
 
-They usually have a CSS file as well. Create `styles.css` in the website folder using the same method.
+### 320.1
 
-####
+Websites usually have an `index.html` file. You can use `touch <filename>` to create a new file. Create `index.html` in the `website` folder.
 
-List the contents of the website folder to make sure they got created.
+#### HINTS
 
-####
+- Be sure to include the filename and extension
+- Don't try to create the file with another method
+- Capitalization matters
+- Enter `touch index.html` into the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-There they are. Next is a JavaScript file. Create `index.js` in the website folder with the method you have been using.
+## 330. Touch
 
-#### git respository
+### 330.1
 
-You might turn this into a git repository. Create `.gitignore` in the website folder with the same method.
+They usually have a CSS file as well. Create `styles.css` in the `website` folder using the same method.
 
-####
+#### HINTS
 
-List the contents of the website folder to see your new files.
+- Use the "touch" command
+- Here's an example: `touch <filename>`
+- Don't try to create the file with another method
+- Enter `touch styles.css` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-#### help flag
+## 340. List
 
-There's three files, but where's the `.gitignore file`? I think it's hidden. Most commands have a `--help` flag to show what the command can do. Display the "help" menu for the `ls` command. Here's an example: `command <flag>`
+### 340.1
 
-#### --all, -a flag
+List the contents of the `website` folder to make sure they got created.
 
-Scroll through the menu to see the flags that go with ls. The flag you are looking for is `--all`, or `-a` for short. List all the contents of the website folder using the correct flag.
+#### HINTS
 
-#### hiden files
+- Use the `list` command
+- Enter `ls` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-There's the hidden file. Do you see it? It didn't display before. It also includes . and ... You used cd .. to go back a folder earlier. Change to the . directory.
+## 350. Touch
 
-####
+### 350.1
 
-You didn't go anywhere. The `. `takes you to the folder you are in, and `..` takes you back, or up, a folder. Websites need some images. Create `background.jpg` in the website folder.
+There they are. Next is a JavaScript file. Create `index.js` in the `website` folder with the method you have been using.
 
-####
+#### HINTS
 
-Next, add a header image. Create `header.png` in the website folder.
+- Use the "touch" command
+- Here's an example: `touch <filename>`
+- Don't try to create the file with another method
+- Enter `touch index.js` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 360. Touch
 
-Finally, create footer.jpeg in the website folder.
+### 360.1
 
-####
+You might turn this into a git repository. Create `.gitignore` in the `website` folder with the same method.
 
-Use the list command to check out the images you just added.
+#### HINTS
 
-#### Looks like images show up in pink
+- Use the "touch" command
+- Here's an example: `touch <filename>`
+- Don't try to create the file with another method
+- Enter `touch .gitignore` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-Looks like images show up in pink. There's also three fonts to use for the website. The first one is "roboto". Create `roboto.font` in the website folder.
+## 370. List
 
-####
+### 370.1
 
-The next one is "lato". Create `lato.font` in the website folder.
+List the contents of the `website` folder to see your new files.
 
-####
+#### HINTS
 
-Lastly, create `menlo.font` in the website folder.
+- Use the `list` command
+- Make sure you are in the `website` folder
+- Enter `ls` in the terminal
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 380. Help
+
+### 380.1
+
+There's three files, but where's the `.gitignore` file? I think it's hidden. Most commands have a `--help` flag to show what the command can do. Display the "help" menu for the `ls` command. Here's an example: `command <flag>`
+
+#### HINTS
+
+- Use the `list` command with the "help" flag
+- You previously used: `ls -l`
+- Enter `ls --help` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 390. List All
+
+### 390.1
+
+Scroll through the menu to see the flags that go with `ls`. The flag you are looking for is `--all`, or `-a` for short. List **all** the contents of the `website` folder using the correct flag.
+
+#### HINTS
+
+- Use the `list` command with the "all" flag
+- Here's an exmple: `command <flag>`
+- Enter `ls -a` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 400. Change Directory
+
+### 400.1
+
+There's the hidden file. Do you see it? It didn't display before. It also includes `.` and `..`. You used `cd ..` to go back a folder earlier. Change to the `.` directory.
+
+#### HINTS
+
+- Use the "change directory" command
+- Enter `cd .` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 410. Touch
+
+### 410.1
+
+You didn't go anywhere. The `.` takes you to the folder you are in, and `..` takes you back, or up, a folder. Websites need some images. Create `background.jpg` in the `website` folder.
+
+#### HINTS
+
+- Use the "touch" command
+- Here's an example: `touch <filename>`
+- Don't try to create the file with another method
+- Enter `touch background.jpg` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 420. Touch
+
+### 420.1
+
+Next, add a header image. Create `header.png` in the `website` folder.
+
+#### HINTS
+
+- Use the "touch" command
+- Here's an example: `touch <filename>`
+- Don't try to create the file with another method
+- Enter `touch header.png` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 430. Touch
+
+### 430.1
+
+Finally, create `footer.jpeg` in the `website` folder.
+
+#### HINTS
+
+- Use the "touch" command
+- Here's an example: `touch <filename>`
+- Don't try to create the file with another method
+- Enter `touch footer.jpeg` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 440. List
+
+### 440.1
+
+Use the **list** command to check out the images you just added.
+
+#### HINTS
+
+- Use the "list" command
+- Enter `ls` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 450. Touch
+
+### 450.1
+
+Looks like images show up in pink. There's also three fonts to use for the website. The first one is "roboto". Create `roboto.font` in the `website` folder.
+
+#### HINTS
+
+- Use the "touch" command
+- Don't try to create the file with another method
+- Enter `touch roboto.font` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 460. Touch
+
+### 460.1
+
+The next one is "lato". Create `lato.font` in the `website` folder.
+
+#### HINTS
+
+- Use the "touch" command
+- Don't try to create the file with another method
+- Enter `touch lato.font` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 470. Touch
+
+### 470.1
+
+Lastly, create `menlo.font` in the `website` folder.
+
+#### HINTS
+
+- Use the "touch" command
+- Don't try to create the file with another method
+- Enter `touch menlo.font` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 480. List
+
+### 480.1
 
 List the contents of this folder to see your new font files.
 
-####
+#### HINTS
 
-Your three font files are there. There's three icons for the website as well. Create `CodeAlly.svg` in the website folder.
+- Use the "list" command
+- Enter `ls` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 490. Touch
+
+### 490.1
+
+Your three font files are there. There's three icons for the website as well. Create `CodeAlly.svg` in the `website` folder.
+
+#### HINTS
+
+- Capitalization matters
+- Use the "touch" command
+- Don't try to create the file with another method
+- Enter `touch CodeAlly.svg` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 500. Touch
+
+### 500.1
 
 Next, create `CodeRoad.svg` in the `website` folder.
 
-####
+#### HINTS
+
+- Capitalization matters
+- Use the "touch" command
+- Don't try to create the file with another method
+- Enter `touch CodeRoad.svg` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 510. Touch
+
+### 510.1
 
 Finally, create `freeCodeCamp.svg` in the `website` folder.
 
-####
+#### HINTS
+
+- Capitalization matters
+- Use the "touch" command
+- Don't try to create the file with another method
+- Enter `touch freeCodeCamp.svg` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 520. List
+
+### 520.1
 
 Check out the new icons you just added by listing the contents of the folder they are in.
 
-####
+#### HINTS
 
-The icons are pink as well. I think the images should go in a separate folder to clean it up a little. Make an images directory in the website folder to put them in.
+- Use the "list" command
+- Enter `ls` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 530. Make Directory
+
+### 530.1
+
+The icons are pink as well. I think the images should go in a separate folder to clean it up a little. Make an `images` directory in the `website` folder to put them in.
+
+#### HINTS
+
+- Use the "make directory" command
+- It's the `mkdir` command
+- Add the folder name after the command
+- Here's an example: `mkdir <folder_name>`
+- Enter `mkdir images` into the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 540. List
+
+### 540.1
 
 List the contents of the `website` folder to make sure your new folder is there.
 
-#### cp, copy a file
+#### HINTS
 
-There's your new images folder. It's blue. You can copy a file with `cp <file> <destination>`. cp stands for "copy". Copy `background.jpg` to your images folder.
+- Use the "list" command
+- Enter `ls` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 550. Copy
+
+### 550.1
+
+There's your new `images` folder. It's blue. You can copy a file with `cp <file> <destination>`. `cp` stands for "copy". Copy `background.jpg` to your `images` folder.
+
+#### HINTS
+
+- Enter `cp background.jpg images` into the terminal
+- Don't try to use a different method to copy it
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 560. Change Directory
+
+### 560.1
 
 Better make sure it worked. Change to the `images` directory.
 
-####
+#### HINTS
+
+- Use the "change directory" command
+- Enter `cd images` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 570. List
+
+### 570.1
 
 List the contents to see if `background.jpg` is here.
 
-####
+#### HINTS
 
-There it is. Looks like the copy worked. Change back to the website directory so you can copy the other ones.
+- Use the "list" command
+- Make sure you are in the `images` folder
+- Enter `ls` in the terminal
+- Make sure you are in the `images` folder first
+- Enter `cd ~/project/website/images` to get to the `images` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 580. Change Directory
+
+### 580.1
+
+There it is. Looks like the copy worked. Change back to the `website` directory so you can copy the other ones.
+
+#### HINTS
+
+- Use the "change directory" command
+- Add `..` to the command to go back a folder
+- Enter `cd ..` in the terminal
+- Make sure you are in the `images` folder first
+- Enter `cd ~/project/website/images` to get to the `images` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 585. List
+
+### 585.1
 
 Remind yourself of the files here by listing the contents.
 
-#### remove files with rm
+#### HINTS
 
-You copied the background image to the images folder so you don't need the one here anymore. You can remove a file with `rm <filename>`. Remove `background.jpg` from the website folder.
+- Use the "list" command
+- Enter `ls` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 590. Remove
+
+### 590.1
+
+You copied the background image to the `images` folder so you don't need the one here anymore. You can remove a file with `rm <filename>`. Remove `background.jpg` from the `website` folder.
+
+#### HINTS
+
+- Enter `rm background.jpg` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 600. List
+
+### 600.1
 
 List the contents to make sure it's gone.
 
-####
+#### HINTS
+
+- Use the "list" command
+- Enter `ls` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 610. Copy
+
+### 610.1
 
 Okay, it's gone. Next, copy `header.png` to the `images` folder.
 
-####
+#### HINTS
+
+- Here's the example again: `cp <file> <destination>`
+- You previously used `cp background.jpg images`
+- Don't try to use a different method to copy it
+- Enter `cp header.png images`
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 620. Copy
+
+### 620.1
 
 Last, copy the "footer" image to the `images` folder.
 
-####
+#### HINTS
 
-All the images should be copied over. Change to the images directory so you can make sure.
+- Here's the example again: `cp <file> <destination>`
+- You previously used `cp header.png images`
+- Don't try to use a different method to copy it
+- Enter `cp footer.jpeg images`
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 630. Change Directory
+
+### 630.1
+
+All the images should be copied over. Change to the `images` directory so you can make sure.
+
+#### HINTS
+
+- Use the "change directory" command
+- Add the path of where you want to go to the command
+- Enter `cd images` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 640. List
+
+### 640.1
 
 Check if the images are here by listing the contents.
 
-####
+#### HINTS
+
+- Use the "list" command
+- Enter `ls` in the terminal
+- Make sure you are in the `images` folder first
+- Enter `cd ~/project/website/images` to get to the `images` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 650. Change Directory
+
+### 650.1
 
 They all made it here. Go back to the `website` folder so you can delete the original files.
 
-####
+#### HINTS
+
+- Use the "change directory" command
+- Add `..` to the command to go back a folder
+- Enter `cd ..` in the terminal
+- Make sure you are in the `images` folder first
+- Enter `cd ~/project/website/images` to get to the `images` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 660. List
+
+### 660.1
 
 List the contents to remind yourself of the filenames to delete.
 
-####
+#### HINTS
+
+- Use the "list" command
+- Enter `ls` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 670. Remove
+
+### 670.1
 
 There's two that you don't need anymore. Remove the "header" image file from the `website` folder since you copied to the images folder.
 
-####
+#### HINTS
+
+- Use the "remove" command
+- Here's an example: `rm <filename>`
+- You previously used `rm background.jpg`
+- It's the `header.png` file
+- Enter `rm header.png` in the terminal
+- Don't try to use a different method to delete the file
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 680. Remove
+
+### 680.1
 
 It should be gone. Remove the "footer" image from the `website` folder as well.
 
-####
+#### HINTS
 
-List the contents of the website folder to check if they are gone.
+- Use the "remove" command
+- You previously used `rm header.png`
+- The file to remove is `footer.jpg`
+- Don't try to use a different method to delete the file
+- Enter `rm footer.jpeg` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-#### Use mv to rename file
+## 690. List
 
-Looks like they're all deleted. There was a mistake with the extensions for the font files. You can rename them with `mv` like this: `mv <filename> <new_filename>`. mv stands for "move", it can rename or move something. Rename `roboto.font` to `roboto.woff`.
+### 690.1
 
-####
+List the contents of the `website` folder to check if they are gone.
+
+#### HINTS
+
+- Use the "list" command
+- Enter `ls` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 700. Rename
+
+### 700.1
+
+Looks like they're all deleted. There was a mistake with the extensions for the font files. You can rename them with `mv` like this: `mv <filename> <new_filename>`. `mv` stands for "move", it can **rename or move** something. Rename `roboto.font` to `roboto.woff`.
+
+#### HINTS
+
+- Enter `mv roboto.font roboto.woff`
+- Don't try to rename it with other methods
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 710. List
+
+### 710.1
 
 Use "list" to check if it worked.
 
-####
+#### HINTS
+
+- Use the "list" command
+- Enter `ls` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 720. Rename
+
+### 720.1
 
 Do you see the "roboto" font? The rename worked. Next, rename the "lato" font file to `lato.ttf`.
 
-####
+#### HINTS
 
-Lastly, rename the "menlo" font to menlo.otf.
+- Use the "move" command to rename a file
+- Here's the example: `mv <filename> <new_filename>`
+- You previously used: `mv roboto.font roboto.woff`
+- It's the `lato.font` file
+- Don't try to rename it with other methods
+- Enter `mv lato.font lato.ttf`
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 730. Rename
+
+### 730.1
+
+Lastly, rename the "menlo" font to `menlo.otf`.
+
+#### HINTS
+
+- Use the "move" command to rename a file
+- Here's the example: `mv <filename> <new_filename>`
+- You previously used: `mv lato.font lato.ttf`
+- It's the `menlo.font` file
+- Don't try to rename it with other methods
+- Enter `mv menlo.font menlo.otf`
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 740. List
+
+### 740.1
 
 Use the "list" command to make sure those last two got renamed.
 
-####
+#### HINTS
+
+- Use the "list" command
+- Enter `ls` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 750. Make Directory
+
+### 750.1
 
 Take a look at the files to make sure they got renamed. Those font files could be organized into a folder as well. Make a `fonts` directory in the `website` folder to put them in.
 
-####
+#### HINTS
 
-List the contents of the website folder to make sure your new folder is there.
+- Use the "make directory" command
+- It's the `mkdir` command
+- Here's an example: `mkdir <directory_name>`
+- Don't try to create the folder with another method
+- Enter `mkdir fonts` into the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-#### Use `mv` to move files
+## 755. List
+
+### 755.1
+
+List the contents of the `website` folder to make sure your new folder is there.
+
+#### HINTS
+
+- Use the "list" command
+- Enter `ls` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 760. Move
+
+### 760.1
 
 See it? You renamed the font files with `mv`, you can also move files with it. Move the "roboto" font to the new `fonts` folder. Here's an example: `mv <file> <destination>`.
 
-#### Use `find`
+#### HINTS
 
-You can use find to find things or view a file tree. Enter find to view the file tree of the website folder to see all the files and folders within it.
+- Use the "move" command
+- The file to move is `roboto.woff`
+- Don't try to move the file with another method
+- Enter `mv roboto.woff fonts`
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 770. Find
 
-You can see everything in this website folder and its descendant folders. Notice that they all start with `./` to represent this folder. You can see that your font moved to the `fonts` folder. Next, move the "lato" font to the `fonts` folder.
+### 770.1
 
-####
+You can use `find` to find things or view a file tree. Enter `find` to view the file tree of the `website` folder to see all the files and folders within it.
 
-There's one more font to move. Move the "menlo" font to the fonts folder.
+#### HINTS
 
-####
+- Use the "find" command
+- Make sure you are in the `website` folder
+- Enter `find` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 780. Move
+
+### 780.1
+
+You can see everything in this `website` folder and its descendant folders. Notice that they all start with `./` to represent this folder. You can see that your font moved to the `fonts` folder. Next, move the "lato" font to the `fonts` folder.
+
+#### HINTS
+
+- Use the "move" command
+- Here's an example: `mv <file> <destination>`
+- The file to move is `lato.ttf`
+- You previously used: `mv roboto.woff fonts`
+- Don't try to move the file with another method
+- Enter `mv lato.ttf fonts`
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 790. Move
+
+### 790.1
+
+There's one more font to move. Move the "menlo" font to the `fonts` folder.
+
+#### HINTS
+
+- Use the "move" command
+- Here's an example: `mv <file> <destination>`
+- The file to move is `menlo.otf`
+- You previously used: `mv lato.ttf fonts`
+- Don't try to move the file with another method
+- Enter `mv menlo.otf fonts`
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 800. Find
+
+### 800.1
 
 Use `find` again to list the whole file tree and make sure those two got moved.
 
-####
+#### HINTS
 
-Yes, you can see them all in the fonts folder. Let's organize some more. Make a `client` directory in the website folder for the client side files.
+- Use the "find" command
+- Enter `find` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-#### Using Paths
+## 850. Make Directory
+
+### 850.1
+
+Yes, you can see them all in the `fonts` folder. Let's organize some more. Make a `client` directory in the `website` folder for the client side files.
+
+#### HINTS
+
+- Use the "make directory" command
+- Here's an example: `mkdir <directory_name>`
+- Enter `mkdir client` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 860. Make Directory
+
+### 860.1
 
 You can make a folder in that `client` folder from here by adding it to the path like this: `mkdir client/<new_folder_name>`. Make a `src` directory in the `client` folder from here.
 
-####
+#### HINTS
+
+- Use the "make directory" command
+- Enter `mkdir client/src` from the `website` folder
+- Don't try to create the folder with another method
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 870. Move
+
+### 870.1
 
 You can move files all the way across the system from here with the right path. Move `index.html` to the `client/src` folder from here.
 
-####
+#### HINTS
 
-Use find to view the file tree and make sure it moved.
+- Use the "move" command
+- You previously used: `mv menlo.otf fonts`
+- Enter `mv index.html client/src` from the `website` folder
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 880. Find
 
-Can you see the `index.html` file in your new `src` folder? Looks like it moved 😄 There's some more files that can go in the `src` folder. Move `index.js` to it from here.
+### 880.1
 
-####
+Use `find` to view the file tree and make sure it moved.
+
+#### HINTS
+
+- Use the "find" command
+- Enter `find` in the terminal
+- Make sure you are in the `website` folder
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 890. Move
+
+### 890.1
+
+Can you see the `index.html` file in your new `src` folder? Looks like it moved :smile: There's some more files that can go in the `src` folder. Move `index.js` to it from here.
+
+#### HINTS
+
+- Use the "move" command
+- You previously used: `mv index.html client/src`
+- Enter `mv index.js client/src` from the `website` folder
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 900. Move
+
+### 900.1
 
 Last is the CSS file. Move `styles.css` to the `src` folder.
 
-####
+#### HINTS
+
+- Use the "move" command
+- Don't try to move the file with another method
+- You've used `mv index.js client/src` to move a file
+- Enter `mv styles.css client/src` from the `website` folder
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 910. Find
+
+### 910.1
 
 Seems like you can do anything right from here. Take another look at the tree with `find`.
 
-#### `find <folder_name>`
+#### HINTS
 
-Things are looking more organized 😄 You can use `find <folder_name>` to display the tree of a different folder. View the file tree of the client folder from the website folder.
+- Use the "find" command
+- Enter `find` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 920. Find Subfolder
 
-Now you just see what's in the client folder. What else can find do? View the "help" menu of the `find` command to look around.
+### 920.1
 
-#### `find -name <filename>`
+Things are looking more organized :smile: You can use `find <folder_name>` to display the tree of a different folder. View the file tree of the `client` folder from the `website` folder.
 
-The menu isn't very pretty, but there's a `-name` flag in there. You can use it to search for something with `find -name <filename>`. Use find with the `-name` flag to search for `index.html`.
+#### HINTS
 
-####
+- Use the "find" command
+- Add `client` at the end of the command
+- Enter `find client` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 930. Find
+
+### 930.1
+
+Now you just see what's in the `client` folder. What else can `find` do? View the "help" menu of the `find` command to look around.
+
+#### HINTS
+
+- Use the "find" command with the "help" flag
+- The help flag is: `--help`
+- You previously used `ls --help`
+- Enter `find --help` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 940. Find
+
+### 940.1
+
+The menu isn't very pretty, but there's a `-name` flag in there. You can use it to search for something with `find -name <filename>`. Use `find` with the `-name` flag to search for `index.html`.
+
+#### HINTS
+
+- Enter `find -name index.html` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 950. Find
+
+### 950.1
 
 It shows you where that file is. Using the same command, find where the `styles.css` file is.
 
-####
+#### HINTS
+
+- Use the "find" command with the "name" flag and the filename
+- The name flag is: `-name`
+- You previously used `find -name index.html`
+- Enter `find -name style.css` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 960. Find
+
+### 960.1
 
 You can search for folders with it, as well. Using the same command and flag, find the `src` folder.
 
-####
+#### HINTS
 
-😄 View the file tree of the website folder to see what else you need to do.
+- Use the "find" command with the "name" flag
+- The name flag is: `-name`
+- You previously used `find -name index.html`
+- Enter `find -name src` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 970. Find
 
-What's next? More organizing! You should put all the assets in one spot. Change into the client folder.
+### 970.1
 
-####
+:smile: View the file tree of the `website` folder to see what else you need to do.
 
-Make a new directory named `assets` in the client folder.
+#### HINTS
 
-####
+- Use the "find" command
+- Don't use any flags this time
+- Enter `find` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-Change into the new assets folder.
+## 980. Change Directory
 
-####
+### 980.1
+
+What's next? More organizing! You should put all the assets in one spot. Change into the `client` folder.
+
+#### HINTS
+
+- Use the "change directory" command
+- Enter `cd client` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 990. Make Directory
+
+### 990.1
+
+Make a new directory named `assets` in the `client` folder.
+
+#### HINTS
+
+- Use the "make directory" command
+- It's the `mkdir` command
+- Here's an example: `mkdir <directory_name>`
+- You previously used `mkdir client`
+- Enter `mkdir assets` in the terminal
+- Make sure you are in the `client` folder first
+- Enter `cd ~/project/website/client` to get to the `client` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1000. Change Directory
+
+### 1000.1
+
+Change into the new `assets` folder.
+
+#### HINTS
+
+- Use the "change directory" command
+- It's the `cd` command
+- Enter `cd assets` in the terminal
+- Make sure you are in the `client` folder first
+- Enter `cd ~/project/website/client` to get to the `client` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1010. Make Directory
+
+### 1010.1
 
 All the images and other assets can go here. Make an `images` directory in the `assets` folder for all the images.
 
-####
+#### HINTS
 
-Go to your new images folder.
+- Use the "make directory" command
+- It's the `mkdir` command
+- You previously used `mkdir assets`
+- Enter `mkdir images` in the terminal
+- Make sure you are in the `assets` folder first
+- Enter `cd ~/project/website/client/assets` to get to the `assets` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 1020. Change Directory
+
+### 1020.1
+
+Go to your new `images` folder.
+
+#### HINTS
+
+- Use the "change directory" command
+- It's the `cd` command
+- Enter `cd images` in the terminal
+- Make sure you are in the `assets` folder first
+- Enter `cd ~/project/website/client/assets` to get to the `assets` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1030. Touch
+
+### 1030.1
 
 You want the images here. Create `background.jpg` in this folder.
 
-####
+#### HINTS
+
+- Use the "touch" command
+- You previously used `touch freeCodeCamp.svg`
+- Enter `touch background.jpg` in the terminal
+- Make sure you are in the `images` folder first
+- Enter `cd ~/project/website/client/assets/images` to get to the `images` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1040. Change Directory
+
+### 1040.1
 
 Wait. You don't need to recreate them. You can just move the other images here. Go back to the `website` folder from here. It's three folder back.
 
-####
+#### HINTS
+
+- Use the "change directory" command
+- You went back two folders with `cd ../..`
+- Enter `cd ../../..` in the terminal
+- Make sure you are in the `images` folder first
+- Enter `cd ~/project/website/client/assets/images` to get to the `images` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1050. Change Directory
+
+### 1050.1
 
 Now go to where the original images are. Change into the `images` folder.
 
-####
+#### HINTS
+
+- Use the "change directory" command
+- Enter `cd images` in the terminal from the `website` folder
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1055. List
+
+### 1055.1
 
 List the contents of the `images` folder to see the files here.
 
-####
+#### HINTS
 
-Umm, first I think you should move them back to the website folder. Move `header.png` back to the website folder. The destination for the file is ..
+- Use the "list" command
+- Enter `ls` in the terminal
+- Make sure you are in the `images` folder first
+- Enter `cd ~/project/website/images` to get to the `images` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 1060. Move
+
+### 1060.1
+
+Umm, first I think you should move them back to the website folder. Move `header.png` back to the `website` folder. The destination for the file is `..`
+
+#### HINTS
+
+- Use the "move" command
+- Here's an example: `mv <file> <destination>`
+- Don't try to move the file with another method
+- Enter `mv header.png ..` in the terminal
+- Make sure you are in the `images` folder first
+- Enter `cd ~/project/website/images` to get to the `images` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1065. List
+
+### 1065.1
 
 List the contents of the `images` folder to see if it's gone.
 
-####
+#### HINTS
 
-It's gone. Go back to the website folder.
+- Use the "list" command
+- Enter `ls` in the terminal
+- Make sure you are in the `images` folder first
+- Enter `cd ~/project/website/images` to get to the `images` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 1070. Change Directory
+
+### 1070.1
+
+It's gone. Go back to the `website` folder.
+
+#### HINTS
+
+- Use the "change directory" command
+- Enter `cd ..` in the terminal from the `images` folder
+- Make sure you are in the `images` folder first
+- Enter `cd ~/project/website/images` to get to the `images` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1080. List
+
+### 1080.1
 
 List what's here.
 
-####
+#### HINTS
 
-There's the file you just moved. Next, you will move it to the `client/assets/images` folder. First, use `find` with the correct flag to search for images.
+- Use the "list" command
+- Enter `ls` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 1090. Find
 
-There's your two `image` folders. Move `header.png` to the one with the longer path. Just use it as the destination to do so.
+### 1090.1
 
-####
+There's the file you just moved. Next, you will move it to the `client/assets/images` folder. First, use `find` with the correct flag to search for `images`.
+
+#### HINTS
+
+- Use the "find" command with the "name" flag
+- The name flag is: `-name`
+- Here's an example `find -name <folder>`
+- You previously used `find -name src`
+- Enter `find -name images` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1100. Move
+
+### 1100.1
+
+There's your two image folders. Move `header.png` to the one with the longer path. Just use it as the destination to do so.
+
+#### HINTS
+
+- Use the "move" command
+- Here's an example: `mv <file> <destination>`
+- The destination you want is `client/assets/images`
+- Don't try to move the file with another method
+- Enter `mv header.png client/assets/images` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1110. Find
+
+### 1110.1
 
 Use `find` to search for your `header.png` file and make sure it moved.
 
-####
+#### HINTS
+
+- Don't forget the correct flag
+- You want the "name" flag
+- The name flag is: `-name`
+- You previously used `find -name images`
+- Enter `find -name header.png` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1120. Find
+
+### 1120.1
 
 There it is. Right where you put it. Next, search for your `footer.jpeg` file so you can move that over there.
 
-####
+#### HINTS
 
-It's in the original `images` folder. You can use that path with the move command to move it. Move `footer.jpeg` to the `client/assets/images` folder while in the `website` folder.
+- Use the "find" command with the "name" flag
+- The name flag is: `-name`
+- You previously used `find -name header.png`
+- Enter `find -name footer.jpeg` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 1130. Move
+
+### 1130.1
+
+It's in the original `images` folder. You can **use that path** with the move command to move it. Move `footer.jpeg` to the `client/assets/images` folder while in the `website` folder.
+
+#### HINTS
+
+- Use the "move" command
+- You previously used `mv header.png client/assets/images`
+- Make sure you put in the correct two paths
+- The first path is `images/footer.jpeg`
+- The second path is `client/assets/images`
+- Enter `mv images/footer.jpeg client/assets/images` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1135. Find
+
+### 1135.1
 
 View the file tree of this folder to make sure all your images are over in their new folder. Don't use any flags.
 
-#### `rmdir <directory_name>`
+#### HINTS
 
-You don't need the old images folder anymore. You can use `rmdir <directory_name>` to remove a folder. rmdir stands for "remove directory". Try to remove the images folder with rmdir. Make sure it's the one in the website folder.
+- Use the "find" command
+- Enter `find` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 1150. Remove Directory
 
-Directory not empty? Oh yeah, there's still the background image in there. Remove the background image file in the images folder from here. Make sure it's the one in the website/images folder.
+### 1150.1
 
-####
+You don't need the old `images` folder anymore. You can use `rmdir <directory_name>` to remove a folder. `rmdir` stands for "remove directory". Try to remove the `images` folder with `rmdir`. Make sure it's the one in the `website` folder.
 
-Try to remove the images folder again with rmdir. Make sure it's the one in the website folder.
+#### HINTS
 
-####
+- Enter `rmdir images` into the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1170. Remove
+
+### 1170.1
+
+Directory not empty? Oh yeah, there's still the background image in there. Remove the background image file in the `images` folder from here. Make sure it's the one in the `website/images` folder.
+
+#### HINTS
+
+- Use the `rm` command
+- Here's an example: `rm <file_path>`
+- The file path you want is `images/background.jpg`
+- Enter `rm images/background.jpg` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1190. Remove Directory
+
+### 1190.1
+
+Try to remove the `images` folder again with `rmdir`. Make sure it's the one in the `website` folder.
+
+#### HINTS
+
+- Use the "remove directory" command
+- Enter `rmdir images` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1195. List
+
+### 1195.1
 
 I think it worked this time. List the contents to find out.
 
-####
+#### HINTS
 
-It worked, the images folder is gone. Make a new icons folder in your assets folder while in the website folder.
+- Use the "list" command
+- Enter `ls` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 1200. Make Directory
 
-Move the CodeAlly.svg file to your new icons folder.
+### 1200.1
 
-####
+It worked, the `images` folder is gone. Make a new `icons` folder in your `assets` folder while in the `website` folder.
 
-View the file tree of the website folder and make sure it moved.
+#### HINTS
 
-####
+- Use the `mkdir` command
+- Your `assets` folder is in the `client` folder
+- Don't try to create the directory with another method
+- Enter `mkdir client/assets/icons` into the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-Verify that the file moved to the icons folder. Next, move the "CodeRoad" file to your icons folder.
+## 1210. Move
 
-####
+### 1210.1
 
-Lastly, move the "freeCodeCamp" file to your icons folder.
+Move the `CodeAlly.svg` file to your new `icons` folder.
 
-####
+#### HINTS
+
+- Use the "move" command
+- Here's a tip: `mv CodeAlly.svg <path_to_icons_folder>`
+- The destination path is `client/assets/icons`
+- Enter `mv CodeAlly.svg client/assets/icons` into the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1215. Find
+
+### 1215.1
+
+View the file tree of the `website` folder and make sure it moved.
+
+#### HINTS
+
+- Use the "find" command
+- Enter `find` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1220. Move
+
+### 1220.1
+
+Verify that the file moved to the `icons` folder. Next, move the "CodeRoad" file to your `icons` folder.
+
+#### HINTS
+
+- Use the "move" command
+- The filename is `CodeRoad.svg`
+- Here's a tip: `mv CodeRoad.svg <path_to_icons_folder>`
+- Enter `mv CodeRoad.svg client/assets/icons` into the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1230. Move
+
+### 1230.1
+
+Lastly, move the "freeCodeCamp" file to your `icons` folder.
+
+#### HINTS
+
+- Use the "move" command
+- Here's a tip: `mv freeCodeCamp.svg <path_to_icons_folder>`
+- The path is `client/assets/icons`
+- Enter `mv freeCodeCamp.svg client/assets/icons` into the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1240. Find
+
+### 1240.1
 
 View the file tree and make sure the files moved.
 
-####
+#### HINTS
 
-This looks much better. The three icons are now in the icons folder. Make a fonts folder in your assets folder from here for all the font files.
+- Use the "find" command
+- Enter `find` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-#### touch <./path/file>
+## 1250. Make Directory
 
-Turns out you want some different fonts for the website. From here, create roboto-bold.woff in your new fonts folder. You can put the path in front of the filename of where you want it to go.
+### 1250.1
 
-####
+This looks much better. The three icons are now in the `icons` folder. Make a `fonts` folder in your `assets` folder from here for all the font files.
 
-Next, create roboto-light.woff in your new fonts folder from here.
+#### HINTS
 
-####
+- Use the `mkdir` command
+- Put the `fonts` folder in the `client/assets` folder
+- Enter `mkdir client/assets/fonts` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-View the file tree of the client/assets/fonts folder from here to see if your new files are there.
+## 1260. Touch
 
-####
+### 1260.1
 
-Two more fonts to go. Create `lato-bold.ttf` in the new fonts folder from here.
+Turns out you want some different fonts for the website. From here, create `roboto-bold.woff` in your new `fonts` folder. You can put the path in front of the filename of where you want it to go.
 
-####
+#### HINTS
 
-Lastly, create lato-light.ttf in your new fonts folder from here.
+- Use the "touch" command
+- Here's an example: `touch <path/filename>`
+- The file needs to be created in the `client/assets/fonts` folder
+- Enter `touch client/assets/fonts/roboto-bold.woff` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 1270. Touch
+
+### 1270.1
+
+Next, create `roboto-light.woff` in your new `fonts` folder from here.
+
+#### HINTS
+
+- Use the "touch" command
+- Here's an example: `touch <path/filename>`
+- Put the file in the `client/assets/fonts` folder
+- You previously used: `touch client/assets/fonts/roboto-bold.woff`
+- Enter `touch client/assets/fonts/roboto-light.woff` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1275. Find
+
+### 1275.1
+
+View the file tree of the `client/assets/fonts` folder from here to see if your new files are there.
+
+#### HINTS
+
+- Use the "find" command with the folder path you want to see
+- Here's an example: `find <path_to_folder>`
+- Enter `find client/assets/fonts` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1280. Touch
+
+### 1280.1
+
+Two more fonts to go. Create `lato-bold.ttf` in the new `fonts` folder from here.
+
+#### HINTS
+
+- Use the "touch" command
+- Here's an example: `touch <path/filename>`
+- Put the file in the `client/assets/fonts` folder
+- You previously used: `touch client/assets/fonts/roboto-light.woff`
+- Enter `touch client/assets/fonts/lato-bold.ttf` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1290. Touch
+
+### 1290.1
+
+Lastly, create `lato-light.ttf` in your new `fonts` folder from here.
+
+#### HINTS
+
+- Use the "touch" command
+- Here's an example: `touch <path/filename>`
+- You previously used: `touch client/assets/fonts/lato-bold.ttf`
+- Enter `touch client/assets/fonts/lato-light.ttf` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1300. Find
+
+### 1300.1
 
 View your file tree and make sure the files are there.
 
-####
+#### HINTS
 
-Things are looking more organized 😄 The new fonts are there. Now you can remove the old fonts folder and everything in it. You can't do that with rmdir since it's not empty. View the "help" menu of the rm command to see if you can find anything.
+- Use the "find" command
+- Enter `find` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-#### rm -r tag
+## 1310. Remove Help
 
-There's a -r flag that says, remove directories and their contents recursively. That will remove the folder and everything in it. Use the "remove" command with that flag to remove the fonts folder. Make sure it's the one in the website folder. Be careful not to remove the wrong folder.
+### 1310.1
 
-####
+Things are looking more organized :smile: The new fonts are there. Now you can remove the old `fonts` folder and everything in it. You can't do that with `rmdir` since it's not empty. View the "help" menu of the `rm` command to see if you can find anything.
+
+#### HINTS
+
+- Use the "remove" command with the "help" flag
+- The "help" flag is `--help`
+- Enter `rm --help` into the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1315. Remove Recursively
+
+### 1315.1
+
+There's a `-r` flag that says, `remove directories and their contents recursively`. That will remove the folder and everything in it. Use the "remove" command with that flag to remove the `fonts` folder. Make sure it's the one in the `website` folder. Be careful not to remove the wrong folder.
+
+#### HINTS
+
+- The "remove" command is `rm`
+- The flag you want is `-r`
+- Here's an example: `rm -r <folder>`
+- Enter `rm -r fonts` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+
+## 1320. List
+
+### 1320.1
 
 List what's here to see if it's gone.
 
-#### rm WARNING
+#### HINTS
 
-Looks like it’s gone. Surely, it went to the trash can right? No, it’s just gone. You should be very careful when recursively removing files like that. It will delete everything, and can destroy your operating system. There's a few more files for the boilerplate. Create package.json in the website folder.
+- Use the "list" command
+- Enter `ls` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 1330. Touch
 
-Next, create server.js in the website folder.
+### 1330.1
 
-####
+Looks like it’s gone. Surely, it went to the trash can right? No, it’s just gone. You should **be very careful when recursively removing files** like that. It will delete everything, and can destroy your operating system. There's a few more files for the boilerplate. Create `package.json` in the `website` folder.
 
-Lastly, create README.md in the website folder.
+#### HINTS
 
-####
+- Use the "touch" command
+- Enter `touch package.json` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1340. Touch
+
+### 1340.1
+
+Next, create `server.js` in the `website` folder.
+
+#### HINTS
+
+- Use the "touch" command
+- Enter `touch server.js` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1350. Touch
+
+### 1350.1
+
+Lastly, create `README.md` in the `website` folder.
+
+#### HINTS
+
+- Use the "touch" command
+- Capitalization matters
+- Enter `touch README.md` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1360. List
+
+### 1360.1
 
 List the content of this folder to make sure your new files are there.
 
-####
+#### HINTS
 
-The boilerplate is complete. Use echo to print `Yay!` to the terminal.
+- Use the "list" command
+- Enter `ls` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 1370. Echo
+
+### 1370.1
+
+The boilerplate is complete. Use `echo` to print `Yay!` to the terminal.
+
+#### HINTS
+
+- Use the "echo" command
+- Here's an example: `echo <text>`
+- Enter `echo Yay!` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1380. Echo
+
+### 1380.1
 
 Print `I finished the boilerplate!` to the terminal.
 
-####
+#### HINTS
 
-Print one more thing... to the terminal
+- Use the "echo" command
+- Enter `echo I finished the boilerplate!` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-#### use echo to print to a file
+## 1390. Echo
 
-You can print to a file instead of the terminal with `echo text >> filename`. Use it to print I made this boilerplate to your README.md file.
+### 1390.1
 
-####
+Print `one more thing...` to the terminal
 
-Use more to view your README.md file.
+#### HINTS
 
-####
+- Use the "echo" command
+- Enter `echo one more thing...` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-Now that line is in the file. Add `from the command line` to your README.md file with the echo command and the same method.
+## 1400. Echo to File
 
-####
+### 1400.1
 
-Use more to view the "readme" file again.
+You can print to a file instead of the terminal with `echo text >> filename`. Use it to print `I made this boilerplate` to your `README.md` file.
 
-####
+#### HINTS
 
-Now the file has two lines. Add `for the freeCodeCamp bash lessons` to your "readme" file with the echo command like you did before.
+- Use the "echo" command
+- Enter `echo I made this boilerplate >> README.md` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 1405. More
+
+### 1405.1
+
+Use `more` to view your `README.md` file.
+
+#### HINTS
+
+- Use the "more" command
+- Enter `more README.md` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1410. Echo to File
+
+### 1410.1
+
+Now that line is in the file. Add `from the command line` to your `README.md` file with the `echo` command and the same method.
+
+#### HINTS
+
+- Use the "echo" command with `>>` to add text to a file
+- Here's an example: `echo <text> >> <filename>`
+- You previously used: `echo I made this boilerplate >> README.md`
+- Enter `echo from the command line >> README.md` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1415. More
+
+### 1415.1
+
+Use `more` to view the "readme" file again.
+
+#### HINTS
+
+- Use the "more" command
+- Enter `more README.md` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1420. Echo to File
+
+### 1420.1
+
+Now the file has two lines. Add `for the freeCodeCamp bash lessons` to your "readme" file with the `echo` command like you did before.
+
+#### HINTS
+
+- Use the "echo" command with `>>` to add text to a file
+- Here's an example: `echo <text> >> <filename>`
+- You previously used: `echo from the command line >> README.md` in the terminal
+- Enter `echo for the freeCodeCamp bash lessons >> README.md` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1430. More
+
+### 1430.1
 
 View your "readme" file again like you did before.
 
-####
+#### HINTS
 
-😄 Change to the project folder.
+- Use the "more" command
+- Enter `more README.md` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 1440. Change Directory
+
+### 1440.1
+
+:smile: Change to the `project` folder.
+
+#### HINTS
+
+- Use the "change directory" command
+- Enter `cd ..` in the terminal
+- Make sure you are in the `website` folder first
+- Enter `cd ~/project/website` to get to the `website` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1445. List
+
+### 1445.1
 
 You are back where you started. List what's here.
 
-####
+#### HINTS
 
-Still the same two folders. Rename the website folder to website-boilerplate.
+- Use the "list" command
+- Enter `ls` in the terminal
+- Make sure you are in the `project` folder first
+- Enter `cd ~/project` to get to the `project` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 1450. Rename
+
+### 1450.1
+
+Still the same two folders. Rename the `website` folder to `website-boilerplate`.
+
+#### HINTS
+
+- Use the "move" command
+- You previously used: `mv menlo.font menlo.otf` to rename a file
+- Here's an example: `mv <folder_name> <new_folder_name>`
+- Enter `mv website website-boilerplate` in the terminal
+- Make sure you are in the `project` folder first
+- Enter `cd ~/project` to get to the `project` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1460. List
+
+### 1460.1
 
 List the contents of this folder to see the new name.
 
-####
+#### HINTS
+
+- Use the "list" command
+- Enter `ls` in the terminal
+- Make sure you are in the `project` folder first
+- Enter `cd ~/project` to get to the `project` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1470. Copy Help
+
+### 1470.1
 
 Thanks for making this. You need to make a copy of it. Take a look at the "help" menu of the "copy" command.
 
-####
+#### HINTS
+
+- The "copy" command is `cp`
+- The "help" flag is `--help`
+- Enter `cp --help` in the terminal
+- Make sure you are in the `project` folder first
+- Enter `cd ~/project` to get to the `project` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1475. Copy
+
+### 1475.1
 
 Scroll up to find that "recursive" flag. You need to use it again to copy the whole folder. Copy the whole boilerplate into a folder named `toms-website`.
 
-####
+#### HINTS
 
-List the contents of the project folder to see the new copy.
+- The "copy" command is `cp`
+- The "recursive" flag is `-r`
+- Here's an example: `cp -r <folder_to_copy> <name_of_copy>`
+- Enter `cp -r website-boilerplate toms-website` in the terminal
+- Make sure you are in the `project` folder first
+- Enter `cd ~/project` to get to the `project` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
 
-####
+## 1480. List
 
-Thanks. Use find to view the tree of toms-website.
+### 1480.1
 
-####
+List the contents of the `project` folder to see the new copy.
 
-Use find to view the tree of the boilerplate folder to make sure it matches.
+#### HINTS
 
-####
+- Use the "list" command
+- Enter `ls` in the terminal
+- Make sure you are in the `project` folder first
+- Enter `cd ~/project` to get to the `project` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1490. Find
+
+### 1490.1
+
+Thanks. Use `find` to view the tree of `toms-website`.
+
+#### HINTS
+
+- Use the "find" command
+- Add the folder name to the command
+- Here's an example: `find <folder_name>`
+- It's the `toms-website` folder
+- Enter `find toms-website` in the terminal
+- Make sure you are in the `project` folder first
+- Enter `cd ~/project` to get to the `project` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1500. Find
+
+### 1500.1
+
+Use `find` to view the tree of the boilerplate folder to make sure it matches.
+
+#### HINTS
+
+- Use the "find" command
+- Add the folder name to the command
+- It's the `website-boilerplate` folder
+- Enter `find website-boilerplate` in the terminal
+- Make sure you are in the `project` folder first
+- Enter `cd ~/project` to get to the `project` folder if you aren't there
+- If you used the reset button, you may need to enter the above command to get to the correct folder even if it looks like you're already there
+
+## 1510. Clear
+
+### 1510.1
 
 Awesome! You are finished for now. Clear the terminal one last time.
 
-####
+#### HINTS
+
+- Use the "clear" command
+- Enter `clear` into the terminal
+
+## 1520. Echo
+
+### 1520.1
 
 Print "goodbye terminal" to the terminal.
 
-#### exit command
+#### HINTS
+
+- Use the "echo" command
+- Here's an example: `echo <text>`
+- Enter `echo goodbye terminal` into the terminal
+
+## 1530. Exit
+
+### 1530.1
 
 Use the "exit" command to exit the terminal.
+
+#### HINTS
+
+- Enter `exit` into the terminal
+- Have a nice day
 
 ### Learn Relational Databases by Building a Mario Database
 
@@ -4499,19 +6240,47 @@ A relational database organizes data into tables that are linked together throug
 
 In this 165-lesson course, you will learn the basics of a relational database by creating a PostgreSQL database filled with video game characters.
 
-#### Start the terminal
+# Learn Relational Databases by Building a Mario Database
 
-The first thing you need to do is start the terminal. Do that by clicking the "hamburger" menu at the top left of the screen, going to the "terminal" section, and clicking "new terminal". Once you open a new one, type echo hello PostgreSQL into the terminal and press enter.
+> Welcome to the Relational Database Lessons!
 
-#### log in `psql --username=freecodecamp --dbname=postgres`
+## 10. Start the Terminal
 
-Your virtual machine comes with PostgreSQL installed. You will use the Psql terminal application to interact with it. Log in by typing psql --username=freecodecamp --dbname=postgres into the terminal and pressing enter.
+### 10.1
 
-#### `\l` list databases
+**The first thing you need to do is start the terminal.** Do that by clicking the "hamburger" menu at the top left of the screen, going to the "terminal" section, and clicking "new terminal". Once you open a new one, type `echo hello PostgreSQL` into the terminal and press enter.
 
-Notice that the prompt changed to let you know that you are now interacting with PostgreSQL. First thing to do is see what databases are here. Type \l into the prompt to list them.
+#### HINTS
 
-#### CREATE DATABASE
+- Capitalization matters
+- If the tests don't run automatically, try typing `exit` into the terminal and redoing the instructions
+
+## 20. Login
+
+### 20.1
+
+Your virtual machine comes with PostgreSQL installed. You will use the Psql terminal application to interact with it. Log in by typing `psql --username=freecodecamp --dbname=postgres` into the terminal and pressing enter.
+
+#### HINTS
+
+- Capitalization matters
+- Type `psql --username=freecodecamp --dbname=postgres` into the terminal and press enter
+- If the terminal isn't open, find the "hamburger" menu at the top left of the window, navigate to the "Terminal" tab, and click "New Terminal"
+
+## 30. View Databases
+
+### 30.1
+
+Notice that the prompt changed to let you know that you are now interacting with PostgreSQL. First thing to do is see what databases are here. Type `\l` into the prompt to **l**ist them.
+
+#### HINTS
+
+- Type `\l` into the psql prompt and press enter
+- Type `psql --username=freecodecamp --dbname=postgres` into the terminal to log in to psql if you aren't logged in first
+
+## 40. Create `first_database`
+
+### 40.1
 
 The databases you see are there by default. You can make your own like this:
 
@@ -4519,29 +6288,77 @@ The databases you see are there by default. You can make your own like this:
 CREATE DATABASE database_name;
 ```
 
-The capitalized words are keywords telling PostgreSQL what to do. The name of the database is the lowercase word. Note that all commands need a semi-colon at the end. Create a new database named `first_database`.
+The capitalized words are keywords telling PostgreSQL what to do. The name of the database is the lowercase word. Note that **all commands need a semi-colon at the end.** Create a new database named `first_database`.
 
-####
+#### HINTS
 
-Use the list shortcut command again to make sure your new database is there.
+- Don't forget the semi-colon at the end
+- Type `CREATE DATABASE first_database;` into the psql prompt and press enter
+- Type `psql --username=freecodecamp --dbname=postgres` into the terminal to log in to psql if you aren't logged in first
 
-####
+## 50. View `first_database`
 
-It worked. Your new database is there. If you don't get a message after entering a command, it means it's incomplete and you likely forgot the semi-colon. You can just add it on the next line and press enter to finish the command. Create another database named second_database.
+### 50.1
 
-#### `\c database_name` connect to database
+Use the **l**ist shortcut command again to make sure your new database is there.
 
-You should have another new database now. List the databases to make sure.
+#### HINTS
 
-####
+- Type `\` followed by the "list" shortcut letter
+- Enter `\l` into the psql prompt and press enter
+- Type `psql --username=freecodecamp --dbname=postgres` into the terminal to log in to psql if you aren't logged in first
 
-You can connect to a database by entering `\c database_name`. You need to connect to add information. Connect to your `second_database`.
+## 60. Create `second_database`
 
-#### `\d` Display Tables/ View Tables
+### 60.1
 
-You should see a message that you are connected. Notice that the prompt changed to `second_database=>`. So the `postgres=>` prompt before must have meant you were connected to that database. A database is made of tables that hold your data. Enter `\d` to display the tables.
+It worked. Your new database is there. If you don't get a message after entering a command, it means it's incomplete and you likely forgot the semi-colon. You can just add it on the next line and press enter to finish the command. Create another database named `second_database`.
 
-#### CREATE TABLE
+#### HINTS
+
+- Use the "CREATE DATABASE" keywords
+- Here's the example again: `CREATE DATABASE database_name;`
+- Don't forget the semi-colon
+- Try entering `CREATE DATABASE second_database;`
+- Type `psql --username=freecodecamp --dbname=postgres` into the terminal to log in to psql if you aren't logged in first
+
+## 70. View Databases
+
+### 70.1
+
+You should have another new database now. **L**ist the databases to make sure.
+
+#### HINTS
+
+- Use the **l**ist shortcut command
+- Enter `\l` into the prompt
+- Type `psql --username=freecodecamp --dbname=postgres` into the terminal to log in to psql if you aren't logged in first
+
+## 80. Connect to `second_database`
+
+### 80.1
+
+You can **c**onnect to a database by entering `\c database_name`. You need to connect to add information. Connect to your `second_database`.
+
+#### HINTS
+
+- Enter `\c second_database` into the psql prompt to connect
+- Type `psql --username=freecodecamp --dbname=postgres` into the terminal to log in to psql if you aren't logged in first
+
+## 90. View `second_database` Tables
+
+### 90.1
+
+You should see a message that you are connected. Notice that the prompt changed to `second_database=>`. So the `postgres=>` prompt before must have meant you were connected to that database. A database is made of tables that hold your data. Enter `\d` to **d**isplay the tables.
+
+#### HINTS
+
+- Type `\d` in the prompt and press enter
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
+
+## 100. Create `first_table`
+
+### 100.1
 
 Looks like there's no tables or relations yet. Similar to how you created a database, you can create a table like this:
 
@@ -4551,53 +6368,151 @@ CREATE TABLE table_name();
 
 Note that the parenthesis are needed for this one. It will create the table in the database you are connected to. Create a table named `first_table` in `second_database`.
 
-####
+#### HINTS
 
-View the tables in `second_database` again with the display command. You should see your new table there with a little meta data about it.
+- Enter `CREATE TABLE first_table();` into the prompt
+- Don't forget the semi-colon
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
 
-####
+## 110. View `second_database` Tables
+
+### 110.1
+
+View the tables in `second_database` again with the **d**isplay command. You should see your new table there with a little meta data about it.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Try entering `\d` into the prompt
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
+
+## 120. Create `second_table`
+
+### 120.1
 
 Create another new table in this database. Give it a name of `second_table`.
 
-####
+#### HINTS
 
-There should be two tables in this database now. Display them again to make sure.
+- Use the "CREATE TABLE" keywords
+- Don't forget the parenthesis and semi-colon at the end
+- Here's an example: `CREATE TABLE table_name();`
+- Enter `CREATE TABLE second_table();` into the prompt
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
 
-#### `\d table_name` View Details About Table
+## 130. View `second_database` Tables
 
-You can view more details about a table by adding the table name after the display command like this: `\d table_name`. View more details about your `second_table`.
+### 130.1
 
-#### `ALTER TABLE <table_name> ADD COLUMN <column_name> <DATATYPE>;`
+There should be two tables in this database now. **D**isplay them again to make sure.
 
-Tables need columns to describe the data in them, yours doesn't have any yet. Here's an example of how to add one:
+#### HINTS
+
+- Use the **display** shortcut command
+- Enter `\d` into the prompt
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
+
+## 140. View `second_table` Details
+
+### 140.1
+
+You can view more details about a table by adding the table name after the **d**isplay command like this: `\d table_name`. View more details about your `second_table`.
+
+#### HINTS
+
+- Enter `\d second_table` into the prompt
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
+
+## 150. Create `first_column`
+
+### 150.1
+
+Tables need **columns** to describe the data in them, yours doesn't have any yet. Here's an example of how to add one:
 
 ```sql
-ALTER TABLE <table_name> ADD COLUMN <column_name> <DATATYPE>;
+ALTER TABLE table_name ADD COLUMN column_name DATATYPE;
 ```
 
-Add a column to `second_table` named `first_column`. Give it a data type of `INT`. `INT` stands for integer. Don't forget the semi-colon. 😄
+Add a column to `second_table` named `first_column`. Give it a data type of `INT`. `INT` stands for integer. Don't forget the semi-colon. :smile:
 
-####
+#### HINTS
 
-Looks like it worked. Display the details of `second_table` again to see if your new column is there.
+- Try entering `ALTER TABLE second_table ADD COLUMN first_column INT;`
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
 
-####
+## 160. View `second_table` Details
 
-Your column is there 😄 Use `ALTER TABLE` and `ADD COLUMN` to add another column to `second_table` named `id` that's a type of `INT`.
+### 160.1
 
-####
+Looks like it worked. **D**isplay the details of `second_table` again to see if your new column is there.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Put the table name after the command
+- Here's an example: `\d table_name`
+- Try entering `\d second_table`
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
+
+## 170. Add `id` Column
+
+### 170.1
+
+Your column is there :smile: Use `ALTER TABLE` and `ADD COLUMN` to add another column to `second_table` named `id` that's a type of `INT`.
+
+#### HINTS
+
+- Here's the example again: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`
+- Don't forget the semi-colon :wink:
+- You added the last column with: `ALTER TABLE second_table ADD COLUMN first_column INT;`
+- Try entering `ALTER TABLE second_table ADD COLUMN id INT;`
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
+
+## 180. View `second_table` Details
+
+### 180.1
 
 Your table should have an `id` column added. View the details of `second_table` to make sure.
 
-####
+#### HINTS
+
+- Use the **d**isplay command
+- Add a table name after the **d**isplay command to view details
+- Here's an example: `\d table_name`
+- Try entering `\d second_table`
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
+
+## 190. Add `age` Column
+
+### 190.1
 
 Add another column to `second_table` named `age`. Give it a data type of `INT`.
 
-####
+#### HINTS
 
-Take a look at the details of second_table again.
+- Use the `ALTER TABLE` and `ADD COLUMN` keywords
+- Here's the example again: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`
+- You added the last column with: `ALTER TABLE second_table ADD COLUMN id INT;`
+- Try using `ALTER TABLE second_table ADD COLUMN age INT;`
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
 
-#### `ALTER TABLE table_name DROP COLUMN column_name;` Remove/drop column
+## 200. View `second_table` Details
+
+### 200.1
+
+Take a look at the details of `second_table` again.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Add the table name to the shortcut command to see details
+- Here's an example: `\d table_name`
+- Enter `\d second_table`
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
+
+## 210. Drop `age` Column
+
+### 210.1
 
 Those are some good looking columns. You will probably need to know how to remove them. Here's an example:
 
@@ -4605,29 +6520,74 @@ Those are some good looking columns. You will probably need to know how to remov
 ALTER TABLE table_name DROP COLUMN column_name;
 ```
 
-Drop your age column.
+Drop your `age` column.
 
-####
+#### HINTS
+
+- Try entering `ALTER TABLE second_table DROP COLUMN age;`
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
+
+## 220. View `second_table` Details
+
+### 220.1
 
 View the details of `second_table` to see if it's gone.
 
-####
+#### HINTS
 
-It's gone. Use the `ALTER TABLE` and `DROP COLUMN` keywords again to `drop first_column`.
+- Use the **d**isplay shortcut command
+- Add the table name to the shortcut command to see details
+- Here's an example: `\d table_name`
+- Enter `\d second_table`
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
 
-#### `VARCHAR(<NUMBER>)` Datatype
+## 230. Drop `first_column` Column
+
+### 230.1
+
+It's gone. Use the `ALTER TABLE` and `DROP COLUMN` keywords again to drop `first_column`.
+
+#### HINTS
+
+- Here's the example again: `ALTER TABLE table_name DROP COLUMN column_name;`
+- You dropped the last column with: `ALTER TABLE second_table DROP COLUMN age;`
+- Try entering `ALTER TABLE second_table DROP COLUMN first_column;`
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
+
+## 240. Add `name` Column
+
+### 240.1
 
 A common data type is `VARCHAR`. It's a short string of characters. You need to give it a maximum length when using it like this: `VARCHAR(30)`.
 
 Add a new column to `second_table`, give it a name of `name` and a data type of `VARCHAR(30)`.
 
-####
+#### HINTS
 
-Take a look at the details of second_table to see your columns.
+- Use the `ALTER TABLE` and `ADD COLUMN` keywords
+- Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`
+- You added the last column like this: `ALTER TABLE second_table ADD COLUMN age INT;`
+- Try entering `ALTER TABLE second_table ADD COLUMN name VARCHAR(30);`
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
 
-#### `ALTER TABLE <table_name> RENAME COLUMN <column_name> TO <new_name>;`
+## 250. View `second_table` Details
 
-You can see the `VARCHAR` type there. The 30 means the data in it can be a max of 30 characters. You named that column `name`, it should have been `username`. Here's how you can rename a column:
+### 250.1
+
+Take a look at the details of `second_table` to see your columns.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Here's an example: `\d table_name`
+- Try entering `\d second_table`
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
+
+## 260. Rename `name` Column
+
+### 260.1
+
+You can see the `VARCHAR` type there. The `30` means the data in it can be a max of 30 characters. You named that column `name`, it should have been `username`. Here's how you can rename a column:
 
 ```sql
 ALTER TABLE table_name RENAME COLUMN column_name TO new_name;
@@ -4635,11 +6595,28 @@ ALTER TABLE table_name RENAME COLUMN column_name TO new_name;
 
 Rename the `name` column to `username`.
 
-#### `INSERT INTO table_name(column_1, column_2) VALUES(value1, value2);`
+#### HINTS
+
+- Use `second_table` as the table name, `name` as the column name, and `username` as the new name for the column
+- Try entering `ALTER TABLE second_table RENAME COLUMN name TO username;`
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
+
+## 270. View `second_table` Details
+
+### 270.1
 
 Take a look at the details of `second_table` again to see if it got renamed.
 
-####
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Here's an example: `\d table_name`
+- Enter `\d second_table`
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
+
+## 280. Insert Samus Row
+
+### 280.1
 
 It worked. Rows are the actual data in the table. You can add one like this:
 
@@ -4647,9 +6624,19 @@ It worked. Rows are the actual data in the table. You can add one like this:
 INSERT INTO table_name(column_1, column_2) VALUES(value1, value2);
 ```
 
-Insert a row into `second_table`. Give it an `id` of `1`, and a `username` of `Samus`. The username column expects a `VARCHAR`, so you need to put `Samus` in single quotes like this: 'Samus'.
+Insert a row into `second_table`. Give it an `id` of `1`, and a `username` of `Samus`. The username column expects a `VARCHAR`, so you need to put Samus in single quotes like this: `'Samus'`.
 
-#### `SELECT columns FROM table_name;` `SELECT * FROM table_name;`
+#### HINTS
+
+- The table is `second_table`, the column names are `id` and `username`, and the values to add are `1` and `'Samus'`
+- Don't forget the semi-colon
+- Try entering `INSERT INTO second_table(id, username) VALUES(1, 'Samus');`
+- If you missed a matching single quote, try entering `');` to finish the command and try again
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
+
+## 290. View `second_table` Data
+
+### 290.1
 
 You should have one row in your table. You can view the data in a table by querying it with the `SELECT` statement. Here's how it looks:
 
@@ -4657,27 +6644,76 @@ You should have one row in your table. You can view the data in a table by query
 SELECT columns FROM table_name;
 ```
 
-Use a `SELECT` statement to view all the columns in `second_table`. Use an asterisk (`*`) to denote that you want to see all the columns.
+Use a `SELECT` statement to view **all** the columns in `second_table`. Use an asterisk (`*`) to denote that you want to see all the columns.
 
-####
+#### HINTS
 
-There's your one row. Insert another row into `second_table`. Fill in the `id` and `username` columns with the values `2` and `'Mario'`
+- Replace `columns` in the example with the all (`*`) symbol
+- Use `second_table` as the table name
+- Enter `SELECT * FROM second_table;`
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
 
-####
+## 300. Insert Mario Row
 
-You should now have two rows in the table. Use SELECT again to view all the columns and rows from second_table.
+### 300.1
 
-####
+There's your one row. **Insert** another row **into** `second_table`. Fill in the `id` and `username` columns with the **values** `2` and `'Mario'`.
 
-Insert another row into `second_table`. Use `3` as the `id`, and `Luigi` as the `username` this time.
+#### HINTS
 
-####
+- Here's the example: `INSERT INTO table_name(column_1, column_2) VALUES(value1, value2);`
+- Did you make `Mario` a string?
+- You added the last row with `INSERT INTO second_table(id, username) VALUES(1, 'Samus');`
+- Try entering `INSERT INTO second_table(id, username) VALUES(2, 'Mario');`
+- If you missed a matching single quote, try entering `');` to finish the command
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
 
-You should now have three rows. Use SELECT again to see all the data you entered.
+## 310. View `second_table` Data
 
-#### `DELETE FROM table_name WHERE condition;` Delete Tuple/Row
+### 310.1
 
-That gives me an idea 😃 You can make a database of Mario video game characters. You should start from scratch for it. Why don't you delete the record you just entered. Here's an example of how to delete a row:
+You should now have two rows in the table. Use `SELECT` again to view **all** the columns and rows **from** `second_table`.
+
+#### HINTS
+
+- Here's the example: `SELECT columns FROM table_name;`
+- Use `*` to see all columns
+- Try entering `SELECT * FROM second_table;`
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
+
+## 320. Insert Luigi Row
+
+### 320.1
+
+**Insert** another row **into** `second_table`. Use `3` as the `id`, and `Luigi` as the `username` this time.
+
+#### HINTS
+
+- Did you put `Luigi` in single quotes?
+- Here's the example: `INSERT INTO table_name(column_1, column_2) VALUES(value1, value2);`
+- You added the last row with `INSERT INTO second_table(id, username) VALUES(2, 'Mario');`
+- Try entering `INSERT INTO second_table(id, username) VALUES(3, 'Luigi');`
+- If you missed a matching single quote, try entering `');` to finish the command
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
+
+## 330. View `second_table` Data
+
+### 330.1
+
+You should now have three rows. Use `SELECT` again to see **all** the data you entered.
+
+#### HINTS
+
+- Here's the example again: `SELECT columns FROM table_name;`
+- Use `*` to see all columns
+- Try entering `SELECT * FROM second_table;`
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
+
+## 340. Delete Luigi Row
+
+### 340.1
+
+That gives me an idea :smiley: You can make a database of Mario video game characters. You should start from scratch for it. Why don't you delete the record you just entered. Here's an example of how to delete a row:
 
 ```sql
 DELETE FROM table_name WHERE condition;
@@ -4685,109 +6721,339 @@ DELETE FROM table_name WHERE condition;
 
 Remove Luigi from your table. The condition you want to use is `username='Luigi'`.
 
-####
+#### HINTS
 
-Luigi should be gone. Use SELECT again to see all the data and make sure he's not there.
+- Check your table name and condition closely
+- Try entering `DELETE FROM second_table WHERE username='Luigi';`
+- If you missed a matching single quote, try entering `');` to finish the command
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
 
-####
+## 350. View `second_table` Data
 
-It's gone. You can scrap all this for the new database. Delete Mario from `second_table` using the same command as before, except make the condition `username='Mario'` this time.
+### 350.1
 
-####
+Luigi should be gone. Use `SELECT` again to see all the data and make sure he's not there.
 
-Only one more row should remain. Delete Samus from second_table.
+#### HINTS
 
-####
+- Here's the example: `SELECT columns FROM table_name;`
+- Use `*` to see all the columns
+- Try `SELECT * FROM second_table;`
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
 
-Use SELECT again to see all the rows in second_table to make sure they're gone.
+## 360. Delete Mario Row
 
-####
+### 360.1
 
-Looks like they're all gone. Remind yourself what columns you have in second_table by looking at its details.
+It's gone. You can scrap all this for the new database. **Delete** Mario **from** `second_table` using the same command as before, except make the condition `username='Mario'` this time.
 
-####
+#### HINTS
 
-There's two columns. You won't need either of them for the Mario database. Alter the table `second_table` and drop the column `username`.
+- Use the `DELETE FROM` and `WHERE` keywords
+- Here's the example: `DELETE FROM table_name WHERE condition;`
+- You deleted Luigi with `DELETE FROM second_table WHERE username='Luigi';`
+- Try entering `DELETE FROM second_table WHERE username='Mario';`
+- If you missed a matching single quote, try entering `');` to finish the command
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
 
-####
+## 370. Delete Samus Row
 
-Next, drop the id column.
+### 370.1
 
-####
+Only one more row should remain. **Delete** Samus **from** `second_table`.
+
+#### HINTS
+
+- Here's the example: `DELETE FROM table_name WHERE condition;`
+- You deleted Mario with `DELETE FROM second_table WHERE username='Mario';`
+- Use `username='Samus'` as the condition
+- Try entering `DELETE FROM second_table WHERE username='Samus';`
+- If you missed a matching single quote, try entering `');` to finish the command
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
+
+## 380. View `second_table` Data
+
+### 380.1
+
+Use `SELECT` again to see all the rows in `second_table` to make sure they're gone.
+
+#### HINTS
+
+- Here's the example `SELECT columns FROM table_name;`
+- Use `*` to see all columns
+- Enter `SELECT * FROM second_table;`
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
+
+## 390. View `second_table` Details
+
+### 390.1
+
+Looks like they're all gone. Remind yourself what columns you have in `second_table` by looking at its **d**etails.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Add the table name after the shortcut command
+- Here's an example: `\d table_name`
+- Try `\d second_table`
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
+
+## 400. Drop `username` Column
+
+### 400.1
+
+There's two columns. You won't need either of them for the Mario database. **Alter** the **table** `second_table` and **drop** the **column** `username`.
+
+#### HINTS
+
+- Use the `ALTER TABLE` and `DROP COLUMN` keywords
+- Here's an example: `ALTER TABLE table_name DROP COLUMN column_name;`
+- You dropped a column before with: `ALTER TABLE second_table DROP COLUMN age;`
+- Try `ALTER TABLE second_table DROP COLUMN username;`
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
+
+## 410. Drop `id` Column
+
+### 410.1
+
+Next, drop the `id` column.
+
+#### HINTS
+
+- Use the `ALTER TABLE` and `DROP COLUMN` keywords
+- Here's an example: `ALTER TABLE table_name DROP COLUMN column_name;`
+- You previously dropped a column with `ALTER TABLE second_table DROP COLUMN username;`
+- Enter `ALTER TABLE second_table DROP COLUMN id;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
+
+## 420. View `second_database` Tables
+
+### 420.1
 
 Okay, the table has no rows or columns left. View the tables in this database to see what is here.
 
-#### `DROP TABLE table_name;` delete/drop table
+#### HINTS
 
-Still two. You won't need either of those for the new database either. Drop second_table from your database. Here's an example:
+- Use the **d**isplay shortcut command
+- You don't need a table name with the command
+- Try entering `\d`
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
+
+## 430. Drop `second_table`
+
+### 430.1
+
+Still two. You won't need either of those for the new database either. Drop `second_table` from your database. Here's an example:
 
 ```sql
 DROP TABLE table_name;
 ```
 
-####
+#### HINTS
 
-Next, drop first_table from the database.
+- Enter `DROP TABLE second_table;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
 
-####
+## 440. Drop `first_table`
 
-All the tables are gone now, too. View all the databases using the command to list them.
+### 440.1
 
-#### `ALTER DATABASE database_name RENAME TO new_database_name;`
+Next, drop `first_table` from the database.
 
-Rename first_database to mario_database. You can rename a database like this:
+#### HINTS
 
-`ALTER DATABASE database_name RENAME TO new_database_name;`
+- Here's an example: `DROP TABLE table_name;`
+- Enter `DROP TABLE first_table;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
 
-####
+## 450. View Databases
+
+### 450.1
+
+All the tables are gone now, too. View all the databases using the command to **l**ist them.
+
+#### HINTS
+
+- Use the **l**ist shortcut command
+- Enter `\l` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
+
+## 460. Rename `first_database`
+
+### 460.1
+
+Rename `first_database` to `mario_database`. You can rename a database like this:
+
+```sql
+ALTER DATABASE database_name RENAME TO new_database_name;
+```
+
+#### HINTS
+
+- Try entering `ALTER DATABASE first_database RENAME TO mario_database;`
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
+
+## 470. View Databases
+
+### 470.1
 
 List the databases to make sure it got renamed.
 
-####
+#### HINTS
 
-Connect to your newly named database so you can start adding your characters.
+- Use the **l**ist shortcut command
+- Enter `\l`
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
 
-####
+## 480. Connect to `mario_database`
 
-Now that you aren't connected to second_database, you can drop it. Use the DROP DATABASE keywords to do that.
+### 480.1
 
-####
+**C**onnect to your newly named database so you can start adding your characters.
+
+#### HINTS
+
+- Use the `\c` shortcut command to connect to a database
+- Add the database name after the command
+- Here's an example: `\c database_name`
+- Enter `\c mario_database`
+- Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already
+
+## 490. Drop `second_database`
+
+### 490.1
+
+Now that you aren't connected to `second_database`, you can drop it. Use the `DROP DATABASE` keywords to do that.
+
+#### HINTS
+
+- Add the database name after the keywords
+- Don't forget the semi-colon
+- Here's an example: `DROP DATABASE database_name;`
+- Enter `DROP DATABASE second_database;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 500. View Databases
+
+### 500.1
 
 List the databases again to make sure it's gone.
 
-####
+#### HINTS
+
+- Use the **l**ist shortcut command
+- Enter `\l`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 530. Display `mario_database` Tables
+
+### 530.1
 
 Okay, I think you're ready to get started. I don't think you created any tables here, take a look to make sure.
 
-####
+#### HINTS
 
-Create a new table named characters, it will hold some basic information about Mario characters.
+- Use the **d**isplay shortcut command
+- Try entering `\d`
+- Try entering `\c mario_database`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-####
+## 540. Create `characters` Table
 
-Next, you can add some columns to the table. Add a column named character_id to your new table that is a type of SERIAL.
+### 540.1
 
-#### SERIAL data type
+Create a new table named `characters`, it will hold some basic information about Mario characters.
 
-The `SERIAL` type will make your column an `INT` with a `NOT NULL` constraint, and automatically increment the integer when a new row is added. View the details of the characters table to see what SERIAL did for you.
+#### HINTS
 
-#### `NOT NULL` contraint
+- Use the `CREATE TABLE` keywords
+- Don't forget the parenthesis and semi-colon at the end
+- Here's an example: `CREATE TABLE table_name();`
+- Try entering `CREATE TABLE characters();`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-Add a column to characters called name. Give it a data type of VARCHAR(30), and a constraint of NOT NULL. Add a constraint by putting it right after the data type.
+## 550. Add `character_id` column
 
-####
+### 550.1
 
-You can make another column for where they are from. Add another column named homeland. Give it a data type of VARCHAR that has a max length of 60.
+Next, you can add some columns to the table. Add a column named `character_id` to your new table that is a type of `SERIAL`.
 
-####
+#### HINTS
 
-Video game characters are quite colorful. Add one more column named favorite_color. Make it a VARCHAR with a max length of 30.
+- Use the `ALTER TABLE` and `ADD COLUMN` keywords
+- Here's an example: `ALTER TABLE table_name ADD COLUMN column_name TYPE;`
+- Try entering `ALTER TABLE characters ADD COLUMN character_id SERIAL;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-####
+## 560. View `characters` Details
 
-You should have four columns in characters. Take a look at the details of it to see how things are going.
+### 560.1
 
-####
+The `SERIAL` type will make your column an `INT` with a `NOT NULL` constraint, and automatically increment the integer when a new row is added. View the details of the `characters` table to see what `SERIAL` did for you.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Here's an example: `\d table_name`
+- Try entering `\d characters`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 570. Add `name` Column
+
+### 570.1
+
+Add a column to `characters` called `name`. Give it a data type of `VARCHAR(30)`, and a constraint of `NOT NULL`. Add a constraint by putting it right after the data type.
+
+#### HINTS
+
+- Use the `ALTER TABLE` and `ADD COLUMN` keywords
+- Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE CONSTRAINT;`
+- Try entering `ALTER TABLE characters ADD COLUMN name VARCHAR(30) NOT NULL;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 580. Add `homeland` Column
+
+### 580.1
+
+You can make another column for where they are from. Add another column named `homeland`. Give it a data type of `VARCHAR` that has a max length of `60`.
+
+#### HINTS
+
+- Use the `ALTER TABLE` and `ADD COLUMN` keywords
+- Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`
+- Try entering `ALTER TABLE characters ADD COLUMN homeland VARCHAR(60);`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 590. Add `favorite_color` Column
+
+### 590.1
+
+Video game characters are quite colorful. Add one more column named `favorite_color`. Make it a `VARCHAR` with a max length of `30`.
+
+#### HINTS
+
+- Use the `ALTER TABLE` and `ADD COLUMN` keywords
+- Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`
+- Try entering `ALTER TABLE characters ADD COLUMN favorite_color VARCHAR(30);`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 600. View `characters` Details
+
+### 600.1
+
+You should have four columns in `characters`. Take a look at the details of it to see how things are going.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Add a table name to the shortcut command to see details
+- Here's an example: `\d table_name`
+- Try entering `\d characters`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 610. Insert Mario Row
+
+### 610.1
 
 You are ready to start adding some rows. First is Mario. Earlier, you used this command to add a row:
 
@@ -4795,25 +7061,76 @@ You are ready to start adding some rows. First is Mario. Earlier, you used this 
 INSERT INTO second_table(id, username) VALUES(1, 'Samus');
 ```
 
-The first parenthesis is for the column names, you can put as many columns as you want. The second parenthesis is for the values for those columns. Add a row to your table, give it a name of Mario, a homeland of Mushroom Kingdom, and a favorite_color of Red. Make sure to use single quotes where needed.
+The first parenthesis is for the column names, you can put as many columns as you want. The second parenthesis is for the values for those columns. Add a row to your table, give it a `name` of `Mario`, a `homeland` of `Mushroom Kingdom`, and a `favorite_color` of `Red`. Make sure to use single quotes where needed.
 
-####
+#### HINTS
 
-Mario should have a row now and his `character_id` should have been automatically added. View all the data in your characters table with SELECT to see this.
+- Here's an example: `INSERT INTO table_name(column1, column2, column3) VALUES(value1, value2, value3);`
+- Try using `INSERT INTO characters(name, homeland, favorite_color) VALUES('Mario', 'Mushroom Kingdom', 'Red');`
+- If you missed a matching single quote, try entering `');` to finish the command
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-####
+## 620. View `characters` Data
 
-Add another row for Luigi. Give it a name of Luigi, a homeland of Mushroom Kingdom, and a favorite_color of Green.
+### 620.1
 
-####
+Mario should have a row now and his `character_id` should have been automatically added. View **all** the data in your `characters` table with `SELECT` to see this.
 
-View all the data in your characters table with SELECT again.
+#### HINTS
 
-####
+- Use the `SELECT` and `FROM` keywords
+- Here's an example: `SELECT columns FROM table_name;`
+- Use `*` to see all columns
+- Try entering `SELECT * FROM characters;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-Okay, it looks like it's all working. Add another row for Peach. Give her the values: Peach, Mushroom Kingdom, and Pink.
+## 630. Insert Luigi Row
 
-#### Add multiple rows/tuples at a time
+### 630.1
+
+Add another row for Luigi. Give it a `name` of `Luigi`, a `homeland` of `Mushroom Kingdom`, and a `favorite_color` of `Green`.
+
+#### HINTS
+
+- Use the `INSERT INTO` and `VALUES` keywords
+- Here's an example: `INSERT INTO table_name(column1, column2, column3) VALUES(value1, value2, value3);`
+- Don't forget the quotes and semi-colon
+- Try using `INSERT INTO characters(name, homeland, favorite_color) VALUES('Luigi', 'Mushroom Kingdom', 'Green');`
+- If you missed a matching single quote, try entering `');` to finish the command
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 640. View `characters` Data
+
+### 640.1
+
+View all the data in your `characters` table with `SELECT` again.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords
+- Here's an example: `SELECT columns FROM table_name;`
+- Use `*` to see all columns
+- Try entering `SELECT * FROM characters;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 650. Insert Peach Row
+
+### 650.1
+
+Okay, it looks like it's all working. Add another row for Peach. Give her the values: `Peach`, `Mushroom Kingdom`, and `Pink`.
+
+#### HINTS
+
+- Use the `INSERT INTO` and `VALUES` keywords
+- Here's an example: `INSERT INTO table_name(column1, column2, column3) VALUES(value1, value2, value3);`
+- Don't forget the quotes and semi-colon
+- Try using `INSERT INTO characters(name, homeland, favorite_color) VALUES('Peach', 'Mushroom Kingdom', 'Pink');`
+- If you missed a matching single quote, try entering `');` to finish the command
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 660. Add Toadstool and Bowser Rows
+
+### 660.1
 
 Adding rows one at a time is quite tedious. Here's an example of how you could have added the previous three rows at once:
 
@@ -4824,63 +7141,188 @@ VALUES('Mario', 'Mushroom Kingdom', 'Red'),
 ('Peach', 'Mushroom Kingdom', 'Pink');
 ```
 
-Add two more rows. Give the first one the values: Toadstool, Mushroom Kingdom, and Red. Give the second one: Bowser, Mushroom Kingdom, and Green. Try to add them with one command.
+Add two more rows. Give the first one the values: `Toadstool`, `Mushroom Kingdom`, and `Red`. Give the second one: `Bowser`, `Mushroom Kingdom`, and `Green`. Try to add them with one command.
 
-####
+#### HINTS
 
-If you don't get a message after a command, it is likely incomplete. This is because you can put a command on multiple lines. Add two more rows. Give the first one the values: Daisy, Sarasaland, and Yellow. The second: Yoshi, Dinosaur Land, and Green. Try to do it with one command.
+- Make sure you added commas and quotes where needed
+- Try entering `INSERT INTO characters(name, homeland, favorite_color) VALUES('Toadstool', 'Mushroom Kingdom', 'Red'), ('Bowser', 'Mushroom Kingdom', 'Green');` in the psql prompt
+- If you missed a matching single quote, try entering `');` to finish the command
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-#### `UPDATE <table_name> SET <column_name>=<new_value> WHERE <condition>;`
+## 670. Add Daisy and Yoshi Rows
 
-Take a look at all the data in your table with SELECT to see where you stand.
+### 670.1
 
-####
+If you don't get a message after a command, it is likely incomplete. This is because you can put a command on multiple lines. Add two more rows. Give the first one the values: `Daisy`, `Sarasaland`, and `Yellow`. The second: `Yoshi`, `Dinosaur Land`, and `Green`. Try to do it with one command.
+
+#### HINTS
+
+- Make sure you added commas and quotes where needed
+- You previously used `INSERT INTO characters(name, homeland, favorite_color) VALUES('Toadstool', 'Mushroom Kingdom', 'Red'), ('Bowser', 'Mushroom Kingdom', 'Green');`
+- Try entering `INSERT INTO characters(name, homeland, favorite_color) VALUES('Daisy', 'Sarasaland', 'Yellow'), ('Yoshi', 'Dinosaur Land', 'Green');`
+- If you missed a matching single quote, try entering `');` to finish the command
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 680. View `characters` Data
+
+### 680.1
+
+Take a look at all the data in your table with `SELECT` to see where you stand.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords
+- Here's an example: `SELECT columns FROM table_name;`
+- Use `*` to see all columns
+- Try `SELECT * FROM characters;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 690. Update Daisy's `favorite_color`
+
+### 690.1
 
 It looks good, but there's a few mistakes. You can change a value like this:
 
 ```sql
-UPDATE <table_name> SET <column_name>=<new_value> WHERE <condition>;
+UPDATE table_name SET column_name=new_value WHERE condition;
 ```
 
-You used username='Samus' as a condition earlier. SET Daisy's favorite_color to Orange. You can use the condition name='Daisy' to change her row.
+You used `username='Samus'` as a condition earlier. `SET` Daisy's `favorite_color` to `Orange`. You can use the condition `name='Daisy'` to change her row.
 
-####
+#### HINTS
 
-The command you just used does exactly what it sounds like. It finds the row where name is Daisy, and sets her favorite_color to Orange. Take a look at all the data in your table again to see if she got updated.
+- There should be two sets of single quotes in this command
+- Without the keywords, it looks like this: `characters favorite_color='Orange' name='Daisy';`
+- Try `UPDATE characters SET favorite_color='Orange' WHERE name='Daisy';`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-####
+## 700. View `characters` Data
 
-Her favorite color was updated. Toadstool's name is wrong as well, it's actually Toad. Use UPDATE to SET his name to Toad. Use the condition favorite_color='Red'.
+### 700.1
 
-####
+The command you just used does exactly what it sounds like. It finds the row where `name` is `Daisy`, and sets her `favorite_color` to `Orange`. Take a look at all the data in your table again to see if she got updated.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords
+- Here's an example: `SELECT columns FROM table_name;`
+- Use `*` to see all columns
+- Try `SELECT * FROM characters;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 710. Update Toadstool's `name`
+
+### 710.1
+
+Her favorite color was updated. Toadstool's name is wrong as well, it's actually `Toad`. Use `UPDATE` to `SET` his `name` to `Toad`. Use the condition `favorite_color='Red'`.
+
+#### HINTS
+
+- Here's an example: `UPDATE table_name SET column_name=new_value WHERE condition;`
+- Here's the second part of the command: `SET name='Toad' WHERE favorite_color='Red';`
+- Try entering `UPDATE characters SET name='Toad' WHERE favorite_color='Red';`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 720. View `characters` Data
+
+### 720.1
 
 Take a look at all the data in your table.
 
-####
+#### HINTS
 
-Using favorite_color='Red' was not a good idea. Mario's name changed to Toad because he likes red, and now there's two rows that are the same. Well, almost. Only the character_id is different. You will have to use that to change it back to Mario. Use UPDATE to set the name to Mario for the row with the lowest character_id.
+- Use the `SELECT` and `FROM` keywords
+- Here's an example: `SELECT columns FROM table_name;`
+- Use `*` to see all columns
+- Try `SELECT * FROM characters;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-####
+## 730. Update Mario's `name`
+
+### 730.1
+
+Using `favorite_color='Red'` was not a good idea. Mario's name changed to Toad because he likes red, and now there's two rows that are the same. Well, almost. Only the `character_id` is different. You will have to use that to change it back to `Mario`. Use `UPDATE` to set the `name` to `Mario` for the row with the lowest `character_id`.
+
+#### HINTS
+
+- Use the `UPDATE`, `SET`, and `WHERE` keywords and strings where needed
+- Here's an example: `UPDATE table_name SET column_name=new_value WHERE condition;`
+- Try entering `UPDATE characters SET name='Mario' WHERE character_id=1;` in the psql prompt. Or whatever the correct `character_id` is.
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 740. View `characters` Data
+
+### 740.1
 
 Take a look at all the data in your table again to see if Mario's name got changed back.
 
-####
+#### HINTS
 
-Looks like it worked. Toad's favorite color is wrong. He likes blue. Change Toad's favorite color to Blue. Use whatever condition you want, but don't change any of the other rows.
+- Use the `SELECT` and `FROM` keywords
+- Here's an example: `SELECT columns FROM table_name;`
+- Use `*` to see all columns
+- Try `SELECT * FROM characters;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-####
+## 750. Update Toad's `favorite_color`
 
-Bowser's favorite_color is wrong. He likes Yellow. Why don't you update it without changing any of the other rows?
+### 750.1
 
-####
+Looks like it worked. Toad's favorite color is wrong. He likes blue. Change Toad's favorite color to `Blue`. Use whatever condition you want, but don't change any of the other rows.
 
-Bowser's homeland is wrong as well. He's from the Koopa Kingdom. Why don't you change it to that without changing any other rows?
+#### HINTS
 
-####
+- Use the `UPDATE`, `SET`, and `WHERE` keywords
+- Here's an example: `UPDATE table_name SET column_name=newvalue WHERE condition;`
+- I recommend using `character_id=4` as the condition
+- Try entering `UPDATE characters SET favorite_color='Blue' WHERE character_id=4;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 760. Update Bowser's `favorite_color`
+
+### 760.1
+
+Bowser's `favorite_color` is wrong. He likes `Yellow`. Why don't you update it without changing any of the other rows?
+
+#### HINTS
+
+- Use the `UPDATE`, `SET`, and `WHERE` keywords
+- Here's an example: `UPDATE table_name SET column_name=new_value WHERE condition;`
+- I recommend using `character_id=5` as the condition
+- Try entering `UPDATE characters SET favorite_color='Yellow' WHERE character_id=5;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 770. Update Bowser's `homeland`
+
+### 770.1
+
+Bowser's `homeland` is wrong as well. He's from the `Koopa Kingdom`. Why don't you change it to that without changing any other rows?
+
+#### HINTS
+
+- Use the `UPDATE`, `SET`, and `WHERE` keywords
+- Here's an example: `UPDATE table_name SET column_name=new_value WHERE condition;`
+- I recommend using `character_id=5` as the condition
+- Try entering `UPDATE characters SET homeland='Koopa Kingdom' WHERE character_id=5;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 780. View `characters` Data
+
+### 780.1
 
 Take a look at all the data in your table again to make sure there's no more issues.
 
-#### `SELECT columns FROM table_name ORDER BY column_name;`
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords
+- Here's an example; `SELECT rows FROM table_name;`
+- Try entering `SELECT * FROM characters;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 790. View Sorted `characters` Data
+
+### 790.1
 
 Actually, you should put that in order. Here's an example:
 
@@ -4888,244 +7330,672 @@ Actually, you should put that in order. Here's an example:
 SELECT columns FROM table_name ORDER BY column_name;
 ```
 
-View all the data again, but put it in order by character_id.
+View all the data again, but put it in order by `character_id`.
 
-#### `ALTER TABLE table_name ADD PRIMARY KEY(column_name);`
+#### HINTS
 
-It looks good. Next, you are going to add a primary key. It's a column that uniquely identifies each row in the table. Here's an example of how to set a PRIMARY KEY:
+- Try entering `SELECT * FROM characters ORDER BY character_id;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 800. Add `name` Primary Key
+
+### 800.1
+
+It looks good. Next, you are going to add a **primary key**. It's a column that uniquely identifies each row in the table. Here's an example of how to set a `PRIMARY KEY`:
 
 ```sql
 ALTER TABLE table_name ADD PRIMARY KEY(column_name);
-
 ```
 
-The name column is pretty unique, why don't you set that as the primary key for this table.
+The `name` column is pretty unique, why don't you set that as the primary key for this table.
 
-####
+#### HINTS
 
-You should set a primary key on every table and there can only be one per table. Take a look at the details of your characters table to see the primary key at the bottom.
+- You don't need quotes, but you do need a semi-colon :smile:
+- Try entering `ALTER TABLE characters ADD PRIMARY KEY(name);`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-#### `ALTER TABLE table_name DROP CONSTRAINT constraint_name;`
+## 810. View `characters` Details
 
-You can see the key for your name column at the bottom. It would have been better to use character_id for the primary key. Here's an example of how to drop a constraint:
+### 810.1
 
+You should set a primary key on every table and there can only be one per table. Take a look at the details of your `characters` table to see the primary key at the bottom.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Here's an example: `\d table_name`
+- Try entering `\d characters`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 820. Drop `name` Primary Key
+
+### 820.1
+
+You can see the key for your `name` column at the bottom. It would have been better to use `character_id` for the primary key. Here's an example of how to drop a constraint:
+
+```sql
 ALTER TABLE table_name DROP CONSTRAINT constraint_name;
-Drop the primary key on the name column. You can see the constraint name is characters_pkey.
+```
 
-####
+Drop the primary key on the `name` column. You can see the **constraint name** is `characters_pkey`.
 
-View the details of the characters table to make sure it's gone.
+#### HINTS
 
-####
+- Try using `ALTER TABLE characters DROP CONSTRAINT characters_pkey;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-It's gone. Set the primary key again, but use the character_id column this time.
+## 830. View `characters` Details
 
-####
+### 830.1
 
-View the details of the characters table to see the new primary key.
+View the details of the `characters` table to make sure it's gone.
 
-####
+#### HINTS
 
-That's better. The table looks complete for now. Next, create a new table named more_info for some extra info about the characters.
+- Use the **d**isplay shortcut command
+- Here's an example: `\d table_name`
+- Try entering `\d characters`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-####
+## 840. Add `character_id` Primary Key
 
-View the tables in mario_database again with the display command. You should have two tables now.
+### 840.1
 
-####
+It's gone. Set the primary key again, but use the `character_id` column this time.
 
-I wonder what that third one is. It says characters_character_id_seq. I think I have a clue. View the details of the characters table.
+#### HINTS
 
-####
+- Use the `ALTER TABLE` and `ADD PRIMARY KEY` keywords
+- Here's an example: `ALTER TABLE table_name ADD PRIMARY KEY(column_name);`
+- Try entering `ALTER TABLE characters ADD PRIMARY KEY(character_id);`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-That is what finds the next value for the character_id column. Add a column to your new table named more_info_id. Make it a type of SERIAL.
+## 850. View `characters` Details
 
-####
+### 850.1
+
+View the details of the `characters` table to see the new primary key.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Here's an example: `\d table_name`
+- Try entering `\d characters`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 860. Create `more_info` Table
+
+### 860.1
+
+That's better. The table looks complete for now. Next, create a new table named `more_info` for some extra info about the characters.
+
+#### HINTS
+
+- Use the `CREATE TABLE` keywords
+- Here's an example: `CREATE TABLE table_name();`
+- Try entering `CREATE TABLE more_info();`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 870. View `mario_database` Tables
+
+### 870.1
+
+View the tables in `mario_database` again with the **d**isplay command. You should have two tables now.
+
+#### HINTS
+
+- Don't put a table name after the command
+- Enter the `\d` command
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 880. View `characters` Details
+
+### 880.1
+
+I wonder what that third one is. It says `characters_character_id_seq`. I think I have a clue. View the details of the `characters` table.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Add the table name after the command
+- You previously used `\d second_table`
+- Enter `\d characters`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 890. Create `more_info_id` Column
+
+### 890.1
+
+That is what finds the next value for the `character_id` column. Add a column to your new table named `more_info_id`. Make it a type of `SERIAL`.
+
+#### HINTS
+
+- Use the `ALTER TABLE` and `ADD COLUMN` keywords
+- Here's an example: `ALTER TABLE table_name ADD COLUMN column_name TYPE;`
+- Try entering `ALTER TABLE more_info ADD COLUMN more_info_id SERIAL;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 895. Create `more_info` Primary Key
+
+### 895.1
 
 Set your new column as the primary key for this table.
 
-####
+#### HINTS
 
-View the tables in mario_database again with the display command. There should be another sequence there for the more_info_id because it also automatically increments.
+- Use the `ALTER TABLE` and `ADD PRIMARY KEY` keywords
+- Here's an example: `ALTER TABLE table_name ADD PRIMARY KEY(column_name);`
+- Try entering `ALTER TABLE more_info ADD PRIMARY KEY(more_info_id);`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-####
+## 900. View `mario_database` Tables
 
-There it is. Add another column to more_info named birthday. Give it a data type of DATE.
+### 900.1
 
-####
+View the tables in `mario_database` again with the display command. There should be another sequence there for the `more_info_id` because it also automatically increments.
 
-Add a height column to more_info that's a type of INT.
+#### HINTS
 
-#### NUMERIC Data Type
+- Enter the `\d` command
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-Add a weight column. Give it a type of NUMERIC(4, 1). That data type is for decimals. NUMERIC(4, 1) has up to four digits and one of them has to be to the right of the decimal.
+## 910. Add `birthday` Column
 
-####
+### 910.1
 
-Take a look at the details of more_info to see all your columns.
+There it is. Add another column to `more_info` named `birthday`. Give it a data type of `DATE`.
 
-#### `ALTER TABLE <table_name> ADD COLUMN <column_name> <DATATYPE> REFERENCES <referenced_table_name>(<referenced_column_name>);` Foreign
+#### HINTS
 
-There’s your four columns and the primary key you created at the bottom. To know what row is for a character, you need to set a foreign key so you can relate rows from this table to rows from your characters table. Here's an example that creates a column as a foreign key:
+- Use the `ALTER TABLE` and `ADD COLUMN` keywords
+- Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`
+- Try entering `ALTER TABLE more_info ADD COLUMN birthday DATE;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 920. Add `height` Column
+
+### 920.1
+
+Add a `height` column to `more_info` that's a type of `INT`.
+
+#### HINTS
+
+- Use the `ALTER TABLE` and `ADD COLUMN` keywords
+- Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`
+- Try entering `ALTER TABLE more_info ADD COLUMN height INT;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 930. Add `weight` Columns
+
+### 930.1
+
+Add a `weight` column. Give it a type of `NUMERIC(4, 1)`. That data type is for decimals. `NUMERIC(4, 1)` has up to four digits and one of them has to be to the right of the decimal.
+
+#### HINTS
+
+- Use the `ALTER TABLE` and `ADD COLUMN` keywords
+- Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`
+- Try entering `ALTER TABLE more_info ADD COLUMN weight NUMERIC(4, 1);`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 940. View `more_info` Details
+
+### 940.1
+
+Take a look at the details of `more_info` to see all your columns.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Here's an example: `\d table_name`
+- Try entering `\d more_info`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 950. Add `character_id` Foreign Key
+
+### 950.1
+
+There’s your four columns and the primary key you created at the bottom. To know what row is for a character, you need to set a **foreign key** so you can relate rows from this table to rows from your `characters` table. Here's an example that creates a column as a foreign key:
 
 ```sql
-ALTER TABLE table_name ADD COLUMN <column_name> <DATATYPE> REFERENCES referenced_table_name(referenced_column_name);
+ALTER TABLE table_name ADD COLUMN column_name DATATYPE REFERENCES referenced_table_name(referenced_column_name);
 ```
 
-That's quite the command. In the more_info table, create a character_id column. Make it an INT and a foreign key that references the character_id column from the characters table. Good luck.
+That's quite the command. In the `more_info` table, create a `character_id` column. Make it an `INT` and a foreign key that references the `character_id` column from the `characters` table. Good luck.
 
-####
+#### HINTS
 
-To set a row in more_info for Mario, you just need to set the character_id (foreign key) value to whatever it is in the characters table. Take a look at the details of more_info to see your foreign key.
+- You can do it!
+- Give it one more try
+- Without the keywords, it looks like this: `more_info character_id characters(character_id);`
+- Try this `ALTER TABLE more_info ADD COLUMN character_id INT REFERENCES characters(character_id);`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-#### `ALTER TABLE <table_name> ADD UNIQUE(<column_name>);`
+## 960. View `more_info` Details
 
-There's your foreign key at the bottom. These tables have a "one-to-one" relationship. One row in the characters table will be related to exactly one row in more_info and vice versa. Enforce that by adding the UNIQUE constraint to your foreign key. Here's an example:
+### 960.1
 
+To set a row in `more_info` for Mario, you just need to set the `character_id` (foreign key) value to whatever it is in the `characters` table. Take a look at the details of `more_info` to see your foreign key.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Here's an example: `\d table_name`
+- Try entering `\d more_info`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 970. Add `UNIQUE`
+
+### 970.1
+
+There's your foreign key at the bottom. These tables have a "one-to-one" relationship. **One** row in the `characters` table will be related to exactly **one** row in `more_info` and vice versa. Enforce that by adding the `UNIQUE` constraint to your foreign key. Here's an example:
+
+```sql
 ALTER TABLE table_name ADD UNIQUE(column_name);
-Add the UNIQUE constraint to the column you just added.
+```
 
-#### `ALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL;`
+Add the `UNIQUE` constraint to the column you just added.
 
-The column should also be NOT NULL since you don't want to have a row that is for nobody. Here's an example:
+#### HINTS
+
+- It's the `character_id` column in `more_info`
+- Try `ALTER TABLE more_info ADD UNIQUE(character_id);`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 980. Add `NOT NULL`
+
+### 980.1
+
+The column should also be `NOT NULL` since you don't want to have a row that is for nobody. Here's an example:
 
 ```sql
 ALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL;
 ```
 
-Add the NOT NULL constraint to your foreign key column.
+Add the `NOT NULL` constraint to your foreign key column.
 
-####
+#### HINTS
 
-Take a look at the details of your more_info table to see all the keys and constraints you added.
+- The foreign key column is `character_id` in the `more_info` table
+- Try `ALTER TABLE more_info ALTER COLUMN character_id SET NOT NULL;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-####
+## 990. View `more_info` Details
 
-The structure is set, now you can add some rows. First, you need to know what character*id you need for the foreign key column. You have viewed all columns in a table with *. You can pick columns by putting in the column name instead of \_. Use SELECT to view the character_id column from the characters table.
+### 990.1
 
-####
+Take a look at the details of your `more_info` table to see all the keys and constraints you added.
 
-That list of numbers doesn't really help. Use SELECT again to display both the character_id and name columns from the characters table. You can separate the column names with a comma to view both.
+#### HINTS
 
-#### DATE Datatype format
+- Use the **d**isplay shortcut command
+- Here's an example: `\d table_name`
+- Try entering `\d more_info`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1000. Select `character_id`
+
+### 1000.1
+
+The structure is set, now you can add some rows. First, you need to know what `character_id` you need for the foreign key column. You have viewed all columns in a table with `*`. You can pick columns by putting in the column name instead of `*`. Use `SELECT` to view the `character_id` column **from** the `characters` table.
+
+#### HINTS
+
+- Here's an example: `SELECT column FROM table_name;`
+- Enter `SELECT character_id FROM characters;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1010. Select `character_id` and `name`
+
+### 1010.1
+
+That list of numbers doesn't really help. Use `SELECT` again to display both the `character_id` and `name` columns from the `characters` table. You can separate the column names with a comma to view both.
+
+#### HINTS
+
+- Here's an example: `SELECT column1, column2 FROM table_name;`
+- Try entering `SELECT character_id, name FROM characters;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1020. Add `more_info` for Mario
+
+### 1020.1
 
 That's better. You can see Mario's id there. Here's some more info for him:
 
-birthday height weight
-1981-07-09 155 64.5
-Add a row to more_info with the above data for Mario using the INSERT INTO and VALUES keywords. Be sure to set his character_id when adding him. Also, DATE values need a string with the format: 'YYYY-MM-DD'.
+| birthday   | height | weight |
+| ---------- | ------ | ------ |
+| 1981-07-09 | 155    | 64.5   |
 
-####
+Add a row to `more_info` with the above data for Mario using the `INSERT INTO` and `VALUES` keywords. Be sure to set his `character_id` when adding him. Also, `DATE` values need a string with the format: `'YYYY-MM-DD'`.
 
-View all the data in more_info to make sure it's looking good.
+#### HINTS
 
-####
+- Here's an example: `INSERT INTO table_name(columns) VALUES(values);`
+- You previously used `INSERT INTO characters(name, homeland, favorite_color) VALUES('Luigi', 'Mushroom Kingdom', 'Green');`
+- Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1981-07-09', 155, 64.5, 1);`
+- Or, enter the above command and replace the `1` with the correct `character_id`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-Next, you are going to add some info for Luigi. Use SELECT again to view the character_id and name columns from the characters table to find his id.
+## 1030. View `more_info` Data
 
-####
+### 1030.1
+
+View all the data in `more_info` to make sure it's looking good.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords
+- Here's an example: `SELECT columns FROM table_name;`
+- Use `*` to see all columns
+- Try entering `SELECT * FROM more_info;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1040. Select `character_id` and `name`
+
+### 1040.1
+
+Next, you are going to add some info for Luigi. Use `SELECT` again to view the `character_id` and `name` columns **from** the `characters` table to find his id.
+
+#### HINTS
+
+- Here's an example: `SELECT column1, column2 FROM table_name;`
+- Try entering `SELECT character_id, name FROM characters;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1050. Add `more_info` for Luigi
+
+### 1050.1
 
 You can see Luigi's id there. Here's his info:
 
-birthday height weight
-1983-07-14 175 48.8
-Add a row in more_info for Luigi using the above info. Be sure to add his character_id as well.
+| birthday   | height | weight |
+| ---------- | ------ | ------ |
+| 1983-07-14 | 175    | 48.8   |
 
-####
+Add a row in `more_info` for Luigi using the above info. Be sure to add his `character_id` as well.
 
-View all the data in more_info to see more info for Luigi.
+#### HINTS
 
-####
+- Use the `INSERT INTO` and `VALUES` keywords
+- Be sure to put `DATE` values in quotes with the format: `'YYYY-MM-DD'`
+- You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1981-07-09', 155, 64.5, 1);`
+- Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1983-07-14', 175, 48.8, 2);`
+- Or, enter the above command and replace the `2` with the correct `character_id`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-Peach is next. View the character_id and name columns from the characters table again so you can find her id.
+## 1060. View `more_info` Data
 
-####
+### 1060.1
+
+View all the data in `more_info` to see more info for Luigi.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords
+- Here's an example: `SELECT columns FROM table_name;`
+- Use `*` to see all columns
+- Try entering `SELECT * FROM more_info;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1070. Select `character_id` and `name`
+
+### 1070.1
+
+Peach is next. View the `character_id` and `name` columns from the `characters` table again so you can find her id.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords
+- Here's an example: `SELECT column1, column2 FROM table_name;`
+- Try entering `SELECT character_id, name FROM characters;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1080. Add `more_info` for Peach
+
+### 1080.1
 
 Here's the additional info for Peach:
 
-birthday height weight
-1985-10-18 173 52.2
-Add a row for Peach using the above info. Be sure to add her character_id as well.
+| birthday   | height | weight |
+| ---------- | ------ | ------ |
+| 1985-10-18 | 173    | 52.2   |
 
-#### SELECT columns FROM table_name WHERE condition;
+Add a row for Peach using the above info. Be sure to add her `character_id` as well.
 
-Toad is next. Instead of viewing all the rows to find his id, you can just view his row with a WHERE condition. You used several earlier to delete and update rows. You can use it to view rows as well. Here's an example:
+#### HINTS
 
+- Be sure to put `DATE` values in quotes with the format: `'YYYY-MM-DD'`
+- You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1983-07-14', 175, 48.8, 2);`
+- Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1985-10-18', 173, 52.2, 3);`
+- Or, enter the above command and replace the `3` with the correct `character_id`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1090. Select Toad's `character_id` and `name`
+
+### 1090.1
+
+Toad is next. Instead of viewing all the rows to find his id, you can just view his row with a `WHERE` condition. You used several earlier to delete and update rows. You can use it to view rows as well. Here's an example:
+
+```sql
 SELECT columns FROM table_name WHERE condition;
-A condition you used before was username='Samus'. Find Toad's id by viewing the character_id and name columns from characters for only his row.
+```
 
-####
+A condition you used before was `username='Samus'`. Find Toad's id by viewing the `character_id` and `name` columns from `characters` for only his row.
+
+#### HINTS
+
+- Don't forget the semi-colon :smile:
+- Use `name='Toad'` for the condition
+- Try entering `SELECT character_id, name FROM characters WHERE name='Toad';`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1100. Add `more_info` for Toad
+
+### 1100.1
 
 Here's what Toad's info looks like:
 
-birthday height weight
-1950-01-10 66 35.6
-Add the above info for Toad. Be sure to add his character_id.
+| birthday   | height | weight |
+| ---------- | ------ | ------ |
+| 1950-01-10 | 66     | 35.6   |
 
-####
+Add the above info for Toad. Be sure to add his `character_id`.
 
-View all the data in more_info to see the rows you added.
+#### HINTS
 
-####
+- Put `DATE` values in quotes
+- You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1985-10-18', 173, 52.2, 3);`
+- Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1950-01-10', 66, 35.6, 4);`
+- Or, enter the above command and replace the `4` with the correct `character_id`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-Bowser is next. Find his id by viewing the character_id and name columns for only his row.
+## 1110. View `more_info` Data
 
-####
+### 1110.1
+
+View all the data in `more_info` to see the rows you added.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords
+- Here's an example: `SELECT columns FROM table_name;`
+- Use `*` to see all columns
+- Try entering `SELECT * FROM more_info;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1120. Select Bowser's Row
+
+### 1120.1
+
+Bowser is next. Find his id by viewing the `character_id` and `name` columns for only his row.
+
+#### HINTS
+
+- Use the `SELECT`, `FROM`, and `WHERE` keywords
+- Here's an example: `SELECT columns FROM table_name WHERE condition;`
+- I recommend `name='Bowser'` as the condition
+- Try entering `SELECT character_id, name FROM characters WHERE name='Bowser';`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1130. Add `more_info` for Bowser
+
+### 1130.1
 
 Here's what Bowser's info looks like:
 
-birthday height weight
-1990-10-29 258 300
-Add the above info for Bowser. Don't forget to add his character_id.
+| birthday   | height | weight |
+| ---------- | ------ | ------ |
+| 1990-10-29 | 258    | 300    |
 
-####
+Add the above info for Bowser. Don't forget to add his `character_id`.
 
-Daisy is next. Find her id by viewing the character_id and name columns for only her row.
+#### HINTS
 
-#### You can use NULL or simply not include the null columns when inserting.
+- Be sure to put `DATE` values in quotes with the format: `'YYYY-MM-DD'`
+- You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1950-01-10', 66, 35.6, 4);`
+- Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1990-10-29', 258, 300, 5);`
+- Or, enter the above command and replace the `5` with the correct `character_id`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1140. Select Daisy's Row
+
+### 1140.1
+
+Daisy is next. Find her id by viewing the `character_id` and `name` columns for only her row.
+
+#### HINTS
+
+- Use the `SELECT`, `FROM`, and `WHERE` keywords
+- Here's an example: `SELECT columns FROM table_name WHERE condition;`
+- Use `name='Daisy'` as the condition
+- Try entering `SELECT character_id, name FROM characters WHERE name='Daisy';`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1150. Add `more_info` for Daisy
+
+### 1150.1
 
 The info for Daisy looks like this:
 
-birthday height weight
-1989-07-31 NULL NULL
+| birthday   | height | weight |
+| ---------- | ------ | ------ |
+| 1989-07-31 | NULL   | NULL   |
 
-Add the above info for Daisy to more_info. Be sure to add her character_id as well. You can use NULL or simply not include the null columns when inserting.
+Add the above info for Daisy to `more_info`. Be sure to add her `character_id` as well. You can use `NULL` or simply not include the null columns when inserting.
 
-####
+#### HINTS
 
-View all the data in more_info to see the rows you added.
+- You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1990-10-29', 173, 300, 5);`
+- Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1989-07-31', NULL, NULL, 6);`
+- Or, enter the above command and replace the `6` with the correct `character_id`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-####
+## 1160. View `more_info` Data
 
-Null values show up as blank. Yoshi is last. Find his id by viewing the `character_id` and name columns for only his row.
+### 1160.1
 
-####
+View all the data in `more_info` to see the rows you added.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords
+- Here's an example: `SELECT columns FROM table_name;`
+- Use `*` to see all columns
+- Try entering `SELECT * FROM more_info;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1170. Select Yoshi's `character_id` and `name`
+
+### 1170.1
+
+Null values show up as blank. Yoshi is last. Find his id by viewing the `character_id` and `name` columns for only his row.
+
+#### HINTS
+
+- Use the `SELECT`, `FROM` and `WHERE` keywords
+- Here's an example: `SELECT columns FROM table_name WHERE condition;`
+- Try entering `SELECT character_id, name FROM characters WHERE name='Yoshi';`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1180. Add `more_info` for Yoshi
+
+### 1180.1
 
 The info for Yoshi looks like this:
 
-birthday height weight
-1990-04-13 162 59.1
-Add the above info for Yoshi to more_info. Be sure to include his character_id.
+| birthday   | height | weight |
+| ---------- | ------ | ------ |
+| 1990-04-13 | 162    | 59.1   |
 
-####
+Add the above info for Yoshi to `more_info`. Be sure to include his `character_id`.
 
-There should be a lot of data in more_info now. Take a look at all the rows and columns in it.
+#### HINTS
 
-####
+- You got this one!
+- You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1989-07-31', NULL, NULL, 6);`
+- Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1990-04-13', 162, 59.1, 7);`
+- Or, enter the above command and replace the `7` with the correct `character_id`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-It looks good. There is something you can do to help out though. What units do the height and weight columns use? It's centimeters and kilograms, but nobody will know. Rename the height column to height_in_cm.
+## 1190. View all `more_info` Data
 
-####
+### 1190.1
 
-Rename the weight column to weight_in_kg.
+There should be a lot of data in `more_info` now. Take a look at **all** the rows and columns in it.
 
-####
+#### HINTS
 
-Take a quick look at all the data in more_info to see the new column names.
+- Use the `SELECT` and `FROM` keywords
+- Here's an example: `SELECT columns FROM table_name;`
+- Try `SELECT * FROM more_info;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-#### CREATE TABLE table_name(column_name DATATYPE CONSTRAINTS);
+## 1200. Rename `height` Column
 
-Next, you will make a sounds table that holds filenames of sounds the characters make. You created your other tables similar to this:
+### 1200.1
+
+It looks good. There is something you can do to help out though. What units do the `height` and `weight` columns use? It's centimeters and kilograms, but nobody will know. Rename the `height` column to `height_in_cm`.
+
+#### HINTS
+
+- Use the `ALTER TABLE`, `RENAME COLUMN` and `TO` keywords
+- Here's an example: `ALTER TABLE table_name RENAME COLUMN column_name TO new_name;`
+- Try `ALTER TABLE more_info RENAME COLUMN height TO height_in_cm;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1210. Rename `weight` Column
+
+### 1210.1
+
+Rename the `weight` column to `weight_in_kg`.
+
+#### HINTS
+
+- Use the `ALTER TABLE`, `RENAME COLUMN` and `TO` keywords
+- Here's an example: `ALTER TABLE table_name RENAME COLUMN column_name TO new_name;`
+- Try `ALTER TABLE more_info RENAME COLUMN weight TO weight_in_kg;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1230. View all `more_info` Data
+
+### 1230.1
+
+Take a quick look at all the data in `more_info` to see the new column names.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords
+- Here's an example: `SELECT columns FROM table_name;`
+- Try `SELECT * FROM more_info;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1240. Create `sounds` Table
+
+### 1240.1
+
+Next, you will make a `sounds` table that holds filenames of sounds the characters make. You created your other tables similar to this:
 
 ```sql
 CREATE TABLE table_name();
@@ -5133,200 +8003,613 @@ CREATE TABLE table_name();
 
 Inside those parenthesis you can put columns for a table so you don't need to add them with a separate command, like this:
 
-```sqL
-
+```sql
 CREATE TABLE table_name(column_name DATATYPE CONSTRAINTS);
-
 ```
 
-Create a new table named sounds. Give it a column named sound_id of type SERIAL and a constraint of PRIMARY KEY.
+Create a new table named `sounds`. Give it a column named `sound_id` of type `SERIAL` and a constraint of `PRIMARY KEY`.
 
-####
+#### HINTS
 
-View the tables in mario_database to make sure it worked.
+- Try entering `CREATE TABLE sounds(sound_id SERIAL PRIMARY KEY);`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-####
+## 1260. View `mario_database` Tables
 
-There's your sounds table. Add a column to it named filename. Make it a VARCHAR that has a max length of 40 and with constraints of NOT NULL and UNIQUE. You can put those constraints at the end of the query to add them all.
+### 1260.1
 
-#### `ALTER TABLE <table_name> ADD COLUMN <column_name> <DATATYPE> REFERENCES referenced_table_name(referenced_column_name);` one-to-many relationship
+View the tables in `mario_database` to make sure it worked.
 
-You want to use character_id as a foreign key again. This will be a "one-to-many" relationship because one character will have many sounds, but no sound will have more than one character. Here's the example again:
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Try entering `\d`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1270. Add `filename` Column
+
+### 1270.1
+
+There's your `sounds` table. Add a column to it named `filename`. Make it a `VARCHAR` that has a max length of `40` and with constraints of `NOT NULL` and `UNIQUE`. You can put those constraints at the end of the query to add them all.
+
+#### HINTS
+
+- Use the `ALTER TABLE` and `ADD COLUMN` keywords
+- Give it three properties: `VARCHAR(40) NOT NULL UNIQUE`
+- Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE CONSTRAINTS;`
+- Try entering `ALTER TABLE sounds ADD COLUMN filename VARCHAR(40) NOT NULL UNIQUE;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1280. Add `sounds` Foreign Key
+
+### 1280.1
+
+You want to use `character_id` as a foreign key again. This will be a "one-to-many" relationship because **one** character will have **many** sounds, but no sound will have more than one character. Here's the example again:
 
 ```sql
-ALTER TABLE table_name ADD COLUMN column_name <DATATYPE> REFERENCES referenced_table_name(referenced_column_name);
+ALTER TABLE table_name ADD COLUMN column_name DATATYPE CONSTRAINT REFERENCES referenced_table_name(referenced_column_name);
 ```
 
-Add a column to sounds named character_id. Give it the properties INT, NOT NULL, and set it as a foreign key that references character_id from characters.
+Add a column to `sounds` named `character_id`. Give it the properties `INT`, `NOT NULL`, and set it as a foreign key that references `character_id` from `characters`.
 
-####
+#### HINTS
 
-Take a look at the details of the sounds table to see all the columns.
+- You can do this!
+- Give it one more try, take a close look at all those values and keywords
+- Without the keywords, it looks like this: `sounds character_id characters(character_id);`
+- Try using `ALTER TABLE sounds ADD COLUMN character_id INT NOT NULL REFERENCES characters(character_id);`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-####
+## 1290. View `sounds` Details
 
-Next, you will add some rows. But first, view all the data in characters so you can find the correct id's again. Order them by character_id like you did earlier.
+### 1290.1
 
-####
+Take a look at the details of the `sounds` table to see all the columns.
 
-The first file is named its-a-me.wav. Insert it into the sounds table with Mario's id as the character_id.
+#### HINTS
 
-####
+- Use the **d**isplay shortcut command
+- Here's an example: `\d table_name`
+- Try entering `\d sounds`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-Add another row with a filename of yippee.wav. Use Mario's character_id again for the foreign key value.
+## 1300. View `characters` Data
 
-####
+### 1300.1
 
-Add another row to sounds for Luigi named ha-ha.wav. Use his character_id this time. Take a look at the data in characters to find his id if you need to.
+Next, you will add some rows. But first, view all the data in `characters` so you can find the correct id's again. **Order** them **by** `character_id` like you did earlier.
 
-####
+#### HINTS
 
-Add another row with a filename of oh-yeah.wav. This one is for Luigi as well so use his character_id again.
+- Use the `SELECT` and `FROM` keywords
+- Here's an example: `SELECT columns FROM table_name ORDER BY column;`
+- Use `*` to select all the columns
+- Try entering `SELECT * FROM characters ORDER BY character_id;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-####
+## 1310. Insert `its-a-me.wav`
 
-Add two more rows for Peach sounds. The filenames are yay.wav and woo-hoo.wav. Don't forget her character_id. Try to do it with one command.
+### 1310.1
 
-####
+The first file is named `its-a-me.wav`. Insert it into the `sounds` table with Mario's id as the `character_id`.
 
-Add two more rows. The filenames are mm-hmm.wav and yahoo.wav. The first one is for Peach again, the second is for Mario, so use the correct foreign key values. Try to do it with one command.
+#### HINTS
 
-####
+- Don't for get the quotes
+- Use `INSERT INTO` and `VALUES` keywords
+- Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2);`
+- Try `INSERT INTO sounds(filename, character_id) VALUES('its-a-me.wav', 1);`
+- Or, enter the above command and replace the `1` with the correct `character_id`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-View all the data in the sounds table. You should be able to see the "one-to-many" relationship better. One character has many sounds.
+## 1320. Insert `yippee.wav`
 
-####
+### 1320.1
 
-See the "one-to-many" relationship? Create another new table called actions. Give it a column named action_id that's a type of SERIAL, and make it the PRIMARY KEY. Try to create the table and add the column with one command.
+Add another row with a `filename` of `yippee.wav`. Use Mario's `character_id` again for the foreign key value.
 
-####
+#### HINTS
 
-Add a column named action to your new table. Give it a type of VARCHAR that is a max length of 20 and has UNIQUE and NOT NULL constraints.
+- Don't forget the quotes
+- You previously used: `INSERT INTO sounds(filename, character_id) VALUES('its-a-me.wav', 1);`
+- Try entering `INSERT INTO sounds(filename, character_id) VALUES('yippee.wav', 1);`
+- Or, enter the above command and replace the `1` with the correct `character_id`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-#### many-to-many relationship
+## 1330. Insert `ha-ha.wav`
 
-The actions table won't have any foreign keys. It's going to have a "many-to-many" relationship with the characters table. This is because many of the characters can perform many actions. You will see why you don't need a foreign key later. Insert a row into the actions table. Give it an action of run.
+### 1330.1
 
-####
+Add another row to `sounds` for Luigi named `ha-ha.wav`. Use his `character_id` this time. Take a look at the data in `characters` to find his id if you need to.
 
-Insert another row into the actions table. Give it an action of jump.
+#### HINTS
 
-####
+- You previously used: `INSERT INTO sounds(filename, character_id) VALUES('its-a-me.wav', 1);`
+- Try entering `INSERT INTO sounds(filename, character_id) VALUES('ha-ha.wav', 2);`
+- Or, enter the above command and replace the `2` with the correct `character_id`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-Add another action row with an action of duck.
+## 1340. Insert `oh-yeah.wav`
 
-####
+### 1340.1
 
-View all the data in actions to make sure there's no mistakes.
+Add another row with a filename of `oh-yeah.wav`. This one is for Luigi as well so use his `character_id` again.
 
-#### junction table
+#### HINTS
 
-It looks good. "Many-to-many" relationships usually use a junction table to link two tables together, forming two "one-to-many" relationships. Your characters and actions table will be linked using a junction table. Create a new table called character_actions. It will describe what actions each character can perform.
+- Try `INSERT INTO sounds(filename, character_id) VALUES('oh-yeah.wav', 2);`
+- Or, enter the above command and replace the `2` with the correct `character_id`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-####
+## 1350. Insert Sounds for Peach
 
-Your junction table will use the primary keys from the characters and actions tables as foreign keys to create the relationship. Add a column named character_id to your junction table. Give it the type of INT and constraint of NOT NULL.
+### 1350.1
 
-#### `ALTER TABLE table_name ADD FOREIGN KEY(column_name) REFERENCES referenced_table(referenced_column);` set an existing column as a foreign key
+Add two more rows for Peach sounds. The filenames are `yay.wav` and `woo-hoo.wav`. Don't forget her `character_id`. Try to do it with one command.
+
+#### HINTS
+
+- Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`
+- Find her `character_id` by viewing data in the `characters` table
+- Try `INSERT INTO sounds(filename, character_id) VALUES('yay.wav', 3), ('woo-hoo.wav', 3);`
+- Or, enter the above command and replace the `3` with the correct `character_id`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1360. Insert Two More Sounds
+
+### 1360.1
+
+Add two more rows. The filenames are `mm-hmm.wav` and `yahoo.wav`. The first one is for Peach again, the second is for Mario, so use the correct foreign key values. Try to do it with one command.
+
+#### HINTS
+
+- Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`
+- Find their `character_id` by viewing data in the `characters` table
+- Try `INSERT INTO sounds(filename, character_id) VALUES('mm-hmm.wav', 3), ('yahoo.wav', 1);`
+- Or, enter the above command and replace the `3` and `1` with the correct `character_id`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1370. View `sounds` Data
+
+### 1370.1
+
+View all the data in the `sounds` table. You should be able to see the "one-to-many" relationship better. One character has many sounds.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords
+- Here's an example: `SELECT columns FROM table_name;`
+- Use `*` to select all the columns
+- Try entering `SELECT * FROM sounds;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1380. Create `actions` Table
+
+### 1380.1
+
+See the "one-to-many" relationship? Create another new table called `actions`. Give it a column named `action_id` that's a type of `SERIAL`, and make it the `PRIMARY KEY`. Try to create the table and add the column with one command.
+
+#### HINTS
+
+- Use `CREATE TABLE`, `SERIAL`, and `PRIMARY KEY`
+- You previously used `CREATE TABLE sounds(sound_id SERIAL PRIMARY KEY);`
+- Try entering `CREATE TABLE actions(action_id SERIAL PRIMARY KEY);`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1390. Add `action` Column
+
+### 1390.1
+
+Add a column named `action` to your new table. Give it a type of `VARCHAR` that is a max length of `20` and has `UNIQUE` and `NOT NULL` constraints.
+
+#### HINTS
+
+- Use the `ALTER TABLE` and `ADD COLUMN` keywords
+- You previously used `ALTER TABLE sounds ADD COLUMN filename VARCHAR(40) NOT NULL UNIQUE;`
+- Try entering `ALTER TABLE actions ADD COLUMN action VARCHAR(20) UNIQUE NOT NULL;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1400. Insert `run`
+
+### 1400.1
+
+The actions table won't have any foreign keys. It's going to have a "many-to-many" relationship with the characters table. This is because **many** of the characters can perform **many** actions. You will see why you don't need a foreign key later. Insert a row into the `actions` table. Give it an `action` of `run`.
+
+#### HINTS
+
+- Use the `INSERT INTO` and `VALUES` keywords
+- Don't forget the single quotes
+- Here's an example `INSERT INTO table(column) VALUES(value);`
+- Try entering `INSERT INTO actions(action) VALUES('run');`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1410. Insert `jump`
+
+### 1410.1
+
+Insert another row into the `actions` table. Give it an `action` of `jump`.
+
+#### HINTS
+
+- Use the `INSERT INTO` and `VALUES` keywords
+- Don't forget the single quotes
+- You previously used `INSERT INTO actions(action) VALUES('run');`
+- Try entering `INSERT INTO actions(action) VALUES('jump');`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1420. Insert `duck`
+
+### 1420.1
+
+Add another action row with an `action` of `duck`.
+
+#### HINTS
+
+- Use the `INSERT INTO` and `VALUES` keywords
+- Don't forget the single quotes
+- You previously used `INSERT INTO actions(action) VALUES('jump');`
+- Try entering `INSERT INTO actions(action) VALUES('duck');`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1430. View `actions` Data
+
+### 1430.1
+
+View all the data in `actions` to make sure there's no mistakes.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords
+- Here's an example: `SELECT columns FROM table_name;`
+- Use `*` to select all the columns
+- Try entering `SELECT * FROM actions;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1440. Create Junction Table
+
+### 1440.1
+
+It looks good. "Many-to-many" relationships usually use a **junction** table to link two tables together, forming two "one-to-many" relationships. Your `characters` and `actions` table will be linked using a junction table. Create a new table called `character_actions`. It will describe what actions each character can perform.
+
+#### HINTS
+
+- Use the `CREATE TABLE` keywords
+- You previously used `CREATE TABLE more_info();`
+- Try entering `CREATE TABLE character_actions();`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1450. Add `character_id` Column
+
+### 1450.1
+
+Your junction table will use the primary keys from the `characters` and `actions` tables as foreign keys to create the relationship. Add a column named `character_id` to your junction table. Give it the type of `INT` and constraint of `NOT NULL`.
+
+#### HINTS
+
+- Use the `ALTER TABLE` and `ADD COLUMN` keywords
+- You previously used: `ALTER TABLE actions ADD COLUMN name VARCHAR(20) UNIQUE NOT NULL;`
+- Try entering `ALTER TABLE character_actions ADD COLUMN character_id INT NOT NULL;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1460. Add `character_id` as Foreign Key
+
+### 1460.1
 
 The foreign keys you set before were added when you created the column. You can set an existing column as a foreign key like this:
 
+```sql
 ALTER TABLE table_name ADD FOREIGN KEY(column_name) REFERENCES referenced_table(referenced_column);
-Set the character_id column you just added as a foreign key that references the character_id from the characters table.
+```
 
-####
+Set the `character_id` column you just added as a foreign key that references the `character_id` from the `characters` table.
 
-View the details of the character_actions table to see the foreign key you added.
+#### HINTS
 
-####
+- Without the keywords, it looks like this: `character_actions character_id characters(character_id);`
+- All the info you need is there, read it closely
+- Try this: `ALTER TABLE character_actions ADD FOREIGN KEY(character_id) REFERENCES characters(character_id);`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-Add another column to character_actions named action_id. Give it a type of INT and constraint of NOT NULL.
+## 1470. View `character_actions` Details
 
-####
+### 1470.1
 
-This will be a foreign key as well. Set the action_id column you just added as a foreign key that references the action_id column from the actions table.
+View the details of the `character_actions` table to see the foreign key you added.
 
-####
+#### HINTS
 
-View the details of the character_actions table to see your keys.
+- Use the **d**isplay command
+- Add the table name after the command
+- Enter `\d character_actions`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-#### composite primary key `ALTER TABLE <table_name> ADD PRIMARY KEY(<column1>, <column2> );`
+## 1480. Add `action_id` Column
 
-Every table should have a primary key. Your previous tables had a single column as a primary key. This one will be different. You can create a primary key from two columns, known as a composite primary key. Here's an example:
+### 1480.1
 
+Add another column to `character_actions` named `action_id`. Give it a type of `INT` and constraint of `NOT NULL`.
+
+#### HINTS
+
+- Use the `ALTER TABLE` and `ADD COLUMN` keywords
+- You previously used: `ALTER TABLE character_actions ADD COLUMN character_id INT NOT NULL;`
+- Try entering `ALTER TABLE character_actions ADD COLUMN action_id INT NOT NULL;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1500. Add `action_id` as Foreign Key
+
+### 1500.1
+
+This will be a foreign key as well. Set the `action_id` column you just added as a foreign key that references the `action_id` column from the `actions` table.
+
+#### HINTS
+
+- Here's the example again: `ALTER TABLE table_name ADD FOREIGN KEY(column_name) REFERENCES referenced_table(referenced_column);`
+- Without the keywords, it looks like this: `character_actions action_id actions(action_id);`
+- You previously used: `ALTER TABLE characters_actions ADD FOREIGN KEY(character_id) REFERENCES characters(character_id);`
+- Here it is `ALTER TABLE character_actions ADD FOREIGN KEY(action_id) REFERENCES actions(action_id);`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1510. View `character_actions` Details
+
+### 1510.1
+
+View the details of the `character_actions` table to see your keys.
+
+#### HINTS
+
+- Use the **d**isplay command
+- Add the table name after the command
+- Enter `\d character_actions`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1520. Create Composite Primary Key
+
+### 1520.1
+
+Every table should have a primary key. Your previous tables had a single column as a primary key. This one will be different. You can create a primary key from two columns, known as a **composite** primary key. Here's an example:
+
+```sql
 ALTER TABLE table_name ADD PRIMARY KEY(column1, column2);
-Use character_id and action_id to create a composite primary key for this table.
+```
 
-####
+Use `character_id` and `action_id` to create a composite primary key for this table.
 
-This table will have multiple rows with the same character_id, and multiple rows the same action_id. So neither of them are unique. But you will never have the same character_id and action_id in a single row. So the two columns together can be used to uniquely identify each row. View the details of the character_actions table to see your composite key.
+#### HINTS
 
-####
+- Try `ALTER TABLE character_actions ADD PRIMARY KEY(character_id, action_id);`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-Insert three rows into character_actions for all the actions Yoshi can perform. He can perform all of them in the actions table. View the data in the characters and actions table to find the correct id's for the information.
+## 1530. View `character_actions` Details
 
-####
+### 1530.1
 
-View all the data in character_actions to see your rows.
+This table will have multiple rows with the same `character_id`, and multiple rows the same `action_id`. So neither of them are unique. But you will never have the same `character_id` and `action_id` in a single row. So the two columns together can be used to uniquely identify each row. View the details of the `character_actions` table to see your composite key.
 
-####
+#### HINTS
 
-Add three more rows into character_actions for all of Daisy's actions. She can perform all of the actions, as well.
+- Use the **d**isplay command
+- Add the table name after the command
+- Enter `\d character_actions`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-####
+## 1540. Insert Yoshi Actions
+
+### 1540.1
+
+Insert three rows into `character_actions` for all the actions Yoshi can perform. He can perform all of them in the `actions` table. View the data in the `characters` and `actions` table to find the correct id's for the information.
+
+#### HINTS
+
+- Use the `INSERT INTO` and `VALUES` keywords
+- Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`
+- Try `INSERT INTO character_actions(character_id, action_id) VALUES(7, 1), (7, 2), (7, 3);`
+- Or, enter the above command and use the correct id's
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1550. View `character_actions` Data
+
+### 1550.1
+
+View all the data in `character_actions` to see your rows.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords
+- Here's an example: `SELECT columns FROM table_name;`
+- Use `*` to select all the columns
+- Try entering `SELECT * FROM character_actions;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1560. Insert Daisy Actions
+
+### 1560.1
+
+Add three more rows into `character_actions` for all of Daisy's actions. She can perform all of the actions, as well.
+
+#### HINTS
+
+- View the data in the `characters` and `actions` table to find the correct id's for the information.
+- Use the `INSERT INTO` and `VALUES` keywords
+- Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`
+- You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(7, 1), (7, 2), (7, 3);`
+- Try `INSERT INTO character_actions(character_id, action_id) VALUES(6, 1), (6, 2), (6, 3);`
+- Or, enter the above command and use the correct id's
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1570. Insert Bowser Actions
+
+### 1570.1
 
 Bowser can perform all the actions. Add three rows to the table for him.
 
-####
+#### HINTS
+
+- View the data in the `characters` and `actions` table to find the correct id's for the information.
+- Use the `INSERT INTO` and `VALUES` keywords
+- Use `1`, `2`, and `3` for the `action_id` values
+- Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`
+- You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(6, 1), (6, 2), (6, 3);`
+- Try `INSERT INTO character_actions(character_id, action_id) VALUES(5, 1), (5, 2), (5, 3);`
+- Or, enter the above command and use the correct id's
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1580. Insert Toad Actions
+
+### 1580.1
 
 Next is Toad. Add three more rows for his actions.
 
-####
+#### HINTS
+
+- Add a row into `character_actions` for each action `Toad` can perform
+- View the data in the `characters` and `actions` table to find the correct id's for the information.
+- Use the `INSERT INTO` and `VALUES` keywords
+- Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`
+- You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(5, 1), (5, 2), (5, 3)`
+- Try `INSERT INTO character_actions(character_id, action_id) VALUES(4, 1), (4, 2), (4, 3);`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1590. Insert Peach Actions
+
+### 1590.1
 
 You guessed it. Peach can perform all the actions as well, so add three more rows for her.
 
-####
+#### HINTS
+
+- Add a row into `character_actions` for each action `Peach` can perform
+- View the data in the `characters` and `actions` table to find the correct id's for the information.
+- Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`
+- You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(4, 1), (4, 2), (4, 3)`
+- Try `INSERT INTO character_actions(character_id, action_id) VALUES(3, 1), (3, 2), (3, 3);`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1600. Insert Luigi Actions
+
+### 1600.1
 
 Add three more rows for Luigi's actions.
 
-####
+#### HINTS
+
+- Add a row into `character_actions` for each action `Luigi` can perform
+- He can perform all the actions
+- View the data in the `characters` and `actions` table to find the correct id's for the information.
+- Use the `INSERT INTO` and `VALUES` keywords
+- Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`
+- You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(3, 1), (3, 2), (3, 3)`
+- Try `INSERT INTO character_actions(character_id, action_id) VALUES(2, 1), (2, 2), (2, 3);`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1610. Insert Mario Actions
+
+### 1610.1
 
 Last is Mario, add three rows for his actions.
 
-####
+#### HINTS
 
-That was a lot of work. View all the data in character_actions to see the rows you ended up with.
+- Add a row into `character_actions` for each action `Mario` can perform
+- View the data in the `characters` and `actions` table to find the correct id's for the information.
+- Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`
+- You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(2, 1), (2, 2), (2, 3)`
+- Try `INSERT INTO character_actions(character_id, action_id) VALUES(1, 1), (1, 2), (1, 3);`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-####
+## 1620. View `character_actions` Data
+
+### 1620.1
+
+That was a lot of work. View all the data in `character_actions` to see the rows you ended up with.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords
+- Here's an example: `SELECT columns FROM table_name;`
+- Use `*` to select all the columns
+- Try entering `SELECT * FROM character_actions;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1630. Display Tables
+
+### 1630.1
 
 Well done. The database is complete for now. Take a look around to see what you ended up with. First, display all the tables you created.
 
-####
+#### HINTS
 
-There's five tables there. Nice job. Next, take a look at all the data in the characters table.
+- Use the **d**isplay command
+- Enter `\d`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-####
+## 1640. View `characters` Data
 
-Those are some lovely characters. View all the data in the more_info table.
+### 1640.1
 
-#### SELECT columns FROM table_1 FULL JOIN table_2 ON table_1.primary_key_column = table_2.foreign_key_column;
+There's five tables there. Nice job. Next, take a look at all the data in the `characters` table.
 
-You can see the character_id there so you just need to find the matching id in the characters table to find out who it's for. Or... You added that as a foreign key, that means you can get all the data from both tables with a JOIN command:
+#### HINTS
 
+- Use the `SELECT` and `FROM` keywords
+- Here's an example: `SELECT columns FROM table_name;`
+- Use `*` to select all the columns
+- Try entering `SELECT * FROM characters;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1650. View `more_info` Data
+
+### 1650.1
+
+Those are some lovely characters. View all the data in the `more_info` table.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords
+- Here's an example: `SELECT columns FROM table_name;`
+- Use `*` to select all the columns
+- Try entering `SELECT * FROM more_info;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1660. Full Join `characters` on `more_info`
+
+### 1660.1
+
+You can see the `character_id` there so you just need to find the matching id in the `characters` table to find out who it's for. Or... You added that as a foreign key, that means you can get all the data from both tables with a `JOIN` command:
+
+```sql
 SELECT columns FROM table_1 FULL JOIN table_2 ON table_1.primary_key_column = table_2.foreign_key_column;
-Enter a join command to see all the info from both tables. The two tables are characters and more_info. The columns are the character_id column from both tables since those are the linked keys.
+```
 
-####
+Enter a join command to see **all** the info from both tables. The two tables are `characters` and `more_info`. The columns are the `character_id` column from both tables since those are the linked keys.
 
-Now you can see all the info from both tables. If you recall, that's a "one-to-one" relationship. So there's one row in each table that matches a row from the other. Use another JOIN command to view the characters and sounds tables together. They both use the character_id column for their keys as well.
+#### HINTS
 
-####
+- Use `*` to see all the columns
+- Give it one more try, read closely
+- Without the keywords, it looks like this: `characters more_info characters.character_id = more_info.character_id`
+- Try entering `SELECT * FROM characters FULL JOIN more_info ON characters.character_id = more_info.character_id;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-Now you can see all the info from both tables. If you recall, that's a "one-to-one" relationship. So there's one row in each table that matches a row from the other. Use another JOIN command to view the characters and sounds tables together. They both use the character_id column for their keys as well.
+## 1670. Full Join `characters` on `sounds`
 
-#### `SELECT columns FROM junction_table                                           FULL JOIN table_1 ON junction_table.foreign_key_column = table_1.primary_key_column  FULL JOIN table_2 ON junction_table.foreign_key_column = table_2.primary_key_column;`
+### 1670.1
 
-This shows the "one-to-many" relationship. You can see that some of the characters have more than one row because they have many sounds. How can you see all the info from the characters, actions, and character_actions tables? Here's an example that joins three tables:
+Now you can see all the info from both tables. If you recall, that's a "one-to-one" relationship. So there's one row in each table that matches a row from the other. Use another `JOIN` command to view the `characters` and `sounds` tables together. They both use the `character_id` column for their keys as well.
+
+#### HINTS
+
+- Here's the example again: `SELECT columns FROM table_1 FULL JOIN table_2 ON table_1.primary_key_column = table_2.foreign_key_column;`
+- Use `*` to see all the columns
+- You previously used `SELECT * FROM characters FULL JOIN more_info ON characters.character_id = more_info.character_id;`
+- Try entering `SELECT * FROM characters FULL JOIN sounds ON characters.character_id = sounds.character_id;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+
+## 1680. Join `character_actions` with `characters` and `actions`
+
+### 1680.1
+
+This shows the "one-to-many" relationship. You can see that some of the characters have more than one row because they have **many** sounds. How can you see all the info from the `characters`, `actions`, and `character_actions` tables? Here's an example that joins three tables:
 
 ```sql
 SELECT columns FROM junction_table
@@ -5334,7 +8617,16 @@ FULL JOIN table_1 ON junction_table.foreign_key_column = table_1.primary_key_col
 FULL JOIN table_2 ON junction_table.foreign_key_column = table_2.primary_key_column;
 ```
 
-Congratulations on making it this far. This is the last step. View all the data from characters, actions, and character_actions by joining all three tables. When you see the data, be sure to check the "many-to_many" relationship. Many characters will have many actions.
+Congratulations on making it this far. This is the last step. View all the data from `characters`, `actions`, and `character_actions` by joining all three tables. When you see the data, be sure to check the "many-to_many" relationship. Many characters will have many actions.
+
+#### HINTS
+
+- Use the `character_id` column to join `character_actions` and `characters`
+- Use the `action_id` column to join `character_actions` and `actions`
+- Without the keywords, it looks like this: `character_actions characters character_actions.character_id = characters.character_id actions character_actions.action_id = actions.action_id;`
+- Try entering `SELECT * FROM character_actions FULL JOIN characters ON character_actions.character_id = characters.character_id FULL JOIN actions ON character_actions.action_id = actions.action_id;`
+- Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ### Learn Bash Scripting by Building Five Programs
 
@@ -5342,241 +8634,679 @@ Bash scripts combine terminal commands and logic into programs that can execute 
 
 In this 220-lesson course, you will learn more terminal commands and how to use them within Bash scripts by creating five small programs.
 
-####
+# Learn Bash Scripting by Building Five Programs
 
-The first thing you need to do is start the terminal. Do that by clicking the "hamburger" menu at the top left of the screen, going to the "terminal" section, and clicking "new terminal". Once you open a new one, type `echo hello bash` into the terminal and press enter.
+> Welcome to the Bash Scripting lessons!
 
-####
+## 10. Start the Terminal
 
-You can run commands in the terminal or put them in a file to be run as a script. You will be making five small programs to learn some scripting. The first one will be a "questionnaire". Use the `touch` command to create `questionnaire.sh` in the project folder.
+### 10.1
 
-####
+**The first thing you need to do is start the terminal.** Do that by clicking the "hamburger" menu at the top left of the screen, going to the "terminal" section, and clicking "new terminal". Once you open a new one, type `echo hello bash` into the terminal and press enter.
+
+#### HINTS
+
+- Capitalization matters
+- If the tests don't run automatically, "trash" all the terminals and try the instructions again
+
+## 20. touch questionnaire.sh
+
+### 20.1
+
+You can run commands in the terminal or put them in a file to be run as a script. You will be making five small programs to learn some scripting. The first one will be a "questionnaire". Use the `touch` command to create `questionnaire.sh` in the `project` folder.
+
+#### HINTS
+
+- Type `touch questionnaire.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+- Enter `cd ~/project` in the terminal to get to the project folder if you aren't there
+
+## 30. Add echo questionnaire
+
+### 30.1
 
 To start, open the file in the main editor by clicking the filename in the left side panel.
 Then, add the text `echo hello questionnaire` at the top of the file.
 
-#### run script with sh
+#### HINTS
 
-Your script has one command. Run it with `sh questionnaire.sh` to see what happens. sh stands for shell.
+- If the left side panel isn't visible, click the icon that looks like two pieces of paper
+  at the top left to open the panel. Then, click on your file to open it
+- Add the suggested text to the `questionnaire.sh` file
 
-#### run script with bash
+## 35. sh questionnaire.sh
 
-Using sh to run your script uses the shell interpreter. Run your script again with bash questionnaire.sh to use the bash interpreter. bash stands for bourne-again shell.
+### 35.1
 
-#### `which bash` find the proper shebang
+Your script has one command. Run it with `sh questionnaire.sh` to see what happens. `sh` stands for `shell`.
 
-The output was the same. There are many interpreters which may not give the output you expect. Find out where the bash interpreter is located by entering `which bash` in the terminal.
+#### HINTS
 
-#### absolute path to the bash interpreter
+- Type `sh questionnaire.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+- Enter `cd ~/project` in the terminal to get to the project folder if you aren't there
 
-That's the absolute path to the `bash` interpreter. You can tell your program to use it by placing a `shebang` at the very top of the file like this:` #!<path_to_interpreter>`. Add a `shebang` at the very top of your file, the one you want looks like this: `#!/bin/bash`.
+## 40. bash questionnaire.sh
 
-#### execute file with `./`
+### 40.1
 
-Now, instead of using sh or bash to run your script. You can run it by executing the file and it will default to bash. Run your script by executing it with `./questionnaire.sh`
+Using `sh` to run your script uses the `shell` interpreter. Run your script again with `bash questionnaire.sh` to use the `bash` interpreter. `bash` stands for `bourne-again shell`.
 
-#### `ls -l` to list file permissions
+#### HINTS
 
-You should have got a permission denied message because you don't have permissions to execute the script. List what's in the project folder in long list format with ls -l to see the file permissions.
+- Type `bash questionnaire.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+- Enter `cd ~/project` in the terminal to get to the project folder if you aren't there
 
-#### r read, w write, x execute `chmod +x questionnaire.sh`
+## 50. which bash
 
-Next to your file is -rw-r--r--. All but the first character (-) describe permissions different users have with the file. r means read, w means write, x means execute. I don't see an x anywhere, so nobody can execute it. Enter `chmod +x questionnaire.sh` in the terminal to give everyone executable permissions.
+### 50.1
 
-####
+The output was the same. There are many interpreters which may not give the output you expect. Find out where the `bash` interpreter is located by entering `which bash` in the terminal.
 
-List what's in the folder again with ls -l to see the new permissions.
+#### HINTS
 
-####
+- Type `which bash` in the terminal and press enter
 
-The x was added by each type of user to denote that anyone can execute the file. Run your file again by executing it with ./questionnaire.sh.
+## 60. Add shebang
 
-####
+### 60.1
 
-Now it works. In your script, you can add any commands that you would be able to enter in the terminal. Test this by adding the ls -l command below your other command.
+That's the absolute path to the `bash` interpreter. You can tell your program to use it by placing a `shebang` at the very top of the file like this: `#!<path_to_interpreter>`. Add a `shebang` at the very top of your file, the one you want looks like this: `#!/bin/bash`.
 
-####
+#### HINTS
+
+- Add `#!/bin/bash` at the top of your `questionnaire.sh` file
+
+## 70. ./questionnaire
+
+### 70.1
+
+Now, instead of using `sh` or `bash` to run your script. You can run it by executing the file and it will default to `bash`. Run your script by executing it with `./questionnaire.sh`
+
+#### HINTS
+
+- Type `./questionnaire.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+- Enter `cd ~/project` in the terminal to get to the project folder if you aren't there
+
+## 80. ls -l
+
+### 80.1
+
+You should have got a permission denied message because you don't have permissions to execute the script. List what's in the `project` folder in long list format with `ls -l` to see the file permissions.
+
+#### HINTS
+
+- Type `ls -l` in the terminal and press enter
+- Make sure you are in the `project` folder first
+- Enter `cd ~/project` in the terminal to get to the project folder if you aren't there
+
+## 90. chmod +x questionnaire.sh
+
+### 90.1
+
+Next to your file is `-rw-r--r--`. All but the first character (`-`) describe permissions different users have with the file. `r` means `read`, `w` means `write`, `x` means `execute`. I don't see an `x` anywhere, so nobody can execute it. Enter `chmod +x questionnaire.sh` in the terminal to give everyone executable permissions.
+
+#### HINTS
+
+- Type `chmod +x questionnaire.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+- Enter `cd ~/project` in the terminal to get to the project folder if you aren't there
+
+## 100. ls -l
+
+### 100.1
+
+List what's in the folder again with `ls -l` to see the new permissions.
+
+#### HINTS
+
+- Type `ls -l` in the terminal and press enter
+- Make sure you are in the `project` folder first
+- Enter `cd ~/project` in the terminal to get to the project folder if you aren't there
+
+## 110. ./questionnaire
+
+### 110.1
+
+The `x` was added by each type of user to denote that anyone can execute the file. Run your file again by executing it with `./questionnaire.sh`.
+
+#### HINTS
+
+- Type `./questionnaire.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+- Enter `cd ~/project` in the terminal to get to the project folder if you aren't there
+
+## 140. Add ls -l
+
+### 140.1
+
+Now it works. In your script, you can add any commands that you would be able to enter in the terminal. Test this by adding the `ls -l` command below your other command.
+
+#### HINTS
+
+- Add `ls -l` at the bottom of your `questionnaire.sh` file
+
+## 150. ./questionnaire
+
+### 150.1
 
 Run the script by executing it again.
 
-####
+#### HINTS
+
+- Type `./questionnaire.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+- Enter `cd ~/project` in the terminal to get to the project folder if you aren't there
+
+## 160. Delete all - shebang
+
+### 160.1
 
 Your script printed the result of the two commands as if you entered them in the terminal. Delete everything but the `shebang` from your file so you can start making the questionnaire.
 
-#### Create variable `VARIABLE_NAME=VALUE`
+#### HINTS
 
-Bash has variables, functions, and other things you might be familiar with. You can create a variable with `VARIABLE_NAME=VALUE`. There cannot be any spaces around the equal (=) sign. If a variable has any spaces in it, place double quotes around it. Create a variable named `QUESTION1` and set it's value to "What's your name?".
+- Only `#!/bin/bash` should remain in your `questionnaire.sh` file
 
-#### Use a Variable `$VARIABLE_NAME`
+## 170. Add QUESTION1 variable
 
-To use a variable, place `$` in front of it like this: `$VARIABLE_NAME`. Shell scripts run from top to bottom, so you can only use variable below where it's created. Use echo to print your variable.
+### 170.1
 
-####
+Bash has variables, functions, and other things you might be familiar with. You can create a variable with `VARIABLE_NAME=VALUE`. There cannot be any spaces around the equal (`=`) sign. If a variable has any spaces in it, place double quotes around it. Create a variable named `QUESTION1` and set it's value to `"What's your name?"`.
+
+#### HINTS
+
+- Add `QUESTION1="What's your name?"` at the bottom of your `questionnaire.sh` file
+
+## 180. Add echo $QUESTION1
+
+### 180.1
+
+To use a variable, place `$` in front of it like this: `$VARIABLE_NAME`. Shell scripts run from top to bottom, so you can only use variable below where it's created. Use `echo` to print your variable.
+
+#### HINTS
+
+- Add `echo $QUESTION1` at the bottom of your `questionnaire.sh` file
+
+## 190. ./questionnaire
+
+### 190.1
 
 Run the file like you did before to see if it worked.
 
-#### `read <VARIABLE_NAME>` Read User Input
+#### HINTS
 
-The question was printed. Next, you want to be able to accept input from a user. You can do that with read like this: `read VARIABLE_NAME`. This will get user input and store it into a new variable. After you print the question, use read to get input and store it in a variable named `NAME`.
+- Run your file by executing it
+- Type `./questionnaire.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+- Enter `cd ~/project` in the terminal to get to the project folder if you aren't there
 
-####
+## 200. Add read NAME
 
-At the bottom of your script, use `echo` to print `Hello <name>`. to the terminal.
+### 200.1
 
-####
+The question was printed. Next, you want to be able to accept input from a user. You can do that with `read` like this: `read VARIABLE_NAME`. This will get user input and store it into a new variable. After you print the question, use `read` to get input and store it in a variable named `NAME`.
+
+#### HINTS
+
+- Add `read NAME` at the bottom of your `questionnaire.sh` file
+
+## 210. Add echo Hello $NAME
+
+### 210.1
+
+At the bottom of your script, use `echo` to print `Hello <name>.` to the terminal.
+
+#### HINTS
+
+- You can use your `NAME` variable like this: `$NAME`
+- Use your `$NAME` variable in place of `<name>`
+- Don't forget the period
+- Add `echo Hello $NAME.` at the bottom of your script
+
+## 220. ./questionnaire
+
+### 220.1
 
 Run the file again. Type your name and press enter after it asks for it.
 
-####
+#### HINTS
 
-Right below your first variable, create another one named QUESTION2. Set the value to, Where are you from?. Make sure to put it in double quotes.
+- Run your file by executing it
+- Type `./questionnaire.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+- Enter `cd ~/project` in the terminal to get to the project folder if you aren't there
+- You can press `ctrl+c` to close the program
 
-####
+## 230. Add QUESTION2 variable
+
+### 230.1
+
+Right below your first variable, create another one named `QUESTION2`. Set the value to, `Where are you from?`. Make sure to put it in double quotes.
+
+#### HINTS
+
+- Here's an example: `VARIABLE="value"`
+- Add `QUESTION2="Where are you from?"` to your script
+
+## 240. Add echo $QUESTION2
+
+### 240.1
 
 After your `read` command, use your new variable to print the next question.
 
-####
+#### HINTS
 
-Below where the second question is printed, use read to get input from the user into a variable named LOCATION.
+- Use `echo` to print the variable
+- Add `echo $QUESTION2` below your `read` command
 
-####
+## 250. Add read LOCATION
+
+### 250.1
+
+Below where the second question is printed, use `read` to get input from the user into a variable named `LOCATION`.
+
+#### HINTS
+
+- Here's an example `read VARIABLE_NAME`
+- Add `read LOCATION` to your script below `echo $QUESTION2`
+
+## 260. Add echo Hello $NAME from $LOCATION
+
+### 260.1
 
 Change the existing response to `Hello <name> from <location>.`.
 
-####
+#### HINTS
+
+- Use your two variables in place of `<name>` and `<location`
+- Use your two variables with `$NAME` and `$LOCATION`
+- Make sure the command is at the bottom of the file
+- The suggested command should look like: `echo Hello $NAME from $LOCATION.`
+
+## 270. ./questionnaire
+
+### 270.1
 
 Run the script and enter values when it is waiting for input.
 
-####
+#### HINTS
 
-It's looking good. I want a title to appear when the program first starts. Use echo to print `~~ Questionnaire ~~` before anything else is printed.
+- Run your file by executing it
+- Type `./questionnaire.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+- You can press `ctrl+c` to close a program
 
-####
+## 280. Add echo "~~ Questionnaire ~~"
+
+### 280.1
+
+It's looking good. I want a title to appear when the program first starts. Use `echo` to print `~~ Questionnaire ~~` before anything else is printed.
+
+#### HINTS
+
+- Add `echo ~~ Questionnaire ~~` below your `shebang`
+
+## 290. ./questionnaire
+
+### 290.1
 
 Run the script and enter values until it is done again so you can see what the title looks like.
 
-####
+#### HINTS
 
-It would be nice if there was some empty lines around the title. You've probably used the --help flag before, see if you can use it with echo to try and find a way to add empty lines.
+- Run your file by executing it
+- Type `./questionnaire.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+- You can press `ctrl+c` to close the program
 
-#### `man <command>` manual pages
+## 300. echo --help
 
-That didn't work as I hoped. Another way to find information about a command is with man. It stands for manual and you can use it like this: man <command>. See if there's a manual for echo.
+### 300.1
 
-#### echo -e option enable backslash escape sequenses
+It would be nice if there was some empty lines around the title. You've probably used the `--help` flag before, see if you can use it with `echo` to try and find a way to add empty lines.
 
-At the top of the menu, the -e option looks promising. And the \n below it says new line. You should take a look at those. In your script, change the title to `echo -e \n~~ Questionnaire ~~\n` to see if that prints the empty lines.
+#### HINTS
 
-#### 'ctrl+c' to close program
+- Enter the suggested command in the terminal
+- Here's an example: `<command> <flag>`
+- The command is `echo`, the flag is `--help`
+- Type `echo --help` in the terminal and press enter
 
-Run it to see if it worked. You can press ctrl+c to close the program after it starts if you don't want to enter values.
+## 310. man echo
 
-#### escape sequences and quotes
+### 310.1
 
-It didn't print the empty lines. echo will only print empty lines if the value is enclosed in quotes. Place double quotes around the title that gets printed to see if it works.
+That didn't work as I hoped. Another way to find information about a command is with `man`. It stands for `manual` and you can use it like this: `man <command>`. See if there's a manual for `echo`.
 
-####
+#### HINTS
+
+- Type `man echo` in the terminal and press enter
+- Press enter until you have seen the whole menu
+
+## 320. Add echo -e \n~~ Questionnaire ~~\n
+
+### 320.1
+
+At the top of the menu, the `-e` option looks promising. And the `\n` below it says `new line`. You should take a look at those. In your script, change the title to `echo -e \n~~ Questionnaire ~~\n` to see if that prints the empty lines.
+
+#### HINTS
+
+- Change the suggested line to `echo -e \n~~ Questionnaire ~~\n`
+
+## 323. ./questionnaire
+
+### 323.1
+
+Run it to see if it worked. You can press `ctrl+c` to close the program after it starts if you don't want to enter values.
+
+#### HINTS
+
+- Run your file by executing it
+- Type `./questionnaire.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+- You can press `ctrl+c` to close the program
+
+## 326. Change to echo -e "\n~~ Questionnaire ~~\n"
+
+### 326.1
+
+It didn't print the empty lines. `echo` will only print empty lines if the value is enclosed in quotes. Place double quotes around the title that gets printed to see if it works.
+
+#### HINTS
+
+- Change the suggested line to `echo -e "\n~~ Questionnaire ~~\n"`
+
+## 330. ./questionnaire
+
+### 330.1
 
 Run your script again to see if that fixed it.
 
-####
+#### HINTS
 
-Now it's working 😄 Create a QUESTION3 variable next to the other two, set it's value to "What's your favorite coding website?"
+- Run your file by executing it
+- Type `./questionnaire.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+- You can press `ctrl+c` to close the program
 
-####
+## 340. Add QUESTION3 variable
 
-Use echo to print the third question after you read the LOCATION.
+### 340.1
 
-####
+Now it's working :smile: Create a `QUESTION3` variable next to the other two, set it's value to `"What's your favorite coding website?"`
 
-After the question you just printed, add code to read input into a variable named WEBSITE.
+#### HINTS
 
-####
+- Add `QUESTION3="What's your favorite coding website?"` to your `questionnaire.sh` file
+- Add it by the other two variables
 
-Change the echo command of the response to print this sentence instead: `Hello <name> from <location>. I learned that your favorite coding website is <website>!`.
+## 345. echo QUESTION3 variable
 
-####
+### 345.1
+
+Use `echo` to print the third question after you `read` the `LOCATION`.
+
+#### HINTS
+
+- Add `echo $QUESTION3` below the `read LOCATION`
+- Add it to your `questionnaire.sh` file
+
+## 350. read WEBSITE
+
+### 350.1
+
+After the question you just printed, add code to read input into a variable named `WEBSITE`.
+
+#### HINTS
+
+- Add `read WEBSITE` below the `echo $QUESTION3`
+
+## 360. echo final sentence
+
+### 360.1
+
+Change the `echo` command of the response to print this sentence instead: `Hello <name> from <location>. I learned that your favorite coding website is <website>!`.
+
+#### HINTS
+
+- Replace the `echo Hello $NAME from $LOCATION.` with the suggested sentence
+- Use your three variables in place of `<name>`, `<location>`, and `<website>`
+- The command should look like this: `echo Hello $NAME from $LOCATION. I learned that your favorite coding website is $WEBSITE!`
+
+## 363. ./questionnaire
+
+### 363.1
 
 Run the script and enter values when the program is waiting. Let's see the final output.
 
-####
+#### HINTS
+
+- Run your file by executing it
+- Type `./questionnaire.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 366. Add line breaks around final sentence
+
+### 366.1
 
 One last thing. Change that final response to print an empty line at the beginning of the sentence.
 
-####
+#### HINTS
 
-It looks good. I think you are done with that script for now. The next program will be countdown timer. Use the touch command to create a new file named countdown.sh in your project folder.
+- Use `echo` with the `-e` flag and a new line (`\n`) character like you did for the title
+- Don't forget to put the response in double quotes so it prints the empty line
+- Here's an example: `echo -e "\n<message>"`
+- Only add a new line at the beginning of the response, not the end
+- The final command should look like this: `echo "\nHello $NAME from $LOCATION. I learned that your favorite coding website is $WEBSITE!"`
 
-####
+## 370. ./questionnaire
 
-Give your file executable permissions so you can run it like the other one. It's the chmod command with the +x flag.
+### 370.1
 
-####
+Run it one last time and enter values when it asks to see if you like how it looks.
 
-You want to use the bash interpreter again. Add a shebang at the top of your new file to denote that.
+#### HINTS
 
-#### comments in bash `# <comment>`
+- Run your file by executing it
+- Type `./questionnaire.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
 
-Comments in bash look like this: `# <comment>`. Add a comment below the shebang that says `Program that counts down to zero from a given argument` so people know what it does. Note that the shebang is a special case and is not treated like a comment.
+## 380. touch countdown.sh
 
-#### `echo $* ` print all args passed to it
+### 380.1
+
+It looks good. I think you are done with that script for now. The next program will be countdown timer. Use the `touch` command to create a new file named `countdown.sh` in your `project` folder.
+
+#### HINTS
+
+- Type `touch countdown.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+- Enter `cd ~/project` in the terminal to get to the project folder if you aren't there
+
+## 390. chmod +x countdown.sh
+
+### 390.1
+
+Give your file executable permissions so you can run it like the other one. It's the `chmod` command with the `+x` flag.
+
+#### HINTS
+
+- Here's an example `chmod <permissions> <filename>`
+- The value for permissions you want to use is `+x`
+- You previously used `chmod +x questionnaire.sh`
+- Type `chmod +x countdown.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 400. Add shebang
+
+### 400.1
+
+You want to use the `bash` interpreter again. Add a `shebang` at the top of your new file to denote that.
+
+#### HINTS
+
+- A `shebang` looks like this: `#!<path_to_interpreter>`
+- Enter `which bash` in the terminal to see the path to `bash`
+- Look at the `shebang` in your first script to get the syntax
+- It should look like this: `#!/bin/bash`
+- Add `#!/bin/bash` at the top of your `countdown.sh` file
+
+## 410. Add comment
+
+### 410.1
+
+Comments in `bash` look like this: `# <comment>`. Add a comment below the `shebang` that says `Program that counts down to zero from a given argument` so people know what it does. Note that the `shebang` is a special case and is not treated like a comment.
+
+#### HINTS
+
+- Add `# Program that counts down to zero from a given argument` to your `countdown.sh` file
+
+## 420. Add echo $\*
+
+### 420.1
 
 Programs can take arguments. You can access them a few different ways with `$`. Add `echo $*` in your script to print all arguments passed to it.
 
-####
+#### HINTS
 
-Execute your script with `./countdown.sh.`
+- Add `echo $*` at the bottom of the `countdown.sh` file
 
-####
+## 425. ./countdown.sh
 
-Nothing was printed. Run your script again, but this time add three arguments to the command; arg1, arg2, and arg3. Place them after the command with a space before each one.
+### 425.1
 
-#### `$<number>` access arg by number
+Execute your script with `./countdown.sh`.
 
-`$*`printed all the arguments passed to your script. To access any one of them, use `$<number>`. `arg2` could have been accessed with `$2`. Change your script to echo the first argument instead of all the arguments.
+#### HINTS
 
-####
+- Type `./countdown.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 430. ./countdown.sh arg1 arg2 arg3
+
+### 430.1
+
+Nothing was printed. Run your script again, but this time add three arguments to the command; `arg1`, `arg2`, and `arg3`. Place them after the command with a space before each one.
+
+#### HINTS
+
+- Type `./countdown.sh arg1 arg2 arg3` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 440. Change to echo $1
+
+### 440.1
+
+`$*` printed all the arguments passed to your script. To access any one of them, use `$<number>`. `arg2` could have been accessed with `$2`. Change your script to `echo` the first argument instead of all the arguments.
+
+#### HINTS
+
+- Try running your script with an argument to make sure it’s giving the expected output
+- Use `echo $1` to print the second argument
+- Change `echo $*` to `echo $1` in your `countdown.sh` file
+
+## 450. ./countdown.sh arg1 arg2 arg3
+
+### 450.1
 
 Run your file with `./countdown.sh arg1 arg2 arg3` again.
 
-####
+#### HINTS
 
-Now it just prints the first argument. Your program will accept an argument to count down from. You will test it with an `if` statement to make sure it's a positive integer. I wonder what that syntax would look like. Type help in the terminal to see if you can find anything.
+- Type `./countdown.sh arg1 arg2 arg3` in the terminal and press enter
+- Make sure you are in the `project` folder first
 
-####
+## 460. help
 
-This is a list of built-in commands. You should look over it, some of them may look familiar. I see echo in there. Another one is `if`. See if you can find out more about it by checking its man page.
+### 460.1
 
-####
+Now it just prints the first argument. Your program will accept an argument to count down from. You will test it with an `if` statement to make sure it's a positive integer. I wonder what that syntax would look like. Type `help` in the terminal to see if you can find anything.
 
-I guess there isn't a man page for it. At the top of the help screen, I noticed you can use `help <command>` to find out more. Yet another way to find out about a command 😥 See if you can find out more about if with that method.
+#### HINTS
 
-#### bash if `[[CONDITION]]`
+- Type `help` in the terminal and press enter
+
+## 470. man if
+
+### 470.1
+
+This is a list of built-in commands. You should look over it, some of them may look familiar. I see `echo` in there. Another one is `if`. See if you can find out more about it by checking its `man` page.
+
+#### HINTS
+
+- Here's an example: `man <command>`
+- Type `man if` in the terminal and press enter
+
+## 480. help if
+
+### 480.1
+
+I guess there isn't a `man` page for it. At the top of the `help` screen, I noticed you can use `help <command>` to find out more. Yet another way to find out about a command :disappointed_relieved: See if you can find out more about `if` with that method.
+
+#### HINTS
+
+- Here's an example `help <command>`
+- Type `help if` in the terminal and press enter
+
+## 490. Add if arg1 print true
+
+### 490.1
 
 The syntax is at the top, not all of it is required. Here's another example:
 
-```bash
+```sh
 if [[ CONDITION ]]
 then
   STATEMENTS
 fi
 ```
 
-Remove the `echo $1` in your script and add an if condition that checks `if [[ $1 == arg1 ]]`. In its then area, use `echo` to print true to the screen. There must be spaces on the inside of the brackets (`[[ ... ]]`) and around the operator (`==`).
+Remove the `echo $1` in your script and add an `if` condition that checks `if [[ $1 == arg1 ]]`. In its `then` area, use `echo` to print `true` to the screen. There must be spaces on the inside of the brackets (`[[ ... ]]`) and around the operator (`==`).
 
-#### fi
+#### HINTS
 
-Notice that the end of the syntax is fi (if backwards). It should print true if you pass `arg1` to your script now. Run the script with `arg1` as the only argument.
+- Make sure to remove the `echo $1`
+- Add the following to your `countdown.sh` file:
 
-####
+```sh
+if [[ $1 == arg1 ]]
+then
+  echo true
+fi
+```
 
-The if condition worked, it printed true. Run it again with anything except `arg1` as the first argument.
+## 500. ./countdown arg1
 
-#### bash else statement
+### 500.1
 
-Nothing was printed. One of the optional parts of if was an else area. You can use it like this:
+Notice that the end of the syntax is `fi` (`if` backwards). It should print `true` if you pass `arg1` to your script now. Run the script with `arg1` as the only argument.
 
-```bash
+#### HINTS
+
+- Type `./countdown.sh arg1` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 505. ./countdown !arg1
+
+### 505.1
+
+The `if` condition worked, it printed `true`. Run it again with anything except `arg1` as the first argument.
+
+#### HINTS
+
+- Type `./countdown.sh arg2` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 510. Add else print false
+
+### 510.1
+
+Nothing was printed. One of the optional parts of `if` was an `else` area. You can use it like this:
+
+```sh
 if [[ CONDITION ]]
 then
   STATEMENTS
@@ -5585,406 +9315,1196 @@ else
 fi
 ```
 
-Add an else to your existing if condition. Use echo to print false if the condition fails.
+Add an `else` to your existing `if` condition. Use `echo` to print `false` if the condition fails.
 
-####
+#### HINTS
 
-Run the script again and use anything except arg1 as the only argument.
+- Your `if` should look like this:
 
-#### -eq (equal), -ne (not equal), -lt (less than), -le (less than or equal), -gt (greater than), -ge (greater than or equal)
+```sh
+if [[ $1 == arg1 ]]
+then
+  echo true
+else
+  echo false
+fi
+```
 
-Now it printed false. Your program is expecting an integer to count down from as its argument. You can compare integers inside the brackets (`[[...]]`) of your if with -eq (equal), -ne (not equal), -lt (less than), -le (less than or equal), -gt (greater than), -ge (greater than or equal). Change your `if` condition to check if your first argument is less than `5`.
+## 520. ./countdown !arg1
 
-####
+### 520.1
 
-Run the script again and use 4 as a first argument to make sure it's working.
+Run the script again and use anything except `arg1` as the only argument.
 
-####
+#### HINTS
 
-It printed true since your argument was less than 5. Run it again with 5 as the argument.
+- Type `./countdown.sh !arg1` in the terminal and press enter
+- Make sure you are in the `project` folder first
+- Enter `cd ~/project` in the terminal to get to the project folder if you aren't there
 
-####
+## 530. Change if condition -lt 5
 
-As expected, that printed `false`. Take a look at that help menu again. I want to see if we can find out more about how these expressions work.
+### 530.1
 
-#### `help [[expression]]`
+Now it printed `false`. Your program is expecting an integer to count down from as its argument. You can compare integers inside the brackets (`[[ ... ]]`) of your `if` with `-eq` (equal), `-ne` (not equal), `-lt` (less than), `-le` (less than or equal), `-gt` (greater than), `-ge` (greater than or equal). Change your `if` condition to check if your first argument is less than `5`.
 
-Near the top left, it says [[expression]]. Those look like the double brackets you are using. See if you can get more info about that with the help command like you did with help if.
+#### HINTS
 
-#### `help builtin`
+- Make sure there's spaces inside the brackets (`[[ ... ]]`) and around the operator (`-lt`)
+- Your `if` condition should look like this: `[[ $1 -lt 5 ]]`
+- The whole `if` should look like this:
 
-It might not be a bad idea to read that. Looks like you can use some, probably familiar, things like `!,` `&&,` and `||` to compare multiple expressions. There's also `==` and `!=` operators for an individual expression. It says something about the test built-in command. See if you can bring up the help menu for that.
+```sh
+if [[ $1 -lt 5 ]]
+then
+  echo true
+else
+  echo false
+fi
+```
 
-####
+## 540. ./countdown 4
 
-That's what I was looking for. At the top are some file operators. There's some string and other operators as well. You should take a look at them. Near the bottom, are the arithmetic operators you used with your if condition. Change the condition in your script to check if the first argument is less than or equal to `5`.
+### 540.1
 
-####
+Run the script again and use `4` as a first argument to make sure it's working.
 
-Run the script and use 5 as a first argument again
+#### HINTS
 
-####
+- Type `./countdown.sh 4` in the terminal and press enter
+- Make sure you are in the `project` folder first
 
-Now it prints true. Remember I said any command can run in the terminal or a script. Try running an expression right in the terminal by entering `[[ 4 -le 5 ]]` in it.
+## 542. ./countdown 5
 
-#### `$?` access the exit status of command
+### 542.1
 
-Nothing happened? Each command has an exit status that can be accessed with `$?`. View the exit status of the last command with `echo $?`.
+It printed `true` since your argument was less than `5`. Run it again with `5` as the argument.
 
-####
+#### HINTS
 
-The exit status of 0 means it was true, `4` is indeed less or equal to `5`. Try it again with `[[ 4 -ge 5 ]]`.
+- Type `./countdown.sh 5` in the terminal and press enter
+- Make sure you are in the `project` folder first
 
-####
+## 544. help
+
+### 544.1
+
+As expected, that printed `false`. Take a look at that `help` menu again. I want to see if we can find out more about how these expressions work.
+
+#### HINTS
+
+- Type `help` in the terminal and press enter
+
+## 546. help [[expression]]
+
+### 546.1
+
+Near the top left, it says `[[ expression ]]`. Those look like the double brackets you are using. See if you can get more info about that with the `help` command like you did with `help if`.
+
+#### HINTS
+
+- Here's an example: `help <command>`
+- Type `help [[ expression ]]` or `help [[` in the terminal and press enter
+
+## 548. help test
+
+### 548.1
+
+It might not be a bad idea to read that. Looks like you can use some, probably familiar, things like `!`, `&&`, and `||` to compare multiple expressions. There's also `==` and `!=` operators for an individual expression. It says something about the `test` built-in command. See if you can bring up the `help` menu for that.
+
+#### HINTS
+
+- View the `help` menu of the suggested command like you did for the `help if`
+- Here's an example: `help <command>`
+- Type `help test` in the terminal and press enter
+
+## 550. Change if to [[$1 -le 5]]
+
+### 550.1
+
+That's what I was looking for. At the top are some file operators. There's some string and other operators as well. You should take a look at them. Near the bottom, are the arithmetic operators you used with your `if` condition. Change the condition in your script to check if the first argument is less than or equal to `5`.
+
+#### HINTS
+
+- The `if` condition should look like this: `[[ $1 -le 5 ]]`
+- Make sure there's spaces inside the brackets (`[[ ... ]]`) and around the operator (`-le`)
+- It's the `if` in your `countdown.sh` file
+
+## 552. ./countdown 5
+
+### 552.1
+
+Run the script and use `5` as a first argument again.
+
+#### HINTS
+
+- Type `./countdown.sh 5` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 554. [[4 -le 5]]
+
+### 554.1
+
+Now it prints `true`. Remember I said any command can run in the terminal or a script. Try running an expression right in the terminal by entering `[[ 4 -le 5 ]]` in it.
+
+#### HINTS
+
+- Enter the suggested expression in the terminal
+- Make sure there's spaces inside the brackets (`[[ ... ]]`) and around the operator (`-le`)
+- Type `[[ 4 -le 5 ]]` in the terminal and press enter
+
+## 556. echo $?
+
+### 556.1
+
+Nothing happened? Each command has an exit status that can be accessed with `$?`. View the exit status of the **last command** with `echo $?`.
+
+#### HINTS
+
+- Type `echo $?` in the terminal and press enter
+- Your second to last command should be `[[ 4 -le 5 ]]`. So enter that before `echo $?`
+
+## 558. [[4 -ge 5]]
+
+### 558.1
+
+The exit status of `0` means it was true, `4` is indeed less or equal to `5`. Try it again with `[[ 4 -ge 5 ]]`.
+
+#### HINTS
+
+- Enter the suggested expression in the terminal
+- Make sure there's spaces inside the brackets (`[[ ... ]]`) and around the operator (`-ge`)
+- Type `[[ 4 -ge 5 ]]` in the terminal and press enter
+
+## 560. echo $?
+
+### 560.1
 
 Use `echo` to view the exit status of the command you just entered.
 
-#### `;` separate commands with `;`
+#### HINTS
 
-It printed `1` this time for `false`. You can separate commands on a single line with `;`. Enter your last two commands on one line like this: `[[ 4 -ge 5 ]]; echo $?`. It will run the expression, then print the exit status of it since it was the last command.
+- Type `echo $?` in the terminal and press enter
+- Your second to last command should be `[[ 4 -ge 5 ]]`. So enter that right before `echo $?`
 
-####
+## 562. [[4 -ge 5]]; echo $?
+
+### 562.1
+
+It printed `1` this time for false. You can separate commands on a single line with `;`. Enter your last two commands on one line like this: `[[ 4 -ge 5 ]]; echo $?`. It will run the expression, then print the exit status of it since it was the last command.
+
+#### HINTS
+
+- Make sure there's spaces inside the brackets (`[[ ... ]]`) and around the operator (`-ge`)
+- Type `[[ 4 -ge 5 ]]; echo $?` in the terminal and press enter
+
+## 564. [[10 -ne 5]]; echo $?
+
+### 564.1
 
 It's still false. Using the same syntax of `[[ ... ]]; echo$?`, check if `10` is not equal to `5` and print the exit status of the expression on one line.
 
-####
+#### HINTS
 
-1. Check the help test menu to find the not equal operator
+- Check the `help test` menu to find the `not equal` operator
+- It's the `-ne` operator
+- You previously used `[[ 4 -ge 5 ]]; echo $?`
+- Make sure there's spaces inside the brackets and around the operator
+- Type `[[ 10 -ne 5 ]]; echo $?` in the terminal and press enter
 
-####
+## 566. bad_command; echo $?
 
-You can think of an exit status of 0 as true. But it means that the command had zero errors. All commands have an exit status. Using the same syntax, enter `bad_command;` and check its exit status on a single line.
+### 566.1
 
-#### `0` exit status means no errors
+You can think of an exit status of `0` as true. But it means that the command had zero errors. All commands have an exit status. Using the same syntax, enter `bad_command;` and check its exit status on a single line.
 
-command not found, with an exit status of `127`. Anything but `0` means there was an error with the command. bad_command didn't exist. Try it again with ls.
+#### HINTS
 
-####
+- The syntax looks like this: `<command>; echo $?`
+- You previously used `[[ 10 -ne 5 ]]; echo $?`
+- Type `bad_command; echo $?` in the terminal and press enter
 
-The command executed as expected and there were zero errors. So it gave you an exit status of 0. Try it again with ls -y.
+## 568. ls; echo $?
 
-####
+### 568.1
 
-The `-y` flag doesn't work with `ls` so it gave you an exit status other than `0`, meaning that the command was unsuccessful. View the help menu of the test command again, I want to see what else is in that list.
+`command not found`, with an exit status of `127`. Anything but `0` means there was an error with the command. `bad_command` didn't exist. Try it again with `ls`.
 
-####
+#### HINTS
+
+- Use the same syntax you have been using
+- Here's an example `<command>; echo $?`
+- You previously used `bad_command; echo $?`
+- Type `ls; echo $?` in the terminal and press enter
+
+## 570. ls -y; echo $?
+
+### 570.1
+
+The command executed as expected and there were zero errors. So it gave you an exit status of `0`. Try it again with `ls -y`.
+
+#### HINTS
+
+- Use the same syntax you have been using
+- Here's an example: `<command>; echo $?`
+- You previously used `ls; echo $?`
+- Type `ls -y; echo $?` in the terminal and press enter
+
+## 572. help test
+
+### 572.1
+
+The `-y` flag doesn't work with `ls` so it gave you an exit status other than `0`, meaning that the command was unsuccessful. View the `help` menu of the `test` command again, I want to see what else is in that list.
+
+#### HINTS
+
+- Here's an example: `help <command>`
+- Type `help test` in the terminal and press enter
+
+## 574. [[-a countdown.sh]]; echo $?
+
+### 574.1
 
 You tried a few of the arithmetic operators, those work for integers. Try one of the file operators. The first one on the list checks if a file exists. Type `[[ -a countdown.sh ]]; echo $?` in the terminal to see if your file exists.
 
-####
+#### HINTS
+
+- Enter the suggested commands in the terminal
+- Type `[[ -a countdown.sh ]]; echo $?` in the terminal and press enter
+- Don't forget the spaces inside the brackets
+- Make sure you are in the `project` folder first
+
+## 575. [[-a bad_file.txt]]; echo $?
+
+### 575.1
 
 The file must exist. It's checking the folder the command is entered from. Try it again with `bad_file.txt`.
 
-#### `[[ -x <FILE> ]]; echo $?` true if executable
+#### HINTS
+
+- Use the same syntax you have been using
+- Here's an example: `<command>; echo $?`
+- You previously used `[[ -a countdown.sh ]]; echo $?`
+- Type `[[ -a bad_file.txt ]]; echo $?` in the terminal and press enter
+- Don't forget the spaces inside the brackets
+
+## 576. [[-x countdown.sh]]; echo $?
+
+### 576.1
 
 `bad_file.txt` doesn't exist. I think you're getting the hang of this. Using the same syntax, check if you have permissions to execute your `countdown.sh` file. You may want to look at that menu again.
 
-#### ?def builtin, primaries
+#### HINTS
 
-You played around with a number of the expressions. View the `help [[ expression ]] `menu again that you looked at before to see a few more options. You can view the menu with just help `[[`.
+- View the `help test` menu to find the file operator for checking if a file is executable by you
+- It's the `-x` operator
+- The syntax you want is `[[ ... ]]; echo $?` to see if the condition is true
+- Don't forget the spaces inside the brackets
+- Type `[[ -x countdown.sh ]]; echo $?` in the terminal and press enter
+- Make sure you are in the `project` folder first
 
-####
+## 582. help [[expression]]
 
-As I mentioned before, you can test multiple expressions with && and ||. Enter `[[ -x countdown.sh && 5 -le 4 ]]; echo $?` in the terminal to test the file is executable by you and five is less than or equal to four.
+### 582.1
 
-#### exit status `1` for false
+You played around with a number of the expressions. View the `help [[ expression ]]` menu again that you looked at before to see a few more options. You can view the menu with just `help [[`.
 
-Both conditions weren't true, so the exit status was 1 for false. Try testing the same two conditions with the or operator.
+#### HINTS
 
-####
+- Enter the suggested command in the terminal
+- Type `help [[ expression ]]` or `help [[` in the terminal and press enter
 
-One of the conditions was true so it printed `0`. I think that's enough of a detour. Back in your script, change the `if` condition to check if the first argument is greater than zero so you can be sure it's something you can count down from.
+## 584. [[-x countdown.sh && 5 -le 4]]; echo $?
 
-####
+### 584.1
 
-The condition you added checks if a positive integer was passed as an argument to the script and executes the then area. Change the existing `echo` command to print `Include a positive integer as the first argument.` if a positive integer is not used.
+As I mentioned before, you can test multiple expressions with `&&` and `||`. Enter `[[ -x countdown.sh && 5 -le 4 ]]; echo $?` in the terminal to test the file is executable by you **and** five is less than or equal to four.
 
-####
+#### HINTS
 
-Run your script and use 1 as a first argument to make sure the condition is working.
+- Enter the suggested command in the terminal
+- Type `[[ -x countdown.sh && 5 -le 4 ]]; echo $?` in the terminal and press enter
+- Make sure there's spaces around the brackets and all the operators
 
-####
+## 586. [[-x countdown.sh || 5 -le 4]]; echo $?
+
+### 586.1
+
+Both conditions weren't true, so the exit status was `1` for `false`. Try testing the same two conditions with the `or` operator.
+
+#### HINTS
+
+- Modify this `[[ -x countdown.sh && 5 -le 4 ]]; echo $?` with the suggestion and enter it in the terminal
+- Use the `or` operator from the `help [[ expression ]]` menu
+- The `or` operator is `||`
+- Type `[[ -x countdown.sh || 5 -le 4 ]]; echo $?` in the terminal and press enter
+- Make sure there's spaces around the brackets and all the operators
+
+## 588. Change if to [[$1 -gt 0]]
+
+### 588.1
+
+One of the conditions was true so it printed `0`. I think that's enough of a detour. Back in your script, change the `if` condition to check if the first argument is **greater than zero** so you can be sure it's something you can count down from.
+
+#### HINTS
+
+- Use the `-gt` operator in your `if` condition
+- The `if` condition should look like this: `[[ $1 -gt 0 ]]`
+- It's in the `countdown.sh` file
+
+## 590. Change if !# message
+
+### 590.1
+
+The condition you added checks if a positive integer was passed as an argument to the script and executes the `then` area. Change the existing `echo` command to print `Include a positive integer as the first argument.` if a positive integer is not used.
+
+#### HINTS
+
+- The `else` area should look like this: `echo Include a positive integer as the first argument.`
+- The whole `if` condition should look like this:
+
+```sh
+if [[ $1 -gt 0 ]]
+then
+  echo true
+else
+  echo Include a positive integer as the first argument.
+fi
+```
+
+## 600. ./countdown 1
+
+### 600.1
+
+Run your script and use `1` as a first argument to make sure the condition is working.
+
+#### HINTS
+
+- Type `./countdown.sh 1` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 610. ./countdown 0
+
+### 610.1
 
 Run it again and use anything but a positive integer as the only argument.
 
-####
+#### HINTS
 
-Looks like your if condition is working. Next, you want to loop over the argument and count down to zero from it. Check the help menu to see if there's any commands for this.
+- Type `./countdown.sh 0` in the terminal and press enter
+- Make sure you are in the `project` folder first
 
-#### for loop #2
+## 615. help
 
-There's two for loops in there, you want the second one. Here's an example:
+### 615.1
 
-```bash
+Looks like your `if` condition is working. Next, you want to loop over the argument and count down to zero from it. Check the `help` menu to see if there's any commands for this.
+
+#### HINTS
+
+- Enter the suggested command in the terminal
+- Type `help` in the terminal and press enter
+
+## 620. Add for loop for countdown
+
+### 620.1
+
+There's two `for` loops in there, you want the second one. Here's an example:
+
+```sh
 for (( i = 10; i > 0; i-- ))
 do
   echo $i
 done
 ```
 
-The above creates a variable `(i = 10)`, then prints it, subtracts one, and repeats until `i` is not greater than `0`. So it prints `10` through `1`. In the then area of your condition, replace the `echo` with a `for loop` that prints from the argument (`$1`) to `1`.
+The above creates a variable (`i = 10`), then prints it, subtracts one, and repeats until `i` is not greater than `0`. So it prints `10` through `1`. In the `then` area of your condition, replace the `echo` with a `for` loop that prints from the argument (`$1`) to `1`.
 
-####
+#### HINTS
 
-Run your script and use 10 as the first argument.
+- Set the variable to the value of your argument (`$1`) initially
+- Use the same syntax as the example except change the `10` to `$1`
+- Don't include any extra commands in the `then` area
+- Your `then` area should look like this:
 
-####
+```sh
+for (( i = $1; i > 0; i-- ))
+do
+  echo $i
+done
+```
 
-It works 😄 But I want it to pause for one second between each number. Check the help menu again to see if there's any commands that might help.
+- The whole `if` condition should look like this:
 
-#### `ls /`
+```sh
+if [[ $1 -gt 0 ]]
+then
+  for (( i = $1; i > 0; i-- ))
+  do
+    echo $i
+  done
+else
+  echo Include a positive integer as the first argument.
+fi
+```
+
+## 630. ./countdown 10
+
+### 630.1
+
+Run your script and use `10` as the first argument.
+
+#### HINTS
+
+- Type `./countdown.sh 10` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 640. help
+
+### 640.1
+
+It works :smile: But I want it to pause for one second between each number. Check the `help` menu again to see if there's any commands that might help.
+
+#### HINTS
+
+- Enter the suggested command in the terminal
+- Type `help` in the terminal and press enter
+
+## 650. ls /
+
+### 650.1
 
 I'm not seeing the command I was hoping to. These are the built-in commands, where are the rest? Type `ls /` to look around.
 
-####
+#### HINTS
 
-The `/` listed what's in the root of the file system. I see a bin folder, bin stands for binary. View what's in it with `ls /bin`.
+- Enter the suggested command in the terminal
+- Type `ls /` in the terminal and press enter
 
-####
+## 660. ls /bin
 
-These are some non built-in commands. There's quite a few that should look familiar. One is bash, that's the one you used for the shebang in your scripts. I see one called sleep. View the manual of it.
+### 660.1
 
-#### `sleep <NUMBER><SUFFIX>`
+The `/` listed what's in the root of the file system. I see a `bin` folder, `bin` stands for `binary`. View what's in it with `ls /bin`.
 
-At the top, it says you can pause execution for a number of seconds. Try it out by entering sleep 3 in the terminal.
+#### HINTS
 
-####
+- Enter the suggested command in the terminal
+- Type `ls /bin` in the terminal and press enter
 
-That should work. In your for loop, use sleep to make the script pause for 1 second after each number is printed.
+## 670. man sleep
 
-####
+### 670.1
 
-Run your script and use 3 as the first argument.
+These are some non built-in commands. There's quite a few that should look familiar. One is `bash`, that's the one you used for the `shebang` in your scripts. I see one called `sleep`. View the manual of it.
 
-####
+#### HINTS
 
-Awesome. Except it should print 0 instead of stopping at 1. Change the condition in your for loop so that it checks for i >= 0.
+- View a manual with the `man` command
+- Here's an example: `man <command>`
+- Enter `man sleep` in the terminal
+- Press enter until you have seen the whole menu
 
-####
+## 675. sleep 3
 
-Run your script with 3 as the argument again.
+### 675.1
 
-####
+At the top, it says you can pause execution for a number of seconds. Try it out by entering `sleep 3` in the terminal.
+
+#### HINTS
+
+- Enter the suggested command in the terminal
+- Enter `sleep 3` in the terminal
+
+## 680. Add sleep to for loop
+
+### 680.1
+
+That should work. In your `for` loop, use `sleep` to make the script pause for `1` second after each number is printed.
+
+#### HINTS
+
+- Add the suggestion to the `for` loop in your `countdown.sh` file
+- Add `sleep 1` after you print `i` in your `for` loop
+
+## 690. ./countdown 3
+
+### 690.1
+
+Run your script and use `3` as the first argument.
+
+#### HINTS
+
+- Type `./countdown.sh 3` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 692. Change to >=
+
+### 692.1
+
+Awesome. Except it should print `0` instead of stopping at `1`. Change the condition in your for loop so that it checks for `i >= 0`.
+
+#### HINTS
+
+- Your `for` loop should look like this:
+
+```sh
+for (( i = $1; i >= 0; i-- ))
+do
+  echo $i
+  sleep 1
+done
+```
+
+- The whole `if` condition should look like this:
+
+```sh
+if [[ $1 -gt 0 ]]
+then
+  for (( i = $1; i >= 0; i-- ))
+  do
+    echo $i
+    sleep 1
+  done
+else
+  echo Include a positive integer as the first argument.
+fi
+```
+
+## 694. ./countdown 3
+
+### 694.1
+
+Run your script with `3` as the argument again.
+
+#### HINTS
+
+- Type `./countdown.sh 3` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 696. Add echo -e "title"
+
+### 696.1
 
 Excellent. I want it to display a title like the other script. Make it so that it prints `~~ Countdown Timer ~~` before anything else. Include a new line before and after it like you did for the other title.
 
-####
+#### HINTS
 
-Run your script and use 1 as the first argument again to see the title.
+- Use the `echo` command with the `-e` flag and the new line (`\n`) character
+- Make sure to place the message in double quotes
+- Here's an example: `echo -e "\n<message>\n"`
+- Add `echo -e "\n~~ Countdown Timer ~~\n"` to the `countdown.sh` file after the comment
 
-#### multiline comment
+## 698. ./countdown 1
+
+### 698.1
+
+Run your script and use `1` as the first argument again to see the title.
+
+#### HINTS
+
+- Type `./countdown.sh 1` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 700. Add Multiline comment
+
+### 700.1
 
 This is fun. You can create a multiline comment like this:
 
-```bash
+```sh
 : '
   comment here
   more comment here
 '
 ```
 
-Comment out your for loop with a multiline comment. I want to try and do this with a `while` loop.
+Comment out your `for` loop with a multiline comment. I want to try and do this with a `while` loop.
 
-####
+#### HINTS
 
-View the help menu for the while command to see if you can find anything.
+- Comment out the `for` loop in your `countdown.sh` file with a multiline comment
+- Make sure there's a space between the `:` and `'`
+- Your `for` loop should look like this:
 
-####
+```sh
+: '
+for (( i = $1; i >= 0; i-- ))
+do
+  echo $i
+  sleep 1
+done
+'
+```
 
-It shows the syntax. First, below your comment, create a variable named `I` that is set to the value of your first argument. It will start there, then on each iteration of the while loop you can subtract 1 from it until it reaches 0.
+## 710. help while
 
-####
+### 710.1
 
-The menu showed that you can make a while loop like this:
+View the `help` menu for the `while` command to see if you can find anything.
 
-```bash
+#### HINTS
+
+- Here's an example: `help <command>`
+- Enter `help while` in the terminal
+
+## 730. Add I variable
+
+### 730.1
+
+It shows the syntax. First, below your comment, create a variable named `I` that is set to the value of your first argument. It will start there, then on each iteration of the `while` loop you can subtract `1` from it until it reaches `0`.
+
+#### HINTS
+
+- Add `I=$1` in the `then` area of your `if` statements below the multi-line comment
+- The `then` area should look like this:
+
+```sh
+: '
+for (( i = $1; i >= 0; i-- ))
+do
+  echo $i
+  sleep 1
+done
+'
+I=$1
+```
+
+## 740. Add while loop
+
+### 740.1
+
+The menu showed that you can make a `while` loop like this:
+
+```sh
 while [[ CONDITION ]]
 do
   STATEMENTS
 done
 ```
 
-Add a while loop below the `I` variable you made. The condition should be `$I -ge 0` and you should echo the `I` variable in the do statements.
+Add a `while` loop below the `I` variable you made. The condition should be `$I -ge 0` and you should `echo` the `I` variable in the `do` statements.
 
-#### decrement operator (( <variable>-- ))
+#### HINTS
 
-I never changes here, so you would have an infinite loop. You can subtract one from `I` with double parenthesis (`((...))`) and the `--` operator. In your while loop, add `(( I-- ))` after you echo `$I` to subtract one from I on each pass.
+- Your `while` loop should look like this:
 
-####
+```sh
+while [[ $I -ge 0 ]]
+do
+  echo $I
+done
+```
 
-The last thing to do is to add the sleep again. In your while loop, add the code to make it sleep for 1 second. Add the code after the `(( I-- ))`.
+## 750. Add (( I-- ))
 
-####
+### 750.1
+
+`I` never changes here, so you would have an infinite loop. You can subtract one from `I` with double parenthesis (`((...))`) and the `--` operator. In your while loop, add `(( I-- ))` after you `echo $I` to subtract one from `I` on each pass.
+
+#### HINTS
+
+- Your `while` loop should look like this:
+
+```sh
+while [[ $I -ge 0 ]]
+do
+  echo $I
+  (( I-- ))
+done
+```
+
+## 760. Add sleep 1
+
+### 760.1
+
+The last thing to do is to add the `sleep` again. In your `while` loop, add the code to make it `sleep` for `1` second. Add the code after the `(( I-- ))`.
+
+#### HINTS
+
+- Use the same `sleep 1` you used in the `for` loop
+- Your `while` loop should look like this:
+
+```sh
+while [[ $I -ge 0 ]]
+do
+  echo $I
+  (( I-- ))
+  sleep 1
+done
+```
+
+## 770. ./countdown.sh 5
+
+### 770.1
 
 Run the script and use 5 as the first argument.
 
-####
+#### HINTS
+
+- Type `./countdown.sh 5` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 780. touch bingo.sh
+
+### 780.1
 
 I think the countdown timer is finished. Feel free to try it with some other arguments. The next one is a bingo number generator. Use `touch` to create `bingo.sh` in the same folder as the others.
 
-####
+#### HINTS
+
+- Type `touch bingo.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 790. chmod +x bingo.sh
+
+### 790.1
 
 Give your file executable permissions like you did for the other two.
 
-####
+#### HINTS
 
-Add a shebang at the top of your new script. It should use bash again like other two.
+- Use the `chmod` command with the `+x` flag
+- Here's an example `chmod <permissions> <filename>`
+- You previously used `chmod +x countdown.sh`
+- Type `chmod +x bingo.sh` in the terminal and press enter
 
-####
+## 800. Add shebang
 
-Add a comment below the shebang that says, `Bingo Number Generator`.
+### 800.1
 
-####
+Add a `shebang` at the top of your new script. It should use `bash` again like other two.
+
+#### HINTS
+
+- A `shebang` looks like this: `#!<path_to_interpreter>`
+- Enter `which bash` in the terminal to see the path to `bash`
+- Look at the `shebang` in one of your other scripts to get the syntax
+- It should look like this: `#!/bin/bash`
+- Add `#!/bin/bash` at the top of your `bingo.sh` file
+
+## 810. Add comment
+
+### 810.1
+
+Add a comment below the `shebang` that says, `Bingo Number Generator`.
+
+#### HINTS
+
+- Comments look like this: `# <comment>`
+- Add `#Bingo Number Generator` below the `shebang`
+- Capitalization matters
+
+## 815. Add echo -e "title"
+
+### 815.1
 
 Before I forget, use a single `echo` command to print a title for this program. It should say `~~ Bingo Number Generator ~~` with an empty line before and after it.
 
-####
+#### HINTS
 
-In your script, create a NUMBER variable that equals 5.
+- Use the `echo` command with the `-e` flag and the new line (`\n`) character
+- Don't forget the double quotes when using a new line character
+- Take a look at one of the title's from a previous file for a hint
+- Here's an example: `echo -e "\n<message>\n"`
+- You previously used `echo -e "\n~~ Countdown Timer ~~\n"`
+- Add `echo -e "\n~~ Bingo Number Generator ~~\n"` below the comment of your `bingo.sh` file
 
-####
+## 817. Add NUMBER=5 variable
 
-Below your new variable, use echo to print it to the screen.
+### 817.1
 
-####
+In your script, create a `NUMBER` variable that equals `5`.
+
+#### HINTS
+
+- Here's an example: `VARIABLE_NAME=VALUE`
+- Add `NUMBER=5` to the bottom of your `bingo.sh` file
+
+## 818. echo $NUMBER
+
+### 818.1
+
+Below your new variable, use `echo` to print it to the screen.
+
+#### HINTS
+
+- Here's an example: `echo $<variable>`
+- Use `NUMBER` in place of `<variable>`
+- Add `echo $NUMBER` at the bottom of your `bingo.sh` file
+
+## 819. ./bingo.sh
+
+### 819.1
 
 Run the script by executing it.
 
-#### `printenv`
+#### HINTS
 
-The numbers in bingo go up to 75, each number has a letter from the word bingo associated with it. You will need to randomly generate a number between 1 and 75. Bash may have something that can help you here. A shell comes with environment variables. View them by entering `printenv` in the terminal.
+- Type `./bingo.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
 
-####
+## 820. printenv
 
-These are all environment variables, they are predefined and loaded with each shell. Most of them aren’t very relevant, but it’s nice to know they’re there. One of them is LANG. Use echo to print it in the terminal.
+### 820.1
 
-#### `declare -p`
+The numbers in bingo go up to 75, each number has a letter from the word `bingo` associated with it. You will need to randomly generate a number between 1 and 75. Bash may have something that can help you here. A shell comes with environment variables. View them by entering `printenv` in the terminal.
+
+#### HINTS
+
+- Type `printenv` in the terminal and press enter
+
+## 822. echo $LANG
+
+### 822.1
+
+These are all environment variables, they are predefined and loaded with each shell. Most of them aren’t very relevant, but it’s nice to know they’re there. One of them is `LANG`. Use `echo` to print it in the terminal.
+
+#### HINTS
+
+- Here's an example: `echo $<variable>`
+- Type `echo $LANG` in the terminal and press enter
+
+## 824. declare -p
+
+### 824.1
 
 View all variables in the shell with `declare -p`. `-p` stands for `print`
 
-#### `echo $RANDOM`
+#### HINTS
 
-This list includes all the environment variables, and any others that may have been created in the current shell. There's one named `RANDOM`. Use echo to print it in the terminal.
+- Type `declare -p` in the terminal and press enter
 
-####
+## 826. echo $RANDOM
 
-Back in your script, use the RANDOM variable to set NUMBER to a random number instead of 5.
+### 826.1
 
-####
+This list includes all the environment variables, and any others that may have been created in the current shell. There's one named `RANDOM`. Use `echo` to print it in the terminal.
+
+#### HINTS
+
+- Here's an example: `echo $<variable>`
+- Type `echo $RANDOM` in the terminal and press enter
+
+## 828. Change to NUMBER=$RANDOM
+
+### 828.1
+
+Back in your script, use the `RANDOM` variable to set `NUMBER` to a random number instead of `5`.
+
+#### HINTS
+
+- Change `NUMBER=5` to `NUMBER=$RANDOM`
+
+## 830. ./bingo.sh
+
+### 830.1
 
 Run the script a few times in a row to make sure it's working.
 
-#### The RANDOM variable modulus operator
+#### HINTS
 
-The `RANDOM` variable will generate a random number between `0` and `32767`. You can use the modulus operator to make it in the range you want. In your script, change the `NUMBER` variable to `$RANDOM%75`.
+- Type `./bingo.sh` in the terminal and press enter two times in a row
+- Make sure you are in the `project` folder first
 
-####
+## 835. Change to NUMBER=$RANDOM%75
+
+### 835.1
+
+The `RANDOM` variable will generate a random number between 0 and 32767. You can use the `modulus` operator to make it in the range you want. In your script, change the `NUMBER` variable to `$RANDOM%75`.
+
+#### HINTS
+
+- Change `NUMBER=$RANDOM` to `NUMBER=$RANDOM%75`
+
+## 840. ./bingo.sh
+
+### 840.1
 
 Run the script again.
 
-####
+#### HINTS
 
-Bash sees everything as a string so it just printed the %75 part literally. In the terminal, create an `I` variable equal to `0` (zero), so you can play with it and figure out how to do some calculations.
+- Type `./bingo.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
 
-#### Create variable in the termainal
+## 881. I=0
 
-In the terminal, use echo to print your new variable.
+### 881.1
 
-####
+Bash sees everything as a string so it just printed the `%75` part literally. In the terminal, create an `I` variable equal to `0` (zero), so you can play with it and figure out how to do some calculations.
 
-I noticed that you used double parenthesis in the while loop of your countdown timer to subtract one from `I`. Type `(( I++ ))` in the terminal to see if anything happens.
+#### HINTS
 
-####
+- Type `I=0` in the terminal and press enter
 
-There was no output. Use echo to print `I` in the terminal again.
+## 884. echo $I
 
-#### The double parenthesis `help let`
+### 884.1
+
+In the terminal, use `echo` to print your new variable.
+
+#### HINTS
+
+- Here's an example: `echo $<variable>`
+- Type `echo $I` in the terminal and press enter
+
+## 887. (( I++ ))
+
+### 887.1
+
+I noticed that you used double parenthesis in the `while` loop of your countdown timer to subtract one from `I`. Type `(( I++ ))` in the terminal to see if anything happens.
+
+#### HINTS
+
+- Type `(( I++ ))` in the terminal and press enter
+
+## 890. echo $I
+
+### 890.1
+
+There was no output. Use `echo` to print `I` in the terminal again.
+
+#### HINTS
+
+- Type `echo $I` in the terminal and press enter
+
+## 891. help let
+
+### 891.1
 
 The double parenthesis performed the calculation, changing the value of `I` from `0` to `1`. Enter `help let` in the terminal to see the operators you can use with the double parenthesis.
 
-####
+#### HINTS
 
-You used several of these now, including in the for loop from the countdown timer. Enter (( I += 10 )) in the terminal to increment `I` by `10`. Note that you don't need to prepend variables with `$` inside these parenthesis.
+- Type `help let` in the terminal and press enter
 
-####
+## 893. (( I += 10 ))
+
+### 893.1
+
+You used several of these now, including in the `for` loop from the countdown timer. Enter `(( I += 10 ))` in the terminal to increment `I` by `10`. Note that you don't need to prepend variables with `$` inside these parenthesis.
+
+#### HINTS
+
+- Type `(( I += 10 ))` in the terminal and press enter
+
+## 896. echo $I
+
+### 896.1
 
 Use `echo` to print your `I` variable again.
 
-#### `$(( ... ))`
+#### HINTS
 
-It should have printed `11` for the value of `I`. Using the double parenthesis like you have been is good for changing variable values or making comparisons. It makes the calculation in place and provides no output. If you want to make a calculation and do something with the result, add a`$` in front like this: `$(( ... ))`. Type `$(( I + 4 ))` in the terminal to see what happens.
+- Type `echo $I` in the terminal and press enter.
 
-####
+## 897. $(( I + 4 ))
+
+### 897.1
+
+It should have printed `11` for the value of `I`. Using the double parenthesis like you have been is good for changing variable values or making comparisons. It makes the calculation in place and provides no output. If you want to make a calculation and do something with the result, add a `$` in front like this: `$(( ... ))`. Type `$(( I + 4 ))` in the terminal to see what happens.
+
+#### HINTS
+
+- If it didn't print `11` for `I`, enter `I=11` to set it to `11`
+- Type `$(( I + 4 ))` in the terminal and press enter
+
+## 899. echo $(( I + 4 ))
+
+### 899.1
 
 It should say, `bash: 15: command not found`. It replaced the command with the result of the calculation. Effectively, trying to run `15` as a command. Enter the same command, but put `echo` in front of it. The command was `$(( I + 4 ))`
 
-####
+#### HINTS
+
+- Type `echo $(( I + 4 ))` in the terminal and press enter
+
+## 902. echo $I
+
+### 902.1
 
 Again, it replaced the calculation with the result. So it was basically the same as if you entered `echo 15`. Use `echo` to print `I` to the screen again.
 
-####
+#### HINTS
 
-It should still have printed `11` for `I`. See the hints if it didn't. These double parenthesis with a `$` are how you can assign a variable to some calculation. In the terminal, create a `J` variable, and use the `$(( ... ))` syntax to set its value to `I - 6`
+- Type `echo $I` in the terminal and press enter
 
-#### Assign variable a calculation
+## 905. J=$(( I - 6 ))
+
+### 905.1
 
 It should still have printed `11` for `I`. See the hints if it didn't. These double parenthesis with a `$` are how you can assign a variable to some calculation. In the terminal, create a `J` variable, and use the `$(( ... ))` syntax to set its value to `I - 6`.
 
-####
+#### HINTS
+
+- If it didn't print `11` for `I`, enter `I=11` to set it to `11`
+- Type `J=$(( I - 6 ))` in the terminal and press enter
+
+## 908. echo $J
+
+### 908.1
 
 Use `echo` to print `J`.
 
-####
+#### HINTS
+
+- Here's an example: `echo $<variable>`
+- Type `echo $J` in the terminal and press enter
+
+## 911. echo $(( J \* 5 + 25 ))
+
+### 911.1
 
 `J` should equal `5`. For some more practice, use `echo` to print the value `J * 5 + 25`.
 
-####
+#### HINTS
+
+- Type `echo $(( J * 5 + 25 ))` in the terminal and press enter
+
+## 912. echo $J
+
+### 912.1
 
 It should have printed `50`. Print `J` with `echo` again.
 
-#### `declare -p`
+#### HINTS
 
-So, as a reminder, `(( ... )) `will perform a calculation or operation and output nothing. `$(( ... ))` will replace the calculation with the result of it. You made a few variables in this shell, view them with `declare -p`.
+- Here's an example: `echo $<variable>`
+- Type `echo $J` in the terminal and press enter
 
-####
+## 913. declare -p
 
-declare can be used to create variables, but you are just going to use it to view them for now. If you scroll up a little, you should find your `I` and `J` variables in there. View `J` with `declare -p J`.
+### 913.1
 
-#### `declare -p <variable>`
+So, as a reminder, `(( ... ))` will perform a calculation or operation and output nothing. `$(( ... ))` will replace the calculation with the result of it. You made a few variables in this shell, view them with `declare -p`.
 
-I saw RANDOM in that list, too. View it with `declare -p <variable>` like you did for `J`. Do not include `$` oporator.
+#### HINTS
 
-#### `echo (( RANDOM % <NUMBER> ))`
+- Type `declare -p` in the terminal and press enter
+
+## 914. declare -p J
+
+### 914.1
+
+`declare` can be used to create variables, but you are just going to use it to view them for now. If you scroll up a little, you should find your `I` and `J` variables in there. View `J` with `declare -p J`.
+
+#### HINTS
+
+- Type `declare -p J` in the terminal and press enter
+
+## 916. declare -p RANDOM
+
+### 916.1
+
+I saw `RANDOM` in that list, too. View it with `declare -p <variable>` like you did for `J`.
+
+#### HINTS
+
+- Type `declare -p RANDOM` in the terminal and press enter
+
+## 918. echo $(( RANDOM % 75 ))
+
+### 918.1
 
 Okay, I think I finally know how to get the random number for the Bingo Number Generator. Use `echo` and `RANDOM % 75` to print a random number in the terminal.
 
-####
+#### HINTS
 
-One tiny problem, that calculation will give a number between `0` and `74`. Enter the same command in the terminal, but add `1` to the calculation to get a random number between `1` and `75`.
+- Use the `$(( ... ))` syntax to calculate the random number
+- Here's an example: `echo $(( <calculation> ))`
+- Type `echo $(( RANDOM % 75 ))` in the terminal and press enter
 
-####
+## 920. echo $(( RANDOM % 75 + 1 ))
 
-Back in your `bingo.sh` script, change the `NUMBER` variable so that it starts as a random number between `1` and `75` using the syntax you have been practicing.
+### 920.1
 
-####
+One tiny problem, that calculation will give a number between 0 and 74. Enter the same command in the terminal, but add `1` to the calculation to get a random number between 1 and 75.
+
+#### HINTS
+
+- Type `echo $(( RANDOM % 75 + 1 ))` in the terminal and press enter
+
+## 928. Set NUMBER=$(( RANDOM % 75 + 1))
+
+### 928.1
+
+Back in your `bingo.sh` script, change the `NUMBER` variable so that it starts as a random number between 1 and 75 using the syntax you have been practicing.
+
+#### HINTS
+
+- Change the `NUMBER` variable to the result of the calculation `RANDOM % 75 + 1`
+- Use the `$(( ... ))` syntax to make the calculation
+- It should look like this: `NUMBER=$(( RANDOM % 75 + 1 ))`
+
+## 930. run ./bingo.sh
+
+### 930.1
 
 Run your script a few times in a row to make sure it's working.
 
-####
+#### HINTS
 
-Next, create a `TEXT` variable and set the value to `"The next number is, "`. When the script is finished, the output will be something like` The next number is B:15`.
+- Type `./bingo.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+- Run it at least two times in a row
 
-####
+## 940. Add TEXT variable
 
-The letter that goes with the random number depends on what the number is. If it's `15` or less, it will be a `B`. I saw some comparisons in the help let menu, take a look at it again.
+### 940.1
 
-####
+Next, create a `TEXT` variable and set the value to `"The next number is, "`. When the script is finished, the output will be something like `The next number is B:15`.
 
-You used the double square brackets with your if statement in the last program, `but you can use the double parenthesis with these operators as well.` In your script, create an if statement that uses double parenthesis for the condition. Check if the number variable is less than or equal to `15`. If it is, use your two variables to print `The next number is, B:<number>`.
+#### HINTS
 
-####
+- Make sure there's a space after the comma
+- Add `TEXT="The next number is, "` to the `bingo.sh` file
 
-if statements can have an "else if" area like this:
+## 945. help let
+
+### 945.1
+
+The letter that goes with the random number depends on what the number is. If it's 15 or less, it will be a `B`. I saw some comparisons in the `help let` menu, take a look at it again.
+
+#### HINTS
+
+- Type `help let` in the terminal and press enter
+
+## 950. Add first if <= 15
+
+### 950.1
+
+You used the double square brackets with your `if` statement in the last program, but you can use the double parenthesis with these operators as well. In your script, create an `if` statement that uses double parenthesis for the condition. Check if the number variable is less than or equal to 15. If it is, use your two variables to print `The next number is, B:<number>`.
+
+#### HINTS
+
+- Make sure you only have two `echo` statements in your script, the title being one of them
+- Here's an example of how your `if` statement should look:
+
+```sh
+if (( CONDITION ))
+then
+  STATEMENTS
+fi
+```
+
+- The condition you want is `(( NUMBER <= 15 ))`
+- In the statements area, use `echo` and your two variables to print `The next number is, B:<number>`
+- The statements area should look like this: `echo $TEXT B:$NUMBER`
+- The whole `if` statement should look like this:
+
+```sh
+if (( NUMBER <= 15 ))
+then
+  echo $TEXT B:$NUMBER
+fi
+```
+
+## 960. Add elif -le 30
+
+### 960.1
+
+`if` statements can have an "else if" area like this:
 
 ```sh
 if (( CONDITION ))
@@ -5998,91 +10518,396 @@ fi
 
 Using the double square brackets this time, add an `elif` condition that checks if the number variable is less than or equal to `30`. If it is, use your two variables again to print `The next number is, I:<number>`
 
-####
+#### HINTS
 
-You can add as many `elif` sections to an if statement as you want. Add another `elif`, below the last, one that uses the double parenthesis to check if the number variable is less than `46`. If it is, use your two variables to print `The next number is, N:<number>`
+- View the `help test` menu to see the operators you can use with the double square brackets
+- The condition you want is `[[ $NUMBER -le 30 ]]`. Don't forget the `$`
+- In the statements area, use `echo` and your two variables to print `The next number is, I:<number>`
+- The statements area should look like this: `echo $TEXT I:$NUMBER`
+- The `elif` area should look like this:
 
-####
+```sh
+elif [[ $NUMBER -le 30 ]]
+then
+  echo $TEXT I:$NUMBER
+fi
+```
 
-Run your script if you want to see the output. It should print one of the sentences if the random number is less than `46`. It may take a couple tries. Add another `elif`, below the last one, that uses double square brackets to check if the number variable is less than `61`. If it is, use your two variables to print `The next number is, G:<number>`
+- The whole `if` statement should look like this:
 
-####
+```sh
+if (( NUMBER <= 15 ))
+then
+  echo $TEXT B:$NUMBER
+elif [[ $NUMBER -le 30 ]]
+then
+  echo $TEXT I:$NUMBER
+fi
+```
+
+## 970. Add elif < 46
+
+### 970.1
+
+You can add as many `elif` sections to an `if` statement as you want. Add another `elif`, below the last, one that uses the double parenthesis to check if the number variable is less than 46. If it is, use your two variables to print `The next number is, N:<number>`
+
+#### HINTS
+
+- View the `help let` menu to see the operators you can use with the double parenthesis
+- The operator you want it `<`
+- You can add another `elif` like this:
+
+```sh
+if CONDITION
+then
+  STATEMENTS
+elif CONDITION
+then
+  STATEMENTS
+elif CONDITION
+then
+  STATEMENTS
+fi
+```
+
+- The condition you want is `(( NUMBER < 46 ))`
+- In the statements area, use `echo` and your two variables to print `The next number is, N:<number>`
+- The statements area should look like this: `echo $TEXT N:$NUMBER`
+- This `elif` area should look like this:
+
+```sh
+elif (( NUMBER < 46 ))
+then
+  echo $TEXT N:$NUMBER
+fi
+```
+
+- The whole `if` statement should look like this:
+
+```sh
+if (( NUMBER <= 15 ))
+then
+  echo $TEXT B:$NUMBER
+elif [[ $NUMBER -le 30 ]]
+then
+  echo $TEXT I:$NUMBER
+elif (( NUMBER < 46 ))
+then
+  echo $TEXT N:$NUMBER
+fi
+```
+
+## 980. Add elif -lt 61
+
+### 980.1
+
+Run your script if you want to see the output. It should print one of the sentences if the random number is less than 46. It may take a couple tries. Add another `elif`, below the last one, that uses double square brackets to check if the number variable is less than 61. If it is, use your two variables to print `The next number is, G:<number>`
+
+#### HINTS
+
+- View the `help test` menu to see the operators you can use with the double square brackets
+- The operator you want it `-lt`
+- The condition you want is `[[ $NUMBER -lt 61 ]]`. Don't forget the `$`
+- The statements area should look like this: `echo $TEXT G:$NUMBER`
+- This `elif` area should look like this:
+
+```sh
+elif [[ $NUMBER -lt 61 ]]
+then
+  echo $TEXT G:$NUMBER
+fi
+```
+
+- The whole `if` statement should look like this:
+
+```sh
+if (( NUMBER <= 15 ))
+then
+  echo $TEXT B:$NUMBER
+elif [[ $NUMBER -le 30 ]]
+then
+  echo $TEXT I:$NUMBER
+elif (( NUMBER < 46 ))
+then
+  echo $TEXT N:$NUMBER
+elif [[ $NUMBER -lt 61 ]]
+then
+  echo $TEXT G:$NUMBER
+fi
+```
+
+## 990. Add else
+
+### 990.1
 
 One more case to handle. Add an `else` at the bottom of the `if` that uses your two variables to print `The next number is, O:<number>`.
 
-####
+#### HINTS
+
+- View the `if/else` in your `countdown.sh` file to see how you did it before
+- You don't need a condition or the `then` on this one
+- Here's an example:
+
+```sh
+if CONDITION
+then
+  STATEMENTS
+elif CONDITION
+then
+  STATEMENTS
+...
+else
+  STATEMENTS
+fi
+```
+
+- The `else` area should look like this:
+
+```sh
+else
+  echo $TEXT O:$NUMBER
+```
+
+- The whole `if` should look like this:
+
+```sh
+if (( NUMBER <= 15 ))
+then
+  echo $TEXT B:$NUMBER
+elif [[ $NUMBER -le 30 ]]
+then
+  echo $TEXT I:$NUMBER
+elif (( NUMBER < 46 ))
+then
+  echo $TEXT N:$NUMBER
+elif [[ $NUMBER -lt 61 ]]
+then
+  echo $TEXT G:$NUMBER
+else
+  echo $TEXT O:$NUMBER
+fi
+```
+
+## 1000. ./bingo.sh
+
+### 1000.1
 
 Run your script a few times and make sure it's working.
 
-####
+#### HINTS
 
-I think the generator is done 😄 The next project is a fortune teller. Use the touch command to create `fortune.sh` in the same folder as the other scripts.
+- Type `./bingo.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+- Run it at least two times in a row
 
-####
+## 1010. touch fortune.sh
+
+### 1010.1
+
+I think the generator is done :smile: The next project is a fortune teller. Use the `touch` command to create `fortune.sh` in the same folder as the other scripts.
+
+#### HINTS
+
+- Type `touch fortune.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 1020. chmod +x fortune.sh
+
+### 1020.1
 
 Give your file executable permissions.
 
-####
+#### HINTS
 
-Add a shebang at the top of your new file that uses bash again.
+- Use the `chmod` command with the `+x` flag
+- Here's an example `chmod <permissions> <filename>`
+- You previously used `chmod +x bingo.sh`
+- Type `chmod +x fortune.sh` in the terminal and press enter
 
-####
+## 1030. Add shebang
+
+### 1030.1
+
+Add a `shebang` at the top of your new file that uses `bash` again.
+
+#### HINTS
+
+- A `shebang` looks like this: `#!<path_to_interpreter>`
+- Enter `which bash` in the terminal to see the path to `bash`
+- Look at the `shebang` in one of your other scripts to get the syntax
+- It should look like this: `#!/bin/bash`
+- Add `#!/bin/bash` at the top of your `fortune.sh` file
+
+## 1040. Add comment
+
+### 1040.1
 
 Add comment `Program to tell a persons fortune`
 
-####
+#### HINTS
+
+- Comments look like this: `# <comment>`
+- Add `#Program to tell a persons fortune` below the `shebang`
+- Capitalization matters
+
+## 1050. Add echo "title"
+
+### 1050.1
 
 Add a title for this one like the others. This one should say `~~ Fortune Teller ~~`. Don't forget the empty line before and after it.
 
-####
+#### HINTS
+
+- Print the whole title and the empty lines with a single `echo` command
+- Use the `echo` command with the `-e` flag and the new line (`\n`) character
+- Don't forget to put it in double quotes
+- Take a look at one of the title's from a previous file for a hint
+- Here's an example: `echo -e "\n<message>\n"`
+- You previously used `echo -e "\n~~ Bingo Number Generator ~~\n"`
+- Add `echo -e "\n~~ Fortune Teller ~~\n"` below the comment of your `fortune.sh` file
+
+## 1060. ./fortune.sh
+
+### 1060.1
 
 Run the file once to make sure it's working.
 
-#### array `ARR=("a" "b" "c")`
+#### HINTS
 
-This program will have an array of responses. One will be printed randomly after a user inputs a question. Practice first 😄 In the terminal, create an array like this: `ARR=("a" "b" "c")`
+- Type `./fortune.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
 
-#### `echo ${ARR[1]}`
+## 1070. ARR=("a" "b" "c")
+
+### 1070.1
+
+This program will have an array of responses. One will be printed randomly after a user inputs a question. Practice first :smile: In the terminal, create an array like this: `ARR=("a" "b" "c")`
+
+#### HINTS
+
+- Type the suggested command in the terminal
+- Type `ARR=("a" "b" "c")` in the terminal and press enter
+
+## 1080. echo ${ARR[1]}
+
+### 1080.1
 
 Each variable in the array is like any other variable, just combined into a single variable. In the terminal, print the second item in the array with `echo ${ARR[1]}`. Note that the first item would be index zero.
 
-#### `echo ${ARR[@]}`
+#### HINTS
 
-If you recall, you were able to print all the arguments to your `countdown.sh` script with `echo $*`. `echo $@` would have worked as well. Similarly, you can use the `*` or `@`to print your whole array. In the terminal, use echo to print all the items in your array.
+- Type `echo ${ARR[1]}` in the terminal
 
-#### `declare -p ARR`
+## 1090. echo ${ARR[@]}
 
-The variable must be in that declare list. View your array variable using the declare command and the `-p` flag.
+### 1090.1
 
-####
+If you recall, you were able to print all the arguments to your `countdown.sh` script with `echo $*`. `echo $@` would have worked as well. Similarly, you can use the `*` or `@` to print your whole array. In the terminal, use `echo` to print all the items in your array.
 
-The `-a` next to it stands for array. In your script, create an array named `RESPONSES`. Give it these six values: `Yes`, `No`, `Maybe`, `Outlook good`, `Don't count on it`, and `Ask again later`.
+#### HINTS
 
-#### `echo ${ARR[-1]}`
+- Here's an example `echo ${ARR[<index>]}`
+- Type `echo ${ARR[@]}` in the terminal and press enter
+
+## 1100. declare -p ARR
+
+### 1100.1
+
+The variable must be in that `declare` list. View your array variable using the `declare` command and the `-p` flag.
+
+#### HINTS
+
+- Here's an example: `declare -p <variable>`
+- Type `declare -p ARR` in the terminal
+
+## 1110. Add RESPONSES array
+
+### 1110.1
+
+The `-a` next to it stands for `array`. In your script, create an array named `RESPONSES`. Give it these six values: `Yes`, `No`, `Maybe`, `Outlook good`, `Don't count on it`, and `Ask again later`.
+
+#### HINTS
+
+- Here's an example: `VARIABLE=(value value ...)`
+- Make sure any values with spaces are in proper quotes
+- You created your other array with `ARR=("a" "b" "c")`
+- Add `RESPONSES=("Yes" "No" "Maybe" "Outlook good" "Don't count on it" "Ask again later")` in your script
+
+## 1120. echo ${RESPONSES[5]}
+
+### 1120.1
 
 In your script, use `echo` to print the last item in the array.
 
-####
+#### HINTS
+
+- Here's an example `echo ${ARR[<index>]}`
+- Remember that the first item starts at zero
+- Add `echo ${RESPONSES[5]}` to your `fortune.sh` file
+
+## 1130. ./fortune.sh
+
+### 1130.1
 
 Run it to see the output.
 
-#### `<VARIABEL_NAME>=$(( RANDOM % <NUMBER> ))`
+#### HINTS
+
+- Type `./fortune.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 1140. Add N=$(( RANDOM % 6 ))
+
+### 1140.1
 
 You will randomly print one of the values. In your script, create a variable named `N`. Set it equal to a random number between `0` and `5`, the first and last index of the array.
 
-####
+#### HINTS
+
+- Use the modulus (`%`) operator and `6` to get a number between `0` and `5`
+- Look at the random number you created in the `bingo.sh` file for a hint
+- Here's an example: `VARIABLE=$(( <calculation> ))`
+- Calculate a random number in the range you want with `RANDOM % 6`
+- Add `N=$(( RANDOM % 6 ))` to the script
+
+## 1150. Change to echo ${RESPONSES[$N]}
+
+### 1150.1
 
 Change your `echo` command to print the item in the array whose index is the random number you generated.
 
-####
+#### HINTS
 
-You will create a function to generate an answer. Check the help menu to see if you can find anything.
+- Use your `$N` variable as the index where you print an item from the array
+- Don't forget that scripts run from top to bottom, so you can't use any variables before they are created
+- Change the `echo` line to `echo ${RESPONSES[$N]}`
 
-####
+## 1160. help
 
-See any that might help? There's one that says function. See if you can find out more about it.
+### 1160.1
 
-#### function syntax
+You will create a function to generate an answer. Check the `help` menu to see if you can find anything.
+
+#### HINTS
+
+- Enter the suggested command in the terminal
+- Type `help` in the terminal
+
+## 1170. help function
+
+### 1170.1
+
+See any that might help? There's one that says `function`. See if you can find out more about it.
+
+#### HINTS
+
+- Use the `help` command to find out more
+- Here's an example: `help <command>`
+- Type `help function` in the terminal
+
+## 1180. Add GET_FORTUNE function
+
+### 1180.1
 
 It looks like you can create a function like this:
 
@@ -6094,37 +10919,113 @@ FUNCTION_NAME() {
 
 Add an empty function named `GET_FORTUNE` to your script. Make sure the response you are printing is the last thing in the script.
 
-####
+#### HINTS
 
-In your function, use echo to print `Ask a yes or no question:`
+- Add this to your script:
 
-####
+```sh
+GET_FORTUNE() {}
+```
+
+- Your `echo ${RESPONSES[$N]}` command should be at the bottom of the file
+
+## 1190. Add echo Ask a yes or no question
+
+### 1190.1
+
+In your function, use `echo` to print `Ask a yes or no question:`
+
+#### HINTS
+
+- Your function should look like this:
+
+```sh
+GET_FORTUNE() {
+  echo Ask a yes or no question:
+}
+```
+
+- Your `echo ${RESPONSES[$N]}` command should be at the bottom of the file
+
+## 1200. Add GET_FORTUNE function call
+
+### 1200.1
 
 Call your function by putting the name of it below where you create it. No `$` needed. Make sure the response you are printing is at the bottom of the file.
 
-####
+#### HINTS
+
+- Add `GET_FORTUNE` below where you create your function to call it
+- Your `echo ${RESPONSES[$N]}` command should be at the bottom of the file
+
+## 1210. ./fortune.sh
+
+### 1210.1
 
 Run your script to make sure it's working.
 
-####
+#### HINTS
+
+- Type `./fortune.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 1220. Add read QUESTION
+
+### 1220.1
 
 In your function after you print the sentence, use `read` to get user input into a variable named `QUESTION`.
 
-####
+#### HINTS
+
+- Add `read QUESTION` to your function below the `echo`
+- Your function should look like this:
+
+```sh
+GET_FORTUNE() {
+  echo Ask a yes or no question:
+  read QUESTION
+}
+```
+
+- Your `echo ${RESPONSES[$N]}` command should be at the bottom of the file
+
+## 1230. ./fortune.sh
+
+### 1230.1
 
 Run the script again to test it out. Enter a question when it asks.
 
-####
+#### HINTS
 
-I want to make sure the input is a question. You are going to add a loop that asks for input until the input ends with a question mark. View the help menu to see if you can find an appropriate loop.
+- Type `./fortune.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
 
-####
+## 1240. help
+
+### 1240.1
+
+I want to make sure the input is a question. You are going to add a loop that asks for input until the input ends with a question mark. View the `help` menu to see if you can find an appropriate loop.
+
+#### HINTS
+
+- Type `help` in the terminal and press enter
+
+## 1250. help until
+
+### 1250.1
 
 View more about that `until` command. That might be the one to use here.
 
-#### until loop
+#### HINTS
 
-The until loop is very similar to the while loop you used. It will execute the loop until a condition is met. Here's an example:
+- Use `help <command>` to view more about a command
+- Type `help until` in the terminal and press enter
+
+## 1260. Add until loop
+
+### 1260.1
+
+The `until` loop is very similar to the `while` loop you used. It will execute the loop until a condition is met. Here's an example:
 
 ```sh
 until [[ CONDITION ]]
@@ -6135,429 +11036,542 @@ done
 
 Add an `until` loop below your function. Use the double brackets to check if `QUESTION` is equal to `test?`. Move the `GET_FORTUNE` function call to the statements area of the loop. It should run the function until you input `test?` as the question.
 
-####
+#### HINTS
 
-Run the script and enter something other than `test?`. Then enter test? after it asks for a question the second time.
+- View the `help [[` or `help test` menu to see if you can find the operator to use
+- You want the `==` operator
+- The condition should look like this: `[[ $QUESTION == test? ]]`
+- Your `until` loop should look like this:
 
-####
+```sh
+until [[ $QUESTION == test? ]]
+do
+  GET_FORTUNE
+done
+```
+
+- You should only call the `GET_FORTUNE` function once
+- Your `echo ${RESPONSES[$N]}` command should be at the bottom of the file
+
+## 1270. ./fortune.sh
+
+### 1270.1
+
+Run the script and enter something other than `test?`. Then enter `test?` after it asks for a question the second time.
+
+#### HINTS
+
+- Type `./fortune.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 1280. help [[expression]]
+
+### 1280.1
 
 View that `help [[ expression ]]` menu again. You need to find out how to test if the input ends with a question mark (`?`).
 
-####
+#### HINTS
 
-Let's play with these again. You can test if two strings are the same with `==`. In the terminal, use the `[[ ... ]]; echo $?`syntax you used before to test if `hello` is equal to `hello`.
+- Type `help [[` or `help [[ expression ]]` in the terminal and press enter
 
-####
+## 1290. [[hello == hello]]; echo $?
 
-Exit status of 0, it was true. Using the same syntax, test if hello is equal to world.
+### 1290.1
 
-#### `=~` pattern matching
+Let's play with these again. You can test if two strings are the same with `==`. In the terminal, use the `[[ ... ]]; echo $?` syntax you used before to test if `hello` is equal to `hello`.
 
-False. An important operator in that menu is `=~`. It allows for pattern matching. Using the same syntax but with this operator, check if hello contains the pattern `el`.
+#### HINTS
 
-####
+- Be sure to use the `==` operator
+- Type `[[ hello == hello ]]; echo $?` in the terminal and press enter
 
-True. The condition was checking for `el` within the word hello. Using the same syntax, check if hello world contains the pattern lo wor. You will need to put them both in quotes so it recognizes the spaces.
+## 1300. [[hello == world]]; echo $?
 
-#### `[[ "hello world" =~ ^h ]]; echo $?`
+### 1300.1
+
+Exit status of `0`, it was true. Using the same syntax, test if `hello` is equal to `world`.
+
+#### HINTS
+
+- Use the `[[ ... ]]; echo $?` syntax
+- Be sure to use the `==` operator
+- Type `[[ hello == world ]]; echo $?` in the terminal and press enter
+
+## 1310. [[hello =~ el]]; echo $?
+
+### 1310.1
+
+False. An important operator in that menu is `=~`. It allows for pattern matching. Using the same syntax but with this operator, check if `hello` contains the pattern `el`.
+
+#### HINTS
+
+- Use the `[[ ... ]]; echo $?` syntax
+- Use the `=~` operator with it
+- Type `[[ hello =~ el ]]; echo $?` in the terminal and press enter
+
+## 1320. [["hello world" =~ "lo wor"]]; echo $?
+
+### 1320.1
+
+True. The condition was checking for `el` within the word `hello`. Using the same syntax, check if `hello world` contains the pattern `lo wor`. You will need to put them both in quotes so it recognizes the spaces.
+
+#### HINTS
+
+- Use the `[[ ... ]]; echo $?` syntax
+- Use the `=~` operator with it
+- Type `[[ "hello world" =~ "lo wor" ]]; echo $?` in the terminal and press enter
+
+## 1330. [["hello world" =~ ^h]]; echo $?
+
+### 1330.1
 
 Your patterns have been checking for literal matches, `el` and `lo wor`. You can use regular expression characters as well, but you can't put the pattern in quotes when you do. Using the same syntax, check if `hello world` starts with an `h` by using `^h` as the pattern.
 
-#### `[[ "hello world" =~ ^h.+d ]]; echo $?`
+#### HINTS
 
-Do it again, but use `^h.+d$ `as the pattern to see if the string starts with an `h`, has at least one character after it, and ends with a `d`.
+- Make sure not to use quotes around the pattern when using regex characters it
+- Type `[[ "hello world" =~ ^h ]]; echo $?` in the terminal
 
-####
+## 1340. [["hello world" =~ ^h.+d$]]; echo $?
+
+### 1340.1
+
+Do it again, but use `^h.+d$` as the pattern to see if the string starts with an `h`, has at least one character after it, and ends with a `d`.
+
+#### HINTS
+
+- Use the `[[ ... ]]; echo $?` syntax again
+- Check if `hello world` contains the suggested pattern
+- Make sure not to use quotes around the pattern when using regex characters it
+- Type `[[ "hello world" =~ ^h.+d$ ]]; echo $?` in the terminal
+
+## 1350. VAR="hello world"
+
+### 1350.1
 
 In the terminal, create a variable named `VAR` that equals `hello world`.
 
-####
+#### HINTS
 
-Use echo to print the variable you just created.
+- Type `VAR="hello world"` in the terminal
 
-####
+## 1360. echo $VAR
+
+### 1360.1
+
+Use `echo` to print the variable you just created.
+
+#### HINTS
+
+- Type `echo $VAR` in the terminal
+
+## 1370. [[$VAR == "hello world"]]; echo $?
+
+### 1370.1
 
 Using the `[[ ... ]]; echo $?` syntax, check if your variable is equal to `hello world`.
 
-#### [[$<VARIABLE> =~ "<STRING>"]]; echo $?
+#### HINTS
+
+- Check the `help [[` menu to find the operator to use
+- It's the `==` operator
+- You want to check if `$VAR == "hello world"`
+- Type `[[ $VAR == "hello world" ]]; echo $?` in the terminal
+
+## 1380. [[ $VAR =~ \?$ ]; echo $?
+
+### 1380.1
 
 Using the same syntax, check if your variable ends with `?` by using the pattern `\?$`.
 
-####
+#### HINTS
+
+- Be sure to use the pattern matching operator
+- It's the `=~` operator
+- You want to check if `$VAR =~ \?$`
+- Type `[[ $VAR =~ \?$ ]]; echo $?` in the terminal
+
+## 1385. [[ test? =~ \?$ ]; echo $?
+
+### 1385.1
 
 It doesn't end with `?`. Just to make sure I don't have the pattern wrong, check if `test?` ends with `?`.
 
-####
+#### HINTS
 
-I think that will work. Back in your script, change the until condition to see if your variable ends with `?`.
+- Use the same `[[ ... ]]; echo $?` syntax you have been using
+- Use the `\?$` pattern to see if a string ends with `?`
+- Make sure you're using the pattern matching operator `=~`
+- You want to check if `test? =~ \?$`
+- Type `[[ test? =~ \?$ ]]; echo $?` in the terminal
 
-####
+## 1390. Change until condition
 
-Run the script and input something that doesn't end with ? the first time, then something that does the second.
+### 1390.1
 
-#### `if [[ ! $1 ]]`
+I think that will work. Back in your script, change the `until` condition to see if your variable ends with `?`.
 
-I know that it asks the same thing if the input isn't what you want. You should let users know that it needs to end with `?`. Add an `if` condition in your function that checks `if [[ ! $1 ]]`. Put the existing `echo` statement in the then area and make sure the existing `read` is below the whole `if` condition.
+#### HINTS
 
-####
+- Use the pattern matching operator with `\?$`
+- It's the `=~` operator
+- Your condition should look like this: `[[ $QUESTION =~ \?$ ]]`
+- Make sure there's spaces inside the brackets and around the operator
+
+## 1400. ./fortune.sh
+
+### 1400.1
+
+Run the script and input something that doesn't end with `?` the first time, then something that does the second.
+
+#### HINTS
+
+- Type `./fortune.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 1410. Add if to GET_FORTUNE
+
+### 1410.1
+
+I know that it asks the same thing if the input isn't what you want. You should let users know that it needs to end with `?`. Add an `if` condition in your **function** that checks `if [[ ! $1 ]]`. Put the existing `echo` statement in the `then` area and make sure the existing `read` is below the whole `if` condition.
+
+#### HINTS
+
+- Here's an example:
+
+```sh
+if [[ CONDITION ]]
+then
+  STATEMENTS
+fi
+
+read QUESTION
+```
+
+- Your function should look like this:
+
+```sh
+function GET_FORTUNE() {
+  if [[ ! $1 ]]
+  then
+    echo Ask a yes or no question:
+  fi
+
+  read QUESTION
+}
+```
+
+## 1412. Add else to if [[! $1]]
+
+### 1412.1
 
 You can pass arguments to functions like you did with your script. This condition will check if one isn't passed and print the sentence. Add an `else` to your `if`. Use `echo` to print `Try again. Make sure it ends with a question mark:` if the condition fails.
 
-#### `*** ***`
+#### HINTS
+
+- Here's an example:
+
+```sh
+if [[ CONDITION ]]
+then
+  STATEMENTS
+else
+  STATEMENTS
+fi
+```
+
+- Your `if` condition should look like this:
+
+```sh
+if [[ ! $1 ]]
+then
+  echo Ask a yes or no question:
+else
+  echo Try again. Make sure it ends with a question mark:
+fi
+```
+
+## 1413. Add argument to function call
+
+### 1413.1
 
 Now, your function will print one thing if you pass it any argument, and something else if not. In the `until` loop, add `again` as an argument to where you call the function.
 
-####
+#### HINTS
+
+- Here's an example: `FUNCTION_NAME argument`
+- Your function call should look like this: `GET_FORTUNE again`
+- Your `until` loop should look like this:
+
+```sh
+until [[ $QUESTION =~ \?$ ]]
+do
+  GET_FORTUNE again
+done
+```
+
+## 1416. Add Initial function call
+
+### 1416.1
 
 Now, each time the function is called in the `until` loop, it will pass `again` as an argument and print the `Try again...` sentence. Before your `until` loop, call the function without an argument so the first time it runs, it prints the initial sentence.
 
-####
+#### HINTS
+
+- Add `GET_FORTUNE` before the `until` loop
+
+## 1420. ./fortune.sh
+
+### 1420.1
 
 Run the script and enter something without a question mark when it asks the first time. Use a question mark the second time.
 
-####
+#### HINTS
+
+- Type `./fortune.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 1425. Add line break in front of response
+
+### 1425.1
 
 Awesome. One last thing. Add an empty line in front of where you print the response.
 
-####
+#### HINTS
+
+- Change the existing `echo ${RESPONSES[$N]}` line
+- Use the `-e` flag and the new line (`\n`) character with the `echo` statement
+- Make sure to use quotes so it prints the new line
+- Run the script and see if it's working
+- The suggested command should look like this: `echo -e "\n${RESPONSES[$N]}"`
+
+## 1428. ./fortune.sh
+
+### 1428.1
 
 Run the script one more time to see if you like the output.
 
-####
+#### HINTS
 
-Excellent. One last program to make. Use touch to create a new file named `five.sh` in the same folder as the others.
+- Type `./fortune.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
 
-####
+## 1430. touch five.sh
+
+### 1430.1
+
+Excellent. One last program to make. Use `touch` to create a new file named `five.sh` in the same folder as the others.
+
+#### HINTS
+
+- Type `touch five.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 1440. chmod +x five.sh
+
+### 1440.1
 
 Give your file executable permissions.
 
-####
+#### HINTS
 
-Add a shebang to the new script that uses bash like the others.
+- Use the `chmod` command with the `+x` flag
+- Here's an example `chmod <permissions> <filename>`
+- You previously used `chmod +x fortune.sh`
+- Type `chmod +x five.sh` in the terminal and press enter
 
-####
+## 1450. Add shebang
 
-Add a comment below the shebang that says, `Program to run my other four programs`
+### 1450.1
 
-####
+Add a `shebang` to the new script that uses `bash` like the others.
 
-This program will run all the programs you made so far consecutively. Add the command to run the `questionnaire.sh `file.
+#### HINTS
 
-####
+- A `shebang` looks like this: `#!<path_to_interpreter>`
+- Enter `which bash` in the terminal to see the path to `bash`
+- Look at the `shebang` in one of your other scripts to get the syntax
+- It should look like this: `#!/bin/bash`
+- Add `#!/bin/bash` at the top of your `five.sh` file
+
+## 1460. Add comment
+
+### 1460.1
+
+Add a comment below the `shebang` that says, `Program to run my other four programs`
+
+#### HINTS
+
+- Comments look like this: `# <comment>`
+- Add `# Program to run my other four programs` below the `shebang`
+- Capitalization matters
+
+## 1470. Add ./questionnaire.sh
+
+### 1470.1
+
+This program will run all the programs you made so far consecutively. Add the command to run the `questionnaire.sh` file.
+
+#### HINTS
+
+- The command should look like how you would execute the file in the terminal
+- Add `./questionnaire.sh` to the `five.sh` file
+
+## 1480. ./five
+
+### 1480.1
+
+Run the file to see if it works. Enter input when it asks.
+
+#### HINTS
+
+- Type `./five.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 1490. Add the rest of the scripts
+
+### 1490.1
 
 Add commands to run the rest of your scripts in the file. They should be in this order: `questionnaire`, `countdown`, `bingo`, and `fortune`. Don't forget that your `countdown.sh` file needs an argument, so put a `3` next to it.
 
-####
+#### HINTS
 
-Okay, use clear to empty out what's in the terminal before the big moment.
+- Your `five.sh` file should have these commands:
 
-####
+```sh
+./questionnaire.sh
+./countdown.sh 3
+./bingo.sh
+./fortune.sh
+```
+
+## 1500. Clear
+
+### 1500.1
+
+Okay, use `clear` to empty out what's in the terminal before the big moment.
+
+#### HINTS
+
+- Type `clear` in the terminal
+
+## 1510. ./five
+
+### 1510.1
 
 Run the script and enter input when it asks.
 
-####
+#### HINTS
 
-Cool. I think all the scripts are done. View the help menu again I want to explore one more thing.
+- Type `./five.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
 
-#### `type` command
+## 1520. help
+
+### 1520.1
+
+Cool. I think all the scripts are done. View the `help` menu again I want to explore one more thing.
+
+#### HINTS
+
+- Type `help` in the terminal and press enter
+
+## 1530. help type
+
+### 1530.1
 
 View more about that `type` command.
 
-#### `type <command>`
+#### HINTS
+
+- Use `help <command>` to find out more about a command
+- Type `help type` in the terminal and press enter
+
+## 1540. type echo
+
+### 1540.1
 
 It says you can view the type of a command with `type <command>`. Just for fun, lets take a look at the type of a few different commands. View the type of `echo`.
 
-####
+#### HINTS
+
+- Type `type echo` in the terminal and press enter
+
+## 1550. type read
+
+### 1550.1
 
 View the type of the `read` command.
 
-####
+#### HINTS
+
+- Type `type read` in the terminal and press enter
+
+## 1560. type if
+
+### 1560.1
 
 View the type of `if`
 
-####
+#### HINTS
+
+- Type `type if` in the terminal and press enter
+
+## 1570. type then
+
+### 1570.1
 
 View the type of `then`
 
-####
+#### HINTS
 
-Those were all from the help menu and described as a `shell builtin` or `shell keyword`. View the type of `bash`
+- Type `type then` in the terminal and press enter
 
-####
+## 1580. type bash
 
-That's the location of the bash command. View the type of `psql`.
+### 1580.1
 
-####
+Those were all from the `help` menu and described as a `shell builtin` or `shell keyword`. View the type of `bash`
+
+#### HINTS
+
+- Type `type bash` in the terminal and press enter
+
+## 1590. type psql
+
+### 1590.1
+
+That's the location of the `bash` command. View the type of `psql`.
+
+#### HINTS
+
+- Type `type psql` in the terminal and press enter
+
+## 1600. type ./five.sh
+
+### 1600.1
 
 It's showing the location of the commands. View the type of your `./five.sh` file.
 
-#### `exit`
+#### HINTS
 
-Last step, close the terminal with the exit command. Thanks and happy coding!
+- Type `type ./five.sh` in the terminal and press enter
+
+## 1610. exit
+
+### 1610.1
+
+Last step, close the terminal with the `exit` command. Thanks and happy coding!
+
+#### HINTS
+
+- Type `exit` in the terminal and press enter
 
 ### Build a Student Database: Part 1
 
 In this 140-lesson course, you will create a `Bash script` that uses `SQL` to enter information about your computer science students into `PostgreSQL`.
 
 Create a GitHub account if you don't have one. You'll need it when you create the virtual Linux server machine. This process may take a few minutes.
-
-####
-
-The first thing you need to do is start the terminal. Do that by clicking the "hamburger" menu at the top left of the screen, going to the "terminal" section, and clicking "new terminal". Once you open a new one, type `echo hello SQL` into the terminal and press enter.
-
-####
-
-You are started with two `.csv` files with info about your computer science students. You should take a look at them. The top row in each file has titles, and the rest are values for those titles. You will be adding all that info to a PostgreSQL database. Log into the psql interactive terminal with `psql --username=freecodecamp --dbname=postgres` to get started.
-
-####
-
-View the existing databases with the \l shortcut command to see what's here.
-
-####
-
-All the info from the CSV files will go into a single database. Create a new database named `students`.
-
-####
-
-View the databases again to make sure it got created.
-
-####
-
-There it is. Connect to your new database so you can start adding tables.
-
-####
-
-The CSV files have a bunch of students with info about them, and some courses and majors. You will have four tables. One for the students and their info, one for each major, another for each course, and a final one for showing what courses are included in each major. First, create the `students` table.
-
-####
-
-The second table will be for each unique major that appears in the data. Create a table named majors.
-
-####
-
-The third table is for each unique course in the data. Create another table named courses.
-
-####
-
-The final table will be a junction table for the majors and courses. Create it with the name majors_courses.
-
-####
-
-Use the display shortcut command to view your tables to make sure your satisfied with them.
-
-####
-
-Onto the columns. The students.csv file has four fields, you will make a column for each of those as well as an `ID` column. Add a column to your students table named `student_id`. Give it a type of `SERIAL` so it automatically increments and make it a `PRIMARY KEY`
-
-####
-
-The first column in students.csv is `first_name`. Add a column to the students table with that name. Make it a type of `VARCHAR(50)` and give it the `NOT NULL` constraint.
-
-####
-
-The next column in the data is `last_name`. Add it to the students table. Give it the same data type and max-length as `first_name` and make sure it has the `NOT NULL` constraint.
-
-####
-
-The next column is for the `major`. Since you will have each major in another table this column will be a `foreign key` that references it. Create a column in the `students` table named `major_id`, give it a data type of `INT` for now. You will come back and set the foreign key later.
-
-#### `NUMERIC(2,1)`
-
-Create the last column, `gpa`. The data in the CSV shows that they are decimals with a length of `2` and `1` number is to the right of the decimal. So give it a data type of `NUMERIC(2,1)`.
-
-####
-
-Use the shortcut command to display the details of the students table to make sure you like it.
-
-#### `ALTER TABLE <table_name> ADD <column_name> <DATA_TYPE> PRIMARY KEY;`
-
-The foreign key is still missing. Let's fill in the `majors` table next. Add a `major_id` column to it. Make it a type of `SERIAL` and the `PRIMARY KEY` for this table.
-
-#### `ALTER TABLE <table_name> ADD <column_name> <DATA_TYPE> NOT NULL;`
-
-This table will only have one other column for the name of the `major`. Add a column to it named `major`. Make it a `VARCHAR` with a max-length of `50` and give it the `NOT NULL` constraint.
-
-####
-
-View the details of the `majors` table to make sure you like it.
-
-#### `ALTER TABLE <table_name> ADD FOREIGN KEY(<column_name>) REFERENCES <referenced_table_name>(<referenced_column_name>);`
-
-This table looks good. Now, set the `major_id` column from the `students` table as a foreign key that references the `major_id` column from the `majors` table. Here's an example of how to do that:
-
-```sql
-ALTER TABLE <table_name> ADD FOREIGN KEY(<column_name>) REFERENCES <referenced_table_name>(<referenced_column_name>);
-```
-
-####
-
-View the details of the `students` table again to make sure the key is there.
-
-####
-
-Next, is the `courses` table. Add a `course_id` column to it. Give it a type of `SERIAL` and make it the `primary key`.
-
-####
-
-Add a `course` column to the `courses` table that's a type of `VARCHAR`. The course names are a little longer, so give them a max-length of `100`. Also, make sure it can't accept `null values`.
-
-####
-
-View the details of the `courses` table to make sure it looks good.
-
-####
-
-One more table to go. The `majors_courses` junction table will have two columns, each referencing the `primary key` from two related table. First, add a `major_id` column to it. Just give it a type of `INT` for now.
-
-####
-
-Set the `major_id` column you just created as a foreign key that references the `major_id` column from the `majors` table.
-
-####
-
-Next, add a `course_id` column to the same table. Just give it a type of `INT` again for now.
-
-####
-
-Set your new `course_id` column as a foreign key that references the other `course_id` column.
-
-####
-
-View the details of the table you just worked on to make sure the structure is finished.
-
-#### ` ALTER TABLE <table_name> ADD PRIMARY KEY(<column_name>, <column_name>);`
-
-There's one thing missing. This table doesn't have a `primary key`. The data from `courses.csv` will go in this table. A single major will be in it multiple times, and same with a course. So neither of them can be a primary key. But there will never be a row with the same two values as another row. So the two columns together, are unique. You can create a `composite primary key` that uses more than one column as a unique pair like this:
-
-```sql
-ALTER TABLE <table_name> ADD PRIMARY KEY(<column_name>, <column_name>);
-```
-
-Add a composite primary key to the table using the two columns.
-
-####
-
-View the details of the table again.
-
-####
-
-Okay, now it's finished. View all the tables you ended up with.
-
-####
-
-Next, you can start adding some info. Since the `students` table needs a `major_id`, you can add a major first. View the details of the majors table to see what info it expects.
-
-####
-
-It only needs the name of a `major`. The ID will be added automatically. Add the first major from the `courses.csv` file into the majors table. It's a `VARCHAR`, so make sure to put the value in single quotes.
-
-####
-
-Use `SELECT` to view all the data in the majors table to make sure it got inserted correctly.
-
-####
-
-Next, insert the first `course` from `course.csv` into the `courses` table.
-
-####
-
-View all the data in the courses table to make sure it got added.
-
-####
-
-Next, you can add a row into the junction table. View the details of it to see what it expects.
-
-####
-
-It wants a `major_id` and `course_id`. Add a row to `majors_courses` for the first entry in `courses.csv`.
-
-####
-
-View all the data in the table you just added to.
-
-####
-
-Looks like the row got added. View the details of the students table to remind yourself what it expects so you can add the first student to the database.
-
-####
-
-The output shows what the table needs. Insert the first person from `students.csv`into the students table.
-
-####
-
-Looks like it worked. View all the data in the students table to make sure.
-
-####
-
-Okay, you added a row into each table. It might be wise to review the data and the database structure. Adding the rest of the info one at a time would be tedious. You are going to make a script to do it for you. I recommend "splitting" the terminal for this part. You can do that by clicking the "hamburger" menu at the top left of the window, going to the "Terminal" menu, and clicking "Split Terminal". Once you've done that, use the `touch` command to create a file named `insert_data.sh` in your project folder.
-
-####
-
-You should have two terminals open. One connected to PostgreSQL, and one for entering terminal commands. In the one for terminal commands, use the chmod command with the `+x` flag to give you new script executable permissions.
-
-####
-
-Open your new file and add a "shebang" that uses bash at the top. It looks like this: `#!/bin/bash`.
-
-####
-
-Below that, add a single line comment with the text,` Script to insert data from courses.csv and students.csv into students database`.
-
-#### `cat <filename>`
-
-First, you should add all the info from the `courses.csv` file since you need the `major_id` for inserting the student info. `cat` is a terminal command for printing the contents of a file. Here's an example: `cat <filename>`. Below the comment you added, use it to print `courses.csv`
-
-####
-
-Run your script to see if the file contents get printed.
-
-#### piping cat two while loop
-
-It worked. Instead of printing the content, you can pipe that output into a while loop so you can go through the rows one at a time. It looks like this:
-
-```sh
-cat courses.csv | while read MAJOR COURSE
-do
-  <STATEMENTS>
-done
-```
-
-Each new line will be read into the variables, `MAJOR` and `COURSE`. Add the above to your `cat` command. In the `STATEMENTS` area, use `echo` to print the `MAJOR` variable.
-
-####
-
-Run the script to see if it worked.
-
-#### `declare -p IFS`
-
-It's looping, but the `MAJOR` variable is only being set to the first word. There's a default `IFS` variable in bash. `IFS` stands for "Internal Field Separator". View it with `declare -p IFS`.
-
-#### `cat courses.csv | while IFS="," read MAJOR COURSE do echo $MAJOR done`
-
-This variable is used to determine word boundaries. It defaults to spaces, tabs, and new lines. This is why the MAJOR variable was set to only the first word on each line from the data. Between the while and read commands, set the IFS to a comma like this: `IFS=","`
-
-####
-
-Now, it should use the comma in the data to separate words instead of spaces. Run the script again to see if it's working.
-
-####
-
-Looks like that worked. It prints the whole major, including the space. Print the `COURSE` variable on the same line as where you print `MAJOR` to make sure it's all working.
-
-####
-
-Run the script again to check.
-
-##### `insert_data.sh`
-
-#!/bin/bash
-
-### Script to insert data from courses.csv and students.csv into students database
-
-cat course.csv | while IFS="," read MAJOR COURSE
-do
-echo $MAJOR $COURSE
-done
 
 ##### `courses.csv`
 
@@ -6626,455 +11640,2001 @@ Aliya,Gulgowski,System Administration,2.6
 Ana,Tupajic,Data Science,3.1
 Hugo,Duran,null,3.8
 
-##### recreate_script.sh
+# Learn SQL by Building a Student Database: Part 1
 
-#!/bin/bash
+> Welcome to the SQL Lessons!
 
-### Script recreates the missing files in this project
+## 10. Start the Terminal
 
-touch courses.csv
-touch students.csv
-touch insert_data.sh
+### 10.1
 
-chmod +x courses.csv
-chmod +x students.csv
-chmod +x insert_data.sh
+**The first thing you need to do is start the terminal.** Do that by clicking the "hamburger" menu at the top left of the screen, going to the "terminal" section, and clicking "new terminal". Once you open a new one, type `echo hello SQL` into the terminal and press enter.
 
-echo 'major,course
+#### HINTS
+
+- Capitalization matters
+- If the tests don't run automatically, try typing `exit` into the terminal and redoing the instructions
+
+## 20. psql login
+
+### 20.1
+
+You are started with two `.csv` files with info about your computer science students. You should take a look at them. The top row in each file has titles, and the rest are values for those titles. You will be adding all that info to a PostgreSQL database. Log into the psql interactive terminal with `psql --username=freecodecamp --dbname=postgres` to get started.
+
+#### HINTS
+
+- Type `psql --username=freecodecamp --dbname=postgres` into the terminal and press enter
+
+## 30. \l
+
+### 30.1
+
+View the existing databases with the `\l` shortcut command to see what's here.
+
+#### HINTS
+
+- Type `\l` into the psql prompt and press enter
+
+## 40. CREATE DATABASE students;
+
+### 40.1
+
+All the info from the CSV files will go into a single database. Create a new database named `students`.
+
+#### HINTS
+
+- Use the `CREATE DATABASE` keywords
+- Here's an example: `CREATE DATABASE <database_name>;`
+- Type `CREATE DATABASE students;` into the psql prompt and press enter
+
+## 50. \l
+
+### 50.1
+
+View the databases again to make sure it got created.
+
+#### HINTS
+
+- Use the **list** shortcut command in the psql prompt
+- Type `\l` into the psql prompt and press enter
+
+## 60. \c students
+
+### 60.1
+
+There it is. Connect to your new database so you can start adding tables.
+
+#### HINTS
+
+- Use the `\c` shortcut command
+- Here's an example: `\c <database_name>`
+- Type `\c students` in the psql prompt
+
+## 70. CREATE TABLE students
+
+### 70.1
+
+The CSV files have a bunch of students with info about them, and some courses and majors. You will have four tables. One for the students and their info, one for each major, another for each course, and a final one for showing what courses are included in each major. First, create the `students` table.
+
+#### HINTS
+
+- Use the `CREATE TABLE` keywords
+- There should be parenthesis after the table name
+- Here's an example: `CREATE TABLE <table_name>();`
+- Type `CREATE TABLE students();` into the psql prompt
+
+## 80. CREATE TABLE majors
+
+### 80.1
+
+The second table will be for each unique major that appears in the data. Create a table named `majors`.
+
+#### HINTS
+
+- Use the `CREATE TABLE` keywords
+- There should be parenthesis after the table name
+- Here's an example: `CREATE TABLE <table_name>();`
+- Type `CREATE TABLE majors();` into the psql prompt
+
+## 90. CREATE TABLE courses
+
+### 90.1
+
+The third table is for each unique course in the data. Create another table named `courses`.
+
+#### HINTS
+
+- Use the `CREATE TABLE` keywords
+- There should be parenthesis after the table name
+- Here's an example: `CREATE TABLE <table_name>();`
+- Type `CREATE TABLE courses();` into the psql prompt
+
+## 100. CREATE TABLE majors_courses
+
+### 100.1
+
+The final table will be a junction table for the majors and courses. Create it with the name `majors_courses`.
+
+#### HINTS
+
+- Use the `CREATE TABLE` keywords
+- There should be parenthesis after the table name
+- Here's an example: `CREATE TABLE <table_name>();`
+- Type `CREATE TABLE majors_courses();` into the psql prompt
+
+## 110. \d
+
+### 110.1
+
+Use the **d**isplay shortcut command to view your tables to make sure your satisfied with them.
+
+#### HINTS
+
+- It's the `\d` shortcut command
+- Type `\d` in the psql prompt
+
+## 120. Create student_id Column
+
+### 120.1
+
+Onto the columns. The `students.csv` file has four fields, you will make a column for each of those as well as an ID column. Add a column to your `students` table named `student_id`. Give it a type of `SERIAL` so it automatically increments and make it a `PRIMARY KEY`
+
+#### HINTS
+
+- Use the `ALTER TABLE`, `ADD COLUMN`, `SERIAL` and `PRIMARY KEY` keywords
+- Here's an example: `ALTER TABLE <table_name> ADD COLUMN <column_name> <TYPE> <CONSTRAINTS>;`
+- Type `ALTER TABLE students ADD COLUMN student_id SERIAL PRIMARY KEY;` into the psql prompt
+- You can drop a column with `ALTER TABLE <table_name> DROP COLUMN <column_name>;` if you want to delete a column and try again
+
+## 130. Create first_name Column
+
+### 130.1
+
+The first column in `students.csv` is `first_name`. Add a column to the `students` table with that name. Make it a type of `VARCHAR(50)` and give it the `NOT NULL` constraint.
+
+#### HINTS
+
+- Use the `ALTER TABLE`, `ADD COLUMN`, `VARCHAR()` and `NOT NULL` keywords
+- Here's an example: `ALTER TABLE <table_name> ADD COLUMN <column_name> <DATA_TYPE> <CONSTRAINTS>;`
+- Type `ALTER TABLE students ADD COLUMN first_name VARCHAR(50) NOT NULL;` into the psql prompt
+- You can drop a column with `ALTER TABLE <table_name> DROP COLUMN <column_name>;` if you want to delete a column and try again
+
+## 140. Create last_name Column
+
+### 140.1
+
+The next column in the data is `last_name`. Add it to the `students` table. Give it the same data type and max-length as `first_name` and make sure it has the `NOT NULL` constraint.
+
+#### HINTS
+
+- Use the `ALTER TABLE`, `ADD COLUMN`, `VARCHAR()` and `NOT NULL` keywords
+- The max-length should be `50`
+- Here's an example: `ALTER TABLE <table_name> ADD COLUMN <column_name> <DATA_TYPE> <CONSTRAINTS>;`
+- Type `ALTER TABLE students ADD COLUMN last_name VARCHAR(50) NOT NULL;` into the psql prompt
+- You can drop a column with `ALTER TABLE <table_name> DROP COLUMN <column_name>;` if you want to delete a column and try again
+
+## 143. Create major_id Column
+
+### 143.1
+
+The next column is for the major. Since you will have each major in another table this column will be a foreign key that references it. Create a column in the `students` table named `major_id`, give it a data type of `INT` for now. You will come back and set the foreign key later.
+
+#### HINTS
+
+- Use the `ALTER TABLE`, `ADD COLUMN`, and `INT` keywords
+- Here's an example: `ALTER TABLE <table_name> ADD COLUMN <column_name> <DATA_TYPE>;`
+- Type `ALTER TABLE students ADD COLUMN major_id INT;` into the psql prompt
+- You can drop a column with `ALTER TABLE <table_name> DROP COLUMN <column_name>;` if you want to delete a column and try again
+
+## 146. Create gpa Column
+
+### 146.1
+
+Create the last column, `gpa`. The data in the CSV shows that they are decimals with a length of `2` and `1` number is to the right of the decimal. So give it a data type of `NUMERIC(2,1)`.
+
+#### HINTS
+
+- Use the `ALTER TABLE`, `ADD COLUMN`, and `NUMERIC()` keywords
+- Here's an example: `ALTER TABLE <table_name> ADD COLUMN <column_name> <DATA_TYPE>;`
+- Type `ALTER TABLE students ADD COLUMN gpa NUMERIC(2,1);` into the psql prompt
+- You can drop a column with `ALTER TABLE <table_name> DROP COLUMN <column_name>;` if you want to delete a column and try again
+
+## 150. \d students
+
+### 150.1
+
+Use the shortcut command to **d**isplay the details of the `students` table to make sure you like it.
+
+#### HINTS
+
+- It's the `\d` shortcut command
+- Add the table name after the command
+- Here's an example: `\d <table_name>`
+- Type `\d students` in the psql prompt
+
+## 160. Create major_id Column
+
+### 160.1
+
+The foreign key is still missing. Let's fill in the `majors` table next. Add a `major_id` column to it. Make it a type of `SERIAL` and the `PRIMARY KEY` for this table.
+
+#### HINTS
+
+- Use the `ALTER TABLE`, `ADD COLUMN`, `SERIAL` and `PRIMARY KEY` keywords
+- Here's an example: `ALTER TABLE <table_name> ADD COLUMN <column_name> <TYPE> <CONSTRAINTS>;`
+- Type `ALTER TABLE majors ADD COLUMN major_id SERIAL PRIMARY KEY;` into the psql prompt
+- You can drop a column with `ALTER TABLE <table_name> DROP COLUMN <column_name>;` if you want to delete a column and try again
+
+## 170. Create major Column
+
+### 170.1
+
+This table will only have one other column for the name of the major. Add a column to it named `major`. Make it a `VARCHAR` with a max-length of `50` and give it the `NOT NULL` constraint.
+
+#### HINTS
+
+- Use the `ALTER TABLE`, `ADD COLUMN`, `VARCHAR()` and `NOT NULL` keywords
+- The max-length of `50` should go in the parenthesis of `VARCHAR`
+- Here's an example: `ALTER TABLE <table_name> ADD COLUMN <column_name> <DATA_TYPE> <CONSTRAINTS>;`
+- Type `ALTER TABLE majors ADD COLUMN major VARCHAR(50) NOT NULL;` into the psql prompt
+- You can drop a column with `ALTER TABLE <table_name> DROP COLUMN <column_name>;` if you want to delete a column and try again
+
+## 180. \d majors
+
+### 180.1
+
+View the details of the majors table to make sure you like it.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Add the table name after the command
+- It's the `\d` command
+- Here's an example: `\d <table_name>`
+- Type `\d majors` into the psql prompt
+
+## 183. Create major_id foreign key
+
+### 183.1
+
+This table looks good. Now, set the `major_id` column from the `students` table as a foreign key that references the `major_id` column from the `majors` table. Here's an example of how to do that: `ALTER TABLE <table_name> ADD FOREIGN KEY(<column_name>) REFERENCES <referenced_table_name>(<referenced_column_name>);`
+
+#### HINTS
+
+- Type `ALTER TABLE students ADD FOREIGN KEY(major_id) REFERENCES majors(major_id);` in the psql prompt
+
+## 187. \d students
+
+### 187.1
+
+View the details of the `students` table again to make sure the key is there.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Add the table name after the command
+- It's the `\d` command
+- Here's an example: `\d <table_name>`
+- Type `\d students` into the psql prompt
+
+## 190. Create course_id Column
+
+### 190.1
+
+Next, is the `courses` table. Add a `course_id` column to it. Give it a type of `SERIAL` and make it the primary key.
+
+#### HINTS
+
+- Use the `ALTER TABLE`, `ADD COLUMN`, `SERIAL` and `PRIMARY KEY` keywords
+- Here's an example: `ALTER TABLE <table_name> ADD COLUMN <column_name> <TYPE> <CONSTRAINTS>;`
+- Type `ALTER TABLE courses ADD COLUMN course_id SERIAL PRIMARY KEY;` into the psql prompt
+- You can drop a column with `ALTER TABLE <table_name> DROP COLUMN <column_name>;` if you want to delete a column and try again
+
+## 200. Create course Column
+
+### 200.1
+
+Add a `course` column to the `courses` table that's a type of `VARCHAR`. The course names are a little longer, so give them a max-length of `100`. Also, make sure it can't accept null values.
+
+#### HINTS
+
+- Use the `ALTER TABLE`, `ADD COLUMN`, `VARCHAR()` and `NOT NULL` keywords
+- The max-length of `100` should go in the parenthesis of `VARCHAR`
+- Here's an example: `ALTER TABLE <table_name> ADD COLUMN <column_name> <DATA_TYPE> <CONSTRAINTS>;`
+- Type `ALTER TABLE courses ADD COLUMN course VARCHAR(100) NOT NULL;` into the psql prompt
+- You can drop a column with `ALTER TABLE <table_name> DROP COLUMN <column_name>;` if you want to delete a column and try again
+
+## 220. \d courses
+
+### 220.1
+
+View the details of the courses table to make sure it looks good.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Add the table name after the command
+- It's the `\d` command
+- Here's an example: `\d <table_name>`
+- Type `\d courses` into the psql prompt
+
+## 230. Create major_id column
+
+### 230.1
+
+One more table to go. The `majors_courses` junction table will have two columns, each referencing the primary key from two related table. First, add a `major_id` column to it. Just give it a type of `INT` for now.
+
+#### HINTS
+
+- Use the `ALTER TABLE`, `ADD COLUMN`, and `INT` keywords
+- Here's an example: `ALTER TABLE <table_name> ADD COLUMN <column_name> <DATA_TYPE>;`
+- Type `ALTER TABLE majors_courses ADD COLUMN major_id INT;` into the psql prompt
+- You can drop a column with `ALTER TABLE <table_name> DROP COLUMN <column_name>;` if you want to delete a column and try again
+
+## 240. Set major_id Foreign Key
+
+### 240.1
+
+Set the `major_id` column you just created as a foreign key that references the `major_id` column from the `majors` table.
+
+#### HINTS
+
+- Use the `ALTER TABLE`, `ADD FOREIGN KEY`, and `REFERENCES` keywords
+- Here's an example: `ALTER TABLE <table_name> ADD FOREIGN KEY(<column_name>) REFERENCES <referenced_table_name>(<referenced_column_name>);`
+- You previously used: `ALTER TABLE students ADD FOREIGN KEY(major_id) REFERENCES majors(major_id);`
+- Type `ALTER TABLE majors_courses ADD FOREIGN KEY(major_id) REFERENCES majors(major_id);` into the psql prompt
+
+## 250. Create course_id Column
+
+### 250.1
+
+Next, add a `course_id` column to the same table. Just give it a type of `INT` again for now.
+
+#### HINTS
+
+- It goes in the `majors_courses` table
+- Use the `ALTER TABLE`, `ADD COLUMN`, and `INT` keywords
+- Here's an example: `ALTER TABLE <table_name> ADD COLUMN <column_name> <DATA_TYPE>;`
+- Type `ALTER TABLE majors_courses ADD COLUMN course_id INT;` into the psql prompt
+- You can drop a column with `ALTER TABLE <table_name> DROP COLUMN <column_name>;` if you want to delete a column and try again
+
+## 260. Set course_id Foreign Key
+
+### 260.1
+
+Set your new `course_id` column as a foreign key that references the other `course_id` column.
+
+#### HINTS
+
+- The referenced column is `course_id` from the `courses` table
+- Use the `ALTER TABLE`, `ADD FOREIGN KEY`, and `REFERENCES` keywords
+- Here's an example: `ALTER TABLE <table_name> ADD FOREIGN KEY(<column_name>) REFERENCES <referenced_table_name>(<referenced_column_name>);`
+- You previously used: `ALTER TABLE students ADD FOREIGN KEY(major_id) REFERENCES majors(major_id);`
+- Type `ALTER TABLE majors_courses ADD FOREIGN KEY(course_id) REFERENCES courses(course_id);` into the psql prompt
+
+## 270. \d majors_courses
+
+### 270.1
+
+View the details of the table you just worked on to make sure the structure is finished.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Add the table name after the command
+- It's the `\d` command
+- Here's an example: `\d <table_name>`
+- Type `\d courses` into the psql prompt
+
+## 280. Create Composite Primary Key
+
+### 280.1
+
+There's one thing missing. This table doesn't have a primary key. The data from `courses.csv` will go in this table. A single major will be in it multiple times, and same with a course. So neither of them can be a primary key. But there will never be a row with the same two values as another row. So the two columns together, are unique. You can create a composite primary key that uses more than one column as a unique pair like this: `ALTER TABLE <table_name> ADD PRIMARY KEY(<column_name>, <column_name>);` Add a composite primary key to the table using the two columns.
+
+#### HINTS
+
+- It's the `major_id` and `course_id` columns from the `majors_courses` table
+- Type `ALTER TABLE majors_courses ADD PRIMARY KEY(major_id, course_id);` into the psql prompt
+
+## 290. \d majors_courses
+
+### 290.1
+
+View the details of the table again.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Add the table name after the command
+- It's the `\d` command
+- Here's an example: `\d <table_name>`
+- Type `\d courses` into the psql prompt
+
+## 300. \d
+
+### 300.1
+
+Okay, now it's finished. View all the tables you ended up with.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Don't include a table name after the command
+- It's the `\d` command
+- Type `\d` into the psql prompt
+
+## 310. \d majors
+
+### 310.1
+
+Next, you can start adding some info. Since the `students` table needs a `major_id`, you can add a major first. View the details of the `majors` table to see what info it expects.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Add the table name after the command
+- It's the `\d` command
+- Here's an example: `\d <table_name>`
+- Type `\d majors` into the psql prompt
+
+## 320. INSERT INTO majors
+
+### 320.1
+
+It only needs the name of a major. The ID will be added automatically. Add the first major from the `courses.csv` file into the `majors` table. It's a `VARCHAR`, so make sure to put the value in single quotes.
+
+#### HINTS
+
+- The major is `Database Administration`
+- Use the `INSERT INTO` and `VALUES` keywords
+- Here's an example: `INSERT INTO <table_name>(<column_name>) VALUES(<value>);`
+- Type `INSERT INTO majors(major) VALUES('Database Administration');`
+
+## 340. SELECT \* FROM majors
+
+### 340.1
+
+Use `SELECT` to view all the data in the `majors` table to make sure it got inserted correctly.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords with `*` to view all the columns
+- Here's an example: `SELECT <columns> FROM <table_name>;`
+- Type `SELECT * FROM majors;` into the psql prompt
+
+## 350. INSERT INTO courses
+
+### 350.1
+
+Next, insert the first course from `courses.csv` into the `courses` table.
+
+#### HINTS
+
+- Use the `INSERT INTO` and `VALUES` keywords
+- View the details of the table with `\d courses` to see what it expects
+- The course name is `Data Structures and Algorithms`
+- Make sure to put `VARCHAR` values in single quotes
+- Here's an example: `INSERT INTO <table_name>(<column_name>) VALUES(<value>);`
+- Type `INSERT INTO courses(course) VALUES('Data Structures and Algorithms');`
+
+## 360. SELECT \* FROM courses
+
+### 360.1
+
+View all the data in the `courses` table to make sure it got added.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords with `*` to view all the columns
+- Here's an example: `SELECT <columns> FROM <table_name>;`
+- Type `SELECT * FROM courses;` into the psql prompt
+
+## 370. \d majors_courses
+
+### 370.1
+
+Next, you can add a row into the junction table. View the details of it to see what it expects.
+
+#### HINTS
+
+- It's the `majors_courses` table
+- Use the **d**isplay shortcut command
+- Add the table name after the command
+- It's the `\d` command
+- Here's an example: `\d <table_name>`
+- Type `\d majors_courses` into the psql prompt
+
+## 380. INSERT INTO majors_courses
+
+### 380.1
+
+It wants a `major_id` and `course_id`. Add a row to `majors_courses` for the first entry in `courses.csv`.
+
+#### HINTS
+
+- Use `SELECT * FROM <table_name>;` to find the two ID's you already added
+- Use the `INSERT INTO` and `VALUES` keywords
+- Here's an example: `INSERT INTO <table_name>(<column_1_name>, <column_2_name>) VALUES(<value_1>, <value_2>);`
+- Type `INSERT INTO majors_courses(major_id, course_id) VALUES(1, 1);` Note that your ID's may differ. You can reset the lesson to ensure they are the same
+
+## 390. SELECT \* FROM majors_courses
+
+### 390.1
+
+View all the data in the table you just added to.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords with `*` to view all the columns
+- Here's an example: `SELECT <columns> FROM <table_name>;`
+- Type `SELECT * FROM majors_courses;` into the psql prompt
+
+## 400. \d students
+
+### 400.1
+
+Looks like the row got added. View the details of the `students` table to remind yourself what it expects so you can add the first student to the database.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Add the table name after the command
+- It's the `\d` command
+- Here's an example: `\d <table_name>`
+- Type `\d students` into the psql prompt
+
+## 420. INSERT INTO students
+
+### 420.1
+
+The output shows what the table needs. Insert the first person from `students.csv` into the `students` table.
+
+#### HINTS
+
+- Enter `SELECT * FROM majors;` to find the `major_id` for the students major
+- Use the `INSERT INTO` and `VALUES` keywords
+- Make sure to put `VARCHAR` values in single quotes
+- Here's an example: `INSERT INTO <table_name>(<column_1_name>, <column_N_name>) VALUES(<value_1>, <value_N>);`
+- The first part to insert the student looks like this: `INSERT INTO students(first_name, last_name, major_id, gpa)`
+- Type `INSERT INTO students(first_name, last_name, major_id, gpa) VALUES('Rhea', 'Kellems', 1, 2.5);` into the psql prompt
+
+## 430. SELECT \* FROM students
+
+### 430.1
+
+Looks like it worked. View all the data in the students table to make sure.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords with `*` to view all the columns
+- Here's an example: `SELECT <columns> FROM <table_name>;`
+- Type `SELECT * FROM students;` into the psql prompt
+
+## 440. touch insert_data.sh
+
+### 440.1
+
+Okay, you added a row into each table. It might be wise to review the data and the database structure. Adding the rest of the info one at a time would be tedious. You are going to make a script to do it for you. I recommend "splitting" the terminal for this part. You can do that by clicking the "hamburger" menu at the top left of the window, going to the "Terminal" menu, and clicking "Split Terminal". Once you've done that, use the `touch` command to create a file named `insert_data.sh` in your `project` folder.
+
+#### HINTS
+
+- You cannot use regular terminal commands in the psql prompt. So follow the instructions to split the terminal. Then, type `touch insert_data.sh` in the new terminal and press enter
+- Make sure you are in the `project` folder first
+- You can get there by entering `cd ~/project` in the terminal
+
+## 450. chmod +x insert_data.sh
+
+### 450.1
+
+You should have two terminals open. One connected to PostgreSQL, and one for entering terminal commands. In the one for terminal commands, use the `chmod` command with the `+x` flag to give you new script executable permissions.
+
+#### HINTS
+
+- Here's an example: `chmod +x <filename>`
+- Type `chmod +x insert_data.sh` in the terminal and press enter
+- Make sure it's the regular terminal and not the psql one
+- You can log back in to psql with `psql --username=freecodecamp --dbname=students`
+
+## 460. Add shebang
+
+### 460.1
+
+Open your new file and add a "shebang" that uses `bash` at the top. It looks like this: `#!/bin/bash`.
+
+#### HINTS
+
+- Add the text, `#!/bin/bash` to your `insert_data.sh` file
+
+## 470. Add comment
+
+### 470.1
+
+Below that, add a single line comment with the text, `Script to insert data from courses.csv and students.csv into students database`.
+
+#### HINTS
+
+- A comment look like this: `# <comment>`
+- Add `# Script to insert data from courses.csv and students.csv into students database` below the "shebang" in your `insert_data.sh` file
+
+## 480. Add cat courses.csv
+
+### 480.1
+
+First, you should add all the info from the `courses.csv` file since you need the `major_id` for inserting the student info. `cat` is a terminal command for printing the contents of a file. Here's an example: `cat <filename>`. Below the comment you added, use it to print `courses.csv`.
+
+#### HINTS
+
+- Add `cat courses.csv` to your `insert_data.sh` file below your comment
+
+## 490. ./insert_data.sh
+
+### 490.1
+
+Run your script to see if the file contents get printed.
+
+#### HINTS
+
+- Run your `insert_data.sh` script by executing it
+- Type `./insert_data.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 500. Add while read
+
+### 500.1
+
+It worked. Instead of printing the content, you can pipe that output into a while loop so you can go through the rows one at a time. It looks like this:
+
+```sh
+cat courses.csv | while read MAJOR COURSE
+do
+  <STATEMENTS>
+done
+```
+
+Each new line will be read into the variables, `MAJOR` and `COURSE`. Add the above to your `cat` command. In the `STATEMENTS` area, use `echo` to print the `MAJOR` variable.
+
+#### HINTS
+
+- You can print the suggested variable with `echo $MAJOR`
+- The whole loop should look like this:
+
+```sh
+cat courses.csv | while read MAJOR COURSE
+do
+  echo $MAJOR
+done
+```
+
+## 510. ./insert_data
+
+### 510.1
+
+Run the script to see if it worked.
+
+#### HINTS
+
+- Run your `insert_data.sh` script by executing it
+- Type `./insert_data.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 515. declare -p IFS
+
+### 515.1
+
+It's looping, but the `MAJOR` variable is only being set to the first word. There's a default `IFS` variable in bash. IFS stands for "Internal Field Separator". View it with `declare -p IFS`.
+
+#### HINTS
+
+- Enter `declare -p IFS` in the terminal
+
+## 520. Add IFS
+
+### 520.1
+
+This variable is used to determine word boundaries. It defaults to spaces, tabs, and new lines. This is why the `MAJOR` variable was set to only the first word on each line from the data. Between the `while` and `read` commands, set the `IFS` to a comma like this: `IFS=","`
+
+#### HINTS
+
+- Here's how it looks:
+
+```sh
+cat courses.csv | while IFS="," read MAJOR COURSE
+do
+  echo $MAJOR
+done
+```
+
+## 530. ./insert_data.sh
+
+### 530.1
+
+Now, it should use the comma in the data to separate words instead of spaces. Run the script again to see if it's working.
+
+#### HINTS
+
+- Run your `insert_data.sh` script by executing it
+- Type `./insert_data.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 533. Add echo all variables
+
+### 533.1
+
+Looks like that worked. It prints the whole major, including the space. Print the `COURSE` variable on the same line as where you print `MAJOR` to make sure it's all working.
+
+#### HINTS
+
+- Change the `echo` line to `echo $MAJOR $COURSE`
+- The whole loop should look like this:
+
+```sh
+cat courses.csv | while IFS="," read MAJOR COURSE
+do
+  echo $MAJOR $COURSE
+done
+```
+
+## 536. ./insert_data.sh
+
+### 536.1
+
+Run the script again to check.
+
+#### HINTS
+
+- Run your `insert_data.sh` script by executing it
+- Type `./insert_data.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 540. Delete echo
+
+### 540.1
+
+Okay, your loop is working. You can use the `MAJOR` and `COURSE` variables to access the major or course when you need to insert data or query the database. Delete the echo line so you can figure out what to do next.
+
+#### HINTS
+
+- Delete the `echo $MAJOR $COURSE` line
+
+## 550. Add comments
+
+### 550.1
+
+It helps to plan out what you want to happen. For each loop, you will want to add the major to the database if it isn't in there yet. Same for the course. Then add a row to the `majors_courses` table. Add these single line comments in your loop in this order: `get major_id`, `if not found`, `insert major`, `get new major_id`, `get course_id`, `if not found`, `insert course`, `get new course_id`, `insert into majors_courses`.
+
+#### HINTS
+
+- Here's an example of a single comment: `# <comment>`
+- Add the nine suggested single line comments, each on their own line, in the order given
+- It should look like this:
+
+```sh
+do
+  # get major_id
+
+  # if not found
+
+  # insert major
+
+  # get new major_id
+
+  # get course_id
+
+  # if not found
+
+  # insert course
+
+  # get new course_id
+
+  # insert into majors_courses
+
+done
+```
+
+## 560. Add PSQL Variable
+
+### 560.1
+
+You used the `psql` command to log in and interact with the database. You can use it to just run a single command and exit. Above your loop, add a `PSQL` variable that looks like this: `PSQL="psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c"`. This will allow you to query your database from your script. The important parts are the `username`, `dbname`, and the `-c` flag that is for running a single command and exiting. The rest of the flags are for formatting.
+
+#### HINTS
+
+- Add the suggested variable between your first comment and the loop
+- The suggested area should look like this:
+
+```sh
+PSQL="psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c"
+```
+
+## 562. Add MAJOR_ID
+
+### 562.1
+
+Now, you can query your database using the `PSQL` variable like this: `$($PSQL "<query_here>")`. The code in the parenthesis will run in a subshell, which is a separate bash process. Below the `get major_id` comment in your loop, create a `MAJOR_ID` variable. Set it equal to the result of a query that gets the `major_id` of the current `MAJOR` in the loop. Make sure to put your `MAJOR` variable in single quotes.
+
+#### HINTS
+
+- Here's an example of how it looks: `MAJOR_ID=$($PSQL "<query_here>")`
+- For the query, you want to use the `SELECT`, `FROM`, and `WHERE` keywords
+- Here's an example of how the query part looks: `SELECT <column_name> FROM <table_name> WHERE <condition>`
+- The condition you want is `major='$MAJOR'`
+- Here's how the query should look: `SELECT major_id FROM majors WHERE major='$MAJOR'`
+- Here's how the whole line should look: `MAJOR_ID=$($PSQL "SELECT major_id FROM majors WHERE major='$MAJOR'")`
+
+## 564. Add echo MAJOR_ID
+
+### 564.1
+
+Below the variable you just created, use `echo` to print it so you can see it's value when you run the script.
+
+#### HINTS
+
+- Add `echo $MAJOR_ID` below the `MAJOR_ID` variable you created
+
+## 566. ./insert_data.sh
+
+### 566.1
+
+Run the script to see what happens.
+
+#### HINTS
+
+- Run your `insert_data.sh` script by executing it
+- Type `./insert_data.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 568. Add if -z MAJOR_ID
+
+### 568.1
+
+So it went through each major from the CSV file and tried to find `major_id` for each one from the database. Looks like it only found the one you manually inserted earlier. The rest were empty. Below your first `if not found` comment, add an `if` condition that checks if the `MAJOR_ID` variable is empty. You can do that with this test: `[[ -z $MAJOR_ID ]]`. Place the next two comments in the statements area of the `if`.
+
+#### HINTS
+
+- Here's an example of an `if`:
+
+```sh
+if CONDITION
+then
+  STATEMENTS
+fi
+```
+
+- Make sure your `insert major` and `get new major_id` comments are in the statements area in that order
+- Here's how it should look:
+
+```sh
+if [[ -z $MAJOR_ID ]]
+then
+  # insert major
+
+  # get new major_id
+
+fi
+```
+
+## 570. Add INSERT_MAJOR_RESULT
+
+### 570.1
+
+The loop will go into this `if` whenever a major isn't found. Here, you will want to insert the major and then get the new id. You will need the ID for inserting data into the `majors_courses` table later. Below your `insert major` comment, create an `INSERT_MAJOR_RESULT` variable. Set it's value to a query that inserts the current major into the database. Don't forget to use single quotes around the value.
+
+#### HINTS
+
+- Here's an example of how to query the database: `INSERT_MAJOR_RESULT=$($PSQL "<query_here>")`
+- For the query, you want to use the `INSERT INTO`, and `VALUES` keywords
+- Here's an example of how the query part looks: `INSERT INTO <table_name>(<column_name>) VALUES(<value>)`
+- You want to insert the `$MAJOR` value
+- Here's how the query looks: `INSERT INTO majors(major) VALUES('$MAJOR')`
+- Here's how the whole line should look: `INSERT_MAJOR_RESULT=$($PSQL "INSERT INTO majors(major) VALUES('$MAJOR')")`
+
+## 580. Add echo INSERT_MAJOR_RESULT
+
+### 580.1
+
+Below the variable you just created, use `echo` to print it.
+
+#### HINTS
+
+- Add `echo $INSERT_MAJOR_RESULT` right below where you created it
+
+## 590. cp courses.csv
+
+### 590.1
+
+Instead of running through all the data in the CSV file, you should make some test data. In the terminal, use the copy (`cp`) command to copy the `courses.csv` into a new file named `courses_test.csv`.
+
+#### HINTS
+
+- Here's an example: `cp <filename> <new_name>`
+- Type `cp courses.csv courses_test.csv` in the terminal and press enter
+- Make sure you are using the bash terminal and not the psql one
+
+## 600. Add four records to courses_test.csv
+
+### 600.1
+
+In your new file, remove all the data except for the first five lines. Make sure there's a single empty line at the bottom.
+
+#### HINTS
+
+- Remove all but the first five lines from the `courses_test.csv` file
+- Or, replace everything in `courses_test.csv` with the first five lines from `courses.csv`
+- Make sure there's one empty line at the bottom
+- The `courses_test.csv` file should look like this:
+
+```csv
+major,course
 Database Administration,Data Structures and Algorithms
 Web Development,Web Programming
 Database Administration,Database Systems
 Data Science,Data Structures and Algorithms
-Network Engineering,Computer Networks
-Database Administration,SQL
-Data Science,Machine Learning
-Network Engineering,Computer Systems
-Computer Programming,Computer Networks
-Database Administration,Web Applications
-Game Design,Artificial Intelligence
-Data Science,Python
-Computer Programming,Object-Oriented Programming
-System Administration,Computer Systems
-Game Design,Calculus
-Web Development,Data Structures and Algorithms
-Data Science,Calculus
-Web Development,Object-Oriented Programming
-Game Design,Game Architecture
-System Administration,Computer Networks
-Game Design,Algorithms
-System Administration,UNIX
-System Administration,Server Administration
-Computer Programming,Computer Systems
-Computer Programming,Python
-Network Engineering,Network Security
-Web Development,Web Applications
-Network Engineering,Algorithms' >> courses.csv
 
-echo 'first_name,last_name,major,gpa
+```
+
+## 610. Change to cat courses_test.csv
+
+### 610.1
+
+Back in the `insert_data.sh` script, change your `cat` command to loop through the test file instead of the full one.
+
+#### HINTS
+
+- Change your `cat` command to `cat courses_test.csv` instead of `cat courses.csv`
+- The suggested line should look like this:
+
+```sh
+cat courses_test.csv | while IFS="," read MAJOR COURSE
+```
+
+## 620. ./insert_data.sh
+
+### 620.1
+
+Run the script. It will go through the test data and insert a major into the database each time it doesn't find one already there and print the `MAJOR_ID` and `INSERT_MAJOR_RESULT` variables.
+
+#### HINTS
+
+- Run your `insert_data.sh` script by executing it
+- Type `./insert_data.sh` in the terminal and press enter
+- The `majors` table should have four rows after running the script. If it doesn't, there might be something wrong in the script. You can use the reset button to reset the lesson and run the script again
+
+## 625. Delete echo MAJOR_ID
+
+### 625.1
+
+Looks like it found an ID that was already in the database twice and inserted three new items into the database. You don't need to print the ID anymore so delete the `echo $MAJOR_ID` line.
+
+#### HINTS
+
+- Delete the `echo $MAJOR_ID` line
+
+## 630. SELECT \* FROM majors
+
+### 630.1
+
+In the psql prompt, use `SELECT` to view all the data from the `majors` table to see what the script added.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM majors;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
+
+## 640. TRUNCATE majors
+
+### 640.1
+
+I forgot you inserted `Database Administration` earlier. The script ran and inserted `major` from the top line of the file. Then it added the other two that weren't already in there. You can use `TRUNCATE` to delete all data from a table. In the psql prompt, try to delete all the data in the majors table by entering `TRUNCATE majors;`
+
+#### HINTS
+
+- Enter `TRUNCATE majors;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
+
+## 660. TRUNCATE majors, students, majors_courses
+
+### 660.1
+
+It says you "cannot truncate a table referenced in a foreign key constraint." The `students` and `majors_courses` tables use the `major_id` from `majors` as a foreign key. So if you want to delete the data from `majors`, you need to delete the data from those two tables at the same time. Use `TRUNCATE` to delete the data from those three tables. Separate the tables with commas.
+
+#### HINTS
+
+- Here's an example: `TRUNCATE <table_1>, <table_2>, <table_3>;`
+- The three tables you want are `majors`, `students`, and `majors_courses`
+- Enter `TRUNCATE majors, students, majors_courses;` in the psql prompt
+
+## 670. SELECT \* FROM majors
+
+### 670.1
+
+View all the data in the `majors` table to make sure it's empty.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM majors;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
+
+## 680. SELECT \* FROM majors_courses
+
+### 680.1
+
+Looks like it worked. View all the data in the `majors_courses` table to see if that one is empty.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM majors_courses;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
+
+## 690. SELECT \* FROM students
+
+### 690.1
+
+It is, check the `students` table.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM students;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
+
+## 700. SELECT \* FROM courses
+
+### 700.1
+
+Last, check the `courses` table.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM courses;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
+
+## 710. TRUNCATE courses, majors_courses
+
+### 710.1
+
+There should still be one entry in there. Use `TRUNCATE` to delete all the data from the `courses` table. You will need to truncate any tables that use a column from it as a foreign key at the same time.
+
+#### HINTS
+
+- Here's an example: `TRUNCATE <table_1>, <table_2>;`
+- The tables you want are `courses`, and `majors_courses`
+- Enter `TRUNCATE courses, majors_courses;` in the psql prompt
+
+## 720. SELECT \* FROM courses
+
+### 720.1
+
+View all the data in the `courses` table again.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM courses;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
+
+## 730. ./insert_data.sh
+
+### 730.1
+
+Now the database is completely empty. Run the script again to see what gets inserted when the database is empty.
+
+#### HINTS
+
+- Run your `insert_data.sh` script by executing it
+- Type `./insert_data.sh` in the terminal and press enter
+- The `majors` table should have four rows after running the script. If it doesn't, there might be something wrong in the script. You can use the reset button to reset the lesson and run the script again
+
+## 740. SELECT \* FROM majors
+
+### 740.1
+
+It inserted four that time. In the psql prompt, view all the data in the `majors` table.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM majors;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
+
+## 750. Add if major
+
+### 750.1
+
+You won't want to add the first line from the CSV file to the database since those are just titles. In your script, add an `if` condition at the top of your loop that checks if `$MAJOR != major`. Put all the existing code and comments in your loop in it's statements area so it only does any of it if it's not the first line.
+
+#### HINTS
+
+- Here's an example of an `if`:
+
+```sh
+if [[ CONDITION ]]
+then
+  STATEMENTS
+fi
+```
+
+- Your loop area should look like this:
+
+```sh
+do
+  if [[ $MAJOR != major ]]
+  then
+    # get major_id
+    MAJOR_ID=$($PSQL "SELECT major_id FROM majors WHERE major='$MAJOR'")
+
+    # if not found
+    if [[ -z $MAJOR_ID ]]
+    then
+      # insert major
+      INSERT_MAJOR_RESULT=$($PSQL "INSERT INTO majors(major) VALUES('$MAJOR')")
+      echo $INSERT_MAJOR_RESULT
+
+      # get new major_id
+
+    fi
+
+    # get course_id
+
+    # if not found
+
+    # insert course
+
+    # get new course_id
+
+    # insert into majors_courses
+
+  fi
+done
+```
+
+## 760. TRUNCATE majors CASCADE
+
+### 760.1
+
+In the psql prompt, use `TRUNCATE` to delete all the data in the `majors` table.
+
+#### HINTS
+
+- Make sure to delete data in the tables that use any of the `majors` columns as a foreign key at the same time
+- Here's an example: `TRUNCATE <table_1>, <table_2>;`
+- You need to truncate `majors`, `students`, and `majors_courses` together
+- Enter `TRUNCATE majors, students, majors_courses;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
+
+## 770. SELECT \* FROM majors
+
+### 770.1
+
+View all the data in `majors` table to make sure it's empty.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM majors;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
+
+## 780. ./insert_data.sh
+
+### 780.1
+
+Run the script to make sure it's not adding the first line anymore.
+
+#### HINTS
+
+- Run your `insert_data.sh` script by executing it
+- Type `./insert_data.sh` in the terminal and press enter
+- The `majors` table should have three rows after running the script. If it doesn't, there might be something wrong in the script. You can use the reset button to reset the lesson and run the script again
+
+## 790. SELECT \* FROM majors
+
+### 790.1
+
+It only showed three inserts, that's a good sign. View all the data in `majors` table to make sure it's three you want.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM majors;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
+
+## 800. Delete echo INSERT_MAJOR_RESULT
+
+### 800.1
+
+There's three unique majors in your test data. Those were the three added to the database, so it looks like it's working. Delete the line where you print `INSERT_MAJOR_RESULT`.
+
+#### HINTS
+
+- Delete the `echo $INSERT_MAJOR_RESULT` line
+
+## 810. Add if INSERT_MAJOR_RESULT
+
+### 810.1
+
+You want a nicer message when something get's inserted so it's more informative. Below your `INSERT_MAJOR_RESULT` variable, add an `if` statement that checks if the variable is equal to `INSERT 0 1`, which was what it was printing. Use `echo` to print `Inserted into majors, $MAJOR` in the statements area of the `if`.
+
+#### HINTS
+
+- Make sure to put the test value (`INSERT 0 1`) in double quotes since it has spaces.
+- The condition you want is: `[[ $INSERT_MAJOR_RESULT == "INSERT 0 1" ]]`
+- The `echo` part looks like this: `echo "Inserted into majors, $MAJOR"`
+- The whole thing should look like this:
+
+```sh
+if [[ $INSERT_MAJOR_RESULT == "INSERT 0 1" ]]
+then
+  echo "Inserted into majors, $MAJOR"
+fi
+```
+
+## 820. TRUNCATE majors CASCADE
+
+### 820.1
+
+In the psql prompt, truncate the `majors` table again so you can run the script and see the output.
+
+#### HINTS
+
+- Here's an example: `TRUNCATE <table_1>, <table_2>;`
+- Make sure to delete data in the tables that use any of the `majors` columns as a foreign key at the same time
+- You need to truncate `majors`, `students`, and `majors_courses` together
+- Enter `TRUNCATE majors, students, majors_courses;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
+
+## 830. ./insert_data.sh
+
+### 830.1
+
+Check to make sure the table is empty. Then, run the script.
+
+#### HINTS
+
+- Run your `insert_data.sh` script by executing it
+- Type `./insert_data.sh` in the terminal and press enter
+- The `majors` table should have three rows after running the script. If it doesn't, there might be something wrong in the script. You can use the reset button to reset the lesson and run the script again
+
+## 835. Add MAJOR_ID
+
+### 835.1
+
+It's starting to come together. Below your `get new major_id` comment, set the `MAJOR_ID` variable to a query that gets the new `major_id` from the database.
+
+#### HINTS
+
+- Here's an example of how to query the database: `MAJOR_ID=$($PSQL "<query_here>")`
+- For the query, you want to use the `SELECT`, `FROM`, and `WHERE` keywords
+- Here's an example of how the query part looks: `SELECT <column_name> FROM <table_name> WHERE <condition>`
+- The condition you want is `major='$MAJOR'`
+- Here's how the query should look: `SELECT major_id FROM majors WHERE major='$MAJOR'`
+- Here's how the whole line should look: `MAJOR_ID=$($PSQL "SELECT major_id FROM majors WHERE major='$MAJOR'")`
+- Make sure it's in the `if [[ -z $MAJOR_ID ]]` statements area
+
+## 840. Add COURSE_ID
+
+### 840.1
+
+So the script will insert the majors correctly. Next are the courses. It will be the same steps as for the majors. Below your `get course_id` comment, add a `COURSE_ID` variable that gets the `course_id` from the database. Remember that your `COURSE` variable will have the current course in the loop.
+
+#### HINTS
+
+- Here's an example of how to query the database: `COURSE_ID=$($PSQL "<query_here>")`
+- For the query, you want to use the `SELECT`, `FROM`, and `WHERE` keywords
+- Here's an example of how the query part looks: `SELECT <column_name> FROM <table_name> WHERE <condition>`
+- The condition you want is `course_id='$COURSE'`
+- Here's how the query should look: `SELECT course_id FROM courses WHERE course='$COURSE'`
+- Here's how the whole line should look: `COURSE_ID=$($PSQL "SELECT course_id FROM courses WHERE course='$COURSE'")`
+
+## 850. Add if -z COURSE_ID
+
+### 850.1
+
+It's the same as the majors, so below the second `if not found` comment, add an `if` statement that checks if the query was empty so you can insert the course if needed. Place the existing `insert course` and `get new course_id` comments in the statements area of the `if`.
+
+#### HINTS
+
+- Here's an example of an `if`:
+
+```sh
+if [[ CONDITION ]]
+then
+  STATEMENTS
+fi
+```
+
+- Make sure your `insert course` and `get new course_id` comments are in the statements area in that order
+- Here's how it should look:
+
+```sh
+if [[ -z $COURSE_ID ]]
+then
+  # insert course
+
+  # get new course_id
+
+fi
+```
+
+## 853. Add INSERT_COURSE_RESULT
+
+### 853.1
+
+Below the `insert course` comment, create an `INSERT_COURSE_RESULT` variable that inserts the course into the database.
+
+#### HINTS
+
+- Check the table structure in the psql prompt with `\d courses` if you need to see the columns
+- Here's an example of how to query the database: `INSERT_COURSE_RESULT=$($PSQL "<query_here>")`
+- For the query, you want to use the `INSERT INTO`, and `VALUES` keywords
+- Here's an example of how the query part looks: `INSERT INTO <table_name>(<column_name>) VALUES(<value>)`
+- You want to insert the `$COURSE` value
+- Here's how the query looks: `INSERT INTO courses(course) VALUES('$COURSE')`
+- Here's how the whole line should look: `INSERT_COURSE_RESULT=$($PSQL "INSERT INTO courses(course) VALUES('$COURSE')")`
+
+## 857. Add if INSERT_COURSE_RESULT
+
+### 857.1
+
+The variable should be `INSERT 0 1` again if something gets inserted. Below the variable you just created, add an `if` condition that checks if it is and print `Inserted into courses, $COURSE` using `echo` in it's statements area.
+
+#### HINTS
+
+- The condition you want is: `[[ $INSERT_COURSE_RESULT == "INSERT 0 1" ]]`
+- The `echo` part looks like this: `echo "Inserted into courses, $COURSE"`
+- The whole thing should look like this:
+
+```sh
+if [[ $INSERT_COURSE_RESULT == "INSERT 0 1" ]]
+then
+  echo "Inserted into courses, $COURSE"
+fi
+```
+
+## 860. TRUNCATE majors CASCADE
+
+### 860.1
+
+In the psql prompt, truncate the data from the `majors` table so you can run the script again.
+
+#### HINTS
+
+- Here's an example: `TRUNCATE <table_1>, <table_2>;`
+- Make sure to delete data in the tables that use any of the `majors` columns as a foreign key at the same time
+- You need to truncate `majors`, `students`, and `majors_courses` together
+- Enter `TRUNCATE majors, students, majors_courses;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
+
+## 870. ./insert_data.sh
+
+### 870.1
+
+Run the script to see if the courses get inserted into the database.
+
+#### HINTS
+
+- Run your `insert_data.sh` script by executing it
+- Type `./insert_data.sh` in the terminal and press enter
+- The `majors` and `courses` tables should have three rows each after running the script. If they don't, there might be something wrong in the script. You can use the reset button to reset the lesson and run the script again
+
+## 877. SELECT \* FROM courses
+
+### 877.1
+
+It looks like it worked. The test data has three unique courses, and three got added to the database. View the data in the `courses` table to make sure they are correct.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM courses;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
+
+## 880. Add echo TRUNCATE tables
+
+### 880.1
+
+Excellent. Instead of manually deleting the data each time you want to run the script, add the command to do it for you. Near the top of the file below your `PSQL` variable, use `echo` to query the database. In the query, truncate your four tables in this order: `students`, `majors`, `courses`, `majors_courses`.
+
+#### HINTS
+
+- Here's an example: `echo $($PSQL "<query_here>")`
+- The query you want looks like this: `TRUNCATE students, majors, courses, majors_courses`
+- The whole line should look like this: `echo $($PSQL "TRUNCATE students, majors, courses, majors_courses")`
+
+## 890. ./insert_data.sh
+
+### 890.1
+
+Run the script to see if it works.
+
+#### HINTS
+
+- Run your `insert_data.sh` script by executing it
+- Type `./insert_data.sh` in the terminal and press enter
+- The `majors` and `courses` tables should have three rows each after running the script. If they don't, there might be something wrong in the script. You can use the reset button to reset the lesson and run the script again
+
+## 900. Add COURSE_ID
+
+### 900.1
+
+Awesome. That makes it easier. Below your `get new course_id` comment, set the `COURSE_ID` to the newly inserted `course_id`.
+
+#### HINTS
+
+- Here's an example: `COURSE_ID=$($PSQL "<query_here>")`
+- For the query, you want to use the `SELECT`, `FROM`, and `WHERE` keywords
+- Here's an example of how the query part looks: `SELECT <column_name> FROM <table_name> WHERE <condition>`
+- The condition you want is `course_id='$COURSE'`
+- Here's how the query should look: `SELECT course_id FROM courses WHERE course='$COURSE'`
+- Here's how the whole line should look: `COURSE_ID=$($PSQL "SELECT course_id FROM courses WHERE course='$COURSE'")`
+- Make sure it's in the `if [[ -z $COURSE_ID ]]` statements area
+
+## 910. Add INSERT_MAJORS_COURSES_RESULT
+
+### 910.1
+
+One more thing to add for this file. Below the `insert into majors_courses` courses comment, create a `INSERT_MAJORS_COURSES_RESULT` variable. Use it and the `MAJOR_ID` and `COURSE_ID` variables you created to insert a row into the `majors_courses` table. Make sure the query has the `major_id` column first. Also, you won't need any quotes around the values for the ID's.
+
+#### HINTS
+
+- Here's an example: `INSERT_MAJORS_COURSES_RESULT=$($PSQL "<query_here>")`
+- For the query, you want to use the `INSERT INTO`, and `VALUES` keywords
+- Here's an example of how the query part looks: `INSERT INTO <table_name>(<column_name>) VALUES(<value>)`
+- Check the table structure in the psql prompt with `\d majors_courses` if you need to see the columns
+- You want to add values for the `major_id` and `course_id` columns
+- The query you want is: `INSERT INTO majors_courses(major_id, course_id) VALUES($MAJOR_ID, $COURSE_ID)`
+- Here's how the whole line should look: `INSERT_MAJORS_COURSES_RESULT=$($PSQL "INSERT INTO majors_courses(major_id, course_id) VALUES($MAJOR_ID, $COURSE_ID)")`
+
+## 920. Add if INSERT_MAJORS_COURSES_RESULT
+
+### 920.1
+
+Below the variable you just created, add an if condition that checks if it's equal to `INSERT 0 1` like the others. In it's statements area, use `echo` to print `Inserted into majors_courses, $MAJOR : $COURSE`.
+
+#### HINTS
+
+- The condition you want is: `[[ $INSERT_MAJORS_COURSES_RESULT == "INSERT 0 1" ]]`
+- The `echo` part looks like this: `echo "Inserted into majors_courses, $MAJOR : $COURSE"`
+- The whole thing should look like this:
+
+```sh
+if [[ $INSERT_MAJORS_COURSES_RESULT == "INSERT 0 1" ]]
+then
+  echo "Inserted into majors_courses, $MAJOR : $COURSE"
+fi
+```
+
+## 930. ./insert_data.sh
+
+### 930.1
+
+Run the script. Your tables should get truncated and then it should go through the loop and add all the data from the `courses_test.csv` into the three tables of the database.
+
+#### HINTS
+
+- Run your `insert_data.sh` script by executing it
+- Type `./insert_data.sh` in the terminal and press enter
+- After running the script, the `majors` and `courses` tables should have three rows each, and the `majors_courses` table should have four. If they don't, there might be something wrong in the script. You can use the reset button to reset the lesson and run the script again
+
+## 950. SELECT \* FROM majors
+
+### 950.1
+
+Looks like it works. You better look around to make sure. View the data in the `majors` table.
+
+#### HINTS
+
+- Use the psql prompt
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data in the `majors` table
+- Enter `SELECT * FROM majors;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
+
+## 960. SELECT \* FROM courses
+
+### 960.1
+
+Cool, check the `courses` table.
+
+#### HINTS
+
+- Use the psql prompt
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data in the `courses` table
+- Enter `SELECT * FROM courses;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
+
+## 965. SELECT \* FROM majors_courses
+
+### 965.1
+
+Lastly, view the data in the `majors_courses` table. There should be four rows.
+
+#### HINTS
+
+- Use the psql prompt
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM majors_courses;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
+
+## 970. cp students.csv
+
+### 970.1
+
+Alright, that part of the script is done. Next, you need to add everything from the `students.csv` file. Make some test data again. In the terminal, use the copy command to copy `students.csv` into a file named `students_test.csv`.
+
+#### HINTS
+
+- `cp` is the copy command
+- Here's an example: `cp <filename> <new_name>`
+- Enter `cp students.csv students_test.csv` in the terminal
+
+## 975. Remove all but fours lines
+
+### 975.1
+
+In the `students_test.csv` file, remove everything but the first five lines like you did for the other test file. Make sure there's an empty line at the bottom again.
+
+#### HINTS
+
+- Remove all but the first five lines from the `students_test.csv` file
+- Or, replace everything in `students_test.csv` with the first five lines from `students.csv`
+- Make sure there's one empty line at the bottom
+- The `students_test.csv` file should look like this:
+
+```csv
+first_name,last_name,major,gpa
 Rhea,Kellems,Database Administration,2.5
 Emma,Gilbert,null,null
 Kimberly,Whitley,Web Development,3.8
 Jimmy,Felipe,Database Administration,3.7
-Kyle,Stimson,null,2.8
-Casares,Hijo,Game Design,4.0
-Noe,Savage,null,3.6
-Sterling,Boss,Game Design,3.9
-Brian,Davis,null,2.3
-Kaija,Uronen,Game Design,3.7
-Faye,Conn,Game Design,2.1
-Efren,Reilly,Web Development,3.9
-Danh,Nhung,null,2.4
-Maxine,Hagenes,Database Administration,2.9
-Larry,Saunders,Data Science,2.2
-Karl,Kuhar,Web Development,null
-Lieke,Hazenveld,Game Design,3.5
-Obie,Hilpert,Web Development,null
-Peter,Booysen,null,2.9
-Nathan,Turner,Database Administration,3.3
-Gerald,Osiki,Data Science,2.2
-Vanya,Hassanah,Game Design,4.0
-Roxelana,Florescu,Database Administration,3.2
-Helene,Parker,Data Science,3.4
-Mariana,Russel,Web Development,1.8
-Ajit,Dhungel,null,3.0
-Mehdi,Vandenberghe,Database Administration,1.9
-Dejon,Howell,Web Development,4.0
-Aliya,Gulgowski,System Administration,2.6
-Ana,Tupajic,Data Science,3.1
-Hugo,Duran,null,3.8' >> students.csv
 
-echo 'echo '#!/bin/bash
+```
 
-### Script to insert data from courses.csv and students.csv into students database
+## 980. Add cat students_test.csv
+
+### 980.1
+
+You want to loop through all this info like you did for the other CSV file. The process is the same. Below your existing loop, use `cat` to print your new test file. Pipe the results into a `while` loop, setting the `IFS` to a comma again, and then use `read` to create `FIRST`, `LAST`, `MAJOR` and `GPA` variables from the data. In the loop, use `echo` to print the `FIRST` variable.
+
+#### HINTS
+
+- It should look real similar to your other loop like this
+- Here's an example:
 
 ```sh
-PSQL="psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c"
-
-cat course.csv | while IFS="," read MAJOR COURSE
+cat <filename> | while IFS="," read VARIABLE_1 VARIABLE_2 VARIABLE_3 VARIABLE_4
 do
-
-# get major_id
-
-MAJOR_ID=$($PSQL "SELECT major_id FROM majors WHERE major='$MAJOR'")
-
-# if not found
-
-# insert major
-
-# get new major_id
-
-# get course_id
-
-# if not found
-
-# insert course
-
-# get new course_id
-
-# insert into mjors_courses
-
-done' >> insert_data.sh' >> insert_data.sh
+  STATEMENTS
+done
 ```
 
-####
-
-Okay, your loop is working. You can use the `MAJOR` and `COURSE` variables to access the major or course when you need to insert data or query the database. Delete the echo line so you can figure out what to do next.
-
-####
-
-It helps to plan out what you want to happen. For each loop, you will want to add the major to the database if it isn't in there yet. Same for the course. Then add a row to the `majors_courses` table. Add these single line comments in your loop in this order: `get major_id`, `if not found`, `insert major`, `get new major_id`, `get course_id`,` if not found, insert course`, `get new course_id`, `insert into majors_courses`.
-
-#### `PSQL="psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c"`
-
-You used the `psql` command to log in and interact with the database. You can use it to just run a single command and exit. Above your loop, add a `PSQL` variable that looks like this: `PSQL="psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c"`. This will allow you to query your database from your script. The important parts are the `username`, `dbname`, and the `-c` flag that is for running a single command and exiting. The rest of the flags are for formatting.
-
-#### `$($PSQL "<query_here>")`
-
-Now, you can query your database using the PSQL variable like this:` $($PSQL "<query_here>")`. The code in the parenthesis will run in a subshell, which is a separate bash process. Below the get `major_id` comment in your loop, create a `MAJOR_ID` variable. Set it equal to the result of a query that gets the `major_id` of the current `MAJOR` in the loop. Make sure to put your `MAJOR` variable in single quotes.
-
-####
-
-Below the variable you just created, use `echo` to print it so you can see it's value when you run the script.
-
-####
-
-Run the script to see what happens.
-
-#### `[[ -z $MAJOR_ID ]]`
-
-So it went through each major from the CSV file and tried to find `major_id` for each one from the database. Looks like it only found the one you manually inserted earlier. The rest were empty. Below your first if not found comment, add an `if` condition that checks if the `MAJOR_ID` variable is empty. You can do that with this test: `[[ -z $MAJOR_ID ]]`. Place the next two comments in the statements area of the `if`.
-
-####
-
-The loop will go into this if whenever a major isn't found. Here, you will want to insert the major and then get the new id. You will need the `ID` for inserting data into the `majors_courses` table later. Below your insert major comment, create an `INSERT_MAJOR_RESULT` variable. `Set it's value to a query that inserts the current major into the database.` Don't forget to use single quotes around the value.
-
-####
-
-Below the variable you just created, use `echo` to print it.
-
-####
-
-Instead of running through all the data in the CSV file, you should make some test data. In the terminal, use the copy (cp) command to copy the `courses.csv` into a new file named `courses_test.csv`.
-
-####
-
-In your new file, remove all the data except for the first five lines. Make sure there's a single empty line at the bottom.
-
-####
-
-Back in the `insert_data.sh` script, change your `cat` command to loop through the test file instead of the full one.
-
-####
-
-Run the script. It will go through the test data and insert a major into the database each time it doesn't find one already there and print the `MAJOR_ID` and `INSERT_MAJOR_RESULT` variables.
-
-####
-
-Looks like it found an `ID` that was already in the database twice and inserted three new items into the database. You don't need to print the `ID` anymore so delete the `echo $MAJOR_ID `line.
-
-####
-
-In the psql prompt, use `SELECT` to view all the data from the majors table to see what the script added.
-
-#### `TRUNCATE <table_name>;`
-
-I forgot you inserted Database Administration earlier. The script ran and inserted `major` from the top line of the file. Then it added the other two that weren't already in there. You can use `TRUNCATE` to delete all data from a table. In the `psql` prompt, try to delete all the data in the majors table by entering `TRUNCATE majors;`
-
-#### `TRUNCATE <table_1>, <table_2>, <table_3>;`
-
-It says you "cannot truncate a table referenced in a foreign key constraint." The `students` and `majors_courses` tables use the `major_id` from `majors` as a `foreign key`. So if you want to delete the data from `majors`, you need to delete the data from those two tables at the same time. Use `TRUNCATE` to delete the data from those three tables. Separate the tables with commas.
-
-####
-
-View all the data in the majors table to make sure it's empty.
-
-####
-
-Looks like it worked. View all the data in the `majors_courses` table to see if that one is empty.
-
-####
-
-It is, check the `students` table.
-
-####
-
-Last, check the `courses` table.
-
-####
-
-There should still be one entry in there. Use `TRUNCATE` to delete all the data from the courses table. You will need to truncate any tables that use a column from it as a foreign key at the same time.
-
-####
-
-View all the data in the courses table again.
-
-####
-
-Now the database is completely empty. Run the script again to see what gets inserted when the database is empty.
-
-####
-
-It inserted four that time. In the psql prompt, view all the data in the `majors` table.
-
-####
-
-You won't want to add the first line from the CSV file to the database since those are just titles. In your script, add an `if` condition at the top of your loop that checks if `$MAJOR != major`. Put all the existing code and comments in your loop in it's statements area so it only does any of it if it's not the first line.
-
-####
-
-In the psql prompt, use `TRUNCATE` to delete all the data in the `majors` table.
-
-####
-
-View all the data in `majors` table to make sure it's empty.
-
-####
-
-Run the script to make sure it's not adding the first line anymore.
-
-####
-
-It only showed three inserts, that's a good sign. View all the data in `majors` table to make sure it's three you want.
-
-####
-
-There's three unique majors in your test data. Those were the three added to the database, so it looks like it's working. Delete the line where you print `INSERT_MAJOR_RESULT`.
-
-####
-
-You want a nicer message when something get's inserted so it's more informative. Below your `INSERT_MAJOR_RESULT` variable, add an `if` statement that checks if the variable is equal to `INSERT 0 1`, which was what it was printing. Use echo to print `Inserted into majors, $MAJOR` in the statements area of the if.
-
-####
-
-In the `psql` prompt, `truncate` the `majors` table again so you can run the script and see the output.
-
-####
-
-Check to make sure the table is empty. Then, run the script.
-
-####
-
-It's starting to come together. Below your `get new major_id` comment, set the `MAJOR_ID` variable to a query that gets the new `major_id` from the database.
-
-####
-
-So the script will insert the majors correctly. Next are the courses. It will be the same steps as for the `majors`. Below your get `course_id` comment, add a `COURSE_ID` variable that gets the `course_id` from the database. Remember that your `COURSE` variable will have the current course in the loop.
-
-####
-
-It's the same as the `majors`, so below the second `if not found` comment, add an `if` statement that checks if the query was empty so you can insert the course if needed. Place the existing insert course and get new `course_id` comments in the statements area of the `if`.
-
-####
-
-Below the insert course comment, create an `INSERT_COURSE_RESULT` variable that inserts the course into the database.
-
-####
-
-The variable should be `INSERT 0 1` again if something gets inserted. Below the variable you just created, add an `if` condition that checks if it is and print `Inserted into courses, $COURSE` using `echo` in it's statements area.
-
-####
-
-In the `psql` prompt, `truncate` the data from the `majors` table so you can run the script again.
-
-```sql
-TRUNCATE majors, students, majors_students;
+- Here's how it looks:
+
+```sh
+cat students_test.csv | while IFS="," read FIRST LAST MAJOR GPA
+do
+  echo $FIRST
+done
 ```
 
-####
+## 985. ./insert_data.sh
 
-Run the script to see if the courses get inserted into the database.
+### 985.1
 
-####
+Run the script to see if it prints the `FIRST` (`first_name`) variable correctly. It will take a second since it has to go through the first loop.
 
-It looks like it worked. The test data has three unique courses, and three got added to the database. View the data in the `courses` table to make sure they are correct.
+#### HINTS
 
-####
+- Run your `insert_data.sh` script by executing it
+- Type `./insert_data.sh` in the terminal and press enter
+- After running the script, the `majors` and `courses` tables should have three rows each, and the `majors_courses` table should have four. If they don't, there might be something wrong in the script. You can use the reset button to reset the lesson and run the script again
 
-Excellent. Instead of manually deleting the data each time you want to run the script, add the command to do it for you. Near the top of the file below your `PSQL` variable, use `echo` to query the database. In the query, `truncate` your four tables in this order: `students`, `majors`, `courses`, `majors_courses`.
+## 1020. Delete echo all variables
 
-####
+### 1020.1
 
-Run the script to see if it works.
+It works :sweat_smile: It printed the first item in each row of the CSV file. It's printing the first line again, you will have to take care of that. First, delete the `echo` line.
 
-####
+#### HINTS
 
-Awesome. That makes it easier. Below your get new `course_id` comment, set the `COURSE_ID` to the newly inserted `course_id`.
+- Delete the `echo $FIRST` line
 
-####
+## 1022. Add if first_name
 
-One more thing to add for this file. Below the insert into `majors_courses` courses comment, create a `INSERT MAJORS_COURSES_RESULT` variable. Use it and the `MAJOR_ID` and `COURSE_ID` variables you created to insert a row into the `majors_courses` table. Make sure the query has the `major_id` column first. Also, you won't need any quotes around the values for the ID's.
+### 1022.1
 
-####
+Add an if condition to the loop that checks if the `FIRST` variable is not equal to `first_name` so it doesn't do anything for the first line of the file. Don't put anything in the statements area for now.
 
-Below the variable you just created, add an `if` condition that checks if it's equal to `INSERT 0 1` like the others. In it's statements area, use `echo` to print `Inserted into majors_courses, $MAJOR : $COURSE`.
+#### HINTS
 
-####
+- Here's an example of an `if`:
 
-Run the script. Your tables should get truncated and then it should go through the loop and add all the data from the `courses_test.csv` into the three tables of the database.
+```sh
+if [[ CONDITION ]]
+then
+  STATEMENTS
+fi
+```
 
-####
+- The condition you want is `[[ $FIRST != "first_name" ]]`
+- Your second loop should look like this:
 
-Looks like it works. You better look around to make sure. View the data in the `majors` table.
+```sh
+cat students_test.csv | while IFS="," read FIRST LAST MAJOR GPA
+do
+  if [[ $FIRST != "first_name" ]]
+  then
 
-####
+  fi
+done
+```
 
-Cool, check the courses table.
+## 1025. Add comments
 
-####
+### 1025.1
 
-Lastly, view the data in the `majors_courses` table. There should be four rows.
+All the columns in the CSV file can be inserted directly into the database except for the major. You will need to get the `major_id` again for that. There's some `null` values in there as well, so you will need to use `null` if the `major_id` isn't found. Add four single line comments in your loop; `get major_id`, `if not found`, `set to null`, and `insert student` in that order.
 
-####
+#### HINTS
 
-Alright, that part of the script is done. Next, you need to add everything from the `students.csv` file. Make some test data again. In the terminal, use the copy command to copy `students.csv` into a file named `students_test.csv`.
+- Here's an example of a single comment: `# <comment>`
+- Add the four suggested single line comments, each on their own line, in the order given in the `if` part of your new loop
+- It should look like this:
 
-####
+```sh
+cat students_test.csv | while IFS="," read FIRST LAST MAJOR GPA
+do
+  if [[ $FIRST != "first_name" ]]
+  then
+    # get major_id
 
-In the `students_test.csv` file, remove everything but the first five lines like you did for the other test file. Make sure there's an empty line at the bottom again.
+    # if not found
 
-####
+    # set to null
 
-You want to loop through all this info like you did for the other CSV file. The process is the same. Below your existing loop, use `cat` to print your new test file. Pipe the results into a while loop, setting the `IFS` to a comma again, and then use read to create `FIRST`, `LAST`, `MAJOR` and `GPA` variables from the data. In the loop, use `echo` to print the `FIRST` variable.
+    # insert student
 
-####
+  fi
+done
+```
 
-Run the script to see if it prints the `FIRST` (first_name) variable correctly. It will take a second since it has to go through the first loop.
+## 1030. Add MAJOR_ID
 
-####
+### 1030.1
 
-It works 😅 It printed the first item in each row of the CSV file. It's printing the first line again, you will have to take care of that. First, delete the `echo` line.
+Below the new `get major_id` comment, set the `MAJOR_ID` variable to a query that gets the `major_id` for the current students major.
 
-####
+#### HINTS
 
-Add an `if` condition to the loop that checks if the `FIRST` variable is not equal to `first_name` so it doesn't do anything for the first line of the file. Don't put anything in the statements area for now.
+- Here's an example of how it looks: `MAJOR_ID=$($PSQL "<query_here>")`
+- For the query, you want to use the `SELECT`, `FROM`, and `WHERE` keywords
+- Here's an example of how the query part looks: `SELECT <column_name> FROM <table_name> WHERE <condition>`
+- The condition you want is `major_id='$MAJOR'`
+- Here's how the query should look: `SELECT major_id FROM majors WHERE major='$MAJOR'`
+- Here's how the whole line should look: `MAJOR_ID=$($PSQL "SELECT major_id FROM majors WHERE major='$MAJOR'")`
 
-####
+## 1033. Add echo MAJOR_ID
 
-All the columns in the CSV file can be inserted directly into the database except for the `major`. You will need to get the `major_id` again for that. There's some null values in there as well, so you will need to use `null` if the `major_id` isn't found. Add four single line comments in your loop; get `major_id`, `if not found`, `set to null`, and `insert student` in that order.
-
-####
-
-Below the new get `major_id` comment, set the `MAJOR_ID` variable to a query that gets the `major_id` for the current students major.
-
-####
+### 1033.1
 
 Below that, use `echo` to print the variable so you can see if it's working.
 
-####
+#### HINTS
+
+- Add `echo $MAJOR_ID` below the `MAJOR_ID` variable you just created
+
+## 1037. ./insert_data.sh
+
+### 1037.1
 
 Run the script to see what happens.
 
-####
+#### HINTS
+
+- Run your `insert_data.sh` script by executing it
+- Type `./insert_data.sh` in the terminal and press enter
+- After running the script, the `majors` and `courses` tables should have three rows each, and the `majors_courses` table should have four. If they don't, there might be something wrong in the script. You can use the reset button to reset the lesson and run the script again
+
+## 1047. Add if -z MAJOR_ID
+
+### 1047.1
 
 Looking at the test data, it found the ID for all of it except the `null` value. Below the newest `if not found` comment, add an `if` that checks if the variable is empty. Put the `set to null` comment in its statements area.
 
-#### `MAJOR_ID=null`
+#### HINTS
+
+- It looks similar to the `if` condition in your first loop
+- The condition you want is `[[ -z $MAJOR_ID ]]`
+- Make sure the `set to null` comment is in the statements area
+- It should look like this:
+
+```sh
+if [[ -z $MAJOR_ID ]]
+then
+  # set to null
+
+fi
+```
+
+## 1048. Set MAJOR_ID to null
+
+### 1048.1
 
 When you go to insert the student data, you want to use the `MAJOR_ID` if it's found, or `null` if not. Below the `set to null` comment, set the `MAJOR_ID` variable to `null` so you can use it to insert the data.
 
-####
+#### HINTS
+
+- It should look like this:
+
+```sh
+if [[ -z $MAJOR_ID ]]
+then
+  # set to null
+  MAJOR_ID=null
+fi
+```
+
+## 1049. move echo MAJOR_ID
+
+### 1049.1
 
 Move the `echo $MAJOR_ID` line to below the `if` statement so you can run the script and see the value of the variable if the `major_id` is or isn't found.
 
-####
+#### HINTS
+
+- Move the suggested line below the closing `fi` of the `if [[ -z $MAJOR_ID ]]` statement
+
+## 1050. ./insert_data.sh
+
+### 1050.1
 
 Run the script.
 
-####
+#### HINTS
 
-Okay, that should work for inserting the student. Delete the echo $MAJOR_ID line.
+- Run your `insert_data.sh` script by executing it
+- Type `./insert_data.sh` in the terminal and press enter
+- After running the script, the `majors` and `courses` tables should have three rows each, and the `majors_courses` table should have four. If they don't, there might be something wrong in the script. You can use the reset button to reset the lesson and run the script again
 
-####
+## 1053. Delete echo MAJOR_ID
 
-One last thing to add. In the `psql` prompt, view the details of the `students` table so you can see what columns to add.
+### 1053.1
 
-####
+Okay, that should work for inserting the student. Delete the `echo $MAJOR_ID` line.
 
-You will need to set the four columns when adding the student info. All of them except `student_id`. Below the insert student comment, create an `INSERT_STUDENT_RESULT` variable that adds the student to the database. Add the columns in the order they appear in the data, and make sure to only put the two `VARCHAR` columns in single quotes.
+#### HINTS
 
-####
+- Delete the `echo $MAJOR_ID` line from the file
+
+## 1057. \d students
+
+### 1057.1
+
+One last thing to add. In the psql prompt, view the details of the `students` table so you can see what columns to add.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Add the table name after the command
+- It's the `\d` command
+- Here's an example: `\d <table_name>`
+- Type `\d students` into the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
+
+## 1060. Add INSERT_STUDENT_RESULT
+
+### 1060.1
+
+You will need to set the four columns when adding the student info. All of them except `student_id`. Below the `insert student` comment, create an `INSERT_STUDENT_RESULT` variable that adds the student to the database. Add the columns in the order they appear in the data, and make sure to only put the two `VARCHAR` columns in single quotes.
+
+#### HINTS
+
+- Here's an example: `INSERT_STUDENT_RESULT=$($PSQL "<query_here>")`
+- For the query, you want to use the `INSERT INTO`, and `VALUES` keywords
+- Here's an example of how the query part looks: `INSERT INTO <table_name>(<column_1>, <column_N>) VALUES(<value_1>, <value_N>)`
+- In your query, make sure the columns to add are in this order: `first_name`, `last_name`, `major_id`, and `gpa`
+- The query you want is: `INSERT INTO students(first_name, last_name, major_id, gpa) VALUES('$FIRST', '$LAST', $MAJOR_ID, $GPA)`
+- Here's how the whole line should look: `INSERT_STUDENT_RESULT=$($PSQL "INSERT INTO students(first_name, last_name, major_id, gpa) VALUES('$FIRST', '$LAST', $MAJOR_ID, $GPA)")`
+
+## 1070. Add if INSERT_STUDENT_RESULT
+
+### 1070.1
 
 Below the variable you just created, add an `if` statement that checks if it's equal to `INSERT 0 1` like the others. If it is, use `echo` to print `Inserted into students, <first_name> <last_name>`.
 
-####
+#### HINTS
+
+- The condition should look like this: `if [[ $INSERT_STUDENT_RESULT == "INSERT 0 1" ]]`
+- Use the `FIRST` and `LAST` variables to print the students name
+- The `echo` should look like this: `echo Inserted into students, $FIRST $LAST`
+- The whole thing should look like this:
+
+```sh
+if [[ $INSERT_STUDENT_RESULT == "INSERT 0 1" ]]
+then
+  echo "Inserted into students, $FIRST $LAST"
+fi
+```
+
+## 1080. ./insert_data.sh
+
+### 1080.1
 
 Run the script to see if the students are getting added.
 
-####
+#### HINTS
+
+- Run your `insert_data.sh` script by executing it
+- Type `./insert_data.sh` in the terminal and press enter
+- After running the script, the `majors` and `courses` tables should have three rows each, and the `majors_courses` and `students` tables should have four. If they don't, there might be something wrong in the script. You can use the reset button to reset the lesson and run the script again
+
+## 1090. SELECT \* FROM students
+
+### 1090.1
 
 I think it's working. View all the data in the `students` table to make sure it matches the CSV file.
 
-####
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM students;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
+
+## 1120. Change to cat courses.csv
+
+### 1120.1
 
 Excellent. It added all the students from the test data. Time to try it with the original files. Change the `cat courses_test.csv` line to use the original file again.
 
-####
+#### HINTS
+
+- Change `cat courses_test.csv` to `cat courses.csv`
+- The suggested line should look like this: `cat courses.csv | while IFS="," read MAJOR COURSE`
+
+## 1130. Change to cat students.csv
+
+### 1130.1
 
 Next, change the `cat students_test.csv` line to use the original file as well.
 
-####
+#### HINTS
+
+- Change the `cat students_test.csv` to `cat students.csv`
+- The suggested line should look like this: `cat students.csv | while IFS="," read FIRST LAST MAJOR GPA`
+
+## 1140. ./insert_data.sh
+
+### 1140.1
 
 Time for the moment of truth. Run the script and see if it works.
 
-####
+#### HINTS
 
-That was cool. View all the data in the students table to see what you ended up with.
+- Run your `insert_data.sh` script by executing it
+- Type `./insert_data.sh` in the terminal and press enter
+- After running the script, the tables should have this many rows: `majors` has 7, `courses` has 17, `majors_courses` has 28, and `students` should have 31. If they don't, there might be something wrong in the script. You can use the reset button to reset the lesson and run the script again
 
-####
+## 1150. SELECT \* FROM students
+
+### 1150.1
+
+That was cool. View all the data in the `students` table to see what you ended up with.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM students;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
+
+## 1160. SELECT \* FROM majors
+
+### 1160.1
 
 31 rows. That's how many are in the CSV file. Perfect. Next, check the `majors` table.
 
-####
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM majors;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
+
+## 1170. SELECT \* FROM courses
+
+### 1170.1
 
 7 rows. There must be 7 unique majors in the CSV file. View what's in the `courses` table.
 
-####
+#### HINTS
 
-Looks like there's 17 unique courses in the CSV file. Last, view the data in majors_courses. This should have the same number of rows at the CSV file.
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM courses;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
-####
+## 1180. SELECT \* FROM majors_courses
+
+### 1180.1
+
+Looks like there's 17 unique courses in the CSV file. Last, view the data in `majors_courses`. This should have the same number of rows at the CSV file.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM majors_courses;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
+
+## 1190. ls
+
+### 1190.1
 
 28 rows, same as the CSV file. I think all the data got added correctly. You don't need your test files anymore. In the terminal, use the list command to check what files are in your project folder.
 
-####
+#### HINTS
 
-Use the remove command (rm) to delete the `students_test.csv` file.
+- It's the `ls` command
+- Don't use any flags with the command
+- Enter `ls` in the terminal
 
-####
+## 1200. rm students_test.csv
+
+### 1200.1
+
+Use the remove command (`rm`) to delete the `students_test.csv` file.
+
+#### HINTS
+
+- Here's an example `rm <filename>`
+- Enter `rm students_test.csv` in the terminal
+
+## 1205. rm courses_test.csv
+
+### 1205.1
 
 Use the same command to delete the `courses_test.csv` file.
 
-####
+#### HINTS
+
+- Here's an example `rm <filename>`
+- Enter `rm courses_test.csv` in the terminal
+
+## 1210. ls
+
+### 1210.1
 
 List the contents of the folder again to make sure they're gone.
 
-####
+#### HINTS
+
+- Use the **l**ist command
+- It's the `ls` command
+- Don't use any flags with the command
+- Enter `ls` in the terminal
+
+## 1220. pg_dump --help
+
+### 1220.1
 
 The database is finished for now. The last thing you are going to do is make a "dump" of it. The `pg_dump` command can do that for you. Use the `--help` flag with the command to see what it can do.
 
-#### `pg_dump --clean --create --inserts --username=freecodecamp students > students.sql`
+#### HINTS
+
+- Here's an example: `<command> <flag>`
+- Enter `pg_dump --help` in the terminal
+- The bash terminal, not the psql one
+- Press enter until you have seen the whole manual
+
+## 1230. dump database
+
+### 1230.1
 
 This is the last step. There's quite a few options there. Enter `pg_dump --clean --create --inserts --username=freecodecamp students > students.sql` in the terminal to dump the database into a `students.sql` file. It will save all the commands needed to rebuild it. Take a quick look at the file when you are done.
+
+#### HINTS
+
+- Enter the suggested command in the terminal
+- The bash terminal, not the psql one
+- Make sure you are in the `project` folder first
 
 ### Learn SQL by Building a Student Database: Part 2
 
@@ -9089,109 +15649,9311 @@ This is the last step, you have done really well. Run the script one last time. 
 - Type `./student_info.sh` in the terminal and press enter
 - Make sure you are in the `project` folder first
 
-####
+# Learn Advanced Bash by Building a Kitty Ipsum Translator
 
-####
+> Welcome to the Advanced Bash lessons!
 
-####
+## 10. Start the Terminal
 
-####
+### 10.1
 
-####
+**The first thing you need to do is start the terminal.** Do that by clicking the "hamburger" menu at the top left of the screen, going to the "terminal" section, and clicking "new terminal". Once you open a new one, type `echo hello bash` into the terminal and press enter.
 
-####
+#### HINTS
 
-####
+- Capitalization matters
+- If the tests don't run automatically, try typing `exit` into the terminal and redoing the instructions
 
-####
+## 20. echo hello bash > stdout.txt
 
-####
+### 20.1
 
-####
+The command you just entered printed to the terminal. You can `redirect` that output to a file using `>`. Here’s an example: `<command> > <filename>`. Enter the same command but redirect the output into `stdout.txt`.
 
-####
+#### HINTS
 
-####
+- The last command was `echo hello bash`
+- Enter `echo hello bash > stdout.txt` in the terminal
 
-####
+## 30. echo hello bash >> stdout.txt
 
-####
+### 30.1
 
-####
+A `stdout.txt` file was created. You should take a look at it. Instead of printing `hello bash` to the terminal, it **redirected** the output to the file. A single `>` will create or overwrite the file. Use the same command with `>>` to append to the file.
 
-####
+#### HINTS
 
-####
+- Here's an example: `<command> >> <filename>`
+- You want to append the output of `echo hello bash` to `stdout.txt`
+- The last command was `echo hello bash > stdout.txt`
+- Enter `echo hello bash >> stdout.txt` in the terminal
 
-####
+## 40. echo hello bash > stdout.txt
 
-####
+### 40.1
 
-####
+Take a look at the file again. The output of `echo hello bash` was added to it.Use the command with one `>` again to overwrite the file.
 
-####
+#### HINTS
 
-####
+- Here's an example: `<command> > <filename>`
+- Use `>` to redirect the output of `echo hello bash` to `stdout.txt` so it overwrites the file
+- The last command was `echo hello bash >> stdout.txt`
+- Enter `echo hello bash > stdout.txt` in the terminal
 
-####
+## 50. > stdout.txt
 
-####
+### 50.1
 
-####
+Take a look at the file. It was overwritten with the output of the command. Enter `> stdout.txt` in the terminal to redirect nothing into the file. Effectively, emptying it.
 
-####
+#### HINTS
 
-####
+- Enter `> stdout.txt` in the terminal
 
-####
+## 60. bad_command
 
-####
+### 60.1
 
-####
+Next, enter `bad_command` in the terminal to see what happens. You will get an error.
 
-####
+#### HINTS
 
-####
+- Enter `bad_command` in the terminal
 
-####
+## 70. bad_command > stderr.txt
 
-####
+### 70.1
 
-####
+Enter the same command, but try to redirect the output to `stderr.txt` using `>`.
 
-####
+#### HINTS
 
-####
+- Here's an example: `<command> > <filename>`
+- Make sure to use `stderr.txt` as the filename
+- Enter `bad_command > stderr.txt` in the terminal
 
-####
+## 80. bad_command 2> stderr.txt
 
-####
+### 80.1
 
-####
+There’s two types of output, `stdout` (standard out) for when a command is successful, and `stderr` (standard error) for when it’s not. Both of these will print to the terminal by default. `bad_command` was not a valid command, so it printed to `stderr`. You can redirect `stderr` with `2>`. Enter the same command but redirect `stderr` to `stderr.txt`
 
-####
+#### HINTS
 
-####
+- Here's an example: `<command> 2> <filename>`
+- Make sure to use `stderr.txt` as the filename
+- Enter `bad_command 2> stderr.txt` in the terminal
 
-####
+## 90. echo hello bash 1> stdout.txt
 
-####
+### 90.1
 
-####
+Take a look at the `stderr.txt` file. The error was redirected to the file and nothing printed in the terminal. You used `2>` to redirect `stderr`. Similarily, you can use `1>` to redirect `stdout`. Enter `echo hello bash` again and use it to redirect `stdout` to the `stdout.txt` file.
 
-####
+#### HINTS
 
-####
+- Make sure to use `1>` to redirect `stdout`
+- Make sure it's redirected to `stdout.txt`
+- Enter `echo hello bash 1> stdout.txt` in the terminal
 
-####
+## 100. read NAME
 
-####
+### 100.1
 
-####
+`stdout` and `stderr` are for output. `stdin` (standard in) is the third thing commands can use and is for getting input. The default is the keyboard. Enter `read NAME` in the terminal to see a command that uses `stdin`.
 
-####
+#### HINTS
 
-####
+- Enter `read NAME` in the terminal
+
+## 110. Enter your name
+
+### 110.1
+
+The `read` command is looking at `stdin` for where to get input, which is pointing to the keyboard. Type your name and press enter.
+
+#### HINTS
+
+- The last command should be `read NAME`
+- If the tests don't pass, enter `read NAME` in the terminal, type your name and press enter
+
+## 115. echo $NAME
+
+### 115.1
+
+Use `echo` to print the variable you just created.
+
+#### HINTS
+
+- Here's an example: `echo <VARIABLE>`
+- You can use a variable like this: `$<VARIABLE>`
+- Enter `echo $NAME` in the terminal
+
+## 120. echo $NAME > stdout.txt
+
+### 120.1
+
+Use `echo` to print the `NAME` variable again, but redirect the `stdout` to `stdout.txt` so it overwrites the file.
+
+#### HINTS
+
+- Here's an example: `<command> > <filename>`
+- Make sure to use `stdout.txt` as the filename
+- Enter `echo $NAME > stdout.txt` in the terminal
+
+## 140. echo freeCodeCamp > name.txt
+
+### 140.1
+
+Use `echo` and _redirection_ to put the text `freeCodeCamp` in a `name.txt` file for some more testing. Remember that it will create the file if it doesn't exist.
+
+#### HINTS
+
+- Here's an example: `echo <text> > <filename>`
+- Use `freeCodeCamp` as the text and `name.txt` as the filename
+- Enter `echo freeCodeCamp > name.txt` in the terminal
+- Make sure `freeCodeCamp` is the only text in the file
+
+## 150. read NAME < name.txt
+
+### 150.1
+
+Just like you can redirect output, you can redirect `stdin` as well. Here's an example: `<command> < <filename_for_stdin>`. Use the `read` command to assign the `NAME` variable to the contents of `name.txt` by redirecting the `stdin`.
+
+#### HINTS
+
+- You want to use `read NAME` as the command and `name.txt` as the input
+- Enter `read NAME < name.txt` in the terminal
+
+## 160. echo $NAME
+
+### 160.1
+
+`stdin` was pointing to the `name.txt` file this time. Use `echo` to print the `NAME` variable again.
+
+#### HINTS
+
+- Here's an example: `echo <VARIABLE>`
+- You can use a variable like this: `$<VARIABLE>`
+- Enter `echo $NAME` in the terminal
+
+## 170. echo your_name | read NAME
+
+### 170.1
+
+Now the variable is set to the content of the file, which was the input. Another way to set the `stdin` is by using the pipe (`|`). It will use the output from one command as input for another. Here's an example: `<command_1> | <command_2>`. This will take the `stdout` from `command_1` and use it as the `stdin` for `command_2`. Use this method to **echo** your name and pipe the output into the `read` command which reads your name into the `NAME` variable.
+
+#### HINTS
+
+- Enter `echo <your_name> | read NAME`
+- Replace `<your_name>` with your name
+
+## 175. echo $NAME
+
+### 175.1
+
+Use echo to print the variable again.
+
+#### HINTS
+
+- Here's an example: `echo <VARIABLE>`
+- You can use a variable like this: `$<VARIABLE>`
+- Enter `echo $NAME` in the terminal
+
+## 178. cat
+
+### 178.1
+
+It worked, but it doesn't look like it. When you used the pipe (`|`) to set the input for `read`, it ran the command in a subshell or subprocess. Basically, another terminal instance within the one you see. The variable was set in there and didn't affect the one you had previously set. `cat` is another command that takes input. Enter it in the terminal.
+
+#### HINTS
+
+- Enter `cat` in the terminal
+
+## 180. end cat
+
+### 180.1
+
+`cat` will print the contents of a file or input to `stdout`. You didn't specify any input for the command. Feel free to type something and press enter. When you are done, press `control+c` to finish the command.
+
+#### HINTS
+
+- `cat` should be the last command entered
+- Close the command with `control+c`
+
+## 185. cat name.txt
+
+### 185.1
+
+`cat` can take a filename as an argument. Use it again with your `name.txt` file as an arguement to print the contents of the file.
+
+#### HINTS
+
+- Here's an example: `cat <filename>`
+- Use the `name.txt` file
+- Enter `cat name.txt` in the terminal
+
+## 190. cat < name.txt
+
+### 190.1
+
+Enter the same command but use redirection to set the `stdin` to `name.txt`
+
+#### HINTS
+
+- Use `<` to redirect input
+- Here's an example `<commnad> < <filename>`
+- It was the `cat` command with the `name.txt` file
+- Enter `cat < name.txt` in the terminal
+
+## 200. echo your_name | cat
+
+### 200.1
+
+Use `echo` to print your name and pipe the output into the `cat` command.
+
+#### HINTS
+
+- Here's an example: `<command_1> | <command_2>`
+- The first command should be `echo <your_name>`
+- The second is `cat`
+- Enter `echo <your_name> | cat` in the terminal
+- Replace `<your_name>` with your name
+
+## 210. touch script.sh
+
+### 210.1
+
+You should be starting to get the hang of how `stdin`, `stdout`, and `stderr` work but let's try another example with your own command. Use `touch` to create a file named `script.sh`.
+
+#### HINTS
+
+- Here's an example: `touch <filename>`
+- Enter `touch script.sh` in the terminal
+- Make sure you are in the `project` folder first
+
+## 220. chmod +x script.sh
+
+### 220.1
+
+Give your new script executable permissions with the `chmod` command and the `+x` flag.
+
+#### HINTS
+
+- Here's an example: `chmod +x <filename>`
+- Enter `chmod +x script.sh` in the terminal
+
+## 230. Add shebang
+
+### 230.1
+
+This will be a very simple script with only a few commands. At the top of file, add a shebang that looks like this: `#!/bin/bash`.
+
+#### HINTS
+
+- Add the suggestion at the top of the `script.sh` file
+- Add `#!/bin/bash` at the top of the `script.sh` file
+
+## 240. Add read NAME
+
+### 240.1
+
+Below the shebang, add a `read` command that reads input into a `NAME` variable.
+
+#### HINTS
+
+- Add the suggestion to the bottom of the `script.sh` file
+- Add `read NAME` to the bottom of the `script.sh` file
+
+## 250. Add echo Hello $NAME
+
+### 250.1
+
+Below that, use `echo` to print `Hello <name>` using the variable.
+
+#### HINTS
+
+- Add the suggestion to the bottom of the `script.sh` file
+- Here's an example: `echo Hello <VARIABLE>`
+- You can use a variable like this: `$<VARIABLE>`
+- Use the `NAME` variable
+- Add `echo Hello $NAME` to the bottom of the `script.sh` file
+
+## 260. Add bad_command
+
+### 260.1
+
+One more thing. Add `bad_command` at the bottom of the file.
+
+#### HINTS
+
+- Add the suggestion to the bottom of the `script.sh` file
+- Add `bad_command` to the bottom of the `script.sh` file
+
+## 264. ./script.sh
+
+### 264.1
+
+Your script takes input from `stdin` and will output to `stdout` and `stderr`. Run your script and don't input anything for now.
+
+#### HINTS
+
+- Here's how you can run a script: `./<script_file>`
+- Enter `./script.sh` in the terminal
+
+## 266. end ./script.sh
+
+### 266.1
+
+The `read` command in your script is waiting for input. Type your name and press enter.
+
+#### HINTS
+
+- The last command should be `./script.sh`
+- Run `./script.sh` in the terminal and enter input when it is waiting
+
+## 270. echo your_name | ./script
+
+### 270.1
+
+You input your name, and your script output the result of the two commands. Run the script again, but use a pipe to echo your name as the input.
+
+#### HINTS
+
+- Here's an example: `<command_1> | <command_2>`
+- Use `echo <your_name>` as the first command
+- And `./script.sh` as the second
+- Enter `echo <your_name> | ./script.sh` in the terminal
+- Replace `<your_name>` with your name
+
+## 280. echo your_name | ./script 2> stderr
+
+### 280.1
+
+It didn't ask for input this time because you gave it input with the pipe. The two types of output were printed in the terminal. Run the same command but redirect `stderr` output to the `stderr.txt`
+
+#### HINTS
+
+- The previous command was `echo <your_name> | ./script.sh`
+- You can redirect `sterr` output with `2>`
+- Here's an example: `<previous_command> 2> <filename>`
+- Enter `echo <your_name> | ./script.sh 2> stderr.txt`
+
+## 290. echo your_name | ./script 2> stderr 1> stdout
+
+### 290.1
+
+Again, it didn't ask for input. This time it only printed your name to the terminal and not the output of `bad_command`. That produced an error, which you redirected to `stderr.txt`. Take a look at that file. You can redirect both the `stderr` and `stdout` by adding another redirection at the end like this: `> <filename>`. Enter the same command, redirect the `stderr` to the same place again, and the `stdout` to `stdout.txt`.
+
+#### HINTS
+
+- Here's another example: `<commands> 2> <filename> > <filename>`
+- The previous command was `echo <your_name> | ./script.sh 2> stderr.txt`
+- Add `> stdout.txt` to the end of the previous command
+- Enter `echo <your_name> | ./script.sh 2> stderr.txt > stdout.txt` in the terminal
+
+## 300. ./script < name
+
+### 300.1
+
+It didn't ask for input and nothing was printed in the terminal that time. You redirected both outputs to files. You should take a look at them to see if they have what you expected. Run your script again, use redirection to set `name.txt` as the input. Don't redirect any of the output.
+
+#### HINTS
+
+- You should have a `name.txt` file with only the text `freeCodeCamp` in it
+- Here's an example: `<command> < <filename>`
+- Enter `./script.sh < name.txt` in the terminal
+
+## 310. ./script < name 2> stderr
+
+### 310.1
+
+Excellent. Run the same command, but redirect the `stderr` to `stderr.txt`.
+
+#### HINTS
+
+- The previous command was `./script.sh < name.txt`
+- You can redirect `sterr` output with `2>`
+- Here's an example: `<previous_command> 2> <filename>`
+- Enter `./script.sh < name.txt 2> stderr.txt`
+
+## 320. ./script < name 2> stderr 1> stdout
+
+### 320.1
+
+Nice job! Run it again, redirect the `stderr` to the same place and the `stdout` to `stdout.txt`
+
+#### HINTS
+
+- You can redirect `stdout` with `>`
+- Here's an example: `<commands> 2> <filename> > <filename>`
+- The previous command was `./script.sh < name.txt 2> stderr.txt`
+- Add `> stdout.txt` to the end of the previous command
+- Enter `./script.sh < name.txt 2> stderr.txt > stdout.txt` in the terminal
+
+## 324. cat kitty_ipsum_1.txt
+
+### 324.1
+
+:smile: You have two `kitty_ipsum` files. Find out what's in them by printing the first one in the terminal with `cat`.
+
+#### HINTS
+
+- Here's an example: `cat <filename>`
+- It's the `kitty_ipsum_1.txt` file
+- Enter `cat kitty_ipsum_1.txt` in the terminal
+
+## 326. cat kitty_ipsum_2.txt
+
+### 326.1
+
+It's some kitty ipsum. You may enjoy reading it :smile: Look at the second one with `cat` like you did this one.
+
+#### HINTS
+
+- Here's an example: `cat <filename>`
+- It's the `kitty_ipsum_2.txt` file
+- Enter `cat kitty_ipsum_2.txt` in the terminal
+
+## 330. wc kitty_ipsum_1
+
+### 330.1
+
+You will write a small script to translate both of them into doggy ipsum. For now, you will learn some commands to figure out how. The first one is `wc`. It prints some info about a file. It can take a file as an argument like the `cat` command. Use it to see what it shows you about your `kitty_ipsum_1.txt` file.
+
+#### HINTS
+
+- Here's an example: `wc <filename>`
+- Enter `wc kitty_ipsum_1.txt` in the terminal
+
+## 340. man wc
+
+### 340.1
+
+Not quite sure what all those numbers mean. Check the manual of the `wc` command to see if you can find out more.
+
+#### HINTS
+
+- View the manual of a command with `man`
+- Here's an example: `man <command>`
+- Enter `man wc` in the terminal
+- Press enter until you have seen the whole manual
+
+## 350. wc -l kitty_ipsum_1
+
+### 350.1
+
+`wc` stands for `word count`. It showed you how many lines were in the file, how many words, and how many bytes. Use the `-l` flag to only output how many lines are in the file. Don't do any redirecting of input or output.
+
+#### HINTS
+
+- Here's an example `<command> <flag> <filename>`
+- Enter `wc -l kitty_ipsum_1.txt` in the terminal
+
+## 360. wc -w kitty_ipsum_1
+
+### 360.1
+
+The file has 27 lines. Check how many words are in the file.
+
+#### HINTS
+
+- Don't use any redirection
+- Check the manual with `man wc` to find the flag you need
+- It's the `-w` flag
+- Enter `wc -w kitty_ipsum_1.txt` in the terminal
+
+## 370. wc -m kitty_ipsum_1
+
+### 370.1
+
+332 words are in the `kitty_ipsum_1.txt` file. Lastly, check how many characters it has.
+
+#### HINTS
+
+- Don't use any redirection
+- Check the manual with `man wc` to find the flag you need
+- It's the `-m` flag
+- Enter `wc -m kitty_ipsum_1.txt` in the terminal
+
+## 380. wc kitty_ipsum_1
+
+### 380.1
+
+Use the command without any flags to see if the numbers are the same.
+
+#### HINTS
+
+- Don't use any redirection
+- Enter `wc kitty_ipsum_1.txt` in the terminal
+
+## 390. cat kitty_ipsum_1 | wc
+
+### 390.1
+
+That shows the byte count instead of the character count. Some characters must be more than one byte. Use `cat` to pipe the content of the file as the input of the `wc` command to see if the output is the same.
+
+#### HINTS
+
+- Here's an example: `<command_1> | <command_2>`
+- The first command should be `cat kitty_ipsum_1.txt`
+- The second is `wc`
+- Enter `cat kitty_ipsum_1.txt | wc` in the terminal
+
+## 400. wc < kitty_ipsum_1
+
+### 400.1
+
+It looks like the way you give input to a command may affect the output. It only printed the numbers that time and not the filename. Try using redirection as the input with the same file and command to see what that outputs.
+
+#### HINTS
+
+- You can redirect input with `<`
+- Here's an example: `<command> < <filename>`
+- Enter `wc < kitty_ipsum_1.txt` in the terminal
+
+## 420. echo ~~ kitty_ipsum_1.txt info ~~ > kitty_info
+
+### 420.1
+
+No filename again with fewer spaces that time. You may have to play with certain commands to get the output you are looking for. You are going to create a file that has some meta information about the two kitty ipsum files in it. Use `echo` and redirection to print `~~ kitty_ipsum_1.txt info ~~` to a file named `kitty_info.txt`. Make sure to place the text in quotes.
+
+#### HINTS
+
+- Remember that redirecting output will create the file if it doesn't exist
+- You can redirect output with `>`
+- Here's an example: `<command> > <filename>`
+- Enter `echo "~~ kitty_ipsum_1.txt info ~~" > kitty_info.txt` in the terminal
+- Make sure to use quotes around the text
+
+## 430. echo Number of lines >> kitty_info
+
+### 430.1
+
+Open the file so you can keep track of what's in it. Use `echo` and the `-e` flag with the new line character (`\n`) to **append** `Number of lines:` to the `kitty_info.txt` file. Add the new line character at the beginning of the text so there's an empty line. Remember that you can append output to a file with `>>`.
+
+#### HINTS
+
+- Here's an example: `<command> >> <filename>`
+- The command you want is `echo -e "\nNumber of lines:"`
+- Enter `echo -e "\nNumber of lines:" >> kitty_info.txt`
+
+## 440. cat kitty_ipsum_1 | wc -l >> kitty_info
+
+### 440.1
+
+You should be able to find out how many lines are in the `kitty_ipsum_1.txt` file and add that number to the `kitty_info.txt` file. Use the `cat` command to pipe the content of `kitty_ipsum_1.txt` as input for the `wc` command. Use the flag for getting the number of lines from that input and **append** the number to the `kitty_info.txt` file. **Tip:** enter the command without appending to see if it's working first.
+
+#### HINTS
+
+- Here's an example: `cat <filename> | wc <flag> >> <filename>`
+- The flag you want is `-l`
+- You previously used `cat kitty_ipsum_1.txt | wc`
+- Enter `cat kitty_ipsum_1.txt | wc -l >> kitty_info.txt` in the terminal
+
+## 450. echo -e Number of words: >> kitty_info
+
+### 450.1
+
+Next, you want to put a word count of the file in the info. Use `echo` again to append `Number of words:` to `kitty_info.txt`. Put a new line in front of the text like you did for the first one.
+
+#### HINTS
+
+- Here's an example: `<command> >> <filename>`
+- You want the `echo` command with the `-e` flag and the new line character (`\n`)
+- You previously entered `echo -e "\nNumber of lines:" >> kitty_info.txt`
+- Enter `echo -e "\nNumber of words:" >> kitty_info.txt` in the terminal
+
+## 460. cat kitty_ipsum_1 | wc -w >> kitty_info
+
+### 460.1
+
+Use `cat` and the pipe method again to append the number of words in `kitty_ipsum_1.txt` to `kitty_info.txt`.
+
+#### HINTS
+
+- Here's an example: `cat <filename> | wc <flag> >> <filename>`
+- The flag you want is `-w`
+- You previously used `cat kitty_ipsum_1.txt | wc -l >> kitty_info.txt`
+- Enter `cat kitty_ipsum_1.txt | wc -w >> kitty_info.txt` in the terminal
+
+## 470. echo -e Number of characters: >> kitty_info
+
+### 470.1
+
+Next, you want to add the number of characters. Use the `echo` command with redirection to append `Number of characters:`, with a new line in front of it, to `kitty_info.txt` like you did with the other sentences.
+
+#### HINTS
+
+- Here's an example: `<command> >> <filename>`
+- You want the `echo` command with the `-e` flag and the new line character (`\n`)
+- You previously entered `echo -e "\nNumber of words:" >> kitty_info.txt`
+- Enter `echo -e "\nNumber of characters:" >> kitty_info.txt` in the terminal
+
+## 480. wc -m < kitty_ipsum_1 >> kitty_info
+
+### 480.1
+
+Append the number of characters in `kitty_ipsum_1.txt` to `kitty_info.txt`. Use the redirection method as the input for the `wc` command this time instead of the piping method.
+
+#### HINTS
+
+- You can redirect input with `<`
+- Here's an example: `<command> < <input_filename> >> <output_filename>`
+- Use the `-m` flag with the `wc` command to find the number of characters in a file
+- You previously used `wc < kitty_ipsum_1.txt`
+- Enter `wc -m < kitty_ipsum_1.txt >> kitty_info.txt`
+
+## 490. grep meow kitty_ipsum_1
+
+### 490.1
+
+`grep` is a command for searching for patterns in text. You can use it like this: `grep '<pattern>' <filename>`. Use it to search for the pattern `meow` in the `kitty_ipsum_1.txt` file.
+
+#### HINTS
+
+- Enter `grep 'meow' kitty_ipsum_1.txt` in the terminal
+
+## 500. man grep
+
+### 500.1
+
+It showed you all the lines that contain `meow` somewhere in them, but it’s a little messy. View the manual of `grep` to see if you can find anything to help.
+
+#### HINTS
+
+- View a man with `man <command>`
+- Enter `man grep` in the terminal
+- Press enter until you have seen the whole manual
+
+## 510. grep --color meow kitty_ipsum_1
+
+### 510.1
+
+That's a lot of options. Use `grep` to search for the `meow` pattern in the same file, but add that `--color` flag to see if it's a little more helpful.
+
+#### HINTS
+
+- Here's an example: `grep <flag> '<pattern>' <filename>`
+- You previously entered `grep 'meow' kitty_ipsum_1.txt`
+- Enter `grep --color 'meow' kitty_ipsum_1.txt` in the terminal
+
+## 520. grep --color -n cat kitty_ipsum_1
+
+### 520.1
+
+That’s better. Add the flag to show all the line numbers with the command.
+
+#### HINTS
+
+- View the manual `man grep` to find the flag you need
+- It's the `-n` flag
+- The last command was `grep --color 'meow' kitty_ipsum_1.txt`
+- Enter `grep --color -n 'meow' kitty_ipsum_1.txt` in the terminal
+
+## 530. grep --color -n meow[a-z] kitty_ipsum_1
+
+### 530.1
+
+It's showing the line number of each match it found. `grep` can use regular expressions, too. Enter the previous command, but change the pattern to `meow[a-z]*` to see all words that start with `meow`.
+
+#### HINTS
+
+- The last command was `grep --color -n 'meow' kitty_ipsum_1.txt`
+- Enter `grep --color -n 'meow[a-z]*' kitty_ipsum_1.txt` in the terminal
+
+## 540. echo -e \nNumber of times meow or meowzer appears: >> kitty_info
+
+### 540.1
+
+Looking at the output, you can see that it matched `meow` and `meowzer`, instead of just `meow`. Use the `echo` command and redirection to append the text `Number of times meow or meowzer appears:`, with a new line in front of it, to the `kitty_info.txt` file.
+
+#### HINTS
+
+- Here's an example: `<command> >> <filename>`
+- You want the `echo` command with the `-e` flag and the new line character (`\n`)
+- You previously entered `echo -e "\nNumber of characters:" >> kitty_info.txt`
+- Enter `echo -e "\nNumber of times meow or meowzer appears:" >> kitty_info.txt` in the terminal
+
+## 550. grep --color meow[a-z] kitty_ipsum_1
+
+### 550.1
+
+So how can you find how many times those two words appear? Use grep to find the `meow[a-z]*` pattern in the file again to see how many times they appear. Add the `--color` flag to the command.
+
+#### HINTS
+
+- Don't use the `-n` flag to show the line numbers.
+- Enter `grep --color 'meow[a-z]*' kitty_ipsum_1.txt` in the terminal
+
+## 560. grep -c meow[a-z] kittpy_ipsum_1
+
+### 560.1
+
+It looks like seven, but how can you get a count of that from the command line to append to the info file for the next piece of information? `grep` has a `-c` flag to give you a count. Enter the last command but use that instead of the `--color` flag.
+
+#### HINTS
+
+- The last command was `grep --color 'meow[a-z]*' kitty_ipsum_1.txt`
+- Enter `grep -c 'meow[a-z]*' kitty_ipsum_1.txt` in the terminal
+
+## 570. man grep
+
+### 570.1
+
+That gave you a count of the number lines that the pattern occurred on. Check the manual of grep to see if there's a way to find a count of all the words matched.
+
+#### HINTS
+
+- View a man with `man <command>`
+- Enter `man grep` in the terminal
+- Press enter until you have seen the whole manual
+
+## 580. grep -o meow[a-z] kitty_1
+
+### 580.1
+
+It doesn't look like that's an option. But there is a `-o` flag that will says it will put the matches on their own lines. Try that one with that command instead of the `-c` flag.
+
+#### HINTS
+
+- The previous command was `grep -c 'meow[a-z]*' kitty_ipsum_1.txt`
+- Replace the `-c` with `-o` in the previous command
+- Enter `grep -o 'meow[a-z]*' kitty_ipsum_1.txt` in the terminal
+
+## 590. grep -o meow[a-z] kitty_1 | wc -l
+
+### 590.1
+
+That gave you each match on it's own line. You can use the `wc` command again to get a count of the lines to find out how many matches there are. Pipe the output of the last command into the `wc` command and use the flag for showing the line count.
+
+#### HINTS
+
+- The last command was `grep -o 'meow[a-z]*' kitty_ipsum_1.txt`
+- Here's an example: `<command_1> | <command_2>`
+- You want to use the `-l` flag with the `wc` command
+- Enter `grep -o 'meow[a-z]*' kitty_ipsum_1.txt | wc -l` in the terminal
+
+## 600. grep -o meow[a-z] kitty_1 | wc -l >> kitty_info
+
+### 600.1
+
+Awesome. `wc` counted the lines in the output of the `grep`. That should be the count for how many times those words appear. Enter the same command but append the number to the `kitty_info.txt` file.
+
+#### HINTS
+
+- The last command was `grep -o 'meow[a-z]*' kitty_ipsum_1.txt | wc -l`
+- Append output to a file with `>> <filename>`
+- Enter `grep -o 'meow[a-z]*' kitty_ipsum_1.txt | wc -l >> kitty_info.txt` in the terminal
+
+## 610. echo -e \nLines that they appear on: >> kitty_info
+
+### 610.1
+
+Append the text `Lines that they appear on:` to the `kitty_info.txt` file. Use the `echo` command with the `-e` flag again and put a new line in front of the text.
+
+#### HINTS
+
+- Here's an example: `<command> >> <filename>`
+- You want the `echo` command with the `-e` flag and the new line character (`\n`)
+- You previously entered `echo -e "\nNumber of times meow or meowzer appears:" >> kitty_info.txt`
+- Enter `echo -e "\nLines that they appear on:" >> kitty_info.txt` in the terminal
+
+## 620. grep -n meow[a-z] kitty_ipsum_1
+
+### 620.1
+
+There was a `-n` flag with `grep` to get line numbers. Use it to check the `kitty_ipsum_1.txt` file for the `meow[a-z]*` pattern again.
+
+#### HINTS
+
+- Here's an example: `grep <flag> '<pattern>' <filename>`
+- Enter `grep -n 'meow[a-z]*' kitty_ipsum_1.txt` in the terminal
+
+## 630. man grep
+
+### 630.1
+
+Check the `grep` manual to see if there's a way to get just the line numbers.
+
+#### HINTS
+
+- View a man with `man <command>`
+- Enter `man grep` in the terminal
+
+## 635. cat name.txt
+
+### 635.1
+
+There doesn't appear to be a way to just get the line numbers. There's a `sed` command for replacing text that might work. First, some practice. Use `cat` to print the `name.txt` file in the terminal. It should still say `freeCodeCamp`.
+
+#### HINTS
+
+- Enter `cat name.txt` in the terminal
+- The file should only have the text `freeCodeCamp`
+
+## 640. sed s/r/2/ name.txt
+
+### 640.1
+
+`sed` can replace text like this: `sed 's/<pattern_to_replace>/<text_to_replace_it_with>/' <filename>`. By default, it won't replace the text in the file. It will output it to `stdout`. Use it to replace `r` with `2` in the `name.txt` file and the output prints to the terminal.
+
+#### HINTS
+
+- Check the example again
+- The pattern is `r`, the replacement text is `2`
+- Enter `sed 's/r/2/' name.txt` in the terminal
+
+## 650. sed s/free/f233/ name.txt
+
+### 650.1
+
+You can see that it replaced the `r` with a `2` in `freeCodeCamp`. Use it again to replace `free` with `f233` in the same way.
+
+#### HINTS
+
+- Here's the example: `sed 's/<pattern_to_replace>/<text_to_replace_it_with>/' <filename>`
+- The pattern is `free`, the replacement text is `f233`
+- You previously used `sed 's/r/2/' name.txt`
+- Enter `sed 's/free/f233/' name.txt` in the terminal
+
+## 660. sed s/freecodecamp/f233C0d3C@mp/ name.txt
+
+### 660.1
+
+Try it again, replacing `freecodecamp` with `f233C0d3C@mp`.
+
+#### HINTS
+
+- Here's the example: `sed 's/<pattern_to_replace>/<text_to_replace_it_with>/' <filename>`
+- The pattern is `freecodecamp`, the replacement text is `f233C0d3C@mp`
+- You previously used `sed 's/free/f233/' name.txt`
+- Enter `sed 's/freecodecamp/f233C0d3C@mp/' name.txt` in the terminal
+
+## 670. sed s/freecodecamp/f233C0d3C@mp/i name.txt
+
+### 670.1
+
+Nothing was replaced that time. It didn't find the `freecodecamp` text you tried to replace because the case of a few letters didn't match. You can add regex flags after the last `/` in the `sed` argument. A `g`, for `global`, would replace all instances of a matched pattern, or an `i` to ignore the case of the pattern. Enter the same command but add the correct regex flag to ignore the case.
+
+#### HINTS
+
+- Here's an example: `sed 's/<pattern>/<replacement>/<regex_flags>' <filename>`
+- The pattern is `freecodecamp`, the replacement text is `f233C0d3C@mp` and the regex flag is `i`
+- The last command was `sed 's/freecodecamp/f233C0d3C@mp/' name.txt`
+- Enter `sed 's/freecodecamp/f233C0d3C@mp/i' name.txt` in the terminal
+
+## 675. sed s/freecodecamp/f233C0d3C@mp/i < name.txt
+
+### 675.1
+
+It worked that time since it wasn't required to match the case. As with any command, the input can be redirected. Use the same `sed` replacement and file but redirect the **input** this time.
+
+#### HINTS
+
+- The previous command was `sed 's/freecodecamp/f233C0d3C@mp/i' name.txt`
+- Here's an example: `<command> < <filename>`
+- Enter `sed 's/freecodecamp/f233C0d3C@mp/i' < name.txt` in the terminal
+
+## 680. cat name.txt | sed s/freecodecamp/f233C0d3C@mp/i
+
+### 680.1
+
+The method of input didn't affect the output. Use the `cat` and `pipe` method this time to set the input for the `sed` command, replacing the same text.
+
+#### HINTS
+
+- The previous command was `sed 's/freecodecamp/f233C0d3C@mp/i' < name.txt`
+- Here's an example: `cat <filename> | <command>`
+- Enter `cat name.txt | sed 's/freecodecamp/f233C0d3C@mp/i'` in the terminal
+
+## 690. grep -n meow[a-z] kitty_1
+
+### 690.1
+
+Back to the task at hand. You want to add the line numbers asked for in the `kitty_info.txt` file. Use `grep` with the flag to show line numbers to find the `meow[a-z]*` pattern in the `kitty_ipsum_1.txt` file again.
+
+#### HINTS
+
+- Enter `man grep` to find the flag you need
+- It's the `-n` flag
+- Here's an example: `grep -n <pattern> <filename>`
+- Enter `grep -n 'meow[a-z]*' kitty_ipsum_1.txt` in the terminal
+
+## 700. grep meow[a-z] kitty_1 -n | sed s/[0-9]/1/
+
+### 700.1
+
+You can use `sed` to each line in that output with just the line numbers. Start by entering the last command and pipe the output into `sed` that replaces `[0-9]` with `1`.
+
+#### HINTS
+
+- A `sed` argument looks like this: `'s/<pattern>/<replacement>/'`
+- The `sed` argument is `s/[0-9]/1/`
+- The last command was `grep -n 'meow[a-z]*' kitty_ipsum_1.txt`
+- Here's an example: `grep -n 'meow[a-z]*' kitty_ipsum_1.txt | sed '<pattern>'`
+- Enter `grep -n 'meow[a-z]*' kitty_ipsum_1.txt | sed 's/[0-9]/1/'` in the terminal
+
+## 710. grep meow[a-z]\* kitty_1 -n | sed s/[0-9]+/1/
+
+### 710.1
+
+That matched the first digit it found on each line and replaced it with `1`. Enter the same command but change the matching pattern to `[0-9]+` to match one or more numbers.
+
+#### HINTS
+
+- The previous command was `grep -n 'meow[a-z]*' kitty_ipsum_1.txt | sed 's/[0-9]/1/'`
+- Change the `sed` argument to `'s/[0-9]+'/1/`
+- Enter `grep -n 'meow[a-z]*' kitty_ipsum_1.txt | sed 's/[0-9]+/1/'`
+
+## 720. man sed
+
+### 720.1
+
+That didn't replace anything. Check the manual of `sed` quick to see if there's anything to help.
+
+#### HINTS
+
+- View a man with `man <command>`
+- Enter `man sed` in the terminal
+- Press enter until you have seen the whole manual
+
+## 730. grep meow[a-z]\* kitty_1 -n | sed -E s/[0-9]+/1/
+
+### 730.1
+
+Looks like there's a lot of options with `sed` as well. There's a flag to use extended regular expressions. Add it to that previous command that didn't work so it recognizes the `+` in your pattern. The previous command was `grep -n 'meow[a-z]*' kitty_ipsum_1.txt | sed 's/[0-9]+/1/'`.
+
+#### HINTS
+
+- Find the flag you need from the menu and add it to the previous command
+- Here's an example: `<command> | sed <flag> '<argument>'`
+- It's the `-E` flag
+- Enter `grep -n 'meow[a-z]*' kitty_ipsum_1.txt | sed -E 's/[0-9]+/1/'` in the terminal
+
+## 740. grep meow[a-z]\* kitty_1 -n | sed -E s/([0-9]+)/\1/
+
+### 740.1
+
+It worked that time. It replaced all the numbers at the start with a `1`. Next, you will use a capture group in the regex to capture the numbers so you can use them in the replacement area. Enter the same command but use `s/([0-9]+)/\1/` with `sed` to capture the numbers at the start. It will replace them with themselves for now.
+
+#### HINTS
+
+- The previous command was `grep 'meow[a-z]*' kitty_ipsum_1.txt -n | sed -E 's/[0-9]+/1/'`
+- Enter `grep -n 'meow[a-z]*' kitty_ipsum_1.txt | sed -E 's/([0-9]+)/\1/'` in the terminal
+
+## 750. grep meow[a-z]_ kitty_1 -n | sed -E s/([0-9]+)._/\1/
+
+### 750.1
+
+That matched all the numbers and replaced them with the same numbers. All you need to do is match everything else on each line and replace it with only the numbers. Add `.*` at the end of the `sed` matching pattern so it matches everything, captures the numbers, and replaces everything with the captured numbers.
+
+#### HINTS
+
+- The previous command was `grep 'meow[a-z]*' kitty_ipsum_1.txt -n | sed -E 's/([0-9]+)/\1/'`
+- The new `sed` argument should be `'s/([0-9]+).*/\1/'`
+- Enter `grep -n 'meow[a-z]*' kitty_ipsum_1.txt | sed -E 's/([0-9]+).*/\1/'` in the terminal
+
+## 760. previous with >> kitty_info
+
+### 760.1
+
+There's your list of numbers for the `kitty_info.txt` file. Enter the same command and append the list of numbers to it.
+
+#### HINTS
+
+- The previous command was `grep -n 'meow[a-z]*' kitty_ipsum_1.txt | sed -E 's/([0-9]+).*/\1/'`
+- Here's an example: `<command> >> <filename>`
+- Append the output of the previous command with `>> kitty_info.txt`
+- Enter `grep -n 'meow[a-z]*' kitty_ipsum_1.txt | sed -E 's/([0-9]+).*/\1/' >> kitty_info.txt` in the terminal
+
+## 770. grep cat[a-z]\* kitty_1 —-color
+
+### 770.1
+
+Take a look at the file. Hopefully it doesn't look too messy. You can reset a lesson at any time if it doesn't look right, or if you accidentally change something in one of the other files. There's one more group of words to find info on for this file. Use `grep` with the `--color` flag to see all the words that start with `cat` in the same file. Use a similar pattern that you used to find words starting with `meow`.
+
+#### HINTS
+
+- You use `meow[a-z]*` to see all the words that start with `meow`
+- Use `cat[a-z]*` as your pattern
+- Here's an example: `grep --color '<pattern>' <filename>`
+- Enter `grep --color 'cat[a-z]*' kitty_ipsum_1.txt` in the terminal
+
+## 780. echo Number of times cat, cats, or catnip appears: >> kitty_info
+
+### 780.1
+
+There's three variations of words starting with `cat`. Use `echo` with the `-e` flag to append `Number of times cat, cats, or catnip appears:` to the `kitty_info.txt` file. Put a new line at the beginning of the text like the other lines.
+
+#### HINTS
+
+- You previously entered `echo -e "\nLines that they appear on:" >> kitty_info.txt`
+- Enter `echo -e "\nNumber of times cat, cats, or catnip appears:" >> kitty_info.txt` in the terminal
+
+## 790. grep cat[a-z]\* kitty_1 -o
+
+### 790.1
+
+You will want to find the number of times those words appear again. First, use `grep` with the correct flag to put all the matches of the `cat[a-z]*` pattern on their own line.
+
+#### HINTS
+
+- Here's an example: `grep <flag> '<pattern>' <filename>`
+- Make sure to use the `kitty_ipsum_1.txt` file
+- You want the `-o` flag
+- Enter `grep -o 'cat[a-z]*' kitty_ipsum_1.txt` in the terminal
+
+## 800. grep cat[a-z]\* kitty_1 -o | wc -l
+
+### 800.1
+
+Enter the same command and pipe the output into the command that outputs the count of those lines.
+
+#### HINTS
+
+- You want to pipe the output of the previous command into the `wc` command
+- The previous command was `grep -o 'cat[a-z]*' kitty_ipsum_1.txt`
+- Use the correct flag with `wc` to output the line count of the grep output
+- It's the `-l` flag
+- Enter `grep -o 'cat[a-z]*' kitty_ipsum_1.txt | wc -l`
+
+## 810. grep cat[a-z]\* kitty_1 -o | wc -l >> kitty_info
+
+### 810.1
+
+That's a count of how many times `cat`, `cats`, or `catnip` appears in the file. Enter the same command and append the count to the `kitty_info.txt` file.
+
+#### HINTS
+
+- The previous command was `grep -o 'cat[a-z]*' kitty_ipsum_1.txt | wc -l`
+- Append output like this: `>> <filename>`
+- Enter `grep -o 'cat[a-z]*' kitty_ipsum_1.txt | wc -l >> kitty_info.txt` in the terminal
+
+## 820. echo -e Lines that they appear on: >> kitty_info
+
+### 820.1
+
+Next, use `echo` to add the text `Lines that they appear on:` to the `kitty_info.txt` file again. Place a new line in front of the text like before.
+
+#### HINTS
+
+- Here's an example: `<command> >> <filename>`
+- You want the `echo` command with the `-e` flag and the new line character (`\n`)
+- You previously entered `echo -e "\nNumber of times cat, cats, or catnip appears:" >> kitty_info.txt`
+- Enter `echo -e "\nLines that they appear on:" >> kitty_info.txt` in the terminal
+
+## 830. grep cat[a-z]\* kitty_1 -n
+
+### 830.1
+
+The process to add the lines to the file will be the same as you did before. Start by using `grep` to match the `cat` words in the file and showing the line numbers with the output.
+
+#### HINTS
+
+- Here's an example: `grep <flag> '<pattern>' <filename>`
+- Make sure to use the `cat[a-z]*` pattern again
+- Use the `-n` flag to show the line numbers
+- Enter `grep -n 'cat[a-z]*' kitty_ipsum_1.txt` in the terminal
+
+## 840. grep cat[a-z]_ kitty_1 -n | sed -E s/([0-9]+)._/\1/
+
+### 840.1
+
+That shows you the line numbers and text. You will have to use `sed` again to extract only the line numbers. Pipe the output of the last command into `sed` to do that. As a reminder, the `sed` pattern was `'s/([0-9]+).*/\1/'`.
+
+#### HINTS
+
+- The last command was `grep -n 'cat[a-z]*' kitty_ipsum_1.txt`
+- Don't forget the `sed` flag for using extended regular expressions
+- It's the `-E` flag
+- You previously used `grep -n 'meow[a-z]*' kitty_ipsum_1.txt | sed -E 's/([0-9]+).*/\1/'`
+- Enter `grep -n 'cat[a-z]*' kitty_ipsum_1.txt | sed -E 's/([0-9]+).*/\1/'` in the terminal
+
+## 850. previous with >> kitty_info
+
+### 850.1
+
+Awesome. Enter the last command and append the line numbers to the `kitty_info.txt` file.
+
+#### HINTS
+
+- The previous command was `grep -n 'cat[a-z]*' kitty_ipsum_1.txt | sed -E 's/([0-9]+).*/\1/'`
+- Append to a file by adding `>> <filename>` at the end of a command
+- You previously used `grep -n 'meow[a-z]*' kitty_ipsum_1.txt | sed -E 's/([0-9]+).*/\1/' >> kitty_info.txt`
+- Enter `grep -n 'cat[a-z]*' kitty_ipsum_1.txt | sed -E 's/([0-9]+).*/\1/' >> kitty_info.txt` in the terminal
+
+## 860. echo -e \n\n~~ kitty_ipsum_2.txt info ~~ >> kitty_info
+
+### 860.1
+
+Hopefully your info file is looking good. Next, you want to do the same thing for the `kitty_ipsum_2.txt` file. Using `echo` in the terminal, append `~~ kitty_ipsum_2.txt info ~~` to the `kitty_info.txt` file. Put **two** new lines in front of the text this time.
+
+#### HINTS
+
+- You want the `echo` command with the `-e` flag and the new line character (`\n`) twice
+- Here's an example: `echo -e "\n\n<text>" >> <filename>`
+- You previously entered `echo -e "\nLines that they appear on:" >> kitty_info.txt`
+- Enter `echo -e "\n\n~~ kitty_ipsum_2.txt info ~~" >> kitty_info.txt` in the terminal
+
+## 870. echo -e \nNumber of lines: >> kitty_info
+
+### 870.1
+
+The first piece of info you want to know is the number of lines in the file. Use the terminal to append `Number of lines:` to the file with a new line in front.
+
+#### HINTS
+
+- You want the `echo` command with the `-e` flag and the new line character (`\n`)
+- Here's an example: `echo -e "\n<text>" >> <filename>`
+- You previously entered `echo -e "\nLines that they appear on:" >> kitty_info.txt`
+- Enter `echo -e "\nNumber of lines:" >> kitty_info.txt` in the terminal
+
+## 880. cat kitty_2 | wc -l >> kitty_info
+
+### 880.1
+
+Use `cat` with the pipe method to append the info to the `kitty_info.txt` file that it is asking for.
+
+#### HINTS
+
+- Enter the commands one at a time to see the output first
+- Here's an example: `cat <filename> | <command> >> <filename>`
+- You want to `cat kitty_ipsum_2.txt`
+- And pipe the output of that into the `wc` command
+- Which uses the `-l` flag to get the number of lines in the file
+- And appends the number to the file like this: `>> kitty_info.txt`
+- You previously used `cat kitty_ipsum_1.txt | wc -w >> kitty_info.txt`
+- Enter `cat kitty_ipsum_2.txt | wc -l >> kitty_info.txt` in the terminal
+
+## 890. echo -e \nNumber of words: >> kitty_info
+
+### 890.1
+
+Nice job! Next, use the terminal to append `Number of words:` to the `kitty_info.txt` file. Put a new line in front of the text again.
+
+#### HINTS
+
+- You want the `echo` command with the `-e` flag and the new line character (`\n`)
+- Here's an example: `echo -e "\n<text>" >> <filename>`
+- You previously entered `echo "\nNumber of lines:" >> kitty_info.txt`
+- Enter `echo -e "\nNumber of words:" >> kitty_info.txt`
+
+## 900. wc -w < kitty_ipsum_2.txt >> kitty_info
+
+### 900.1
+
+Append the suggested info the `kitty_info.txt` file. Use redirection instead of the pipe method for the input this time.
+
+#### HINTS
+
+- Enter the commands one at a time to see the output first
+- Here's an example: `<command> < <input_filename> >> <output_filename>`
+- You want to use `kitty_ipsum_2.txt` for the input of the `wc` command
+- With the `-w` flag to get the number of words from the input
+- And output the numbers of words to the file `>> kitty_info.txt`
+- You previously used `wc -m < kitty_ipsum_1.txt >> kitty_info.txt`
+- Enter `wc -w < kitty_ipsum_2.txt >> kitty_info.txt` in the terminal
+
+## 910. echo -e \nNumber of characters: >> kitty_info
+
+### 910.1
+
+Next, is the character count. Append `Number of characters:` to the file with a new line in front of the text. Use the method you have been using.
+
+#### HINTS
+
+- You want the `echo` command with the `-e` flag and the new line character (`\n`)
+- Here's an example: `echo -e "\n<text>" >> <filename>`
+- You previously entered `echo -e "\nNumber of words:" >> kitty_info.txt`
+- Enter `echo -e "\nNumber of characters:" >> kitty_info.txt` in the terminal
+
+## 920. wc -m < kitty_ipsum_2.txt >> kitty_info
+
+### 920.1
+
+Using the pipe or input redirection method, append the character count of `kitty_ipsum_2.txt` to the `kitty_info.txt` file.
+
+#### HINTS
+
+- Enter the commands one at a time to see the output first
+- You will want to use the `wc` command with the `-m` flag
+- Here's an example: `<command> < <input_filename> >> <output_filename>`
+- You previously used `wc -w < kitty_ipsum_2.txt >> kitty_info.txt`
+- Enter `wc -m < kitty_ipsum_2.txt >> kitty_info.txt` in the terminal
+
+## 925. grep --color meow[a-z]\* kitty_2
+
+### 925.1
+
+Excellent. Next, use `grep` to see how many variations of `meow` there are in `kitty_ipsum_2.txt`. Use the same pattern you used before and add the flag to show colors so it's easier to see.
+
+#### HINTS
+
+- Here's an example `grep <flag> '<pattern>' <filename>`
+- The pattern you want is `meow[a-z]*`
+- Be sure to use the `--color` flag
+- Enter `grep --color 'meow[a-z]*' kitty_ipsum_2.txt` in the terminal
+
+## 930. echo -e \nNumber of times meow or meowzer appears: >> kitty_info
+
+### 930.1
+
+It's the same variations as the other file. Append `Number of times meow or meowzer appears:` to the `kitty_info.txt` file with a new line in front of it like before.
+
+#### HINTS
+
+- You want the `echo` command with the `-e` flag and the new line character (`\n`)
+- Here's an example: `echo -e "\n<text>" >> <filename>`
+- You previously entered `echo -e "\nNumber of characters:" >> kitty_info.txt`
+- Enter `echo -e "\nNumber of times meow or meowzer appears:" >> kitty_info.txt` in the terminal
+
+## 940. grep -o 'meow[a-z]\*' kitty_ipsum_2.txt | wc -l >> kitty_info
+
+### 940.1
+
+Use `grep` and `wc` in the terminal to append the suggested number to the `kitty_info.txt` file.
+
+#### HINTS
+
+- Enter the commands one at a time to see the output first
+- Here's an example: `<command_1> | <command_2> >> kitty_info.txt`
+- You want to use `grep` to get the matches for `meow[a-z]*`
+- Add the flag to put the matched words on their own line
+- It's the `-o` flag
+- Pipe the `grep` results into the `wc` command
+- Add the `-l` flag to the `wc` to count the lines
+- Append the results of that to the file with `>> kitty_info.txt`
+- You previously used `grep -o 'cat[a-z]*' kitty_ipsum_1.txt | wc -l >> kitty_info.txt`
+- Enter `grep -o 'meow[a-z]*' kitty_ipsum_2.txt | wc -l >> kitty_info.txt` in the terminal
+
+## 950. echo -e \nLines that they appear on: >> kitty_info
+
+### 950.1
+
+:sunglasses: Next, use the terminal to append `Lines that they appear on:` to the `kitty_info.txt` file with a new line in front of the text.
+
+#### HINTS
+
+- Use the `echo` command with the `-e` flag and the new line character (`\n`)
+- Here's an example: `echo -e "\n<text>" >> <filename>`
+- You previously entered `echo -e "\nNumber of times meow or meowzer appears:" >> kitty_info.txt`
+- Enter `echo -e "\nLines that they appear on:" >> kitty_info.txt` in the terminal
+
+## 960. grep -n meow[a-z]_ kitty_2 | sed -E s/([0-9]+)._/\1/ >> kitty_info
+
+### 960.1
+
+Use `grep` and `sed` in the terminal to append the suggested line numbers to the `kitty_info.txt` file.
+
+#### HINTS
+
+- Here's an example: `<command_1> | <command_2> >> kitty_info.txt`
+- Enter the commands one at a time to see the output first
+- You want to use `grep` to get the matches for `meow[a-z]*`
+- Add the `-n` flag to `grep` to show the line numbers in front of the matches
+- Pipe the `grep` results into the `sed` command
+- The `sed` command should replace `([0-9]+).*'` with `\1` to get the line numbers
+- Don't forget the `-E` flag with `sed` to allow extended regular expressions
+- You `sed` arguments should be `-E 's/([0-9]+).*/\1/'`
+- Append the results to the file with `>> kitty_info.txt`
+- You previously used `grep -n 'cat[a-z]*' kitty_ipsum_1.txt | sed -E 's/([0-9]+).*/\1/' >> kitty_info.txt` in the terminal
+- Enter `grep -n 'meow[a-z]*' kitty_ipsum_2.txt | sed -E 's/([0-9]+).*/\1/' >> kitty_info.txt` in the terminal
+
+## 965. grep --color cat[a-z]\* kitty_2
+
+### 965.1
+
+:sunglasses: :sunglasses: Use `grep` to see how many variations of `cat` there are in `kitty_ipsum_2.txt`. Use the same pattern you used before and include the flag to show colors so it's easier to see.
+
+#### HINTS
+
+- Here's an example `grep <flag> '<pattern>' <filename>`
+- The pattern you want is `cat[a-z]*`
+- Be sure to use the `--color` flag
+- Enter `grep --color 'cat[a-z]*' kitty_ipsum_2.txt` in the terminal
+
+## 970. echo -e \nNumber of times cat, cats, or catnip appears: >> kitty_info
+
+### 970.1
+
+Same variations as the other kitty ipsum file. Append `Number of times cat, cats, or catnip appears:` to the `kitty_info.txt` file. Use the method you have been using.
+
+#### HINTS
+
+- Don't forget the new line in front of the text
+- Use the `echo` command with the `-e` flag and the new line character (`\n`)
+- Here's an example: `echo -e "\n<text>" >> <filename>`
+- You previously entered `echo -e "\nLines that they appear on:" >> kitty_info.txt`
+- Enter `echo -e "\nNumber of times cat, cats, or catnip appears:" >> kitty_info.txt` in the terminal
+
+## 980. grep -o 'cat[a-z]\*' kitty_2 | wc -l >> kitty_info
+
+### 980.1
+
+Use `grep` and `wc` in the terminal to append the suggested info to `kitty_info.txt`
+
+#### HINTS
+
+- Enter the commands one at a time to see the output first
+- Here's an example: `<command_1> | <command_2> >> kitty_info.txt`
+- You want to use `grep` to get the matches for `cat[a-z]*`
+- Add the `-o` flag to `grep` to put each match on it's own line
+- Pipe the `grep` results into the `wc` command
+- Add the `-l` flag to the `wc` to count the lines
+- Append the results of that to the file with `>> kitty_info.txt`
+- You previously used `grep -o 'meow[a-z]*' kitty_ipsum_1.txt | wc -l >> kitty_info.txt`
+- Enter `grep -o 'cat[a-z]*' kitty_ipsum_2.txt | wc -l >> kitty_info.txt` in the terminal
+
+## 990. echo -e \nLines that they appear on: >> kitty_info
+
+### 990.1
+
+:sunglasses: :sunglasses: :sunglasses: One more. Append `Lines that they appear on:` to it like you did for the others.
+
+#### HINTS
+
+- Don't forget the new line
+- Use the `echo` command with the `-e` flag and the new line character (`\n`)
+- Here's an example: `echo -e "\n<text>" >> <filename>`
+- You previously entered `echo -e "\nNumber of times cat, cats, or catnip appears:" >> kitty_info.txt`
+- Enter `echo -e "\nLines that they appear on:" >> kitty_info.txt` in the terminal
+
+## 1000. grep -n cat[a-z]\* kitty_2 | sed -E >> kitty_info
+
+### 1000.1
+
+Use `grep` and `sed` in the terminal to append the suggested numbers to the `kitty_info.txt` file.
+
+#### HINTS
+
+- Enter the commands one at a time to see the output first
+- Here's an example: `<command_1> | <command_2> >> kitty_info.txt`
+- You want to use `grep` to get the matches for `cat[a-z]*`
+- Add the `-n` flag to `grep` to show the line numbers in front of the matches
+- Pipe the `grep` results into the `sed` command
+- The `sed` command should replace `([0-9]+).*'` with `\1` to get the line numbers
+- Don't forget the `-E` flag with `sed` to allow extended regular expressions
+- You `sed` arguments should be `-E 's/([0-9]+).*/\1/'`
+- Append the results to the file wiht `>> kitty_info.txt`
+- You previously used `grep -n 'meow[a-z]*' kitty_ipsum_2.txt | sed -E 's/([0-9]+).*/\1/' >> kitty_info.txt` in the terminal
+- Enter `grep -n 'cat[a-z]*' kitty_ipsum_2.txt | sed -E 's/([0-9]+).*/\1/' >> kitty_info.txt` in the terminal
+
+## 1010. touch translate.sh
+
+### 1010.1
+
+:sunglasses: :sunglasses: :sunglasses: :sunglasses: The `kitty_info` file is done and it has some information about the two ipsum files. Next, you will create a small script to translate both them into doggy ipsum. It will be as simple as replacing all the cat references with similar words for dogs. In the terminal, use `touch` to create `translate.sh`.
+
+#### HINTS
+
+- Here's an example: `touch <filename>`
+- Enter `touch translate.sh` in the terminal
+- Make sure you are in the `project` folder first
+
+## 1020. chmod +x ./translate.sh
+
+### 1020.1
+
+Give your new script executable permissions so you can run it in the terminal.
+
+#### HINTS
+
+- Here's an example: `chmod +x <filename>`
+- Enter `chmod +x translate.sh` in the terminal
+
+## 1030. Add shebang
+
+### 1030.1
+
+Add a shebang to the script that uses `bash` like you did for the other script you made.
+
+#### HINTS
+
+- The shebang for bash is `#!/bin/bash`
+- Add the suggestion at the top of the `translate.sh` file
+- Add `#!/bin/bash` at the top of the `translate.sh` file
+
+## 1040. Add cat $1
+
+### 1040.1
+
+The script will take a file as input that can be passed as an argument or read from `stdin`. Below the shebang, use `cat` to print the content of the first argument passed to the script.
+
+#### HINTS
+
+- Here's an example: `cat <first_argument>`
+- You can access an arguement with `$<argument_number>`
+- Access the arguement with `$1`
+- Add `cat $1` below the shebang in your `translate.sh` file
+
+## 1050. ./translate.sh kitty_1
+
+### 1050.1
+
+Run the script and use the first kitty ipsum file as an argument to see if it's working.
+
+#### HINTS
+
+- Here's an example: `<command_to_run> <argument>`
+- Enter `./translate.sh kitty_ipsum_1.txt` in the terminal
+
+## 1060. ./translate.sh < kitty_1
+
+### 1060.1
+
+Try the same command using redirection to print the file.
+
+#### HINTS
+
+- Here's an example: `<command> < <filename>`
+- Redirect the `kitty_ipsum_1.txt` file as input for your script
+- Enter `./translate.sh < kitty_ipsum_1.txt` in the terminal
+
+## 1070. cat kitty_1 | ./translate.sh
+
+### 1070.1
+
+Looks like that is working. Try the `cat` and pipe method.
+
+#### HINTS
+
+- Here's and example `cat <filename> | <command>`
+- Use `cat` to set the content of `kitty_ipsum_1.txt` as input for your script
+- Enter `cat kitty_ipsum_1.txt | ./translate.sh` in the terminal
+
+## 1080. Add | sed s/catnip/dogchow/
+
+### 1080.1
+
+Using any of those three methods as input is working. Time to start replacing some of the text with doggy ipsum. In your script file, pipe the input into a `sed` that replaces `catnip` with `dogchow`.
+
+#### HINTS
+
+- Here's an example: `cat $1 | sed 's/<pattern>/<replacement>/'`
+- The `sed` argument should be `s/catnip/dogchow/`
+- The `translate.sh` file should look like this:
+
+```sh
+#!/bin/bash
+
+cat $1 | sed 's/catnip/dogchow/'
+```
+
+## 1090. ./translate kitty_1
+
+### 1090.1
+
+Run the script passing the first kitty ipsum file as a argument to see if it's working.
+
+#### HINTS
+
+- Here's an example: `<command> <argument>`
+- Use the `kitty_ipsum_1.txt` file as the argument
+- Enter `./translate.sh kitty_ipsum_1.txt` in the terminal
+
+## 1100. ./translate kitty_1 | grep --color dogchow
+
+### 1100.1
+
+If you look, you can find `dogchow` in there so it's probably working. To make sure pipe the results of that into a `grep` command that searches for `dogchow`. Output the results in color.
+
+#### HINTS
+
+- The previous command was `./translate.sh kitty_ipsum_1.txt`
+- Pipe the results of the previous command into `grep` so it searches for `dogchow`
+- Don't forget the `--color` flag to show the results in color
+- Here's an example: `./translate.sh kitty_ipsum_1.txt | grep <flag> '<pattern>'`
+- Enter `./translate.sh kitty_ipsum_1.txt | grep --color 'dogchow'` in the terminal
+
+## 1110. ./translate kitty_1 | grep --color catnip
+
+### 1110.1
+
+It's showing three places `catnip` was replaced with `dogchow`. To make sure you got them all, enter the previous command and search for `catnip` instead.
+
+#### HINTS
+
+- The previous command was `./translate.sh kitty_ipsum_1.txt | grep --color 'dogchow'`
+- Replace `dogchow` with `catnip` in the previous command
+- Enter `./translate.sh kitty_ipsum_1.txt | grep --color 'catnip'` in the terminal
+
+## 1120. Add s/cat/dog/
+
+### 1120.1
+
+It didn't output anything, so it must be replacing all the instances of `catnip`. You can replace many patterns using `sed` like this: `sed 's/<pattern_1>/<replacement_1>/; s/<pattern_2>/<replacement_2>/'`. Note that you need the semi-colon between the two replacement patterns and they both need to be wrapped in the quotes. In your script, add another pattern to the `sed` command that replaces `cat` with `dog`.
+
+#### HINTS
+
+- The code looks like this: `s/cat/dog/`
+- The `translate.sh` file should look like this:
+
+```sh
+#!/bin/bash
+
+cat $1 | sed 's/catnip/dogchow/; s/cat/dog/'
+```
+
+## 1130. ./translate.sh kitty_1 | grep --color dog[a-z]
+
+### 1130.1
+
+Now, it should replace `catnip` with `dogchow` and `cat` with `dog`. Use the script the translate the first ipsum file again. Search the results with `grep` for any words that start with `dog`. Part of that search pattern should be `[a-z]*`. Make sure to show the results in color.
+
+#### HINTS
+
+- You previously entered `./translate.sh kitty_ipsum_1.txt | grep --color 'catnip'`
+- The `grep` pattern you want is `dog[a-z]*`
+- Enter `./translate.sh kitty_ipsum_1.txt | grep --color 'dog[a-z]*'` in the terminal
+
+## 1135. ./translate.sh kitty_1 | grep --color cat[a-z]
+
+### 1135.1
+
+As expected, it replaced instances of `cat` with `dog`. Enter the same command, but search for anything starting with `cat` to make sure it replaced them all.
+
+#### HINTS
+
+- The previous command was `./translate.sh kitty_ipsum_1.txt | grep --color 'dog[a-z]*'`
+- Replace `dog[a-z]*` with `cat[a-z]*` in the previous command
+- Enter `./translate.sh kitty_ipsum_1.txt | grep --color 'cat[a-z]*'` in the terminal
+
+## 1140. Add s/meow/woof/
+
+### 1140.1
+
+It didn't find any so it must be replacing them all. You added two patterns as part of the `sed` in your script. Add a third that replaces all `meow` words with `woof`.
+
+#### HINTS
+
+- You can add another pattern to replace like before. Add a semi-colon and another pattern in the quotes of the `sed`
+- Here's an example: `sed 's///; s///; s///'`
+- The third pattern should be `s/meow/woof/`
+- The `translate.sh` file should look like this:
+
+```sh
+#!/bin/bash
+
+cat $1 | sed 's/catnip/dogchow/; s/cat/dog/; s/meow/woof/'
+```
+
+## 1150. ./translate.sh kitty_1 | grep --color dog[a-z]woof[a-z]
+
+### 1150.1
+
+Using your script, translate the first ipsum file again. Check the results with `grep` for words that start with `dog` or `woof`. Here's an example of the search pattern you want: `grep '<dog_words>|<woof_words>'`. To view "dog words", you would use `dog[a-z]*`. Be sure to view the result in color.
+
+#### HINTS
+
+- You previously entered `./translate.sh kitty_ipsum_1.txt | grep --color 'cat[a-z]*'`
+- You want to find "dog" words with `dog[a-z]*` and "woof" words with `woof[a-z]*`
+- The search pattern you should use is `'dog[a-z]*|woof[a-z]*'`
+- Enter `./translate.sh kitty_ipsum_1.txt | grep --color 'dog[a-z]*|woof[a-z]*'` in the terminal
+
+## 1160. ./translate.sh kitty_1 | grep --color -E dog[a-z]woof[a-z]
+
+### 1160.1
+
+That didn't work. Enter the same command, but add the flag to use extended regular expressions to the `grep` search so it recognizes the `|`.
+
+#### HINTS
+
+- The last command was `./translate.sh kitty_ipsum_1.txt | grep --color 'dog[a-z]*|woof[a-z]*'`
+- Find the flag you want in the `grep` manual
+- View the manual with `man grep`
+- It's the `-E` flag
+- Enter `./translate.sh kitty_ipsum_1.txt | grep --color -E 'dog[a-z]*|woof[a-z]*'` in the terminal
+
+## 1170. Add g regex flag
+
+### 1170.1
+
+If you look closely, you can see that the `meow` part of `meowzer` on that one line didn't get replaced with `woof`. `grep` only matched the first instance of `meow` it found on that line. Add the "global" regex flag to all three patterns of the `sed` command in your script so it will replace all instances of any of the words.
+
+#### HINTS
+
+- Here's an example of one pattern: `s/<pattern>/<replacement>/<regex_flags>`
+- It's the `g` flag
+- Your `translate.sh` file should look like this:
+
+```sh
+#!/bin/bash
+
+cat $1 | sed 's/catnip/dogchow/g; s/cat/dog/g; s/meow/woof/g'
+```
+
+## 1180. ./translate.sh kitty_1 | grep --color -E dog[a-z]woof[a-z]
+
+### 1180.1
+
+Enter the same command to translate the first ipsum file and see the matches of all words starting with `dog` or `woof` to see if that worked.
+
+#### HINTS
+
+- You can find previously entered commands using the arrow on the keyboard while the terminal is focused
+- Enter `./translate.sh kitty_ipsum_1.txt | grep --color -E 'dog[a-z]*|woof[a-z]*'` in the terminal
+
+## 1190. Add -E s/meow|meowzer/woof/
+
+### 1190.1
+
+It worked, but `woofzer` doesn't sound quite right. Change your `sed` pattern that matched `meow` to match `meow|meowzer`. Add the flag to use extended regular expressions to the `sed` command so it recognizes the `|`.
+
+#### HINTS
+
+- The last `sed` pattern in you scrip should be `s/meow|meowzer/woof/`
+- And you should add the `-E` flag to the `sed` command
+- Your `translate.sh` file should look like this:
+
+```sh
+#!/bin/bash
+
+cat $1 | sed -E 's/catnip/dogchow/g; s/cat/dog/g; s/meow|meowzer/woof/g'
+```
+
+## 1200. ./translate.sh kitty_1 | grep --color -E dog[a-z]woof[a-z]
+
+### 1200.1
+
+Now it should replace either of those two words with `woof`. Check it again with that command you entered before that searches for `dog` or `woof` words.
+
+#### HINTS
+
+- You can use the up arrow in the terminal to find previously entered commands
+- Enter `./translate.sh kitty_ipsum_1.txt | grep --color -E 'dog[a-z]*|woof[a-z]*'` in the terminal
+
+## 1210. ./translate.sh kitty_1 | grep --color -E meow[a-z]cat[a-z]
+
+### 1210.1
+
+It replaced `meowzer` that time. To be sure it replaced all the words in the file, enter the same command but check for `meow` or `cat` words in the same way.
+
+#### HINTS
+
+- The last command was `./translate.sh kitty_ipsum_1.txt | grep --color -E 'dog[a-z]*|woof[a-z]*'`
+- Replace the matching pattern with `meow[a-z]*|cat[a-z]*`
+- Enter `./translate.sh kitty_ipsum_1.txt | grep --color -E 'meow[a-z]*|cat[a-z]*'` in the terminal
+
+## 1220. ./translate.sh kitty_2 | grep --color -E meow[a-z]cat[a-z]
+
+### 1220.1
+
+No results means it didn't find any matches for `cat` or `meow` words after being translated. Check the second kitty ipsum file for the same pattern to make sure it's replacing all those words.
+
+#### HINTS
+
+- You can find previously entered commands using the arrow on the keyboard while the terminal is focused
+- The last command was `./translate.sh kitty_ipsum_1.txt | grep --color -E 'meow[a-z]*|cat[a-z]*'`
+- Change the last command to use the `kitty_ipsum_2.txt` file
+- Enter `./translate.sh kitty_ipsum_2.txt | grep --color -E 'meow[a-z]*|cat[a-z]*'` in the terminal
+
+## 1230. ./translate.sh kitty_1 > doggy_1
+
+### 1230.1
+
+Okay, your script is finished. Translate the `kitty_ipsum_1.txt` file and put the output into a new `doggy_ipsum_1.txt` file.
+
+#### HINTS
+
+- Redirect the `stdout` of translating `kitty_ipsum_1.txt` to `doggy_ipsum_1.txt`
+- Here's an example: `<translate_command> <input_filename> > <output_filename>`
+- Enter `./translate.sh kitty_ipsum_1.txt > doggy_ipsum_1.txt` in the terminal
+
+## 1240. cat doggy_1
+
+### 1240.1
+
+Use `cat` to print the new file to the terminal.
+
+#### HINTS
+
+- Here's an example: `cat <filename>`
+- Enter `cat doggy_ipsum_1.txt` in the terminal
+
+## 1250. diff kitty_1 doggy_1
+
+### 1250.1
+
+It looks good :thumbsup: `diff` is a command to view the difference between two files. You can use it like this: `diff <file_1> <file_2>`. Use it to view the difference between the `kitty_ipsum_1` and `doggy_ipsum_1` files.
+
+#### HINTS
+
+- Enter `diff kitty_ipsum_1.txt doggy_ipsum_1.txt` in the terminal
+
+## 1260. man diff
+
+### 1260.1
+
+It may look a little cryptic, but it's showing the lines that don't match in the two files. Check the manual of `diff` to see if there's any way to make it prettier.
+
+#### HINTS
+
+- View the manual of a command with `man`
+- Here's an example: `man <command>`
+- Enter `man diff` in the terminal
+- Press enter until you have seen the whole manual
+
+## 1270. diff --color kitty_1 doggy_1
+
+### 1270.1
+
+Use the flag to show the diff of the same two files in color.
+
+#### HINTS
+
+- You previously entered `diff kitty_ipsum_1.txt doggy_ipsum_1.txt`
+- The flag you want is `--color`
+- Enter `diff --color kitty_ipsum_1.txt doggy_ipsum_1.txt` in the terminal
+
+## 1280. ./translate.sh kitty_2 > doggy_2
+
+### 1280.1
+
+That's better. The red lines are lines that aren't in the second file, and the green lines are what they were replaced with. The line numbers that were changed are above each section. Translate your second kitty ipsum file and redirect the output into `doggy_ipsum_2.txt`.
+
+#### HINTS
+
+- You previously entered `./translate.sh kitty_ipsum_1.txt > doggy_ipsum_1.txt`
+- Enter `./translate.sh kitty_ipsum_2.txt > doggy_ipsum_2.txt` in the terminal
+
+## 1290. cat doggy_2
+
+### 1290.1
+
+View the content of your new file with `cat`
+
+#### HINTS
+
+- Here's an example: `cat <filename>`
+- Enter `cat doggy_ipsum_2.txt` in the terminal
+
+## 1300. diff --color kitty_2 doggy_2
+
+### 1300.1
+
+Lastly, view the `diff` of the two files in color again.
+
+#### HINTS
+
+- Here's the example again: `diff <file_1> <file_2>`
+- Don't forget the flag to show the colors
+- It's the `--color` flag
+- You previosly entered `diff --color kitty_ipsum_1.txt doggy_ipsum_1.txt`
+- Enter `diff --color kitty_ipsum_2.txt doggy_ipsum_2.txt` in the terminal
+
+# Learn Bash and SQL by Building a Bike Rental Shop
+
+> Welcome to the Bash and SQL lessons!
+
+## 10. Start the Terminal
+
+### 10.1
+
+**The first thing you need to do is start the terminal.** Do that by clicking the "hamburger" menu at the top left of the screen, going to the "terminal" section, and clicking "new terminal". Once you open a new one, type `echo hello terminal` into the terminal and press enter.
+
+#### HINTS
+
+- Capitalization matters
+- If the tests don't run automatically, try typing `exit` into the terminal and redoing the instructions
+
+## 20. Log in to Psql
+
+### 20.1
+
+You are going to build a bike rental shop. It will have a database, and a bash script to interact with the database. Use the terminal to connect to PostgreSQL by entering `psql --username=freecodecamp --dbname=postgres`.
+
+#### HINTS
+
+- Type the above command into the terminal and press enter
+- Type `psql --username=freecodecamp --dbname=postgres` into the terminal and press enter
+
+## 30. List Databases
+
+### 30.1
+
+List the databases with `\l` to see what databases are here.
+
+#### HINTS
+
+- Type `\l` into the psql prompt and press enter
+- Type `psql --username=freecodecamp --dbname=postgres` into the terminal to log in to psql if you aren't logged in first
+
+## 40. Create Database `bikes`
+
+### 40.1
+
+You need your own database for the bike shop. Create a new database named `bikes`.
+
+#### HINTS
+
+- Use the `CREATE DATABASE` keywords
+- Here's an example: `CREATE DATABASE database_name;`
+- Type `CREATE DATABASE bikes;` into the psql prompt and press enter
+- Type `psql --username=freecodecamp --dbname=postgres` into the terminal to log in to psql if you aren't logged in first
+
+## 50. List Databases
+
+### 50.1
+
+List databases again to make sure your database got created.
+
+#### HINTS
+
+- Use the **l**ist shortcut command
+- Type `\l` into the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 60. Connect to `bikes`
+
+### 60.1
+
+There it is. **C**onnect to it so you can start building the structure of your bike shop database.
+
+#### HINTS
+
+- Use the **c**onnect shortcut command
+- Add the database name to the command
+- It's the `\c` command
+- Here's an example: `\c database_name`
+- Try entering `\c bikes` into the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 70. Create table `bikes`
+
+### 70.1
+
+Your database needs three tables. One for your bike inventory, one for your customers, and one for the bikes that are rented out. Create a table named `bikes` in your database for the inventory.
+
+#### HINTS
+
+- Use the `CREATE TABLE` keywords
+- Don't forget the parenthesis
+- Here's an example: `CREATE TABLE table_name();`
+- Try entering `CREATE TABLE bikes();` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 80. Display the tables
+
+### 80.1
+
+**D**isplay the tables to make sure your table got created.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- It's the `\d` command
+- Type `\d` into the psql prompt and press enter
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 90. Add column `bike_id`
+
+### 90.1
+
+The table will have a few columns for bike information. First, is a unique ID column. Add a column to the `bikes` table named `bike_id`. Give it a type of `SERIAL` and make it a `PRIMARY KEY`.
+
+#### HINTS
+
+- Use the `ALTER TABLE`, `ADD COLUMN`, `SERIAL`, and `PRIMARY KEY` keywords
+- Here's an example: `ALTER TABLE table_name ADD COLUMN column_name TYPE CONSTRAINTS;`
+- Try entering `ALTER TABLE bikes ADD COLUMN bike_id SERIAL PRIMARY KEY;` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 100. Display `bikes` Details
+
+### 100.1
+
+Use the **d**isplay command to view the details of the `bikes` table.
+
+#### HINTS
+
+- It's the `\d` command
+- Add the table name to the command
+- Try entering `\d bikes` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 110. Add `type` column
+
+### 110.1
+
+The first column is set. Add a column named `type` for the type of bike. Make it a `VARCHAR(50)` and give it a constraint of `NOT NULL`.
+
+#### HINTS
+
+- Use the `ALTER TABLE`, `ADD COLUMN`, `VARCHAR(50)`, and `PRIMARY KEY` keywords
+- Here's an example: `ALTER TABLE table_name ADD COLUMN column_name TYPE CONSTRAINTS;`
+- Try entering `ALTER TABLE bikes ADD COLUMN type VARCHAR(50) NOT NULL;` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 120. Display `bikes` details
+
+### 120.1
+
+Display the details of the `bikes` table again.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Add the table name to the command
+- Here's an example: `\d table_name`
+- Try entering `\d bikes` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in
+
+## 130. Add Column `size`
+
+### 130.1
+
+The first two columns look good. Add a column named `size` to the `bikes` table that is an `INT` and has the `NOT NULL` constraint. This will be for the size of each bike.
+
+#### HINTS
+
+- Use the `ALTER TABLE`, `ADD COLUMN`, `INT`, and `NOT NULL` keywords
+- Here's an example: `ALTER TABLE table_name ADD COLUMN column_name TYPE CONSTRAINTS;`
+- Try entering `ALTER TABLE bikes ADD COLUMN size INT NOT NULL;` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in
+
+## 140. Add Column `available`
+
+### 140.1
+
+Add another column to the table named `available`. Make it a `boolean` and has a constraint of `NOT NULL`. Also give it a default value of `TRUE`. This will be set to `false` when someone rents out a bike.
+
+#### HINTS
+
+- Use the `ALTER TABLE`, `ADD COLUMN`, `BOOLEAN`, `NOT NULL` and `DEFAULT TRUE` keywords
+- Here's an example: `ALTER TABLE table_name ADD COLUMN column_name TYPE CONSTRAINTS DEFAULT;`
+- Try entering `ALTER TABLE bikes ADD COLUMN available BOOLEAN NOT NULL DEFAULT TRUE;` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in
+
+## 150. Display `bikes` details
+
+### 150.1
+
+Display the details of the `bikes` table again so you can make sure it's how you want it.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Add the table name to the command
+- Here's an example: `\d table_name`
+- Try entering `\d bikes` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 160. Create Table `customers`
+
+### 160.1
+
+That table is done for now. Create another table named `customers`. It will store a name and phone number for each customer that rents a bike.
+
+#### HINTS
+
+- Use the `CREATE TABLE` keywords
+- Don't forget the parenthesis
+- Here's an example: `CREATE TABLE table_name();`
+- Try entering `CREATE TABLE customers();` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 170. Add Column `customer_id`
+
+### 170.1
+
+Add a `customer_id` column to your new table that is a type of `SERIAL` and make it a `PRIMARY KEY`.
+
+#### HINTS
+
+- Use the `ALTER TABLE`, `ADD COLUMN`, `SERIAL`, and `PRIMARY KEY` keywords
+- Here's an example: `ALTER TABLE table_name ADD COLUMN column_name TYPE CONSTRAINTS;`
+- Try entering `ALTER TABLE customers ADD COLUMN customer_id SERIAL PRIMARY KEY;` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 180. Display `customers` Details
+
+### 180.1
+
+Display the details of the `customers` table so you can make sure your new column is there.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Add the table name to the command
+- Here's an example: `\d table_name`
+- Try entering `\d customers` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 190. Add Column `phone`
+
+### 190.1
+
+There it is. Add a column named `phone` for customers phone numbers. Make it a varying character that has a maximum length of `15` characters. Also make sure it can't be null, and that it has to be unique.
+
+#### HINTS
+
+- Use the `ALTER TABLE`, `ADD COLUMN`, `VARCHAR()`, `NOT NULL`, and `UNIQUE` keywords
+- Here's an example: `ALTER TABLE table_name ADD COLUMN column_name TYPE CONSTRAINTS;`
+- Try entering `ALTER TABLE customers ADD COLUMN phone VARCHAR(15) NOT NULL UNIQUE;` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 200. Add Column `name`
+
+### 200.1
+
+Add the last column. Call it `name` and make it a `VARCHAR(40)` that can't be null.
+
+#### HINTS
+
+- Use the `ALTER TABLE`, `ADD COLUMN`, `VARCHAR()`, and `NOT NULL` keywords
+- Here's an example: `ALTER TABLE table_name ADD COLUMN column_name TYPE CONSTRAINTS;`
+- Try entering `ALTER TABLE customers ADD COLUMN name VARCHAR(40) NOT NULL;` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 210. Display `customers` Details
+
+### 210.1
+
+Display the details of the `customers` table.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Add the table name to the command
+- Here's an example: `\d table_name`
+- Try entering `\d customers` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 220. Create Table `rentals`
+
+### 220.1
+
+That table is finished. Lastly, you need a table to store which bikes are rented and who has rented them. Create a new table named `rentals`.
+
+#### HINTS
+
+- Use the `CREATE TABLE` keywords
+- Don't forget the parenthesis
+- Here's an example: `CREATE TABLE table_name();`
+- Try entering `CREATE TABLE rentals();` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 230. Add Column `rental_id`
+
+### 230.1
+
+Add a `rental_id` column to your new table. Make it automatically increment with `SERIAL` and make it the primary key for this table.
+
+#### HINTS
+
+- The other two properties are `SERIAL` and `PRIMARY KEY`
+- Use the `ALTER TABLE`, `ADD COLUMN`, `SERIAL`, and `PRIMARY KEY` keywords
+- Here's an example: `ALTER TABLE table_name ADD COLUMN column_name TYPE CONSTRAINTS;`
+- Try entering `ALTER TABLE rentals ADD COLUMN rental_id SERIAL PRIMARY KEY;` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 240. Display `rentals` Details
+
+### 240.1
+
+Display the details of the `rentals` table.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Add the table name to the command
+- Here's an example: `\d table_name`
+- Try entering `\d rentals` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 250. Add Column `customer_id`
+
+### 250.1
+
+Next, you need a column for the customer who is renting a bike. Add column named `customer_id`. This will have an id of a customer from the customers table. Make the column an `INT` and `NOT NULL` to start.
+
+#### HINTS
+
+- Add the column to the `rentals` table
+- Use the `ALTER TABLE`, `ADD COLUMN`, `INT`, and `NOT NULL` keywords
+- Here's an example: `ALTER TABLE table_name ADD COLUMN column_name TYPE CONSTRAINTS;`
+- Try entering `ALTER TABLE rentals ADD COLUMN customer_id INT NOT NULL;` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 260. Set `customer_id` Foreign Key
+
+### 260.1
+
+Make the column you just added a foreign key that references the `customer_id` column from the `customers` table. Here's an example of how you can do that:
+
+```sql
+ALTER TABLE table_name ADD FOREIGN KEY(column_name) REFERENCES referenced_table(referenced_column);
+```
+
+#### HINTS
+
+- Without the keywords, it looks like tihs: `rentals customer_id customers(customer_id)`
+- Try entering `ALTER TABLE rentals ADD FOREIGN KEY(customer_id) REFERENCES customers(customer_id);` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 270. Display `rentals` Details
+
+### 270.1
+
+Display the details of the `rentals` table to make sure your key is set.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Add the table name to the command
+- Here's an example: `\d table_name`
+- Try entering `\d rentals` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 280. Add Column `bike_id`
+
+### 280.1
+
+That foreign key is set. You need another column so you know what bike a customer is renting. Add a column named `bike_id` and make it an `INT` and `NOT NULL`.
+
+#### HINTS
+
+- Add the column to the `rentals` table
+- Use the `ALTER TABLE`, `ADD COLUMN`, `INT`, and `NOT NULL` keywords
+- Here's an example: `ALTER TABLE table_name ADD COLUMN column_name TYPE CONSTRAINTS;`
+- Try entering `ALTER TABLE rentals ADD COLUMN bike_id INT NOT NULL;` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 290. Add `bike_id` Foreign Key
+
+### 290.1
+
+Make that column a foreign key that references the `bike_id` column from the `bikes` table so you know what bike the id is for.
+
+#### HINTS
+
+- Here's the example again: `ALTER TABLE table_name ADD FOREIGN KEY(column_name) REFERENCES referenced_table(referenced_column);`
+- Without the keywords, it looks like tihs: `rentals bike_id bikes(bike_id)`
+- Try entering `ALTER TABLE rentals ADD FOREIGN KEY(bike_id) REFERENCES bikes(bike_id);` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 300. Display `rentals` Details
+
+### 300.1
+
+Display the details of the `rentals` table so you can make sure the key is correct.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Add the table name to the command
+- Here's an example: `\d table_name`
+- Try entering `\d rentals` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 310. Add `date_rented` Column
+
+### 310.1
+
+Moving along. You want to know when a customer rents a bike, and when it gets returned. Add a column to your `rentals` table named `date_rented` that's a type of `DATE`. Make sure the entry can't be null, and give it a default value of `NOW()`.
+
+#### HINTS
+
+- Add the column to the `rentals` table
+- Use the `ALTER TABLE`, `ADD COLUMN`, `DATE`, `NOT NULL`, and `DEFAULT NOW()` keywords
+- Here's an example: `ALTER TABLE table_name ADD COLUMN column_name TYPE CONSTRAINTS;`
+- Try entering `ALTER TABLE rentals ADD COLUMN date_rented DATE NOT NULL DEFAULT NOW();` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 320. Display `rentals` Details
+
+### 320.1
+
+Display the details of the `rentals` table again.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Add the table name to the command
+- Here's an example: `\d table_name`
+- Try entering `\d rentals` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 330. Add Column `date_returned`
+
+### 330.1
+
+It looks good. Lastly, you need a column for when a customer returns a bike. Add a column named `date_returned` that's a type of `DATE`.
+
+#### HINTS
+
+- Use the `ALTER TABLE`, `ADD COLUMN`, `DATE` keywords
+- Add the column to the `rentals` table
+- Here's an example: `ALTER TABLE table_name ADD COLUMN column_name TYPE;`
+- Try entering `ALTER TABLE rentals ADD COLUMN date_returned DATE;` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 340. Display `rentals` Details
+
+### 340.1
+
+View the details of the table again.
+
+#### HINTS
+
+- It's the `rentals` table
+- Use the **d**isplay shortcut command
+- Add the table name to the command
+- Here's an example: `\d table_name`
+- Try entering `\d rentals` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 350. Display Tables
+
+### 350.1
+
+The tables are all finished. Display all the tables so you can see what you ended up with.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- It's the `\d` command
+- Enter `\d` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 360. Insert 27 inch Mountain Bike
+
+### 360.1
+
+You have nine bikes in your inventory. Add the first one to your `bikes` table. It has a `type` of `Mountain` and a `size` of `27`. Make sure to put your `VARCHAR` values in single quotes. The `bike_id` and `available` columns should be filled in automatically, so you don't need to worry about those.
+
+#### HINTS
+
+- Use the `INSERT INTO` and `VALUES` keywords
+- Here's an example: `INSERT INTO table_name(column_name, column_name) VALUES(value, value);`
+- View the details of the `bikes` table with `\d bikes` to see what values it expects
+- Try entering `INSERT INTO bikes(type, size) VALUES('Mountain', 27);` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 370. Select all from Bikes
+
+### 370.1
+
+View all the columns in your bikes table with `SELECT`.
+
+#### HINTS
+
+- Use `*` to view all the columns
+- Here's an example: `SELECT * FROM table_name;`
+- Try entering `SELECT * from bikes;` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 380. Insert 28 inch Mountain Bike
+
+### 380.1
+
+Looks like it's all working, the `bike_id` and `available` columns were filled in automatically. Insert another bike. Give it a `type` of `Mountain` and a `size` of `28`.
+
+#### HINTS
+
+- Make sure to put your `VARCHAR` values in single quotes
+- Use the `INSERT INTO` and `VALUES` keywords
+- Here's an example: `INSERT INTO table_name(column_name, column_name) VALUES(value, value);`
+- Try entering `INSERT INTO bikes(type, size) VALUES('Mountain', 28);` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 390. Insert 29 inch Mountain Bike
+
+### 390.1
+
+Add another `Mountain` bike to your inventory. Make it a `29` inch bike.
+
+#### HINTS
+
+- Use the `INSERT INTO` and `VALUES` keywords
+- Make sure to put your `VARCHAR` values in single quotes
+- Here's an example: `INSERT INTO table_name(column_name, column_name) VALUES(value, value);`
+- Try entering `INSERT INTO bikes(type, size) VALUES('Mountain', 29);` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 400. Insert 27 inch Road Bike
+
+### 400.1
+
+Add a `27` inch `Road` bike to the table.
+
+#### HINTS
+
+- Use the `INSERT INTO` and `VALUES` keywords
+- Make sure to put your `VARCHAR` values in single quotes
+- Here's an example: `INSERT INTO table_name(column_name, column_name) VALUES(value, value);`
+- Try entering `INSERT INTO bikes(type, size) VALUES('Road', 27);` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 410. Select all from Bikes
+
+### 410.1
+
+Use `SELECT` to view all the data in the `bikes` table again.
+
+#### HINTS
+
+- Use `*` to view all the columns
+- Here's an example: `SELECT * FROM table_name;`
+- Try entering `SELECT * from bikes;` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 420. Insert 28 and 29 inch Road Bikes
+
+### 420.1
+
+Add the two bikes to your inventory, they are `28` and `29` inch `Road` bikes. Try to add them both with one command.
+
+#### HINTS
+
+- Here's an example: `INSERT INTO table_name(column_name, column_name) VALUES(value, value), (value, value);`
+- Make sure to put your `VARCHAR` values in single quotes
+- Try entering `INSERT INTO bikes(type, size) VALUES('Road', 28), ('Road', 29);` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 430. Insert 19, 20, 21 inch BMX Bikes
+
+### 430.1
+
+There's three more bikes. Add `19`, `20`, and `21` inch `BMX` bikes to your table. Try to add them with one command.
+
+#### HINTS
+
+- Here's an example: `INSERT INTO table_name(column_name, column_name) VALUES(value, value), (value, value), (value, value);`
+- Make sure to put your `VARCHAR` values in single quotes
+- Try entering `INSERT INTO bikes(type, size) VALUES('BMX', 19), ('BMX', 20), ('BMX', 21);` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 440. Select all from Bikes
+
+### 440.1
+
+View all the data in your bikes table.
+
+#### HINTS
+
+- Use `SELECT` with `*` to view all the columns
+- Here's an example: `SELECT * FROM table_name;`
+- Try entering `SELECT * from bikes;` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in first
+
+## 450. touch bike-shop.sh
+
+### 450.1
+
+Your current inventory is all added. For the rest of the project, I recommend leaving that terminal open and connected, and that you should "split" the terminal so you have a second one to use for bash commands. Do that by clicking the "hamburger" menu at the top left of the window, going to the "terminal" section, and clicking "split terminal". After you have opened it, use the `touch` command to create a file named `bike-shop.sh` in the `project` folder.
+
+#### HINTS
+
+- Try entering `touch bike-shop.sh` in the terminal
+- Make sure it's the regular terminal, and not the psql one
+- Make sure you are in the `project` folder first
+- If you opened a new terminal instead of splitting it, you can close it by entering `exit` and try again
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you want
+
+## 460. Add shebang!
+
+### 460.1
+
+This file will be the program for your bike rental shop. Open the file and add a "shebang" at the top so it uses `bash` when it's executed. If you don't remember, it looks like this: `#!/bin/bash`.
+
+#### HINTS
+
+- Add `#!/bin/bash` to the top of your `bike-shop.sh` file
+
+## 470. Add echo Bike Rental Shop
+
+### 470.1
+
+In the file, use `echo` with the `-e` flag to print `~~~~~ Bike Rental Shop ~~~~~` with a new line at the beginning and end.
+
+#### HINTS
+
+- The newline character is `\n`
+- Use double quotes around the message so the new lines are printed
+- Here's an example: `echo -e "\n<message_here>\n"`
+- Add `echo -e "\n~~~~~ Bike Rental Shop ~~~~~\n"` to the `bike-shop-sh` file
+
+## 480. chmod +x bike-shop.sh
+
+### 480.1
+
+Use the terminal (not the psql one) and the `chmod` command to make your file executable. Add the `+x` flag and `bike-shop.sh` to the command to do that.
+
+#### HINTS
+
+- Here's an example: `chmod +x <filename>`
+- Try entering `chmod +x bike-shop.sh` in the terminal
+- Make sure you are in the `project` folder first
+
+## 490. ./bike-shop.sh
+
+### 490.1
+
+Type `./bike-shop.sh` in the terminal to run your script.
+
+#### HINTS
+
+- Make sure to use the regular terminal and not the psql one
+- Make sure you are in the `project` folder first
+
+## 510. Add MAIN_MENU
+
+### 510.1
+
+:smile: In the script, create an empty function named `MAIN_MENU`. This will have a few options to enter when the script runs to rent or return a bike.
+
+#### HINTS
+
+- Here's an example:
+
+```sh
+FUNCTION_NAME() {
+
+}
+```
+
+- Add this to the bottom of the script:
+
+```sh
+MAIN_MENU() {
+
+}
+```
+
+## 520. Add echo How may I help you?
+
+### 520.1
+
+In your function, echo the text `How may I help you?` so that there's a greeting when you go to the menu.
+
+#### HINTS
+
+- Add `echo "How may I help you?"` in the designated area
+
+## 530. Add MAIN_MENU function call
+
+### 530.1
+
+Call your `MAIN_MENU` at the bottom of the file so the function runs when you start the script.
+
+#### HINTS
+
+- Add `MAIN_MENU` at the bottom of the file
+
+## 540. ./bike-shop.sh
+
+### 540.1
+
+Run the file in the terminal again so you can see what it is outputting.
+
+#### HINTS
+
+- Enter `./bike-shop.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 630. Add MAIN_MENU Options
+
+### 630.1
+
+It's coming along. Add another `echo` command **in the function** below the other one. Make it output text that looks like this:
+
+```sh
+
+1. Rent a bike
+2. Return a bike
+3. Exit
+```
+
+Note that there's an empty line at the start.
+
+#### HINTS
+
+- Use the `echo` command with the `-e` flag and line breaks (`\n`) to produce the suggested output
+- Without the words, it looks like this: `echo -e "\n1. \n2. \n3. "`
+- Run your script if you need to see if the output matches
+- Add `echo -e "\n1. Rent a bike\n2. Return a bike\n3. Exit"` to your function
+
+## 640. Run the file
+
+### 640.1
+
+Run the file to make sure it worked.
+
+#### HINTS
+
+- Enter `./bike-shop.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 650. Read MAIN_MENU_SELECTION
+
+### 650.1
+
+You have some options displaying. Next, you need to get input from whoever is using the program. Use the `read` command to read input into a variable called `MAIN_MENU_SELECTION` below the options.
+
+#### HINTS
+
+- Here's an example: `read <VARIABLE_NAME>`
+- Here's what the code looks like: `read MAIN_MENU_SELECTION`
+- Add the code at the bottom of the `MAIN_MENU` function
+- The `MAIN_MENU` function should look like this:
+
+```sh
+MAIN_MENU() {
+  echo "How may I help you?"
+  echo -e "\n1. Rent a bike\n2. Return a bike\n3. Exit"
+  read MAIN_MENU_SELECTION
+}
+```
+
+## 660. Add RENT_MENU
+
+### 660.1
+
+When an option gets entered, you need to take a user to one of those other menus. Add an empty `RENT_MENU` function below the `MAIN_MENU` function.
+
+#### HINTS
+
+- Make sure the `RENT_MENU` function is below the `MAIN_MENU` function and above where you call `MAIN_MENU`
+- Add this in the suggested area:
+
+```sh
+RENT_MENU() {
+
+}
+```
+
+## 670. Add echo Rent Menu
+
+### 670.1
+
+For the time being, just echo `Rent Menu` in the function so you can see if it's working.
+
+#### HINTS
+
+- Don't use any flags with the command
+- Add `echo "Rent Menu"` in the `RENT_MENU` function
+
+## 680. Add RETURN_MENU function
+
+### 680.1
+
+Add an empty `RETURN_MENU` function below the `RENT_MENU` function for when a user enters the option to return a bike.
+
+#### HINTS
+
+- Make sure the `RETURN_MENU` function is below the `RENT_MENU` function and above where you call `MAIN_MENU`
+- Add this in the suggested area:
+
+```sh
+RETURN_MENU() {
+
+}
+```
+
+## 690. Add echo Return Menu
+
+### 690.1
+
+Use `echo` to print `Return Menu` in the function you just added. You will change these later.
+
+#### HINTS
+
+- Don't use any flags with the command
+- Add `echo "Return Menu"` in the `RETURN_MENU` function
+
+## 700. Add EXIT function
+
+### 700.1
+
+Add an empty `EXIT` function below the `RETURN_MENU` function for when a user wants to exit the program.
+
+#### HINTS
+
+- Make sure the `EXIT` function is below the `RETURN_MENU` function and above where you call `MAIN_MENU`
+- Add this in the suggested area:
+
+```sh
+EXIT() {
+
+}
+```
+
+## 710. Add EXIT Message
+
+### 710.1
+
+This one probably doesn't need a placeholder message. In the `EXIT` function, use `echo` to print `Thank you for stopping in.` with a new line at the beginning and end of the message.
+
+#### HINTS
+
+- The newline character is `\n`
+- Use double quotes around the message so the new lines are printed
+- Here's an example: `echo -e "\n<message_here>\n"`
+- Add `echo -e "\nThank you for stopping in.\n"` to the `EXIT` function
+
+## 720. Add case statement to `MAIN_MENU`
+
+### 720.1
+
+When a user enters an option at the main menu, you want to take them to the appropriate sub-menu. You can use a `case` statement for this. Here's an example:
+
+```sh
+case EXPRESSION in
+  PATTERN) STATEMENTS ;;
+  PATTERN) STATEMENTS ;;
+  PATTERN) STATEMENTS ;;
+  *) STATEMENTS ;;
+esac
+```
+
+The expression you want is the `$MAIN_MENU_SELECTION` variable. You are expecting it to be a `1`, `2`, or `3` for your various menus. Add a `case` statement that takes users to their corresponding menus. The `*` is for when anything else is entered. Take users to the `MAIN_MENU` when the variable isn't a `1`, `2`, or `3`.
+
+#### HINTS
+
+- Add the `case` statement in the `MAIN_MENU` function below the `read MAIN_MENU_SELECTION` line
+- Here's how it starts:
+
+```sh
+case $MAIN_MENU_SELECTION in
+  1) RENT_MENU ;;
+```
+
+- Add this case statement below the;
+
+```sh
+case $MAIN_MENU_SELECTION in
+  1) RENT_MENU ;;
+  2) RETURN_MENU ;;
+  3) EXIT ;;
+  *) MAIN_MENU ;;
+esac
+```
+
+## 730. ./bike-shop.sh
+
+### 730.1
+
+Run the script a few times and try out the different menus. Be sure to enter something other than one of the options to go to the main menu.
+
+#### HINTS
+
+- Enter `./bike-shop.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 740. Add arg to MAIN_MENU call in case
+
+### 740.1
+
+Add an argument to where you call `MAIN_MENU` in the `case` statement. It should be `Please enter a valid option.`. The next step will adjust the function so the message is printed when a user enters an invalid option.
+
+#### HINTS
+
+- Here's an example: `FUNCTION_CALL "<argument_message>"`
+- Here's how the function call should look:
+
+```sh
+  *) MAIN_MENU "Please enter a valid option." ;;
+```
+
+- The whole `case` statement should look like this:
+
+```sh
+case $MAIN_MENU_SELECTION in
+  1) RENT_MENU ;;
+  2) RETURN_MENU ;;
+  3) EXIT ;;
+  *) MAIN_MENU "Please enter a valid option." ;;
+esac
+```
+
+## 750. Add if $1 to MAIN_MENU
+
+### 750.1
+
+At the top of the `MAIN_MENU` function, add an `if` condition that checks if there's an argument (`$1`) passed to the function. If there is, print the message with a new line in front of it.
+
+#### HINTS
+
+- Here's an example of an `if`:
+
+```sh
+if [[ <CONDITION> ]]
+then
+  <STATEMENTS>
+fi
+```
+
+- The condition you want is `$1`
+- Use `echo` with the `-e` flag and a new line character (`\n`) to print the argument with a new line at the beginning in the `<STATEMENTS>` area
+- Here's an example of that part: `echo -e "\n<argument_here>"`
+- The `if` statement should look like this:
+
+```sh
+if [[ $1 ]]
+then
+  echo -e "\n$1"
+fi
+```
+
+- Make sure to put it at the top of the `MAIN_MENU` function
+
+## 760. ./bike-shop.sh
+
+### 760.1
+
+Run the script and enter an invalid option to see the message. Exit the program when you are done.
+
+#### HINTS
+
+- Enter `./bike-shop.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 850. Delete echo Rent Menu
+
+### 850.1
+
+Looks good. Delete the `echo "Rent Menu"` from the `RENT_MENU` function so you can start adding the ability to rent a bike from the database.
+
+#### HINTS
+
+- The `RENT_MENU` function should be empty
+- The `RENT_MENU` function should look like this:
+
+```sh
+RENT_MENU() {
+
+}
+```
+
+## 860. Add comments to RENT_MENU
+
+### 860.1
+
+In the `RENT_MENU` function, add three single line comments; `get available bikes`, `if no bikes available`, and `send to main menu`, in that order.
+
+#### HINTS
+
+- Here's an example of a single line comment: `# <comment here>`
+- The `RENT_MENU` function should look like this:
+
+```sh
+RENT_MENU() {
+  # get available bikes
+
+  # if no bikes available
+
+  # send to main menu
+
+}
+```
+
+## 920. Add PSQL Variable
+
+### 920.1
+
+To get the bikes available, you need to query the database from your script. Below the "shebang", add a `PSQL` variable that looks like this: `PSQL="psql -X --username=freecodecamp --dbname=bikes --tuples-only -c"`. You will then be able to use it to query the database like this: `$($PSQL "<query_here>")`.
+
+#### HINTS
+
+- Add the suggested variable below the "shebang" and above where you print the `Bike Rental Shop` line
+
+## 970. Add AVAILABLE_BIKES
+
+### 970.1
+
+Below the `get available bikes` comment. Create an `AVAILABLE_BIKES` variable that gets the `bike_id`, `type`, and `size` columns from the `bikes` table for the bikes that are available. Order the results by their `bike_id` column. Here's an example: `AVAILABLE_BIKES=$($PSQL "<query_here>")`
+
+#### HINTS
+
+- Use the `SELECT`, `FROM`, `WHERE`, and `ORDER BY` keywords in your query
+- Get the three suggested columns in the same order they are listed; `bike_id, type, size`
+- The condition you want is `WHERE available = true`
+- Without the keywords, the query looks like this: `bike_id, type, size bikes available = true bike_id`
+- The query should be `SELECT bike_id, type, size FROM bikes WHERE available = true ORDER BY bike_id`
+- Add `AVAILABLE_BIKES=$($PSQL "SELECT bike_id, type, size FROM bikes WHERE available = true ORDER BY bike_id")` below the `get available bikes` comment
+
+## 980. echo AVAILABLE_BIKES
+
+### 980.1
+
+Below the new variable, use `echo` to print it. Place it in double quotes so it prints any new lines.
+
+#### HINTS
+
+- Here's an example: `echo "<variable_here>"`
+- Use the variable with `$AVAILABLE_BIKES`
+- Add `echo "$AVAILABLE_BIKES"` to the suggested area
+
+## 990. ./bike-shop.sh
+
+### 990.1
+
+Run your script and go to the rent menu to see if the available bikes are being printed.
+
+#### HINTS
+
+- Enter `./bike-shop.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 993. psql UPDATE bikes SET available = false
+
+### 990.1
+
+Awesome. In the psql prompt, set the `available` column to `false` for all the bikes so you can see what it prints when there's no bikes available.
+
+#### HINTS
+
+- Use the `UPDATE`, `SET`, and `WHERE` keywords
+- Here's an example: `UPDATE <table> SET <column> = <value> WHERE <condition>`
+- You want to set `available` to `false` for columns that are `true`
+- After the `SET` can look like this: `available = false WHERE available = true`
+- Try entering `UPDATE bikes SET available = false WHERE available = true;` in the psql prompt
+- Type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in. I recommend "splitting" the terminal so you can have one for bash commands and one for psql commands. You can do that by clicking the "hamburger" menu at the top left of the window, going to the "terminal" section, and clicking "split terminal".
+
+## 995. ./bike-shop.sh
+
+### 995.1
+
+Run your script and go to the rent menu to see the output.
+
+#### HINTS
+
+- Enter `./bike-shop.sh` in the terminal and press enter
+- Make sure it's the regular terminal and not the psql one
+- Make sure you are in the `project` folder first
+
+## 1000. Add if -z AVAILABLE_BIKES
+
+### 1000.1
+
+So if there's no bike available, the variable will be empty. In the script, below the `if no bikes available` comment, add an `if` condition that checks if the variable is empty. Use `-z` to check if it's empty. Place the `send to main menu` comment in its `STATEMENTS` area.
+
+#### HINTS
+
+- Use `-z <VARIABLE>` to see if a variable is empty
+- Here's an example:
+
+```sh
+if [[ -z <VARIABLE> ]]
+then
+  <STATEMENTS>
+fi
+```
+
+- The `if` condition should look like this:
+
+```sh
+if [[ -z $AVAILABLE_BIKES ]]
+then
+  # send to main menu
+fi
+```
+
+- Make sure it's right below the suggested comment
+
+## 1010. Add MAIN_MENU Sorry, we don't have any bikes available right now
+
+### 1010.1
+
+Below the comment in the `if` you just added. Send users to the main menu and give them the message, `Sorry, we don't have any bikes available right now.`
+
+#### HINTS
+
+- Here's an example `MAIN MENU "<message_here>"`
+- Make sure it's in the `if` condition below the `send to main menu` comment
+- The function call should look like this: `MAIN_MENU "Sorry, we don't have any bikes available right now."`
+- The `if` condition should look like this:
+
+```sh
+if [[ -z $AVAILABLE_BIKES ]]
+then
+  # send to main menu
+  MAIN_MENU "Sorry, we don't have any bikes available right now."
+fi
+```
+
+## 1020. ./bike-shop.sh
+
+### 1020.1
+
+Run the script and go to the rent menu to see the message. When you are done, exit the program.
+
+#### HINTS
+
+- Enter `./bike-shop.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 1100. Add else with comments
+
+### 1100.1
+
+If no bikes are available, you will get that message. Add an `else` to the `if` condition for when there is bikes available. In it, add four single line comments; `display available bikes`, `ask for bike to rent`, `if input is not a number`, and `send to main menu`.
+
+#### HINTS
+
+- Here's an example of a single line comment: `# <comment_here>`
+- Make sure the comments are in the same order listed
+- An `if/else` statement looks like this:
+
+```sh
+if [[ <CONDITION> ]]
+then
+  <STATEMENTS>
+else
+  <STATEMENTS>
+fi
+```
+
+- The `else` should look like this:
+
+```sh
+else
+  # display available bikes
+
+  # ask for bike to rent
+
+  # if input is not a number
+
+  # send to main menu
+
+```
+
+- The whole `if` should look like this:
+
+```sh
+if [[ -z $AVAILABLE_BIKES ]]
+then
+  # send to main menu
+  MAIN_MENU "Sorry, we don't have any bikes available right now."
+else
+  # display available bikes
+
+  # ask for bike to rent
+
+  # if input is not a number
+
+  # send to main menu
+
+fi
+```
+
+## 1105. Add echo Here are the bikes we have available
+
+### 1105.1
+
+Below the `display available bikes` comment you just added, use `echo` to print `Here are the bikes we have available:` with a new line in front of the message
+
+#### HINTS
+
+- Use `echo` with the `-e` flag and the new line character (`\n`) to print the suggested message
+- Use double quotes around the message
+- Here's an example: `echo -e "\n<message_here>"`
+- Add `echo -e "\nHere are the bikes we have available:"` below the suggested comment
+
+## 1110. Move echo AVAILABLE_BIKES
+
+### 1110.1
+
+Move the `echo` command that prints all the available bikes below the message you just added.
+
+#### HINTS
+
+- It's the `echo $AVAILABLE_BIKES` command
+- It should be below the `Here are the bikes we have available:` message
+- You should only print the bikes available in that one spot
+- Place the `echo "$AVAILABLE_BIKES"` line in the suggested spot
+
+## 1115. psql UPDATE bikes SET all != BMX to TRUE
+
+### 1115.1
+
+In the psql prompt, set all the bikes, except for the `BMX` bikes, back to true so you can see a list of bikes to rent.
+
+#### HINTS
+
+- Use the `UPDATE`, `SET`, and `WHERE` keywords
+- Here's an example: `UPDATE <table> SET <column> = <value> WHERE <condition>`
+- You want to set `available` to `true` for columns that don't have a `type` of `BMX`
+- You can use the `!=` operator to check for columns not equal to a value
+- After the `SET` can look like this: `available = true WHERE type != 'BMX'`
+- Try entering `UPDATE bikes SET available = true WHERE type != 'BMX';` in the psql prompt
+- You can type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in.
+
+## 1130. ./bike-shop.sh
+
+### 1130.1
+
+Run the script and go to the rent menu to see the list of bikes available.
+
+#### HINTS
+
+- Enter `./bike-shop.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 1140. pipe AVAILABLE_BIKES into while loop
+
+### 1140.1
+
+Instead of directly printing the list, `pipe` the output into a `while` loop that reads each line. Here's how that looks:
+
+```sh
+echo "$AVAILABLE_BIKES" | while read <VAR_1> <VAR_2> <VAR_3> <VAR_4> <VAR_5>
+do
+  <STATEMENTS>
+done
+```
+
+It will read the first line of your `AVAILABLE_BIKES` variable into the five variables. Each variable being the next word in the line. Read each line into variables, `BIKE_ID BAR TYPE BAR SIZE`. In the `<STATEMENTS>` area, use `echo` to print the `BIKE_ID`, `TYPE`, and `SIZE` variables, in that order.
+
+#### HINTS
+
+- The first line should be `echo "$AVAILABLE_BIKES" | while read BIKE_ID BAR TYPE BAR SIZE`
+- The `<STATEMENTS>` area looks like this: `echo "$BIKE_ID $TYPE $SIZE"`
+- Here's how it should look:
+
+```sh
+echo "$AVAILABLE_BIKES" | while read BIKE_ID BAR TYPE BAR SIZE
+do
+  echo "$BIKE_ID $TYPE $SIZE"
+done
+```
+
+## 1142. Run the script
+
+### 1142.1
+
+Run the script and go to the rent menu again to see if it's working.
+
+#### HINTS
+
+- Enter `./bike-shop.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 1145. Adjust Available Bikes Display
+
+### 1145.1
+
+It's working :smile: Adjust the echo command that prints the bike info so that the first line printed would look like this: `1) 27" Mountain Bike`. The rest would look the same, but with their bike info. Make sure to escape any characters you need to.
+
+#### HINTS
+
+- Be sure to use double quotes and escape the `"` after `SIZE`
+- Run your script and check the output if you want to see if it matches the suggestion
+- Escape a `"` with `\"`
+- Here's an example: `echo "<bike_id>) <size>" <type> Bike"`
+- Make the suggested line look like this: `echo "$BIKE_ID) $SIZE\" $TYPE Bike"`
+- The whole loop should look like this:
+
+```sh
+echo "$AVAILABLE_BIKES" | while read BIKE_ID BAR TYPE BAR SIZE
+do
+  echo "$BIKE_ID) $SIZE\" $TYPE Bike"
+done
+```
+
+## 1150. Run the script
+
+### 1150.1
+
+Run the script and go to the rent menu again to see what it looks like now.
+
+#### HINTS
+
+- Enter `./bike-shop.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 1160. Add echo Which one would you like to rent?
+
+### 1160.1
+
+That's better. Below the `ask for bike to rent` comment, print `Which one would you like to rent?` with a new line in front of it.
+
+#### HINTS
+
+- Use `echo` with the `-e` flag and the new line character (`\n`) to print the suggested message
+- Use double quotes around the message
+- Here's an example: `echo -e "\n<message_here>"`
+- Add `echo -e "\nWhich one would you like to rent?"` below the suggested comment
+
+## 1162. read BIKE_ID_TO_RENT
+
+### 1162.1
+
+Just below that, add a command to `read` input into a variable named `BIKE_ID_TO_RENT`.
+
+#### HINTS
+
+- Here's an example: `read <VARIABLE_NAME>`
+- Add this to the suggested area: `read BIKE_ID_TO_RENT`
+
+## 1164. [[a =~ [0-9]]]; echo $?
+
+### 1164.1
+
+Next, you want to find out how to test if the user input is a number. In the terminal, enter `[[ a =~ [0-9] ]]; echo $?` to see if `a` is a number. The conditional expression will run, and `echo $?` will print the exit code of it (the last command).
+
+#### HINTS
+
+- Enter `[[ a =~ [0-9] ]]; echo $?` in the terminal
+- It's the regular terminal, not the psql one
+
+## 1165. echo [[a1 =~ [0-9]]]; echo $?
+
+### 1165.1
+
+It printed `1` for false. Meaning that `a` did not match the pattern [0-9], or `a` did not contain a number from `0-9`. Enter the same commands, but check if `a1` matches the pattern.
+
+#### HINTS
+
+- The previous command was `[[ a =~ [0-9] ]]; echo $?`
+- Enter `[[ a1 =~ [0-9] ]]; echo $?` in the terminal
+
+## 1166. echo [[a1 =~ ^[0-9]$]]; echo $?
+
+### 1166.1
+
+That printed `0` for true. `a1` does contain a number from `0-9`. Enter the same command, but change the pattern to `^[0-9]$`. The `^` signifies the start of the pattern, and `$` means the end. So the input will have to start, contain a number `0-9`, and end.
+
+#### HINTS
+
+- The previous command was `[[ a1 =~ [0-9] ]]; echo $?`
+- Enter `[[ a1 =~ ^[0-9]$ ]]; echo $?` in the terminal
+
+## 1167. echo [[1 =~ ^[0-9]$]]; echo $?
+
+### 1167.1
+
+`1` for false. `a1` does not match the pattern. Using the same syntax, check if `1` matches the pattern.
+
+#### HINTS
+
+- The previous command was `[[ a1 =~ ^[0-9]$ ]]; echo $?`
+- Enter `[[ 1 =~ ^[0-9]$ ]]; echo $?` in the terminal
+
+## 1168. echo [[11 =~ ^[0-9]$]]; echo $?
+
+### 1168.1
+
+`1` does match the pattern. It starts, contains a number, and ends. Check if `11` matches the same pattern.
+
+#### HINTS
+
+- The previous command was `[[ 1 =~ ^[0-9]$ ]]; echo $?`
+- Enter `[[ 11 =~ ^[0-9]$ ]]; echo $?` in the terminal
+
+## 1169. echo [[11 =~ ^[0-9]+$]]; echo $?
+
+### 1169.1
+
+That did not match because the pattern only allows a single number. Add a `+` after the `[0-9]` to allow any strings that start, contain one or more numbers, and end.
+
+#### HINTS
+
+- Enter the previous command with the suggested changed
+- The previous command was `[[ 11 =~ ^[0-9]$ ]]; echo $?`
+- Enter `[[ 11 =~ ^[0-9]+$ ]]; echo $?` in the terminal
+
+## 1170. echo [[! 11 =~ ^[0-9]+$]]; echo $?
+
+### 1170.1
+
+So that pattern will match any positive integers. You want to check if the input is not a number. Add `!` in front of the comparison of the previous command to do that.
+
+#### HINTS
+
+- Enter the previous command with the suggested changed
+- The previous command was `[[ 11 =~ ^[0-9]+$ ]]; echo $?`
+- Enter `[[ ! 11 =~ ^[0-9]+$ ]]; echo $?` in the terminal
+
+## 1176. Add if [[! $BIKE_ID_TO_RENT =~ ^[0-9]+$]]
+
+### 1176.1
+
+Back in your script, below the `if input is not a number` comment, add an `if` condition that checks if the input is not a number using the method you just practiced. Add the `send to main menu` comment in the `then` area of the `if`.
+
+#### HINTS
+
+- You want to check if the `$BIKE_ID_TO_RENT` variable is not a number
+- You entered `[[ ! 11 =~ ^[0-9]+$ ]]; echo $?` in the terminal on the last step
+- Here's an example:
+
+```sh
+if [[ <CONDITION> ]]
+then
+  # send to main menu
+fi
+```
+
+- The condition you want is `[[ ! $BIKE_ID_TO_RENT =~ ^[0-9]+$ ]]`
+- Add this in the suggestion area:
+
+```sh
+if [[ ! $BIKE_ID_TO_RENT =~ ^[0-9]+$ ]]
+then
+  # send to main menu
+fi
+```
+
+## 1177. Add MAIN_MENU That is not a valid bike number
+
+### 1177.1
+
+If the `$BIKE_ID_TO_RENT` variable is not a number, add the code to send users to the main menu with the message, `That is not a valid bike number.`
+
+#### HINTS
+
+- You want to call the `MAIN_MENU` function with the message as an argument
+- Here's an example: `MAIN_MENU "<message_here>"`
+- Add `MAIN_MENU "That is not a valid bike number."` below the `send to main menu` comment
+
+## 1178. ./bike-shop.sh
+
+### 1178.1
+
+Run the script, go to the rent menu, and enter something that isn't a number to make sure it is working. When you are done, exit the program.
+
+#### HINTS
+
+- Enter `./bike-shop.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 1179. Add else with comments
+
+### 1179.1
+
+Add an `else` area for when the input is a number. Add these three single line comments in it; `get bike availability`, `if not available`, `send to main menu`.
+
+#### HINTS
+
+- Here's an example of a single line comment: `# <comment_here>`
+- Make sure the comments are in the same order listed
+- An `if/else` statement looks like this:
+
+```sh
+if [[ <CONDITION> ]]
+then
+  <STATEMENTS>
+else
+  <STATEMENTS>
+fi
+```
+
+- The `else` area should look like this:
+
+```sh
+else
+  # get bike availability
+
+  # if not available
+
+  # send to main menu
+
+```
+
+- The whole `if` should look like this:
+
+```sh
+if [[ ! $BIKE_ID_TO_RENT =~ ^[0-9]+$ ]]
+then
+  # send to main menu
+  MAIN_MENU "That is not a valid bike number."
+else
+  # get bike availability
+
+  # if not available
+
+  # send to main menu
+
+fi
+```
+
+## 1180. Add BIKE_AVAILABILITY
+
+### 1180.1
+
+Below the `get bike availability` comment you just added, create a `BIKE_AVAILABILITY` variable. Set it equal to a query that gets the `available` column from the `bikes` table for the input. Also, make sure to only get the row if it is available.
+
+#### HINTS
+
+- Here's an example: `BIKE_AVAILABILITY=$($PSQL "<query_here>")`
+- Use the `SELECT`, `FROM`, `WHERE`, and `AND` keywords
+- Here's an example of the query: `SELECT <column> FROM <table> WHERE <condition1> AND <condition2>`
+- You only want the `available` column for the bike with a `bike_id` equal to the `$BIKE_ID_TO_RENT` variable and only if the bike is available
+- You want two conditions, `WHERE bike_id = $BIKE_ID_TO_RENT AND available = true`
+- Add `BIKE_AVAILABILITY=$($PSQL "SELECT available FROM bikes WHERE bike_id = $BIKE_ID_TO_RENT AND available = true")` below the `get bike availability` comment
+
+## 1190. Add echo BIKE_AVAILABILITY
+
+### 1190.1
+
+Right below the variable you just created, use echo to print it so you can see what it looks like.
+
+#### HINTS
+
+- Print a variable like this: `echo $<VARIABLE_NAME>`
+- The variable you want is `BIKE_AVAILABILITY`
+- Add `echo $BIKE_AVAILABILITY` in the suggested area
+
+## 1200. ./bike-shop.sh
+
+### 1200.1
+
+Run the script a few times, go to the rent menu, enter a bike that is available and one that isn't. You should have some `BMX` bikes that aren't available.
+
+#### HINTS
+
+- Enter `./bike-shop.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 1210. Add if -z BIKE_AVAILABILITY
+
+### 1210.1
+
+The variable will be `t` or empty. Below the `if not available` comment, add an `if` condition that checks if it's empty. Put the `send to main menu` comment in it's statements area.
+
+#### HINTS
+
+- Here's an example:
+
+```sh
+if [[ <CONDITION> ]]
+then
+  <STATEMENTS>
+fi
+```
+
+- The condition you want is `-z $BIKE_AVAILABILITY`
+- Place the `# send to main menu` comment in the `<STATEMENTS>` area
+- The `if` condition should look like this:
+
+```sh
+if [[ -z $BIKE_AVAILABILITY ]]
+then
+  # send to main menu
+fi
+```
+
+## 1215. Add MAIN_MENU That bike is not available
+
+### 1215.1
+
+In the `if` condition you just added, send users to the main menu with the message `That bike is not available.` if they input a number that isn't available.
+
+#### HINTS
+
+- You want to call the `MAIN_MENU` function with the message as an argument
+- Here's an example: `MAIN_MENU "<message_here>"`
+- Add `MAIN_MENU "That bike is not available."` below the `send to main menu` comment
+
+## 1220. Remove echo BIKE_AVAILABILITY
+
+### 1220.1
+
+Remove the line where you print the `BIKE_AVAILABILITY` variable. You don't need it anymore.
+
+#### HINTS
+
+- Remove the `echo $BIKE_AVAILABILITY` line
+
+## 1230. ./bike-shop.sh
+
+### 1230.1
+
+Run the script and go to the rent menu, enter a bike that isn't available to make sure it's working. When you are done, exit the program.
+
+#### HINTS
+
+- Enter `./bike-shop.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 1233. psql UPDATE bikes SET add to true
+
+### 1233.1
+
+In the psql prompt, set all the bikes availability back to true.
+
+#### HINTS
+
+- Use the `UPDATE`, `SET`, and `WHERE` keywords
+- Here's an example: `UPDATE <table> SET <column> = <value> WHERE <condition>`
+- You want to set `available` to `true` for all the bikes
+- After the `SET` can look like this: `available = true WHERE available = false`
+- Try entering `UPDATE bikes SET available = true WHERE available = false;` in the psql prompt
+- You can type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in.
+
+## 1236. Add else with comments
+
+### 1236.1
+
+In your script, add an `else` for when a bike is available. Add these four comments in the `else` area `get customer info`, `if customer doesn't exist`, `get new customer name`, and `insert new customer`.
+
+#### HINTS
+
+- Here's an example of a single line comment: `# <comment_here>`
+- Make sure the comments are in the same order listed
+- An `if/else` statement looks like this:
+
+```sh
+if [[ <CONDITION> ]]
+then
+  <STATEMENTS>
+else
+  <STATEMENTS>
+fi
+```
+
+- The `else` area should look like this:
+
+```sh
+else
+  # get customer info
+
+  # if customer doesn't exist
+
+  # get new customer name
+
+  # insert new customer
+
+```
+
+- The whole `if` should look like this:
+
+```sh
+if [[ -z $BIKE_AVAILABILITY  ]]
+then
+  # send to main menu
+  MAIN_MENU "That bike is not available."
+else
+  # get customer info
+
+  # if customer doesn't exist
+
+  # get new customer name
+
+  # insert new customer
+
+fi
+```
+
+## 1240. Add echo What's your phone number?
+
+### 1240.1
+
+As the comments say, you need to get the customer info and find out if they are an existing customer. Below the `get customer info` comment, print `What's your phone number?` with a new line in front of it.
+
+#### HINTS
+
+- Use `echo` with the `-e` flag and the new line character (`\n`) to print the suggested message
+- Use double quotes around the message
+- Here's an example: `echo -e "\n<message_here>"`
+- Add `echo -e "\nWhat's your phone number?"` below the suggested comment
+
+## 1250. read PHONE_NUMBER
+
+### 1250.1
+
+Below the line you just printed, read input into a `PHONE_NUMBER` variable. Since the phone number is unique, you can use it to identify a customer.
+
+#### HINTS
+
+- Here's an example: `read <VARIABLE_NAME>`
+- Add `read PHONE_NUMBER` to the suggested area
+- Add it below where you print `What's your phone number?`
+
+## 1260. Add CUSTOMER_NAME
+
+### 1260.1
+
+With the customer's phone number, you can get their name. Below where you get the phone number, create a `CUSTOMER_NAME` variable that gets the customers name from the database using the phone number.
+
+#### HINTS
+
+- Query the database to set the `CUSTOMER_NAME` variable
+- Here's an example: `CUSTOMER_NAME=$($PSQL "<query_here>")`
+- Use the `SELECT`, `FROM` and `WHERE` keywords for your query
+- You want only the `name` column from the `customers` table
+- The condition you want is `phone = '$PHONE_NUMBER'`
+- The query should look like this: `SELECT name FROM customers WHERE phone = '$PHONE_NUMBER'`
+- Add `CUSTOMER_NAME=$($PSQL "SELECT name FROM customers WHERE phone = '$PHONE_NUMBER'")` below the `read PHONE_NUMBER` line
+
+## 1265. Add if -z CUSTOMER_NAME
+
+### 1265.1
+
+If the customer is in the database with the phone number used, the variable will be set to the name. If not, it will be empty. Add an `if` condition below the `if customer doesn't exist` comment that checks if the variable is empty. Place the next two comments in the `then` area.
+
+#### HINTS
+
+- Here's an example:
+
+```sh
+if [[ <CONDITION> ]]
+then
+  <STATEMENTS>
+fi
+```
+
+- The condition you want is `-z $CUSTOMER_NAME`
+- Place the `# get new customer name` and `# insert new customer` comments in the `<STATEMENTS>` area
+- The `if` condition should look like this:
+
+```sh
+if [[ -z $CUSTOMER_NAME ]]
+then
+  # get new customer name
+
+  # insert new customer
+
+fi
+```
+
+- Make sure it's below the `if customer doesn't exist` comment
+
+## 1270. Add echo What's your name?
+
+### 1270.1
+
+If the customer isn't in the database, you need to get their name so you can add them. Below the `get new customer name` comment, print `What's your name?` with a new line in front of the message.
+
+#### HINTS
+
+- Use `echo` with the `-e` flag and the new line character (`\n`) to print the suggested message
+- Use double quotes around the message
+- Here's an example: `echo -e "\n<message_here>"`
+- Add `echo -e "\nWhat's your name?"` below the suggested comment
+
+## 1280. read CUSTOMER_NAME
+
+### 1280.1
+
+Below the question you just printed, read input into a variable named `CUSTOMER_NAME`.
+
+#### HINTS
+
+- Here's an example: `read <VARIABLE_NAME>`
+- Add `read CUSTOMER_NAME` to the suggested area
+- Add it below where you print `What's your name?`
+
+## 1290. Add INSERT_CUSTOMER_RESULT
+
+### 1290.1
+
+You have the two pieces of information you need. Below the `insert new customer` comment, create an `INSERT_CUSTOMER_RESULT` variable that inserts the customer into the database.
+
+#### HINTS
+
+- Here's an example: `INSERT_CUSTOMER_RESULT=$($PSQL "<query_here>")`
+- View the `customers` table in the psql prompt with `\d customers` to see the columns you need to add data to
+- Be sure to use single quotes around `VARCHAR` values
+- The query looks similar to this: `INSERT INTO customers(column1, column2) VALUES('value1', 'value2')`
+- You want to use the `CUSTOMER_NAME` and `PHONE_NUMBER` variables for the values
+- Here's the query: `INSERT INTO customers(name, phone) VALUES('$CUSTOMER_NAME', '$PHONE_NUMBER')`
+- Add `INSERT_CUSTOMER_RESULT=$($PSQL "INSERT INTO customers(name, phone) VALUES('$CUSTOMER_NAME', '$PHONE_NUMBER')")` below the `insert new customer` comment
+
+## 1300. Run the script
+
+### 1300.1
+
+Run your script and go to the rent menu. Pick a bike to rent, then enter `555-5555` when it asks for a phone number, and `Me` when it asks for your name.
+
+#### HINTS
+
+- Enter `./bike-shop.sh` in the terminal and press enter
+- Follow the instructions closely
+- Make sure to use `555-5555` for the phone number and `Me` for the name
+- The database should have a customer with `555-5555` as their phone number, and `Me` as their name in it
+
+## 1310. psql SELECT \* FROM customers
+
+### 1310.1
+
+That should have added a new customer to the database. In the psql prompt, view all the data in the `customers` table to see if it's working.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM customers;` in the psql prompt
+- You can type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in.
+
+## 1311. psql SELECT \* FROM rentals
+
+### 1311.1
+
+Excellent. View all the data in the rentals table.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM rentals;` in the psql prompt
+- You can type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in.
+
+## 1312. psql SELECT \* FROM bikes
+
+### 1312.1
+
+So you still need to add the rental to the rentals table when a bike is picked out. View all the data in the `bikes` table.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM bikes;` in the psql prompt
+- You can type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in.
+
+## 1315. Add comments
+
+### 1315.1
+
+And set the `available` column to false for the bike rented. Below the end of the `if` statement that inserts a new customer, add five more comments; `get customer_id`, `insert bike rental`, `set bike availability to false`, `get bike info`, and `send to main menu`
+
+#### HINTS
+
+- Here's an example of a single line comment: `# <comment_here>`
+- Make sure the comments are in the same order listed
+- The comments should be below (not in) the `if [[ -z $CUSTOMER_NAME ]]` statement
+- The comments should look like this:
+
+```sh
+  if [[ -z $CUSTOMER_NAME ]]
+  then
+    # get new customer name
+    echo -e "\nWhat's your name?"
+    read CUSTOMER_NAME
+
+    # insert new customer
+    INSERT_CUSTOMER_RESULT=$($PSQL "INSERT INTO customers(name, phone) VALUES('$CUSTOMER_NAME', '$PHONE_NUMBER')")
+  fi
+
+  # get customer_id
+
+  # insert bike rental
+
+  # set bike availability to false
+
+  # get bike info
+
+  # send to main menu
+
+```
+
+## 1320. Add CUSTOMER_ID
+
+### 1320.1
+
+You're getting close to done with the rent functionality. To add a rental to the database, you need the customer ID. Below the `get customer_id` comment, create a `CUSTOMER_ID` variable that gets the `customer_id` using the phone number.
+
+#### HINTS
+
+- Here's an example: `CUSTOMER_ID=$($PSQL "<query_here>")`
+- You want to get the `customer_id` column from the customers table using the `PHONE_NUMBER` variable in your condition to get it
+- The condition you want is `WHERE phone = '$PHONE_NUMBER'`
+- The query looks like this: `SELECT customer_id FROM customers WHERE phone = '$PHONE_NUMBER'`
+- Add `CUSTOMER_ID=$($PSQL "SELECT customer_id FROM customers WHERE phone = '$PHONE_NUMBER'")` below the `get customer_id` comment
+
+## 1330. Add INSERT_RENTAL_RESULT
+
+### 1330.1
+
+Now that you have the bike ID and customer ID, you can add the rental to the database. Below the `insert bike rental` comment, create a `INSERT_RENTAL_RESULT` variable that adds the rental to the database.
+
+#### HINTS
+
+- Here's an example: `INSERT_RENTAL_RESULT=$($PSQL "<query_here>")`
+- View the `rentals` table by entering `\d rentals` in the psql prompt to see what the columns are
+- The query looks similar to this: `INSERT INTO rentals(column1, column2) VALUES(value1, value2)`
+- You want to insert the `BIKE_ID_TO_RENT` and `CUSTOMER_ID` variables into the `bike_id` and `customer_id` columns
+- The query should look like this: `INSERT INTO rentals(bike_id, customer_id) VALUES($BIKE_ID_TO_RENT, $CUSTOMER_ID)`
+- Add `INSERT_RENTAL_RESULT=$($PSQL "INSERT INTO rentals(customer_id, bike_id) VALUES($CUSTOMER_ID, $BIKE_ID_TO_RENT)")` below the `insert bike rental` comment
+
+## 1370. Add SET_TO_FALSE_RESULT
+
+### 1370.1
+
+That should add the rental to the database. The last thing to do is set `available` to false for the bike. Below the `set bike availability to false` comment, create a `SET_TO_FALSE_RESULT` variable that does that.
+
+#### HINTS
+
+- Here's an example: `SET_TO_FALSE_RESULT=$($PSQL "<query_here>")`
+- You want to use the `UPDATE`, `SET`, and `WHERE` keywords
+- You want to set the `available` column to `false` for the `bike_id` of `BIKE_ID_TO_RENT`
+- The query looks similar to this: `UPDATE <table> SET <column> = <value> WHERE <condition>`
+- The query looks like this: `UPDATE bikes SET available = false WHERE bike_id = $BIKE_ID_TO_RENT`
+- Add `SET_TO_FALSE_RESULT=$($PSQL "UPDATE bikes SET available = false WHERE bike_id = $BIKE_ID_TO_RENT")` below the `set bike availability to false` comment
+
+## 1380. Run the script
+
+### 1380.1
+
+Run the script and go to the rent menu. Pick the first bike on the list and enter `555-5555` when it asks for a phone number again. That phone number should already be in the database, so it won't ask for a name or insert a customer.
+
+#### HINTS
+
+- Enter `./bike-shop.sh` in the terminal and press enter
+- Make sure to enter the correct bike number and phone number
+- There should be a rental in the database for customer with phone number `555-5555` and name `Me`
+
+## 1390. psql SELECT \* FROM rentals
+
+### 1390.1
+
+In the psql prompt, view all the data in the `rentals` table. There should be a new rental.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM rentals;` in the psql prompt
+- You can type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in.
+
+## 1400. psql SELECT \* FROM bikes ORDER BY bike_id
+
+### 1400.1
+
+The rental was added and the `date_rented` was filled in automatically. :smile: Next, view all the data in the `bikes` table. Order the results by `bike_id`
+
+#### HINTS
+
+- Use the `SELECT`, `FROM`, and `ORDER BY` keywords with `*` to view all the data
+- Enter `SELECT * FROM bikes ORDER BY bike_id;` in the psql prompt
+- You can type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in.
+
+## 1401. Add BIKE_INFO
+
+### 1401.1
+
+The available column was set to false for the bike you rented. The last thing to do is give a nice message about the rental. Below the `get bike info` comment, create a `BIKE_INFO` variable that gets the `size` and `type`, in that order, of the bike rented.
+
+#### HINTS
+
+- Here's an example: `BIKE_INFO=$($PSQL "<query_here>")`
+- You want to use the `SELECT`, `FROM`, and `WHERE` keywords
+- Use the `BIKE_ID_TO_RENT` variable to find the needed info for the bike
+- The query looks similar to this: `SELECT size, type FROM <table> WHERE <condition>`
+- The condition you want is `WHERE bike_id = $BIKE_ID_TO_RENT`
+- The query looks like this: `SELECT size, type FROM bikes WHERE bike_id = $BIKE_ID_TO_RENT`
+- Add `BIKE_INFO=$($PSQL "SELECT size, type FROM bikes WHERE bike_id = $BIKE_ID_TO_RENT")` below the `get bike info` comment
+
+## 1402. Add echo BIKE_INFO
+
+### 1402.1
+
+Below the variable you just created, use `echo` to print it.
+
+#### HINTS
+
+- Print a variable like this: `echo $<VARIABLE_NAME>`
+- The variable you want is `BIKE_INFO`
+- Add `echo $BIKE_INFO` in the suggested area
+
+## 1403. ./bike-shop.sh
+
+### 1403.1
+
+Run the script again and go to the rent menu, there should now be one less bike displayed. Pick the next bike on the list and rent it using the customer with phone number `555-5555` again so you can see the variable.
+
+#### HINTS
+
+- Enter `./bike-shop.sh` in the terminal and press enter
+- There should be at least two rentals for the customer with phone nummber `555-5555` and name `Me`
+
+## 1404. echo '28 | Mountain' | sed 's/ /=/g'
+
+### 1404.1
+
+It should have printed `28 | Mountain`. The message you want to print after someone rents a bike would have said `I have put you down for the 28" Mountain Bike, Me.`. You need to format that variable for the message. The `sed` command can be used to replace characters and patterns in text. It looks like this: `sed s/<regex_pattern_to_replace>/<characters_to_replace_with>/<regex_flags>`. In the terminal, enter `echo '28 | Mountain' | sed 's/ /=/g'` to practice.
+
+#### HINTS
+
+- Enter the suggested command in the terminal
+- Not the psql one
+
+## 1405. echo '28 | Mountain' | sed 's/ //g'
+
+### 1405.1
+
+The command you used, "piped" a string (`28 | Mountain`) to the `sed` command, where it replaced all the spaces with `=`. Enter the same command, but replace all the spaces with nothing.
+
+#### HINTS
+
+- The previous command was `echo '28 | Mountain' | sed 's/ /=/g'`
+- Remove the `=` from the previous command
+- Enter `echo '28 | Mountain' | sed 's/ //g'` in the terminal
+
+## 1407. echo '28 | Mountain' | sed 's/ //'
+
+### 1407.1
+
+The `g` regex flag stands for "global". It will replace all instance of the pattern. In this case, it replaced all the spaces. Enter the same command but without that flag.
+
+#### HINTS
+
+- The previous command was `echo '28 | Mountain' | sed 's/ //g`
+- Remove the `g` flag from the previous command
+- Enter `echo '28 | Mountain' | sed 's/ //'` in the terminal
+
+## 1408. echo '28 | Mountain' | sed 's/ |//'
+
+### 1408.1
+
+That time, only the first instance of the pattern was replaced. The first space was removed. Enter the same command, but replace the first instance of <code>&nbsp;|</code> (`<space>|`) with nothing.
+
+#### HINTS
+
+- The previous command was `echo '28 | Mountain' | sed 's/ //`
+- You want to replace the space in the pattern of the last command with <code>&nbsp;|</code> (`<space_here>|`)
+- Enter `echo '28 | Mountain' | sed 's/ |//'` in the terminal
+
+## 1410. echo '28 | Mountain' | sed 's/ |/"/'
+
+### 1410.1
+
+Enter the same command, but make the output look like how you want in the message, `28" Mountain`.
+
+#### HINTS
+
+- The previous command was `echo '28 | Mountain' | sed 's/ |//`
+- Use `"` as the character to replace <code>&nbsp;|</code> (`<space>|`) with
+- Enter `echo '28 | Mountain' | sed 's/ |/"/'` in the terminal
+
+## 1411. Add echo BIKE_INFO | sed 's/ |/"/'
+
+### 1411.1
+
+Back in your script, where you `echo` the `BIKE_INFO`, pipe the output into a `sed` command that replaces <code>&nbsp;|</code> (`<space>|`) with `"` so the text will read `<SIZE>" <TYPE>`. `28 | Mountain` would become `28" Mountain`, for instance.
+
+#### HINTS
+
+- The previous command was `echo '28 | Mountain' | sed 's/ |/"/'`
+- You want to add the `| sed 's/ |/"/'` part of the previous command after your `echo $BIKE_INFO` line
+- Make the suggested area look like this:
+
+```sh
+echo $BIKE_INFO | sed 's/ |/"/'
+```
+
+## 1413. ./bike-shop.sh
+
+### 1413.1
+
+Run the script and rent another bike using the customer with phone number `555-5555` again. Make sure the bike info printed looks like you want.
+
+#### HINTS
+
+- Enter `./bike-shop.sh` in the terminal and press enter
+- The customer with phone number `555-5555` and name `Me` should have at least three bikes rented
+
+## 1415. Add BIKE_INFO_FORMATTED
+
+### 1415.1
+
+Now it is formatted for the message. Take that `echo` command and the part that formats it, put it in a sub shell, and set the output into a variable named `BIKE_INFO_FORMATTED`. Here's an example: `BIKE_INFO_FORMATTED=$(<formatted info here>)`
+
+#### HINTS
+
+- You want to put the `echo $BIKE_INFO | sed 's/ |/"/'` part in the subshell
+- It should look like this: `BIKE_INFO_FORMATTED=$(echo $BIKE_INFO | sed 's/ |/"/')`
+
+## 1417. Add MAIN_MENU I have put you down for bike
+
+### 1417.1
+
+What you put the in subshell (`$(...)`) will be executed, and the result of it will replace the subshell. In this case, the formatted bike info was printed when you ran the script before, so the `BIKE_INFO_FORMATTED` variable will be set to that. Below the `send to main menu` comment, send users to the main menu with a message that would print `I have put you down for the 28" Mountain Bike, Me.` if `Me` rented the 28 inch Mountain Bike.
+
+#### HINTS
+
+- Use dynamic info for the bike info and the customer's name
+- You want to use the `BIKE_INFO_FORMATTED` and `CUSTOMER_NAME` variables
+- The message should look like this: `I have put you down for the $BIKE_INFO_FORMATTED Bike, $CUSTOMER_NAME.`
+- Add `MAIN_MENU "I have put you down for the $BIKE_INFO_FORMATTED Bike, $CUSTOMER_NAME."` below the `send to main menu` comment
+
+## 1418. ./bike-shop.sh
+
+### 1418.1
+
+Run the script and rent the next bike on the list. Use the customer with `555-5555` as their phone number. When you are done, exit the program.
+
+#### HINTS
+
+- Enter `./bike-shop.sh` in the terminal and press enter
+- The customer with phone number `555-5555` and name `Me` should have at least four bikes rented
+
+## 1420. echo ' M e '
+
+### 1420.1
+
+There's an extra space around the customer's name. You can use `sed` again to fix that. In the terminal, enter `echo ' M e '` to print `M e` with spaces around it to see if you can find out how.
+
+#### HINTS
+
+- Enter the `echo ' M e '` in the terminal
+- Not the psql one
+
+## 1422. echo "$(echo ' M e ')."
+
+### 1422.1
+
+It printed, but you can only assume there's a space at the end. Place the last command in a subshell with quotes around it. Put a period right after the subshell and echo the whole thing in the terminal. Here's how it looks: `echo "$(echo ' M e ')."`
+
+#### HINTS
+
+- Enter `echo "$(echo ' M e ')."` in the terminal
+
+## 1424. echo "$(echo ' M e ' | sed 's/ //')."
+
+### 1424.1
+
+Now you can be certain there's a space at the end. Within the subshell of the last command, use a pipe and the `sed` command to replace the first space with no space. Here's the `sed` replacement pattern you want: `'s/ //'`.
+
+#### HINTS
+
+- The previous command was `echo "$(echo ' M e ')."`
+- Here's an example of how the subshell should look: `$(echo ' M e ' | sed <pattern>)`
+- This is the exact subshell: `$(echo ' M e ' | sed <pattern>)`
+- Enter `echo "$(echo ' M e ' | sed 's/ //')."` in the terminal
+
+## 1425. echo "$(echo ' M e ' | sed 's/ //g')."
+
+### 1425.1
+
+That removed only the first space it found. Change the previous command to replace all instances of a space instead of just the first one.
+
+#### HINTS
+
+- The previous command was `echo "$(echo ' M e ' | sed 's/ //')."`
+- Use a regex flag to make the suggested modification
+- You want to add the `g` flag to the `sed` replacement pattern.
+- The `sed` pattern should look like this: `'s/ //g'`
+- Enter `echo "$(echo ' M e ' | sed 's/ //g')."` in the terminal
+
+## 1427. echo "$(echo ' M e ' | sed 's/^ //g')."
+
+### 1427.1
+
+That replaced all the spaces. You only had an extra space at the beginning of the customer name. Add a `^` in front of the space in the replacement pattern of the last command to only replace a space at the beginning of the text.
+
+#### HINTS
+
+- The previous command was `echo "$(echo ' M e ' | sed 's/ //g')."`
+- You want to change the matching pattern to <code>^&nbsp;</code> (`^<space>`)
+- The matching pattern is between the first and second forward slashes
+- The `sed` pattern should look like this: `s/^ //g`
+- Enter `echo "$(echo ' M e ' | sed 's/^ //g')."` in the terminal
+
+## 1428. echo "$(echo ' M e ' | sed 's/^ //g')."
+
+### 1428.1
+
+The caret you added means that's the start of the text. So it will replace a space only if it's at the beginning. Enter the last command, but add two more spaces (three total) at the beginning of the **text**.
+
+#### HINTS
+
+- The previous command was `echo "$(echo ' M e ' | sed 's/^ //g')."`
+- Change the `' M e '` part to include the suggestion
+- The new text should be <code>'&nbsp;&nbsp;&nbsp;M e&nbsp;'</code> (`'<three_spaces>M e '`)
+- In the terminal, enter <code>echo "$(echo '&nbsp;&nbsp;&nbsp;M e ' | sed 's/^ //g')."</code>
+
+## 1430. echo "$(echo ' M e ' | sed 's/^ \*//g')."
+
+### 1430.1
+
+The <code>^&nbsp;</code> (`^<space>`) pattern only replaced the first space. Add `*` at the end of the matching pattern to replace all spaces at the beginning of text.
+
+#### HINTS
+
+- The previous command was <code>echo "$(echo '&nbsp;&nbsp;&nbsp;M e ' | sed 's/^ //g')."</code>
+- The matching pattern is between the first and second forward slash
+- The new pattern is: `'s/^ *//g'`
+- Enter <code>echo "$(echo '&nbsp;&nbsp;&nbsp;M e ' | sed 's/^ \*//g')."</code> in the terminal
+
+## 1432. echo "$(echo ' M e ' | sed 's/ $//g')."
+
+### 1432.1
+
+The customer name only had an extra space at the beginning. Unsure as to why, but there may be others with extra spaces at the end as well. You can match the end of text with `$`. Change the matching pattern of the last command so it replaces a single space at the end. The pattern is <code>&nbsp;$</code> (`<space>$`).
+
+#### HINTS
+
+- The previous command was <code>echo "$(echo '&nbsp;&nbsp;&nbsp;M e ' | sed 's/^ \*//g')."</code>
+- The matching pattern is between the first and second forward slash
+- Change the matching pattern to the suggestion
+- Enter <code>echo "$(echo '&nbsp;&nbsp;&nbsp;M e ' | sed 's/ $//g')."</code> in the terminal
+
+## 1433. echo "$(echo ' M e ' | sed 's/ $//g')."
+
+### 1433.1
+
+Add two more spaces to the end of the **text** in the previous command (three spaces total).
+
+#### HINTS
+
+- The previous command was <code>echo "$(echo '&nbsp;&nbsp;&nbsp;M e ' | sed 's/ $//g')."</code>
+- The matching pattern is between the first and second forward slash
+- Change the matching pattern to the suggestion
+- Enter <code>echo "$(echo '&nbsp;&nbsp;&nbsp;M e&nbsp;&nbsp;&nbsp;' | sed 's/ $//g')."</code> in the terminal
+
+## 1435. echo "$(echo '   M e   ' | sed 's/ *$//g')."
+
+### 1435.1
+
+The pattern only replaces a single space at the end. Change the last command so it replaces all spaces at the end of the text.
+
+#### HINTS
+
+- The previous command was <code>echo "$(echo '&nbsp;&nbsp;&nbsp;M e&nbsp;&nbsp;&nbsp;' | sed 's/ $//g')."</code>
+- Use `*` in a pattern after a character to replace zero or more of that character
+- The matching pattern you want is <code>&nbsp;_$</code> (`<space>_$`)
+- Change the matching pattern to the suggestion
+- Enter <code>echo "$(echo '&nbsp;&nbsp;&nbsp;M e&nbsp;&nbsp;&nbsp;' | sed 's/ *$//g')."</code> in the terminal
+
+## 1436. echo "$(echo '   M e   ' | sed 's/^ *| *$//g')."
+
+### 1436.1
+
+That replaced all the spaces at the end of the text. You can use `|` as an "or" operator in a matching pattern to replace one pattern or another. Use it to change the matching pattern so it would replace any amount of spaces at the beginning and any amount of spaces at the end of the text.
+
+#### HINTS
+
+- The previous command was <code>echo "$(echo '&nbsp;&nbsp;&nbsp;M e&nbsp;&nbsp;&nbsp;' | sed 's/ *$//g')."</code>
+- You want to replace the <code>^&nbsp;_</code> (`^<space>_`) pattern
+- And the <code>&nbsp;_$</code> (`<space>_$`) pattern
+- The matching pattern should look like this: `'s/^ *| *$//g'`
+- Enter <code>echo "$(echo '&nbsp;&nbsp;&nbsp;M e&nbsp;&nbsp;&nbsp;' | sed 's/^ *| *$//g')."</code>
+
+## 1437. man sed
+
+### 1437.1
+
+That didn't work. It doesn't like that "or" (`|`) operator for some reason. Check the manual of the `sed` command to see if you can find anything.
+
+#### HINTS
+
+- Here's an example of how to see a manual: `man <command>`
+- Enter `man sed` in the terminal
+- Press enter until you have seen the whole manual
+
+## 1438. echo "$(echo '   M e   ' | sed -r 's/^ *| *$//g')."
+
+### 1438.1
+
+Somewhere in there is a flag for using extended regular expressions with `sed`. That might work. Add it to the <code>echo "$(echo '&nbsp;&nbsp;&nbsp;M e&nbsp;&nbsp;&nbsp;' | sed 's/^ *| *$//g')."</code> command that didn't work to find out.
+
+#### HINTS
+
+- :point_down:
+- Find the flag in the terminal output for using extended regular expressions with `sed`
+- It's the `-E` flag
+- You previously entered <code>echo "$(echo '&nbsp;&nbsp;&nbsp;M e&nbsp;&nbsp;&nbsp;' | sed 's/^ *| *$//g')."</code>
+- Add the `-E` flag to the `sed` part of that command
+- Enter <code>echo "$(echo '&nbsp;&nbsp;&nbsp;M e&nbsp;&nbsp;&nbsp;' | sed -E 's/^ *| *$//g')."</code> in the terminal
+
+## 1440. Change to trim CUSTOMER_NAME
+
+### 1440.1
+
+:wink: That trimmed all spaces from the front and end of the text. Back in the last message of your script, place the `CUSTOMER_NAME` variable in a subshell, echo and pipe it into a `sed` command that removes all spaces from the front and back. Use the same method you used in the terminal.
+
+#### HINTS
+
+- Here's an example: `$(echo $CUSTOMER_NAME | sed ...)`
+- `^ *` will match all spaces at the beginning of text, and <code>&nbsp;\*$</code> will match spaces at the end
+- The previous command was <code>echo "$(echo '&nbsp;&nbsp;&nbsp;M e&nbsp;&nbsp;&nbsp;' | sed -r 's/^ *| *$//g')."</code>
+- Change the `$CUSTOMER_NAME` variable in the last message to `$(echo $CUSTOMER_NAME | sed -r 's/^ *| *$//g')`
+
+## 1442. Run the script
+
+### 1442.1
+
+Run the script and rent another bike with the customer whose phone number is `555-5555`. When you are done, exit the program.
+
+#### HINTS
+
+- Enter `./bike-shop.sh` in the terminal and press enter
+- The customer with phone number `555-5555` and name `Me` should have at least five bikes rented
+
+## 1444. Run the script
+
+### 1444.1
+
+Run the script again. Rent another bike, use `000-0000` as the phone number this time, and `Test` as the name to create a new customer. When you are done, exit the program.
+
+#### HINTS
+
+- Enter `./bike-shop.sh` in the terminal and press enter
+- The customer with phone number `000-0000` and name `Test` should have at least one bike rented
+
+## 1446. Run the script
+
+### 1446.1
+
+Run the script again. Rent another bike with the customer you just created. When you are done, exit the program.
+
+#### HINTS
+
+- Enter `./bike-shop.sh` in the terminal and press enter
+- The customer with phone number `000-0000` and name `Test` should have at least two bikes rented
+
+## 1448. SELECT \* FROM bikes ORDER BY bike_id
+
+### 1448.1
+
+In the psql prompt, view all the data in your bikes table in order by the `bike_id`.
+
+#### HINTS
+
+- Use the `SELECT`, `FROM`, and `ORDER BY` keywords with `*` to view all the data
+- Enter `SELECT * FROM bikes ORDER BY bike_id;` in the psql prompt
+- You can type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in.
+
+## 1449. SELECT \* FROM bikes ORDER BY bike_id
+
+### 1449.1
+
+There should be two bikes left available to rent. Next, look at all the data in the customers table.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM customers;` in the psql prompt
+- You can type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in.
+
+## 1450. SELECT \* FROM bikes ORDER BY bike_id
+
+### 1450.1
+
+There should two customers in that table now. Lastly, look at all the data in the rentals table.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM rentals;` in the psql prompt
+- You can type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in.
+
+## 1453. Delete echo Return Menu
+
+### 1453.1
+
+The rent functionality looks like it all works. Delete the `echo Return Menu` line in the `RETURN_MENU` function so you can get started with that.
+
+#### HINTS
+
+- The `RETURN_MENU` function should be empty
+- The `RETURN_MENU` function should look like this:
+
+```sh
+RETURN_MENU() {
+
+}
+```
+
+## 1457. Add comments to RETURN_MENU
+
+### 1457.1
+
+Add three single line comments to the return menu function; `get customer info`, `if not found`, and `send to main menu`, in that order.
+
+#### HINTS
+
+- Here's an example of a single line comment: `# <comment_here>`
+- Make sure the comments are in the same order listed
+- The comments should be in the `RETURN_MENU` function
+- The `RETURN_MENU` function should look like this:
+
+```sh
+RETURN_MENU() {
+  # get customer info
+
+  # if not found
+
+  # send to main menu
+
+}
+```
+
+## 1460. Start the Return Bike Functionality
+
+### 1460.1
+
+Below the `get customer info` comment you just added, print `What's your phone number?` with a new line in front of the sentence.
+
+#### HINTS
+
+- Use `echo` with the `-e` flag and the new line character (`\n`) to print the suggested message
+- Use double quotes around the message
+- Here's an example: `echo -e "\n<message_here>"`
+- Add `echo -e "\nWhat's your phone number?"` below the suggested comment
+
+## 1470. Read PHONE_NUMBER
+
+### 1470.1
+
+Just below that, use `read` to get input into a `PHONE_NUMBER` variable.
+
+#### HINTS
+
+- Here's an example: `read <VARIABLE_NAME>`
+- Add `read PHONE_NUMBER` to the suggested area
+- Add it below where you print `What's your phone number?`
+
+## 1472. Add CUSTOMER_ID
+
+### 1472.1
+
+Just below that, set the `CUSTOMER_ID` variable to a query that gets the customer ID from the database using the phone number they gave you.
+
+#### HINTS
+
+- Here's an example: `CUSTOMER_ID=$($PSQL "<query_here>")`
+- You want to get the `customer_id` column from the customers table using the `PHONE_NUMBER` variable in your condition to get it
+- The condition you want is `WHERE phone = '$PHONE_NUMBER'`
+- The query looks like this: `SELECT customer_id FROM customers WHERE phone = '$PHONE_NUMBER'`
+- Add `CUSTOMER_ID=$($PSQL "SELECT customer_id FROM customers WHERE phone = '$PHONE_NUMBER'")` below the `read PHONE_NUMBER` line in the `RETURN_MENU` function
+
+## 1474. Add if -z CUSTOMER_ID
+
+### 1474.1
+
+If they are in the database, the variable will be their `customer_id`. If not, it will be empty. Below the `if not found` comment, add an `if` statement that checks if it's empty. Put the `send to main menu` comment in the `then` area.
+
+#### HINTS
+
+- Here's an example:
+
+```sh
+if [[ <CONDITION> ]]
+then
+  <STATEMENTS>
+fi
+```
+
+- The condition you want is `-z $CUSTOMER_ID`
+- Place the `# send to main menu` comment in the `<STATEMENTS>` area
+- The `if` condition should look like this:
+
+```sh
+if [[ -z $CUSTOMER_ID ]]
+then
+  # send to main menu
+
+fi
+```
+
+## 1475. Add MAIN_MENU I could not find a record for that phone number
+
+### 1475.1
+
+If the customer isn't found, send them to the main menu with the message `I could not find a record for that phone number.`
+
+#### HINTS
+
+- You want to call the `MAIN_MENU` function with the message as an argument
+- Here's an example: `MAIN_MENU "<message_here>"`
+- Add `MAIN_MENU "I could not find a record for that phone number."` below the `send to main menu` comment
+
+## 1476. ./bike-shop.sh
+
+### 1476.1
+
+Run the script and go to the return menu. Enter a phone number that is not in the database. When you are done, exit the program.
+
+#### HINTS
+
+- Enter `./bike-shop.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 1478. Add else with comments
+
+### 1478.1
+
+Add an `else` to the `if` condition for if the phone number is found in the database. Place `get customer's rentals`, `if no rentals`, and `send to main menu` in the `else` area as single line comments.
+
+#### HINTS
+
+- Here's an example of a single line comment: `# <comment_here>`
+- Make sure the comments are in the same order listed
+- The comments should be in the `else` area of the `if [[ -z CUSTOMER_ID ]]` statement
+- An `if/else` statement looks like this:
+
+```sh
+if [[ <CONDITION> ]]
+then
+  <STATEMENTS>
+else
+  <STATEMENTS>
+fi
+```
+
+- The `else` area should look like this:
+
+```sh
+else
+  # get customer's rentals
+
+  # if no rentals
+
+  # send to main menu
+
+fi
+```
+
+- The whole `if` should look like this:
+
+```sh
+if [[ -z $CUSTOMER_ID  ]]
+then
+  # send to main menu
+  MAIN_MENU "I could not find a record for that phone number."
+else
+  # get customer's rentals
+
+  # if no rentals
+
+  # send to main menu
+
+fi
+```
+
+## 1480. psql SELECT \* FROM bikes
+
+### 1480.1
+
+You want to find out what rentals a customer has using their phone number and display them. You will need to join all the tables. Start by using the psql prompt to view all the data in the `bikes` table.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM bikes;` in the psql prompt
+- You can type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in.
+
+## 1485. psql SELECT \* FROM bikes LEFT JOIN rentals
+
+### 1485.1
+
+Next, use a `LEFT JOIN` with `bikes` as the left table to join the bikes and rentals tables. Use the `USING` keyword to join the two tables.
+
+#### HINTS
+
+- You need the `SELECT`, `FROM`, `LEFT JOIN`, and `USING` keywords
+- Here's an example: `SELECT <column> FROM <table_1> LEFT JOIN <table_2> USING(<foreign_key>)`
+- Enter `\d bikes` or `\d rentals` in the psql prompt to view the details of the table and find the foreign key column
+- It's the `bike_id` column
+- Enter `SELECT * FROM bikes LEFT JOIN rentals USING(bike_id);` in the psql prompt
+- You can type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in.
+
+## 1490. psql SELECT bikes INNER JOIN rentals
+
+### 1490.1
+
+You only need the bikes that are being rented. Use an inner join with the same two tables to only get those. Use the `USING` keyword again.
+
+#### HINTS
+
+- It's an `INNER JOIN`
+- You need the `SELECT`, `FROM`, `INNER JOIN`, and `USING` keywords
+- Here's an example: `SELECT <column> FROM <table_1> INNER JOIN <table_2> USING(<foreign_key>)`
+- Enter `SELECT * FROM bikes INNER JOIN rentals USING(bike_id);` in the psql prompt
+- You can type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in.
+
+## 1500. psql SELECT bikes INNER JOIN rentals INNER JOIN customers
+
+### 1500.1
+
+Add a join to the previous command that joins the last table so you can get the customer information. Use an `INNER JOIN` and the `USING` keyword again.
+
+#### HINTS
+
+- The previous query was `SELECT * FROM bikes INNER JOIN rentals USING(bike_id);`
+- Here's an example: `SELECT <column> FROM <table_1> INNER JOIN <table_2> USING(<foreign_key>) INNER JOIN <table_3> USING(foreign_key)`
+- Enter `\d rentals` or `\d customers` in the psql prompt to view the details of the table and find the foreign key column
+- It's the `customer_id` column
+- Enter `SELECT * FROM bikes INNER JOIN rentals USING(bike_id) INNER JOIN customers USING(customer_id);` in the psql prompt
+- You can type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in.
+
+## 1510. psql Add conditions to the query
+
+### 1510.1
+
+Add two conditions to the last query to narrow down the results to the bikes that are currently being rented by customer with `555-5555` as their phone number. The second condition should check the `date_returned` column
+
+#### HINTS
+
+- The previous query was `SELECT * FROM bikes INNER JOIN rentals USING(bike_id) INNER JOIN customers USING(customer_id);`
+- You want to add a `WHERE <condition_1> AND <condition_2>` to the last query
+- Use the `IS NULL` keyword to check the `date_returned` in one of the conditions
+- The two conditions are `WHERE phone = '555-5555' AND date_returned IS NULL`
+- Enter `SELECT * FROM bikes INNER JOIN rentals USING(bike_id) INNER JOIN customers USING(customer_id) WHERE phone = '555-5555' AND date_returned IS NULL;` in the psql prompt
+- You can type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in.
+
+## 1520. psql SELECT only columns
+
+### 1520.1
+
+Now you have all the rentals for one specific customer. Only get the columns you need to display the bike information to them. They are the same three columns you used to display the list of available bikes.
+
+#### HINTS
+
+- The previous query was `SELECT * FROM bikes INNER JOIN rentals USING(bike_id) INNER JOIN customers USING(customer_id) WHERE phone = '555-5555' AND date_returned IS NULL;`
+- The three columns you want are `bike_id`, `type`, and `size`
+- Enter `SELECT bike_id, type, size FROM bikes INNER JOIN rentals USING(bike_id) INNER JOIN customers USING(customer_id) WHERE phone = '555-5555' AND date_returned IS NULL;` in the psql prompt
+- You can type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in.
+
+## 1525. psql SELECT ORDER BY
+
+### 1525.1
+
+One more thing, order the results of the last query by their `bike_id` column.
+
+#### HINTS
+
+- The previous query was `SELECT bike_id, type, size FROM bikes INNER JOIN rentals USING(bike_id) INNER JOIN customers USING(customer_id) WHERE phone = '555-5555' AND date_returned IS NULL;`
+- Add `ORDER BY bike_id` to the end of the last query
+- Enter `SELECT bike_id, type, size FROM bikes INNER JOIN rentals USING(bike_id) INNER JOIN customers USING(customer_id) WHERE phone = '555-5555' AND date_returned IS NULL ORDER BY bike_id;` in the psql prompt
+- You can type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in.
+
+## 1530. Add CUSTOMER_RENTALS
+
+### 1530.1
+
+That's the query you will need to use to get the bikes a customer is renting. In your script below the `get customer's rentals` comment. Create a `CUSTOMER_RENTALS` variable that gets the rentals for the customer. Use the `PHONE_NUMBER` variable to get them.
+
+#### HINTS
+
+- Here's an example: `CUSTOMER_RENTALS=$($PSQL "<query_here>")`
+- You previously entered `SELECT bike_id, type, size FROM bikes INNER JOIN rentals USING(bike_id) INNER JOIN customers USING(customer_id) WHERE phone = '555-5555' AND date_returned IS NULL ORDER BY bike_id;` in the psql prompt
+- All the columns and tables should be in the same order as in the above query
+- The query looks like this: `SELECT bike_id, type, size FROM bikes INNER JOIN rentals USING(bike_id) INNER JOIN customers USING(customer_id) WHERE phone = '$PHONE_NUMBER' AND date_returned IS NULL ORDER BY bike_id`
+- Add `CUSTOMER_RENTALS=$($PSQL "SELECT bike_id, type, size FROM bikes INNER JOIN rentals USING(bike_id) INNER JOIN customers USING(customer_id) WHERE phone = '$PHONE_NUMBER' AND date_returned IS NULL ORDER BY bike_id")` below the `get customer's rentals` comment
+
+## 1540. Add echo CUSTOMER_RENTALS
+
+### 1540.1
+
+Below the variable you just created, use `echo` to print it. Make sure to put double quotes around it.
+
+#### HINTS
+
+- Here's an example: `echo "<variable_here>"`
+- Use the variable with `$CUSTOMER_RENTALS`
+- Add `echo "$CUSTOMER_RENTALS"` to the suggested area
+
+## 1550. ./bike-shop.sh
+
+### 1550.1
+
+Run the script and go to the return menu. Enter `555-5555` for the phone number to see the rentals for `Me`.
+
+#### HINTS
+
+- Enter `./bike-shop.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 1560. Add if -z CUSTOMER_RENTALS
+
+### 1560.1
+
+The query is working. If the customer has no rentals, the variable will be empty. Below the `if no rentals` comment, add an `if` condition that checks if it's empty. Put the `send to main` menu comment in the `then` area again.
+
+#### HINTS
+
+- Here's an example:
+
+```sh
+if [[ <CONDITION> ]]
+then
+  <STATEMENTS>
+fi
+```
+
+- The condition you want is `-z $CUSTOMER_RENTALS`
+- Place the `# send to main menu` comment in the `<STATEMENTS>` area
+- The `if` condition should look like this:
+
+```sh
+if [[ -z $CUSTOMER_RENTALS ]]
+then
+  # send to main menu
+
+fi
+```
+
+## 1563. Add MAIN_MENU You do not have any bikes rented
+
+### 1563.1
+
+If the customer has no rentals, send them to the main menu with the message `You do not have any bikes rented.` Add the code below the next comment.
+
+#### HINTS
+
+- You want to call the `MAIN_MENU` function with the message as an argument
+- Here's an example: `MAIN_MENU "<message_here>"`
+- Add `MAIN_MENU "You do not have any bikes rented."` below the `send to main menu` comment
+
+## 1570. Add else with comments
+
+### 1570.1
+
+Add an `else` to the condition for when the customer does have rentals. Place four single line comments in it; `display rented bikes`, `ask for bike to return`, `if not a number`, and `send to main menu`.
+
+#### HINTS
+
+- Here's an example of a single line comment: `# <comment_here>`
+- Make sure the comments are in the same order listed
+- The comments should be in the `else` area of the `if [[ -z CUSTOMER_RENTALS ]]` statement
+- The `else` area should look like this:
+
+```sh
+else
+  # display rented bikes
+
+  # ask for bike to return
+
+  # if not a number
+
+  # send to main menu
+
+fi
+```
+
+- The whole `if` should look like this:
+
+```sh
+if [[ -z $CUSTOMER_RENTALS  ]]
+then
+  # send to main menu
+  MAIN_MENU "You do not have any bikes rented."
+else
+  # display rented bikes
+
+  # ask for bike to return
+
+  # if not a number
+
+  # send to main menu
+
+fi
+```
+
+## 1572. Add echo Here are your rentals
+
+### 1572.1
+
+Below the `display rented bikes` comment, print `Here are your rentals:` with a new line in front of it.
+
+#### HINTS
+
+- Use `echo` with the `-e` flag and the new line character (`\n`) to print the suggested message
+- Use double quotes around the message
+- Here's an example: `echo -e "\n<message_here>"`
+- Add `echo -e "\nHere are your rentals:"` below the suggested comment
+
+## 1575. Add echo CUSTOMER_RENTALS
+
+### 1575.1
+
+Move the `echo $CUSTOMER_RENTALS` line to below the line you just printed.
+
+#### HINTS
+
+- Move the suggested code below where you print `Here are your rentals:`
+- You should only print the variable in that one spot
+- Place the `echo "$CUSTOMER_RENTALS"` line in the suggested spot
+
+## 1578. ./bike-shop.sh
+
+### 1578.1
+
+Run the script and go to the return menu. Enter `555-5555` for the phone number to see the rented bikes.
+
+#### HINTS
+
+- Enter `./bike-shop.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 1580. Add pipe and while loop
+
+### 1580.1
+
+Where you print the list of rented bikes, pipe the command into a `while` loop that reads the data. You should read the data into `BIKE_ID`, `BAR`, `TYPE`, `BAR`, and `SIZE` variables. Make it print each rented bike in the same fashion as the list of available bikes.
+
+#### HINTS
+
+- Here's an example:
+
+```sh
+echo "$CUSTOMER_RENTALS" | while read <VARIABLES>
+do
+  echo <RENTED_BIKE_INFORMATION>
+done
+```
+
+- The first line should look like this: `echo "$CUSTOMER_RENTALS" | while read BIKE_ID BAR TYPE BAR SIZE`
+- The loop should print `1) 27" Mountain Bike` for each bike with the appropriate bike info
+- The whole thing looks like this:
+
+```sh
+echo "$CUSTOMER_RENTALS" | while read BIKE_ID BAR TYPE BAR SIZE
+do
+  echo "$BIKE_ID) $SIZE\" $TYPE Bike"
+done
+```
+
+## 1585. ./bike-shop.sh
+
+### 1585.1
+
+Run the script and go to the return menu. Enter the same phone number again to make sure the list is showing up correctly.
+
+#### HINTS
+
+- Enter `./bike-shop.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 1590. Add echo Which bike would you like to return?
+
+### 1590.1
+
+Below the `ask for bike to return` comment, print `Which one would you like to return?` with a new line in front of it.
+
+#### HINTS
+
+- Use `echo` with the `-e` flag and the new line character (`\n`) to print the suggested message
+- Use double quotes around the message
+- Here's an example: `echo -e "\n<message_here>"`
+- Add `echo -e "\nWhich one would you like to return?"` below the suggested comment
+
+## 1600. read BIKE_ID_TO_RETURN
+
+### 1600.1
+
+Below the line you just printed, read input into a `BIKE_ID_TO_RETURN` variable.
+
+#### HINTS
+
+- Here's an example: `read <VARIABLE_NAME>`
+- Add `read BIKE_ID_TO_RETURN` to the suggested area
+- Add it below where you print `Which one would you like to return?`
+
+## 1602. Add if BIKE_ID_TO_RETURN not a number
+
+### 1602.1
+
+Below the `if not a number` comment, check if the input for the bike ID to return is a number using the same method you did earlier. Place the `send to main menu` comment in the statement.
+
+#### HINTS
+
+- Here's an example:
+
+```sh
+if [[ <CONDITION> ]]
+then
+  <STATEMENTS>
+fi
+```
+
+- The condition should check that the `$BIKE_ID_TO_RETURN` variable is not a number using the pattern matching operator (`=~`) and the pattern `^[0-9]+$`
+- The condition you want is `[[ ! $BIKE_ID_TO_RETURN =~ ^[0-9]+$ ]]`
+- Place the `# send to main menu` comment in the `<STATEMENTS>` area
+- The `if` condition should look like this:
+
+```sh
+if [[ ! $BIKE_ID_TO_RETURN =~ ^[0-9]+$ ]]
+then
+  # send to main menu
+
+fi
+```
+
+## 1605. Add MAIN_MENU That is not a valid bike number
+
+### 1605.1
+
+If they don't input a number, send them to the main menu with `That is not a valid bike number.` as the message.
+
+#### HINTS
+
+- You want to call the `MAIN_MENU` function with the message as an argument
+- Here's an example: `MAIN_MENU "<message_here>"`
+- Add `MAIN_MENU "That is not a valid bike number."` below the `send to main menu` comment
+
+## 1607. Add else with comments
+
+### 1607.1
+
+Add an `else` for when they do input a number. Place `check if input is rented`, `if input not rented`, and `send to main menu` single line comments in it.
+
+#### HINTS
+
+- Here's an example of a single line comment: `# <comment_here>`
+- Make sure the comments are in the same order listed
+- The comments should be in the `else` area of the `if [[ ! $BIKE_ID_TO_RETURN =~ ^[0-9]+$ ]]` statement
+- The `else` area should look like this:
+
+```sh
+else
+  # check if input is rented
+
+  # if input not rented
+
+  # send to main menu
+
+fi
+```
+
+- The whole `if` should look like this:
+
+```sh
+if [[ ! $BIKE_ID_TO_RETURN =~ ^[0-9]+$ ]]
+then
+  # send to main menu
+  MAIN_MENU "That is not a valid bike number."
+else
+  # check if input is rented
+
+  # if input not rented
+
+  # send to main menu
+
+fi
+```
+
+## 1610. psql SELECT rentals INNER JOIN customers
+
+### 1610.1
+
+You need to check if the input is a `bike_id` rented by the customer so you can return it. In the psql prompt, join the `rentals` and `customers` tables with an `INNER JOIN` using the `USING` keyword.
+
+#### HINTS
+
+- You need the `SELECT`, `FROM`, `INNER JOIN`, and `USING` keywords
+- Here's an example: `SELECT <column> FROM <table_1> INNER JOIN <table_2> USING(<foreign_key>)`
+- Enter `\d rentals` or `\d customers` in the psql prompt to view the details of the table and find the foreign key column
+- It's the `customer_id` column
+- Enter `SELECT * FROM rentals INNER JOIN customers USING(customer_id);` in the psql prompt
+- You can type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in.
+
+## 1620. psql Add conditions to the query
+
+### 1620.1
+
+Add three conditions to the previous query. Check the `phone`, `bike_id`, and `date_returned` columns to narrow the results to the first bike you rented with `Me`.
+
+#### HINTS
+
+- The previous query was `SELECT * FROM rentals INNER JOIN customers USING(customer_id);`
+- You want to add a `WHERE <condition_1> AND <condition_2> AND <condition_3>` to the last query
+- Use the `IS NULL` keyword to check the `date_returned` in one of the conditions
+- The other two conditions should check the `phone` and `bike_id` of the first rental
+- The three conditions are `WHERE phone = '555-5555' AND bike_id = 1 AND date_returned IS NULL`
+- Enter `SELECT * FROM rentals INNER JOIN customers USING(customer_id) WHERE phone = '555-5555' AND bike_id = 1 AND date_returned IS NULL;` in the psql prompt
+- You can type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in.
+
+## 1625. psql Only get columns needed
+
+### 1625.1
+
+You only need to know what bike is going to be returned. Narrow the columns from the last query to only get the one column you would need for returning a bike.
+
+#### HINTS
+
+- The previous query was `SELECT * FROM rentals INNER JOIN customers USING(customer_id) WHERE phone = '555-5555' AND bike_id = 1 AND date_returned IS NULL;`
+- Only column you need is the `rental_id` column
+- Enter `SELECT rental_id FROM rentals INNER JOIN customers USING(customer_id) WHERE phone = '555-5555' AND bike_id = 1 AND date_returned IS NULL;` in the psql prompt
+- You can type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in.
+
+## 1630. Add RENTAL_ID
+
+### 1630.1
+
+Back in the script, below the `check if input is rented` comment, create a `RENTAL_ID` variable that gets the rental ID of the bike that was input.
+
+#### HINTS
+
+- The input is the `BIKE_ID_TO_RETURN` variable
+- Here's an example: `RENTAL_ID=$($PSQL "<query_here>")`
+- You previously entered `SELECT rental_id FROM rentals INNER JOIN customers USING(customer_id) WHERE phone = '555-5555' AND bike_id = 1 AND date_returned IS NULL;` in the psql prompt
+- Be sure to use the same columns from the above query for the conditions with the `PHONE_NUMBER` and `BIKE_ID_TO_RETURN` variables
+- Add `RENTAL_ID=$($PSQL "SELECT rental_id FROM rentals INNER JOIN customers USING(customer_id) WHERE phone = '$PHONE_NUMBER' AND bike_id = $BIKE_ID_TO_RETURN AND date_returned IS NULL")` below the `check if input is rented` comment
+
+## 1640. Add if -z RENTAL_ID
+
+### 1640.1
+
+Below the `if input not rented` comment, add an `if` that checks if the `RENTAL_ID` variable is empty. Place the `send to main menu` comment in the `then` area.
+
+#### HINTS
+
+- Here's an example:
+
+```sh
+if [[ <CONDITION> ]]
+then
+  <STATEMENTS>
+fi
+```
+
+- The condition you want is `-z $RENTAL_ID`
+- Place the `# send to main menu` comment in the `<STATEMENTS>` area
+- The `if` condition should look like this:
+
+```sh
+if [[ -z $RENTAL_ID ]]
+then
+  # send to main menu
+
+fi
+```
+
+## 1645. Add MAIN_MENU You do not have that bike rented
+
+### 1645.1
+
+If the input isn't rented by the given customer, send them to the main menu with `You do not have that bike rented.` as the message.
+
+#### HINTS
+
+- You want to call the `MAIN_MENU` function with the message as an argument
+- Here's an example: `MAIN_MENU "<message_here>"`
+- Add `MAIN_MENU "You do not have that bike rented."` below the `send to main menu` comment
+
+## 1648. Add else echo Rental ID RENTAL_ID found
+
+### 1648.1
+
+Add an `else` to the `if` condition you just added. Use `echo` to print `Rental ID $RENTAL_ID found` in it so you can see if it's all working.
+
+#### HINTS
+
+- Here's an example:
+
+```sh
+if [[ <CONDITION> ]]
+then
+  <STATEMENTS>
+else
+  <STATEMENTS>
+fi
+```
+
+- Place `echo "Rental ID $RENTAL_ID found"` in the else area
+- The `if` condition should look like this:
+
+```sh
+if [[ -z $RENTAL_ID ]]
+then
+  # send to main menu
+  MAIN_MENU "You do not have that bike rented."
+else
+  echo "Rental ID $RENTAL_ID found"
+fi
+```
+
+## 1650. Run the script
+
+### 1650.1
+
+Run the script and go to the return menu. Enter `555-5555` to see the rented bikes. Input a bike that isn't on the list, then go to the menu again and input a bike that is on the list.
+
+#### HINTS
+
+- Enter `./bike-shop.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
+
+## 1660. Delete echo Rental ID RENTAL_ID found
+
+### 1660.1
+
+Looks like it works. Delete the line where you print the rental ID.
+
+#### HINTS
+
+- Delete the `echo "Rental ID $RENTAL_ID found"` line
+
+## 1680. Add else with comments
+
+### 1680.1
+
+Add three single line comments in the `else` area; `update date_returned`, `set bike availability to true`, and `send to main menu`.
+
+#### HINTS
+
+- Here's an example of a single line comment: `# <comment_here>`
+- Make sure the comments are in the same order listed
+- The comments should be in the `else` area of the `if [[ -z $RENTAL_ID ]]` statement
+- The `else` area should look like this:
+
+```sh
+else
+  # update date_returned
+
+  # set bike availability to true
+
+  # send to main menu
+
+fi
+```
+
+- The whole `if` should look like this:
+
+```sh
+if [[ -z $RENTAL_ID ]]
+then
+  # send to main menu
+  MAIN_MENU "You do not have that bike rented."
+else
+  # update date_returned
+
+  # set bike availability to true
+
+  # send to main menu
+
+fi
+```
+
+## 1690. Add RETURN_BIKE_RESULT
+
+### 1690.1
+
+After a person picks a bike to return and you know that it's a bike they have rented, you need to update all the info in the database to return it. Below the `update date_returned` comment, create a `RETURN_BIKE_RESULT` variable that sets the `date_returned` column to `NOW()` for the bike rented. Use the `RENTAL_ID` to figure out which row to update.
+
+#### HINTS
+
+- Here's an example: `RETURN_BIKE_RESULT=$($PSQL "<query_here>")`
+- You want to use the `UPDATE`, `SET`, `NOW()`, and `WHERE` keywords in the query
+- Here's an example of the query: `UPDATE <table> SET <column> = <value> WHERE <condition>`
+- The query you want is `UPDATE rentals SET date_returned = NOW() WHERE rental_id = $RENTAL_ID`
+- Add `RETURN_BIKE_RESULT=$($PSQL "UPDATE rentals SET date_returned = NOW() WHERE rental_id = $RENTAL_ID")` below the `update date_returned` comment
+
+## 1710. Add SET_TO_TRUE_RESULT
+
+### 1710.1
+
+That should update the rentals table. Lastly, you need to make the bike available again. Below the `set bike availability to true` comment, create a `SET_TO_TRUE_RESULT` variable that makes the bike available again.
+
+#### HINTS
+
+- Here's an example: `SET_TO_TRUE_RESULT=$($PSQL "<query_here>")`
+- You want to use the `UPDATE`, `SET`, and `WHERE` keywords in the query
+- You want to update the `available` column to `true` for the bike with `BIKE_ID_TO_RETURN`
+- The query you want is `UPDATE bikes SET available = true WHERE bike_id = $BIKE_ID_TO_RETURN`
+- Add `SET_TO_TRUE_RESULT=$($PSQL "UPDATE bikes SET available = true WHERE bike_id = $BIKE_ID_TO_RETURN")` below the `set bike availability to true` comment
+
+## 1730. Add MAIN_MENU Thank you for returning your bike
+
+### 1730.1
+
+After all that is done, send them to the main menu with `Thank you for returning your bike.` as the message.
+
+#### HINTS
+
+- Add the code below the last `send to main menu` comment
+- You want to call the `MAIN_MENU` function with the message as an argument
+- Here's an example: `MAIN_MENU "<message_here>"`
+- Add `MAIN_MENU "Thank you for returning your bike."` below the `send to main menu` comment
+
+## 1740. ./bike-shop.sh
+
+### 1740.1
+
+Run the script and return one of the bikes that `Me` has rented out. When you are done, exit the program.
+
+#### HINTS
+
+- Enter `./bike-shop.sh` in the terminal and press enter
+- The customer with phone number `555-5555` and name `Me` should have at least one rental with the `date_returned` column not null
+
+## 1750. psql SELECT \* FROM rentals
+
+### 1750.1
+
+In the psql prompt, view all the data in the `rentals` table.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM rentals;` in the psql prompt
+- You can type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in.
+
+## 1760. psql SELECT \* FROM bikes ORDER BY bike_id
+
+### 1760.1
+
+Now the rental has been returned. View all the data in the bikes table in order by their `bike_id`.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM bikes ORDER BY bike_id;` in the psql prompt
+- You can type `psql --username=freecodecamp --dbname=bikes` into the terminal to log in to psql if you aren't logged in.
+
+## 1770. ./bike-shop.sh
+
+### 1770.1
+
+And the bike is available again. This is the last step. Run the script once more. Feel free to play around, rent and return some bikes. When you are ready to be done, return all the bikes you rented and exit the program.
+
+#### HINTS
+
+- Enter `./bike-shop.sh` in the terminal and press enter
+- All rentals should have a `date_returned` value, and all bikes should have `available` set to `true`
+
+# Learn Nano by Building a Castle
+
+> Welcome to the Nano lessons!
+
+## 10. Start the Terminal
+
+### 10.1
+
+**The first thing you need to do is start the terminal.** Do that by clicking the "hamburger" menu at the top left of the screen, going to the "terminal" section, and clicking "new terminal". Once you open a new one, type `echo hello nano` into the terminal and press enter.
+
+#### HINTS
+
+- Capitalization matters
+- Make sure you are in the `project` folder when you enter the command
+- If the tests don't run automatically, try typing `exit` into the terminal and redoing the instructions
+
+## 20. Touch `castle.sh`
+
+### 20.1
+
+Use `touch` to create a file named `castle.sh` in the `project` folder.
+
+#### HINTS
+
+- Use the touch command to create the file
+- Make sure you are in the `project` folder when you enter the command
+- Try entering `touch castle.sh` in the terminal
+- Enter `cd ~/project` to get to the project folder if you aren't there
+
+## 25. List contents
+
+### 25.1
+
+Use the list (`ls`) command to make sure your file is there.
+
+#### HINTS
+
+- Type `ls` into the terminal and press enter
+- Make sure you are in the `project` folder when you enter the command
+- Enter `cd ~/project` to get to the project folder if you aren't there
+
+## 30. Nano `castle.sh`
+
+### 30.1
+
+There it is. Nano is a program for editing files that runs in the terminal. You can open a file with `nano filename`. Open the `castle.sh` file you created with Nano.
+
+#### HINTS
+
+- Type `nano castle.sh` in the terminal
+- Make sure you are in the `project` folder when you enter the command
+- You can exit nano by pressing `control + x` if you opened the wrong file
+
+## 40. Write out `castle.sh`
+
+### 40.1
+
+The terminal is showing your file in Nano. At the bottom are the commands you can use. Your file is empty right now. Add `echo hello nano` at the top and press `control + o` to "write-out", or save, the file. You will be prompted at the bottom for a filename. Leave it as `castle.sh` and press enter to save the file.
+
+#### HINTS
+
+- Put `echo hello nano` at the top of the file, then press `control + o`, then `enter` to save the file
+- Make sure the file was saved as `castle.sh`
+- If you are trying to reset, exit nano first
+
+## 50. Exit
+
+### 50.1
+
+Exit Nano by pressing `control + x`.
+
+#### HINTS
+
+- Use `control + x` to exit nano
+- Make sure you are in the `castle.sh` file before you exit
+- Open the file with `nano castle.sh` if you need to open it first
+- If you are trying to reset, exit nano first
+
+## 60. Run `castle.sh`
+
+### 60.1
+
+This will be a small bash script. You can run it with `bash filename`. Run your `castle.sh` file in the terminal.
+
+#### HINTS
+
+- Type `bash castle.sh` in the terminal
+- Make sure you are in the `project` folder when you enter the command
+- If you are trying to reset, exit nano first
+
+## 70. Nano `castle.sh`
+
+### 70.1
+
+You can see the command in your file ran and output text into the terminal. Open your file again with nano.
+
+#### HINTS
+
+- Type `nano castle.sh` in the terminal
+- Make sure you are in the `project` folder when you enter the command
+- If you are trying to reset, exit nano first
+
+## 80. Delete `echo hello nano`
+
+### 80.1
+
+You can "cut" text with `control + k`. Move the cursor to the line with your text and remove the whole line. When you are done, save the file with `control + o`. Note that you cannot use a mouse to move your cursor.
+
+#### HINTS
+
+- Remove the `echo hello nano` line of text and save the file
+- Use `control + o` to save the file
+- Press `enter` after `control + o` to save the file without changing the name
+- If you are trying to reset, exit nano first
+
+## 90. Add `echo ""`
+
+### 90.1
+
+You are going to draw a castle that you can print to the terminal. Add `echo ""` to your file. Put an empty line in between the two quotes like this:
+
+```
+echo "
+
+"
+```
+
+When you are done, save the file with `control + o`.
+
+#### HINTS
+
+- Your file should match the example
+- Use `control + o` to save the file
+- Press `enter` after `control + o` to save the file without changing the name
+- If you are trying to reset, exit nano first
+
+## 100. Add the bottom row to castle
+
+### 100.1
+
+You will draw the castle between the quotes. Add ground level by putting 20 underscores (`_`) in the row between the quotes. It should look like this:
+
+```
+echo "
+____________________
+"
+```
+
+Save the file with `control + o` when you are done.
+
+#### HINTS
+
+- Your file should match the example
+- Use `control + o` to save the file
+- Press `enter` after `control + o` to save the file without changing the name
+- If you are trying to reset, exit nano first
+
+## 110. Exit
+
+### 110.1
+
+The `^` in front of all the commands at the bottom means to press `control` and the letter to run the command. Exit Nano with the `Exit` command.
+
+#### HINTS
+
+- Use `control + x` to exit nano
+- Make sure you are in the `castle.sh` file before you exit
+- Open the file with `nano castle.sh` if you need to open it first
+- If you are trying to reset, exit nano first
+
+## 120. Run `castle.sh`
+
+### 120.1
+
+Use the `bash` command to run your `castle.sh` file in the terminal again.
+
+#### HINTS
+
+- Type `bash castle.sh` in the terminal
+- Make sure you are in the `project` folder when you enter the command
+- If you are trying to reset, exit nano first
+
+## 130. Nano `castle.sh`
+
+### 130.1
+
+Looks like it's working. Open your file with Nano.
+
+#### HINTS
+
+- Type `nano castle.sh` in the terminal
+- Make sure you are in the `project` folder when you enter the command
+- If you are trying to reset, exit nano first
+
+## 140. Add the bottom row sides
+
+### 140.1
+
+Add a vertical bar, or pipe (`|`), at each end of your ground level. It should look like this:
+
+```
+|____________________|
+```
+
+Save the file when you are done.
+
+#### HINTS
+
+- Don't change the other rows
+- Your castle should match the example
+- Use `control + o` to save the file
+- Press `enter` after `control + o` to save the file without changing the name
+- If you are trying to reset, exit nano first
+- The whole file should look like this:
+
+```sh
+echo "
+|____________________|
+"
+```
+
+## 150. Add second row
+
+### 150.1
+
+Add another story to your castle above the ground level that has two more vertical bars. Each bar should be above your existing bars so you need spaces in between them. It should look like this:
+
+```
+|                    |
+|____________________|
+```
+
+When you are done, save the file.
+
+#### HINTS
+
+- Don't change the other rows
+- Your castle should match the example
+- Use `control + o` to save the file
+- Press `enter` after `control + o` to save the file without changing the name
+- If you are trying to reset, exit nano first
+- The whole file should look like this:
+
+```sh
+echo "
+|                    |
+|____________________|
+"
+```
+
+## 160. Exit
+
+### 160.1
+
+Exit Nano so you can run the script again.
+
+#### HINTS
+
+- Use `control + x` to exit nano
+- Make sure you are in the `castle.sh` file before you exit
+- Open the file with `nano castle.sh` if you need to open it first
+- If you are trying to reset, exit nano first
+
+## 170. Run `castle.sh`
+
+### 170.1
+
+Run your file again to see the progress.
+
+#### HINTS
+
+- Type `bash castle.sh` in the terminal
+- Make sure you are in the `project` folder when you enter the command
+- If you are trying to reset, exit nano first
+
+## 180. Nano `castle.sh`
+
+### 180.1
+
+Open your file again so you can add some more.
+
+#### HINTS
+
+- Use Nano to open the file
+- Type `nano castle.sh` in the terminal
+- Make sure you are in the `project` folder when you enter the command
+- If you are trying to reset, exit nano first
+
+## 190. Add the sides of the castle
+
+### 190.1
+
+You can use `control + k` to "cut" and `control + u` to "uncut", or paste, a line. Add five more rows like the one you just added to make your castle six stories high. Try to use the cut and paste method. It should look like this:
+
+```
+|                    |
+|                    |
+|                    |
+|                    |
+|                    |
+|____________________|
+```
+
+When you are done, save the file.
+
+#### HINTS
+
+- Your castle should match the example
+- Use `control + o` to save the file
+- Press `enter` after `control + o` to save the file without changing the name
+- If you are trying to reset, exit nano first
+- The whole file should look like this:
+
+```sh
+echo "
+|                    |
+|                    |
+|                    |
+|                    |
+|                    |
+|____________________|
+"
+```
+
+## 200. Add a roof to the castle
+
+### 200.1
+
+The existing top row is going to be the roof of the castle. Make it look like this:
+
+```
+|  |______________|  |
+```
+
+There's two spaces between the first and second bars, followed by 14 underscores (`_`), then a repeat of the bars and spaces. When you are done, save the file.
+
+#### HINTS
+
+- Make sure your castle is still six stories high
+- Your top row should match the example
+- You should not change any other rows
+- Use `control + o` to save the file
+- Press `enter` after `control + o` to save the file without changing the name
+- If you are trying to reset, exit nano first
+- The whole castle should look like this:
+
+```sh
+echo "
+|  |______________|  |
+|                    |
+|                    |
+|                    |
+|                    |
+|____________________|
+"
+```
+
+## 210. Exit
+
+### 210.1
+
+The `M` at the beginning of the other commands at the bottom stands for "meta". It's a key that doesn't exist on most keyboards. If you're on OSX it means press `escape` then the letter. If you are on another system, press `ALT` then the letter. Use the exit command to get back to the terminal.
+
+#### HINTS
+
+- Use `control + x` to exit nano
+- Make sure you are in the `castle.sh` file before you exit
+- Open the file with `nano castle.sh` if you need to open it first
+- If you are trying to reset, exit nano first
+
+## 220. Run `castle.sh`
+
+### 220.1
+
+Run the script to make sure things are coming along as expected.
+
+#### HINTS
+
+- Use the `bash` command to run the script
+- Type `bash castle.sh` in the terminal
+- Make sure you are in the `project` folder when you enter the command
+- If you are trying to reset, exit nano first
+
+## 230. Nano `castle.sh`
+
+### 230.1
+
+That construction team must be working hard :smile: . Open the file again to continue building.
+
+#### HINTS
+
+- Type `nano castle.sh` in the terminal
+- Make sure you are in the `project` folder when you enter the command
+- If you are trying to reset, exit nano first
+
+## 240. Add the second from top row
+
+### 240.1
+
+The top of the castle has a lookout tower on each end. Add a single row at the top of your castle to make the top look like this:
+
+```
+/  \              /  \
+|  |______________|  |
+```
+
+The slashes are directly above the vertical bars. When you are done, save the file.
+
+#### HINTS
+
+- The top of the castle should match the top row of the example
+- The castle should now be seven stories high
+- Use `control + o` to save the file
+- Press `enter` after `control + o` to save the file without changing the name
+- If you are trying to reset, exit nano first
+- The whole castle should look like this:
+
+```sh
+echo "
+/  \              /  \
+|  |______________|  |
+|                    |
+|                    |
+|                    |
+|                    |
+|____________________|
+"
+```
+
+## 250. Add the peaks
+
+### 250.1
+
+Add the peaks of your lookout towers. Put another row at the top with `/\` above each lookout. It should look like this:
+
+```
+ /\                /\
+/  \              /  \
+```
+
+When you are done, save the file.
+
+#### HINTS
+
+- Your top row should match the top row of the example
+- The castle should now be nine stories high
+- Use `control + o` to save the file
+- Press `enter` after `control + o` to save the file without changing the name
+- If you are trying to reset, exit nano first
+- The whole castle should look like this:
+
+```sh
+echo "
+ /\                /\
+/  \              /  \
+|  |______________|  |
+|                    |
+|                    |
+|                    |
+|                    |
+|____________________|
+"
+```
+
+## 260. Exit
+
+### 260.1
+
+Go back to the terminal with the exit command.
+
+#### HINTS
+
+- Use `control + x` to exit nano
+- Make sure you are in the `castle.sh` file before you exit
+- Open the file with `nano castle.sh` if you need to open it first
+- If you are trying to reset, exit nano first
+
+## 270. Run `castle.sh`
+
+### 270.1
+
+Run your script to bask in the glory of your work.
+
+#### HINTS
+
+- Use `bash` to run the script
+- Type `bash castle.sh` in the terminal
+- Make sure you are in the `project` folder when you enter the command
+- If you are trying to reset, exit nano first
+
+## 280. Nano `castle.sh`
+
+### 280.1
+
+Oh no!! :open_mouth: Looks like a storm came through and blew the roof off! I think we can fix it. Open up the file.
+
+#### HINTS
+
+- Use the `nano` command to open your file
+- Type `nano castle.sh` in the terminal
+- Make sure you are in the `project` folder when you enter the command
+- If you are trying to reset, exit nano first
+
+## 290. Fix the roof
+
+### 290.1
+
+I'm not quite sure what happened here... Some of the `\` don't seem to be working. Try adding a space after the two `\` on the top right lookout tower. Put them where these `x`'s are:
+
+```
+ /\                /\x
+/  \              /  \x
+```
+
+Maybe that will patch the roof. When you are done, save the file.
+
+#### HINTS
+
+- Put a space in place each `x` in the example
+- Use `control + o` to save the file
+- Press `enter` after `control + o` to save the file without changing the name
+- If you are trying to reset, exit nano first
+- The whole castle should look like this, but with spaces instead of `x`'s:
+
+```sh
+echo "
+ /\                /\x
+/  \              /  \x
+|  |______________|  |
+|                    |
+|                    |
+|                    |
+|                    |
+|____________________|
+"
+```
+
+## 300. Exit
+
+### 300.1
+
+Go back to the terminal so you can run the script again.
+
+#### HINTS
+
+- Use `control + x` to exit nano
+- Make sure you are in the `castle.sh` file before you exit
+- Open the file with `nano castle.sh` if you need to open it first
+- If you are trying to reset, exit nano first
+
+## 310. Run `castle.sh`
+
+### 310.1
+
+Run the script to see if the roof is fixed.
+
+#### HINTS
+
+- Use `bash` to run the script
+- Type `bash castle.sh` in the terminal
+- Make sure you are in the `project` folder when you enter the command
+- If you are trying to reset, exit nano first
+
+## 320. Nano `castle.sh`
+
+### 320.1
+
+Okay, it's all patched up. Open the file again.
+
+#### HINTS
+
+- Use the `nano` command to open your file
+- Type `nano castle.sh` in the terminal
+- Make sure you are in the `project` folder when you enter the command
+- If you are trying to reset, exit nano first
+
+## 330. Add windows
+
+### 330.1
+
+Add some windows to your castle. Use a left and right brackets for them (`[]`). Put three pairs on the fourth story, like this:
+
+```
+|   []    []    []   |
+```
+
+There's four spaces between each window and three between the window and the sides. Save the file when you are done.
+
+#### HINTS
+
+- Add three windows to the fourth row from the bottom exactly like the example
+- There's three spaces between a `|` and window
+- There's four spaces between a window and another window
+- Use `control + o` to save the file
+- Press `enter` after `control + o` to save the file without changing the name
+- If you are trying to reset, exit nano first
+- The whole castle should look like this, but with spaces instead of `x`:
+
+```sh
+echo "
+ /\                /\x
+/  \              /  \x
+|  |______________|  |
+|                    |
+|   []    []    []   |
+|                    |
+|                    |
+|____________________|
+"
+```
+
+## 340. Add the door
+
+### 340.1
+
+Last is the door. Change the bottom two rows so there's a door right in the middle that looks like this:
+
+```
+|         __         |
+|________|  |________|
+```
+
+The bottom row has two vertical bars with two spaces between them and the second story has two underscores to make the top of the door. When you are done, save the file.
+
+#### HINTS
+
+- Make sure your bottom two rows look like the example
+- Use `control + o` to save the file
+- Press `enter` after `control + o` to save the file without changing the name
+- If you are trying to reset, exit nano first
+- The whole castle should look like this, but with spaces instead of `x`:
+
+```sh
+echo "
+ /\                /\x
+/  \              /  \x
+|  |______________|  |
+|                    |
+|   []    []    []   |
+|                    |
+|         __         |
+|________|  |________|
+"
+```
+
+## 350. Exit
+
+### 350.1
+
+Nano has a lot more features, but the basics will get you through most scenarios. Go back to the terminal with the command to exit nano.
+
+#### HINTS
+
+- Use `control + x` to exit nano
+- Make sure you are in the `castle.sh` file before you exit
+- Open the file with `nano castle.sh` if you need to open it first
+- If you are trying to reset, exit nano first
+
+## 360. Run `castle.sh`
+
+### 360.1
+
+Run your script again. Hopefully the weather has been good.
+
+#### HINTS
+
+- Use `bash` to run the script
+- Type `bash castle.sh` in the terminal
+- Make sure you are in the `project` folder when you enter the command
+- If you are trying to reset, exit nano first
+
+## 370. Nano `castle.sh`
+
+### 370.1
+
+Excellent. Open the file, I think there's one more thing you can add.
+
+#### HINTS
+
+- Use the `nano` command to open your file
+- Type `nano castle.sh` in the terminal
+- Make sure you are in the `project` folder when you enter the command
+- If you are trying to reset, exit nano first
+
+## 380. Add a welcome
+
+### 380.1
+
+At the very top of the file, add another `echo` command with two quotes and an empty line between the quotes. In the empty line put the message, "Welcome to my castle". Here's an example:
+
+```
+echo "
+message here
+"
+```
+
+When you are done, save the file.
+
+#### HINTS
+
+- Add the code above but replace `message here` with the correct message
+- The correct message is `Welcome to my castle`
+- Put all this at the very top of the file
+- Use `control + o` to save the file
+- Press `enter` after `control + o` to save the file without changing the name
+- If you are trying to reset, exit nano first
+- The whole castle should look like this, but with spaces instead of `x`:
+
+```sh
+echo "
+Welcome to my castle
+"
+
+echo "
+ /\                /\x
+/  \              /  \x
+|  |______________|  |
+|                    |
+|   []    []    []   |
+|                    |
+|         __         |
+|________|  |________|
+"
+```
+
+## 390. Exit
+
+### 390.1
+
+Go back to the terminal with the exit command so you can see if it's all done.
+
+#### HINTS
+
+- Use `control + x` to exit nano
+- Make sure you are in the `castle.sh` file before you exit
+- Open the file with `nano castle.sh` if you need to open it first
+- If you are trying to reset, exit nano first
+
+## 400. Run `castle.sh`
+
+### 400.1
+
+This is the last step. Run the script to see your final product :smile:
+
+#### HINTS
+
+- Use `bash` to run the script
+- Type `bash castle.sh` in the terminal
+- Make sure you are in the `project` folder when you enter the command
+- If you are trying to reset, exit nano first
+
+# Learn Git by Building an SQL Reference Object
+
+> Welcome to the git lessons!
+
+## 10. Start Terminal
+
+### 10.1
+
+The first thing you need to do is start the terminal. Open a new one by clicking the "hamburger" menu at the top left of the window, going to the "terminal" section, and clicking "new terminal". Once you open a new one, type `echo hello git` into the terminal and press enter.
+
+#### HINTS
+
+- Follow the directions closely
+- If the tests don't pass, trash all the terminals with the trash can icon at the top right of the terminal. Then, redo those instructions
+
+## 20. Make Directory
+
+### 20.1
+
+You should be in the `project` folder in the terminal you opened. Use the terminal to make a new directory named `sql_reference` in the `project` folder. As a reminder, you can use the `mkdir` command to make a new folder.
+
+#### HINTS
+
+- Enter `mkdir sql_reference` in the terminal from the `project` folder
+- Enter `cd ~/project` to get to the `project` folder if you aren't there
+- Don't try to create the folder with another method
+
+## 30. Change Directory
+
+### 30.1
+
+Use the "change directory" command in the terminal to change to your new folder.
+
+#### HINTS
+
+- Enter `cd sql_reference` into the terminal
+- Make sure you are in the `project` folder first
+- Enter `cd ~/project` to get to the `project` folder if you aren't there
+
+## 40. Initialize a git Repository
+
+### 40.1
+
+Git is a version control system to keep track of your code. This folder will be your git repository. Turn it into one by typing `git init` in the terminal from this folder.
+
+#### HINTS
+
+- Enter `git init` into the terminal while in the `sql_reference` folder
+- Make sure you are in the `sql_reference` folder first
+- Enter `cd ~/project/sql_reference` to get to the folder if you aren't there
+
+## 50. View .git Folder
+
+### 50.1
+
+Use the list command with the `-a` flag to list the hidden folders and files.
+
+#### HINTS
+
+- The list command is `ls`
+- Type `ls -a` into the terminal and press enter
+- Make sure you are in the `sql_reference` folder first
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 60. git status
+
+### 60.1
+
+The `git init` command created that `.git` folder for you. It's what keeps track of all the things in your repository. Use `git status` to see the status of where you are. This command will be your best friend.
+
+#### HINTS
+
+- Type `git status` into the terminal and press enter
+- Make sure you are in the `sql_reference` folder first
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 70. Checkout main Branch
+
+### 70.1
+
+A git repository has branches to help keep track of things you are doing with your code. It's common to have a `main` branch which might be for your production code, and other branches for adding new features or fixing bugs. You can create and go to a new branch with `git checkout -b new_branch`. The `-b` stands for "branch". Use that command to switch to a new branch named `main`.
+
+#### HINTS
+
+- Capitalization matters
+- Type `git checkout -b main` into the terminal
+- Make sure you are in your `sql-reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 80. git status
+
+### 80.1
+
+Check your status again with `git status`.
+
+#### HINTS
+
+- Type `git status` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 90. touch README.md
+
+### 90.1
+
+Now you are on the `main` branch. Use the `touch` command to create `README.md` inside your repository. This is a file you will see in many repos to describe what the repo is for.
+
+#### HINTS
+
+- Use `touch file_name` to create a file
+- Type `touch README.md` into the terminal and press enter
+- Don't try to create the file with another method
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 100. Add Readme Text
+
+### 100.1
+
+Add the text `SQL Reference` at the top of your new file to let people know what your repo is for.
+
+#### HINTS
+
+- Add the suggested text in your `README.md` file
+
+## 110. git status
+
+### 110.1
+
+Check the status of your repo again.
+
+#### HINTS
+
+- Use the "git status" command in your repo
+- Type `git status` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 120. git add README.md
+
+### 120.1
+
+The file you created has not been added to git yet so it is showing that it is untracked. There's two steps to make git keep track of it for you. First you need to add it to the staging area like this: `git add file_name`. Add your `README.md` file to the staging area.
+
+#### HINTS
+
+- Replace `file_name` in the example with your `README.md` file
+- Type `git add README.md` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 130. git status
+
+### 130.1
+
+Check your status again.
+
+#### HINTS
+
+- Use the "git status" command in your repo
+- Type `git status` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 140. touch sql_reference.json
+
+### 140.1
+
+Now your file is in staging and will be added with the next commit. You aren't quite ready to commit this yet though. Use `touch` again to create `sql_reference.json` in your repo.
+
+#### HINTS
+
+- Use `touch file_name` to create a file
+- Type `touch sql_reference.json` into the terminal and press enter
+- Don't try to create the file with another method
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 150. git status
+
+### 150.1
+
+Check your status again.
+
+#### HINTS
+
+- Use the "git status" command in your repo
+- Type `git status` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 160. git add Initial commit
+
+### 160.1
+
+You now have one file in staging and one that is untracked. Add the new file you created to the staging area.
+
+#### HINTS
+
+- Here's the example again: `git add file_name`
+- You added the last one with `git add README.md`
+- Type `git add sql_reference.json` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 170. git status
+
+### 170.1
+
+Check your status one more time please :grin:
+
+#### HINTS
+
+- Use the "git status" command in your repo
+- Type `git status` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 180. git commit Initial commit
+
+### 180.1
+
+Now you have two files in staging. To commit them, you can use `git commit -m "Initial commit"`. The `-m` stands for "message". Often times, the first commit of a repo will have the message "Initial commit". Commit your two files with the message `Initial commit`.
+
+#### HINTS
+
+- Type `git commit -m "Initial commit"` in the terminal and press enter
+- Enter `git log` to see if your message is correct
+- If the message is wrong, enter `git reset HEAD~1`, then `git add .`, and then you can try to make the commit again
+- Or, reset the lesson and try again
+
+## 190. git status
+
+### 190.1
+
+When you make a commit, whatever is in the staging area will be added to your git history. You can see some info in the terminal output about the commit. Check your status again to see what's there.
+
+#### HINTS
+
+- Use the "git status" command in your repo
+- Type `git status` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 200. git log
+
+### 200.1
+
+Your "working tree" is clean, the files were committed and there's no other new changes that git recognizes. You can see your commit history with `git log`. Check your commit history.
+
+#### HINTS
+
+- Type `git log` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 210. Add CREATE DATABASE Command
+
+### 210.1
+
+You can see the commit you made. It shows the message you gave with the commit, along with your username, email, the date, and a commit hash. The hash is that long string of characters. Open up your `.json` file and create an object with a reference for how to create a database that looks like this:
+
+```json
+{
+  "database": {
+    "create": "CREATE DATABASE database_name;"
+  }
+}
+```
+
+Make sure there's one empty line at the bottom of the file and no extra spaces after the value or any of the curly brackets.
+
+#### HINTS
+
+- Add the suggested object to your `sql_reference.json` file
+- Double check for those extra spaces and the empty line
+
+## 220. git status
+
+### 220.1
+
+Check your status again.
+
+#### HINTS
+
+- Use the "git status" command in your repo
+- Type `git status` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 230. git diff
+
+### 230.1
+
+Git recognizes new unstaged changes to your file. Notice that it says that file is modified instead of untracked because the file has been previously committed. You can see the changes you made with `git diff`. Take a look at the new changes.
+
+#### HINTS
+
+- Type `git diff` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 240. git add sql_reference.json
+
+### 240.1
+
+The lines with `+` in front means that those lines were added. Add your new changes to staging with the `git add` command again. Make sure to put the filename you want to add at the end of the command.
+
+#### HINTS
+
+- You previously used `git add README.md` to add changes to staging
+- Type `git add sql_reference.json` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 250. git status
+
+### 250.1
+
+Check your status.
+
+#### HINTS
+
+- Use the "git status" command in your repo
+- Type `git status` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 260. git commit feat: add create database reference
+
+### 260.1
+
+Your new changes are staged and ready to be committed. Commit them with the message `feat: add create database reference`. As a reminder, here what the command to commit looks like: `git commit -m "message"`.
+
+#### HINTS
+
+- Type `git commit -m "feat: add create database reference"` into the terminal and press enter
+- View your `git log` to see if your message is correct
+- If the message is wrong, enter `git reset HEAD~1`, then `git add .`, and then you can try to make the commit again
+- Or, reset the lesson and try again
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 270. git log
+
+### 270.1
+
+Commit messages often start with `fix:` or `feat:`, among others, to help people understand what your commit was for. Check your `git log` again to see the new commit added.
+
+#### HINTS
+
+- Type `git log` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 280. Add DROP DATABASE command
+
+### 280.1
+
+Now there's two commits in your history, the newest one is at the top :smile: In your JSON file, add a `drop` key to your `database` object. Give it a value for how to drop a database similar to the `create` value. The syntax is in the hints. Again, make sure there's an empty line at the bottom of the file and no extra spaces after any values or curly brackets.
+
+#### HINTS
+
+- The value should be `"DROP DATABASE database_name;"`
+- Don't forget the comma at the end of the previous line to make it a valid json object.
+- Your database object should have these values:
+
+```json
+{
+  "create": "CREATE DATABASE database_name;",
+  "drop": "DROP DATABASE database_name;"
+}
+```
+
+- The whole file should look like this:
+
+```json
+{
+  "database": {
+    "create": "CREATE DATABASE database_name;",
+    "drop": "DROP DATABASE database_name;"
+  }
+}
+```
+
+- Make sure there's one empty line at the bottom of the file and no extra spaces after any of the values or curly brackets
+- You can view the `git diff` to see if there's any extra spaces
+
+## 290. git status
+
+### 290.1
+
+Check your status.
+
+#### HINTS
+
+- Use the "git status" command in your repo
+- Type `git status` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 300. git diff
+
+### 300.1
+
+Changes not staged. Check the `diff` quick.
+
+#### HINTS
+
+- Use the "git diff" command in your repo
+- Type `git diff` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 310. git add DROP DATABASE command
+
+### 310.1
+
+It should show one line removed and two lines added. Add your changes to the staging area.
+
+#### HINTS
+
+- You previously used `git add README.md` to add changes to staging
+- Type `git add sql_reference.json` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 320. git commit feat: add drop database reference
+
+### 320.1
+
+Commit your staged changes with the message, `feat: add drop database reference`
+
+#### HINTS
+
+- Commit changes with `git commit -m "message"`
+- Type `git commit -m "feat: add drop database reference"` into the terminal and press enter
+- View your `git log` to see if your message is correct
+- If the message is wrong, enter `git reset HEAD~1`, then `git add .`, and then you can try to make the commit again
+- Or, reset the lesson and try again
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 330. git log
+
+### 330.1
+
+I think you're catching on :smile: Check the `log` again.
+
+#### HINTS
+
+- Type `git log` into the terminal and press enter
+- Press `enter` in the terminal to go through the whole log
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 340. git branch
+
+### 340.1
+
+Now there's three commits :smile: You have been making changes to your `main` branch. You actually want to try and avoid that. Type `git branch` to see the current branches in your repo.
+
+#### HINTS
+
+- Type `git branch` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 350. git branch feat/add-create-table-reference
+
+### 350.1
+
+You only have the `main` branch still. You can create a branch with `git branch branch_name`. Branches often start with `fix/` or `feat/`, among others, like commit messages, but they use a forward slash and can't contain spaces. Create a new branch named `feat/add-create-table-reference`.
+
+#### HINTS
+
+- Type `git branch feat/add-create-table-reference` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 360. git branch
+
+### 360.1
+
+Your new branch is a clone of the `main` branch since that's the branch you were on when you created it. It will have the same code and commit history as `main` did at the time of the branch creation. View your branches again with `git branch`.
+
+#### HINTS
+
+- Type `git branch` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 370. git checkout feat/add-create-table-reference
+
+### 370.1
+
+You can see your new branch, but you are still on the `main` branch, as denoted with the `*`. To switch to a branch use: `git checkout branch_name`. Switch to your new branch.
+
+#### HINTS
+
+- Type `git checkout feat/add-create-table-reference` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 380. git branch
+
+### 380.1
+
+It says you switched to your new branch. Type `git branch` so I can make sure the `*` switched.
+
+#### HINTS
+
+- Type `git branch` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 390. Add CREATE TABLE Command
+
+### 390.1
+
+Like I said, you often don't want to make commits directly to the main branch of a repo. This branch will be for some new changes. What you will do is make the changes and commits here, then merge them into the `main` branch when they are ready. Add a reference for creating an SQL table to your json file along side your `database` property. Make it look like this:
+
+```json
+"table": {
+  "create": "CREATE TABLE table_name;"
+}
+```
+
+#### HINTS
+
+- Make sure to add commas to keep it a valid json object
+- The `table` key should be on the same level as the `database` key
+- The whole file should look like this:
+
+```json
+{
+  "database": {
+    "create": "CREATE DATABASE database_name;",
+    "drop": "DROP DATABASE database_name;"
+  },
+  "table": {
+    "create": "CREATE TABLE table_name;"
+  }
+}
+```
+
+- Make sure there's one empty line at the bottom of the file and no extra spaces after any of the values or curly brackets
+- You can view the `git diff` to see if there's any extra spaces
+
+## 400. git status
+
+### 400.1
+
+Show me the status again. You might as well get used to it :smiley_cat:
+
+#### HINTS
+
+- Use the "git status" command in your repo
+- Type `git status` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 405. git diff
+
+### 405.1
+
+Changes not staged. Check the `diff` quick so you can make sure your changes look good.
+
+#### HINTS
+
+- Use the "git diff" command in your repo
+- Type `git diff` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 410. git add CREATE TABLE reference
+
+### 410.1
+
+You made new changes so the file shows up as not staged. Add the file to staging so you can commit the changes.
+
+#### HINTS
+
+- Here's an example: `git add file_name`
+- You previously used `git add README.md` to add changes to staging
+- Type `git add sql_reference.json` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 420. git commit feat: add create table reference
+
+### 420.1
+
+The changes are now in staging. Commit your staged changes with the message `feat: add create table reference`.
+
+#### HINTS
+
+- Commit changes with `git commit -m "message"`
+- Type `git commit -m "feat: add create table reference"` into the terminal and press enter
+- View your `git log` to see if your message is correct
+- If the message is wrong, enter `git reset HEAD~1`, then `git add .`, and then you can try to make the commit again
+- Or, reset the lesson and try again
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 430. git log
+
+### 430.1
+
+Check your `git log` again.
+
+#### HINTS
+
+- Type `git log` into the terminal and press enter
+- Press `enter` in the terminal to go through the whole log
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 435. git log oneline
+
+### 435.1
+
+Now you have four commits, they are getting a little hard to see. Check the log again, but this time use the `--oneline` flag to condense the output so it's more readable.
+
+#### HINTS
+
+- Type `git log --oneline` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 440. git checkout main
+
+### 440.1
+
+That's better. Use `git checkout` to switch back to the `main` branch.
+
+#### HINTS
+
+- Use `git checkout branch_name` to switch to a branch
+- Enter `git checkout main` into the terminal and press enter
+
+## 450. git log
+
+### 450.1
+
+You may have noticed that the code you added disappeared from the JSON file. Your changes were added on the `feat/add-create-table-reference` branch so they don't exist on this branch. Check the log of the main branch, use the `--oneline` flag again.
+
+#### HINTS
+
+- Type `git log --oneline` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 460. git branch
+
+### 460.1
+
+You can see three commits on this branch and four on the feature branch you were just on. The commit and code you added on the feature branch only exist over there for now. View the branches you have to remind me the name of your other branch.
+
+#### HINTS
+
+- Type `git branch` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 470. git merge feat/add-create-table-reference
+
+### 470.1
+
+You created the `feat/add-create-table-reference` branch, made a commit, and now it's ready to be added to the `main` branch. You can use `git merge branch_name` to bring changes from a branch into the branch you are currently on. Merge the changes from your feature branch into the `main` branch.
+
+#### HINTS
+
+- Type `git merge feat/add-create-table-reference` into the terminal and press enter
+- Make sure you enter the command while on the `main` branch
+
+## 480. git log oneline
+
+### 480.1
+
+The commits and code from your feature branch were added to this branch. There's a message with some info about the merge. Check the log with the `--oneline` flag again.
+
+#### HINTS
+
+- Use the `git log` command with the correct flag
+- Type `git log --oneline` into the terminal and press enter
+
+## 490. git branch -d feat/add-create-table-reference
+
+### 490.1
+
+The `feat: add create table reference` commit you made on your feature branch was added to this branch with the merge. You can delete a branch with `git branch -d branch_name`. `-d` stands for "delete". Since your changes were added, you can safely delete your feature branch. Do that now.
+
+#### HINTS
+
+- The branch name is `feat/add-create-table-reference`
+- Type `git branch -d feat/add-create-table-reference` into the terminal and press enter
+
+## 500. git branch
+
+### 500.1
+
+It said it was deleted, but view your branches again for me to verify that it's gone.
+
+#### HINTS
+
+- Type `git branch` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 510. git checkout -b feat/add-drop-table-reference
+
+### 510.1
+
+You're just left with the `main` branch... Want to try it again? Last time you created a branch and then switched to it. You can do both at the same time with `git checkout -b branch_name`. Create and switch to a new branch named `feat/add-drop-table-reference`.
+
+#### HINTS
+
+- Type `git checkout -b feat/add-drop-table-reference` into the terminal and press enter
+
+## 520. Add DROP TABLE Command
+
+### 520.1
+
+Add a `drop` key to the `table` object of your JSON file. Give it a value for how to drop a table. The syntax is in the hints.
+
+#### HINTS
+
+- The value should be `"DROP TABLE table_name;"`
+- Don't forget the commas to make it a valid json object
+- The key looks like this: `"drop": "DROP TABLE table_name;"`
+- The `table` object should look like this:
+
+```json
+"table": {
+  "create": "CREATE TABLE table_name;",
+  "drop": "DROP TABLE table_name;"
+}
+```
+
+- The whole file should look like this:
+
+```json
+{
+  "database": {
+    "create": "CREATE DATABASE database_name;",
+    "drop": "DROP DATABASE database_name;"
+  },
+  "table": {
+    "create": "CREATE TABLE table_name;",
+    "drop": "DROP TABLE table_name;"
+  }
+}
+```
+
+- Make sure there's one empty line at the bottom of the file and no extra spaces after any of the values or curly brackets
+- You can view the `git diff` to see if there's any extra spaces
+
+## 530. git status
+
+### 530.1
+
+Check your status.
+
+#### HINTS
+
+- Use the "git status" command in your repo
+- Type `git status` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+
+## 535. git diff
+
+### 535.1
+
+Check the `diff` so you can confirm you like your changes.
+
+#### HINTS
+
+- Use the "git diff" command in your repo
+- Type `git diff` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+- Enter `cd ~/project/sql_reference` to go to the folder if you aren't there
+
+## 540. git add DROP TABLE command
+
+### 540.1
+
+Add your changes to staging.
+
+#### HINTS
+
+- You previously used `git add README.md` to add changes to staging
+- Type `git add sql_reference.json` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+
+## 550. git commit feat: add drop table reference
+
+### 550.1
+
+Commit your staged changes with the message `feat: add drop table reference`.
+
+#### HINTS
+
+- Commit changes with `git commit -m "message"`
+- Type `git commit -m "feat: add drop table reference"` into the terminal and press enter
+- View your `git log` to see if your message is correct
+- If the message is wrong, enter `git reset HEAD~1`, then `git add .`, and then you can try to make the commit again
+- Or, reset the lesson and try again
+- Make sure you are in your `sql_reference` repo folder
+
+## 560. git checkout main
+
+### 560.1
+
+Switch back your `main` branch so you can merge in these changes.
+
+#### HINTS
+
+- Use `git checkout branch_name` to switch to a branch
+- Enter `git checkout main` into the terminal and press enter
+
+## 570. git branch
+
+### 570.1
+
+Remember that the code and commit you added aren't on this branch, so they disappeared again. View the branches on your repo so you can get the name of it to merge your feature into the main branch.
+
+#### HINTS
+
+- Use `git branch` to view your branches
+- Make sure you are in your `sql_reference` repo folder
+
+## 580. git merge feat/add-drop-table-reference
+
+### 580.1
+
+Merge your feature branch into the `main` branch.
+
+#### HINTS
+
+- Here's an example: `git merge branch_name`
+- The command will merge `branch_name` into whatever branch you are on
+- Type `git merge feat/add-drop-table-reference` into the terminal and press enter
+- Make sure you enter the command while on the `main` branch
+
+## 590. git branch -d feat/add-drop-table-reference
+
+### 590.1
+
+The commit from your feature branch was added to the `main` branch so you can safely delete the feature branch. Delete your feature branch.
+
+#### HINTS
+
+- Use the `git branch` command with the `-d` flag to delete a branch
+- Use the "git branch" command to find the branch name
+- The branch name is `feat/add-drop-table-reference`
+- Here's an example: `git branch -d branch_name`
+- Type `git branch -d feat/add-drop-table-reference` into the terminal and press enter
+
+## 600. git checkout -b feat/add-column-references
+
+### 600.1
+
+You're getting the hang of it :smile: The process is to create a branch, make the changes you want, commit them, and then merge the changes into branch you started on. Pretty simple, lets keep going. Create and checkout a new branch named `feat/add-column-references`
+
+#### HINTS
+
+- You can create and checkout a branch with `git checkout -b branch_name`
+- Type `git checkout -b feat/add-column-references` into the terminal and press enter
+
+## 610. Add ADD COLUMN command
+
+### 610.1
+
+This branch will be a work in progress. Add a `column` key to your JSON object. Make it an object like the other two. Give it a single property, `add`, that has the value `"ALTER TABLE table_name ADD COLUMN column_name;"`.
+
+#### HINTS
+
+- The `column` key should be on the same level as the `table` key
+- The `column` object should look like this:
+
+```json
+"column": {
+  "add": "ALTER TABLE table_name ADD COLUMN column_name;"
+}
+```
+
+- The whole file should look like this:
+
+```json
+{
+  "database": {
+    "create": "CREATE DATABASE database_name;",
+    "drop": "DROP DATABASE database_name;"
+  },
+  "table": {
+    "create": "CREATE TABLE table_name;",
+    "drop": "DROP TABLE table_name;"
+  },
+  "column": {
+    "add": "ALTER TABLE table_name ADD COLUMN column_name;"
+  }
+}
+```
+
+- Make sure there's one empty line at the bottom of the file and no extra spaces after any of the values or curly brackets
+- You can view the `git diff` to see if there's any extra spaces
+
+## 620. git diff
+
+### 620.1
+
+View the `diff` to make sure your new changes are what you expect.
+
+#### HINTS
+
+- Use the "git diff" command
+- Type `git diff` into the terminal and press enter
+- Make sure you are in your repo folder first
+
+## 630. git add ADD COLUMN command
+
+### 630.1
+
+Add your changes to staging. Here's a tip: you can use `git add .` to add all files to staging.
+
+#### HINTS
+
+- Here's an example: `git add file_name`
+- You previously used `git add README.md` to add changes to staging
+- Type `git add sql_reference.json` into the terminal and press enter
+
+## 640. git commit feat: add column reference
+
+### 640.1
+
+Commit your staged changes with the message `feat: add column reference`.
+
+#### HINTS
+
+- Commit changes with `git commit -m "message"`
+- Type `git commit -m "feat: add column reference"` into the terminal and press enter
+- View your `git log` to see if your message is correct
+- If the message is wrong, enter `git reset HEAD~1`, then `git add .`, and then you can try to make the commit again
+- Or, reset the lesson and try again
+
+## 650. git log oneline
+
+### 650.1
+
+View your log with the oneline flag.
+
+#### HINTS
+
+- Use the `git log` command with the correct flag
+- It's the `--oneline` flag
+- Type `git log --oneline` into the terminal and press enter
+
+## 670. git checkout main
+
+### 670.1
+
+The commit was added. I see an error in the syntax of one of the commands. You want to fix it, but this branch is not for fixing it. Switch back to your `main` branch so you can create a new branch to fix it.
+
+#### HINTS
+
+- Use `git checkout branch_name` to switch to a branch
+- Enter `git checkout main` into the terminal and press enter
+
+## 680. git checkout -b fix/create-table-syntax
+
+### 680.1
+
+Remember that, when you create a branch, it will be a clone of whatever branch you are on when you create it. That's why you switched to `main` first. Create and switch to a branch named `fix/create-table-syntax`.
+
+#### HINTS
+
+- Here's an example: `git checkout -b branch_name`
+- Type `git checkout -b fix/create-table-syntax` into the terminal and press enter
+
+## 690. Fix CREATE TABLE syntax
+
+### 690.1
+
+The create table command is a function, so it needs parenthesis `()` at the end. Add those to the end of the command.
+
+#### HINTS
+
+- It's the `table.create` key that you need to change
+- The value should look like this: `CREATE TABLE table_name();`
+- The `table` object should look like this:
+
+```json
+"table": {
+  "create": "CREATE TABLE table_name();",
+  "drop": "DROP TABLE table_name;"
+}
+```
+
+- The whole file should look like this:
+
+```json
+{
+  "database": {
+    "create": "CREATE DATABASE database_name;",
+    "drop": "DROP DATABASE database_name;"
+  },
+  "table": {
+    "create": "CREATE TABLE table_name();",
+    "drop": "DROP TABLE table_name;"
+  }
+}
+```
+
+- Make sure there's one empty line at the bottom of the file and no extra spaces after any of the values or curly brackets
+- You can view the `git diff` to see if there's any extra spaces
+
+## 700. git add FIX CREATE TABLE command
+
+### 700.1
+
+Check your status and diff to see your new changes. Then, add your files to staging.
+
+#### HINTS
+
+- Here's an example: `git add file_name`
+- You previously used `git add README.md` to add changes to staging
+- Type `git add sql_reference.json` into the terminal and press enter
+
+## 710. git commit fix: create table syntax
+
+### 710.1
+
+Commit your changes with the message `fix: create table syntax`.
+
+#### HINTS
+
+- Commit changes with `git commit -m "message"`
+- Type `git commit -m "fix: create table syntax"` into the terminal and press enter
+- View your `git log` to see if your message is correct
+- If the message is wrong, enter `git reset HEAD~1`, then `git add .`, and then you can try to make the commit again
+- Or, reset the lesson and try again
+
+## 720. git checkout main
+
+### 720.1
+
+Switch back to your `main` so you can merge this important bug fix.
+
+#### HINTS
+
+- Use `git checkout branch_name` to switch to a branch
+- Enter `git checkout main` into the terminal and press enter
+
+## 730. git branch
+
+### 730.1
+
+View your branches to remind me of the branch name.
+
+#### HINTS
+
+- Use `git branch` to view your branches
+- Make sure you are in your `sql_reference` repo folder
+
+## 740. git merge fix/create-table-syntax
+
+### 740.1
+
+Merge your bug fix branch into this branch.
+
+#### HINTS
+
+- It's the `fix/create-table-syntax` branch
+- Here's an example: `git merge branch_name`
+- Type `git merge fix/create-table-syntax` into the terminal and press enter
+
+## 750. git log oneline
+
+### 750.1
+
+View your log with the oneline flag.
+
+#### HINTS
+
+- Use the `git log` command with the correct flag
+- It's the `--oneline` flag
+- Type `git log --oneline` into the terminal and press enter
+
+## 755. git branch -d fix/create-table-syntax
+
+### 755.1
+
+The bug fix is in and you can safely delete the branch. Go ahead and delete the branch that was for that fix. View your branches if you need to find the name.
+
+#### HINTS
+
+- Use the `git branch` command with the `-d` flag
+- Here's an example: `git branch -d branch_name`
+- The branch name is `fix/create-table-syntax`
+- Type `git branch -d fix/create-table-syntax` into the terminal and press enter
+
+## 760. git checkout feat/add-column-references
+
+### 760.1
+
+Your bug fix is merged into the `main` branch. Switch back to your feature branch so you can continue adding column references.
+
+#### HINTS
+
+- Check your branches if you need to get the name of the branch
+- You can view your branches with `git branch`
+- Use `git checkout branch_name` to switch to a branch
+- It's the `feat/add-column-references` branch
+- Enter `git checkout feat/add-column-references` into the terminal and press enter
+
+## 770. git log oneline
+
+### 770.1
+
+View your log with the oneline flag.
+
+#### HINTS
+
+- Use the `git log` command with the correct flag
+- It's the `--oneline` flag
+- Type `git log --oneline` into the terminal and press enter
+
+## 780. git rebase main
+
+### 780.1
+
+You created this branch and made a commit. Since then, a commit for a bug fix was added to `main`. This is common with many people working on a codebase simultaneously. You need to update this branch so it has the same commits from `main`, but you can't just merge that branch into this one. You need that bug fix commit to be in the same order here as it is on `main`, right after the "drop table" commit. You need to `rebase` this branch against `main` to do that. Enter `git rebase main` to rebase this branch.
+
+#### HINTS
+
+- Type `git rebase main` into the terminal and press enter
+
+## 790. git log oneline
+
+### 790.1
+
+There was some fancy output there, but you can see the parenthesis from the bug fix commit were added to the `table.create` value. Show me the log again with the same flag you have been using so you can see what happened.
+
+#### HINTS
+
+- Use the `git log` command with the correct flag
+- It's the `--oneline` flag
+- Type `git log --oneline` into the terminal and press enter
+
+## 800. Add DROP COLUMN command
+
+### 800.1
+
+The logs show that the bug fix commit from `main` was added, and then the commit from this branch was added on top of it. Now, when this branch is ready to be merged into `main`, it will have the same commit history. You should try to keep your branches up to date like this by rebasing them often. In your JSON file, add a `drop` key to the `column` object with a reference for dropping a column. The syntax is in the hints, give it a try first.
+
+#### HINTS
+
+- It follows a similar syntax as adding a column
+- Don't forget the semi-colon at the end
+- Here's the syntax: `ALTER TABLE table_name DROP COLUMN column_name;`
+- Make sure the above value is in the `column.drop` key
+- Here's what the `column` object should look like:
+
+```json
+"column": {
+  "add": "ALTER TABLE table_name ADD COLUMN column_name;",
+  "drop": "ALTER TABLE table_name DROP COLUMN column_name;"
+}
+```
+
+- The whole file should look like this:
+
+```json
+{
+  "database": {
+    "create": "CREATE DATABASE database_name;",
+    "drop": "DROP DATABASE database_name;"
+  },
+  "table": {
+    "create": "CREATE TABLE table_name();",
+    "drop": "DROP TABLE table_name;"
+  },
+  "column": {
+    "add": "ALTER TABLE table_name ADD COLUMN column_name;",
+    "drop": "ALTER TABLE table_name DROP COLUMN column_name;"
+  }
+}
+```
+
+- Make sure there's one empty line at the bottom of the file and no extra spaces after any of the values or curly brackets
+- You can view the `git diff` to see if there's any extra spaces
+
+## 810. git add DROP COLUMN command
+
+### 810.1
+
+Check your status and diff to see your new changes. Then, add your changes to staging.
+
+#### HINTS
+
+- Here's an example: `git add file_name`
+- You previously used `git add README.md` to add changes to staging
+- Type `git add sql_reference.json` into the terminal and press enter
+
+## 820. git commit feat: drop column reference
+
+### 820.1
+
+Commit your changes with the message: `feat: add drop column reference`.
+
+#### HINTS
+
+- Commit changes with `git commit -m "message"`
+- Type `git commit -m "feat: add drop column reference"` into the terminal and press enter
+- View your `git log` to see if your message is correct
+- If the message is wrong, enter `git reset HEAD~1`, then `git add .`, and then you can try to make the commit again
+- Or, reset the lesson and try again
+
+## 830. git log oneline
+
+### 830.1
+
+View your log again. Make sure you use my favorite flag.
+
+#### HINTS
+
+- Use the `git log` command with the correct flag
+- It's the `--oneline` flag
+- Type `git log --oneline` into the terminal and press enter
+
+## 840. git checkout main
+
+### 840.1
+
+Switch to your `main` branch, there's another feature that needs to be worked on.
+
+#### HINTS
+
+- Use the `git checkout` command
+- Here's an example: `git checkout branch_name`
+- Enter `git checkout main` into the terminal and press enter
+
+## 850. git checkout -b feat/add-insert-row-reference
+
+### 850.1
+
+Create and switch to a new branch named `feat/add-insert-row-reference`.
+
+#### HINTS
+
+- Here's an example: `git checkout -b branch_name`
+- Type `git checkout -b feat/add-insert-row-reference` into the terminal and press enter
+
+## 860. Add INSERT ROW command
+
+### 860.1
+
+Pretend that this branch is for someone else working on a new feature at the same time you are working on the column commands. Add a `row` key to your JSON object. Make it an object with an `insert` key whose value is `"INSERT INTO table_name(columns) VALUES(values);"`
+
+#### HINTS
+
+- Your JSON object should have this:
+
+```json
+"row": {
+  "insert": "INSERT INTO table_name(columns) VALUES(values);"
+}
+```
+
+- The `row` key should be on the same level as the `table` key
+- The whole file should look like this:
+
+```json
+{
+  "database": {
+    "create": "CREATE DATABASE database_name;",
+    "drop": "DROP DATABASE database_name;"
+  },
+  "table": {
+    "create": "CREATE TABLE table_name();",
+    "drop": "DROP TABLE table_name;"
+  },
+  "row": {
+    "insert": "INSERT INTO table_name(columns) VALUES(values);"
+  }
+}
+```
+
+- Make sure there's one empty line at the bottom of the file and no extra spaces after any of the values or curly brackets
+- You can view the `git diff` to see if there's any extra spaces
+
+## 870. git add INSERT ROW command
+
+### 870.1
+
+Check your status and diff so you can see your new changes. Then, add your changes to staging.
+
+#### HINTS
+
+- Here's an example: `git add file_name`
+- You previously used `git add README.md` to add changes to staging
+- Type `git add sql_reference.json` into the terminal and press enter
+
+## 880. git commit feat: add insert row reference
+
+### 880.1
+
+Commit your changes with the message: `feat: add insert row reference`.
+
+#### HINTS
+
+- Commit changes with `git commit -m "message"`
+- Type `git commit -m "feat: add insert row reference"` into the terminal and press enter
+- View your `git log` to see if your message is correct
+- If the message is wrong, enter `git reset HEAD~1`, then `git add .`, and then you can try to make the commit again
+- Or, reset the lesson and try again
+
+## 890. git checkout main
+
+### 890.1
+
+This branch is finished. Switch to your `main` branch so you can merge this commit in.
+
+#### HINTS
+
+- Use the `git checkout` command
+- Here's an example: `git checkout branch_name`
+- Enter `git checkout main` into the terminal and press enter
+
+## 900. git branch
+
+### 900.1
+
+View your branches to find the name of the branch you want to merge.
+
+#### HINTS
+
+- Use `git branch` to view your branches
+- Make sure you are in your `sql_reference` repo folder
+
+## 910. git merge feat/add-insert-row-reference
+
+### 910.1
+
+Merge your branch with the `insert row` reference you were just working on into the `main` branch.
+
+#### HINTS
+
+- Use the `git merge` command
+- Here's an example: `git merge branch_name`
+- You want to merge the `feat/add-insert-row-reference` branch
+- Type `git merge feat/add-insert-row-reference` into the terminal and press enter
+
+## 930. git checkout feat/add-column-references
+
+### 930.1
+
+Check your logs to make sure the commit was added. Then, switch to your branch for adding column references.
+
+#### HINTS
+
+- Use the "git branch" command to find the name of the branch
+- Use the `git checkout` command
+- The branch you want to switch to is `feat/add-column-references`
+- Here's an example: `git checkout branch_name`
+- Enter `git checkout feat/add-column-references` into the terminal and press enter
+
+## 940. git rebase main
+
+### 940.1
+
+Another commit was added to `main`, you should update this branch again. To be more specific, a rebase will "rewind" this branch to where it last matched `main`, then, add the commits from `main` that aren't here. After that, it adds the commits you made to this branch on top. `rebase` this branch against `main` so it's up to date. You should see a conflict...
+
+#### HINTS
+
+- Here's an example: `git rebase branch_name`
+- Type `git rebase main` into the terminal and press enter
+
+## 950. fix conflicts
+
+### 950.1
+
+The conflict arose because the first commit you added to this branch changed the same lines as the commit from `main`. So it tried to add the commit, but couldn't because something was already there. There are sections, separated by characters (`<`, `>`, and `=`), that represent the commit you are on (`HEAD`) and the commit that is trying to be added (`feat: add column reference`). Fix the conflict by removing those `<`, `>`, and `=` characters. Then making the JSON object valid again.
+
+#### HINTS
+
+- Be sure to remove all those special characters
+- The part of the JSON object with conflicts should look like this:
+
+```json
+"row": {
+  "insert": "INSERT INTO table_name(columns) VALUES(values);"
+},
+"column": {
+  "add": "ALTER TABLE table_name ADD COLUMN column_name;"
+}
+```
+
+- The whole file should look like this:
+
+```json
+{
+  "database": {
+    "create": "CREATE DATABASE database_name;",
+    "drop": "DROP DATABASE database_name;"
+  },
+  "table": {
+    "create": "CREATE TABLE table_name();",
+    "drop": "DROP TABLE table_name;"
+  },
+  "row": {
+    "insert": "INSERT INTO table_name(columns) VALUES(values);"
+  },
+  "column": {
+    "add": "ALTER TABLE table_name ADD COLUMN column_name;"
+  }
+}
+```
+
+- Make sure there's one empty line at the bottom of the file and no extra spaces after any of the values or curly brackets
+- You can view the `git diff` to see if there's any extra spaces
+
+## 953. git status
+
+### 953.1
+
+Check your status.
+
+#### HINTS
+
+- Use the "git status" command in your repo
+- Type `git status` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+
+## 956. git add fixed conflicts
+
+### 956.1
+
+It says that you are still in the middle of rebasing and there's one file that needs to be merged yet. Add the file to staging like you would any other commit.
+
+#### HINTS
+
+- Here's an example: `git add file_name`
+- You previously used `git add README.md` to add changes to staging
+- Type `git add sql_reference.json` into the terminal and press enter
+
+## 958. git status
+
+### 958.1
+
+Check your status again.
+
+#### HINTS
+
+- Use the "git status" command in your repo
+- Type `git status` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+
+## 960. git rebase continue
+
+### 960.1
+
+You fixed the conflicts that arose from trying to add this commit and added them to staging. It says `all conflicts fixed: run "git rebase --continue"`. Run the suggested command to continue the rebase.
+
+#### HINTS
+
+- Enter `git rebase --continue` in the terminal and press enter
+
+## 970. git log oneline
+
+### 970.1
+
+The last commit was added after you continued the rebase without conflict. The rebase is now finished. View your log with the `oneline` flag.
+
+#### HINTS
+
+- Use the `git log` command
+- Type `git log --oneline` into the terminal and press enter
+
+## 980. Add RENAME COLUMN command
+
+### 980.1
+
+You can see the "insert row" commit from `main` was added to this branch before the two commits you made here. Now this branch is up to date and you can continue working on it. Add a `rename` key to the `column` object. The value should look like this: `"ALTER TABLE table_name RENAME COLUMN column_name TO new_name;"`
+
+#### HINTS
+
+- The `column` key should look like this:
+
+```json
+"column": {
+  "add": "ALTER TABLE table_name ADD COLUMN column_name;",
+  "drop": "ALTER TABLE table_name DROP COLUMN column_name;",
+  "rename": "ALTER TABLE table_name RENAME COLUMN column_name TO new_name;"
+}
+```
+
+- The whole file should look like this:
+
+```json
+{
+  "database": {
+    "create": "CREATE DATABASE database_name;",
+    "drop": "DROP DATABASE database_name;"
+  },
+  "table": {
+    "create": "CREATE TABLE table_name();",
+    "drop": "DROP TABLE table_name;"
+  },
+  "row": {
+    "insert": "INSERT INTO table_name(columns) VALUES(values);"
+  },
+  "column": {
+    "add": "ALTER TABLE table_name ADD COLUMN column_name;",
+    "drop": "ALTER TABLE table_name DROP COLUMN column_name;",
+    "rename": "ALTER TABLE table_name RENAME COLUMN column_name TO new_name;"
+  }
+}
+```
+
+- Make sure there's one empty line at the bottom of the file and no extra spaces after any of the values or curly brackets
+- You can view the `git diff` to see if there's any extra spaces
+
+## 990. git add RENAME COLUMN command
+
+### 990.1
+
+Check your status and diff to see your new changes. Then, add the file to staging.
+
+#### HINTS
+
+- Use the `git add` command
+- Here's an example: `git add file_name`
+- You previously used `git add README.md` to add changes to staging
+- Type `git add sql_reference.json` into the terminal and press enter
+
+## 1000. git commit feat: add rename column reference
+
+### 1000.1
+
+Commit your changes with the message `feat: add rename column reference`
+
+#### HINTS
+
+- Commit changes with `git commit -m "message"`
+- Type `git commit -m "feat: add rename column reference"` into the terminal and press enter
+- View your `git log` to see if your message is correct
+- If the message is wrong, enter `git reset HEAD~1`, then `git add .`, and then you can try to make the commit again
+- Or, reset the lesson and try again
+
+## 1010. git checkout feat/add-insert-row-reference
+
+### 1010.1
+
+There's now three commits that are unique to this branch, you will come back to it later. Switch to the branch for adding row references.
+
+#### HINTS
+
+- View your branches with `git branch` if you need to find the name
+- Use the `git checkout` command to switch branches
+- Here's an example: `git checkout branch_name`
+- The branch you want is `feat/add-insert-row-reference`
+- Enter `git checkout feat/add-insert-row-reference` into the terminal and press enter
+
+## 1015. Add UPDATE ROW command
+
+### 1015.1
+
+This branch is still up to date since no commits have been added to `main` since this branch was created. Add an `update` key to the `row` object with `"UPDATE table_name SET column_name = new_value WHERE condition;"` as it's value.
+
+#### HINTS
+
+- The `row` key should look like this:
+
+```json
+"row": {
+  "insert": "INSERT INTO table_name(columns) VALUES(values);",
+  "update": "UPDATE table_name SET column_name = new_value WHERE condition;"
+}
+```
+
+- The whole file should look like this:
+
+```json
+{
+  "database": {
+    "create": "CREATE DATABASE database_name;",
+    "drop": "DROP DATABASE database_name;"
+  },
+  "table": {
+    "create": "CREATE TABLE table_name();",
+    "drop": "DROP TABLE table_name;"
+  },
+  "row": {
+    "insert": "INSERT INTO table_name(columns) VALUES(values);",
+    "update": "UPDATE table_name SET column_name = new_value WHERE condition;"
+  }
+}
+```
+
+- Make sure there's one empty line at the bottom of the file and no extra spaces after any of the values or curly brackets
+- You can view the `git diff` to see if there's any extra spaces
+
+## 1017. git status
+
+### 1017.1
+
+Check your status.
+
+#### HINTS
+
+- Use the "git status" command in your repo
+- Type `git status` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+
+## 1020. git stash
+
+### 1020.1
+
+There's been a mistake. This branch was for the `insert` command, not the `update` command. You can put your changes aside with `git stash`. Stash your changes so you can add them to a different branch.
+
+#### HINTS
+
+- Type `git stash` in the terminal and press enter
+
+## 1025. git status
+
+### 1025.1
+
+You might have noticed your uncommitted changes disappeared from the file. Check your status again.
+
+#### HINTS
+
+- Use the "git status" command in your repo
+- Type `git status` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+
+## 1030. git stash list
+
+### 1030.1
+
+Your working tree is clean and there's no changes git recognizes. The changes you made are stashed. View the things you have stashed with `git stash list`.
+
+#### HINTS
+
+- View your stash list with the suggested command
+- Type `git stash list` in the terminal and press enter
+
+## 1040. git stash pop
+
+### 1040.1
+
+You can see one item there. Bring the changes back with `git stash pop`.
+
+#### HINTS
+
+- Bring your stash back with the suggested command
+- Type `git stash pop` in the terminal and press enter
+
+## 1050. git stash list
+
+### 1050.1
+
+The changes from the stash reappeared in the file and git showed the status for you. You are right where you left of before stashing the changes. Popping a stash like that will remove the most recent stash and apply it to your working tree. View the list of your stashes again.
+
+#### HINTS
+
+- Use the "git stash list" command in your repo
+- Type `git stash list` in the terminal and press enter
+
+## 1055. git stash
+
+### 1055.1
+
+The list is empty again. Put the changes back in the stash.
+
+#### HINTS
+
+- Use the "git stash" command
+- Type `git stash` in the terminal and press enter
+
+## 1070. git stash list
+
+### 1070.1
+
+View the list of your stashed changes.
+
+#### HINTS
+
+- Use the "git stash list" command in your repo
+- Type `git stash list` in the terminal and press enter
+
+## 1073. git stash show
+
+### 1073.1
+
+The changes are stashed again. View a condensed version of the changes in the **latest** stash with `git stash show`.
+
+#### HINTS
+
+- Type `git stash show` in the terminal and press enter
+
+## 1076. git stash show -p
+
+### 1076.1
+
+You can see what file was changed and how many lines were added and removed from the file. View the full changes of the latest stash with `git stash show -p`. `-p` stands for "patch".
+
+#### HINTS
+
+- Type `git stash show -p` in the terminal and press enter
+
+## 1080. git stash apply
+
+### 1080.1
+
+Now you can see the actual changes that are stored in the stash. Before, you used the pop command to removed the latest stash and add it to your working tree. You can add the latest stash while keeping it in the list with `git stash apply`. Apply your stash with this method.
+
+#### HINTS
+
+- Type `git stash apply` in the terminal and press enter
+
+## 1090. git stash list
+
+### 1090.1
+
+Git showed you your status after applying the stash. The one file is unstaged again. View your stash list.
+
+#### HINTS
+
+- Use the "git stash list" command in your repo
+- Type `git stash list` in the terminal and press enter
+
+## 1100. git stash
+
+### 1100.1
+
+The code from the stash was added to your working tree, and the stash is still there in case you want to add it somewhere else. Stash the changes again.
+
+#### HINTS
+
+- Use the "git stash" command
+- Type `git stash` in the terminal and press enter
+
+## 1110. git stash list
+
+### 1110.1
+
+View the list of your stashed changes again.
+
+#### HINTS
+
+- Use the "git stash list" command in your repo
+- Type `git stash list` in the terminal and press enter
+
+## 1113. git stash show stash@{1}
+
+### 1113.1
+
+Now there's two things stashed. You can use the name at the front of each stash (`stash@{#}`) with many of the stash commands to select one other than the latest one. The most recent stash is the one at the top, `stash@{0}`. View the condensed changes of the **oldest** stash with the `git stash show` command by putting the name of the stash after it.
+
+#### HINTS
+
+- Add the stash name at the end of the `git stash show` command
+- The stash name is `stash@{1}`
+- Type `git stash show stash@{1}` in the terminal and press enter
+
+## 1116. git stash show -p stash@{1}
+
+### 1116.1
+
+Next, using a similar method, **show** the full changes of the **oldest** stash with the "patch" flag you used earlier.
+
+#### HINTS
+
+- The patch flag is `-p`
+- Use the `git stash show` command with the patch flag
+- Include the stash you want to view at the end of the command
+- The stash you want to view is `stash@{1}`
+- Type `git stash show -p stash@{1}` in the terminal and press enter
+
+## 1120. git stash drop
+
+### 1120.1
+
+There's two identical items in your stash. Drop one of them with `git stash drop` or `git stash drop <stash_name>`.
+
+#### HINTS
+
+- Drop one of the stashed changes with the suggested command
+- Type `git stash drop` in the terminal and press enter
+
+## 1130. git stash list
+
+### 1130.1
+
+View the list of stashed changes again to verify the one got deleted.
+
+#### HINTS
+
+- Use the "git stash list" command in your repo
+- Type `git stash list` in the terminal and press enter
+
+## 1140. git checkout main
+
+### 1140.1
+
+You should just have the one stash left. Switch to your `main` branch so you can create a new branch from that and add these changes to it.
+
+#### HINTS
+
+- Use the `git checkout` command
+- Here's an example: `git checkout branch_name`
+- Enter `git checkout main` into the terminal and press enter
+
+## 1150. git branch -d feat/add-insert-row-reference
+
+### 1150.1
+
+Before I make you work on the wrong branch again. Delete the branch for inserting a row.
+
+#### HINTS
+
+- View your branches if you need to find the name
+- Use the `git branch` command with the `-d` flag
+- The branch name is `feat/add-insert-row-reference`
+- Here's an example: `git branch -d branch_name`
+- Type `git branch -d feat/add-insert-row-reference` into the terminal and press enter
+
+## 1160. git checkout feat/add-more-row-references
+
+### 1160.1
+
+Create and checkout a new branch named `feat/add-more-row-references` for adding some more row related commands.
+
+#### HINTS
+
+- Use the "git checkout" command with the `-b` flag
+- Here's an example: `git checkout -b branch_name`
+- Type `git checkout -b feat/add-more-row-references` into the terminal and press enter
+
+## 1170. git stash list
+
+### 1170.1
+
+Show me your stash list again to make sure your changes from the other branch are still stashed.
+
+#### HINTS
+
+- Use the "git stash list" command in your repo
+- Type `git stash list` in the terminal and press enter
+
+## 1180. git stash pop
+
+### 1180.1
+
+It's still there. Pop the stash so the code gets added to this new branch.
+
+#### HINTS
+
+- Use the "git stash pop" command in your repo
+- Type `git stash pop` in the terminal and press enter
+
+## 1190. git stash list
+
+### 1190.1
+
+Git showed you your status again, and it looks like it recognizes that the file has new changes after adding the stash. View the stash list to verify that it's empty.
+
+#### HINTS
+
+- Use the "git stash list" command in your repo
+- Type `git stash list` in the terminal and press enter
+
+## 1210. git diff
+
+### 1210.1
+
+The list is empty. View the diff of your changes so you can make sure they are what you expect.
+
+#### HINTS
+
+- Use the "git diff" command
+- Type `git diff` into the terminal and press enter
+- Make sure you are in your repo folder first
+
+## 1220. git add UPDATE ROW command
+
+### 1220.1
+
+It looks good. Add the changes to staging.
+
+#### HINTS
+
+- Use the `git add` command
+- Here's an example: `git add file_name`
+- You previously used `git add README.md` to add changes to staging
+- Type `git add sql_reference.json` into the terminal and press enter
+
+## 1230. git commit feat: add update row reference
+
+### 1230.1
+
+View your status, then commit the staged changes with the message `feat: add update row reference`.
+
+#### HINTS
+
+- Commit changes with `git commit -m "message"`
+- Type `git commit -m "feat: add update row reference"` into the terminal and press enter
+- View your `git log` to see if your message is correct
+- If the message is wrong, enter `git reset HEAD~1`, then `git add .`, and then you can try to make the commit again
+- Or, reset the lesson and try again
+
+## 1240. git checkout main
+
+### 1240.1
+
+Your work on this branch is done for now. Switch to your `main` branch so you can merge the commit you just made.
+
+#### HINTS
+
+- Use the `git checkout` command
+- Here's an example: `git checkout branch_name`
+- Enter `git checkout main` into the terminal and press enter
+
+## 1250. git merge feat/add-more-row-references
+
+### 1250.1
+
+Merge your branch for adding row references that you just added a commit to.
+
+#### HINTS
+
+- Use the "git merge" command
+- View your branches if you need to find the name
+- It's the `feat/add-more-row-references` branch
+- Here's an example: `git merge branch_name`
+- Type `git merge feat/add-more-row-references` into the terminal and press enter
+
+## 1260. git checkout feat/add-column-references
+
+### 1260.1
+
+Switch to your branch for the column references so you can continue working on that.
+
+#### HINTS
+
+- Use the `git checkout` command
+- View your branches if you need to find the name
+- Here's an example: `git checkout branch_name`
+- Enter `git checkout feat/add-column-references` into the terminal and press enter
+
+## 1270. git rebase main
+
+### 1270.1
+
+Once again, commits have been added to `main` so you should update this branch. Rebase this branch against `main` to bring in the new commits. You should get a conflict.
+
+#### HINTS
+
+- Use the "git rebase" command
+- Add the branch after the command that you want to rebase against
+- Here's an example: `git rebase branch_name`
+- Type `git rebase main` into the terminal and press enter
+
+## 1280. Fix Conflicts
+
+### 1280.1
+
+This conflict is a little trickier. Make the JSON object whole again so you can add the changes and finish rebasing. Make sure you put all the references in their correct objects, and in the same order they were originally in. There may be a duplicate line you need to delete.
+
+#### HINTS
+
+- The whole file should look like this:
+
+```json
+{
+  "database": {
+    "create": "CREATE DATABASE database_name;",
+    "drop": "DROP DATABASE database_name;"
+  },
+  "table": {
+    "create": "CREATE TABLE table_name();",
+    "drop": "DROP TABLE table_name;"
+  },
+  "row": {
+    "insert": "INSERT INTO table_name(columns) VALUES(values);",
+    "update": "UPDATE table_name SET column_name = new_value WHERE condition;"
+  },
+  "column": {
+    "add": "ALTER TABLE table_name ADD COLUMN column_name;"
+  }
+}
+```
+
+- Make sure there's one empty line at the bottom of the file and no extra spaces after any of the values or curly brackets
+- You can view the `git diff` to see if there's any extra spaces
+
+## 1290. git status
+
+### 1290.1
+
+View the status of your repo.
+
+#### HINTS
+
+- Use the "git status" command in your repo
+- Type `git status` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+
+## 1300. git add fixed conflicts
+
+### 1300.1
+
+You are still rebasing. You fixed the conflicts for the commit trying to be added. It looks like it was the "add column" commit that had the conflict. Add your changes to staging.
+
+#### HINTS
+
+- Use the "git add" command
+- Here's an example: `git add file_name`
+- You previously used `git add README.md` to add changes to staging
+- Type `git add sql_reference.json` into the terminal and press enter
+
+## 1305. git status
+
+### 1305.1
+
+View the status again.
+
+#### HINTS
+
+- Use the "git status" command in your repo
+- Type `git status` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+
+## 1310. git rebase continue
+
+### 1310.1
+
+Continue your rebase with the suggested command.
+
+#### HINTS
+
+- View the output in the terminal to find the command
+- It's the "git rebase continue" command
+- Enter `git rebase --continue` in the terminal and press enter
+
+## 1320. git log oneline
+
+### 1320.1
+
+The rest of the commits were added without conflict. View your log with the oneline flag.
+
+#### HINTS
+
+- Use the `git log` command with the correct flag
+- It's the `--oneline` flag
+- Type `git log --oneline` into the terminal and press enter
+
+## 1330. Add PRIMARY KEY command
+
+### 1330.1
+
+The rebase added the "row" commits where they are supposed to be, then the "column" commits from this branch on top. Excellent. Now you can continue working on it. Add a reference to the column object for setting a column as the primary key. Give it a key of `primary_key` and a value of `"ALTER TABLE table_name ADD PRIMARY KEY(column_name);"`
+
+#### HINTS
+
+- The `column` key should look like this:
+
+```json
+"column": {
+  "add": "ALTER TABLE table_name ADD COLUMN column_name;",
+  "drop": "ALTER TABLE table_name DROP COLUMN column_name;",
+  "rename": "ALTER TABLE table_name RENAME COLUMN column_name TO new_name;",
+  "primary_key": "ALTER TABLE table_name ADD PRIMARY KEY(column_name);"
+}
+```
+
+- The whole file should look like this:
+
+```json
+{
+  "database": {
+    "create": "CREATE DATABASE database_name;",
+    "drop": "DROP DATABASE database_name;"
+  },
+  "table": {
+    "create": "CREATE TABLE table_name();",
+    "drop": "DROP TABLE table_name;"
+  },
+  "row": {
+    "insert": "INSERT INTO table_name(columns) VALUES(values);",
+    "update": "UPDATE table_name SET column_name = new_value WHERE condition;"
+  },
+  "column": {
+    "add": "ALTER TABLE table_name ADD COLUMN column_name;",
+    "drop": "ALTER TABLE table_name DROP COLUMN column_name;",
+    "rename": "ALTER TABLE table_name RENAME COLUMN column_name TO new_name;",
+    "primary_key": "ALTER TABLE table_name ADD PRIMARY KEY(column_name);"
+  }
+}
+```
+
+- Make sure there's one empty line at the bottom of the file and no extra spaces after any of the values or curly brackets
+- You can view the `git diff` to see if there's any extra spaces
+
+## 1340. git diff PRIMARY KEY command
+
+### 1340.1
+
+Check the diff to make sure you like your changes. Then, add the changes to staging.
+
+#### HINTS
+
+- Use the `git add` command
+- Here's an example: `git add file_name`
+- You previously used `git add README.md` to add changes to staging
+- Type `git add sql_reference.json` into the terminal and press enter
+
+## 1350. git commit feat: add primary key reference
+
+### 1350.1
+
+Commit your staged files with `feat: add primary key reference` as the message.
+
+#### HINTS
+
+- Commit changes with `git commit -m "message"`
+- Type `git commit -m "feat: add primary key reference"` into the terminal and press enter
+- View your `git log` to see if your message is correct
+- If the message is wrong, enter `git reset HEAD~1`, then `git add .`, and then you can try to make the commit again
+- Or, reset the lesson and try again
+
+## 1352. Add FOREIGN KEY command
+
+### 1352.1
+
+Add `foreign_key` to the `column` object for another command. It's value should be `"ALTER TABLE table_name ADD FOREIGN KEY(column_name) REFERENCES table_name(column_name);"`.
+
+#### HINTS
+
+- The `column` key should look like this:
+
+```json
+"column": {
+  "add": "ALTER TABLE table_name ADD COLUMN column_name;",
+  "drop": "ALTER TABLE table_name DROP COLUMN column_name;",
+  "rename": "ALTER TABLE table_name RENAME COLUMN column_name TO new_name;",
+  "primary_key": "ALTER TABLE table_name ADD PRIMARY KEY(column_name);",
+  "foreign_key": "ALTER TABLE table_name ADD FOREIGN KEY(column_name) REFERENCES table_name(column_name);"
+}
+```
+
+- The whole file should look like this:
+
+```json
+{
+  "database": {
+    "create": "CREATE DATABASE database_name;",
+    "drop": "DROP DATABASE database_name;"
+  },
+  "table": {
+    "create": "CREATE TABLE table_name();",
+    "drop": "DROP TABLE table_name;"
+  },
+  "row": {
+    "insert": "INSERT INTO table_name(columns) VALUES(values);",
+    "update": "UPDATE table_name SET column_name = new_value WHERE condition;"
+  },
+  "column": {
+    "add": "ALTER TABLE table_name ADD COLUMN column_name;",
+    "drop": "ALTER TABLE table_name DROP COLUMN column_name;",
+    "rename": "ALTER TABLE table_name RENAME COLUMN column_name TO new_name;",
+    "primary_key": "ALTER TABLE table_name ADD PRIMARY KEY(column_name);",
+    "foreign_key": "ALTER TABLE table_name ADD FOREIGN KEY(column_name) REFERENCES table_name(column_name);"
+  }
+}
+```
+
+- Make sure there's one empty line at the bottom of the file and no extra spaces after any of the values or curly brackets
+- You can view the `git diff` to see if there's any extra spaces
+
+## 1354. git add FOREIGN command
+
+### 1354.1
+
+Check the diff to make sure you like the changes, then add the changes to staging.
+
+#### HINTS
+
+- Use the `git add` command
+- Here's an example: `git add file_name`
+- You previously used `git add README.md` to add changes to staging
+- Type `git add sql_reference.json` into the terminal and press enter
+
+## 1356. git commit feat: add foreign key reference
+
+### 1356.1
+
+Commit the changes with `feat: add foreign key reference` as its message.
+
+#### HINTS
+
+- Commit changes with `git commit -m "message"`
+- Type `git commit -m "feat: add foreign key reference"` into the terminal and press enter
+- View your `git log` to see if your message is correct
+- If the message is wrong, enter `git reset HEAD~1`, then `git add .`, and then you can try to make the commit again
+- Or, reset the lesson and try again
+
+## 1360. git checkout feat/add-more-row-references
+
+### 1360.1
+
+Go to your branch for the row references so you can continue work on those.
+
+#### HINTS
+
+- Use the `git checkout` command
+- Here's an example: `git checkout branch_name`
+- Use the `git branch` command to find the name of the branch
+- It's the `feat/add-more-row-references` branch
+- Enter `git checkout feat/add-more-row-references` into the terminal and press enter
+
+## 1370. Add DELETE ROW command
+
+### 1370.1
+
+In your JSON file, add a `delete` key to the `row` object. Take a guess at the value, it should include the `DELETE FROM` and `WHERE` keywords. The whole value is in the hints.
+
+#### HINTS
+
+- The `row.delete` value should be `"DELETE FROM table_name WHERE condition;"`
+- The `row` key should look like this:
+
+```json
+"row": {
+  "insert": "INSERT INTO table_name(columns) VALUES(values);",
+  "update": "UPDATE table_name SET column_name = new_value WHERE condition;",
+  "delete": "DELETE FROM table_name WHERE condition;"
+}
+```
+
+- The whole file should look like this:
+
+```json
+{
+  "database": {
+    "create": "CREATE DATABASE database_name;",
+    "drop": "DROP DATABASE database_name;"
+  },
+  "table": {
+    "create": "CREATE TABLE table_name();",
+    "drop": "DROP TABLE table_name;"
+  },
+  "row": {
+    "insert": "INSERT INTO table_name(columns) VALUES(values);",
+    "update": "UPDATE table_name SET column_name = new_value WHERE condition;",
+    "delete": "DELETE FROM table_name WHERE condition;"
+  }
+}
+```
+
+- Make sure there's one empty line at the bottom of the file and no extra spaces after any of the values or curly brackets
+- You can view the `git diff` to see if there's any extra spaces
+
+## 1380. git add DELETE ROW command
+
+### 1380.1
+
+View the diff of your changes, then add them to staging.
+
+#### HINTS
+
+- Use the `git add` command
+- Here's an example: `git add file_name`
+- You previously used `git add README.md` to add changes to staging
+- Type `git add sql_reference.json` into the terminal and press enter
+
+## 1390. git commit feat: add delete row reference
+
+### 1390.1
+
+Commit the staged changes with the message `feat: add delete row reference`.
+
+#### HINTS
+
+- Commit changes with `git commit -m "message"`
+- Type `git commit -m "feat: add delete row reference"` into the terminal and press enter
+- View your `git log` to see if your message is correct
+- If the message is wrong, enter `git reset HEAD~1`, then `git add .`, and then you can try to make the commit again
+- Or, reset the lesson and try again
+
+## 1400. git checkout main
+
+### 1400.1
+
+Go to the `main` branch so you can merge these commits.
+
+#### HINTS
+
+- Use the `git checkout` command
+- Here's an example: `git checkout branch_name`
+- Enter `git checkout main` into the terminal and press enter
+
+## 1410. git merge feat/add-more-row-references
+
+### 1410.1
+
+Merge the branch for the row commands into `main`.
+
+#### HINTS
+
+- Use the "git merge" command
+- Here's an example: `git merge branch_name`
+- Use the `git branch` command if you need to find the branch name
+- It's the `feat/add-more-row-references` branch
+- Type `git merge feat/add-more-row-references` into the terminal and press enter
+
+## 1416. git branch -d feat/add-more-row-references
+
+### 1416.1
+
+You merged the branch and are done with it. Delete the branch for the row references.
+
+#### HINTS
+
+- Use the `git branch` command with the `-d` flag
+- Here's an example: `git branch -d branch_name`
+- View your branches if you need to find the name
+- The branch name is `feat/add-more-row-references`
+- Type `git branch -d feat/add-more-row-references` into the terminal and press enter
+
+## 1420. git checkout -b fix/add-missing-rename-references
+
+### 1420.1
+
+I missed a bunch of the rename commands when I had you work on a few of the objects. Create and checkout a branch named `fix/add-missing-rename-references`.
+
+#### HINTS
+
+- Use the `git checkout` command with the `-b` flag
+- Here's an example: `git checkout -b branch_name`
+- Type `git checkout -b fix/add-missing-rename-references` into the terminal and press enter
+
+## 1430. Add RENAME DATABASE command
+
+### 1430.1
+
+I forgot to add a command for how to rename a database. In your JSON file, add a `rename` key to the `database` object. The value should be `"ALTER DATABASE database_name RENAME TO new_name;"`
+
+#### HINTS
+
+- The `database` object should look like this:
+
+```json
+"database": {
+  "create": "CREATE DATABASE database_name;",
+  "drop": "DROP DATABASE database_name;",
+  "rename": "ALTER DATABASE database_name RENAME TO new_name;"
+}
+```
+
+- The whole file should look like this:
+
+```json
+{
+  "database": {
+    "create": "CREATE DATABASE database_name;",
+    "drop": "DROP DATABASE database_name;",
+    "rename": "ALTER DATABASE database_name RENAME TO new_name;"
+  },
+  "table": {
+    "create": "CREATE TABLE table_name();",
+    "drop": "DROP TABLE table_name;"
+  },
+  "row": {
+    "insert": "INSERT INTO table_name(columns) VALUES(values);",
+    "update": "UPDATE table_name SET column_name = new_value WHERE condition;",
+    "delete": "DELETE FROM table_name WHERE condition;"
+  }
+}
+```
+
+- Make sure there's one empty line at the bottom of the file and no extra spaces after any of the values or curly brackets
+- You can view the `git diff` to see if there's any extra spaces
+
+## 1440. git add RENAME DATABASE command
+
+### 1440.1
+
+View the diff of your changes to make sure you like them, then add them to staging.
+
+#### HINTS
+
+- Use the `git add` command
+- Here's an example: `git add file_name`
+- You previously used `git add README.md` to add changes to staging
+- Type `git add sql_reference.json` into the terminal and press enter
+
+## 1450. git commit fix: add missing rename database reference
+
+### 1450.1
+
+Commit your stages changes with `fix: add missing rename database reference` for the message.
+
+#### HINTS
+
+- Commit changes with `git commit -m "message"`
+- Type `git commit -m "fix: add missing rename database reference"` into the terminal and press enter
+- View your `git log` to see if your message is correct
+- If the message is wrong, enter `git reset HEAD~1`, then `git add .`, and then you can try to make the commit again
+- Or, reset the lesson and try again
+
+## 1460. git checkout feat/add-column-references
+
+### 1460.1
+
+Leave this branch for now. Switch back to your branch for the column references so you can hopefully finally finish it.
+
+#### HINTS
+
+- Use the `git checkout` command
+- Here's an example: `git checkout branch_name`
+- Use the `git branch` command to find the name of the branch
+- It's the `feat/add-column-references` branch
+- Enter `git checkout feat/add-column-references` into the terminal and press enter
+
+## 1470. git rebase main
+
+### 1470.1
+
+There was a commit to `main` since you last worked on this from when you merged the "add more row references" branch. Rebase this branch against `main` so it's up to date and you can finish working on it.
+
+#### HINTS
+
+- Use the "git rebase" command
+- Add the branch after the command that you want to rebase against
+- Here's an example: `git rebase branch_name`
+- Type `git rebase main` into the terminal and press enter
+
+## 1480. Fix Conflicts
+
+### 1480.1
+
+Fix the conflicts so that all the commands are in their correct objects.
+
+#### HINTS
+
+- Be sure to delete any special characters
+- The order of the keys should be:
+
+```json
+{
+  "database": {},
+  "table": {},
+  "row": {},
+  "column": {}
+}
+```
+
+- The whole file should look like this:
+
+```json
+{
+  "database": {
+    "create": "CREATE DATABASE database_name;",
+    "drop": "DROP DATABASE database_name;"
+  },
+  "table": {
+    "create": "CREATE TABLE table_name();",
+    "drop": "DROP TABLE table_name;"
+  },
+  "row": {
+    "insert": "INSERT INTO table_name(columns) VALUES(values);",
+    "update": "UPDATE table_name SET column_name = new_value WHERE condition;",
+    "delete": "DELETE FROM table_name WHERE condition;"
+  },
+  "column": {
+    "add": "ALTER TABLE table_name ADD COLUMN column_name;"
+  }
+}
+```
+
+- Make sure there's one empty line at the bottom of the file and no extra spaces after any of the values or curly brackets
+- You can view the `git diff` to see if there's any extra spaces
+
+## 1490. git add Fixed Conflicts
+
+### 1490.1
+
+You fixed the conflicts. Check your status, then add your files to staging.
+
+#### HINTS
+
+- Use the `git add` command
+- Here's an example: `git add file_name`
+- You previously used `git add README.md` to add changes to staging
+- Type `git add sql_reference.json` into the terminal and press enter
+
+## 1495. git status
+
+### 1495.1
+
+Check your status again.
+
+#### HINTS
+
+- Use the "git status" command in your repo
+- Type `git status` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+
+## 1500. git rebase continue
+
+### 1500.1
+
+Use the suggested command to continue your rebase.
+
+#### HINTS
+
+- View the output in the terminal to find the command
+- It's the "git rebase continue" command
+- Enter `git rebase --continue` in the terminal and press enter
+
+## 1510. Add UNIQUE command
+
+### 1510.1
+
+There was a conflict when it tried to add the first commit from this branch on top of the one that was brought in from `main`. The rest of the commits were added without conflicts. In your JSON file, add a `unique` key to the `column` object. Give it a value of `"ALTER TABLE table_name ADD UNIQUE(column_name);"`
+
+#### HINTS
+
+- The should be `"unique": "ALTER TABLE table_name ADD UNIQUE(column_name);"` in your `column` object
+- The `column` object should look like this:
+
+```json
+"column": {
+  "add": "ALTER TABLE table_name ADD COLUMN column_name;",
+  "drop": "ALTER TABLE table_name DROP COLUMN column_name;",
+  "rename": "ALTER TABLE table_name RENAME COLUMN column_name TO new_name;",
+  "primary_key": "ALTER TABLE table_name ADD PRIMARY KEY(column_name);",
+  "foreign_key": "ALTER TABLE table_name ADD FOREIGN KEY(column_name) REFERENCES table_name(column_name);",
+  "unique": "ALTER TABLE table_name ADD UNIQUE(column_name);"
+}
+```
+
+- The whole file should look like this:
+
+```json
+{
+  "database": {
+    "create": "CREATE DATABASE database_name;",
+    "drop": "DROP DATABASE database_name;"
+  },
+  "table": {
+    "create": "CREATE TABLE table_name();",
+    "drop": "DROP TABLE table_name;"
+  },
+  "row": {
+    "insert": "INSERT INTO table_name(columns) VALUES(values);",
+    "update": "UPDATE table_name SET column_name = new_value WHERE condition;",
+    "delete": "DELETE FROM table_name WHERE condition;"
+  },
+  "column": {
+    "add": "ALTER TABLE table_name ADD COLUMN column_name;",
+    "drop": "ALTER TABLE table_name DROP COLUMN column_name;",
+    "rename": "ALTER TABLE table_name RENAME COLUMN column_name TO new_name;",
+    "primary_key": "ALTER TABLE table_name ADD PRIMARY KEY(column_name);",
+    "foreign_key": "ALTER TABLE table_name ADD FOREIGN KEY(column_name) REFERENCES table_name(column_name);",
+    "unique": "ALTER TABLE table_name ADD UNIQUE(column_name);"
+  }
+}
+```
+
+- Make sure there's one empty line at the bottom of the file and no extra spaces after any of the values or curly brackets
+- You can view the `git diff` to see if there's any extra spaces
+
+## 1520. git add UNIQUE command
+
+### 1520.1
+
+View the diff to make sure you like the changes, then add the changes to staging.
+
+#### HINTS
+
+- Use the `git add` command
+- Here's an example: `git add file_name`
+- You previously used `git add README.md` to add changes to staging
+- Type `git add sql_reference.json` into the terminal and press enter
+
+## 1530. git commit feat: add unique reference
+
+### 1530.1
+
+Commit the stages files with `feat: add unique reference` for the message.
+
+#### HINTS
+
+- Commit changes with `git commit -m "message"`
+- Type `git commit -m "feat: add unique reference"` into the terminal and press enter
+- View your `git log` to see if your message is correct
+- If the message is wrong, enter `git reset HEAD~1`, then `git add .`, and then you can try to make the commit again
+- Or, reset the lesson and try again
+
+## 1533. git reset HEAD~1
+
+### 1533.1
+
+I'm going to show you a few ways to remove or undo a commit. The first is to simply "travel back in time". You can use the `git reset` command to travel to any point in your commit history. Your current `HEAD` is a reference to the last commit you just made. Use `git reset HEAD~1` to go back one before `HEAD`.
+
+#### HINTS
+
+- Enter `git reset HEAD~1` in the terminal
+
+## 1536. git log oneline
+
+### 1536.1
+
+This is a "mixed" reset and will put the changes from the commit you undid in your working tree. You can see that it says there's unstaged changes after the reset to your file. View your log with the oneline flag.
+
+#### HINTS
+
+- Use the `git log` command with the correct flag
+- It's the `--oneline` flag
+- Type `git log --oneline` into the terminal and press enter
+
+## 1539. git status
+
+### 1539.1
+
+Your commit for how to set a column to unique is gone. View your status.
+
+#### HINTS
+
+- Use the "git status" command in your repo
+- Type `git status` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+
+## 1540. git diff
+
+### 1540.1
+
+View the diff.
+
+#### HINTS
+
+- Use the "git diff" command
+- Type `git diff` into the terminal and press enter
+
+## 1542. git add UNIQUE command
+
+### 1542.1
+
+And the changes from the reset are back in the working tree. So when you `reset` to one commit before `HEAD`, it removed the most recent commit, and put all the changes in the working tree. If you used the `--hard` flag with the reset, the changes would have not been added to the working tree and if you used the `--soft` flag, the changes would have been added to the working tree and to staging. Add the changes back to staging so you can commit them again.
+
+#### HINTS
+
+- Use the `git add` command
+- Here's an example: `git add file_name`
+- You previously used `git add README.md` to add changes to staging
+- Type `git add sql_reference.json` into the terminal and press enter
+
+## 1545. git commit feat: add unique reference
+
+### 1545.1
+
+Commit the change staged files with `feat: add unique reference` for its message.
+
+#### HINTS
+
+- Commit changes with `git commit -m "message"`
+- Type `git commit -m "feat: add unique reference"` into the terminal and press enter
+- View your `git log` to see if your message is correct
+- If the message is wrong, enter `git reset HEAD~1`, then `git add .`, and then you can try to make the commit again
+- Or, reset the lesson and try again
+
+## 1548. git revert HEAD
+
+### 1548.1
+
+Reverting is a good way to undo a commit because you don't lose the commit from the history. You can revert the most recent commit (`HEAD`) with `git revert HEAD`. Do that now.
+
+#### HINTS
+
+- Enter the suggested command
+- Enter `git revert HEAD` in the terminal
+
+## 1549. Nano: Enter git revert HEAD Message
+
+### 1549.1
+
+Git put you into Nano and is asking you enter a commit message for the revert, but they added a default one for you. Don't change anything in Nano, just exit the file to use the default message. You can exit the file by pressing `ctrl+x`.
+
+#### HINTS
+
+- Exit the file by pressing `ctrl+x`
+- If you accidentally changed something in Nano, press `n` after `ctrl+x` to discard the changes
+- Your last commit message should be `Revert "feat: add unique reference"`
+- View your log to make sure the message is correct
+- To reset this lesson, make sure nano is closed. Then, hit reset and enter `git revert HEAD` after it's done resetting
+
+## 1551. git log oneline
+
+### 1551.1
+
+View the log with that flag I like again.
+
+#### HINTS
+
+- Use the `git log` command with the correct flag
+- It's the `--oneline` flag
+- Type `git log --oneline` into the terminal and press enter
+- Press enter until you have seen the whole log
+
+## 1554. git show
+
+### 1554.1
+
+Using revert to undo that commit added another commit that is the exact opposite of it. Enter `git show` into the terminal to see the last commit added (now `HEAD`) and its details.
+
+#### HINTS
+
+- Enter the suggested command
+- Type `git show` in the terminal and press enter
+- Press enter until you have seen the whole message
+
+## 1557. git show HEAD~1
+
+### 1557.1
+
+Type `git show HEAD~1` to take a look at the details of the original commit that you reverted.
+
+#### HINTS
+
+- Enter the suggested command
+- Type `git show` in the terminal and press enter
+
+## 1560. git rebase interactive HEAD~2
+
+### 1560.1
+
+If you look at the bottom of those two messages, it shows the diff. The diff of the revert commit is the exact opposite of the one before it. Effectively, undoing the changes. You've used rebase to update this branch, but you can enter an "interactive" mode to manipulate commits. Type `git rebase --interactive HEAD~2` into the terminal to enter this mode. The `HEAD~2` means you will have a chance to change the last two commits.
+
+#### HINTS
+
+- Enter the suggested command
+- Type `git rebase --interactive HEAD~2` into the terminal and press enter
+- If you entered the wrong command, save and exit Nano. Then try again
+- You can save and exit Nano by pressing `ctrl+x` then `y` then `enter`
+
+## 1563. Nano: Drop UNIQUE commits
+
+### 1563.1
+
+At the top of Nano, you can see the two commits with `pick` next to them. Below them, there's a list of options for working with them. `pick` means that it will use the commits as they were. At the bottom, it says, `d, drop = remove commit`. Replace the word `pick` preceeding your two commits with a `d` to drop them both. When you are done, save the file and exit Nano.
+
+#### HINTS
+
+- You can save and exit Nano by pressing `ctrl+x` then `y` then `enter`
+- The most recent commit message should be `feat: add foreign key reference`
+- To reset this lesson, make sure nano is closed. Then, hit reset and enter `git rebase --interactive HEAD~2` after it's done resetting
+
+## 1564. git log oneline
+
+### 1564.1
+
+View your log. Use the `--oneline` flag.
+
+#### HINTS
+
+- Use the `git log` command with the correct flag
+- It's the `--oneline` flag
+- Type `git log --oneline` into the terminal and press enter
+- Press enter until you have seen the whole history
+
+## 1567. git rebase interactive root
+
+### 1567.1
+
+Both, the commit to add the unique command and the one to revert it, were dropped. Enter another `--interactive` rebase that goes back to the `--root` instead of `HEAD~2`. I am going to show you how to change a commit message. `--root` means that the rebase will go back to your very first commit.
+
+#### HINTS
+
+- The command is `git rebase` with two arguments
+- The two arguments are `--interactive` and `--root`
+- Enter `git rebase --interactive --root` into the terminal and press enter
+
+## 1570. Nano: Select Reword Column References Commit
+
+### 1570.1
+
+You can see that the latest commit is at the bottom here. Be careful not to change the wrong commits. One of the options is `r, reword = use commit, but edit the commit message`. Replace `pick` with an `r` next to the commit with the message `feat: add column reference` to reword the message, it's the very first commit you added to this branch. When you are done, save the file and exit Nano. Git will put you in another Nano instance to reword the commit message. Don't change anything in it yet.
+
+#### HINTS
+
+- Replace `pick` with an `r` next to the suggested commit
+- Save and exit the file by pressing `ctrl+x` then `y` then `enter`
+- To reset this lesson, make sure nano is closed. Then, hit reset and enter `git rebase --interactive --root` after it's done resetting
+
+## 1572. Nano: Change Column References Commit Message
+
+### 1572.1
+
+Git is waiting for you to edit the commit message. Add an `s` at the end of the commit message so it is `feat: add column references`. When you are done, save the file and exit Nano.
+
+#### HINTS
+
+- Save and exit the file by pressing `ctrl+x` then `y` then `enter`
+- To reset this lesson, make sure nano is closed. Then, hit reset and enter `git rebase --interactive --root` after it's done resetting. Then, in nano, replace `pick` with an `r` next to the `feat: add column reference` commit, and save and exit
+
+## 1575. git log oneline
+
+### 1575.1
+
+View your log. Use the `--oneline` flag.
+
+#### HINTS
+
+- Use the `git log` command with the correct flag
+- It's the `--oneline` flag
+- Type `git log --oneline` into the terminal and press enter
+- Press enter until you have seen the whole history
+
+## 1576. git rebase main
+
+### 1576.1
+
+The message was reworded, but there's a problem. Look at the commit hash for your `Initial commit` from the last two times you viewed the log, it's that string left of the log. They aren't the same anymore since you rebased back to the root. Same goes for the rest of the commits. When you rebase interactively it changes all those hashes, so git sees them as different commits. If you were to try and merge this into `main`, it wouldn't work because they don't share the same history anymore. For this reason, you don't want to do an interactive rebase where you go back passed commits unique to the branch you are on. Fortunately, you can fix this. Enter `git rebase main` to realign the history of the two branches.
+
+#### HINTS
+
+- Use the "git rebase" command
+- Add the branch after the command that you want to rebase against
+- Here's an example: `git rebase branch_name`
+- Type `git rebase main` into the terminal and press enter
+
+## 1578. git log oneline
+
+### 1578.1
+
+View your log again. Use the `--oneline` flag.
+
+#### HINTS
+
+- Use the `git log` command with the correct flag
+- It's the `--oneline` flag
+- Type `git log --oneline` into the terminal and press enter
+
+## 1580. git rebase interactive HEAD~5
+
+### 1580.1
+
+Now the hashes are the same as they were before you rebased back to `--root`, which is what they are on `main`. Enter another interactive rebase. Go back to the first commit you added to this branch, it's `HEAD~5`.
+
+#### HINTS
+
+- It's the `git rebase` command with two arguments
+- The two arguments are `--interactive` and `HEAD~5`
+- Enter `git rebase --interactive HEAD~5` into the terminal and press enter
+- If you entered the wrong command, exit nano without changing anything. Then try again.
+- You can exit nano by pressing `ctrl+x`
+- If you accidentally changed something in Nano, press `n` after `ctrl+x` to discard the changes
+
+## 1590. Nano: Squash feat/add-column-references Commits
+
+### 1590.1
+
+Squashing commits means that you will take a bunch of commits and turn them into one. This is helpful to keep your commit history clean and something you want try to do. Replace `pick` with an `s` next to all your commits except the one with the message `feat: add column references`. When you are done, save and exit the file. You will find yourself in another instance of Nano. Don't change anything in it yet.
+
+#### HINTS
+
+- Replace `pick` with an `s` next to the suggested commits
+- Save and exit the file by pressing `ctrl+x` then `y` then `enter`
+- The most recent commit message should be `feat: add column references`
+- To reset this lesson, make sure nano is closed. Then, hit reset and enter `git rebase --interactive HEAD~5` after it's done resetting
+
+## 1595. Nano: Save and Exit to Squash
+
+### 1595.1
+
+Nano brought up a list of all the commit messages you used for the commits. Don't change anything in there, just exit the file to use those messages and finish squashing the commits.
+
+#### HINTS
+
+- Press `ctrl+x` to exit the file
+- To reset this lesson, make sure nano is closed. Then, hit reset and enter `git rebase --interactive HEAD~5` after it's done resetting. Then, in nano, replace `pick` with an `s` next to all the commits except the `feat: add column reference` commit, and save and exit
+
+## 1600. git log oneline
+
+### 1600.1
+
+View your log with the oneline flag.
+
+#### HINTS
+
+- Use the `git log` command with the correct flag
+- It's the `--oneline` flag
+- Type `git log --oneline` into the terminal and press enter
+
+## 1610. git log -1
+
+### 1610.1
+
+Now all the "column" commits you made to this branch have been squashed into just the one commit at the top. View the log again, but use `-1` instead of `--oneline` this time to view only the last commit.
+
+#### HINTS
+
+- Use `git log` with the suggested argument
+- Type `git log -1` into the terminal and press enter
+
+## 1620. git checkout main
+
+### 1620.1
+
+You can see that your one commit has all the messages that were in Nano, which are all of the commits you made to this branch squashed into one commit. I think you are finally done with this branch. Go to your `main` branch so it can get merged.
+
+#### HINTS
+
+- Use the `git checkout` command
+- Here's an example: `git checkout branch_name`
+- Enter `git checkout main` into the terminal and press enter
+
+## 1630. git merge feat/add-column-references
+
+### 1630.1
+
+Merge your branch for adding column commands into this one.
+
+#### HINTS
+
+- Use the `git merge` command with the branch name after it
+- Here's an example: `git merge branch_name`
+- Use the `git branch` command if you need to find the branch name
+- It's the `feat/add-column-references` branch
+- Type `git merge feat/add-column-references` into the terminal and press enter
+- If you got `fatal: refusing to merge unrelated histories`, you need to switch back to the feature branch, enter `git rebase main` to align the histories, then come back to `main` and try again
+
+## 1635. git branch -d feat/add-column-references
+
+### 1635.1
+
+Hopefully, there were no conflicts. Delete your branch for adding information about column commands since you are done with it.
+
+#### HINTS
+
+- Use the `git branch` command with the `-d` flag
+- Here's an example: `git branch -d branch_name`
+- View your branches if you need to find the name
+- The branch name is `feat/add-column-references`
+- Type `git branch -d feat/add-column-references` into the terminal and press enter
+
+## 1640. git checkout fix/add-missing-rename-references
+
+### 1640.1
+
+Go to your branch for adding the commands that were missing. There's one more to add.
+
+#### HINTS
+
+- Use the `git checkout` command
+- Here's an example: `git checkout branch_name`
+- Use the `git branch` command to find the name of the branch
+- It's the `fix/add-missing-rename-references` branch
+- Enter `git checkout fix/add-missing-rename-references` into the terminal and press enter
+
+## 1650. git rebase main
+
+### 1650.1
+
+There was added a commit to `main` since you last worked on this. Update this branch with a rebase against main.
+
+#### HINTS
+
+- Use the "git rebase" command
+- Add the branch after the command that you want to rebase against
+- Here's an example: `git rebase branch_name`
+- Type `git rebase main` into the terminal and press enter
+
+## 1680. git log -5 oneline
+
+### 1680.1
+
+You viewed the most recent log with a `-1` flag. You can view the last `x` number of commits with any number instead of `1`. View the last five commits with the oneline flag.
+
+#### HINTS
+
+- Use the `git log` command with the correct two arguments
+- The two arguments are `-5` and `--oneline`
+- Type `git log -5 --oneline` into the terminal and press enter
+
+## 1690. Add RENAME TABLE Command
+
+### 1690.1
+
+This branch is up to date now. In your JSON file, add a `rename` key to the `table` object. The value is in the hints, but give it a try first. It follows a similar structure as the rest of them.
+
+#### HINTS
+
+- The value is `"ALTER TABLE table_name RENAME TO new_name;"`
+- The `table` object should look like this:
+
+```json
+{
+  "create": "CREATE TABLE table_name();",
+  "drop": "DROP TABLE table_name;",
+  "rename": "ALTER TABLE table_name RENAME TO new_name;"
+}
+```
+
+- The whole file should look like this:
+
+```json
+{
+  "database": {
+    "create": "CREATE DATABASE database_name;",
+    "drop": "DROP DATABASE database_name;",
+    "rename": "ALTER DATABASE database_name RENAME TO new_name;"
+  },
+  "table": {
+    "create": "CREATE TABLE table_name();",
+    "drop": "DROP TABLE table_name;",
+    "rename": "ALTER TABLE table_name RENAME TO new_name;"
+  },
+  "row": {
+    "insert": "INSERT INTO table_name(columns) VALUES(values);",
+    "update": "UPDATE table_name SET column_name = new_value WHERE condition;",
+    "delete": "DELETE FROM table_name WHERE condition;"
+  },
+  "column": {
+    "add": "ALTER TABLE table_name ADD COLUMN column_name;",
+    "drop": "ALTER TABLE table_name DROP COLUMN column_name;",
+    "rename": "ALTER TABLE table_name RENAME COLUMN column_name TO new_name;",
+    "primary_key": "ALTER TABLE table_name ADD PRIMARY KEY(column_name);",
+    "foreign_key": "ALTER TABLE table_name ADD FOREIGN KEY(column_name) REFERENCES table_name(column_name);"
+  }
+}
+```
+
+- Make sure there's one empty line at the bottom of the file and no extra spaces after any of the values or curly brackets
+- You can view the `git diff` to see if there's any extra spaces
+
+## 1700. git add RENAME TABLE command
+
+### 1700.1
+
+Check the diff of your changes, then add them changes to staging.
+
+#### HINTS
+
+- Use the `git add` command
+- Here's an example: `git add file_name`
+- You previously used `git add README.md` to add changes to staging
+- Type `git add sql_reference.json` into the terminal and press enter
+
+## 1710. git commit fix: add missing rename table reference
+
+### 1710.1
+
+Commit your staged changes with the message, `fix: add missing rename table reference`.
+
+#### HINTS
+
+- Commit changes with `git commit -m "message"`
+- Type `git commit -m "fix: add missing rename table reference"` into the terminal and press enter
+- View your `git log` to see if your message is correct
+- If the message is wrong, enter `git reset HEAD~1`, then `git add .`, and then you can try to make the commit again
+- Or, reset the lesson and try again
+
+## 1715. git log -5 oneline
+
+### 1715.1
+
+View your last five logs with the oneline flag again.
+
+#### HINTS
+
+- Use the `git log` command with the correct flag
+- It's the `--oneline` flag
+- Use `-5` with your `git log --oneline` command
+- Type `git log --oneline -5` into the terminal and press enter
+
+## 1720. git rebase interactive HEAD~2
+
+### 1720.1
+
+You have two commits on this branch that could be squashed. Enter an interactive rebase that goes back to `HEAD~2` so you can squash them.
+
+#### HINTS
+
+- It's the `git rebase` command with two arguments
+- The two arguments and `--interactive` and `HEAD~2`
+- Enter `git rebase --interactive HEAD~2` into the terminal and press enter
+- If you entered the wrong command, save and exit nano without changing anything. Then try again
+- You can save and exit nano by pressing `ctrl+x` then `y` then `enter`
+
+## 1730. Nano: Squash feat/add-missing-rename-references Commits
+
+### 1730.1
+
+Replace `pick` with `s` next to your commit for adding the rename table reference to squash it. Be careful not to do the wrong one. When you are done, save and exit Nano.
+
+#### HINTS
+
+- Replace `pick` with `s` next to your `fix: add missing rename table reference` commit
+- You can save and exit nano by pressing `ctrl+x` then `y` then `enter`
+- To reset this lesson, make sure nano is closed. Then, hit reset and enter `git rebase --interactive HEAD~2` after it's done resetting
+
+## 1735. Nano: Add Missing Renames Commit Message
+
+### 1735.1
+
+The lines that don't start with a `#` will be the commit messages. Add a new message at the top of the file on it's own line. Give it the text, `fix: add missing rename references`. When you are done, save and exit the file.
+
+#### HINTS
+
+- You can save and exit nano by pressing `ctrl+x` then `y` then `enter`
+- The most recent commit message should be `fix: add missing rename references`
+- To reset this lesson, make sure nano is closed. Then, hit reset and enter `git rebase --interactive HEAD~2` after it's done resetting. Then, in nano, replace `pick` with `s` next to your `fix: add missing rename table reference` commit, and save and exit
+
+## 1737. git log -1
+
+### 1737.1
+
+View only the last commit in your log to see your squashed commit.
+
+#### HINTS
+
+- Use the `git log` command
+- View the last `x` number of commits with `-x`
+- Use `-1` with the command
+- Type `git log -1` into the terminal and press enter
+
+## 1740. git checkout main
+
+### 1740.1
+
+I think this branch is ready to go. Switch to `main` so you can merge it.
+
+#### HINTS
+
+- Use the `git checkout` command
+- Here's an example: `git checkout branch_name`
+- Enter `git checkout main` into the terminal and press enter
+
+## 1750. git merge fix/add-missing-rename-references
+
+### 1750.1
+
+Merge your branch for adding the rename commands into `main`.
+
+#### HINTS
+
+- Use the `git merge` command with the branch name after it
+- Here's an example: `git merge branch_name`
+- Use the `git branch` command if you need to find the branch name
+- It's the `fix/add-missing-rename-references` branch
+- Type `git merge fix/add-missing-rename-references` into the terminal and press enter
+
+## 1760. git branch
+
+### 1760.1
+
+View your branches.
+
+#### HINTS
+
+- Use `git branch` to view your branches
+- Make sure you are in your `sql_reference` repo folder
+
+## 1770. git branch -d all but main
+
+### 1770.1
+
+Delete all your branches except `main`.
+
+#### HINTS
+
+- Use the `git branch` command with the `-d` flag
+- Here's an example: `git branch -d branch_name`
+- The branch name is `fix/add-missing-rename-references`
+- Type `git branch -d fix/add-missing-rename-references` into the terminal and press enter
+
+## 1780. git log oneline
+
+### 1780.1
+
+I think the file is complete, thanks for making this for me. View the log with the oneline flag.
+
+#### HINTS
+
+- Use the `git log` command with the correct flag
+- It's the `--oneline` flag
+- Type `git log --oneline` into the terminal and press enter
+
+## 1790. git checkout -b feat/add-gitignore
+
+### 1790.1
+
+That's a nice looking commit history. There's one more thing you should learn. Create and checkout a branch named `feat/add-gitignore`.
+
+#### HINTS
+
+- Use the `git checkout` command with the `-b` flag
+- Here's an example: `git checkout -b branch_name`
+- Type `git checkout -b feat/add-gitignore` into the terminal and press enter
+
+## 1800. touch .env
+
+### 1800.1
+
+Use the `touch` command to create a file named `.env` in your repo.
+
+#### HINTS
+
+- Use `touch file_name` to create a file
+- Type `touch .env` into the terminal and press enter
+- Don't try to create the file with another method
+- Make sure you are in your `sql_reference` repo folder
+
+## 1810. Add SECRETS to .env
+
+### 1810.1
+
+`.env` files are used to store environment variables for running code. Often times, there may be sensitive information in it. Add the text `SECRET=MY_SECRET` to the file.
+
+#### HINTS
+
+- Add the suggested text to the `.env` file
+- Add `SECRET=MY_SECRET` to the `.env` file
+- Make sure there's nothing else in the file
+
+## 1820. git status
+
+### 1820.1
+
+View your status.
+
+#### HINTS
+
+- Use the "git status" command in your repo
+- Type `git status` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+
+## 1830. touch .gitignore
+
+### 1830.1
+
+You can see the `.env` file is new. Use `touch` again to create another file named `.gitignore` in your repo.
+
+#### HINTS
+
+- Use `touch file_name` to create a file
+- Type `touch .gitignore` into the terminal and press enter
+- Don't try to create the file with another method
+- Make sure you are in your `sql_reference` repo folder
+
+## 1835. git status
+
+### 1835.1
+
+View the status again.
+
+#### HINTS
+
+- Use the "git status" command in your repo
+- Type `git status` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+
+## 1840. Add .env to .gitignore
+
+### 1840.1
+
+Now there's two new files that aren't tracked yet. Add the text `.env` to your `.gitignore` file.
+
+#### HINTS
+
+- Add `.env` to the `.gitignore` file
+- Make sure there's nothing else in the file
+
+## 1850. git status
+
+### 1850.1
+
+View the status again.
+
+#### HINTS
+
+- Use the "git status" command in your repo
+- Type `git status` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+
+## 1860. git add .gitignore
+
+### 1860.1
+
+Now the `.env` file is being ignored by git because you added it to the `.gitignore` file. There are often a number of things you don't want to include in a repository, especially if it's publicly visible. Now, you know how to keep them from being tracked by git. Add your new changes to staging.
+
+#### HINTS
+
+- Use the `git add` command
+- Here's an example: `git add file_name`
+- You previously used `git add sql_reference.json` to add changes to staging
+- Type `git add .gitignore` into the terminal and press enter
+
+## 1870. git commit feat: add .gitignore
+
+### 1870.1
+
+Commit your changes with `feat: add .gitignore` for the message.
+
+#### HINTS
+
+- Commit changes with `git commit -m "message"`
+- Type `git commit -m "feat: add .gitignore"` into the terminal and press enter
+- View your `git log` to see if your message is correct
+- If the message is wrong, enter `git reset HEAD~1`, then `git add .`, and then you can try to make the commit again
+- Or, reset the lesson and try again
+
+## 1880. touch sample.env
+
+### 1880.1
+
+Use touch to create another file named `sample.env` in your repo.
+
+#### HINTS
+
+- Use `touch file_name` to create a file
+- Type `touch sample.env` into the terminal and press enter
+- Don't try to create the file with another method
+- Make sure you are in your `sql_reference` repo folder
+
+## 1890. git status
+
+### 1890.1
+
+View the status.
+
+#### HINTS
+
+- Use the "git status" command in your repo
+- Type `git status` into the terminal and press enter
+- Make sure you are in your `sql_reference` repo folder
+
+## 1900. Add SECRET= to sample.env
+
+### 1900.1
+
+Git won't ignore this file. Sensitive information can be stored in the `.env` file, but people need to know the variables that are in there so they can run a repository locally. Add `SECRET=` to `sample.env`.
+
+#### HINTS
+
+- Add the suggested text to the `sample.env` file
+
+## 1930. git add sample.env
+
+### 1930.1
+
+Now, when someone wants to run your repo, they will know that they need to create a `.env` file and add a value in it for `SECRET`. Add your new file to staging.
+
+#### HINTS
+
+- Use the `git add` command
+- Here's an example: `git add file_name`
+- You previously used `git add sql_reference.json` to add changes to staging
+- Type `git add sample.env` into the terminal and press enter
+
+## 1940. git commit feat: add sample.env
+
+### 1940.1
+
+Commit the new changes with the message `feat: add sample.env`.
+
+#### HINTS
+
+- Commit changes with `git commit -m "message"`
+- Type `git commit -m "feat: add sample.env"` into the terminal and press enter
+- View your `git log` to see if your message is correct
+- If the message is wrong, enter `git reset HEAD~1`, then `git add .`, and then you can try to make the commit again
+- Or, reset the lesson and try again
+
+## 1945. git log -5 oneline
+
+### 1945.1
+
+View the last five commits in your log with the oneline flag.
+
+#### HINTS
+
+- Use the `git log` command with two flags
+- Use `-5` and `--oneline` with the command
+- Type `git log -5 --oneline` into the terminal and press enter
+
+## 1950. git rebase HEAD~2
+
+### 1950.1
+
+The two commits you made to this branch can be squashed. Do an interactive rebase that goes back to all the commits unique to this branch (`HEAD~2`).
+
+#### HINTS
+
+- It's the `git rebase` command with two arguments
+- Use `--interactive` and `HEAD~2` with the command
+- Enter `git rebase --interactive HEAD~2` into the terminal and press enter
+
+## 1960. Nano: Squash feat/add-gitignore Commits
+
+### 1960.1
+
+Squash your commit that was for adding the `sample.env` file. When you are done, save the file and exit Nano.
+
+#### HINTS
+
+- Replace `pick` with `s` next to the suggested commit
+- It's the `feat: add sample.env` commit
+- You can save and exit by pressing `ctrl+x` then `y` then `enter`
+- To reset this lesson, make sure nano is closed. Then, hit reset and enter `git rebase --interactive HEAD~2` after it's done resetting
+
+## 1962. Nano: Add Message + Save and Exit
+
+### 1962.1
+
+Add a new message at the very top of the file, `feat: add .gitignore and sample.env`. When you are done, save and exit the file.
+
+#### HINTS
+
+- Add the suggested message on it's own line above the other messages
+- You can save and exit by pressing `ctrl+x` then `y` then `enter`
+- The most recent commit message should be `feat: add .gitignore and sample.env`
+- To reset this lesson, make sure nano is closed. Then, hit reset and enter `git rebase --interactive HEAD~2` after it's done resetting. Then, in nano, replace `pick` with `s` next to your `feat: add sample.env` commit, and save and exit
+
+## 1964. git log -1
+
+### 1964.1
+
+View only the last commit in your log.
+
+#### HINTS
+
+- Use the `git log` command with the correct argument
+- View the last `x` number of commits with `-x`
+- Use `-1` with the command
+- Type `git log -1` into the terminal and press enter
+
+## 1970. git checkout main
+
+### 1970.1
+
+Switch back to `main` so you can add this in.
+
+#### HINTS
+
+- Use the `git checkout` command
+- Here's an example: `git checkout branch_name`
+- Enter `git checkout main` into the terminal and press enter
+
+## 1980. git merge feat/add-gitignore
+
+### 1980.1
+
+Merge the branch you just made into here.
+
+#### HINTS
+
+- Use the `git merge` command with the branch name after it
+- Here's an example: `git merge branch_name`
+- Use the `git branch` command if you need to find the branch name
+- It's the `feat/add-gitignore` branch
+- Type `git merge feat/add-gitignore` into the terminal and press enter
+- If you got `fatal: refusing to merge unrelated histories`, you need to switch back to the feature branch, enter `git rebase main` to align the histories, then come back to `main` and try again
+
+## 1990. git branch -d feat/add-gitignore
+
+### 1990.1
+
+Delete the feature branch you just merged.
+
+#### HINTS
+
+- Use the `git branch` command with the `-d` flag
+- Here's an example: `git branch -d branch_name`
+- Use just `git branch` if you need to find the branch name
+- The branch name is `feat/add-gitignore`
+- Type `git branch -d feat/add-gitignore` into the terminal and press enter
+
+## 1995. git log oneline
+
+### 1995.1
+
+I think it's all finished. View your log with the oneline flag to see your whole history.
+
+#### HINTS
+
+- Use the `git log` command with the correct flag
+- It's the `--oneline` flag
+- Type `git log --oneline` into the terminal and press enter
+
+## 2000. git log
+
+### 2000.1
+
+Looks great :smile: View the log one last time, without any flags, to see the details of all the commits. Congratulations, you are finished with your repo for now.
+
+#### HINTS
+
+- Use the `git log` command
+- Don't use any flags with the command
+- Press enter until you have seen the whole log
 
 ####
 
