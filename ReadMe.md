@@ -1,6 +1,11 @@
 # [freeCodeCamp.org](https://www.freecodecamp.org/tracychacon)
+1. [Celestial Bodies Database](https://github.com/TracyChacon/FreeCodeCamp-Curriculum/tree/master/05%20Relational%20Database/rdb_project_01_celestial_bodies_database)
+2. [World Cup Database](https://github.com/TracyChacon/FreeCodeCamp-Curriculum/tree/master/05%20Relational%20Database/rdb_project_02_world_cup_database)
+    
 ### Ensuring  project success by fulfilling user stories.
-Below are projects that illustrate my skills in troubleshooting, executing what I learned to solve problems, and finding solutions to unexpected challeges.
+Above are links to projects that illustrate my skills in troubleshooting, executing what I learned to solve problems, and finding solutions to unexpected challeges. For these projects user stories were given and the developer implements the solutions. 
+
+Below are explanations of the technologies used and brief lists that express skills that were needed to complete the projects. 
 
 ### Relational Database and Shell Scripting
 PostgreSQL is a powerful and open-source relational database management system (RDBMS). It is known for its reliability, scalability, and security. PostgreSQL can be used to store and manage a wide variety of data, including structured, semi-structured, and unstructured data. Shell scripting is a way of automating tasks on a Unix-like operating system.
@@ -22,9 +27,7 @@ Using shell scripting to add user interactivity to a PostgreSQL database can be 
 - Delete data from tables
 - Query data from tables
 
-1. [Celestial Bodies Database](https://github.com/TracyChacon/FreeCodeCamp-Curriculum/tree/master/05%20Relational%20Database/rdb_project_01_celestial_bodies_database)
-2. [World Cup Database](https://github.com/TracyChacon/FreeCodeCamp-Curriculum/tree/master/05%20Relational%20Database/rdb_project_02_world_cup_database)
-   
+
 
 
 
