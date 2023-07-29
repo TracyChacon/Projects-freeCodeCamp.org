@@ -1,4 +1,4 @@
-# Prjects: [freeCodeCamp.org](https://www.freecodecamp.org/tracychacon)
+# Projects: [freeCodeCamp.org](https://www.freecodecamp.org/tracychacon)
 1. [Celestial Bodies Database](https://github.com/TracyChacon/FreeCodeCamp-Curriculum/tree/master/05%20Relational%20Database/rdb_project_01_celestial_bodies_database)
 2. [World Cup Database](https://github.com/TracyChacon/FreeCodeCamp-Curriculum/tree/master/05%20Relational%20Database/rdb_project_02_world_cup_database)
     
