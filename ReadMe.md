@@ -1,5 +1,7 @@
 # [freeCodeCamp.org](https://www.freecodecamp.org/tracychacon)
-Ensuring  project success by fulfilling user stories.
+### Ensuring  project success by fulfilling user stories.
+Below are projects that illustrate my skills in troubleshooting, executing what I learned to solve problems, and finding solutions to unexpected challeges.
+
 ### Relational Database and Shell Scripting
 PostgreSQL is a powerful and open-source relational database management system (RDBMS). It is known for its reliability, scalability, and security. PostgreSQL can be used to store and manage a wide variety of data, including structured, semi-structured, and unstructured data. Shell scripting is a way of automating tasks on a Unix-like operating system.
 
