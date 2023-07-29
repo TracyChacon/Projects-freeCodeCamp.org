@@ -10,7 +10,7 @@ Below are explanations of the technologies used and brief lists that express ski
 ### Relational Database and Shell Scripting
 PostgreSQL is a powerful and open-source relational database management system (RDBMS). It is known for its reliability, scalability, and security. PostgreSQL can be used to store and manage a wide variety of data, including structured, semi-structured, and unstructured data. Shell scripting is a way of automating tasks on a Unix-like operating system.
 
-## Projects:
+## Project Competencies
 Shell scripts are written in a scripting language called bash. Bash is a powerful language that can be used to perform a wide variety of tasks.
 The prjects listed below deomonstrate my competence in:
 
