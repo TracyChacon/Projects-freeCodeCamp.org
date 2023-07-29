@@ -11567,7 +11567,7 @@ Last step, close the terminal with the `exit` command. Thanks and happy coding!
 
 - Type `exit` in the terminal and press enter
 
-### Build a Student Database: Part 1
+# Build a Student Database: Part 1
 
 In this 140-lesson course, you will create a `Bash script` that uses `SQL` to enter information about your computer science students into `PostgreSQL`.
 
@@ -13621,7 +13621,7 @@ The database is finished for now. The last thing you are going to do is make a "
 
 - Here's an example: `<command> <flag>`
 - Enter `pg_dump --help` in the terminal
-- The bash terminal, not the psql one
+- The bash terminal, not the psql onec
 - Press enter until you have seen the whole manual
 
 ## 1230. dump database
@@ -19169,7 +19169,7 @@ Below the line you just printed, read input into a `PHONE_NUMBER` variable. Sinc
 
 With the customer's phone number, you can get their name. Below where you get the phone number, create a `CUSTOMER_NAME` variable that gets the customers name from the database using the phone number.
 
-#### HINTS
+#### HINTSIII
 
 - Query the database to set the `CUSTOMER_NAME` variable
 - Here's an example: `CUSTOMER_NAME=$($PSQL "<query_here>")`

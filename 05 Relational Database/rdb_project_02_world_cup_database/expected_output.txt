@@ -13,7 +13,7 @@ Average number of goals in all games from the winning teams rounded to two decim
 
 Average number of goals in all games from both teams:
 2.8125000000000000
-
+2.8125000000000000
 Most goals scored in a single game by one team:
 7
 
