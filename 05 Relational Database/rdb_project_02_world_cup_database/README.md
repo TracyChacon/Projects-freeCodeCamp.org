@@ -8,7 +8,7 @@
 - Coding skills
 - Strong communication skills
 
-## REBUILD
+## Rebuild
 
 To rebuild the database, you can use the following commands:
 
