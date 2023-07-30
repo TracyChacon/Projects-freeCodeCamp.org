@@ -17,6 +17,7 @@ To rebuild the database, you can use the following commands:
 3. psql --username=<your_username_for_database> --dbname=universe
 4. \c universe
 
+## Summary
 ### Postgres Database
 The games table contains information about the games played in the 2018 and 2014 FIFA World Cups. Each game has a unique ID, the year it was played, the round of the tournament it was played in, the IDs of the two teams that played, and the number of goals scored by each team.
 The teams table contains information about the teams that participated in the 2018 and 2014 FIFA World Cups. Each team has a unique ID and a name.
@@ -27,7 +28,7 @@ Germany won the 2014 FIFA World Cup, defeating Argentina in the final.
 The most goals scored in a single game was 7, which was scored by Brazil against Spain in the 2014 FIFA World Cup.
 The most goals scored by a single team in a single tournament was 22, which was scored by Germany in the 2014 FIFA World Cup.
 
-`insert_data.sh`
+### `insert_data.sh`
 This code above is a bash script that inserts data from the games.csv file into the worldcup database. The script first checks to see if the test argument has been passed to it. If it has, then the script will connect to the worldcuptest database. Otherwise, the script will connect to the worldcup database.
 
 The next part of the script uses the cat command to read the games.csv file line by line. For each line, the script extracts the year, round, winner, opponent, winning goals, and opponent goals. The script then uses the psql command to insert the data into the games and teams tables.
