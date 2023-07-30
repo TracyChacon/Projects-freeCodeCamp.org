@@ -9,7 +9,7 @@ The most goals scored in a single game was 7, which was scored by Brazil against
 The most goals scored by a single team in a single tournament was 22, which was scored by Germany in the 2014 FIFA World Cup.
 
 
-## Competencies needed to build projec
+## Competencies Needed to Build Project
 
 - Knowledge of the SQL language
 - Knowledge of the world cup data set
