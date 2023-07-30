@@ -18,3 +18,12 @@ The most goals scored by a single team in a single tournament was 22, which was 
 - Problem-solving skills
 - Coding skills
 - Strong communication skills
+
+## REBUILD
+
+To rebuild the database, you can use the following commands:
+
+1. sudo su postgres (if super user needs to change roles)
+2. psql -U postgres < universe.sql
+3. psql --username=<your_username_for_database> --dbname=universe
+4. \c universe
