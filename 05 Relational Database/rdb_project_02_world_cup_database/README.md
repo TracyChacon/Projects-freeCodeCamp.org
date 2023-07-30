@@ -1,3 +1,5 @@
+# Worldcup Database and Shell Scipt
+
 ## Project Summary
 The games table contains information about the games played in the 2018 and 2014 FIFA World Cups. Each game has a unique ID, the year it was played, the round of the tournament it was played in, the IDs of the two teams that played, and the number of goals scored by each team.
 The teams table contains information about the teams that participated in the 2018 and 2014 FIFA World Cups. Each team has a unique ID and a name.
