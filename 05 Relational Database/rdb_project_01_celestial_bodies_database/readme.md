@@ -8,7 +8,7 @@ This project is a database of celestial bodies, created using PostgreSQL. The da
 - Problem-solving skills. The code above solves a number of problems, such as how to calculate the gravity of a moon and how to determine whether a planet is in the habitable zone. A way to identify the problems that need to be solved and then develop efficient and effective solutions is needed.
 - Coding skills. The code above is well-written and easy to read. Must have good coding skills in order to write code that is both efficient and readable.
 
-## REBUILD
+## Rebuild
 
 To rebuild the database, you can use the following commands:
 
