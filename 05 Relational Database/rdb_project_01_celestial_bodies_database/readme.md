@@ -17,7 +17,7 @@ To rebuild the database, you can use the following commands:
 3. psql --username=<your_username_for_database> --dbname=universe
 4. \c universe
 
-## SUMMARY
+## Summary
 
 The universe.sql file contains the SQL commands to create the database and populate it with data.
 
