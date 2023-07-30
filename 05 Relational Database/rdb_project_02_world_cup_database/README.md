@@ -11,8 +11,8 @@ The most goals scored by a single team in a single tournament was 22, which was 
 
 ## Competencies needed to build projec
 
-Knowledge of the SQL language
-Knowledge of the world cup data set
-Problem-solving skills
-Coding skills
-Strong communication skills
+- Knowledge of the SQL language
+- Knowledge of the world cup data set
+- Problem-solving skills
+- Coding skills
+- Strong communication skills
