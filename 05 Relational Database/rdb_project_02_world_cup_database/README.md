@@ -1,4 +1,4 @@
-# Worldcup Database and Shell Scripts
+# World Cup Database and Shell Scripts
 
 ## Competencies Needed to Build Project
 
