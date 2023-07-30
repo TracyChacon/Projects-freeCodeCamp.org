@@ -43,5 +43,4 @@ The script first defines a variable called PSQL that contains the command to run
 
 The script can be used to answer a variety of questions about the world cup data set. For example, you could use it to find out the most goals scored in a single game, the number of games where the winning team scored more than two goals, or the list of teams that played in the 2014 'Eighth-Final' round.
 
-To run the script, you will need to have the psql command-line tool installed. You can then run the script by saving it as a file and then running the following command from the command line:
-
+To run the script, you will need to have the psql command-line tool installed. 
