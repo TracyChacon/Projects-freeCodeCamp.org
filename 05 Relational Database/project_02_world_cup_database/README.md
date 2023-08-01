@@ -14,7 +14,7 @@ To rebuild the database, you can use the following commands:
 
 1. sudo su postgres (if super user needs to change roles)
 2. psql -U postgres < worldcup.sql
-3. psql --username=<your_username_for_database> --worldcup
+3. psql --username=<your_username_for_database> --dbname=worldcup
 4. \c universe
 
 ## Summary
