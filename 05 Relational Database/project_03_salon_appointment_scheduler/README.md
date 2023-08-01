@@ -26,8 +26,8 @@ The shell script is well-formatted and easy to read. The comments in the script 
 
 Here is a breakdown of the main features of the shell script:
 
-The MAIN_MENU() function displays the main menu of the script and prompts the user to select a service.
-The APPOINTMENT_MENU() function prompts the user to enter their phone number and the time of their appointment. The function then inserts a new row into the appointments table in the database.
-The psql command is used to interact with the database.
-The shell script is well-formatted and easy to read.
-The shell script is modular, with each function performing a specific task.
+- The MAIN_MENU() function displays the main menu of the script and prompts the user to select a service.
+- The APPOINTMENT_MENU() function prompts the user to enter their phone number and the time of their appointment. The function then inserts a new row into the appointments table in the database.
+- The psql command is used to interact with the database.
+- The shell script is well-formatted and easy to read.
+- The shell script is modular, with each function performing a specific task.
