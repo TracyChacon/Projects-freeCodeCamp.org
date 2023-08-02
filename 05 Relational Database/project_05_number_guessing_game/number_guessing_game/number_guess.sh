@@ -10,11 +10,10 @@ MAIN_FUNC() {
     read USERNAME_ENTERED
 
     USERNAME=$($PSQL "SELECT username FROM users WHERE username='$USERNAME_ENTERED'")
-
-    echo $USERNAME
-    # if [[ -z USERNAME ]]; then
-
-    # fi
+    
+    if [[ -z $USERNAME ]]; then
+        echo "Welcome, $USERNAME_ENTERED! It looks like this is your first time here."
+    fi
 }
 
 MAIN_FUNC
