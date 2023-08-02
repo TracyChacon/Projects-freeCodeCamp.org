@@ -1,6 +1,6 @@
 # Relational Database and Shell Scripting Projects
 1. [Celestial Bodies Database](https://github.com/TracyChacon/FreeCodeCamp-Curriculum/tree/master/05%20Relational%20Database/rdb_project_01_celestial_bodies_database)
-2. [World Cup Database](https://github.com/TracyChacon/FreeCodeCamp-Curriculum/tree/master/05%20Relational%20Database/rdb_project_02_world_cup_database)
+2. [World Cup Database](https://github.com/TracyChacon/Projects-freeCodeCamp.org/tree/master/05%20Relational%20Database/project_02_world_cup_database)
 3. [Salon Appointment Scheduler](https://github.com/TracyChacon/Projects-freeCodeCamp.org/tree/master/05%20Relational%20Database/project_03_salon_appointment_scheduler)
 4. [Periodic Table](https://github.com/TracyChacon/Projects-freeCodeCamp.org/tree/master/05%20Relational%20Database/project_04_periodic_table_database)
 ## Technology Descriptions: Relational Database and Shell Scripting
