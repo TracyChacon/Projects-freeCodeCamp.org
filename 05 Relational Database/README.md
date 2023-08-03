@@ -3,6 +3,7 @@
 2. [World Cup Database](https://github.com/TracyChacon/Projects-freeCodeCamp.org/tree/master/05%20Relational%20Database/project_02_world_cup_database)
 3. [Salon Appointment Scheduler](https://github.com/TracyChacon/Projects-freeCodeCamp.org/tree/master/05%20Relational%20Database/project_03_salon_appointment_scheduler)
 4. [Periodic Table](https://github.com/TracyChacon/Projects-freeCodeCamp.org/tree/master/05%20Relational%20Database/project_04_periodic_table_database)
+5. [Number Guessing Game](https://github.com/TracyChacon/Projects-freeCodeCamp.org/tree/master/05%20Relational%20Database/project_05_number_guessing_game/number_guessing_game)
 ## Technology Descriptions: Relational Database and Shell Scripting
 PostgreSQL is a powerful and open-source relational database management system (RDBMS). It is known for its reliability, scalability, and security. PostgreSQL can be used to store and manage a wide variety of data, including structured, semi-structured, and unstructured data. Shell scripting is a way of automating tasks on a Unix-like operating system.
 
