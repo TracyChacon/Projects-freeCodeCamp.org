@@ -33,7 +33,9 @@ GAME() {
     until [[ $USER_INPUT == $N ]]; do
         read USER_INPUT
 
-        if [[ $USER_INPUT > $N ]]; then
+        if [[ ! $USER_INPUT =~ ^[0-9].+$ ]]; then
+            echo "That is not an integer, guess again:"
+        elif [[ $USER_INPUT > $N ]]; then
             echo "It's lower than that, guess again:"
         elif [[ $USER_INPUT < $N ]]; then
             echo "It's higher than that, guess again:"
