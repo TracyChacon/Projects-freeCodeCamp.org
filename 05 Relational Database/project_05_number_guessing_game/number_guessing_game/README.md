@@ -3,7 +3,7 @@
 ## Competencies Needed to Build Project
 
 - Knowledge of the SQL language
-- Knowledge of the world cup data set
+- Working knowledge of database manipulation
 - Problem-solving skills
 - Coding skills
 - Strong communication skills
