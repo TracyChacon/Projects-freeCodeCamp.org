@@ -5,6 +5,15 @@
 - Problem-solving skills. The code above solves a number of problems, such as how to calculate the gravity of a moon and how to determine whether a planet is in the habitable zone. A way to identify the problems that need to be solved and then develop efficient and effective solutions is needed.
 - Coding skills. The code above is well-written and easy to read. Must have good coding skills in order to write code that is both efficient and readable.
 
+## Rebuild
+
+To rebuild the database, you can use the following commands:
+
+1. sudo su postgres (if super user needs to change roles)
+2. psql -U postgres < number_guess.sql
+3. psql --username=<your_username_for_database> --dbname=periodic_table
+4. \c periodic_table
+
 ## Summary
 The code is a bash script that takes an element as an argument and prints out information about the element, including its atomic number, name, symbol, atomic mass, melting point, and boiling point.
 
