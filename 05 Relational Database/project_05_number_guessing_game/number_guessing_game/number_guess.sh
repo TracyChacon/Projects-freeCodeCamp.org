@@ -7,7 +7,6 @@ read USERNAME_ENTERED
 
 USERNAME=$($PSQL "SELECT username FROM users WHERE username='$USERNAME_ENTERED'")
 
-
 if [[ -n $USERNAME ]]
 then
     GAMES_PLAYED=$($PSQL "SELECT games_played FROM users WHERE username='$USERNAME'")
@@ -16,7 +15,6 @@ then
     echo $($PSQL "UPDATE users SET games_played = 1 + $GAMES_PLAYED WHERE username='$USERNAME'")
 
     echo "Welcome back, $USERNAME! You have played $GAMES_PLAYED games, and your best game took $BEST_GAME guesses."
-
 else
     USERNAME=$USERNAME_ENTERED
     echo $($PSQL "INSERT INTO users(username) VALUES('$USERNAME')")
@@ -26,12 +24,8 @@ else
     echo "Welcome, $USERNAME! It looks like this is your first time here."
 fi
 
-
-
 # GAME SECTION
-
 SECRET_NUMBER=$(( RANDOM %1000 + 1 ))
-
 # echo "$SECRET_NUMBER is the number"
 
 echo "Guess the secret number between 1 and 1000:"
@@ -54,7 +48,8 @@ do
     fi 
 done
 
-if [[ -z $BEST_GAME ]] || [[ $NUMBER_OF_GUESSES < $BEST_GAME ]]; then
+if [[ -z $BEST_GAME ]] || [[ $NUMBER_OF_GUESSES < $BEST_GAME ]]
+then
     echo $($PSQL "UPDATE users SET best_game = $NUMBER_OF_GUESSES WHERE username='$USERNAME'")
 fi
 
