@@ -1,1 +1,4 @@
-I have experience with Node.js, Express, Mongoose, and MongoDB. I am proficient in JavaScript and have a strong understanding of the Node.js API and its event loop. I am also familiar with the Express framework, its routing system, and its middleware. I have worked with Mongoose to map JavaScript objects to MongoDB documents, and I am familiar with the MongoDB database and its syntax. I am a quick learner and I am always eager to learn new technologies.
+I have developed a microservice using JavaScript, Node.js, Mongoose, and Express. 
+
+A timestamp microservice that gets the Unix timestamp and UTC string for a given date.
+A request header parser microservice that parses the request headers from an HTTP request.
