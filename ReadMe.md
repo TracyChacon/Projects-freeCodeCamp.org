@@ -1,5 +1,9 @@
 - [Realational Database/Shell Scripting Projects](https://github.com/TracyChacon/Projects-freeCodeCamp.org/tree/master/05%20Relational%20Database)
 
+- [Back End Development and APIs]([https://github.com/TracyChacon/Projects-freeCodeCamp.org/tree/master/05%20Relational%20Database](https://github.com/TracyChacon/Projects-freeCodeCamp.org/tree/master/06-Back%20End%20Development%20and%20APIs))
+
+- [Algorithms and Data Structures](https://github.com/TracyChacon/Algorithms-and-Data-Structures/tree/main)
+
 
 # Ensuring  Project Success by Fulfilling User Stories
 The above are links to projects I completed  that demonstrate my skills in troubleshooting, executing what I learned to solve problems, and finding solutions to unexpected challeges. For these projects user stories were given and the developer implements the solutions. 
