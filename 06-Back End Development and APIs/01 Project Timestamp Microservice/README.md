@@ -2,9 +2,6 @@
 
 This is code for the Timestamp Microservice project. The purpose of the code is to provide an API endpoint that can be used to get the Unix timestamp and UTC string for a given date. The API endpoint can be used to get the current date, or a specific date that is passed in as a parameter.
 
-The code is written in JavaScript and uses the Express framework.
-The API endpoint is well-documented and easy to use.
-
 The code is tested and has been proven to work correctly.
 The code is efficient and uses a minimal amount of resources.
 
