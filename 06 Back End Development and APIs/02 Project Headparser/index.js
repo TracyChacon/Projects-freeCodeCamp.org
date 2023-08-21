@@ -1,10 +1,12 @@
 // index.js
-// where your node app starts
 
 // init project
 require('dotenv').config()
-var express = require('express')
-var app = express()
+const express = require('express')
+const app = express()
+
+//
+// const bodyParser = require('body-parser')
 
 // enable CORS (https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
 // so that your API is remotely testable by FCC
@@ -19,15 +21,17 @@ app.get('/', function (req, res) {
   res.sendFile(__dirname + '/views/index.html')
 })
 
-// your first API endpoint...
+// your Headparser API endpoint...
 app.get('/api/whoami', function (req, res) {
+  const ipAddress = req.ip
+  const preferredLanguage = req.headers['accept-language']
   // return a JSON object with your IP address in the ipaddress key.
   // return a JSON object with your preferred language in the language key.
   // return a JSON object with your software in the software key.
   res.json({
-    ipaddress: req.ip,
-    language: req.language,
-    software: req.body,
+    ipaddress: ipAddress,
+    language: preferredLanguage,
+    software: 'hello software',
   })
 })
 
