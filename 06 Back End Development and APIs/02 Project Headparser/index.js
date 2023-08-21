@@ -25,12 +25,12 @@ app.get('/api/whoami', function (req, res) {
   softwareName = req.headers['user-agent']
 
   console.log(softwareName)
-  // return a JSON object with your IP address in the ipaddress key.
-  // return a JSON object with your preferred language in the language key.
-  // return a JSON object with your software in the software key.
   res.json({
+    // return a JSON object with your IP address in the ipaddress key.
     ipaddress: ipAddress,
+    // return a JSON object with your preferred language in the language key.
     language: preferredLanguage,
+    // return a JSON object with your software in the software key.
     software: softwareName,
   })
 })
