@@ -5,10 +5,6 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 
-//
-const bodyParser = require('body-parser')
-app.use(bodyParser.json())
-
 // enable CORS (https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
 // so that your API is remotely testable by FCC
 var cors = require('cors')
