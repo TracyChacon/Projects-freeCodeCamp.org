@@ -6,7 +6,8 @@ const express = require('express')
 const app = express()
 
 //
-// const bodyParser = require('body-parser')
+const bodyParser = require('body-parser')
+app.use(bodyParser.json())
 
 // enable CORS (https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
 // so that your API is remotely testable by FCC
@@ -25,13 +26,16 @@ app.get('/', function (req, res) {
 app.get('/api/whoami', function (req, res) {
   const ipAddress = req.ip
   const preferredLanguage = req.headers['accept-language']
+  softwareName = req.headers['user-agent']
+
+  console.log(softwareName)
   // return a JSON object with your IP address in the ipaddress key.
   // return a JSON object with your preferred language in the language key.
   // return a JSON object with your software in the software key.
   res.json({
     ipaddress: ipAddress,
     language: preferredLanguage,
-    software: 'hello software',
+    software: softwareName,
   })
 })
 
