@@ -1,5 +1,5 @@
-const { random } = require('lodash')
 const mongoose = require('mongoose')
+const shortId = require('shortid')
 
 const shortUrlSchema = new mongoose.Schema({
   full: {
@@ -9,10 +9,7 @@ const shortUrlSchema = new mongoose.Schema({
   short: {
     type: String,
     required: true,
-    default: randomStringGenerator.generate({
-      length: 8,
-      charset: 'alphanumeric',
-    }),
+    default: shortId.generate,
   },
 })
 
