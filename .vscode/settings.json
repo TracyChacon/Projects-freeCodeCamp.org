@@ -1,3 +1,4 @@
 {
-  "liveServer.settings.port": 8001
+  "liveServer.settings.port": 8001,
+  "dotnet.defaultSolution": "Foundational C# with Microsoft/Write Your First Code Using C#/hello/hello.sln"
 }
