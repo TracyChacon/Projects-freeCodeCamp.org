@@ -1,3 +1,6 @@
+[BACK TO MAIN](https://github.com/TracyChacon)
+
+
 # Periodic Table Database
 ## Compentencies Needed to Build Project
 - Knowledge of SQL. The code above is written in SQL, so a good understanding of the language is needed. This includes knowledge of the different types of data that can be stored in a database, as well as the different types of queries that can be used to access and manipulate that data.
