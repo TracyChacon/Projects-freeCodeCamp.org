@@ -1,5 +1,3 @@
-[BACK TO MAIN](https://github.com/TracyChacon)
-
 ## Description
 I have developed a microservice using JavaScript, Node.js, Mongoose, and Express. 
 
