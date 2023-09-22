@@ -5,8 +5,14 @@ require('dotenv').config()
 
 app.use(cors())
 app.use(express.static('public'))
+// console.log(__dirname)
+
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/views/index.html')
+  res.sendFile(__dirname + '/frontend/views/index.html')
+})
+
+app.get('/atten', (req, res) => {
+  res.sendFile(__dirname + '/frontend/views/atten.html')
 })
 
 const listener = app.listen(process.env.PORT || 3000, () => {
