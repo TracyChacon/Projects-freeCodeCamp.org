@@ -1,4 +1,3 @@
 hide
 .env
-boilerplate-infosec
-boilerplate-bcrypt
+node_modules
