@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Please complete this form so we can learn how you learn</p>
+    <form id="survey-form" action='https://register-demo.freecodecamp.org'>
+      <fieldset>
+        <label id="name-label">Enter Your Name:<input id="name" type="text" required  placeholder="John lastname"/></label>
+        <label id="email-label">Enter Your Email:<input id="email" type="email" minlength="8" placeholder="John.lastname@email.com" required/></label>
+        <label id="number-label">How many years of education do you have?<input id="number" type="number" min="0" max="30" placeholder="2"/></label>
+      </fieldset>
+      <fieldset>
+        <label>Which way do you learn best?</label>
+        <select id="dropdown">
+          <option value="">(select one)</option>
+          <option value="1">Visual</option>
+          <option value="2">Auditory</option>
+          <option value="3">Logical</option>
+          <option value="4">Verbal</option>
+          <option value="5">Kinestetic</option>
+          <option value="6">Other</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>Do you prefer in-person or online learning?</legend>
+        <label><input class="inline" type="radio" name="radio"/>Online</label>
+        <label><input class="inline" type="radio" name="radio"/>In person</label>
+      </fieldset>
+      <fieldset>
+        <legend>Which items below sound like an interesting way of learning? (check all that apply)</legend>
+        <label><input class="inline" type="checkbox" name="speech"/>Speech</label>
+        <label><input class="inline" type="checkbox" name="patterns" value="patterns"/>Patterns</label>
+        <label><input class="inline" type="checkbox" name="diagrams" value="diagrams"/>Diagrams</label>
+        <label><input class="inline" type="checkbox" name="Rhythms" value="Rhythms"/>Rhythms</label>
+        <label><input class="inline" type="checkbox" name="hands" value="hands"/>Using your hands</label>
+        <label><input class="inline" type="checkbox" name="group-work" value="group-work"/>Group Work</label>
+        <label><input class="inline" type="checkbox" name="math" value="math"/>Math</label>
+        <label><input class="inline" type="checkbox" name="writing" value="writing"/>Writing</label>
+        <label><input class="inline" type="checkbox" name="puzzles" value="puzzles"/>Puzzles</label>
+        
+      </fieldset>
+      <fieldset>
+        <label>Questions or comments?
+          <textarea placeholder="Why is knowedge important?"></textarea>
+        </label>
+      </fieldset>
+      <input id="submit" name="submit" value="Submit" type="submit" />
+    </form>
+  </body>
+<html>
